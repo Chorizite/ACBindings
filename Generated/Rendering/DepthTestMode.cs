@@ -1,0 +1,16 @@
+namespace ACBindings;
+
+// DepthTestMode
+public enum DepthTestMode : uint
+{
+    DEPTHTEST_NEVER = 0x1,
+    DEPTHTEST_LESS = 0x2,
+    DEPTHTEST_EQUAL = 0x3,
+    DEPTHTEST_LESSEQUAL = 0x4,
+    DEPTHTEST_GREATER = 0x5,
+    DEPTHTEST_NOTEQUAL = 0x6,
+    DEPTHTEST_GREATEREQUAL = 0x7,
+    DEPTHTEST_ALWAYS = 0x8,
+    DEPTHTEST_INVALID = 0x7FFFFFFF
+}
+

@@ -1,0 +1,14 @@
+namespace ACBindings;
+
+// PrimType
+public enum PrimType : uint
+{
+    PRIMTYPE_POINTLIST = 0x1,
+    PRIMTYPE_LINELIST = 0x2,
+    PRIMTYPE_LINESTRIP = 0x3,
+    PRIMTYPE_TRIANGLELIST = 0x4,
+    PRIMTYPE_TRIANGLESTRIP = 0x5,
+    PRIMTYPE_TRIANGLEFAN = 0x6,
+    PRIMTYPE_INVALID = 0x7FFFFFFF
+}
+

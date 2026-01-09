@@ -1,0 +1,14 @@
+namespace ACBindings;
+
+// COMBAT_USE
+public enum COMBAT_USE : uint
+{
+    COMBAT_USE_NONE = 0x0,
+    COMBAT_USE_MELEE = 0x1,
+    COMBAT_USE_MISSILE = 0x2,
+    COMBAT_USE_AMMO = 0x3,
+    COMBAT_USE_SHIELD = 0x4,
+    COMBAT_USE_TWO_HANDED = 0x5,
+    FORCE_COMBAT_USE_32_BIT = 0x7FFFFFFF
+}
+

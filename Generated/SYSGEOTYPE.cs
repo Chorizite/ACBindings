@@ -1,0 +1,18 @@
+namespace ACBindings;
+
+// SYSGEOTYPE
+public enum SYSGEOTYPE : byte
+{
+    GEO_NATION = 0x1,
+    GEO_LATITUDE = 0x2,
+    GEO_LONGITUDE = 0x3,
+    GEO_ISO2 = 0x4,
+    GEO_ISO3 = 0x5,
+    GEO_RFC1766 = 0x6,
+    GEO_LCID = 0x7,
+    GEO_FRIENDLYNAME = 0x8,
+    GEO_OFFICIALNAME = 0x9,
+    GEO_TIMEZONES = 0xA,
+    GEO_OFFICIALLANGUAGES = 0xB
+}
+

@@ -1,0 +1,13 @@
+namespace ACBindings;
+
+// BODY_HEIGHT
+public enum BODY_HEIGHT : uint
+{
+    UNDEF_BODY_HEIGHT = 0x0,
+    HIGH_BODY_HEIGHT = 0x1,
+    MEDIUM_BODY_HEIGHT = 0x2,
+    LOW_BODY_HEIGHT = 0x3,
+    NUM_BODY_HEIGHTS = 0x4,
+    FORCE_BODY_HEIGHT32_BIT = 0x7FFFFFFF
+}
+

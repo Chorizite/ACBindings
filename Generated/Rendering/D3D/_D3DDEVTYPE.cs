@@ -1,0 +1,12 @@
+namespace ACBindings;
+
+// _D3DDEVTYPE
+public enum _D3DDEVTYPE : uint
+{
+    D3DDEVTYPE_HAL = 0x1,
+    D3DDEVTYPE_REF = 0x2,
+    D3DDEVTYPE_SW = 0x3,
+    D3DDEVTYPE_NULLREF = 0x4,
+    D3DDEVTYPE_FORCE_DWORD = 0x7FFFFFFF
+}
+

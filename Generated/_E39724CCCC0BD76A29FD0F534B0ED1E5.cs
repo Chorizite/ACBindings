@@ -1,0 +1,11 @@
+namespace ACBindings;
+
+// $E39724CCCC0BD76A29FD0F534B0ED1E5
+public enum _E39724CCCC0BD76A29FD0F534B0ED1E5 : byte
+{
+    INITIAL = 0x0,
+    READY = 0x1,
+    STOPPING = 0x2,
+    STOPPED = 0x3
+}
+

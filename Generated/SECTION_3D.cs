@@ -1,0 +1,30 @@
+namespace ACBindings;
+
+// SECTION_3D
+public enum SECTION_3D : byte
+{
+    TOP_NW_SECTION = 0x0,
+    MID_NW_SECTION = 0x1,
+    BOT_NW_SECTION = 0x2,
+    TOP_N_SECTION = 0x3,
+    MID_N_SECTION = 0x4,
+    BOT_N_SECTION = 0x5,
+    TOP_NE_SECTION = 0x6,
+    MID_NE_SECTION = 0x7,
+    BOT_NE_SECTION = 0x8,
+    W_SECTION = 0x9,
+    CENTER_SECTION = 0xA,
+    E_SECTION = 0xB,
+    SW_SECTION = 0xC,
+    LSW_SECTION = 0xD,
+    RSW_SECTION = 0xE,
+    TOP_S_SECTION = 0xF,
+    MID_S_SECTION = 0x10,
+    BOT_S_SECTION = 0x11,
+    SE_SECTION = 0x12,
+    LSE_SECTION = 0x13,
+    RSE_SECTION = 0x14,
+    NUM_3D_SECTIONS = 0x15,
+    NOT_IN_3D_SECTION = 0x16
+}
+

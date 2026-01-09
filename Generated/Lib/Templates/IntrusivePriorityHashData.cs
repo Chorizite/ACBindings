@@ -1,0 +1,15 @@
+namespace ACBindings;
+
+// IntrusivePriorityHashData<ControlSpecification,CInputManager_WIN32::ButtonHistoryEntry,PriorityHash<ControlSpecification,CInputManager_WIN32::ButtonHistoryEntry,1>::PriorityHashData*>
+public unsafe struct IntrusivePriorityHashData__ControlSpecification__CInputManager_WIN32_ButtonHistoryEntry__PriorityHash__ControlSpecification__CInputManager_WIN32_ButtonHistoryEntry_PriorityHashData_ptr
+{
+    // Base Classes
+    public ACBindings.IntrusiveHashData__ControlSpecification__PriorityHash__ControlSpecification__CInputManager_WIN32_ButtonHistoryEntry_PriorityHashData_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__ControlSpecification__PriorityHash__ControlSpecification__CInputManager_WIN32_ButtonHistoryEntry_PriorityHashData_ptr
+
+    // Members
+    public ACBindings.CInputManager_WIN32.ButtonHistoryEntry m_PriorityHashPriority;
+    public uint m_PriorityHashArrayIndex;
+
+    // Methods
+}
+

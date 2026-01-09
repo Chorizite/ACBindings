@@ -1,0 +1,11 @@
+namespace ACBindings;
+
+// _D3DLIGHTTYPE
+public enum _D3DLIGHTTYPE : uint
+{
+    D3DLIGHT_POINT = 0x1,
+    D3DLIGHT_SPOT = 0x2,
+    D3DLIGHT_DIRECTIONAL = 0x3,
+    D3DLIGHT_FORCE_DWORD = 0x7FFFFFFF
+}
+
