@@ -7,6 +7,10 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <OutputPath>..\bin\</OutputPath>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <IsPackable>True</IsPackable>
+        <DebugType>pdbonly</DebugType>
     </PropertyGroup>
     <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
         <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
