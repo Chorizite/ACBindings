@@ -11,6 +11,7 @@
         <GenerateDocumentationFile>True</GenerateDocumentationFile>
         <IsPackable>True</IsPackable>
         <DebugType>pdbonly</DebugType>
+        <NoWarn>1591</NoWarn>
     </PropertyGroup>
     <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
         <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
