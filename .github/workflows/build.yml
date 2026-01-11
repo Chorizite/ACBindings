@@ -26,6 +26,10 @@ jobs:
           dotnet restore                        # install packages
           dotnet build -c Release --no-restore  # build
         
+      - name: Debug
+        run: |
+          ls -Rlah $GITHUB_WORKSPACE/bin
+          
       - uses: actions/upload-artifact@v4
         with: 
           name: "Chorizite.ACBindings.${{ env.GitVersion_FullSemVer }}.nupkg"
