@@ -1,14 +1,13 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CHILDLIST
 public unsafe struct CHILDLIST : System.IDisposable
 {
     // Members
     public ushort num_objects;
-    public ACBindings.SArray__CPhysicsObj_ptr objects;
-    public ACBindings.SArray__Frame frames;
-    public ACBindings.SArray__uint part_numbers;
-    public ACBindings.SArray__uint location_ids;
+    public ACBindings.Internal.SArray___CPhysicsObj_ptr objects;
+    public ACBindings.Internal.SArray___Frame frames;
+    public ACBindings.Internal.SArray__uint part_numbers;
+    public ACBindings.Internal.SArray__uint location_ids;
 
     // Generated Constructor
     public CHILDLIST() {
@@ -21,15 +20,35 @@ public unsafe struct CHILDLIST : System.IDisposable
     }
 
     // Methods
-    // void __thiscall CHILDLIST::remove_child(CHILDLIST*,CPhysicsObj*)
-    public void remove_child(ACBindings.CPhysicsObj* obj) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CHILDLIST, ACBindings.CPhysicsObj*, void>)0x0051BAC0)(ref this, obj);
-    // int __thiscall CHILDLIST::FindChildIndex(CHILDLIST*,const CPhysicsObj*,unsigned __int16*)
-    public int FindChildIndex(ACBindings.CPhysicsObj* child, ushort* index) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CHILDLIST, ACBindings.CPhysicsObj*, ushort*, int>)0x0051BBB0)(ref this, child, index);
-    // void __thiscall CHILDLIST::CHILDLIST(CHILDLIST*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CHILDLIST, void>)0x0051BD30)(ref this);
-    // void __thiscall CHILDLIST::~CHILDLIST(CHILDLIST*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CHILDLIST, void>)0x0051BD60)(ref this);
-    // void __thiscall CHILDLIST::add_child(CHILDLIST*,CPhysicsObj*,const Frame*,unsigned int,unsigned int)
-    public void add_child(ACBindings.CPhysicsObj* obj, ACBindings.Frame* frame, uint part_no, uint location_id) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CHILDLIST, ACBindings.CPhysicsObj*, ACBindings.Frame*, uint, uint, void>)0x0051BDA0)(ref this, obj, frame, part_no, location_id);
+
+    /// <summary>
+    /// <code>Offset: 0x0051BAC0
+    /// void __thiscall CHILDLIST::remove_child(CHILDLIST*,CPhysicsObj*)</code>
+    /// </summary>
+    public void remove_child(ACBindings.Internal.CPhysicsObj* obj) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CHILDLIST, ACBindings.Internal.CPhysicsObj*, void>)0x0051BAC0)(ref this, obj);
+
+    /// <summary>
+    /// <code>Offset: 0x0051BBB0
+    /// int __thiscall CHILDLIST::FindChildIndex(CHILDLIST*,const CPhysicsObj*,unsigned __int16*)</code>
+    /// </summary>
+    public int FindChildIndex(ACBindings.Internal.CPhysicsObj* child, ushort* index) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CHILDLIST, ACBindings.Internal.CPhysicsObj*, ushort*, int>)0x0051BBB0)(ref this, child, index);
+
+    /// <summary>
+    /// <code>Offset: 0x0051BD30
+    /// void __thiscall CHILDLIST::CHILDLIST(CHILDLIST*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CHILDLIST, void>)0x0051BD30)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0051BD60
+    /// void __thiscall CHILDLIST::~CHILDLIST(CHILDLIST*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CHILDLIST, void>)0x0051BD60)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0051BDA0
+    /// void __thiscall CHILDLIST::add_child(CHILDLIST*,CPhysicsObj*,const Frame*,unsigned int,unsigned int)</code>
+    /// </summary>
+    public void add_child(ACBindings.Internal.CPhysicsObj* obj, ACBindings.Internal.Frame* frame, uint part_no, uint location_id) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CHILDLIST, ACBindings.Internal.CPhysicsObj*, ACBindings.Internal.Frame*, uint, uint, void>)0x0051BDA0)(ref this, obj, frame, part_no, location_id);
 }
 

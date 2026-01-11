@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// MouseOverNotificationLogic
 public unsafe struct MouseOverNotificationLogic
 {
     // Methods

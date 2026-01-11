@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ContentProfile
 public unsafe struct ContentProfile
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // ContentProfile_vtbl
     public unsafe struct ContentProfile_vtbl
     {
         // Members
-        public System.IntPtr ContentProfile_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ContentProfile*, void> ContentProfile_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ContentProfile*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ContentProfile*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ContentProfile*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -33,13 +31,29 @@ public unsafe struct ContentProfile
     }
 
     // Methods
-    // unsigned int __thiscall ContentProfile::Pack(CloTextureEffect*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ContentProfile, void**, uint, uint>)0x005A9890)(ref this, addr, size);
-    // void __thiscall ContentProfile::ContentProfile(ContentProfile*,unsigned int)
-    public void _ConstructorInternal(uint iid) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ContentProfile, uint, void>)0x006B0DA0)(ref this, iid);
-    // void __thiscall ContentProfile::ContentProfile(ContentProfile*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ContentProfile, void>)0x006B0DC0)(ref this);
-    // int __thiscall ContentProfile::UnPack(ContentProfile*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ContentProfile, void**, uint, int>)0x006B0DE0)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005A9890
+    /// unsigned int __thiscall ContentProfile::Pack(CloTextureEffect*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ContentProfile, void**, uint, uint>)0x005A9890)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x006B0DA0
+    /// void __thiscall ContentProfile::ContentProfile(ContentProfile*,unsigned int)</code>
+    /// </summary>
+    public void _ConstructorInternal(uint iid) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ContentProfile, uint, void>)0x006B0DA0)(ref this, iid);
+
+    /// <summary>
+    /// <code>Offset: 0x006B0DC0
+    /// void __thiscall ContentProfile::ContentProfile(ContentProfile*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ContentProfile, void>)0x006B0DC0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006B0DE0
+    /// int __thiscall ContentProfile::UnPack(ContentProfile*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ContentProfile, void**, uint, int>)0x006B0DE0)(ref this, addr, size);
 }
 

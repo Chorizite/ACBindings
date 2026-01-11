@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// _MMCKINFO
 public unsafe struct _MMCKINFO
 {
     // Members

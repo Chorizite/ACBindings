@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ComputeMinMaxCurve<0,500,1_e66,1_e66>
 public unsafe struct ComputeMinMaxCurve
 {
     // Members

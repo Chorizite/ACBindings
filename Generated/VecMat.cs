@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// VecMat
 public unsafe struct VecMat
 {
     // Members

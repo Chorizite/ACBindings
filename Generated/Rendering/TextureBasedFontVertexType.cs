@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TextureBasedFontVertexType
 public unsafe struct TextureBasedFontVertexType
 {
     // Members
-    public ACBindings.Vector3 Origin;
+    public ACBindings.Internal.Vector3 Origin;
     public uint Diffuse;
-    public ACBindings.TexCoordPair TexCoord;
+    public ACBindings.Internal.TexCoordPair TexCoord;
 
     // Methods
 }

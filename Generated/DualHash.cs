@@ -1,7 +1,6 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DualHash<UIOption_Slider*,UIOption_Slider*>
-public unsafe struct DualHash__UIOption_Slider_ptr__UIOption_Slider_ptr
+public unsafe struct DualHash___UIOption_Slider_ptr___UIOption_Slider_ptr
 {
     // Members
     public uint m_num_buckets;

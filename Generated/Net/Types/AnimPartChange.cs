@@ -1,35 +1,41 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AnimPartChange
 public unsafe struct AnimPartChange
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // AnimPartChange_vtbl
     public unsafe struct AnimPartChange_vtbl
     {
         // Members
-        public System.IntPtr AnimPartChange_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AnimPartChange*, void> AnimPartChange_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AnimPartChange*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AnimPartChange*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AnimPartChange*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
     public uint part_index;
-    public ACBindings.IDClass___tagDataID part_id;
-    public ACBindings.AnimPartChange* prev;
-    public ACBindings.AnimPartChange* next;
+    public ACBindings.Internal.IDClass____tagDataID part_id;
+    public ACBindings.Internal.AnimPartChange* prev;
+    public ACBindings.Internal.AnimPartChange* next;
 
     // Methods
-    // unsigned int __thiscall AnimPartChange::Pack(AnimPartChange*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AnimPartChange, void**, uint, uint>)0x005AEA60)(ref this, addr, size);
-    // int __thiscall AnimPartChange::UnPack(AnimPartChange*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AnimPartChange, void**, uint, int>)0x005AEAC0)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005AEA60
+    /// unsigned int __thiscall AnimPartChange::Pack(AnimPartChange*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AnimPartChange, void**, uint, uint>)0x005AEA60)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005AEAC0
+    /// int __thiscall AnimPartChange::UnPack(AnimPartChange*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AnimPartChange, void**, uint, int>)0x005AEAC0)(ref this, addr, size);
 }
 

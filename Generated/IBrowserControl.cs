@@ -1,31 +1,29 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IBrowserControl
 public unsafe struct IBrowserControl
 {
     // Base Classes
-    public ACBindings.IUnknown BaseClass_IUnknown; // ACBindings.IUnknown
+    public ACBindings.Internal.IUnknown BaseClass_IUnknown; // ACBindings.Internal.IUnknown
 
     // Child Types
-    // IBrowserControl_vtbl
     public unsafe struct IBrowserControl_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr Create; // function pointer
-        public System.IntPtr Move; // function pointer
-        public System.IntPtr Resize; // function pointer
-        public System.IntPtr Show; // function pointer
-        public System.IntPtr GetHWND; // function pointer
-        public System.IntPtr Navigate; // function pointer
-        public System.IntPtr Stop; // function pointer
-        public System.IntPtr GoBack; // function pointer
-        public System.IntPtr GoForward; // function pointer
-        public System.IntPtr GoHome; // function pointer
-        public System.IntPtr GoSearch; // function pointer
-        public System.IntPtr Refresh; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IBrowserControl*, int*, int, int, int, int, ACBindings.Internal.IBrowserCallback*, byte> Create; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IBrowserControl*, int, int, void> Move; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IBrowserControl*, int, int, void> Resize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IBrowserControl*, byte, void> Show; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IBrowserControl*, int*> GetHWND; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IBrowserControl*, sbyte*, uint, sbyte*, sbyte*, System.IntPtr, uint, int> Navigate; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IBrowserControl*, int> Stop; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IBrowserControl*, int> GoBack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IBrowserControl*, int> GoForward; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IBrowserControl*, int> GoHome; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IBrowserControl*, int> GoSearch; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IBrowserControl*, byte, int> Refresh; // function pointer
 
         // Methods
     }

@@ -1,28 +1,26 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CloTextureEffect
 public unsafe struct CloTextureEffect
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // CloTextureEffect_vtbl
     public unsafe struct CloTextureEffect_vtbl
     {
         // Members
-        public System.IntPtr CloTextureEffect_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CloTextureEffect*, void> CloTextureEffect_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CloTextureEffect*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CloTextureEffect*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CloTextureEffect*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.IDClass___tagDataID oldTexID;
-    public ACBindings.IDClass___tagDataID newTexID;
+    public ACBindings.Internal.IDClass____tagDataID oldTexID;
+    public ACBindings.Internal.IDClass____tagDataID newTexID;
 
     // Generated Constructor
     public CloTextureEffect() {
@@ -30,9 +28,17 @@ public unsafe struct CloTextureEffect
     }
 
     // Methods
-    // void __thiscall CloTextureEffect::CloTextureEffect(CloTextureEffect*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CloTextureEffect, void>)0x005A9500)(ref this);
-    // int __thiscall CloTextureEffect::UnPack(CloTextureEffect*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CloTextureEffect, void**, uint, int>)0x005A98C0)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005A9500
+    /// void __thiscall CloTextureEffect::CloTextureEffect(CloTextureEffect*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CloTextureEffect, void>)0x005A9500)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005A98C0
+    /// int __thiscall CloTextureEffect::UnPack(CloTextureEffect*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CloTextureEffect, void**, uint, int>)0x005A98C0)(ref this, addr, size);
 }
 

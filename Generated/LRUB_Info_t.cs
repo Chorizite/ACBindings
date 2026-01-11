@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LRUB_Info_t
 public unsafe struct LRUB_Info_t
 {
     // Members

@@ -1,35 +1,33 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// FellowshipDispelSpell
 public unsafe struct FellowshipDispelSpell
 {
     // Base Classes
-    public ACBindings.DispelSpell BaseClass_DispelSpell; // ACBindings.DispelSpell
+    public ACBindings.Internal.DispelSpell BaseClass_DispelSpell; // ACBindings.Internal.DispelSpell
 
     // Child Types
-    // FellowshipDispelSpell_vtbl
     public unsafe struct FellowshipDispelSpell_vtbl
     {
         // Members
-        public System.IntPtr FellowshipDispelSpell_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, void> FellowshipDispelSpell_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
-        public System.IntPtr SetEqual; // function pointer
-        public System.IntPtr InqDuration; // function pointer
-        public System.IntPtr SetDuration; // function pointer
-        public System.IntPtr IsEnchantmentSpell; // function pointer
-        public System.IntPtr IsBoostSpell; // function pointer
-        public System.IntPtr IsProjectileSpell; // function pointer
-        public System.IntPtr IsTransferSpell; // function pointer
-        public System.IntPtr IsDispelSpell; // function pointer
-        public System.IntPtr IsFellowshipSpell; // function pointer
-        public System.IntPtr BuildEnchantment; // function pointer
-        public System.IntPtr AffectsHealth; // function pointer
-        public System.IntPtr AffectsStamina; // function pointer
-        public System.IntPtr AffectsMana; // function pointer
-        public System.IntPtr pack_size; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, void**, uint, int> UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, ACBindings.Internal.Spell*, ACBindings.Internal.Spell*, void> SetEqual; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, double> InqDuration; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, double, int> SetDuration; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, int> IsEnchantmentSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, int> IsBoostSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, int> IsProjectileSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, int> IsTransferSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, int> IsDispelSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, int> IsFellowshipSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, ACBindings.Internal.Enchantment*, int> BuildEnchantment; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, int> AffectsHealth; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, int> AffectsStamina; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, int> AffectsMana; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipDispelSpell*, uint> pack_size; // function pointer
 
         // Methods
     }

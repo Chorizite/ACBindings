@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // DeviceType
 public enum DeviceType : byte

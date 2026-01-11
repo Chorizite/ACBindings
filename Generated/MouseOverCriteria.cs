@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// MouseOverCriteria
 public unsafe struct MouseOverCriteria
 {
     // Methods

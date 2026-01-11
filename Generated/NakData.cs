@@ -1,14 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// NakData
 public unsafe struct NakData
 {
     // Child Types
-    // NakData_vtbl
     public unsafe struct NakData_vtbl
     {
         // Members
-        public System.IntPtr NakData_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NakData*, void> NakData_dtor_0; // function pointer
 
         // Methods
     }

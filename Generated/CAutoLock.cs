@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CAutoLock
 public unsafe struct CAutoLock
 {
     // Members
-    public ACBindings.CCritSec* m_pLock;
+    public ACBindings.Internal.CCritSec* m_pLock;
 
     // Methods
 }

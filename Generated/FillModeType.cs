@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // FillModeType
 public enum FillModeType : uint

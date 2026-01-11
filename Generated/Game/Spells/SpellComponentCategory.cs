@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // SpellComponentCategory
 public enum SpellComponentCategory : uint

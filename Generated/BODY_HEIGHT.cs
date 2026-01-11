@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // BODY_HEIGHT
 public enum BODY_HEIGHT : uint

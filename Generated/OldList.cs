@@ -1,14 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// OldList
 public unsafe struct OldList
 {
     // Child Types
-    // OldList_vtbl
     public unsafe struct OldList_vtbl
     {
         // Members
-        public System.IntPtr OldList_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OldList*, void> OldList_dtor_0; // function pointer
 
         // Methods
     }

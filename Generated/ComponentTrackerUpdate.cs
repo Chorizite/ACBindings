@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ComponentTrackerUpdate
 public enum ComponentTrackerUpdate : uint

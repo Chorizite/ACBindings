@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // SKILL_CATEGORY
 public enum SKILL_CATEGORY : uint

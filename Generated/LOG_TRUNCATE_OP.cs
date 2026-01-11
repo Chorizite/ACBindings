@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // LOG_TRUNCATE_OP
 public enum LOG_TRUNCATE_OP : byte

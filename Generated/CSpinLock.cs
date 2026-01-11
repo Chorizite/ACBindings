@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CSpinLock<512,0>
 public unsafe struct CSpinLock
 {
     // Members

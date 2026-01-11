@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // InternetCookieState
 public enum InternetCookieState : byte

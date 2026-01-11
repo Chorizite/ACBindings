@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DBObjGrabber<ACCharGenData>
-public unsafe struct DBObjGrabber__ACCharGenData
+public unsafe struct DBObjGrabber___ACCharGenData
 {
     // Members
-    public ACBindings.ACCharGenData* m_object;
+    public ACBindings.Internal.ACCharGenData* m_object;
 
     // Methods
 }

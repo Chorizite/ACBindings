@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// HandlerType
 public unsafe struct HandlerType
 {
     // Members

@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IObjectFactory
 public unsafe struct IObjectFactory
 {
     // Base Classes
-    public ACBindings.Interface BaseClass_Interface; // ACBindings.Interface
+    public ACBindings.Internal.Interface BaseClass_Interface; // ACBindings.Internal.Interface
 
     // Methods
 }

@@ -1,24 +1,31 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ClipPlane
 public unsafe struct ClipPlane
 {
     // Members
-    public ACBindings.Plane* plane;
-    public ACBindings.Sidedness side;
+    public ACBindings.Internal.Plane* plane;
+    public ACBindings.Internal.Sidedness side;
 
     // Generated Constructor
     public ClipPlane() {
         _ConstructorInternal();
     }
-    public ClipPlane(ACBindings.Plane* plane, ACBindings.Sidedness side) {
+    public ClipPlane(ACBindings.Internal.Plane* plane, ACBindings.Internal.Sidedness side) {
         _ConstructorInternal(plane, side);
     }
 
     // Methods
-    // void __thiscall ClipPlane::ClipPlane(ClipPlane*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ClipPlane, void>)0x00535A80)(ref this);
-    // void __thiscall ClipPlane::ClipPlane(ClipPlane*,Plane*,Sidedness)
-    public void _ConstructorInternal(ACBindings.Plane* plane, ACBindings.Sidedness side) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ClipPlane, ACBindings.Plane*, ACBindings.Sidedness, void>)0x00535A90)(ref this, plane, side);
+
+    /// <summary>
+    /// <code>Offset: 0x00535A80
+    /// void __thiscall ClipPlane::ClipPlane(ClipPlane*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ClipPlane, void>)0x00535A80)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00535A90
+    /// void __thiscall ClipPlane::ClipPlane(ClipPlane*,Plane*,Sidedness)</code>
+    /// </summary>
+    public void _ConstructorInternal(ACBindings.Internal.Plane* plane, ACBindings.Internal.Sidedness side) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ClipPlane, ACBindings.Internal.Plane*, ACBindings.Internal.Sidedness, void>)0x00535A90)(ref this, plane, side);
 }
 

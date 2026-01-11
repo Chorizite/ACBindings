@@ -1,16 +1,14 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// INonDelegatingUnknown
 public unsafe struct INonDelegatingUnknown
 {
     // Child Types
-    // INonDelegatingUnknown_vtbl
     public unsafe struct INonDelegatingUnknown_vtbl
     {
         // Members
-        public System.IntPtr NonDelegatingQueryInterface; // function pointer
-        public System.IntPtr NonDelegatingAddRef; // function pointer
-        public System.IntPtr NonDelegatingRelease; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.INonDelegatingUnknown*, ACBindings.Internal._GUID*, void**, int> NonDelegatingQueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.INonDelegatingUnknown*, uint> NonDelegatingAddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.INonDelegatingUnknown*, uint> NonDelegatingRelease; // function pointer
 
         // Methods
     }

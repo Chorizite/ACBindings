@@ -1,13 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ClientNetConfiguration
 public unsafe struct ClientNetConfiguration
 {
     // Base Classes
-    public ACBindings.LoggingFunctions BaseClass_LoggingFunctions; // ACBindings.LoggingFunctions
+    public ACBindings.Internal.LoggingFunctions BaseClass_LoggingFunctions; // ACBindings.Internal.LoggingFunctions
 
     // Members
-    public ACBindings.AC1Legacy.PStringBase__sbyte DesiredInterface;
+    public ACBindings.Internal.AC1Legacy.PStringBase__sbyte DesiredInterface;
     public uint dwPort;
     public int bAutoGenerateUniquePort;
 

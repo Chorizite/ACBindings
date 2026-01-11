@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DDEUP
 public unsafe struct DDEUP
 {
     // Members

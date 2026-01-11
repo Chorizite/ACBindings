@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DropTargetCriteria
 public unsafe struct DropTargetCriteria
 {
     // Methods

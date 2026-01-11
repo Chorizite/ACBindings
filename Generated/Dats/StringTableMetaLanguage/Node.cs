@@ -1,19 +1,18 @@
-namespace ACBindings.StringTableMetaLanguage;
+namespace ACBindings.Internal.StringTableMetaLanguage;
 
-// StringTableMetaLanguage::Node
 public unsafe struct Node : System.IDisposable
 {
     // Members
-    public ACBindings.PStringBase__ushort text;
-    public ACBindings.StringTableMetaLanguage.NodeType type;
-    public ACBindings.List__StringTableMetaLanguage_Node_ptr children;
+    public ACBindings.Internal.PStringBase__ushort text;
+    public ACBindings.Internal.StringTableMetaLanguage.NodeType type;
+    public ACBindings.Internal.List___StringTableMetaLanguage_Node_ptr children;
     public int ID;
     public byte bForceCapital;
-    public ACBindings.PStringBase__ushort flags;
+    public ACBindings.Internal.PStringBase__ushort flags;
     public int pos;
 
     // Generated Constructor
-    public Node(ACBindings.StringTableMetaLanguage.NodeType Type) {
+    public Node(ACBindings.Internal.StringTableMetaLanguage.NodeType Type) {
         _ConstructorInternal(Type);
     }
 
@@ -23,13 +22,29 @@ public unsafe struct Node : System.IDisposable
     }
 
     // Methods
-    // void __thiscall StringTableMetaLanguage::Node::AddChild(StringTableMetaLanguage::Node*,const StringTableMetaLanguage::Node*)
-    public void AddChild(ACBindings.StringTableMetaLanguage.Node* child) => ((delegate* unmanaged[Thiscall]<ref ACBindings.StringTableMetaLanguage.Node, ACBindings.StringTableMetaLanguage.Node*, void>)0x0067E6C0)(ref this, child);
-    // void __thiscall StringTableMetaLanguage::Node::Reset(StringTableMetaLanguage::Node*)
-    public void Reset() => ((delegate* unmanaged[Thiscall]<ref ACBindings.StringTableMetaLanguage.Node, void>)0x0067E870)(ref this);
-    // void __thiscall StringTableMetaLanguage::Node::Node(StringTableMetaLanguage::Node*,StringTableMetaLanguage::NodeType)
-    public void _ConstructorInternal(ACBindings.StringTableMetaLanguage.NodeType Type) => ((delegate* unmanaged[Thiscall]<ref ACBindings.StringTableMetaLanguage.Node, ACBindings.StringTableMetaLanguage.NodeType, void>)0x0067E8F0)(ref this, Type);
-    // void __thiscall StringTableMetaLanguage::Node::~Node(StringTableMetaLanguage::Node*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.StringTableMetaLanguage.Node, void>)0x0067E950)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0067E6C0
+    /// void __thiscall StringTableMetaLanguage::Node::AddChild(StringTableMetaLanguage::Node*,const StringTableMetaLanguage::Node*)</code>
+    /// </summary>
+    public void AddChild(ACBindings.Internal.StringTableMetaLanguage.Node* child) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.StringTableMetaLanguage.Node, ACBindings.Internal.StringTableMetaLanguage.Node*, void>)0x0067E6C0)(ref this, child);
+
+    /// <summary>
+    /// <code>Offset: 0x0067E870
+    /// void __thiscall StringTableMetaLanguage::Node::Reset(StringTableMetaLanguage::Node*)</code>
+    /// </summary>
+    public void Reset() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.StringTableMetaLanguage.Node, void>)0x0067E870)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0067E8F0
+    /// void __thiscall StringTableMetaLanguage::Node::Node(StringTableMetaLanguage::Node*,StringTableMetaLanguage::NodeType)</code>
+    /// </summary>
+    public void _ConstructorInternal(ACBindings.Internal.StringTableMetaLanguage.NodeType Type) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.StringTableMetaLanguage.Node, ACBindings.Internal.StringTableMetaLanguage.NodeType, void>)0x0067E8F0)(ref this, Type);
+
+    /// <summary>
+    /// <code>Offset: 0x0067E950
+    /// void __thiscall StringTableMetaLanguage::Node::~Node(StringTableMetaLanguage::Node*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.StringTableMetaLanguage.Node, void>)0x0067E950)(ref this);
 }
 

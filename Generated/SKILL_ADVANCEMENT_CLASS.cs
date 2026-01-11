@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // SKILL_ADVANCEMENT_CLASS
 public enum SKILL_ADVANCEMENT_CLASS : uint

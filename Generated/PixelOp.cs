@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PixelOp<unsigned long>
 public unsafe struct PixelOp__uint
 {
     // Methods

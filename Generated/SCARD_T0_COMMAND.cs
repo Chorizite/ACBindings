@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SCARD_T0_COMMAND
 public unsafe struct SCARD_T0_COMMAND
 {
     // Members

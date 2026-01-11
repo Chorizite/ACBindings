@@ -1,14 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// GenericDialogTextObject
 public unsafe struct GenericDialogTextObject
 {
     // Child Types
-    // GenericDialogTextObject_vtbl
     public unsafe struct GenericDialogTextObject_vtbl
     {
         // Members
-        public System.IntPtr GenericDialogTextObject_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GenericDialogTextObject*, void> GenericDialogTextObject_dtor_0; // function pointer
         public System.IntPtr GetText;
 
         // Methods

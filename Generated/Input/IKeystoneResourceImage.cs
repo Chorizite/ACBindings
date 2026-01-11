@@ -1,35 +1,33 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IKeystoneResourceImage
 public unsafe struct IKeystoneResourceImage
 {
     // Base Classes
-    public ACBindings.IKeystoneResource BaseClass_IKeystoneResource; // ACBindings.IKeystoneResource
+    public ACBindings.Internal.IKeystoneResource BaseClass_IKeystoneResource; // ACBindings.Internal.IKeystoneResource
 
     // Child Types
-    // IKeystoneResourceImage_vtbl
     public unsafe struct IKeystoneResourceImage_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr NotifyResourceStatus; // function pointer
-        public System.IntPtr GetName; // function pointer
-        public System.IntPtr GetType; // function pointer
-        public System.IntPtr DecodeData; // function pointer
-        public System.IntPtr AddOwner; // function pointer
-        public System.IntPtr RemoveOwner; // function pointer
-        public System.IntPtr SetStatus; // function pointer
-        public System.IntPtr GetStatus; // function pointer
-        public System.IntPtr GetData; // function pointer
-        public System.IntPtr GetImageWidth; // function pointer
-        public System.IntPtr GetImageHeight; // function pointer
-        public System.IntPtr SetImageWidth; // function pointer
-        public System.IntPtr SetImageHeight; // function pointer
-        public System.IntPtr IsAnimation; // function pointer
-        public System.IntPtr GetUpdateTime; // function pointer
-        public System.IntPtr UpdateCounter; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IResourceNotify*, ACBindings.Internal.IResourceNotify*, ACBindings.Internal.KS_STATUS, int> NotifyResourceStatus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IResourceNotify*, ushort*> GetName; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResource*, ushort*> GetType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResource*, System.IntPtr, int> DecodeData; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResource*, ACBindings.Internal.IResourceNotify*, int> AddOwner; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResource*, ACBindings.Internal.IResourceNotify*, int> RemoveOwner; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResource*, ACBindings.Internal.KS_STATUS, int> SetStatus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResource*, ACBindings.Internal.KS_STATUS> GetStatus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResourceImage*, ACBindings.Internal.IKeystoneControl*, System.IntPtr> GetData; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResourceImage*, uint> GetImageWidth; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResourceImage*, uint> GetImageHeight; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResourceImage*, uint, int> SetImageWidth; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResourceImage*, uint, int> SetImageHeight; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResourceImage*, int> IsAnimation; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResourceImage*, uint> GetUpdateTime; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResourceImage*, uint, ACBindings.Internal.IKeystoneControl*, void> UpdateCounter; // function pointer
 
         // Methods
     }

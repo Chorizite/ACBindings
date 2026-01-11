@@ -1,16 +1,14 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// NIListElement<NetBlob*>
-public unsafe struct NIListElement__NetBlob_ptr
+public unsafe struct NIListElement___NetBlob_ptr
 {
     // Members
-    public ACBindings.NetBlob* data_;
+    public ACBindings.Internal.NetBlob* data_;
     public System.IntPtr next_;
 
     // Methods
 }
 
-// NIListElement<unsigned long>
 public unsafe struct NIListElement__uint
 {
     // Members
@@ -20,11 +18,10 @@ public unsafe struct NIListElement__uint
     // Methods
 }
 
-// NIListElement<NetPacket*>
-public unsafe struct NIListElement__NetPacket_ptr
+public unsafe struct NIListElement___NetPacket_ptr
 {
     // Members
-    public ACBindings.NetPacket* data_;
+    public ACBindings.Internal.NetPacket* data_;
     public System.IntPtr next_;
 
     // Methods

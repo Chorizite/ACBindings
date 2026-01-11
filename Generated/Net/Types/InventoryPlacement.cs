@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// InventoryPlacement
 public unsafe struct InventoryPlacement
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // InventoryPlacement_vtbl
     public unsafe struct InventoryPlacement_vtbl
     {
         // Members
-        public System.IntPtr InventoryPlacement_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.InventoryPlacement*, void> InventoryPlacement_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.InventoryPlacement*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.InventoryPlacement*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.InventoryPlacement*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -26,11 +24,23 @@ public unsafe struct InventoryPlacement
     public uint priority_;
 
     // Methods
-    // unsigned int __thiscall InventoryPlacement::Pack(ShortCutData*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.InventoryPlacement, void**, uint, uint>)0x004A3880)(ref this, addr, size);
-    // int __thiscall InventoryPlacement::UnPack(InventoryPlacement*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.InventoryPlacement, void**, uint, int>)0x004A38C0)(ref this, addr, size);
-    // InventoryPlacement* __cdecl InventoryPlacement::DetermineHigherPriority(InventoryPlacement*,InventoryPlacement*,unsigned int)
-    public static ACBindings.InventoryPlacement* DetermineHigherPriority(ACBindings.InventoryPlacement* ip1, ACBindings.InventoryPlacement* ip2, uint releventLocations) => ((delegate* unmanaged[Cdecl]<ACBindings.InventoryPlacement*, ACBindings.InventoryPlacement*, uint, ACBindings.InventoryPlacement*>)0x004A4820)(ip1, ip2, releventLocations);
+
+    /// <summary>
+    /// <code>Offset: 0x004A3880
+    /// unsigned int __thiscall InventoryPlacement::Pack(ShortCutData*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.InventoryPlacement, void**, uint, uint>)0x004A3880)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x004A38C0
+    /// int __thiscall InventoryPlacement::UnPack(InventoryPlacement*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.InventoryPlacement, void**, uint, int>)0x004A38C0)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x004A4820
+    /// InventoryPlacement* __cdecl InventoryPlacement::DetermineHigherPriority(InventoryPlacement*,InventoryPlacement*,unsigned int)</code>
+    /// </summary>
+    public static ACBindings.Internal.InventoryPlacement* DetermineHigherPriority(ACBindings.Internal.InventoryPlacement* ip1, ACBindings.Internal.InventoryPlacement* ip2, uint releventLocations) => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.InventoryPlacement*, ACBindings.Internal.InventoryPlacement*, uint, ACBindings.Internal.InventoryPlacement*>)0x004A4820)(ip1, ip2, releventLocations);
 }
 

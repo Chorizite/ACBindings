@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DBObjGrabber<CSpellTable>
-public unsafe struct DBObjGrabber__CSpellTable
+public unsafe struct DBObjGrabber___CSpellTable
 {
     // Members
-    public ACBindings.CSpellTable* m_object;
+    public ACBindings.Internal.CSpellTable* m_object;
 
     // Methods
 }

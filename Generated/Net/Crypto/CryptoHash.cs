@@ -1,17 +1,15 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CryptoHash
 public unsafe struct CryptoHash
 {
     // Base Classes
-    public ACBindings.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.ReferenceCountTemplate
+    public ACBindings.Internal.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.Internal.ReferenceCountTemplate
 
     // Child Types
-    // CryptoHash_vtbl
     public unsafe struct CryptoHash_vtbl
     {
         // Members
-        public System.IntPtr CryptoHash_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoHash*, void> CryptoHash_dtor_0; // function pointer
 
         // Methods
     }
@@ -19,7 +17,7 @@ public unsafe struct CryptoHash
     // Members
     public uint m_algID;
     public uint m_hHash;
-    public ACBindings.IntrusiveSmartPointer__CryptoProvider m_spProv;
+    public ACBindings.Internal.IntrusiveSmartPointer___CryptoProvider m_spProv;
 
     // Methods
 }

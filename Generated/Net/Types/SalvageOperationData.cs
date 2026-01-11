@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SalvageOperationData
 public unsafe struct SalvageOperationData
 {
     // Base Classes
-    public ACBindings.PackableList__uint BaseClass_PackableList__uint; // ACBindings.PackableList__uint
+    public ACBindings.Internal.PackableList__uint BaseClass_PackableList__uint; // ACBindings.Internal.PackableList__uint
 
     // Child Types
-    // SalvageOperationData_vtbl
     public unsafe struct SalvageOperationData_vtbl
     {
         // Members
-        public System.IntPtr SalvageOperationData_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SalvageOperationData*, void> SalvageOperationData_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SalvageOperationData*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SalvageOperationData*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SalvageOperationData*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }

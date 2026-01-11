@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ObjectSelectStatus
 public enum ObjectSelectStatus : uint

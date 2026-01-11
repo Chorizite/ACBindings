@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LBRange
 public unsafe struct LBRange
 {
     // Base Classes
-    public ACBindings.PackableNIListElt__LBRange BaseClass_PackableNIListElt; // ACBindings.PackableNIListElt__LBRange
+    public ACBindings.Internal.PackableNIListElt___LBRange BaseClass_PackableNIListElt; // ACBindings.Internal.PackableNIListElt___LBRange
 
     // Members
     public uint lowID;

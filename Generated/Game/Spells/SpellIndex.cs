@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // SpellIndex
 public enum SpellIndex : uint

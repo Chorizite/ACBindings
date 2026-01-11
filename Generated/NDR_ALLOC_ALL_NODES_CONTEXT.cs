@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// NDR_ALLOC_ALL_NODES_CONTEXT
 public unsafe struct NDR_ALLOC_ALL_NODES_CONTEXT
 {
     // Methods

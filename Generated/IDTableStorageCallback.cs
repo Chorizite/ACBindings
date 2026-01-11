@@ -1,10 +1,8 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IDTableStorageCallback
 public unsafe struct IDTableStorageCallback
 {
     // Child Types
-    // IDTableStorageCallback_vtbl
     public unsafe struct IDTableStorageCallback_vtbl
     {
         // Members

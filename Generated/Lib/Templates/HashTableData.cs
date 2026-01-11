@@ -1,34 +1,31 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// HashTableData<unsigned long,Interface*>
-public unsafe struct HashTableData__uint__Interface_ptr
+public unsafe struct HashTableData__uint___Interface_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__Interface_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__Interface_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___Interface_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___Interface_ptr_ptr
 
     // Members
-    public ACBindings.Interface* m_data;
+    public ACBindings.Internal.Interface* m_data;
 
     // Methods
 }
 
-// HashTableData<Turbine_GUID,Interface*>
-public unsafe struct HashTableData__Turbine_GUID__Interface_ptr
+public unsafe struct HashTableData___Turbine_GUID___Interface_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__Turbine_GUID__HashTableData__Turbine_GUID__Interface_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__Turbine_GUID__HashTableData__Turbine_GUID__Interface_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData___Turbine_GUID___HashTableData___Turbine_GUID___Interface_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___Turbine_GUID___HashTableData___Turbine_GUID___Interface_ptr_ptr
 
     // Members
-    public ACBindings.Interface* m_data;
+    public ACBindings.Internal.Interface* m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned short,long>
 public unsafe struct HashTableData__ushort__int
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__ushort__HashTableData__ushort__int_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__ushort__HashTableData__ushort__int_ptr
+    public ACBindings.Internal.IntrusiveHashData__ushort___HashTableData__ushort__int_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__ushort___HashTableData__ushort__int_ptr
 
     // Members
     public int m_data;
@@ -36,11 +33,10 @@ public unsafe struct HashTableData__ushort__int
     // Methods
 }
 
-// HashTableData<CaseInsensitiveStringBase<PStringBase<unsigned short>>,long>
-public unsafe struct HashTableData__CaseInsensitiveStringBase__PStringBase__ushort__int
+public unsafe struct HashTableData___CaseInsensitiveStringBase___PStringBase__ushort__int
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__CaseInsensitiveStringBase__PStringBase__ushort__HashTableData__CaseInsensitiveStringBase__PStringBase__ushort__int_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__CaseInsensitiveStringBase__PStringBase__ushort__HashTableData__CaseInsensitiveStringBase__PStringBase__ushort__int_ptr
+    public ACBindings.Internal.IntrusiveHashData___CaseInsensitiveStringBase___PStringBase__ushort___HashTableData___CaseInsensitiveStringBase___PStringBase__ushort__int_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___CaseInsensitiveStringBase___PStringBase__ushort___HashTableData___CaseInsensitiveStringBase___PStringBase__ushort__int_ptr
 
     // Members
     public int m_data;
@@ -48,11 +44,10 @@ public unsafe struct HashTableData__CaseInsensitiveStringBase__PStringBase__usho
     // Methods
 }
 
-// HashTableData<PStringBase<char>,GRPCommand*>
-public unsafe struct HashTableData__PStringBase__sbyte__GRPCommand_ptr
+public unsafe struct HashTableData___PStringBase__sbyte___GRPCommand_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__PStringBase__sbyte__HashTableData__PStringBase__sbyte__GRPCommand_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__PStringBase__sbyte__HashTableData__PStringBase__sbyte__GRPCommand_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData___PStringBase__sbyte___HashTableData___PStringBase__sbyte___GRPCommand_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___PStringBase__sbyte___HashTableData___PStringBase__sbyte___GRPCommand_ptr_ptr
 
     // Members
     public System.IntPtr m_data;
@@ -60,11 +55,10 @@ public unsafe struct HashTableData__PStringBase__sbyte__GRPCommand_ptr
     // Methods
 }
 
-// HashTableData<PStringBase<char>,GRPObject*>
-public unsafe struct HashTableData__PStringBase__sbyte__GRPObject_ptr
+public unsafe struct HashTableData___PStringBase__sbyte___GRPObject_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__PStringBase__sbyte__HashTableData__PStringBase__sbyte__GRPObject_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__PStringBase__sbyte__HashTableData__PStringBase__sbyte__GRPObject_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData___PStringBase__sbyte___HashTableData___PStringBase__sbyte___GRPObject_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___PStringBase__sbyte___HashTableData___PStringBase__sbyte___GRPObject_ptr_ptr
 
     // Members
     public System.IntPtr m_data;
@@ -72,23 +66,21 @@ public unsafe struct HashTableData__PStringBase__sbyte__GRPObject_ptr
     // Methods
 }
 
-// HashTableData<IDClass<_tagDataID,32,0>,DBObj*>
-public unsafe struct HashTableData__IDClass___tagDataID__DBObj_ptr
+public unsafe struct HashTableData___IDClass____tagDataID___DBObj_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__DBObj_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__DBObj_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___DBObj_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___DBObj_ptr_ptr
 
     // Members
-    public ACBindings.DBObj* m_data;
+    public ACBindings.Internal.DBObj* m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,float>
 public unsafe struct HashTableData__uint__float
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__float_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__float_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint__float_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint__float_ptr
 
     // Members
     public float m_data;
@@ -96,35 +88,32 @@ public unsafe struct HashTableData__uint__float
     // Methods
 }
 
-// HashTableData<unsigned long,InputMapConflictsValue>
-public unsafe struct HashTableData__uint__InputMapConflictsValue
+public unsafe struct HashTableData__uint___InputMapConflictsValue
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__InputMapConflictsValue_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__InputMapConflictsValue_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___InputMapConflictsValue_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___InputMapConflictsValue_ptr
 
     // Members
-    public ACBindings.InputMapConflictsValue m_data;
+    public ACBindings.Internal.InputMapConflictsValue m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,CaseInsensitiveStringBase<PStringBase<char>>>
-public unsafe struct HashTableData__uint__CaseInsensitiveStringBase__PStringBase__sbyte
+public unsafe struct HashTableData__uint___CaseInsensitiveStringBase___PStringBase__sbyte
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__CaseInsensitiveStringBase__PStringBase__sbyte_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__CaseInsensitiveStringBase__PStringBase__sbyte_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___CaseInsensitiveStringBase___PStringBase__sbyte_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___CaseInsensitiveStringBase___PStringBase__sbyte_ptr
 
     // Members
-    public ACBindings.CaseInsensitiveStringBase__PStringBase__sbyte m_data;
+    public ACBindings.Internal.CaseInsensitiveStringBase___PStringBase__sbyte m_data;
 
     // Methods
 }
 
-// HashTableData<CaseInsensitiveStringBase<PStringBase<char>>,unsigned long>
-public unsafe struct HashTableData__CaseInsensitiveStringBase__PStringBase__sbyte__uint
+public unsafe struct HashTableData___CaseInsensitiveStringBase___PStringBase__sbyte__uint
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__CaseInsensitiveStringBase__PStringBase__sbyte__HashTableData__CaseInsensitiveStringBase__PStringBase__sbyte__uint_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__CaseInsensitiveStringBase__PStringBase__sbyte__HashTableData__CaseInsensitiveStringBase__PStringBase__sbyte__uint_ptr
+    public ACBindings.Internal.IntrusiveHashData___CaseInsensitiveStringBase___PStringBase__sbyte___HashTableData___CaseInsensitiveStringBase___PStringBase__sbyte__uint_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___CaseInsensitiveStringBase___PStringBase__sbyte___HashTableData___CaseInsensitiveStringBase___PStringBase__sbyte__uint_ptr
 
     // Members
     public uint m_data;
@@ -132,59 +121,54 @@ public unsafe struct HashTableData__CaseInsensitiveStringBase__PStringBase__sbyt
     // Methods
 }
 
-// HashTableData<QualifiedDataID,CAsyncGetRequest*>
-public unsafe struct HashTableData__QualifiedDataID__CAsyncGetRequest_ptr
+public unsafe struct HashTableData___QualifiedDataID___CAsyncGetRequest_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__QualifiedDataID__HashTableData__QualifiedDataID__CAsyncGetRequest_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__QualifiedDataID__HashTableData__QualifiedDataID__CAsyncGetRequest_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData___QualifiedDataID___HashTableData___QualifiedDataID___CAsyncGetRequest_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___QualifiedDataID___HashTableData___QualifiedDataID___CAsyncGetRequest_ptr_ptr
 
     // Members
-    public ACBindings.CAsyncGetRequest* m_data;
+    public ACBindings.Internal.CAsyncGetRequest* m_data;
 
     // Methods
 }
 
-// HashTableData<AsyncContext,AsyncCache::CCallbackHandler*>
-public unsafe struct HashTableData__AsyncContext__AsyncCache_CCallbackHandler_ptr
+public unsafe struct HashTableData___AsyncContext___AsyncCache_CCallbackHandler_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__AsyncContext__HashTableData__AsyncContext__AsyncCache_CCallbackHandler_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__AsyncContext__HashTableData__AsyncContext__AsyncCache_CCallbackHandler_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData___AsyncContext___HashTableData___AsyncContext___AsyncCache_CCallbackHandler_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___AsyncContext___HashTableData___AsyncContext___AsyncCache_CCallbackHandler_ptr_ptr
 
     // Members
-    public ACBindings.AsyncCache.CCallbackHandler* m_data;
+    public ACBindings.Internal.AsyncCache.CCallbackHandler* m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,DBOCache*>
-public unsafe struct HashTableData__uint__DBOCache_ptr
+public unsafe struct HashTableData__uint___DBOCache_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__DBOCache_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__DBOCache_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___DBOCache_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___DBOCache_ptr_ptr
 
     // Members
-    public ACBindings.DBOCache* m_data;
+    public ACBindings.Internal.DBOCache* m_data;
 
     // Methods
 }
 
-// HashTableData<long,DataHistory::IterationData>
-public unsafe struct HashTableData__int__DataHistory_IterationData
+public unsafe struct HashTableData__int___DataHistory_IterationData
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__int__HashTableData__int__DataHistory_IterationData_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__int__HashTableData__int__DataHistory_IterationData_ptr
+    public ACBindings.Internal.IntrusiveHashData__int___HashTableData__int___DataHistory_IterationData_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__int___HashTableData__int___DataHistory_IterationData_ptr
 
     // Members
-    public ACBindings.DataHistory.IterationData m_data;
+    public ACBindings.Internal.DataHistory.IterationData m_data;
 
     // Methods
 }
 
-// HashTableData<QualifiedDataID,long>
-public unsafe struct HashTableData__QualifiedDataID__int
+public unsafe struct HashTableData___QualifiedDataID__int
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__QualifiedDataID__HashTableData__QualifiedDataID__int_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__QualifiedDataID__HashTableData__QualifiedDataID__int_ptr
+    public ACBindings.Internal.IntrusiveHashData___QualifiedDataID___HashTableData___QualifiedDataID__int_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___QualifiedDataID___HashTableData___QualifiedDataID__int_ptr
 
     // Members
     public int m_data;
@@ -192,35 +176,32 @@ public unsafe struct HashTableData__QualifiedDataID__int
     // Methods
 }
 
-// HashTableData<QualifiedDataID,MissingIteration*>
-public unsafe struct HashTableData__QualifiedDataID__MissingIteration_ptr
+public unsafe struct HashTableData___QualifiedDataID___MissingIteration_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__QualifiedDataID__HashTableData__QualifiedDataID__MissingIteration_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__QualifiedDataID__HashTableData__QualifiedDataID__MissingIteration_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData___QualifiedDataID___HashTableData___QualifiedDataID___MissingIteration_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___QualifiedDataID___HashTableData___QualifiedDataID___MissingIteration_ptr_ptr
 
     // Members
-    public ACBindings.MissingIteration* m_data;
+    public ACBindings.Internal.MissingIteration* m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned __int64,DiskController*>
-public unsafe struct HashTableData__ulong__DiskController_ptr
+public unsafe struct HashTableData__ulong___DiskController_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__ulong__HashTableData__ulong__DiskController_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__ulong__HashTableData__ulong__DiskController_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__ulong___HashTableData__ulong___DiskController_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__ulong___HashTableData__ulong___DiskController_ptr_ptr
 
     // Members
-    public ACBindings.DiskController* m_data;
+    public ACBindings.Internal.DiskController* m_data;
 
     // Methods
 }
 
-// HashTableData<PStringBase<char>,unsigned long>
-public unsafe struct HashTableData__PStringBase__sbyte__uint
+public unsafe struct HashTableData___PStringBase__sbyte__uint
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__PStringBase__sbyte__HashTableData__PStringBase__sbyte__uint_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__PStringBase__sbyte__HashTableData__PStringBase__sbyte__uint_ptr
+    public ACBindings.Internal.IntrusiveHashData___PStringBase__sbyte___HashTableData___PStringBase__sbyte__uint_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___PStringBase__sbyte___HashTableData___PStringBase__sbyte__uint_ptr
 
     // Members
     public uint m_data;
@@ -228,11 +209,10 @@ public unsafe struct HashTableData__PStringBase__sbyte__uint
     // Methods
 }
 
-// HashTableData<unsigned long,unsigned long>
 public unsafe struct HashTableData__uint__uint
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__uint_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__uint_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint__uint_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint__uint_ptr
 
     // Members
     public uint m_data;
@@ -240,11 +220,10 @@ public unsafe struct HashTableData__uint__uint
     // Methods
 }
 
-// HashTableData<unsigned long,List<NoticeHandler*>*>
-public unsafe struct HashTableData__uint__List__NoticeHandler_ptr_ptr
+public unsafe struct HashTableData__uint___List___NoticeHandler_ptr_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__List__NoticeHandler_ptr_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__List__NoticeHandler_ptr_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___List___NoticeHandler_ptr_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___List___NoticeHandler_ptr_ptr_ptr
 
     // Members
     public System.IntPtr m_data;
@@ -252,59 +231,54 @@ public unsafe struct HashTableData__uint__List__NoticeHandler_ptr_ptr
     // Methods
 }
 
-// HashTableData<unsigned long,BaseProperty>
-public unsafe struct HashTableData__uint__BaseProperty
+public unsafe struct HashTableData__uint___BaseProperty
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__BaseProperty_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__BaseProperty_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___BaseProperty_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___BaseProperty_ptr
 
     // Members
-    public ACBindings.BaseProperty m_data;
+    public ACBindings.Internal.BaseProperty m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,StringInfoData*>
-public unsafe struct HashTableData__uint__StringInfoData_ptr
+public unsafe struct HashTableData__uint___StringInfoData_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__StringInfoData_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__StringInfoData_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___StringInfoData_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___StringInfoData_ptr_ptr
 
     // Members
-    public ACBindings.StringInfoData* m_data;
+    public ACBindings.Internal.StringInfoData* m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,AvailableProperty>
-public unsafe struct HashTableData__uint__AvailableProperty
+public unsafe struct HashTableData__uint___AvailableProperty
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__AvailableProperty_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__AvailableProperty_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___AvailableProperty_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___AvailableProperty_ptr
 
     // Members
-    public ACBindings.AvailableProperty m_data;
+    public ACBindings.Internal.AvailableProperty m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,PhysicsScriptTableData*>
-public unsafe struct HashTableData__uint__PhysicsScriptTableData_ptr
+public unsafe struct HashTableData__uint___PhysicsScriptTableData_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__PhysicsScriptTableData_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__PhysicsScriptTableData_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___PhysicsScriptTableData_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___PhysicsScriptTableData_ptr_ptr
 
     // Members
-    public ACBindings.PhysicsScriptTableData* m_data;
+    public ACBindings.Internal.PhysicsScriptTableData* m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,double>
 public unsafe struct HashTableData__uint__double
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__double_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__double_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint__double_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint__double_ptr
 
     // Members
     public double m_data;
@@ -312,11 +286,10 @@ public unsafe struct HashTableData__uint__double
     // Methods
 }
 
-// HashTableData<unsigned __int64,SmartArray<QualityChangeHandler*,1>*>
-public unsafe struct HashTableData__ulong__SmartArray__QualityChangeHandler_ptr_ptr
+public unsafe struct HashTableData__ulong___SmartArray___QualityChangeHandler_ptr_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__ulong__HashTableData__ulong__SmartArray__QualityChangeHandler_ptr_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__ulong__HashTableData__ulong__SmartArray__QualityChangeHandler_ptr_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__ulong___HashTableData__ulong___SmartArray___QualityChangeHandler_ptr_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__ulong___HashTableData__ulong___SmartArray___QualityChangeHandler_ptr_ptr_ptr
 
     // Members
     public System.IntPtr m_data;
@@ -324,35 +297,32 @@ public unsafe struct HashTableData__ulong__SmartArray__QualityChangeHandler_ptr_
     // Methods
 }
 
-// HashTableData<unsigned long,ElementDesc>
-public unsafe struct HashTableData__uint__ElementDesc
+public unsafe struct HashTableData__uint___ElementDesc
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__ElementDesc_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__ElementDesc_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___ElementDesc_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___ElementDesc_ptr
 
     // Members
-    public ACBindings.ElementDesc m_data;
+    public ACBindings.Internal.ElementDesc m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,StateDesc>
-public unsafe struct HashTableData__uint__StateDesc
+public unsafe struct HashTableData__uint___StateDesc
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__StateDesc_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__StateDesc_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___StateDesc_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___StateDesc_ptr
 
     // Members
-    public ACBindings.StateDesc m_data;
+    public ACBindings.Internal.StateDesc m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned __int64,unsigned __int64>
 public unsafe struct HashTableData__ulong__ulong
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__ulong__HashTableData__ulong__ulong_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__ulong__HashTableData__ulong__ulong_ptr
+    public ACBindings.Internal.IntrusiveHashData__ulong___HashTableData__ulong__ulong_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__ulong___HashTableData__ulong__ulong_ptr
 
     // Members
     public ulong m_data;
@@ -360,11 +330,10 @@ public unsafe struct HashTableData__ulong__ulong
     // Methods
 }
 
-// HashTableData<unsigned long,int>
 public unsafe struct HashTableData__uint__int
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__int_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__int_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint__int_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint__int_ptr
 
     // Members
     public int m_data;
@@ -372,47 +341,43 @@ public unsafe struct HashTableData__uint__int
     // Methods
 }
 
-// HashTableData<unsigned long,UIMainFramework* (__cdecl*)(void)>
 public unsafe struct HashTableData__uint__void_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__void_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__void_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint__void_ptr_ptr BaseClass_IntrusiveHashData__uint___HashTableData__uint__void_ptr_ptr; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint__void_ptr_ptr
 
     // Members
-    public System.IntPtr m_data; // function pointer
+    public delegate* unmanaged[Cdecl]<ACBindings.Internal.LayoutDesc*, ACBindings.Internal.ElementDesc*, ACBindings.Internal.UIElement*> m_data; // function pointer
 
     // Methods
 }
 
-// HashTableData<unsigned __int64,ImgTex*>
-public unsafe struct HashTableData__ulong__ImgTex_ptr
+public unsafe struct HashTableData__ulong___ImgTex_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__ulong__HashTableData__ulong__ImgTex_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__ulong__HashTableData__ulong__ImgTex_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__ulong___HashTableData__ulong___ImgTex_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__ulong___HashTableData__ulong___ImgTex_ptr_ptr
 
     // Members
-    public ACBindings.ImgTex* m_data;
+    public ACBindings.Internal.ImgTex* m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,ImgTex*>
-public unsafe struct HashTableData__uint__ImgTex_ptr
+public unsafe struct HashTableData__uint___ImgTex_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__ImgTex_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__ImgTex_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___ImgTex_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___ImgTex_ptr_ptr
 
     // Members
-    public ACBindings.ImgTex* m_data;
+    public ACBindings.Internal.ImgTex* m_data;
 
     // Methods
 }
 
-// HashTableData<enum PixelFormatID,HashTable<unsigned long,ImgTex*,0>*>
-public unsafe struct HashTableData__PixelFormatID__HashTable__uint__ImgTex_ptr_ptr
+public unsafe struct HashTableData___PixelFormatID___HashTable__uint___ImgTex_ptr_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__PixelFormatID__HashTableData__PixelFormatID__HashTable__uint__ImgTex_ptr_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__PixelFormatID__HashTableData__PixelFormatID__HashTable__uint__ImgTex_ptr_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData___PixelFormatID___HashTableData___PixelFormatID___HashTable__uint___ImgTex_ptr_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___PixelFormatID___HashTableData___PixelFormatID___HashTable__uint___ImgTex_ptr_ptr_ptr
 
     // Members
     public System.IntPtr m_data;
@@ -420,35 +385,32 @@ public unsafe struct HashTableData__PixelFormatID__HashTable__uint__ImgTex_ptr_p
     // Methods
 }
 
-// HashTableData<unsigned long,HeritageGroup_CG>
-public unsafe struct HashTableData__uint__HeritageGroup_CG
+public unsafe struct HashTableData__uint___HeritageGroup_CG
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__HeritageGroup_CG_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__HeritageGroup_CG_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___HeritageGroup_CG_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___HeritageGroup_CG_ptr
 
     // Members
-    public ACBindings.HeritageGroup_CG m_data;
+    public ACBindings.Internal.HeritageGroup_CG m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,Sex_CG>
-public unsafe struct HashTableData__uint__Sex_CG
+public unsafe struct HashTableData__uint___Sex_CG
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__Sex_CG_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__Sex_CG_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___Sex_CG_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___Sex_CG_ptr
 
     // Members
-    public ACBindings.Sex_CG m_data;
+    public ACBindings.Internal.Sex_CG m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,unsigned char>
 public unsafe struct HashTableData__uint__byte
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__byte_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__byte_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint__byte_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint__byte_ptr
 
     // Members
     public byte m_data;
@@ -456,191 +418,175 @@ public unsafe struct HashTableData__uint__byte
     // Methods
 }
 
-// HashTableData<unsigned long,SpellSet>
-public unsafe struct HashTableData__uint__SpellSet
+public unsafe struct HashTableData__uint___SpellSet
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__SpellSet_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__SpellSet_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___SpellSet_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___SpellSet_ptr
 
     // Members
-    public ACBindings.SpellSet m_data;
+    public ACBindings.Internal.SpellSet m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,Graphic*>
-public unsafe struct HashTableData__uint__Graphic_ptr
+public unsafe struct HashTableData__uint___Graphic_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__Graphic_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__Graphic_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___Graphic_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___Graphic_ptr_ptr
 
     // Members
-    public ACBindings.Graphic* m_data;
+    public ACBindings.Internal.Graphic* m_data;
 
     // Methods
 }
 
-// HashTableData<IDClass<_tagDataID,32,0>,Graphic*>
-public unsafe struct HashTableData__IDClass___tagDataID__Graphic_ptr
+public unsafe struct HashTableData___IDClass____tagDataID___Graphic_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__Graphic_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__Graphic_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___Graphic_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___Graphic_ptr_ptr
 
     // Members
-    public ACBindings.Graphic* m_data;
+    public ACBindings.Internal.Graphic* m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,IDClass<_tagDataID,32,0>>
-public unsafe struct HashTableData__uint__IDClass___tagDataID
+public unsafe struct HashTableData__uint___IDClass____tagDataID
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__IDClass___tagDataID_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__IDClass___tagDataID_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___IDClass____tagDataID_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___IDClass____tagDataID_ptr
 
     // Members
-    public ACBindings.IDClass___tagDataID m_data;
+    public ACBindings.Internal.IDClass____tagDataID m_data;
 
     // Methods
 }
 
-// HashTableData<PStringBase<char>,UIPreferenceItem*>
-public unsafe struct HashTableData__PStringBase__sbyte__UIPreferenceItem_ptr
+public unsafe struct HashTableData___PStringBase__sbyte___UIPreferenceItem_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__PStringBase__sbyte__HashTableData__PStringBase__sbyte__UIPreferenceItem_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__PStringBase__sbyte__HashTableData__PStringBase__sbyte__UIPreferenceItem_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData___PStringBase__sbyte___HashTableData___PStringBase__sbyte___UIPreferenceItem_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___PStringBase__sbyte___HashTableData___PStringBase__sbyte___UIPreferenceItem_ptr_ptr
 
     // Members
-    public ACBindings.UIPreferenceItem* m_data;
+    public ACBindings.Internal.UIPreferenceItem* m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,AutoGrowHashTable<unsigned long,SmartArray<UIMessageData,1>>>
-public unsafe struct HashTableData__uint__AutoGrowHashTable__uint__SmartArray__UIMessageData
+public unsafe struct HashTableData__uint___AutoGrowHashTable__uint___SmartArray___UIMessageData
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__AutoGrowHashTable__uint__SmartArray__UIMessageData_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__AutoGrowHashTable__uint__SmartArray__UIMessageData_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___AutoGrowHashTable__uint___SmartArray___UIMessageData_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___AutoGrowHashTable__uint___SmartArray___UIMessageData_ptr
 
     // Members
-    public ACBindings.AutoGrowHashTable__uint__SmartArray__UIMessageData m_data;
+    public ACBindings.Internal.AutoGrowHashTable__uint___SmartArray___UIMessageData m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,SmartArray<UIMessageData,1>>
-public unsafe struct HashTableData__uint__SmartArray__UIMessageData
+public unsafe struct HashTableData__uint___SmartArray___UIMessageData
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__SmartArray__UIMessageData_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__SmartArray__UIMessageData_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___SmartArray___UIMessageData_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___SmartArray___UIMessageData_ptr
 
     // Members
-    public ACBindings.SmartArray__UIMessageData m_data;
+    public ACBindings.Internal.SmartArray___UIMessageData m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,SmartArray<UIElement*,1>>
-public unsafe struct HashTableData__uint__SmartArray__UIElement_ptr
+public unsafe struct HashTableData__uint___SmartArray___UIElement_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__SmartArray__UIElement_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__SmartArray__UIElement_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___SmartArray___UIElement_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___SmartArray___UIElement_ptr_ptr
 
     // Members
-    public ACBindings.SmartArray__UIElement_ptr m_data;
+    public ACBindings.Internal.SmartArray___UIElement_ptr m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,BasePropertyDesc*>
-public unsafe struct HashTableData__uint__BasePropertyDesc_ptr
+public unsafe struct HashTableData__uint___BasePropertyDesc_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__BasePropertyDesc_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__BasePropertyDesc_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___BasePropertyDesc_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___BasePropertyDesc_ptr_ptr
 
     // Members
-    public ACBindings.BasePropertyDesc* m_data;
+    public ACBindings.Internal.BasePropertyDesc* m_data;
 
     // Methods
 }
 
-// HashTableData<IDClass<_tagDataID,32,0>,HashTable<unsigned long,ElementDesc,0>>
-public unsafe struct HashTableData__IDClass___tagDataID__HashTable__uint__ElementDesc
+public unsafe struct HashTableData___IDClass____tagDataID___HashTable__uint___ElementDesc
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__HashTable__uint__ElementDesc_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__HashTable__uint__ElementDesc_ptr
+    public ACBindings.Internal.IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___HashTable__uint___ElementDesc_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___HashTable__uint___ElementDesc_ptr
 
     // Members
-    public ACBindings.HashTable__uint__ElementDesc m_data;
+    public ACBindings.Internal.HashTable__uint___ElementDesc m_data;
 
     // Methods
 }
 
-// HashTableData<CaseInsensitiveStringBase<PStringBase<char>>,TFileEntry*>
-public unsafe struct HashTableData__CaseInsensitiveStringBase__PStringBase__sbyte__TFileEntry_ptr
+public unsafe struct HashTableData___CaseInsensitiveStringBase___PStringBase__sbyte___TFileEntry_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__CaseInsensitiveStringBase__PStringBase__sbyte__HashTableData__CaseInsensitiveStringBase__PStringBase__sbyte__TFileEntry_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__CaseInsensitiveStringBase__PStringBase__sbyte__HashTableData__CaseInsensitiveStringBase__PStringBase__sbyte__TFileEntry_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData___CaseInsensitiveStringBase___PStringBase__sbyte___HashTableData___CaseInsensitiveStringBase___PStringBase__sbyte___TFileEntry_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___CaseInsensitiveStringBase___PStringBase__sbyte___HashTableData___CaseInsensitiveStringBase___PStringBase__sbyte___TFileEntry_ptr_ptr
 
     // Members
-    public ACBindings.TFileEntry* m_data;
+    public ACBindings.Internal.TFileEntry* m_data;
 
     // Methods
 }
 
-// HashTableData<IDClass<_tagDataID,32,0>,TFileEntry*>
-public unsafe struct HashTableData__IDClass___tagDataID__TFileEntry_ptr
+public unsafe struct HashTableData___IDClass____tagDataID___TFileEntry_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__TFileEntry_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__TFileEntry_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___TFileEntry_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___TFileEntry_ptr_ptr
 
     // Members
-    public ACBindings.TFileEntry* m_data;
+    public ACBindings.Internal.TFileEntry* m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,TDBTypeEntry*>
-public unsafe struct HashTableData__uint__TDBTypeEntry_ptr
+public unsafe struct HashTableData__uint___TDBTypeEntry_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__TDBTypeEntry_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__TDBTypeEntry_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___TDBTypeEntry_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___TDBTypeEntry_ptr_ptr
 
     // Members
-    public ACBindings.TDBTypeEntry* m_data;
+    public ACBindings.Internal.TDBTypeEntry* m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,DBTypeDef>
-public unsafe struct HashTableData__uint__DBTypeDef
+public unsafe struct HashTableData__uint___DBTypeDef
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__DBTypeDef_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__DBTypeDef_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___DBTypeDef_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___DBTypeDef_ptr
 
     // Members
-    public ACBindings.DBTypeDef m_data;
+    public ACBindings.Internal.DBTypeDef m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,PStringBase<char>>
-public unsafe struct HashTableData__uint__PStringBase__sbyte
+public unsafe struct HashTableData__uint___PStringBase__sbyte
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__PStringBase__sbyte_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__PStringBase__sbyte_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___PStringBase__sbyte_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___PStringBase__sbyte_ptr
 
     // Members
-    public ACBindings.PStringBase__sbyte m_data;
+    public ACBindings.Internal.PStringBase__sbyte m_data;
 
     // Methods
 }
 
-// HashTableData<IDClass<_tagDataID,32,0>,unsigned long>
-public unsafe struct HashTableData__IDClass___tagDataID__uint
+public unsafe struct HashTableData___IDClass____tagDataID__uint
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__uint_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__uint_ptr
+    public ACBindings.Internal.IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID__uint_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID__uint_ptr
 
     // Members
     public uint m_data;
@@ -648,242 +594,222 @@ public unsafe struct HashTableData__IDClass___tagDataID__uint
     // Methods
 }
 
-// HashTableData<unsigned long,ArchiveVersionRow>
-public unsafe struct HashTableData__uint__ArchiveVersionRow
+public unsafe struct HashTableData__uint___ArchiveVersionRow
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__ArchiveVersionRow_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__ArchiveVersionRow_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___ArchiveVersionRow_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___ArchiveVersionRow_ptr
 
     // Members
-    public ACBindings.ArchiveVersionRow m_data;
+    public ACBindings.Internal.ArchiveVersionRow m_data;
 
     // Methods
 }
 
-// HashTableData<QualifiedIteration,IterationKey>
-public unsafe struct HashTableData__QualifiedIteration__IterationKey
+public unsafe struct HashTableData___QualifiedIteration___IterationKey
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__QualifiedIteration__HashTableData__QualifiedIteration__IterationKey_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__QualifiedIteration__HashTableData__QualifiedIteration__IterationKey_ptr
+    public ACBindings.Internal.IntrusiveHashData___QualifiedIteration___HashTableData___QualifiedIteration___IterationKey_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___QualifiedIteration___HashTableData___QualifiedIteration___IterationKey_ptr
 
     // Members
-    public ACBindings.IterationKey m_data;
+    public ACBindings.Internal.IterationKey m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,UILocationData>
-public unsafe struct HashTableData__uint__UILocationData
+public unsafe struct HashTableData__uint___UILocationData
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__UILocationData_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__UILocationData_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___UILocationData_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___UILocationData_ptr
 
     // Members
-    public ACBindings.UILocationData m_data;
+    public ACBindings.Internal.UILocationData m_data;
 
     // Methods
 }
 
-// HashTableData<IDClass<_tagDataID,32,0>,HashTable<unsigned long,UILocationData,0>>
-public unsafe struct HashTableData__IDClass___tagDataID__HashTable__uint__UILocationData
+public unsafe struct HashTableData___IDClass____tagDataID___HashTable__uint___UILocationData
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__HashTable__uint__UILocationData_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__HashTable__uint__UILocationData_ptr
+    public ACBindings.Internal.IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___HashTable__uint___UILocationData_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___HashTable__uint___UILocationData_ptr
 
     // Members
-    public ACBindings.HashTable__uint__UILocationData m_data;
+    public ACBindings.Internal.HashTable__uint___UILocationData m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,NameFilterLanguageData>
-public unsafe struct HashTableData__uint__NameFilterLanguageData
+public unsafe struct HashTableData__uint___NameFilterLanguageData
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__NameFilterLanguageData_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__NameFilterLanguageData_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___NameFilterLanguageData_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___NameFilterLanguageData_ptr
 
     // Members
-    public ACBindings.NameFilterLanguageData m_data;
+    public ACBindings.Internal.NameFilterLanguageData m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,IntrusiveSmartPointer<BasePropertyValue>>
-public unsafe struct HashTableData__uint__IntrusiveSmartPointer__BasePropertyValue
+public unsafe struct HashTableData__uint___IntrusiveSmartPointer___BasePropertyValue
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__IntrusiveSmartPointer__BasePropertyValue_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__IntrusiveSmartPointer__BasePropertyValue_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___IntrusiveSmartPointer___BasePropertyValue_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___IntrusiveSmartPointer___BasePropertyValue_ptr
 
     // Members
-    public ACBindings.IntrusiveSmartPointer__BasePropertyValue m_data;
+    public ACBindings.Internal.IntrusiveSmartPointer___BasePropertyValue m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,PStringBase<unsigned short>>
-public unsafe struct HashTableData__uint__PStringBase__ushort
+public unsafe struct HashTableData__uint___PStringBase__ushort
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__PStringBase__ushort_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__PStringBase__ushort_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___PStringBase__ushort_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___PStringBase__ushort_ptr
 
     // Members
-    public ACBindings.PStringBase__ushort m_data;
+    public ACBindings.Internal.PStringBase__ushort m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,StringTableString*>
-public unsafe struct HashTableData__uint__StringTableString_ptr
+public unsafe struct HashTableData__uint___StringTableString_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__StringTableString_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__StringTableString_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___StringTableString_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___StringTableString_ptr_ptr
 
     // Members
-    public ACBindings.StringTableString* m_data;
+    public ACBindings.Internal.StringTableString* m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,List<PStringBase<char>>>
-public unsafe struct HashTableData__uint__List__PStringBase__sbyte
+public unsafe struct HashTableData__uint___List___PStringBase__sbyte
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__List__PStringBase__sbyte_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__List__PStringBase__sbyte_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___List___PStringBase__sbyte_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___List___PStringBase__sbyte_ptr
 
     // Members
-    public ACBindings.List__PStringBase__sbyte m_data;
+    public ACBindings.Internal.List___PStringBase__sbyte m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,HashTable<unsigned long,List<PStringBase<char>>,0>>
-public unsafe struct HashTableData__uint__HashTable__uint__List__PStringBase__sbyte
+public unsafe struct HashTableData__uint___HashTable__uint___List___PStringBase__sbyte
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__HashTable__uint__List__PStringBase__sbyte_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__HashTable__uint__List__PStringBase__sbyte_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___HashTable__uint___List___PStringBase__sbyte_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___HashTable__uint___List___PStringBase__sbyte_ptr
 
     // Members
-    public ACBindings.HashTable__uint__List__PStringBase__sbyte m_data;
+    public ACBindings.Internal.HashTable__uint___List___PStringBase__sbyte m_data;
 
     // Methods
 }
 
-// HashTableData<ControlSpecification,enum ControlType>
-public unsafe struct HashTableData__ControlSpecification__ControlType
+public unsafe struct HashTableData___ControlSpecification___ControlType
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__ControlSpecification__HashTableData__ControlSpecification__ControlType_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__ControlSpecification__HashTableData__ControlSpecification__ControlType_ptr
+    public ACBindings.Internal.IntrusiveHashData___ControlSpecification___HashTableData___ControlSpecification___ControlType_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___ControlSpecification___HashTableData___ControlSpecification___ControlType_ptr
 
     // Members
-    public ACBindings.ControlType m_data;
+    public ACBindings.Internal.ControlType m_data;
 
     // Methods
 }
 
-// HashTableData<ControlSpecification,CInputManager_WIN32::RecentControlState>
-public unsafe struct HashTableData__ControlSpecification__CInputManager_WIN32_RecentControlState
+public unsafe struct HashTableData___ControlSpecification___CInputManager_WIN32_RecentControlState
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__ControlSpecification__HashTableData__ControlSpecification__CInputManager_WIN32_RecentControlState_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__ControlSpecification__HashTableData__ControlSpecification__CInputManager_WIN32_RecentControlState_ptr
+    public ACBindings.Internal.IntrusiveHashData___ControlSpecification___HashTableData___ControlSpecification___CInputManager_WIN32_RecentControlState_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___ControlSpecification___HashTableData___ControlSpecification___CInputManager_WIN32_RecentControlState_ptr
 
     // Members
-    public ACBindings.CInputManager_WIN32.RecentControlState m_data;
+    public ACBindings.Internal.CInputManager_WIN32.RecentControlState m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,RenderVertexStreamD3D*>
-public unsafe struct HashTableData__uint__RenderVertexStreamD3D_ptr
+public unsafe struct HashTableData__uint___RenderVertexStreamD3D_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__RenderVertexStreamD3D_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__RenderVertexStreamD3D_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___RenderVertexStreamD3D_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___RenderVertexStreamD3D_ptr_ptr
 
     // Members
-    public ACBindings.RenderVertexStreamD3D* m_data;
+    public ACBindings.Internal.RenderVertexStreamD3D* m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,CEnvCell*>
-public unsafe struct HashTableData__uint__CEnvCell_ptr
+public unsafe struct HashTableData__uint___CEnvCell_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__CEnvCell_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__CEnvCell_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___CEnvCell_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___CEnvCell_ptr_ptr
 
     // Members
-    public ACBindings.CEnvCell* m_data;
+    public ACBindings.Internal.CEnvCell* m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,DialogInfo>
-public unsafe struct HashTableData__uint__DialogInfo
+public unsafe struct HashTableData__uint___DialogInfo
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__DialogInfo_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__DialogInfo_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___DialogInfo_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___DialogInfo_ptr
 
     // Members
-    public ACBindings.DialogInfo m_data;
+    public ACBindings.Internal.DialogInfo m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,List<DialogInfo>>
-public unsafe struct HashTableData__uint__List__DialogInfo
+public unsafe struct HashTableData__uint___List___DialogInfo
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__List__DialogInfo_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__List__DialogInfo_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___List___DialogInfo_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___List___DialogInfo_ptr
 
     // Members
-    public ACBindings.List__DialogInfo m_data;
+    public ACBindings.Internal.List___DialogInfo m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,UIElement_ListBox*>
-public unsafe struct HashTableData__uint__UIElement_ListBox_ptr
+public unsafe struct HashTableData__uint___UIElement_ListBox_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__UIElement_ListBox_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__UIElement_ListBox_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___UIElement_ListBox_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___UIElement_ListBox_ptr_ptr
 
     // Members
-    public ACBindings.UIElement_ListBox* m_data;
+    public ACBindings.Internal.UIElement_ListBox* m_data;
 
     // Methods
 }
 
-// HashTableData<IDClass<_tagDataID,32,0>,SpellComponentRegion*>
-public unsafe struct HashTableData__IDClass___tagDataID__SpellComponentRegion_ptr
+public unsafe struct HashTableData___IDClass____tagDataID___SpellComponentRegion_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__SpellComponentRegion_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__SpellComponentRegion_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___SpellComponentRegion_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___SpellComponentRegion_ptr_ptr
 
     // Members
-    public ACBindings.SpellComponentRegion* m_data;
+    public ACBindings.Internal.SpellComponentRegion* m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned int,gmCGSkillsPage::tagSkillRecord>
-public unsafe struct HashTableData__uint__gmCGSkillsPage_tagSkillRecord
+public unsafe struct HashTableData__uint___gmCGSkillsPage_tagSkillRecord
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__gmCGSkillsPage_tagSkillRecord_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__gmCGSkillsPage_tagSkillRecord_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___gmCGSkillsPage_tagSkillRecord_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___gmCGSkillsPage_tagSkillRecord_ptr
 
     // Members
-    public ACBindings.gmCGSkillsPage.tagSkillRecord m_data;
+    public ACBindings.Internal.gmCGSkillsPage.tagSkillRecord m_data;
 
     // Methods
 }
 
-// HashTableData<unsigned long,Logger::ITextFileOutputHandler*>
-public unsafe struct HashTableData__uint__Logger_ITextFileOutputHandler_ptr
+public unsafe struct HashTableData__uint___Logger_ITextFileOutputHandler_ptr
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__uint__HashTableData__uint__Logger_ITextFileOutputHandler_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__uint__HashTableData__uint__Logger_ITextFileOutputHandler_ptr_ptr
+    public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___Logger_ITextFileOutputHandler_ptr_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint___Logger_ITextFileOutputHandler_ptr_ptr
 
     // Members
-    public ACBindings.Logger.ITextFileOutputHandler* m_data;
+    public ACBindings.Internal.Logger.ITextFileOutputHandler* m_data;
 
     // Methods
 }

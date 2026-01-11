@@ -1,37 +1,35 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// NoticeHandler
 public unsafe struct NoticeHandler : System.IDisposable
 {
     // Child Types
-    // NoticeHandler_vtbl
     public unsafe struct NoticeHandler_vtbl
     {
         // Members
-        public System.IntPtr IsEngine; // function pointer
-        public System.IntPtr RecvNotice_CharacterSet; // function pointer
-        public System.IntPtr RecvNotice_PlayerObjDescChanged; // function pointer
-        public System.IntPtr RecvNotice_RuntimeDDDStatus; // function pointer
-        public System.IntPtr RecvNotice_ItemAttributesChanged; // function pointer
-        public System.IntPtr RecvNotice_ServerSaysAttemptFailed; // function pointer
-        public System.IntPtr RecvNotice_ServerSaysMoveItem; // function pointer
-        public System.IntPtr RecvNotice_SetSelectedItem; // function pointer
-        public System.IntPtr RecvNotice_CharacterError; // function pointer
-        public System.IntPtr RecvNotice_ServerDied; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, byte> IsEngine; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, ACBindings.Internal.CharacterSet*, void> RecvNotice_CharacterSet; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, void> RecvNotice_PlayerObjDescChanged; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, byte, uint, uint, void> RecvNotice_RuntimeDDDStatus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, uint, uint, void> RecvNotice_ItemAttributesChanged; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, uint, void> RecvNotice_ServerSaysAttemptFailed; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, uint, uint, uint, uint, uint, int, uint, uint, void> RecvNotice_ServerSaysMoveItem; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, uint, uint, void> RecvNotice_SetSelectedItem; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, ACBindings.Internal.charError, void> RecvNotice_CharacterError; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, void> RecvNotice_ServerDied; // function pointer
         public System.IntPtr RecvNotice_WorldName;
-        public System.IntPtr RecvNotice_BeingDeleted; // function pointer
-        public System.IntPtr RecvNotice_CreateObject; // function pointer
-        public System.IntPtr RecvNotice_CloseDialog; // function pointer
-        public System.IntPtr RecvNotice_DisplayFinalStringInfo; // function pointer
-        public System.IntPtr RecvNotice_DisplayStringInfo; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, ACBindings.Internal.CWeenieObject*, void> RecvNotice_BeingDeleted; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, uint, void> RecvNotice_CreateObject; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, uint, ACBindings.Internal.PropertyCollection*, void> RecvNotice_CloseDialog; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, uint, ACBindings.Internal.StringInfo*, ACBindings.Internal.StringInfo*, uint, void> RecvNotice_DisplayFinalStringInfo; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, uint, ACBindings.Internal.StringInfo*, void> RecvNotice_DisplayStringInfo; // function pointer
         public System.IntPtr RecvNotice_DisplayWeenieError;
-        public System.IntPtr RecvNotice_OpenDialog; // function pointer
-        public System.IntPtr RecvNotice_SmartBoxObjectFound; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, uint, void> RecvNotice_OpenDialog; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, uint, void> RecvNotice_SmartBoxObjectFound; // function pointer
         public System.IntPtr RecvNotice_TextTag_DIDClick;
-        public System.IntPtr RecvNotice_TextTag_IIDClick; // function pointer
-        public System.IntPtr RecvNotice_TextTag_IIDEnumClick; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, uint, uint, void> RecvNotice_TextTag_IIDClick; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, uint, uint, uint, void> RecvNotice_TextTag_IIDEnumClick; // function pointer
         public System.IntPtr RecvNotice_TextTag_IIDStringClick;
-        public System.IntPtr RecvNotice_UpdateGameView; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NoticeHandler*, uint, uint, uint, uint, void> RecvNotice_UpdateGameView; // function pointer
 
         // Methods
     }
@@ -45,7 +43,11 @@ public unsafe struct NoticeHandler : System.IDisposable
     }
 
     // Methods
-    // void __thiscall NoticeHandler::~NoticeHandler(NoticeHandler*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.NoticeHandler, void>)0x0043C610)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0043C610
+    /// void __thiscall NoticeHandler::~NoticeHandler(NoticeHandler*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.NoticeHandler, void>)0x0043C610)(ref this);
 }
 

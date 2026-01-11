@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // GeneratorDestruct
 public enum GeneratorDestruct : uint

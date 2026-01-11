@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ISerializeType
 public enum ISerializeType : byte

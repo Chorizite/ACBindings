@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// RenderPrefs
 public unsafe struct RenderPrefs
 {
     // Members

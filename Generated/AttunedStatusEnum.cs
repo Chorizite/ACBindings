@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // AttunedStatusEnum
 public enum AttunedStatusEnum : uint

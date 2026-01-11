@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// datetype
 public unsafe struct datetype
 {
     // Members

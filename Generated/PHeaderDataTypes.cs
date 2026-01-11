@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // PHeaderDataTypes
 public enum PHeaderDataTypes : byte

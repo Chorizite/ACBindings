@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// D3DXQUATERNION
 public unsafe struct D3DXQUATERNION
 {
     // Members

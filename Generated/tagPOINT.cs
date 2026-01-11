@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// tagPOINT
 public unsafe struct tagPOINT
 {
     // Members

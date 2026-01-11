@@ -1,86 +1,84 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ACCmdInterp
 public unsafe struct ACCmdInterp : System.IDisposable
 {
     // Base Classes
-    public ACBindings.CommandInterpreter BaseClass_CommandInterpreter; // ACBindings.CommandInterpreter
-    public ACBindings.gmNoticeHandler BaseClass_gmNoticeHandler; // ACBindings.gmNoticeHandler
+    public ACBindings.Internal.CommandInterpreter BaseClass_CommandInterpreter; // ACBindings.Internal.CommandInterpreter
+    public ACBindings.Internal.gmNoticeHandler BaseClass_gmNoticeHandler; // ACBindings.Internal.gmNoticeHandler
 
     // Child Types
-    // ACCmdInterp_vtbl
     public unsafe struct ACCmdInterp_vtbl
     {
         // Members
-        public System.IntPtr ACCmdInterp_dtor_0; // function pointer
-        public System.IntPtr OnAction; // function pointer
-        public System.IntPtr OnLoseFocus; // function pointer
-        public System.IntPtr WhichList; // function pointer
-        public System.IntPtr AddCommand; // function pointer
-        public System.IntPtr NukeCommand; // function pointer
-        public System.IntPtr BookkeepCommandAndModifyIfNecessary; // function pointer
-        public System.IntPtr ApplyCurrentMovement; // function pointer
-        public System.IntPtr SetHoldRun; // function pointer
-        public System.IntPtr SetHoldSidestep; // function pointer
-        public System.IntPtr ClearAllCommands; // function pointer
-        public System.IntPtr ApplyListHeadMovement; // function pointer
-        public System.IntPtr StopListHeadMovement; // function pointer
-        public System.IntPtr ApplyHoldKeysToCommand; // function pointer
-        public System.IntPtr MovePlayer_NonAutonomous; // function pointer
-        public System.IntPtr UITogglesRun; // function pointer
-        public System.IntPtr CommenceJump; // function pointer
-        public System.IntPtr DoJump; // function pointer
-        public System.IntPtr HandleNewForwardMovement; // function pointer
-        public System.IntPtr SendMovementEvent; // function pointer
-        public System.IntPtr FinishJump; // function pointer
-        public System.IntPtr SetUI; // function pointer
-        public System.IntPtr SendPositionEvent; // function pointer
-        public System.IntPtr SetSmartBox; // function pointer
-        public System.IntPtr UsePositionFromServer; // function pointer
-        public System.IntPtr LoseControlToServer; // function pointer
-        public System.IntPtr TakeControlFromServer; // function pointer
-        public System.IntPtr NewPlayer; // function pointer
-        public System.IntPtr LoseKeyboardFocus; // function pointer
-        public System.IntPtr PlayerTeleported; // function pointer
-        public System.IntPtr PlayerIsDead; // function pointer
-        public System.IntPtr HandleExhaustion; // function pointer
-        public System.IntPtr UpdateToggleRun; // function pointer
-        public System.IntPtr Disable; // function pointer
-        public System.IntPtr Enable; // function pointer
-        public System.IntPtr IsEnabled; // function pointer
-        public System.IntPtr IsActive; // function pointer
-        public System.IntPtr HandleLogOff; // function pointer
-        public System.IntPtr HandleKeyboardCommand; // function pointer
-        public System.IntPtr HandleMouseMovementCommand; // function pointer
-        public System.IntPtr MovePlayer; // function pointer
-        public System.IntPtr StopDrift; // function pointer
-        public System.IntPtr UseTime; // function pointer
-        public System.IntPtr ShouldSendPositionEvent; // function pointer
-        public System.IntPtr SetAutonomyLevel; // function pointer
-        public System.IntPtr GetAutonomyLevel; // function pointer
-        public System.IntPtr IsStandingStill; // function pointer
-        public System.IntPtr StopCompletely; // function pointer
-        public System.IntPtr MaybeStopCompletely; // function pointer
-        public System.IntPtr TurnToHeading; // function pointer
-        public System.IntPtr ToggleAutoRun; // function pointer
-        public System.IntPtr SetAutoRun; // function pointer
-        public System.IntPtr SetMouseLookActive; // function pointer
-        public System.IntPtr GetMouseLookActive; // function pointer
-        public System.IntPtr HandleSelectLeft; // function pointer
-        public System.IntPtr SetMouseLeftDown; // function pointer
-        public System.IntPtr GetMouseLeftDown; // function pointer
-        public System.IntPtr SendAutonomyLevelEvent; // function pointer
-        public System.IntPtr SendDoMovementEvent; // function pointer
-        public System.IntPtr SendStopMovementEvent; // function pointer
-        public System.IntPtr SendMoveToStateEvent; // function pointer
-        public System.IntPtr SendAutonomousPositionEvent; // function pointer
-        public System.IntPtr SendTurnToEvent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> ACCmdInterp_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, ACBindings.Internal.InputEvent*, byte> OnAction; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, uint, uint, uint, ACBindings.Internal.CallbackLoseFocusResult> OnLoseFocus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, uint, ACBindings.Internal.CommandList*> WhichList; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, uint, float, int, int, void> AddCommand; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, uint*, int*, float*, int*, int*, int> NukeCommand; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, uint*, int*, float*, int*, int*, int> BookkeepCommandAndModifyIfNecessary; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> ApplyCurrentMovement; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int, void> SetHoldRun; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int, void> SetHoldSidestep; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> ClearAllCommands; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, ACBindings.Internal.CommandList*, void> ApplyListHeadMovement; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, ACBindings.Internal.CommandList*, void> StopListHeadMovement; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, uint*, float*, void> ApplyHoldKeysToCommand; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, uint, int, float, ACBindings.Internal.HoldKey, void> MovePlayer_NonAutonomous; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int> UITogglesRun; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> CommenceJump; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, byte, void> DoJump; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> HandleNewForwardMovement; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> SendMovementEvent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> FinishJump; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, System.IntPtr, System.IntPtr, void> SetUI; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> SendPositionEvent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, ACBindings.Internal.SmartBox*, void> SetSmartBox; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int> UsePositionFromServer; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> LoseControlToServer; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> TakeControlFromServer; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int, void> NewPlayer; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> LoseKeyboardFocus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> PlayerTeleported; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int> PlayerIsDead; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> HandleExhaustion; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> UpdateToggleRun; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> Disable; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> Enable; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int> IsEnabled; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int> IsActive; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> HandleLogOff; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, ACBindings.Internal.CmdStruct*, void> HandleKeyboardCommand; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, ACBindings.Internal.CmdStruct*, void> HandleMouseMovementCommand; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, uint, int, float, int, int, void> MovePlayer; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> StopDrift; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> UseTime; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int> ShouldSendPositionEvent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, uint, int> SetAutonomyLevel; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, uint> GetAutonomyLevel; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int> IsStandingStill; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int> StopCompletely; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int> MaybeStopCompletely; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, float, int, int> TurnToHeading; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, void> ToggleAutoRun; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int, int, void> SetAutoRun; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int, void> SetMouseLookActive; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int> GetMouseLookActive; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int, int> HandleSelectLeft; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int, void> SetMouseLeftDown; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, int> GetMouseLeftDown; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, uint, int> SendAutonomyLevelEvent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, uint, float, ACBindings.Internal.HoldKey, int> SendDoMovementEvent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, uint, ACBindings.Internal.HoldKey, int> SendStopMovementEvent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, ACBindings.Internal.MoveToStatePack*, int> SendMoveToStateEvent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, ACBindings.Internal.AutonomousPositionPack*, int> SendAutonomousPositionEvent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCmdInterp*, ACBindings.Internal.TurnToEventPack*, int> SendTurnToEvent; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.HashTable__uint__uint m_hashEmoteInputActionsToCommands;
+    public ACBindings.Internal.HashTable__uint__uint m_hashEmoteInputActionsToCommands;
 
     // Generated Dispose
     public void Dispose() {
@@ -88,39 +86,107 @@ public unsafe struct ACCmdInterp : System.IDisposable
     }
 
     // Methods
-    // void __thiscall ACCmdInterp::TakeControlFromServer(ACCmdInterp*)
-    public void TakeControlFromServer() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, void>)0x0058BF90)(ref this);
-    // int __thiscall ACCmdInterp::UITogglesRun(ACCmdInterp*)
-    public int UITogglesRun() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, int>)0x0058BFB0)(ref this);
-    // void __thiscall ACCmdInterp::CommenceJump(ACCmdInterp*)
-    public void CommenceJump() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, void>)0x0058BFD0)(ref this);
-    // void __thiscall ACCmdInterp::DoJump(ACCmdInterp*,bool)
-    public void DoJump(byte autonomous) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, byte, void>)0x0058BFF0)(ref this, autonomous);
-    // void __thiscall ACCmdInterp::FinishJump(ACCmdInterp*)
-    public void FinishJump() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, void>)0x0058C000)(ref this);
-    // void __thiscall ACCmdInterp::HandleNewForwardMovement(ACCmdInterp*)
-    public void HandleNewForwardMovement() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, void>)0x0058C020)(ref this);
-    // int __thiscall ACCmdInterp::SendAutonomyLevelEvent(ACCmdInterp*,unsigned int)
-    public int SendAutonomyLevelEvent(uint level) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, uint, int>)0x0058C040)(ref this, level);
-    // int __thiscall ACCmdInterp::SendDoMovementEvent(ACCmdInterp*,unsigned int,float,HoldKey)
-    public int SendDoMovementEvent(uint motion, float speed, ACBindings.HoldKey hold_key) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, uint, float, ACBindings.HoldKey, int>)0x0058C060)(ref this, motion, speed, hold_key);
-    // int __thiscall ACCmdInterp::SendStopMovementEvent(ACCmdInterp*,unsigned int,HoldKey)
-    public int SendStopMovementEvent(uint motion, ACBindings.HoldKey hold_key) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, uint, ACBindings.HoldKey, int>)0x0058C080)(ref this, motion, hold_key);
-    // int __thiscall ACCmdInterp::SendMoveToStateEvent(ACCmdInterp*,MoveToStatePack*)
-    public int SendMoveToStateEvent(ACBindings.MoveToStatePack* mtsp) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, ACBindings.MoveToStatePack*, int>)0x0058C0A0)(ref this, mtsp);
-    // int __thiscall ACCmdInterp::SendAutonomousPositionEvent(ACCmdInterp*,AutonomousPositionPack*)
-    public int SendAutonomousPositionEvent(ACBindings.AutonomousPositionPack* app) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, ACBindings.AutonomousPositionPack*, int>)0x0058C0C0)(ref this, app);
-    // int __thiscall ACCmdInterp::SendTurnToEvent(ACCmdInterp*,TurnToEventPack*)
-    public int SendTurnToEvent(ACBindings.TurnToEventPack* tep) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, ACBindings.TurnToEventPack*, int>)0x0058C0E0)(ref this, tep);
-    // void __thiscall ACCmdInterp::RecvNotice_PlayerOptionChanged(ACCmdInterp*,PlayerOption)
-    public void RecvNotice_PlayerOptionChanged(ACBindings.PlayerOption i_eOption) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, ACBindings.PlayerOption, void>)0x0058C100)(ref this, i_eOption);
-    // void __thiscall ACCmdInterp::SetMotion(ACCmdInterp*,unsigned int,bool)
-    public void SetMotion(uint motion, byte fOn) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, uint, byte, void>)0x0058C140)(ref this, motion, fOn);
-    // bool __thiscall ACCmdInterp::OnAction(ACCmdInterp*,const InputEvent*)
-    public byte OnAction(ACBindings.InputEvent* i_evt) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, ACBindings.InputEvent*, byte>)0x0058C1A0)(ref this, i_evt);
-    // void __thiscall ACCmdInterp::InitializeEmoteInputActionHash(ACCmdInterp*)
-    public void InitializeEmoteInputActionHash() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, void>)0x0058C340)(ref this);
-    // void __thiscall ACCmdInterp::~ACCmdInterp(ACCmdInterp*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCmdInterp, void>)0x0058CA10)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0058BF90
+    /// void __thiscall ACCmdInterp::TakeControlFromServer(ACCmdInterp*)</code>
+    /// </summary>
+    public void TakeControlFromServer() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, void>)0x0058BF90)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0058BFB0
+    /// int __thiscall ACCmdInterp::UITogglesRun(ACCmdInterp*)</code>
+    /// </summary>
+    public int UITogglesRun() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, int>)0x0058BFB0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0058BFD0
+    /// void __thiscall ACCmdInterp::CommenceJump(ACCmdInterp*)</code>
+    /// </summary>
+    public void CommenceJump() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, void>)0x0058BFD0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0058BFF0
+    /// void __thiscall ACCmdInterp::DoJump(ACCmdInterp*,bool)</code>
+    /// </summary>
+    public void DoJump(byte autonomous) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, byte, void>)0x0058BFF0)(ref this, autonomous);
+
+    /// <summary>
+    /// <code>Offset: 0x0058C000
+    /// void __thiscall ACCmdInterp::FinishJump(ACCmdInterp*)</code>
+    /// </summary>
+    public void FinishJump() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, void>)0x0058C000)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0058C020
+    /// void __thiscall ACCmdInterp::HandleNewForwardMovement(ACCmdInterp*)</code>
+    /// </summary>
+    public void HandleNewForwardMovement() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, void>)0x0058C020)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0058C040
+    /// int __thiscall ACCmdInterp::SendAutonomyLevelEvent(ACCmdInterp*,unsigned int)</code>
+    /// </summary>
+    public int SendAutonomyLevelEvent(uint level) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, uint, int>)0x0058C040)(ref this, level);
+
+    /// <summary>
+    /// <code>Offset: 0x0058C060
+    /// int __thiscall ACCmdInterp::SendDoMovementEvent(ACCmdInterp*,unsigned int,float,HoldKey)</code>
+    /// </summary>
+    public int SendDoMovementEvent(uint motion, float speed, ACBindings.Internal.HoldKey hold_key) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, uint, float, ACBindings.Internal.HoldKey, int>)0x0058C060)(ref this, motion, speed, hold_key);
+
+    /// <summary>
+    /// <code>Offset: 0x0058C080
+    /// int __thiscall ACCmdInterp::SendStopMovementEvent(ACCmdInterp*,unsigned int,HoldKey)</code>
+    /// </summary>
+    public int SendStopMovementEvent(uint motion, ACBindings.Internal.HoldKey hold_key) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, uint, ACBindings.Internal.HoldKey, int>)0x0058C080)(ref this, motion, hold_key);
+
+    /// <summary>
+    /// <code>Offset: 0x0058C0A0
+    /// int __thiscall ACCmdInterp::SendMoveToStateEvent(ACCmdInterp*,MoveToStatePack*)</code>
+    /// </summary>
+    public int SendMoveToStateEvent(ACBindings.Internal.MoveToStatePack* mtsp) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, ACBindings.Internal.MoveToStatePack*, int>)0x0058C0A0)(ref this, mtsp);
+
+    /// <summary>
+    /// <code>Offset: 0x0058C0C0
+    /// int __thiscall ACCmdInterp::SendAutonomousPositionEvent(ACCmdInterp*,AutonomousPositionPack*)</code>
+    /// </summary>
+    public int SendAutonomousPositionEvent(ACBindings.Internal.AutonomousPositionPack* app) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, ACBindings.Internal.AutonomousPositionPack*, int>)0x0058C0C0)(ref this, app);
+
+    /// <summary>
+    /// <code>Offset: 0x0058C0E0
+    /// int __thiscall ACCmdInterp::SendTurnToEvent(ACCmdInterp*,TurnToEventPack*)</code>
+    /// </summary>
+    public int SendTurnToEvent(ACBindings.Internal.TurnToEventPack* tep) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, ACBindings.Internal.TurnToEventPack*, int>)0x0058C0E0)(ref this, tep);
+
+    /// <summary>
+    /// <code>Offset: 0x0058C100
+    /// void __thiscall ACCmdInterp::RecvNotice_PlayerOptionChanged(ACCmdInterp*,PlayerOption)</code>
+    /// </summary>
+    public void RecvNotice_PlayerOptionChanged(ACBindings.Internal.PlayerOption i_eOption) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, ACBindings.Internal.PlayerOption, void>)0x0058C100)(ref this, i_eOption);
+
+    /// <summary>
+    /// <code>Offset: 0x0058C140
+    /// void __thiscall ACCmdInterp::SetMotion(ACCmdInterp*,unsigned int,bool)</code>
+    /// </summary>
+    public void SetMotion(uint motion, byte fOn) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, uint, byte, void>)0x0058C140)(ref this, motion, fOn);
+
+    /// <summary>
+    /// <code>Offset: 0x0058C1A0
+    /// bool __thiscall ACCmdInterp::OnAction(ACCmdInterp*,const InputEvent*)</code>
+    /// </summary>
+    public byte OnAction(ACBindings.Internal.InputEvent* i_evt) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, ACBindings.Internal.InputEvent*, byte>)0x0058C1A0)(ref this, i_evt);
+
+    /// <summary>
+    /// <code>Offset: 0x0058C340
+    /// void __thiscall ACCmdInterp::InitializeEmoteInputActionHash(ACCmdInterp*)</code>
+    /// </summary>
+    public void InitializeEmoteInputActionHash() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, void>)0x0058C340)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0058CA10
+    /// void __thiscall ACCmdInterp::~ACCmdInterp(ACCmdInterp*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCmdInterp, void>)0x0058CA10)(ref this);
 }
 

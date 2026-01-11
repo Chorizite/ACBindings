@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // DDDEvent
 public enum DDDEvent : byte

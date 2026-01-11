@@ -1,133 +1,111 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// InterfaceInfo<Interface>
-public unsafe struct InterfaceInfo__Interface
+public unsafe struct InterfaceInfo___Interface
 {
     // Methods
 }
 
-// InterfaceInfo<IObjectFactory>
-public unsafe struct InterfaceInfo__IObjectFactory
+public unsafe struct InterfaceInfo___IObjectFactory
 {
     // Methods
 }
 
-// InterfaceInfo<CLCache>
-public unsafe struct InterfaceInfo__CLCache
+public unsafe struct InterfaceInfo___CLCache
 {
     // Methods
 }
 
-// InterfaceInfo<IQueuedUIEventDeliverer>
-public unsafe struct InterfaceInfo__IQueuedUIEventDeliverer
+public unsafe struct InterfaceInfo___IQueuedUIEventDeliverer
 {
     // Methods
 }
 
-// InterfaceInfo<ClientSystem>
-public unsafe struct InterfaceInfo__ClientSystem
+public unsafe struct InterfaceInfo___ClientSystem
 {
     // Methods
 }
 
-// InterfaceInfo<PlayerDesc>
-public unsafe struct InterfaceInfo__PlayerDesc
+public unsafe struct InterfaceInfo___PlayerDesc
 {
     // Methods
 }
 
-// InterfaceInfo<CPlayerModule>
-public unsafe struct InterfaceInfo__CPlayerModule
+public unsafe struct InterfaceInfo___CPlayerModule
 {
     // Methods
 }
 
-// InterfaceInfo<CObjectMaint>
-public unsafe struct InterfaceInfo__CObjectMaint
+public unsafe struct InterfaceInfo___CObjectMaint
 {
     // Methods
 }
 
-// InterfaceInfo<ClientObjMaintSystem>
-public unsafe struct InterfaceInfo__ClientObjMaintSystem
+public unsafe struct InterfaceInfo___ClientObjMaintSystem
 {
     // Methods
 }
 
-// InterfaceInfo<ClientUISystem>
-public unsafe struct InterfaceInfo__ClientUISystem
+public unsafe struct InterfaceInfo___ClientUISystem
 {
     // Methods
 }
 
-// InterfaceInfo<ClientAdminSystem>
-public unsafe struct InterfaceInfo__ClientAdminSystem
+public unsafe struct InterfaceInfo___ClientAdminSystem
 {
     // Methods
 }
 
-// InterfaceInfo<ClientAllegianceSystem>
-public unsafe struct InterfaceInfo__ClientAllegianceSystem
+public unsafe struct InterfaceInfo___ClientAllegianceSystem
 {
     // Methods
 }
 
-// InterfaceInfo<ClientCombatSystem>
-public unsafe struct InterfaceInfo__ClientCombatSystem
+public unsafe struct InterfaceInfo___ClientCombatSystem
 {
     // Methods
 }
 
-// InterfaceInfo<ClientCommunicationSystem>
-public unsafe struct InterfaceInfo__ClientCommunicationSystem
+public unsafe struct InterfaceInfo___ClientCommunicationSystem
 {
     // Methods
 }
 
-// InterfaceInfo<ClientFellowshipSystem>
-public unsafe struct InterfaceInfo__ClientFellowshipSystem
+public unsafe struct InterfaceInfo___ClientFellowshipSystem
 {
     // Methods
 }
 
-// InterfaceInfo<ClientHousingSystem>
-public unsafe struct InterfaceInfo__ClientHousingSystem
+public unsafe struct InterfaceInfo___ClientHousingSystem
 {
     // Methods
 }
 
-// InterfaceInfo<ClientMagicSystem>
-public unsafe struct InterfaceInfo__ClientMagicSystem
+public unsafe struct InterfaceInfo___ClientMagicSystem
 {
     // Methods
 }
 
-// InterfaceInfo<ClientMiniGameSystem>
-public unsafe struct InterfaceInfo__ClientMiniGameSystem
+public unsafe struct InterfaceInfo___ClientMiniGameSystem
 {
     // Methods
 }
 
-// InterfaceInfo<CPlayerSystem>
-public unsafe struct InterfaceInfo__CPlayerSystem
+public unsafe struct InterfaceInfo___CPlayerSystem
 {
     // Methods
 }
 
-// InterfaceInfo<ClientTradeSystem>
-public unsafe struct InterfaceInfo__ClientTradeSystem
+public unsafe struct InterfaceInfo___ClientTradeSystem
 {
     // Methods
 }
 
-// InterfaceInfo<UIQueueManager>
-public unsafe struct InterfaceInfo__UIQueueManager
+public unsafe struct InterfaceInfo___UIQueueManager
 {
     // Methods
 }
 
-// InterfaceInfo<InArchiveVersionStack>
-public unsafe struct InterfaceInfo__InArchiveVersionStack
+public unsafe struct InterfaceInfo___InArchiveVersionStack
 {
     // Methods
 }

@@ -1,25 +1,23 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CryptoKeyRSA
 public unsafe struct CryptoKeyRSA
 {
     // Base Classes
-    public ACBindings.CryptoKey BaseClass_CryptoKey; // ACBindings.CryptoKey
+    public ACBindings.Internal.CryptoKey BaseClass_CryptoKey; // ACBindings.Internal.CryptoKey
 
     // Child Types
-    // CryptoKeyRSA_vtbl
     public unsafe struct CryptoKeyRSA_vtbl
     {
         // Members
-        public System.IntPtr CryptoKeyRSA_dtor_0; // function pointer
-        public System.IntPtr GenerateNewKey; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoKeyRSA*, void> CryptoKeyRSA_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoKeyRSA*, byte> GenerateNewKey; // function pointer
         public System.IntPtr StreamEncrypt;
         public System.IntPtr StreamDecrypt;
         public System.IntPtr Encrypt;
         public System.IntPtr Decrypt;
-        public System.IntPtr Serialize; // function pointer
-        public System.IntPtr ShouldSerializeWithExchangeKey; // function pointer
-        public System.IntPtr GetBlobType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoKeyRSA*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoKeyRSA*, byte> ShouldSerializeWithExchangeKey; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoKeyRSA*, uint> GetBlobType; // function pointer
 
         // Methods
     }

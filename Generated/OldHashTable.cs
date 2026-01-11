@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// OldHashTable<unsigned long,unsigned long>
 public unsafe struct OldHashTable__uint__uint
 {
     // Members

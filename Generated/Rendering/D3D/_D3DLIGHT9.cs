@@ -1,15 +1,14 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// _D3DLIGHT9
 public unsafe struct _D3DLIGHT9
 {
     // Members
-    public ACBindings._D3DLIGHTTYPE Type;
-    public ACBindings._D3DCOLORVALUE Diffuse;
-    public ACBindings._D3DCOLORVALUE Specular;
-    public ACBindings._D3DCOLORVALUE Ambient;
-    public ACBindings._D3DVECTOR Position;
-    public ACBindings._D3DVECTOR Direction;
+    public ACBindings.Internal._D3DLIGHTTYPE Type;
+    public ACBindings.Internal._D3DCOLORVALUE Diffuse;
+    public ACBindings.Internal._D3DCOLORVALUE Specular;
+    public ACBindings.Internal._D3DCOLORVALUE Ambient;
+    public ACBindings.Internal._D3DVECTOR Position;
+    public ACBindings.Internal._D3DVECTOR Direction;
     public float Range;
     public float Falloff;
     public float Attenuation0;

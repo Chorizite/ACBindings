@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CRefTime
 public unsafe struct CRefTime
 {
     // Members

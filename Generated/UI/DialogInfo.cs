@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DialogInfo
 public unsafe struct DialogInfo
 {
     // Members
-    public ACBindings.PropertyCollection data;
-    public ACBindings.Dialog* pointer;
-    public ACBindings.UIFramework* parent;
+    public ACBindings.Internal.PropertyCollection data;
+    public ACBindings.Internal.Dialog* pointer;
+    public ACBindings.Internal.UIFramework* parent;
     public uint context;
 
     // Methods

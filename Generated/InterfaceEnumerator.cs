@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// InterfaceEnumerator
 public unsafe struct InterfaceEnumerator : System.IDisposable
 {
     // Members
@@ -19,9 +18,17 @@ public unsafe struct InterfaceEnumerator : System.IDisposable
     }
 
     // Methods
-    // void __thiscall InterfaceEnumerator::InterfaceEnumerator(InterfaceEnumerator*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.InterfaceEnumerator, void>)0x005AC5F0)(ref this);
-    // void __thiscall InterfaceEnumerator::~InterfaceEnumerator(InterfaceEnumerator*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.InterfaceEnumerator, void>)0x005AC690)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005AC5F0
+    /// void __thiscall InterfaceEnumerator::InterfaceEnumerator(InterfaceEnumerator*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.InterfaceEnumerator, void>)0x005AC5F0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005AC690
+    /// void __thiscall InterfaceEnumerator::~InterfaceEnumerator(InterfaceEnumerator*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.InterfaceEnumerator, void>)0x005AC690)(ref this);
 }
 

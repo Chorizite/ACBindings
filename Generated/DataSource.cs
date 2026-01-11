@@ -1,15 +1,13 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DataSource
 public unsafe struct DataSource
 {
     // Child Types
-    // DataSource_vtbl
     public unsafe struct DataSource_vtbl
     {
         // Members
-        public System.IntPtr DataSource_dtor_0; // function pointer
-        public System.IntPtr Close; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DataSource*, void> DataSource_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DataSource*, void> Close; // function pointer
 
         // Methods
     }
@@ -23,9 +21,17 @@ public unsafe struct DataSource
     public byte bSrcLSBFirst;
 
     // Methods
-    // void __thiscall DataSource::Open(DataSource*,unsigned __int8*,int)
-    public void Open(byte* pData, int dataSize) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DataSource, byte*, int, void>)0x00670E80)(ref this, pData, dataSize);
-    // void __thiscall DataSource::Close(DataSource*)
-    public void Close() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DataSource, void>)0x00670EA0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00670E80
+    /// void __thiscall DataSource::Open(DataSource*,unsigned __int8*,int)</code>
+    /// </summary>
+    public void Open(byte* pData, int dataSize) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DataSource, byte*, int, void>)0x00670E80)(ref this, pData, dataSize);
+
+    /// <summary>
+    /// <code>Offset: 0x00670EA0
+    /// void __thiscall DataSource::Close(DataSource*)</code>
+    /// </summary>
+    public void Close() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DataSource, void>)0x00670EA0)(ref this);
 }
 

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// portal_info
 public unsafe struct portal_info
 {
     // Members

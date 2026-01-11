@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// BudgetStatItem
 public unsafe struct BudgetStatItem
 {
     // Members
-    public ACBindings.BudgetStatInfo sInfo;
+    public ACBindings.Internal.BudgetStatInfo sInfo;
     public uint nValue;
-    public ACBindings.ProfilerBudget.Status nStatus;
+    public ACBindings.Internal.ProfilerBudget.Status nStatus;
 
     // Methods
 }

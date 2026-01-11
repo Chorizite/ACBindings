@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DetectionInfo
 public unsafe struct DetectionInfo
 {
     // Members
     public uint object_id;
-    public ACBindings.DetectionType object_status;
+    public ACBindings.Internal.DetectionType object_status;
 
     // Methods
 }

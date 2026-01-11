@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // PKStatusEnum
 public enum PKStatusEnum : uint

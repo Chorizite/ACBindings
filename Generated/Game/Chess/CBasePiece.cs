@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CBasePiece
 public unsafe struct CBasePiece
 {
     // Members
-    public ACBindings.IDClass___tagDataID m_didIcon;
+    public ACBindings.Internal.IDClass____tagDataID m_didIcon;
 
     // Methods
 }

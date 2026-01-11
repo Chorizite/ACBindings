@@ -1,33 +1,31 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IChatClient
 public unsafe struct IChatClient
 {
     // Base Classes
-    public ACBindings.IChatNetworkSink BaseClass_IChatNetworkSink; // ACBindings.IChatNetworkSink
+    public ACBindings.Internal.IChatNetworkSink BaseClass_IChatNetworkSink; // ACBindings.Internal.IChatNetworkSink
 
     // Child Types
-    // IChatClient_vtbl
     public unsafe struct IChatClient_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr OnNetworkData; // function pointer
-        public System.IntPtr Init; // function pointer
-        public System.IntPtr Term; // function pointer
-        public System.IntPtr UseTime; // function pointer
-        public System.IntPtr SetTime; // function pointer
-        public System.IntPtr SetDisplayName; // function pointer
-        public System.IntPtr EnterRoomByID; // function pointer
-        public System.IntPtr EnterRoomByName; // function pointer
-        public System.IntPtr ExitRoomByID; // function pointer
-        public System.IntPtr ExitRoomByName; // function pointer
-        public System.IntPtr SendToRoomByName; // function pointer
-        public System.IntPtr SendToRoomByID; // function pointer
-        public System.IntPtr Squelch; // function pointer
-        public System.IntPtr UnSquelch; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatNetworkSink*, ACBindings.Internal.tagBLOB, int> OnNetworkData; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClient*, ACBindings.Internal.IChatNetwork*, ACBindings.Internal.IChatClientEventSink*, ACBindings.Internal.IChatClientAsyncResultSink*, ushort*, int> Init; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClient*, int> Term; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClient*, int> UseTime; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClient*, double, int> SetTime; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClient*, ushort*, int> SetDisplayName; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClient*, uint, ushort*, int> EnterRoomByID; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClient*, ushort*, ushort*, ACBindings.Internal.tagBLOB, ACBindings.Internal.tagBLOB, int> EnterRoomByName; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClient*, uint, int> ExitRoomByID; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClient*, ushort*, ACBindings.Internal.tagBLOB, ACBindings.Internal.tagBLOB, int> ExitRoomByName; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClient*, ushort*, ushort*, ACBindings.Internal.tagBLOB, ACBindings.Internal.tagBLOB, int> SendToRoomByName; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClient*, uint, ushort*, ACBindings.Internal.tagBLOB, ACBindings.Internal.tagBLOB, int> SendToRoomByID; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClient*, ushort*, int> Squelch; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClient*, ushort*, int> UnSquelch; // function pointer
 
         // Methods
     }

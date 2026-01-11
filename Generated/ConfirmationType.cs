@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ConfirmationType
 public enum ConfirmationType : uint

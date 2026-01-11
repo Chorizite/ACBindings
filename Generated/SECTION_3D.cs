@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // SECTION_3D
 public enum SECTION_3D : byte

@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// FastSmartArray<unsigned char>
 public unsafe struct FastSmartArray__byte
 {
     // Base Classes
-    public ACBindings.SmartArray__byte BaseClass_SmartArray; // ACBindings.SmartArray__byte
+    public ACBindings.Internal.SmartArray__byte BaseClass_SmartArray; // ACBindings.Internal.SmartArray__byte
 
     // Methods
 }

@@ -1,20 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ComponentData
 public unsafe struct ComponentData : System.IDisposable
 {
     // Base Classes
-    public ACBindings.DLListData BaseClass_DLListData; // ACBindings.DLListData
+    public ACBindings.Internal.DLListData BaseClass_DLListData; // ACBindings.Internal.DLListData
 
     // Members
-    public ACBindings.IDClass___tagDataID classID;
-    public ACBindings.AC1Legacy.PStringBase__sbyte componentName;
-    public ACBindings.IDClass___tagDataID componentIconID;
-    public ACBindings.HashTable__uint__uint objects;
+    public ACBindings.Internal.IDClass____tagDataID classID;
+    public ACBindings.Internal.AC1Legacy.PStringBase__sbyte componentName;
+    public ACBindings.Internal.IDClass____tagDataID componentIconID;
+    public ACBindings.Internal.HashTable__uint__uint objects;
     public uint numItems;
 
     // Generated Constructor
-    public ComponentData(ACBindings.ACCWeenieObject* weenObj) {
+    public ComponentData(ACBindings.Internal.ACCWeenieObject* weenObj) {
         _ConstructorInternal(weenObj);
     }
 
@@ -24,17 +23,41 @@ public unsafe struct ComponentData : System.IDisposable
     }
 
     // Methods
-    // unsigned int __thiscall ComponentData::GetFirstObjectID(ComponentData*)
-    public uint GetFirstObjectID() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ComponentData, uint>)0x00586D60)(ref this);
-    // void __thiscall ComponentData::AddItem(ComponentData*,ACCWeenieObject*)
-    public void AddItem(ACBindings.ACCWeenieObject* weenObj) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ComponentData, ACBindings.ACCWeenieObject*, void>)0x00587440)(ref this, weenObj);
-    // void __thiscall ComponentData::RemoveItem(ComponentData*,ACCWeenieObject*)
-    public void RemoveItem(ACBindings.ACCWeenieObject* weenObj) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ComponentData, ACBindings.ACCWeenieObject*, void>)0x005874B0)(ref this, weenObj);
-    // void __thiscall ComponentData::UpdateStackSize(ComponentData*,ACCWeenieObject*,ComponentTrackerUpdate*)
-    public void UpdateStackSize(ACBindings.ACCWeenieObject* weenObj, ACBindings.ComponentTrackerUpdate* change) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ComponentData, ACBindings.ACCWeenieObject*, ACBindings.ComponentTrackerUpdate*, void>)0x00587500)(ref this, weenObj, change);
-    // void __thiscall ComponentData::ComponentData(ComponentData*,ACCWeenieObject*)
-    public void _ConstructorInternal(ACBindings.ACCWeenieObject* weenObj) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ComponentData, ACBindings.ACCWeenieObject*, void>)0x00587660)(ref this, weenObj);
-    // void __thiscall ComponentData::~ComponentData(ComponentData*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ComponentData, void>)0x00587790)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00586D60
+    /// unsigned int __thiscall ComponentData::GetFirstObjectID(ComponentData*)</code>
+    /// </summary>
+    public uint GetFirstObjectID() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ComponentData, uint>)0x00586D60)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00587440
+    /// void __thiscall ComponentData::AddItem(ComponentData*,ACCWeenieObject*)</code>
+    /// </summary>
+    public void AddItem(ACBindings.Internal.ACCWeenieObject* weenObj) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ComponentData, ACBindings.Internal.ACCWeenieObject*, void>)0x00587440)(ref this, weenObj);
+
+    /// <summary>
+    /// <code>Offset: 0x005874B0
+    /// void __thiscall ComponentData::RemoveItem(ComponentData*,ACCWeenieObject*)</code>
+    /// </summary>
+    public void RemoveItem(ACBindings.Internal.ACCWeenieObject* weenObj) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ComponentData, ACBindings.Internal.ACCWeenieObject*, void>)0x005874B0)(ref this, weenObj);
+
+    /// <summary>
+    /// <code>Offset: 0x00587500
+    /// void __thiscall ComponentData::UpdateStackSize(ComponentData*,ACCWeenieObject*,ComponentTrackerUpdate*)</code>
+    /// </summary>
+    public void UpdateStackSize(ACBindings.Internal.ACCWeenieObject* weenObj, ACBindings.Internal.ComponentTrackerUpdate* change) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ComponentData, ACBindings.Internal.ACCWeenieObject*, ACBindings.Internal.ComponentTrackerUpdate*, void>)0x00587500)(ref this, weenObj, change);
+
+    /// <summary>
+    /// <code>Offset: 0x00587660
+    /// void __thiscall ComponentData::ComponentData(ComponentData*,ACCWeenieObject*)</code>
+    /// </summary>
+    public void _ConstructorInternal(ACBindings.Internal.ACCWeenieObject* weenObj) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ComponentData, ACBindings.Internal.ACCWeenieObject*, void>)0x00587660)(ref this, weenObj);
+
+    /// <summary>
+    /// <code>Offset: 0x00587790
+    /// void __thiscall ComponentData::~ComponentData(ComponentData*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ComponentData, void>)0x00587790)(ref this);
 }
 

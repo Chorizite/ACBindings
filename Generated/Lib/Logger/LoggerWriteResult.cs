@@ -1,4 +1,4 @@
-namespace ACBindings.Logger;
+namespace ACBindings.Internal.Logger;
 
 // Logger::LoggerWriteResult
 public enum LoggerWriteResult : byte

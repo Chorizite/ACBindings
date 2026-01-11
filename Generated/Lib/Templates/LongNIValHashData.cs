@@ -1,34 +1,31 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LongNIValHashData<SurfInfo*>
-public unsafe struct LongNIValHashData__SurfInfo_ptr
+public unsafe struct LongNIValHashData___SurfInfo_ptr
 {
     // Base Classes
-    public ACBindings.HashBaseData__uint BaseClass_HashBaseData; // ACBindings.HashBaseData__uint
+    public ACBindings.Internal.HashBaseData__uint BaseClass_HashBaseData; // ACBindings.Internal.HashBaseData__uint
 
     // Members
-    public ACBindings.SurfInfo* data;
+    public ACBindings.Internal.SurfInfo* data;
 
     // Methods
 }
 
-// LongNIValHashData<CPhysicsObj::CollisionRecord>
-public unsafe struct LongNIValHashData__CPhysicsObj_CollisionRecord
+public unsafe struct LongNIValHashData___CPhysicsObj_CollisionRecord
 {
     // Base Classes
-    public ACBindings.HashBaseData__uint BaseClass_HashBaseData; // ACBindings.HashBaseData__uint
+    public ACBindings.Internal.HashBaseData__uint BaseClass_HashBaseData; // ACBindings.Internal.HashBaseData__uint
 
     // Members
-    public ACBindings.CPhysicsObj.CollisionRecord data;
+    public ACBindings.Internal.CPhysicsObj.CollisionRecord data;
 
     // Methods
 }
 
-// LongNIValHashData<unsigned long>
 public unsafe struct LongNIValHashData__uint
 {
     // Base Classes
-    public ACBindings.HashBaseData__uint BaseClass_HashBaseData; // ACBindings.HashBaseData__uint
+    public ACBindings.Internal.HashBaseData__uint BaseClass_HashBaseData; // ACBindings.Internal.HashBaseData__uint
 
     // Members
     public uint data;
@@ -36,11 +33,10 @@ public unsafe struct LongNIValHashData__uint
     // Methods
 }
 
-// LongNIValHashData<LongHash<MotionData>*>
-public unsafe struct LongNIValHashData__LongHash__MotionData_ptr
+public unsafe struct LongNIValHashData___LongHash___MotionData_ptr
 {
     // Base Classes
-    public ACBindings.HashBaseData__uint BaseClass_HashBaseData; // ACBindings.HashBaseData__uint
+    public ACBindings.Internal.HashBaseData__uint BaseClass_HashBaseData; // ACBindings.Internal.HashBaseData__uint
 
     // Members
     public System.IntPtr data;
@@ -48,14 +44,13 @@ public unsafe struct LongNIValHashData__LongHash__MotionData_ptr
     // Methods
 }
 
-// LongNIValHashData<GlobalVoyeurInfo>
-public unsafe struct LongNIValHashData__GlobalVoyeurInfo
+public unsafe struct LongNIValHashData___GlobalVoyeurInfo
 {
     // Base Classes
-    public ACBindings.HashBaseData__uint BaseClass_HashBaseData; // ACBindings.HashBaseData__uint
+    public ACBindings.Internal.HashBaseData__uint BaseClass_HashBaseData; // ACBindings.Internal.HashBaseData__uint
 
     // Members
-    public ACBindings.GlobalVoyeurInfo data;
+    public ACBindings.Internal.GlobalVoyeurInfo data;
 
     // Methods
 }

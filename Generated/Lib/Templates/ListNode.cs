@@ -1,29 +1,26 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ListNode<PStringBase<char>>
-public unsafe struct ListNode__PStringBase__sbyte
+public unsafe struct ListNode___PStringBase__sbyte
 {
     // Members
-    public ACBindings.PStringBase__sbyte data;
+    public ACBindings.Internal.PStringBase__sbyte data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<PStringBase<unsigned short>>
-public unsafe struct ListNode__PStringBase__ushort
+public unsafe struct ListNode___PStringBase__ushort
 {
     // Members
-    public ACBindings.PStringBase__ushort data;
+    public ACBindings.Internal.PStringBase__ushort data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<WinInetAsyncHttpClient::HttpDownloadEvent*>
-public unsafe struct ListNode__WinInetAsyncHttpClient_HttpDownloadEvent_ptr
+public unsafe struct ListNode___WinInetAsyncHttpClient_HttpDownloadEvent_ptr
 {
     // Members
     public System.IntPtr data;
@@ -33,8 +30,7 @@ public unsafe struct ListNode__WinInetAsyncHttpClient_HttpDownloadEvent_ptr
     // Methods
 }
 
-// ListNode<WinInetAsyncHttpClient::HttpDownloadRequest*>
-public unsafe struct ListNode__WinInetAsyncHttpClient_HttpDownloadRequest_ptr
+public unsafe struct ListNode___WinInetAsyncHttpClient_HttpDownloadRequest_ptr
 {
     // Members
     public System.IntPtr data;
@@ -44,7 +40,6 @@ public unsafe struct ListNode__WinInetAsyncHttpClient_HttpDownloadRequest_ptr
     // Methods
 }
 
-// ListNode<unsigned long>
 public unsafe struct ListNode__uint
 {
     // Members
@@ -55,52 +50,47 @@ public unsafe struct ListNode__uint
     // Methods
 }
 
-// ListNode<QualifiedControl>
-public unsafe struct ListNode__QualifiedControl
+public unsafe struct ListNode___QualifiedControl
 {
     // Members
-    public ACBindings.QualifiedControl data;
+    public ACBindings.Internal.QualifiedControl data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<AsyncCache::CAsyncRequest*>
-public unsafe struct ListNode__AsyncCache_CAsyncRequest_ptr
+public unsafe struct ListNode___AsyncCache_CAsyncRequest_ptr
 {
     // Members
-    public ACBindings.AsyncCache.CAsyncRequest* data;
+    public ACBindings.Internal.AsyncCache.CAsyncRequest* data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<NoticeHandler*>
-public unsafe struct ListNode__NoticeHandler_ptr
+public unsafe struct ListNode___NoticeHandler_ptr
 {
     // Members
-    public ACBindings.NoticeHandler* data;
+    public ACBindings.Internal.NoticeHandler* data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<PerfMonCounterInfo::PerfMonCounterNameHelp>
-public unsafe struct ListNode__PerfMonCounterInfo_PerfMonCounterNameHelp
+public unsafe struct ListNode___PerfMonCounterInfo_PerfMonCounterNameHelp
 {
     // Members
-    public ACBindings.PerfMonCounterInfo.PerfMonCounterNameHelp data;
+    public ACBindings.Internal.PerfMonCounterInfo.PerfMonCounterNameHelp data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<ODBCRequest*>
-public unsafe struct ListNode__ODBCRequest_ptr
+public unsafe struct ListNode___ODBCRequest_ptr
 {
     // Members
     public System.IntPtr data;
@@ -110,84 +100,76 @@ public unsafe struct ListNode__ODBCRequest_ptr
     // Methods
 }
 
-// ListNode<SkillRecord*>
-public unsafe struct ListNode__SkillRecord_ptr
+public unsafe struct ListNode___SkillRecord_ptr
 {
     // Members
-    public ACBindings.SkillRecord* data;
+    public ACBindings.Internal.SkillRecord* data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<ObjectRangeInfo>
-public unsafe struct ListNode__ObjectRangeInfo
+public unsafe struct ListNode___ObjectRangeInfo
 {
     // Members
-    public ACBindings.ObjectRangeInfo data;
+    public ACBindings.Internal.ObjectRangeInfo data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<UIElementMessageInfo>
-public unsafe struct ListNode__UIElementMessageInfo
+public unsafe struct ListNode___UIElementMessageInfo
 {
     // Members
-    public ACBindings.UIElementMessageInfo data;
+    public ACBindings.Internal.UIElementMessageInfo data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<Glyph>
-public unsafe struct ListNode__Glyph
+public unsafe struct ListNode___Glyph
 {
     // Members
-    public ACBindings.Glyph data;
+    public ACBindings.Internal.Glyph data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<StringTableMetaLanguage::Node const*>
-public unsafe struct ListNode__StringTableMetaLanguage_Node_ptr
+public unsafe struct ListNode___StringTableMetaLanguage_Node_ptr
 {
     // Members
-    public ACBindings.StringTableMetaLanguage.Node* data;
+    public ACBindings.Internal.StringTableMetaLanguage.Node* data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<PFileNode*>
-public unsafe struct ListNode__PFileNode_ptr
+public unsafe struct ListNode___PFileNode_ptr
 {
     // Members
-    public ACBindings.PFileNode* data;
+    public ACBindings.Internal.PFileNode* data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<PerfMonCounterInfo*>
-public unsafe struct ListNode__PerfMonCounterInfo_ptr
+public unsafe struct ListNode___PerfMonCounterInfo_ptr
 {
     // Members
-    public ACBindings.PerfMonCounterInfo* data;
+    public ACBindings.Internal.PerfMonCounterInfo* data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<unsigned short>
 public unsafe struct ListNode__ushort
 {
     // Members
@@ -198,53 +180,53 @@ public unsafe struct ListNode__ushort
     // Methods
 }
 
-// ListNode<CInputHandler*>
-public unsafe struct ListNode__CInputHandler_ptr
+public unsafe struct ListNode___CInputHandler_ptr
 {
     // Members
-    public ACBindings.CInputHandler* data;
+    public ACBindings.Internal.CInputHandler* data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<CInputManager::InputMapEntry>
-public unsafe struct ListNode__CInputManager_InputMapEntry
+public unsafe struct ListNode___CInputManager_InputMapEntry
 {
     // Members
-    public ACBindings.CInputManager.InputMapEntry data;
+    public ACBindings.Internal.CInputManager.InputMapEntry data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<DialogInfo>
-public unsafe struct ListNode__DialogInfo
+public unsafe struct ListNode___DialogInfo
 {
     // Members
-    public ACBindings.DialogInfo data;
+    public ACBindings.Internal.DialogInfo data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
-    // ListNode<DialogInfo>::ListNode<DialogInfo> (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x00477B10
+    /// void*** __thiscall ListNode&lt;DialogInfo&gt;::ListNode&lt;DialogInfo&gt;(void***,_DWORD*)</code>
+    /// </summary>
+    // void*** __thiscall ListNode<DialogInfo>::ListNode<DialogInfo>(void***,_DWORD*) (template type method)
 }
 
-// ListNode<UIElement_UIItem*>
-public unsafe struct ListNode__UIElement_UIItem_ptr
+public unsafe struct ListNode___UIElement_UIItem_ptr
 {
     // Members
-    public ACBindings.UIElement_UIItem* data;
+    public ACBindings.Internal.UIElement_UIItem* data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// ListNode<DualHashData<UIOption_Slider*,UIOption_Slider*>*>
-public unsafe struct ListNode__DualHashData__UIOption_Slider_ptr__UIOption_Slider_ptr_ptr
+public unsafe struct ListNode___DualHashData___UIOption_Slider_ptr___UIOption_Slider_ptr_ptr
 {
     // Members
     public System.IntPtr data;

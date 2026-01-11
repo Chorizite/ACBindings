@@ -1,38 +1,36 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DiskController
 public unsafe struct DiskController : System.IDisposable
 {
     // Base Classes
-    public ACBindings.DiskConBase BaseClass_DiskConBase; // ACBindings.DiskConBase
+    public ACBindings.Internal.DiskConBase BaseClass_DiskConBase; // ACBindings.Internal.DiskConBase
 
     // Child Types
-    // DiskController_vtbl
     public unsafe struct DiskController_vtbl
     {
         // Members
-        public System.IntPtr DiskController_dtor_0; // function pointer
-        public System.IntPtr InitFile; // function pointer
-        public System.IntPtr Close; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, void> DiskController_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, ACBindings.Internal.DiskConInitInfo*, byte> InitFile; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, byte> Close; // function pointer
         public System.IntPtr LoadData;
         public System.IntPtr SaveData;
         public System.IntPtr DeleteData;
         public System.IntPtr DeleteDataByMask;
         public System.IntPtr IsMember;
         public System.IntPtr GetMembers;
-        public System.IntPtr HowmuchFreeSpace; // function pointer
-        public System.IntPtr LoadIterationList; // function pointer
-        public System.IntPtr SaveIterationList; // function pointer
-        public System.IntPtr GetDataset; // function pointer
-        public System.IntPtr GetSubset; // function pointer
-        public System.IntPtr GetDatFileID; // function pointer
-        public System.IntPtr IsInitialized; // function pointer
-        public System.IntPtr IsReadOnly; // function pointer
-        public System.IntPtr IsExpandable; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, int> HowmuchFreeSpace; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, ACBindings.Internal.CMostlyConsecutiveIntSet*, byte> LoadIterationList; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, ACBindings.Internal.CMostlyConsecutiveIntSet*, byte> SaveIterationList; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, ACBindings.Internal.DATFILE_TYPE> GetDataset; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, uint> GetSubset; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, ulong> GetDatFileID; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, byte> IsInitialized; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, byte> IsReadOnly; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, byte> IsExpandable; // function pointer
         public System.IntPtr GetMasterMapDID;
         public System.IntPtr SetMasterMapDID;
-        public System.IntPtr SetDatIDStamp; // function pointer
-        public System.IntPtr GetDatIDStamp; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, ACBindings.Internal.DatIDStamp*, void> SetDatIDStamp; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, ACBindings.Internal.DatIDStamp*, ACBindings.Internal.DatIDStamp*> GetDatIDStamp; // function pointer
         public System.IntPtr GetFilename;
         public System.IntPtr GetDataSize;
         public System.IntPtr GetUncompressedDataSize;
@@ -43,18 +41,18 @@ public unsafe struct DiskController : System.IDisposable
         public System.IntPtr LoadDataEx;
         public System.IntPtr SaveAndCompressData;
         public System.IntPtr SavePreCompressedData;
-        public System.IntPtr SaveDataEx; // function pointer
-        public System.IntPtr AttemptToCompress; // function pointer
-        public System.IntPtr Decompress; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, ACBindings.Internal.BTEntry*, ACBindings.Internal.Cache_Pack_t*, uint, byte> SaveDataEx; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, ACBindings.Internal.Cache_Pack_t*, ACBindings.Internal.Cache_Pack_t*, byte> AttemptToCompress; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DiskController*, ACBindings.Internal.Cache_Pack_t*, ACBindings.Internal.Cache_Pack_t*, byte> Decompress; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.CLBlockAllocator block_man_m;
-    public ACBindings.BTree did_tree_m;
-    public ACBindings.PStringBase__sbyte filename_m;
-    public ACBindings.DiskFileInfo_t file_info_m;
+    public ACBindings.Internal.CLBlockAllocator block_man_m;
+    public ACBindings.Internal.BTree did_tree_m;
+    public ACBindings.Internal.PStringBase__sbyte filename_m;
+    public ACBindings.Internal.DiskFileInfo_t file_info_m;
 
     // Generated Constructor
     public DiskController() {
@@ -67,67 +65,191 @@ public unsafe struct DiskController : System.IDisposable
     }
 
     // Methods
-    // int __thiscall DiskController::HowmuchFreeSpace(DiskController*)
-    public int HowmuchFreeSpace() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int>)0x004F8E00)(ref this);
-    // DatIDStamp* __thiscall DiskController::GetDatIDStamp(DiskController*,DatIDStamp*)
-    public ACBindings.DatIDStamp* GetDatIDStamp(ACBindings.DatIDStamp* result) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, ACBindings.DatIDStamp*, ACBindings.DatIDStamp*>)0x004F8E10)(ref this, result);
-    // char* __thiscall DiskController::GetFilename(char*)
-    public sbyte* GetFilename() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, sbyte*>)0x004F8E30)(ref this);
-    // _DWORD* __thiscall DiskController::GetMasterMapDID(_DWORD*,_DWORD*)
-    public int* GetMasterMapDID(int* a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int*, int*>)0x004F8E40)(ref this, a2);
-    // bool __thiscall DiskController::Close(DiskController*)
-    public byte Close() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, byte>)0x00671360)(ref this);
-    // char __thiscall DiskController::GetMembers(int,_DWORD*)
-    public sbyte GetMembers(int* a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int*, sbyte>)0x006713A0)(ref this, a2);
-    // void __thiscall DiskController::SetDatIDStamp(DiskController*,DatIDStamp*)
-    public void SetDatIDStamp(ACBindings.DatIDStamp* stamp) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, ACBindings.DatIDStamp*, void>)0x006713B0)(ref this, stamp);
-    // int __thiscall DiskController::SaveData(void*,int,int,int)
-    public int SaveData(int a2, int a3, int a4) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int, int, int, int>)0x006714E0)(ref this, a2, a3, a4);
-    // int __thiscall DiskController::SaveAndCompressData(void*,int,int,int)
-    public int SaveAndCompressData(int a2, int a3, int a4) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int, int, int, int>)0x00671530)(ref this, a2, a3, a4);
-    // int __thiscall DiskController::SavePreCompressedData(void*,int,int,int)
-    public int SavePreCompressedData(int a2, int a3, int a4) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int, int, int, int>)0x00671580)(ref this, a2, a3, a4);
-    // bool __thiscall DiskController::AttemptToCompress(DiskController*,const Cache_Pack_t*,Cache_Pack_t*)
-    public byte AttemptToCompress(ACBindings.Cache_Pack_t* i_cpUncompressed, ACBindings.Cache_Pack_t* o_cpCompressed) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, ACBindings.Cache_Pack_t*, ACBindings.Cache_Pack_t*, byte>)0x006715D0)(ref this, i_cpUncompressed, o_cpCompressed);
-    // bool __thiscall DiskController::CheckRoom(DiskController*,int)
-    public byte CheckRoom(int size_l) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int, byte>)0x00671730)(ref this, size_l);
-    // int __thiscall DiskController::GetDatestamp(void*,int)
-    public int GetDatestamp(int a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int, int>)0x00671780)(ref this, a2);
-    // unsigned int __thiscall DiskController::GetVersion(int*,int)
-    public uint GetVersion(int a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int, uint>)0x006717D0)(ref this, a2);
-    // char __thiscall DiskController::GetIsCompressed(int*,int)
-    public sbyte GetIsCompressed(int a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int, sbyte>)0x00671830)(ref this, a2);
-    // int __thiscall DiskController::GetIteration(void*,int)
-    public int GetIteration(int a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int, int>)0x00671890)(ref this, a2);
-    // int __thiscall DiskController::GetDataSize(void*,int)
-    public int GetDataSize(int a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int, int>)0x006718E0)(ref this, a2);
-    // int __thiscall DiskController::GetUncompressedDataSize(int*,int)
-    public int GetUncompressedDataSize(int a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int, int>)0x00671930)(ref this, a2);
-    // bool __thiscall DiskController::Decompress(DiskController*,const Cache_Pack_t*,Cache_Pack_t*)
-    public byte Decompress(ACBindings.Cache_Pack_t* i_cpCompressed, ACBindings.Cache_Pack_t* o_cpUncompressed) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, ACBindings.Cache_Pack_t*, ACBindings.Cache_Pack_t*, byte>)0x00671A20)(ref this, i_cpCompressed, o_cpUncompressed);
-    // int __thiscall DiskController::LoadData(void*,int,int)
-    public int LoadData(int a2, int a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int, int, int>)0x00671B20)(ref this, a2, a3);
-    // char __thiscall DiskController::LoadDataEx(int,int,Cache_Pack_t*,LONG*,char)
-    public sbyte LoadDataEx(int a2, ACBindings.Cache_Pack_t* nNumberOfBytesToRead, int* bShortRead, sbyte a5) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int, ACBindings.Cache_Pack_t*, int*, sbyte, sbyte>)0x00671B60)(ref this, a2, nNumberOfBytesToRead, bShortRead, a5);
-    // int __thiscall DiskController::IsMember(void*,int,int*)
-    public int IsMember(int a2, int* a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int, int*, int>)0x00671CB0)(ref this, a2, a3);
-    // bool __thiscall DiskController::DeleteData(int,unsigned int,int)
-    public byte DeleteData(uint a2, int a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, uint, int, byte>)0x00671D00)(ref this, a2, a3);
-    // IDClass<_tagDataID,32,0>* __thiscall DiskController::SetMasterMapDID(int,IDClass<_tagDataID,32,0>*,int)
-    public ACBindings.IDClass___tagDataID* SetMasterMapDID(ACBindings.IDClass___tagDataID* a2, int a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, ACBindings.IDClass___tagDataID*, int, ACBindings.IDClass___tagDataID*>)0x00671D40)(ref this, a2, a3);
-    // bool __thiscall DiskController::LoadIterationList(DiskController*,CMostlyConsecutiveIntSet*)
-    public byte LoadIterationList(ACBindings.CMostlyConsecutiveIntSet* Iters) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, ACBindings.CMostlyConsecutiveIntSet*, byte>)0x00671D80)(ref this, Iters);
-    // bool __thiscall DiskController::SaveIterationList(DiskController*,CMostlyConsecutiveIntSet*)
-    public byte SaveIterationList(ACBindings.CMostlyConsecutiveIntSet* Iters) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, ACBindings.CMostlyConsecutiveIntSet*, byte>)0x00671E80)(ref this, Iters);
-    // void __thiscall DiskController::DiskController(DiskController*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, void>)0x00671F80)(ref this);
-    // void __thiscall DiskController::~DiskController(DiskController*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, void>)0x00671FE0)(ref this);
-    // bool __thiscall DiskController::SaveDataEx(DiskController*,BTEntry*,Cache_Pack_t*,unsigned int)
-    public byte SaveDataEx(ACBindings.BTEntry* io_entNew, ACBindings.Cache_Pack_t* i_cpUser, uint dwFlags) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, ACBindings.BTEntry*, ACBindings.Cache_Pack_t*, uint, byte>)0x00672060)(ref this, io_entNew, i_cpUser, dwFlags);
-    // char __thiscall DiskController::DeleteDataByMask(char*,int,int)
-    public sbyte DeleteDataByMask(int a2, int a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, int, int, sbyte>)0x006722B0)(ref this, a2, a3);
-    // bool __thiscall DiskController::InitFile(DiskController*,DiskConInitInfo*)
-    public byte InitFile(ACBindings.DiskConInitInfo* info_r) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DiskController, ACBindings.DiskConInitInfo*, byte>)0x006723D0)(ref this, info_r);
+
+    /// <summary>
+    /// <code>Offset: 0x004F8E00
+    /// int __thiscall DiskController::HowmuchFreeSpace(DiskController*)</code>
+    /// </summary>
+    public int HowmuchFreeSpace() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int>)0x004F8E00)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004F8E10
+    /// DatIDStamp* __thiscall DiskController::GetDatIDStamp(DiskController*,DatIDStamp*)</code>
+    /// </summary>
+    public ACBindings.Internal.DatIDStamp* GetDatIDStamp(ACBindings.Internal.DatIDStamp* result) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, ACBindings.Internal.DatIDStamp*, ACBindings.Internal.DatIDStamp*>)0x004F8E10)(ref this, result);
+
+    /// <summary>
+    /// <code>Offset: 0x004F8E30
+    /// char* __thiscall DiskController::GetFilename(char*)</code>
+    /// </summary>
+    public sbyte* GetFilename() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, sbyte*>)0x004F8E30)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004F8E40
+    /// _DWORD* __thiscall DiskController::GetMasterMapDID(_DWORD*,_DWORD*)</code>
+    /// </summary>
+    public int* GetMasterMapDID(int* a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int*, int*>)0x004F8E40)(ref this, a2);
+
+    /// <summary>
+    /// <code>Offset: 0x00671360
+    /// bool __thiscall DiskController::Close(DiskController*)</code>
+    /// </summary>
+    public byte Close() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, byte>)0x00671360)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006713A0
+    /// char __thiscall DiskController::GetMembers(int,_DWORD*)</code>
+    /// </summary>
+    public sbyte GetMembers(int* a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int*, sbyte>)0x006713A0)(ref this, a2);
+
+    /// <summary>
+    /// <code>Offset: 0x006713B0
+    /// void __thiscall DiskController::SetDatIDStamp(DiskController*,DatIDStamp*)</code>
+    /// </summary>
+    public void SetDatIDStamp(ACBindings.Internal.DatIDStamp* stamp) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, ACBindings.Internal.DatIDStamp*, void>)0x006713B0)(ref this, stamp);
+
+    /// <summary>
+    /// <code>Offset: 0x006714E0
+    /// int __thiscall DiskController::SaveData(void*,int,int,int)</code>
+    /// </summary>
+    public int SaveData(int a2, int a3, int a4) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int, int, int, int>)0x006714E0)(ref this, a2, a3, a4);
+
+    /// <summary>
+    /// <code>Offset: 0x00671530
+    /// int __thiscall DiskController::SaveAndCompressData(void*,int,int,int)</code>
+    /// </summary>
+    public int SaveAndCompressData(int a2, int a3, int a4) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int, int, int, int>)0x00671530)(ref this, a2, a3, a4);
+
+    /// <summary>
+    /// <code>Offset: 0x00671580
+    /// int __thiscall DiskController::SavePreCompressedData(void*,int,int,int)</code>
+    /// </summary>
+    public int SavePreCompressedData(int a2, int a3, int a4) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int, int, int, int>)0x00671580)(ref this, a2, a3, a4);
+
+    /// <summary>
+    /// <code>Offset: 0x006715D0
+    /// bool __thiscall DiskController::AttemptToCompress(DiskController*,const Cache_Pack_t*,Cache_Pack_t*)</code>
+    /// </summary>
+    public byte AttemptToCompress(ACBindings.Internal.Cache_Pack_t* i_cpUncompressed, ACBindings.Internal.Cache_Pack_t* o_cpCompressed) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, ACBindings.Internal.Cache_Pack_t*, ACBindings.Internal.Cache_Pack_t*, byte>)0x006715D0)(ref this, i_cpUncompressed, o_cpCompressed);
+
+    /// <summary>
+    /// <code>Offset: 0x00671730
+    /// bool __thiscall DiskController::CheckRoom(DiskController*,int)</code>
+    /// </summary>
+    public byte CheckRoom(int size_l) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int, byte>)0x00671730)(ref this, size_l);
+
+    /// <summary>
+    /// <code>Offset: 0x00671780
+    /// int __thiscall DiskController::GetDatestamp(void*,int)</code>
+    /// </summary>
+    public int GetDatestamp(int a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int, int>)0x00671780)(ref this, a2);
+
+    /// <summary>
+    /// <code>Offset: 0x006717D0
+    /// unsigned int __thiscall DiskController::GetVersion(int*,int)</code>
+    /// </summary>
+    public uint GetVersion(int a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int, uint>)0x006717D0)(ref this, a2);
+
+    /// <summary>
+    /// <code>Offset: 0x00671830
+    /// char __thiscall DiskController::GetIsCompressed(int*,int)</code>
+    /// </summary>
+    public sbyte GetIsCompressed(int a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int, sbyte>)0x00671830)(ref this, a2);
+
+    /// <summary>
+    /// <code>Offset: 0x00671890
+    /// int __thiscall DiskController::GetIteration(void*,int)</code>
+    /// </summary>
+    public int GetIteration(int a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int, int>)0x00671890)(ref this, a2);
+
+    /// <summary>
+    /// <code>Offset: 0x006718E0
+    /// int __thiscall DiskController::GetDataSize(void*,int)</code>
+    /// </summary>
+    public int GetDataSize(int a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int, int>)0x006718E0)(ref this, a2);
+
+    /// <summary>
+    /// <code>Offset: 0x00671930
+    /// int __thiscall DiskController::GetUncompressedDataSize(int*,int)</code>
+    /// </summary>
+    public int GetUncompressedDataSize(int a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int, int>)0x00671930)(ref this, a2);
+
+    /// <summary>
+    /// <code>Offset: 0x00671A20
+    /// bool __thiscall DiskController::Decompress(DiskController*,const Cache_Pack_t*,Cache_Pack_t*)</code>
+    /// </summary>
+    public byte Decompress(ACBindings.Internal.Cache_Pack_t* i_cpCompressed, ACBindings.Internal.Cache_Pack_t* o_cpUncompressed) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, ACBindings.Internal.Cache_Pack_t*, ACBindings.Internal.Cache_Pack_t*, byte>)0x00671A20)(ref this, i_cpCompressed, o_cpUncompressed);
+
+    /// <summary>
+    /// <code>Offset: 0x00671B20
+    /// int __thiscall DiskController::LoadData(void*,int,int)</code>
+    /// </summary>
+    public int LoadData(int a2, int a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int, int, int>)0x00671B20)(ref this, a2, a3);
+
+    /// <summary>
+    /// <code>Offset: 0x00671B60
+    /// char __thiscall DiskController::LoadDataEx(int,int,Cache_Pack_t*,LONG*,char)</code>
+    /// </summary>
+    public sbyte LoadDataEx(int a2, ACBindings.Internal.Cache_Pack_t* nNumberOfBytesToRead, int* bShortRead, sbyte a5) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int, ACBindings.Internal.Cache_Pack_t*, int*, sbyte, sbyte>)0x00671B60)(ref this, a2, nNumberOfBytesToRead, bShortRead, a5);
+
+    /// <summary>
+    /// <code>Offset: 0x00671CB0
+    /// int __thiscall DiskController::IsMember(void*,int,int*)</code>
+    /// </summary>
+    public int IsMember(int a2, int* a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int, int*, int>)0x00671CB0)(ref this, a2, a3);
+
+    /// <summary>
+    /// <code>Offset: 0x00671D00
+    /// bool __thiscall DiskController::DeleteData(int,unsigned int,int)</code>
+    /// </summary>
+    public byte DeleteData(uint a2, int a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, uint, int, byte>)0x00671D00)(ref this, a2, a3);
+
+    /// <summary>
+    /// <code>Offset: 0x00671D40
+    /// IDClass&lt;_tagDataID,32,0&gt;* __thiscall DiskController::SetMasterMapDID(int,IDClass&lt;_tagDataID,32,0&gt;*,int)</code>
+    /// </summary>
+    public ACBindings.Internal.IDClass____tagDataID* SetMasterMapDID(ACBindings.Internal.IDClass____tagDataID* a2, int a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, ACBindings.Internal.IDClass____tagDataID*, int, ACBindings.Internal.IDClass____tagDataID*>)0x00671D40)(ref this, a2, a3);
+
+    /// <summary>
+    /// <code>Offset: 0x00671D80
+    /// bool __thiscall DiskController::LoadIterationList(DiskController*,CMostlyConsecutiveIntSet*)</code>
+    /// </summary>
+    public byte LoadIterationList(ACBindings.Internal.CMostlyConsecutiveIntSet* Iters) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, ACBindings.Internal.CMostlyConsecutiveIntSet*, byte>)0x00671D80)(ref this, Iters);
+
+    /// <summary>
+    /// <code>Offset: 0x00671E80
+    /// bool __thiscall DiskController::SaveIterationList(DiskController*,CMostlyConsecutiveIntSet*)</code>
+    /// </summary>
+    public byte SaveIterationList(ACBindings.Internal.CMostlyConsecutiveIntSet* Iters) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, ACBindings.Internal.CMostlyConsecutiveIntSet*, byte>)0x00671E80)(ref this, Iters);
+
+    /// <summary>
+    /// <code>Offset: 0x00671F80
+    /// void __thiscall DiskController::DiskController(DiskController*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, void>)0x00671F80)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00671FE0
+    /// void __thiscall DiskController::~DiskController(DiskController*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, void>)0x00671FE0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00672060
+    /// bool __thiscall DiskController::SaveDataEx(DiskController*,BTEntry*,Cache_Pack_t*,unsigned int)</code>
+    /// </summary>
+    public byte SaveDataEx(ACBindings.Internal.BTEntry* io_entNew, ACBindings.Internal.Cache_Pack_t* i_cpUser, uint dwFlags) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, ACBindings.Internal.BTEntry*, ACBindings.Internal.Cache_Pack_t*, uint, byte>)0x00672060)(ref this, io_entNew, i_cpUser, dwFlags);
+
+    /// <summary>
+    /// <code>Offset: 0x006722B0
+    /// char __thiscall DiskController::DeleteDataByMask(char*,int,int)</code>
+    /// </summary>
+    public sbyte DeleteDataByMask(int a2, int a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, int, int, sbyte>)0x006722B0)(ref this, a2, a3);
+
+    /// <summary>
+    /// <code>Offset: 0x006723D0
+    /// bool __thiscall DiskController::InitFile(DiskController*,DiskConInitInfo*)</code>
+    /// </summary>
+    public byte InitFile(ACBindings.Internal.DiskConInitInfo* info_r) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DiskController, ACBindings.Internal.DiskConInitInfo*, byte>)0x006723D0)(ref this, info_r);
 }
 

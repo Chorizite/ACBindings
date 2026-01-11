@@ -1,29 +1,27 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CharGenResult
 public unsafe struct CharGenResult
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // CharGenResult_vtbl
     public unsafe struct CharGenResult_vtbl
     {
         // Members
-        public System.IntPtr CharGenResult_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CharGenResult*, void> CharGenResult_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CharGenResult*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CharGenResult*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CharGenResult*, void**, uint, int> UnPack; // function pointer
         public System.IntPtr GetName;
         public System.IntPtr SetName;
-        public System.IntPtr GetSlot; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CharGenResult*, int> GetSlot; // function pointer
         public System.IntPtr GetClassID;
-        public System.IntPtr GetStartArea; // function pointer
-        public System.IntPtr IsAdmin; // function pointer
-        public System.IntPtr IsEnvoy; // function pointer
-        public System.IntPtr VerifyCharacterGenerationResult; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CharGenResult*, uint> GetStartArea; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CharGenResult*, int> IsAdmin; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CharGenResult*, int> IsEnvoy; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CharGenResult*, int, int> VerifyCharacterGenerationResult; // function pointer
 
         // Methods
     }

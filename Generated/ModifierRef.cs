@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ModifierRef
 public unsafe struct ModifierRef
 {
     // Members
-    public ACBindings.PStringBase__sbyte name;
-    public ACBindings.IDClass___tagDataID id;
+    public ACBindings.Internal.PStringBase__sbyte name;
+    public ACBindings.Internal.IDClass____tagDataID id;
 
     // Methods
 }

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// InterfaceSystemDestroyer
 public unsafe struct InterfaceSystemDestroyer
 {
     // Methods

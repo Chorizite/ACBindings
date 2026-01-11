@@ -1,83 +1,79 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LongHash<CPhysicsObj>
-public unsafe struct LongHash__CPhysicsObj
+public unsafe struct LongHash___CPhysicsObj
 {
     // Base Classes
-    public ACBindings.HashBase__uint BaseClass_HashBase; // ACBindings.HashBase__uint
+    public ACBindings.Internal.HashBase__uint BaseClass_HashBase; // ACBindings.Internal.HashBase__uint
 
     // Methods
 }
 
-// LongHash<CWeenieObject>
-public unsafe struct LongHash__CWeenieObject
+public unsafe struct LongHash___CWeenieObject
 {
     // Base Classes
-    public ACBindings.HashBase__uint BaseClass_HashBase; // ACBindings.HashBase__uint
+    public ACBindings.Internal.HashBase__uint BaseClass_HashBase; // ACBindings.Internal.HashBase__uint
 
     // Methods
 }
 
-// LongHash<CObjectInventory>
-public unsafe struct LongHash__CObjectInventory
+public unsafe struct LongHash___CObjectInventory
 {
     // Base Classes
-    public ACBindings.HashBase__uint BaseClass_HashBase; // ACBindings.HashBase__uint
+    public ACBindings.Internal.HashBase__uint BaseClass_HashBase; // ACBindings.Internal.HashBase__uint
 
     // Methods
 }
 
-// LongHash<MotionData>
-public unsafe struct LongHash__MotionData
+public unsafe struct LongHash___MotionData
 {
     // Base Classes
-    public ACBindings.HashBase__uint BaseClass_HashBase; // ACBindings.HashBase__uint
+    public ACBindings.Internal.HashBase__uint BaseClass_HashBase; // ACBindings.Internal.HashBase__uint
 
     // Methods
-    // LongHash<MotionData>::lookup (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x005231D0
+    /// int __thiscall LongHash&lt;MotionData&gt;::lookup(_DWORD*,unsigned int)</code>
+    /// </summary>
+    // int __thiscall LongHash<MotionData>::lookup(_DWORD*,unsigned int) (template type method)
 }
 
-// LongHash<IconData>
-public unsafe struct LongHash__IconData
+public unsafe struct LongHash___IconData
 {
     // Base Classes
-    public ACBindings.HashBase__uint BaseClass_HashBase; // ACBindings.HashBase__uint
-
-    // Methods
-}
-
-// LongHash<LocationType>
-public unsafe struct LongHash__LocationType
-{
-    // Base Classes
-    public ACBindings.HashBase__uint BaseClass_HashBase; // ACBindings.HashBase__uint
+    public ACBindings.Internal.HashBase__uint BaseClass_HashBase; // ACBindings.Internal.HashBase__uint
 
     // Methods
 }
 
-// LongHash<PlacementType>
-public unsafe struct LongHash__PlacementType
+public unsafe struct LongHash___LocationType
 {
     // Base Classes
-    public ACBindings.HashBase__uint BaseClass_HashBase; // ACBindings.HashBase__uint
+    public ACBindings.Internal.HashBase__uint BaseClass_HashBase; // ACBindings.Internal.HashBase__uint
 
     // Methods
 }
 
-// LongHash<BlockCreationInfo>
-public unsafe struct LongHash__BlockCreationInfo
+public unsafe struct LongHash___PlacementType
 {
     // Base Classes
-    public ACBindings.HashBase__uint BaseClass_HashBase; // ACBindings.HashBase__uint
+    public ACBindings.Internal.HashBase__uint BaseClass_HashBase; // ACBindings.Internal.HashBase__uint
 
     // Methods
 }
 
-// LongHash<BlockUpdate>
-public unsafe struct LongHash__BlockUpdate
+public unsafe struct LongHash___BlockCreationInfo
 {
     // Base Classes
-    public ACBindings.HashBase__uint BaseClass_HashBase; // ACBindings.HashBase__uint
+    public ACBindings.Internal.HashBase__uint BaseClass_HashBase; // ACBindings.Internal.HashBase__uint
+
+    // Methods
+}
+
+public unsafe struct LongHash___BlockUpdate
+{
+    // Base Classes
+    public ACBindings.Internal.HashBase__uint BaseClass_HashBase; // ACBindings.Internal.HashBase__uint
 
     // Methods
 }

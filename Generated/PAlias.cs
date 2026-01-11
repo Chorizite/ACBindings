@@ -1,16 +1,15 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PAlias
 public unsafe struct PAlias
 {
     // Members
-    public ACBindings.PStringBase__sbyte m_str;
-    public ACBindings.SmartArray__PStringBase__sbyte m_val;
+    public ACBindings.Internal.PStringBase__sbyte m_str;
+    public ACBindings.Internal.SmartArray___PStringBase__sbyte m_val;
     public ulong m_realVal;
     public ushort m_headerIndex;
-    public ACBindings.PStringBase__sbyte m_symbol;
-    public ACBindings.PStringBase__sbyte m_comment_string;
-    public ACBindings.PStringBase__sbyte m_gen_comment;
+    public ACBindings.Internal.PStringBase__sbyte m_symbol;
+    public ACBindings.Internal.PStringBase__sbyte m_comment_string;
+    public ACBindings.Internal.PStringBase__sbyte m_gen_comment;
 
     // Methods
 }

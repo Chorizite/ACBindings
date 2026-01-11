@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// UILocationData
 public unsafe struct UILocationData
 {
     // Members
@@ -16,7 +15,11 @@ public unsafe struct UILocationData
     }
 
     // Methods
-    // void __thiscall UILocationData::UILocationData(UILocationData*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.UILocationData, void>)0x006791D0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006791D0
+    /// void __thiscall UILocationData::UILocationData(UILocationData*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.UILocationData, void>)0x006791D0)(ref this);
 }
 

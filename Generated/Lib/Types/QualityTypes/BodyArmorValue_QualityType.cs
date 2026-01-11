@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// BodyArmorValue_QualityType
 public unsafe struct BodyArmorValue_QualityType
 {
     // Methods

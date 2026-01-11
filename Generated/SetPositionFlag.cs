@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // SetPositionFlag
 public enum SetPositionFlag : uint

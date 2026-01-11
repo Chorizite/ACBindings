@@ -1,59 +1,54 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ICIDM
 public unsafe struct ICIDM
 {
-    // Statics
-    public static ACBindings.ICIDM* s_cidm = (ACBindings.ICIDM*)0x00837FF4;
-
     // Child Types
-    // ICIDM_vtbl
     public unsafe struct ICIDM_vtbl
     {
         // Members
-        public System.IntPtr ICIDM_dtor_0; // function pointer
-        public System.IntPtr OnStartup; // function pointer
-        public System.IntPtr InitializeKeymap; // function pointer
-        public System.IntPtr OnShutdown; // function pointer
-        public System.IntPtr UseTime; // function pointer
-        public System.IntPtr GetLastInputTimestamp; // function pointer
-        public System.IntPtr GetMouseX; // function pointer
-        public System.IntPtr GetMouseY; // function pointer
-        public System.IntPtr SetMouseXY; // function pointer
-        public System.IntPtr ClearKeyMap; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, void> ICIDM_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, int, byte> OnStartup; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, byte> InitializeKeymap; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, void> OnShutdown; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, void> UseTime; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, double> GetLastInputTimestamp; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, int> GetMouseX; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, int> GetMouseY; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, int, int, byte> SetMouseXY; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, byte> ClearKeyMap; // function pointer
         public fixed byte gap28[4];
-        public System.IntPtr AddKeyMap; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, uint, byte> AddKeyMap; // function pointer
         public System.IntPtr SaveKeyMap;
-        public System.IntPtr RegisterInputMap; // function pointer
-        public System.IntPtr UnregisterInputMap; // function pointer
-        public System.IntPtr UnregisterCallback; // function pointer
-        public System.IntPtr SetActionMap; // function pointer
-        public System.IntPtr GetActionMap; // function pointer
-        public System.IntPtr RegisterInputHandler; // function pointer
-        public System.IntPtr UnregisterInputHandler; // function pointer
-        public System.IntPtr IsMetaKey; // function pointer
-        public System.IntPtr GetDeviceTypeFromKey; // function pointer
-        public System.IntPtr ShiftKeyDown; // function pointer
-        public System.IntPtr CtrlKeyDown; // function pointer
-        public System.IntPtr AltKeyDown; // function pointer
-        public System.IntPtr SetMouseLookMode; // function pointer
-        public System.IntPtr GetMouseLookMode; // function pointer
-        public System.IntPtr ConfigureMouseLookMode; // function pointer
-        public System.IntPtr OnMessage; // function pointer
-        public System.IntPtr Activate; // function pointer
-        public System.IntPtr OnUIElementActivationChanging; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, uint, ACBindings.Internal.IInputActionCallback*, int, byte> RegisterInputMap; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, uint, ACBindings.Internal.IInputActionCallback*, byte> UnregisterInputMap; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, ACBindings.Internal.IInputActionCallback*, void> UnregisterCallback; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, uint, byte> SetActionMap; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, ACBindings.Internal.ActionMap*> GetActionMap; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, ACBindings.Internal.CInputHandler*, uint, byte> RegisterInputHandler; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, ACBindings.Internal.CInputHandler*, uint, byte> UnregisterInputHandler; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, ACBindings.Internal.ControlSpecification, byte> IsMetaKey; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, ACBindings.Internal.ControlSpecification, ACBindings.Internal.DeviceType> GetDeviceTypeFromKey; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, byte> ShiftKeyDown; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, byte> CtrlKeyDown; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, byte> AltKeyDown; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, byte, void> SetMouseLookMode; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, byte> GetMouseLookMode; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, ACBindings.Internal.MouseLookBehavior, int, int, void> ConfigureMouseLookMode; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, System.IntPtr, byte*, int> OnMessage; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, byte, void> Activate; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, void> OnUIElementActivationChanging; // function pointer
         public System.IntPtr GetNameFromKey;
         public System.IntPtr GetNameFromMetaKey;
-        public System.IntPtr BindAction; // function pointer
-        public System.IntPtr UnbindByKey; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, ACBindings.Internal.QualifiedControl, uint, uint, byte> BindAction; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, ACBindings.Internal.QualifiedControl, uint, byte> UnbindByKey; // function pointer
         public System.IntPtr FindKeysForAction;
         public System.IntPtr FindConflictingInputMaps;
         public System.IntPtr FindConflictingControls;
-        public System.IntPtr UnbindAllByAction; // function pointer
-        public System.IntPtr GetDoubleClickDelay; // function pointer
-        public System.IntPtr GetTapDelay; // function pointer
-        public System.IntPtr SetTextMode; // function pointer
-        public System.IntPtr GetTextMode; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, uint, uint, byte> UnbindAllByAction; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, uint> GetDoubleClickDelay; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, uint> GetTapDelay; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, byte, void> SetTextMode; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ICIDM*, byte> GetTextMode; // function pointer
 
         // Methods
     }

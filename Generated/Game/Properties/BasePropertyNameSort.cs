@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// BasePropertyNameSort
 public unsafe struct BasePropertyNameSort
 {
     // Methods

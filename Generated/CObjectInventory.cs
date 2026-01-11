@@ -1,25 +1,23 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CObjectInventory
 public unsafe struct CObjectInventory : System.IDisposable
 {
     // Base Classes
-    public ACBindings.LongHashData BaseClass_LongHashData; // ACBindings.LongHashData
+    public ACBindings.Internal.LongHashData BaseClass_LongHashData; // ACBindings.Internal.LongHashData
 
     // Child Types
-    // CObjectInventory_vtbl
     public unsafe struct CObjectInventory_vtbl
     {
         // Members
-        public System.IntPtr CObjectInventory_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CObjectInventory*, void> CObjectInventory_dtor_0; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.IDList _itemsList;
-    public ACBindings.IDList _containersList;
-    public ACBindings.PackableList__InventoryPlacement _invPlacement;
+    public ACBindings.Internal.IDList _itemsList;
+    public ACBindings.Internal.IDList _containersList;
+    public ACBindings.Internal.PackableList___InventoryPlacement _invPlacement;
 
     // Generated Constructor
     public CObjectInventory(uint objectID) {
@@ -32,9 +30,17 @@ public unsafe struct CObjectInventory : System.IDisposable
     }
 
     // Methods
-    // void __thiscall CObjectInventory::CObjectInventory(CObjectInventory*,unsigned int)
-    public void _ConstructorInternal(uint objectID) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CObjectInventory, uint, void>)0x006B5BC0)(ref this, objectID);
-    // void __thiscall CObjectInventory::~CObjectInventory(CObjectInventory*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CObjectInventory, void>)0x006B5C00)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006B5BC0
+    /// void __thiscall CObjectInventory::CObjectInventory(CObjectInventory*,unsigned int)</code>
+    /// </summary>
+    public void _ConstructorInternal(uint objectID) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CObjectInventory, uint, void>)0x006B5BC0)(ref this, objectID);
+
+    /// <summary>
+    /// <code>Offset: 0x006B5C00
+    /// void __thiscall CObjectInventory::~CObjectInventory(CObjectInventory*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CObjectInventory, void>)0x006B5C00)(ref this);
 }
 

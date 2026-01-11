@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // DiskControllerLoadFlags
 public enum DiskControllerLoadFlags : byte

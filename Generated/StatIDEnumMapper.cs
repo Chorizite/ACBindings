@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// StatIDEnumMapper
 public unsafe struct StatIDEnumMapper
 {
     // Methods

@@ -1,14 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Skill_CG
 public unsafe struct Skill_CG
 {
     // Child Types
-    // Skill_CG_vtbl
     public unsafe struct Skill_CG_vtbl
     {
         // Members
-        public System.IntPtr Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Skill_CG*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
 
         // Methods
     }
@@ -25,9 +23,17 @@ public unsafe struct Skill_CG
     }
 
     // Methods
-    // void __thiscall Skill_CG::Skill_CG(Skill_CG*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Skill_CG, void>)0x005BE4F0)(ref this);
-    // void __thiscall Skill_CG::Serialize(Skill_CG*,Archive*)
-    public void Serialize(ACBindings.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Skill_CG, ACBindings.Archive*, void>)0x005BEA90)(ref this, io_archive);
+
+    /// <summary>
+    /// <code>Offset: 0x005BE4F0
+    /// void __thiscall Skill_CG::Skill_CG(Skill_CG*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Skill_CG, void>)0x005BE4F0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005BEA90
+    /// void __thiscall Skill_CG::Serialize(Skill_CG*,Archive*)</code>
+    /// </summary>
+    public void Serialize(ACBindings.Internal.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Skill_CG, ACBindings.Internal.Archive*, void>)0x005BEA90)(ref this, io_archive);
 }
 

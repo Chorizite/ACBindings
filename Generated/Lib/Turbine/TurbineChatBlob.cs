@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TurbineChatBlob
 public unsafe struct TurbineChatBlob
 {
     // Members
@@ -9,9 +8,17 @@ public unsafe struct TurbineChatBlob
     public uint m_ChatType;
 
     // Methods
-    // void __thiscall TurbineChatBlob::SetTargetID(TurbineChatBlob*,unsigned int)
-    public void SetTargetID(uint targetID) => ((delegate* unmanaged[Thiscall]<ref ACBindings.TurbineChatBlob, uint, void>)0x0051C6F0)(ref this, targetID);
-    // tagBLOB __thiscall TurbineChatBlob::GetBlob(TurbineChatBlob*)
-    public ACBindings.tagBLOB GetBlob() => ((delegate* unmanaged[Thiscall]<ref ACBindings.TurbineChatBlob, ACBindings.tagBLOB>)0x005CE950)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0051C6F0
+    /// void __thiscall TurbineChatBlob::SetTargetID(TurbineChatBlob*,unsigned int)</code>
+    /// </summary>
+    public void SetTargetID(uint targetID) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TurbineChatBlob, uint, void>)0x0051C6F0)(ref this, targetID);
+
+    /// <summary>
+    /// <code>Offset: 0x005CE950
+    /// tagBLOB __thiscall TurbineChatBlob::GetBlob(TurbineChatBlob*)</code>
+    /// </summary>
+    public ACBindings.Internal.tagBLOB GetBlob() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TurbineChatBlob, ACBindings.Internal.tagBLOB>)0x005CE950)(ref this);
 }
 

@@ -1,22 +1,20 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CAllegianceHierarchy
 public unsafe struct CAllegianceHierarchy
 {
     // Base Classes
-    public ACBindings.AllegianceHierarchy BaseClass_AllegianceHierarchy; // ACBindings.AllegianceHierarchy
+    public ACBindings.Internal.AllegianceHierarchy BaseClass_AllegianceHierarchy; // ACBindings.Internal.AllegianceHierarchy
 
     // Child Types
-    // CAllegianceHierarchy_vtbl
     public unsafe struct CAllegianceHierarchy_vtbl
     {
         // Members
-        public System.IntPtr CAllegianceHierarchy_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceHierarchy*, void> CAllegianceHierarchy_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
-        public System.IntPtr GetMinPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceHierarchy*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceHierarchy*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceHierarchy*, void**, uint, int> UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceHierarchy*, uint> GetMinPackSize; // function pointer
 
         // Methods
     }

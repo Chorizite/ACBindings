@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AutoTrueBool
 public unsafe struct AutoTrueBool
 {
     // Members

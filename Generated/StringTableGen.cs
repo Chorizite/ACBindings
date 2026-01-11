@@ -1,18 +1,16 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// StringTableGen
 public unsafe struct StringTableGen
 {
     // Child Types
-    // StringTableGen_vtbl
     public unsafe struct StringTableGen_vtbl
     {
         // Members
-        public System.IntPtr StringTableGen_dtor_0; // function pointer
-        public System.IntPtr Reset; // function pointer
-        public System.IntPtr Save; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.StringTableGen*, void> StringTableGen_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.StringTableGen*, void> Reset; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.StringTableGen*, byte> Save; // function pointer
         public System.IntPtr AddString;
-        public System.IntPtr Report; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.StringTableGen*, void> Report; // function pointer
 
         // Methods
     }

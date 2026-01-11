@@ -1,117 +1,105 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IntrusiveHashData<AsyncContext,CAsyncStateMachine::CAsyncStateData*>
-public unsafe struct IntrusiveHashData__AsyncContext__CAsyncStateMachine_CAsyncStateData_ptr
+public unsafe struct IntrusiveHashData___AsyncContext___CAsyncStateMachine_CAsyncStateData_ptr
 {
     // Members
-    public ACBindings.AsyncContext m_hashKey;
-    public ACBindings.CAsyncStateMachine.CAsyncStateData* m_hashNext;
+    public ACBindings.Internal.AsyncContext m_hashKey;
+    public ACBindings.Internal.CAsyncStateMachine.CAsyncStateData* m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<int,CAsyncStateHandler*>
-public unsafe struct IntrusiveHashData__int__CAsyncStateHandler_ptr
+public unsafe struct IntrusiveHashData__int___CAsyncStateHandler_ptr
 {
     // Members
     public int m_hashKey;
-    public ACBindings.CAsyncStateHandler* m_hashNext;
+    public ACBindings.Internal.CAsyncStateHandler* m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<IDClass<_tagVersionHandle,32,0>,InArchiveVersionStack::VersionRowHolder*>
-public unsafe struct IntrusiveHashData__IDClass___tagVersionHandle__InArchiveVersionStack_VersionRowHolder_ptr
+public unsafe struct IntrusiveHashData___IDClass____tagVersionHandle___InArchiveVersionStack_VersionRowHolder_ptr
 {
     // Members
-    public ACBindings.IDClass___tagVersionHandle m_hashKey;
-    public ACBindings.InArchiveVersionStack.VersionRowHolder* m_hashNext;
+    public ACBindings.Internal.IDClass____tagVersionHandle m_hashKey;
+    public ACBindings.Internal.InArchiveVersionStack.VersionRowHolder* m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,LogController::CategoryHandler*>
-public unsafe struct IntrusiveHashData__uint__LogController_CategoryHandler_ptr
-{
-    // Members
-    public uint m_hashKey;
-    public ACBindings.LogController.CategoryHandler* m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<QualifiedDataID,DBObjSaveInfo*>
-public unsafe struct IntrusiveHashData__QualifiedDataID__DBObjSaveInfo_ptr
-{
-    // Members
-    public ACBindings.QualifiedDataID m_hashKey;
-    public ACBindings.DBObjSaveInfo* m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<unsigned long,ActionState*>
-public unsafe struct IntrusiveHashData__uint__ActionState_ptr
+public unsafe struct IntrusiveHashData__uint___LogController_CategoryHandler_ptr
 {
     // Members
     public uint m_hashKey;
-    public ACBindings.ActionState* m_hashNext;
+    public ACBindings.Internal.LogController.CategoryHandler* m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,QualityHandler*>
-public unsafe struct IntrusiveHashData__uint__QualityHandler_ptr
+public unsafe struct IntrusiveHashData___QualifiedDataID___DBObjSaveInfo_ptr
+{
+    // Members
+    public ACBindings.Internal.QualifiedDataID m_hashKey;
+    public ACBindings.Internal.DBObjSaveInfo* m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__uint___ActionState_ptr
 {
     // Members
     public uint m_hashKey;
-    public ACBindings.QualityHandler* m_hashNext;
+    public ACBindings.Internal.ActionState* m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,CLostCell*>
-public unsafe struct IntrusiveHashData__uint__CLostCell_ptr
+public unsafe struct IntrusiveHashData__uint___QualityHandler_ptr
 {
     // Members
     public uint m_hashKey;
-    public ACBindings.CLostCell* m_hashNext;
+    public ACBindings.Internal.QualityHandler* m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,SoundTableData*>
-public unsafe struct IntrusiveHashData__uint__SoundTableData_ptr
+public unsafe struct IntrusiveHashData__uint___CLostCell_ptr
 {
     // Members
     public uint m_hashKey;
-    public ACBindings.SoundTableData* m_hashNext;
+    public ACBindings.Internal.CLostCell* m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<IDClass<_tagDataID,32,0>,SoundBufRef*>
-public unsafe struct IntrusiveHashData__IDClass___tagDataID__SoundBufRef_ptr
+public unsafe struct IntrusiveHashData__uint___SoundTableData_ptr
 {
     // Members
-    public ACBindings.IDClass___tagDataID m_hashKey;
-    public ACBindings.SoundBufRef* m_hashNext;
+    public uint m_hashKey;
+    public ACBindings.Internal.SoundTableData* m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<CaseInsensitiveStringBase<PStringBase<char>>,ClientCommunicationSystem::CmdHashData*>
-public unsafe struct IntrusiveHashData__CaseInsensitiveStringBase__PStringBase__sbyte__ClientCommunicationSystem_CmdHashData_ptr
+public unsafe struct IntrusiveHashData___IDClass____tagDataID___SoundBufRef_ptr
 {
     // Members
-    public ACBindings.CaseInsensitiveStringBase__PStringBase__sbyte m_hashKey;
-    public ACBindings.ClientCommunicationSystem.CmdHashData* m_hashNext;
+    public ACBindings.Internal.IDClass____tagDataID m_hashKey;
+    public ACBindings.Internal.SoundBufRef* m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,AC1Legacy::HashTableData<unsigned long,double>*>
-public unsafe struct IntrusiveHashData__uint__AC1Legacy_HashTableData__uint__double_ptr
+public unsafe struct IntrusiveHashData___CaseInsensitiveStringBase___PStringBase__sbyte___ClientCommunicationSystem_CmdHashData_ptr
+{
+    // Members
+    public ACBindings.Internal.CaseInsensitiveStringBase___PStringBase__sbyte m_hashKey;
+    public ACBindings.Internal.ClientCommunicationSystem.CmdHashData* m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__uint___AC1Legacy_HashTableData__uint__double_ptr
 {
     // Members
     public uint m_hashKey;
@@ -120,8 +108,7 @@ public unsafe struct IntrusiveHashData__uint__AC1Legacy_HashTableData__uint__dou
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,Interface*>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__Interface_ptr_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___Interface_ptr_ptr
 {
     // Members
     public uint m_hashKey;
@@ -130,18 +117,16 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__Interface_ptr
     // Methods
 }
 
-// IntrusiveHashData<Turbine_GUID,HashTableData<Turbine_GUID,Interface*>*>
-public unsafe struct IntrusiveHashData__Turbine_GUID__HashTableData__Turbine_GUID__Interface_ptr_ptr
+public unsafe struct IntrusiveHashData___Turbine_GUID___HashTableData___Turbine_GUID___Interface_ptr_ptr
 {
     // Members
-    public ACBindings.Turbine_GUID m_hashKey;
+    public ACBindings.Internal.Turbine_GUID m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned short,HashTableData<unsigned short,long>*>
-public unsafe struct IntrusiveHashData__ushort__HashTableData__ushort__int_ptr
+public unsafe struct IntrusiveHashData__ushort___HashTableData__ushort__int_ptr
 {
     // Members
     public ushort m_hashKey;
@@ -150,48 +135,43 @@ public unsafe struct IntrusiveHashData__ushort__HashTableData__ushort__int_ptr
     // Methods
 }
 
-// IntrusiveHashData<CaseInsensitiveStringBase<PStringBase<unsigned short>>,HashTableData<CaseInsensitiveStringBase<PStringBase<unsigned short>>,long>*>
-public unsafe struct IntrusiveHashData__CaseInsensitiveStringBase__PStringBase__ushort__HashTableData__CaseInsensitiveStringBase__PStringBase__ushort__int_ptr
+public unsafe struct IntrusiveHashData___CaseInsensitiveStringBase___PStringBase__ushort___HashTableData___CaseInsensitiveStringBase___PStringBase__ushort__int_ptr
 {
     // Members
-    public ACBindings.CaseInsensitiveStringBase__PStringBase__ushort m_hashKey;
+    public ACBindings.Internal.CaseInsensitiveStringBase___PStringBase__ushort m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<PStringBase<char>,HashTableData<PStringBase<char>,GRPCommand*>*>
-public unsafe struct IntrusiveHashData__PStringBase__sbyte__HashTableData__PStringBase__sbyte__GRPCommand_ptr_ptr
+public unsafe struct IntrusiveHashData___PStringBase__sbyte___HashTableData___PStringBase__sbyte___GRPCommand_ptr_ptr
 {
     // Members
-    public ACBindings.PStringBase__sbyte m_hashKey;
+    public ACBindings.Internal.PStringBase__sbyte m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<PStringBase<char>,HashTableData<PStringBase<char>,GRPObject*>*>
-public unsafe struct IntrusiveHashData__PStringBase__sbyte__HashTableData__PStringBase__sbyte__GRPObject_ptr_ptr
+public unsafe struct IntrusiveHashData___PStringBase__sbyte___HashTableData___PStringBase__sbyte___GRPObject_ptr_ptr
 {
     // Members
-    public ACBindings.PStringBase__sbyte m_hashKey;
+    public ACBindings.Internal.PStringBase__sbyte m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<IDClass<_tagDataID,32,0>,HashTableData<IDClass<_tagDataID,32,0>,DBObj*>*>
-public unsafe struct IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__DBObj_ptr_ptr
+public unsafe struct IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___DBObj_ptr_ptr
 {
     // Members
-    public ACBindings.IDClass___tagDataID m_hashKey;
+    public ACBindings.Internal.IDClass____tagDataID m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,float>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__float_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint__float_ptr
 {
     // Members
     public uint m_hashKey;
@@ -200,8 +180,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__float_ptr
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashList<unsigned long,HashList<unsigned long,ActionMapValue,1>,1>::HashListData*>
-public unsafe struct IntrusiveHashData__uint__HashList__uint__HashList__uint__ActionMapValue_HashListData_ptr
+public unsafe struct IntrusiveHashData__uint___HashList__uint___HashList__uint___ActionMapValue_HashListData_ptr
 {
     // Members
     public uint m_hashKey;
@@ -210,8 +189,7 @@ public unsafe struct IntrusiveHashData__uint__HashList__uint__HashList__uint__Ac
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashList<unsigned long,ActionMapValue,1>::HashListData*>
-public unsafe struct IntrusiveHashData__uint__HashList__uint__ActionMapValue_HashListData_ptr
+public unsafe struct IntrusiveHashData__uint___HashList__uint___ActionMapValue_HashListData_ptr
 {
     // Members
     public uint m_hashKey;
@@ -220,8 +198,7 @@ public unsafe struct IntrusiveHashData__uint__HashList__uint__ActionMapValue_Has
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,InputMapConflictsValue>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__InputMapConflictsValue_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___InputMapConflictsValue_ptr
 {
     // Members
     public uint m_hashKey;
@@ -230,8 +207,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__InputMapConfl
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,CaseInsensitiveStringBase<PStringBase<char>>>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__CaseInsensitiveStringBase__PStringBase__sbyte_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___CaseInsensitiveStringBase___PStringBase__sbyte_ptr
 {
     // Members
     public uint m_hashKey;
@@ -240,58 +216,52 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__CaseInsensiti
     // Methods
 }
 
-// IntrusiveHashData<CaseInsensitiveStringBase<PStringBase<char>>,HashTableData<CaseInsensitiveStringBase<PStringBase<char>>,unsigned long>*>
-public unsafe struct IntrusiveHashData__CaseInsensitiveStringBase__PStringBase__sbyte__HashTableData__CaseInsensitiveStringBase__PStringBase__sbyte__uint_ptr
+public unsafe struct IntrusiveHashData___CaseInsensitiveStringBase___PStringBase__sbyte___HashTableData___CaseInsensitiveStringBase___PStringBase__sbyte__uint_ptr
 {
     // Members
-    public ACBindings.CaseInsensitiveStringBase__PStringBase__sbyte m_hashKey;
+    public ACBindings.Internal.CaseInsensitiveStringBase___PStringBase__sbyte m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<IDClass<_tagDataID,32,0>,HashList<IDClass<_tagDataID,32,0>,bool,1>::HashListData*>
-public unsafe struct IntrusiveHashData__IDClass___tagDataID__HashList__IDClass___tagDataID__byte_HashListData_ptr
+public unsafe struct IntrusiveHashData___IDClass____tagDataID___HashList___IDClass____tagDataID__byte_HashListData_ptr
 {
     // Members
-    public ACBindings.IDClass___tagDataID m_hashKey;
+    public ACBindings.Internal.IDClass____tagDataID m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<IDClass<_tagDataID,32,0>,HashSetData<IDClass<_tagDataID,32,0>>*>
-public unsafe struct IntrusiveHashData__IDClass___tagDataID__HashSetData__IDClass___tagDataID_ptr
+public unsafe struct IntrusiveHashData___IDClass____tagDataID___HashSetData___IDClass____tagDataID_ptr
 {
     // Members
-    public ACBindings.IDClass___tagDataID m_hashKey;
+    public ACBindings.Internal.IDClass____tagDataID m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<QualifiedDataID,HashTableData<QualifiedDataID,CAsyncGetRequest*>*>
-public unsafe struct IntrusiveHashData__QualifiedDataID__HashTableData__QualifiedDataID__CAsyncGetRequest_ptr_ptr
+public unsafe struct IntrusiveHashData___QualifiedDataID___HashTableData___QualifiedDataID___CAsyncGetRequest_ptr_ptr
 {
     // Members
-    public ACBindings.QualifiedDataID m_hashKey;
+    public ACBindings.Internal.QualifiedDataID m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<AsyncContext,HashTableData<AsyncContext,AsyncCache::CCallbackHandler*>*>
-public unsafe struct IntrusiveHashData__AsyncContext__HashTableData__AsyncContext__AsyncCache_CCallbackHandler_ptr_ptr
+public unsafe struct IntrusiveHashData___AsyncContext___HashTableData___AsyncContext___AsyncCache_CCallbackHandler_ptr_ptr
 {
     // Members
-    public ACBindings.AsyncContext m_hashKey;
+    public ACBindings.Internal.AsyncContext m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,DBOCache*>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__DBOCache_ptr_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___DBOCache_ptr_ptr
 {
     // Members
     public uint m_hashKey;
@@ -300,8 +270,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__DBOCache_ptr_
     // Methods
 }
 
-// IntrusiveHashData<long,HashTableData<long,DataHistory::IterationData>*>
-public unsafe struct IntrusiveHashData__int__HashTableData__int__DataHistory_IterationData_ptr
+public unsafe struct IntrusiveHashData__int___HashTableData__int___DataHistory_IterationData_ptr
 {
     // Members
     public int m_hashKey;
@@ -310,28 +279,25 @@ public unsafe struct IntrusiveHashData__int__HashTableData__int__DataHistory_Ite
     // Methods
 }
 
-// IntrusiveHashData<QualifiedDataID,HashTableData<QualifiedDataID,long>*>
-public unsafe struct IntrusiveHashData__QualifiedDataID__HashTableData__QualifiedDataID__int_ptr
+public unsafe struct IntrusiveHashData___QualifiedDataID___HashTableData___QualifiedDataID__int_ptr
 {
     // Members
-    public ACBindings.QualifiedDataID m_hashKey;
+    public ACBindings.Internal.QualifiedDataID m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<QualifiedDataID,HashTableData<QualifiedDataID,MissingIteration*>*>
-public unsafe struct IntrusiveHashData__QualifiedDataID__HashTableData__QualifiedDataID__MissingIteration_ptr_ptr
+public unsafe struct IntrusiveHashData___QualifiedDataID___HashTableData___QualifiedDataID___MissingIteration_ptr_ptr
 {
     // Members
-    public ACBindings.QualifiedDataID m_hashKey;
+    public ACBindings.Internal.QualifiedDataID m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned __int64,HashTableData<unsigned __int64,DiskController*>*>
-public unsafe struct IntrusiveHashData__ulong__HashTableData__ulong__DiskController_ptr_ptr
+public unsafe struct IntrusiveHashData__ulong___HashTableData__ulong___DiskController_ptr_ptr
 {
     // Members
     public ulong m_hashKey;
@@ -340,38 +306,16 @@ public unsafe struct IntrusiveHashData__ulong__HashTableData__ulong__DiskControl
     // Methods
 }
 
-// IntrusiveHashData<PStringBase<char>,HashTableData<PStringBase<char>,unsigned long>*>
-public unsafe struct IntrusiveHashData__PStringBase__sbyte__HashTableData__PStringBase__sbyte__uint_ptr
+public unsafe struct IntrusiveHashData___PStringBase__sbyte___HashTableData___PStringBase__sbyte__uint_ptr
 {
     // Members
-    public ACBindings.PStringBase__sbyte m_hashKey;
+    public ACBindings.Internal.PStringBase__sbyte m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,unsigned long>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__uint_ptr
-{
-    // Members
-    public uint m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<ControlSpecification,HashList<ControlSpecification,unsigned long,1>::HashListData*>
-public unsafe struct IntrusiveHashData__ControlSpecification__HashList__ControlSpecification__uint_HashListData_ptr
-{
-    // Members
-    public ACBindings.ControlSpecification m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<unsigned long,HashList<unsigned long,CInputMap*,1>::HashListData*>
-public unsafe struct IntrusiveHashData__uint__HashList__uint__CInputMap_ptr_HashListData_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint__uint_ptr
 {
     // Members
     public uint m_hashKey;
@@ -380,28 +324,16 @@ public unsafe struct IntrusiveHashData__uint__HashList__uint__CInputMap_ptr_Hash
     // Methods
 }
 
-// IntrusiveHashData<QualifiedControl,HashList<QualifiedControl,unsigned long,1>::HashListData*>
-public unsafe struct IntrusiveHashData__QualifiedControl__HashList__QualifiedControl__uint_HashListData_ptr
+public unsafe struct IntrusiveHashData___ControlSpecification___HashList___ControlSpecification__uint_HashListData_ptr
 {
     // Members
-    public ACBindings.QualifiedControl m_hashKey;
+    public ACBindings.Internal.ControlSpecification m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,List<NoticeHandler*>*>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__List__NoticeHandler_ptr_ptr_ptr
-{
-    // Members
-    public uint m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,BaseProperty>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__BaseProperty_ptr
+public unsafe struct IntrusiveHashData__uint___HashList__uint___CInputMap_ptr_HashListData_ptr
 {
     // Members
     public uint m_hashKey;
@@ -410,8 +342,16 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__BaseProperty_
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,StringInfoData*>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__StringInfoData_ptr_ptr
+public unsafe struct IntrusiveHashData___QualifiedControl___HashList___QualifiedControl__uint_HashListData_ptr
+{
+    // Members
+    public ACBindings.Internal.QualifiedControl m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___List___NoticeHandler_ptr_ptr_ptr
 {
     // Members
     public uint m_hashKey;
@@ -420,8 +360,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__StringInfoDat
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,AvailableProperty>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__AvailableProperty_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___BaseProperty_ptr
 {
     // Members
     public uint m_hashKey;
@@ -430,8 +369,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__AvailableProp
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,PhysicsScriptTableData*>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__PhysicsScriptTableData_ptr_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___StringInfoData_ptr_ptr
 {
     // Members
     public uint m_hashKey;
@@ -440,8 +378,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__PhysicsScript
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashSetData<unsigned long>*>
-public unsafe struct IntrusiveHashData__uint__HashSetData__uint_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___AvailableProperty_ptr
 {
     // Members
     public uint m_hashKey;
@@ -450,8 +387,7 @@ public unsafe struct IntrusiveHashData__uint__HashSetData__uint_ptr
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,double>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__double_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___PhysicsScriptTableData_ptr_ptr
 {
     // Members
     public uint m_hashKey;
@@ -460,8 +396,25 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__double_ptr
     // Methods
 }
 
-// IntrusiveHashData<unsigned __int64,HashTableData<unsigned __int64,SmartArray<QualityChangeHandler*,1>*>*>
-public unsafe struct IntrusiveHashData__ulong__HashTableData__ulong__SmartArray__QualityChangeHandler_ptr_ptr_ptr
+public unsafe struct IntrusiveHashData__uint___HashSetData__uint_ptr
+{
+    // Members
+    public uint m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint__double_ptr
+{
+    // Members
+    public uint m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__ulong___HashTableData__ulong___SmartArray___QualityChangeHandler_ptr_ptr_ptr
 {
     // Members
     public ulong m_hashKey;
@@ -470,28 +423,16 @@ public unsafe struct IntrusiveHashData__ulong__HashTableData__ulong__SmartArray_
     // Methods
 }
 
-// IntrusiveHashData<UIRegion*,HashList<UIRegion*,UIRegion*,1>::HashListData*>
-public unsafe struct IntrusiveHashData__UIRegion_ptr__HashList__UIRegion_ptr__UIRegion_ptr_HashListData_ptr
+public unsafe struct IntrusiveHashData___UIRegion_ptr___HashList___UIRegion_ptr___UIRegion_ptr_HashListData_ptr
 {
     // Members
-    public ACBindings.UIRegion* m_hashKey;
+    public ACBindings.Internal.UIRegion* m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,ElementDesc>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__ElementDesc_ptr
-{
-    // Members
-    public uint m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,StateDesc>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__StateDesc_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___ElementDesc_ptr
 {
     // Members
     public uint m_hashKey;
@@ -500,28 +441,34 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__StateDesc_ptr
     // Methods
 }
 
-// IntrusiveHashData<UIListener*,HashSetData<UIListener*>*>
-public unsafe struct IntrusiveHashData__UIListener_ptr__HashSetData__UIListener_ptr_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___StateDesc_ptr
 {
     // Members
-    public ACBindings.UIListener* m_hashKey;
+    public uint m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<UIElement*,HashSetData<UIElement*>*>
-public unsafe struct IntrusiveHashData__UIElement_ptr__HashSetData__UIElement_ptr_ptr
+public unsafe struct IntrusiveHashData___UIListener_ptr___HashSetData___UIListener_ptr_ptr
 {
     // Members
-    public ACBindings.UIElement* m_hashKey;
+    public ACBindings.Internal.UIListener* m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned __int64,HashTableData<unsigned __int64,unsigned __int64>*>
-public unsafe struct IntrusiveHashData__ulong__HashTableData__ulong__ulong_ptr
+public unsafe struct IntrusiveHashData___UIElement_ptr___HashSetData___UIElement_ptr_ptr
+{
+    // Members
+    public ACBindings.Internal.UIElement* m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__ulong___HashTableData__ulong__ulong_ptr
 {
     // Members
     public ulong m_hashKey;
@@ -530,8 +477,7 @@ public unsafe struct IntrusiveHashData__ulong__HashTableData__ulong__ulong_ptr
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,int>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__int_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint__int_ptr
 {
     // Members
     public uint m_hashKey;
@@ -540,8 +486,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__int_ptr
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,UIMainFramework* (__cdecl*)(void)>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__void_ptr_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint__void_ptr_ptr
 {
     // Members
     public uint m_hashKey;
@@ -550,8 +495,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__void_ptr_ptr
     // Methods
 }
 
-// IntrusiveHashData<unsigned __int64,HashTableData<unsigned __int64,ImgTex*>*>
-public unsafe struct IntrusiveHashData__ulong__HashTableData__ulong__ImgTex_ptr_ptr
+public unsafe struct IntrusiveHashData__ulong___HashTableData__ulong___ImgTex_ptr_ptr
 {
     // Members
     public ulong m_hashKey;
@@ -560,38 +504,16 @@ public unsafe struct IntrusiveHashData__ulong__HashTableData__ulong__ImgTex_ptr_
     // Methods
 }
 
-// IntrusiveHashData<ImgTex*,HashSetData<ImgTex*>*>
-public unsafe struct IntrusiveHashData__ImgTex_ptr__HashSetData__ImgTex_ptr_ptr
+public unsafe struct IntrusiveHashData___ImgTex_ptr___HashSetData___ImgTex_ptr_ptr
 {
     // Members
-    public ACBindings.ImgTex* m_hashKey;
+    public ACBindings.Internal.ImgTex* m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,ImgTex*>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__ImgTex_ptr_ptr
-{
-    // Members
-    public uint m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<enum PixelFormatID,HashTableData<enum PixelFormatID,HashTable<unsigned long,ImgTex*,0>*>*>
-public unsafe struct IntrusiveHashData__PixelFormatID__HashTableData__PixelFormatID__HashTable__uint__ImgTex_ptr_ptr_ptr
-{
-    // Members
-    public ACBindings.PixelFormatID m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,HeritageGroup_CG>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__HeritageGroup_CG_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___ImgTex_ptr_ptr
 {
     // Members
     public uint m_hashKey;
@@ -600,8 +522,16 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__HeritageGroup
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,Sex_CG>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__Sex_CG_ptr
+public unsafe struct IntrusiveHashData___PixelFormatID___HashTableData___PixelFormatID___HashTable__uint___ImgTex_ptr_ptr_ptr
+{
+    // Members
+    public ACBindings.Internal.PixelFormatID m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___HeritageGroup_CG_ptr
 {
     // Members
     public uint m_hashKey;
@@ -610,8 +540,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__Sex_CG_ptr
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,unsigned char>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__byte_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___Sex_CG_ptr
 {
     // Members
     public uint m_hashKey;
@@ -620,8 +549,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__byte_ptr
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,SpellSet>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__SpellSet_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint__byte_ptr
 {
     // Members
     public uint m_hashKey;
@@ -630,8 +558,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__SpellSet_ptr
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,Graphic*>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__Graphic_ptr_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___SpellSet_ptr
 {
     // Members
     public uint m_hashKey;
@@ -640,18 +567,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__Graphic_ptr_p
     // Methods
 }
 
-// IntrusiveHashData<IDClass<_tagDataID,32,0>,HashTableData<IDClass<_tagDataID,32,0>,Graphic*>*>
-public unsafe struct IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__Graphic_ptr_ptr
-{
-    // Members
-    public ACBindings.IDClass___tagDataID m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,IDClass<_tagDataID,32,0>>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__IDClass___tagDataID_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___Graphic_ptr_ptr
 {
     // Members
     public uint m_hashKey;
@@ -660,28 +576,16 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__IDClass___tag
     // Methods
 }
 
-// IntrusiveHashData<PStringBase<char>,HashTableData<PStringBase<char>,UIPreferenceItem*>*>
-public unsafe struct IntrusiveHashData__PStringBase__sbyte__HashTableData__PStringBase__sbyte__UIPreferenceItem_ptr_ptr
+public unsafe struct IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___Graphic_ptr_ptr
 {
     // Members
-    public ACBindings.PStringBase__sbyte m_hashKey;
+    public ACBindings.Internal.IDClass____tagDataID m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<bool (__cdecl*)(HResultDebugData&),HashSetData<bool (__cdecl*)(HResultDebugData&)>*>
-public unsafe struct IntrusiveHashData__void_ptr__HashSetData__void_ptr_ptr
-{
-    // Members
-    public System.IntPtr m_hashKey; // function pointer
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,AutoGrowHashTable<unsigned long,SmartArray<UIMessageData,1>>>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__AutoGrowHashTable__uint__SmartArray__UIMessageData_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___IDClass____tagDataID_ptr
 {
     // Members
     public uint m_hashKey;
@@ -690,8 +594,25 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__AutoGrowHashT
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,SmartArray<UIMessageData,1>>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__SmartArray__UIMessageData_ptr
+public unsafe struct IntrusiveHashData___PStringBase__sbyte___HashTableData___PStringBase__sbyte___UIPreferenceItem_ptr_ptr
+{
+    // Members
+    public ACBindings.Internal.PStringBase__sbyte m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__void_ptr___HashSetData__void_ptr_ptr
+{
+    // Members
+    public delegate* unmanaged[Cdecl]<ACBindings.Internal.HResultDebugData*, byte> m_hashKey; // function pointer
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___AutoGrowHashTable__uint___SmartArray___UIMessageData_ptr
 {
     // Members
     public uint m_hashKey;
@@ -700,8 +621,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__SmartArray__U
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,SmartArray<UIElement*,1>>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__SmartArray__UIElement_ptr_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___SmartArray___UIMessageData_ptr
 {
     // Members
     public uint m_hashKey;
@@ -710,8 +630,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__SmartArray__U
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,BasePropertyDesc*>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__BasePropertyDesc_ptr_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___SmartArray___UIElement_ptr_ptr
 {
     // Members
     public uint m_hashKey;
@@ -720,38 +639,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__BasePropertyD
     // Methods
 }
 
-// IntrusiveHashData<IDClass<_tagDataID,32,0>,HashTableData<IDClass<_tagDataID,32,0>,HashTable<unsigned long,ElementDesc,0>>*>
-public unsafe struct IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__HashTable__uint__ElementDesc_ptr
-{
-    // Members
-    public ACBindings.IDClass___tagDataID m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<CaseInsensitiveStringBase<PStringBase<char>>,HashTableData<CaseInsensitiveStringBase<PStringBase<char>>,TFileEntry*>*>
-public unsafe struct IntrusiveHashData__CaseInsensitiveStringBase__PStringBase__sbyte__HashTableData__CaseInsensitiveStringBase__PStringBase__sbyte__TFileEntry_ptr_ptr
-{
-    // Members
-    public ACBindings.CaseInsensitiveStringBase__PStringBase__sbyte m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<IDClass<_tagDataID,32,0>,HashTableData<IDClass<_tagDataID,32,0>,TFileEntry*>*>
-public unsafe struct IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__TFileEntry_ptr_ptr
-{
-    // Members
-    public ACBindings.IDClass___tagDataID m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,TDBTypeEntry*>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__TDBTypeEntry_ptr_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___BasePropertyDesc_ptr_ptr
 {
     // Members
     public uint m_hashKey;
@@ -760,38 +648,34 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__TDBTypeEntry_
     // Methods
 }
 
-// IntrusiveHashData<PStringBase<char>,HashSetData<PStringBase<char>>*>
-public unsafe struct IntrusiveHashData__PStringBase__sbyte__HashSetData__PStringBase__sbyte_ptr
+public unsafe struct IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___HashTable__uint___ElementDesc_ptr
 {
     // Members
-    public ACBindings.PStringBase__sbyte m_hashKey;
+    public ACBindings.Internal.IDClass____tagDataID m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,DBTypeDef>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__DBTypeDef_ptr
+public unsafe struct IntrusiveHashData___CaseInsensitiveStringBase___PStringBase__sbyte___HashTableData___CaseInsensitiveStringBase___PStringBase__sbyte___TFileEntry_ptr_ptr
 {
     // Members
-    public uint m_hashKey;
+    public ACBindings.Internal.CaseInsensitiveStringBase___PStringBase__sbyte m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<QualifiedDataID,HashSetData<QualifiedDataID>*>
-public unsafe struct IntrusiveHashData__QualifiedDataID__HashSetData__QualifiedDataID_ptr
+public unsafe struct IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___TFileEntry_ptr_ptr
 {
     // Members
-    public ACBindings.QualifiedDataID m_hashKey;
+    public ACBindings.Internal.IDClass____tagDataID m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,PStringBase<char>>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__PStringBase__sbyte_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___TDBTypeEntry_ptr_ptr
 {
     // Members
     public uint m_hashKey;
@@ -800,38 +684,16 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__PStringBase__
     // Methods
 }
 
-// IntrusiveHashData<IDClass<_tagDataID,32,0>,HashTableData<IDClass<_tagDataID,32,0>,unsigned long>*>
-public unsafe struct IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__uint_ptr
+public unsafe struct IntrusiveHashData___PStringBase__sbyte___HashSetData___PStringBase__sbyte_ptr
 {
     // Members
-    public ACBindings.IDClass___tagDataID m_hashKey;
+    public ACBindings.Internal.PStringBase__sbyte m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,ArchiveVersionRow>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__ArchiveVersionRow_ptr
-{
-    // Members
-    public uint m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<QualifiedIteration,HashTableData<QualifiedIteration,IterationKey>*>
-public unsafe struct IntrusiveHashData__QualifiedIteration__HashTableData__QualifiedIteration__IterationKey_ptr
-{
-    // Members
-    public ACBindings.QualifiedIteration m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,UILocationData>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__UILocationData_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___DBTypeDef_ptr
 {
     // Members
     public uint m_hashKey;
@@ -840,28 +702,16 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__UILocationDat
     // Methods
 }
 
-// IntrusiveHashData<IDClass<_tagDataID,32,0>,HashTableData<IDClass<_tagDataID,32,0>,HashTable<unsigned long,UILocationData,0>>*>
-public unsafe struct IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__HashTable__uint__UILocationData_ptr
+public unsafe struct IntrusiveHashData___QualifiedDataID___HashSetData___QualifiedDataID_ptr
 {
     // Members
-    public ACBindings.IDClass___tagDataID m_hashKey;
+    public ACBindings.Internal.QualifiedDataID m_hashKey;
     public System.IntPtr m_hashNext;
 
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,NameFilterLanguageData>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__NameFilterLanguageData_ptr
-{
-    // Members
-    public uint m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,IntrusiveSmartPointer<BasePropertyValue>>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__IntrusiveSmartPointer__BasePropertyValue_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___PStringBase__sbyte_ptr
 {
     // Members
     public uint m_hashKey;
@@ -870,8 +720,16 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__IntrusiveSmar
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,PStringBase<unsigned short>>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__PStringBase__ushort_ptr
+public unsafe struct IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID__uint_ptr
+{
+    // Members
+    public ACBindings.Internal.IDClass____tagDataID m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___ArchiveVersionRow_ptr
 {
     // Members
     public uint m_hashKey;
@@ -880,8 +738,16 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__PStringBase__
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,StringTableString*>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__StringTableString_ptr_ptr
+public unsafe struct IntrusiveHashData___QualifiedIteration___HashTableData___QualifiedIteration___IterationKey_ptr
+{
+    // Members
+    public ACBindings.Internal.QualifiedIteration m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___UILocationData_ptr
 {
     // Members
     public uint m_hashKey;
@@ -890,8 +756,16 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__StringTableSt
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,List<PStringBase<char>>>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__List__PStringBase__sbyte_ptr
+public unsafe struct IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___HashTable__uint___UILocationData_ptr
+{
+    // Members
+    public ACBindings.Internal.IDClass____tagDataID m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___NameFilterLanguageData_ptr
 {
     // Members
     public uint m_hashKey;
@@ -900,8 +774,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__List__PString
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,HashTable<unsigned long,List<PStringBase<char>>,0>>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__HashTable__uint__List__PStringBase__sbyte_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___IntrusiveSmartPointer___BasePropertyValue_ptr
 {
     // Members
     public uint m_hashKey;
@@ -910,48 +783,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__HashTable__ui
     // Methods
 }
 
-// IntrusiveHashData<UIObject*,HashList<UIObject*,UIObject*,1>::HashListData*>
-public unsafe struct IntrusiveHashData__UIObject_ptr__HashList__UIObject_ptr__UIObject_ptr_HashListData_ptr
-{
-    // Members
-    public ACBindings.UIObject* m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<ControlSpecification,HashTableData<ControlSpecification,enum ControlType>*>
-public unsafe struct IntrusiveHashData__ControlSpecification__HashTableData__ControlSpecification__ControlType_ptr
-{
-    // Members
-    public ACBindings.ControlSpecification m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<ControlSpecification,HashTableData<ControlSpecification,CInputManager_WIN32::RecentControlState>*>
-public unsafe struct IntrusiveHashData__ControlSpecification__HashTableData__ControlSpecification__CInputManager_WIN32_RecentControlState_ptr
-{
-    // Members
-    public ACBindings.ControlSpecification m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<ControlSpecification,PriorityHash<ControlSpecification,CInputManager_WIN32::ButtonHistoryEntry,1>::PriorityHashData*>
-public unsafe struct IntrusiveHashData__ControlSpecification__PriorityHash__ControlSpecification__CInputManager_WIN32_ButtonHistoryEntry_PriorityHashData_ptr
-{
-    // Members
-    public ACBindings.ControlSpecification m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,RenderVertexStreamD3D*>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__RenderVertexStreamD3D_ptr_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___PStringBase__ushort_ptr
 {
     // Members
     public uint m_hashKey;
@@ -960,8 +792,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__RenderVertexS
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,CEnvCell*>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__CEnvCell_ptr_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___StringTableString_ptr_ptr
 {
     // Members
     public uint m_hashKey;
@@ -970,8 +801,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__CEnvCell_ptr_
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,DialogInfo>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__DialogInfo_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___List___PStringBase__sbyte_ptr
 {
     // Members
     public uint m_hashKey;
@@ -980,8 +810,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__DialogInfo_pt
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,List<DialogInfo>>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__List__DialogInfo_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___HashTable__uint___List___PStringBase__sbyte_ptr
 {
     // Members
     public uint m_hashKey;
@@ -990,8 +819,43 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__List__DialogI
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,UIElement_ListBox*>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__UIElement_ListBox_ptr_ptr
+public unsafe struct IntrusiveHashData___UIObject_ptr___HashList___UIObject_ptr___UIObject_ptr_HashListData_ptr
+{
+    // Members
+    public ACBindings.Internal.UIObject* m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData___ControlSpecification___HashTableData___ControlSpecification___ControlType_ptr
+{
+    // Members
+    public ACBindings.Internal.ControlSpecification m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData___ControlSpecification___HashTableData___ControlSpecification___CInputManager_WIN32_RecentControlState_ptr
+{
+    // Members
+    public ACBindings.Internal.ControlSpecification m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData___ControlSpecification___PriorityHash___ControlSpecification___CInputManager_WIN32_ButtonHistoryEntry_PriorityHashData_ptr
+{
+    // Members
+    public ACBindings.Internal.ControlSpecification m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___RenderVertexStreamD3D_ptr_ptr
 {
     // Members
     public uint m_hashKey;
@@ -1000,18 +864,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__UIElement_Lis
     // Methods
 }
 
-// IntrusiveHashData<IDClass<_tagDataID,32,0>,HashTableData<IDClass<_tagDataID,32,0>,SpellComponentRegion*>*>
-public unsafe struct IntrusiveHashData__IDClass___tagDataID__HashTableData__IDClass___tagDataID__SpellComponentRegion_ptr_ptr
-{
-    // Members
-    public ACBindings.IDClass___tagDataID m_hashKey;
-    public System.IntPtr m_hashNext;
-
-    // Methods
-}
-
-// IntrusiveHashData<unsigned int,HashTableData<unsigned int,gmCGSkillsPage::tagSkillRecord>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__gmCGSkillsPage_tagSkillRecord_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___CEnvCell_ptr_ptr
 {
     // Members
     public uint m_hashKey;
@@ -1020,8 +873,7 @@ public unsafe struct IntrusiveHashData__uint__HashTableData__uint__gmCGSkillsPag
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashList<unsigned long,List<unsigned long>,1>::HashListData*>
-public unsafe struct IntrusiveHashData__uint__HashList__uint__List__uint_HashListData_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___DialogInfo_ptr
 {
     // Members
     public uint m_hashKey;
@@ -1030,8 +882,7 @@ public unsafe struct IntrusiveHashData__uint__HashList__uint__List__uint_HashLis
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashList<unsigned long,HashList<unsigned long,List<unsigned long>,1>,1>::HashListData*>
-public unsafe struct IntrusiveHashData__uint__HashList__uint__HashList__uint__List__uint_HashListData_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___List___DialogInfo_ptr
 {
     // Members
     public uint m_hashKey;
@@ -1040,8 +891,52 @@ public unsafe struct IntrusiveHashData__uint__HashList__uint__HashList__uint__Li
     // Methods
 }
 
-// IntrusiveHashData<unsigned long,HashTableData<unsigned long,Logger::ITextFileOutputHandler*>*>
-public unsafe struct IntrusiveHashData__uint__HashTableData__uint__Logger_ITextFileOutputHandler_ptr_ptr
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___UIElement_ListBox_ptr_ptr
+{
+    // Members
+    public uint m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData___IDClass____tagDataID___HashTableData___IDClass____tagDataID___SpellComponentRegion_ptr_ptr
+{
+    // Members
+    public ACBindings.Internal.IDClass____tagDataID m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___gmCGSkillsPage_tagSkillRecord_ptr
+{
+    // Members
+    public uint m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__uint___HashList__uint___List__uint_HashListData_ptr
+{
+    // Members
+    public uint m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__uint___HashList__uint___HashList__uint___List__uint_HashListData_ptr
+{
+    // Members
+    public uint m_hashKey;
+    public System.IntPtr m_hashNext;
+
+    // Methods
+}
+
+public unsafe struct IntrusiveHashData__uint___HashTableData__uint___Logger_ITextFileOutputHandler_ptr_ptr
 {
     // Members
     public uint m_hashKey;

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IConsoleCallbackObject
 public unsafe struct IConsoleCallbackObject
 {
     // Members

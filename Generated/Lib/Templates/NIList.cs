@@ -1,7 +1,6 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// NIList<BlockListEntry>
-public unsafe struct NIList__BlockListEntry
+public unsafe struct NIList___BlockListEntry
 {
     // Members
     public System.IntPtr head_;
@@ -10,8 +9,7 @@ public unsafe struct NIList__BlockListEntry
     // Methods
 }
 
-// NIList<NetBlob*>
-public unsafe struct NIList__NetBlob_ptr
+public unsafe struct NIList___NetBlob_ptr
 {
     // Members
     public System.IntPtr head_;
@@ -20,7 +18,6 @@ public unsafe struct NIList__NetBlob_ptr
     // Methods
 }
 
-// NIList<unsigned long>
 public unsafe struct NIList__uint
 {
     // Members
@@ -30,8 +27,7 @@ public unsafe struct NIList__uint
     // Methods
 }
 
-// NIList<NetPacket*>
-public unsafe struct NIList__NetPacket_ptr
+public unsafe struct NIList___NetPacket_ptr
 {
     // Members
     public System.IntPtr head_;

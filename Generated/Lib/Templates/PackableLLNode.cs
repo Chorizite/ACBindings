@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PackableLLNode<unsigned long>
 public unsafe struct PackableLLNode__uint
 {
     // Members
@@ -11,177 +10,166 @@ public unsafe struct PackableLLNode__uint
     // Methods
 }
 
-// PackableLLNode<InventoryPlacement>
-public unsafe struct PackableLLNode__InventoryPlacement
+public unsafe struct PackableLLNode___InventoryPlacement
 {
     // Members
-    public ACBindings.InventoryPlacement data;
+    public ACBindings.Internal.InventoryPlacement data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// PackableLLNode<AllegianceRankData>
-public unsafe struct PackableLLNode__AllegianceRankData
+public unsafe struct PackableLLNode___AllegianceRankData
 {
     // Members
-    public ACBindings.AllegianceRankData data;
+    public ACBindings.Internal.AllegianceRankData data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// PackableLLNode<SalvageResult>
-public unsafe struct PackableLLNode__SalvageResult
+public unsafe struct PackableLLNode___SalvageResult
 {
     // Members
-    public ACBindings.SalvageResult data;
+    public ACBindings.Internal.SalvageResult data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// PackableLLNode<ContentProfile>
-public unsafe struct PackableLLNode__ContentProfile
+public unsafe struct PackableLLNode___ContentProfile
 {
     // Members
-    public ACBindings.ContentProfile data;
+    public ACBindings.Internal.ContentProfile data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// PackableLLNode<ItemProfile>
-public unsafe struct PackableLLNode__ItemProfile
+public unsafe struct PackableLLNode___ItemProfile
 {
     // Members
-    public ACBindings.ItemProfile data;
+    public ACBindings.Internal.ItemProfile data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// PackableLLNode<Enchantment>
-public unsafe struct PackableLLNode__Enchantment
+public unsafe struct PackableLLNode___Enchantment
 {
     // Members
-    public ACBindings.Enchantment data;
+    public ACBindings.Internal.Enchantment data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// PackableLLNode<Emote>
-public unsafe struct PackableLLNode__Emote
+public unsafe struct PackableLLNode___Emote
 {
     // Members
-    public ACBindings.Emote data;
+    public ACBindings.Internal.Emote data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// PackableLLNode<EmoteSet>
-public unsafe struct PackableLLNode__EmoteSet
+public unsafe struct PackableLLNode___EmoteSet
 {
     // Members
-    public ACBindings.EmoteSet data;
+    public ACBindings.Internal.EmoteSet data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// PackableLLNode<CreationProfile>
-public unsafe struct PackableLLNode__CreationProfile
+public unsafe struct PackableLLNode___CreationProfile
 {
     // Members
-    public ACBindings.CreationProfile data;
+    public ACBindings.Internal.CreationProfile data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// PackableLLNode<GeneratorProfile>
-public unsafe struct PackableLLNode__GeneratorProfile
+public unsafe struct PackableLLNode___GeneratorProfile
 {
     // Members
-    public ACBindings.GeneratorProfile data;
+    public ACBindings.Internal.GeneratorProfile data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
-    // PackableLLNode<GeneratorProfile>::PackableLLNode<GeneratorProfile> (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x005D1030
+    /// void*** __thiscall PackableLLNode&lt;GeneratorProfile&gt;::PackableLLNode&lt;GeneratorProfile&gt;(void***,_DWORD*)</code>
+    /// </summary>
+    // void*** __thiscall PackableLLNode<GeneratorProfile>::PackableLLNode<GeneratorProfile>(void***,_DWORD*) (template type method)
 }
 
-// PackableLLNode<GeneratorQueueNode>
-public unsafe struct PackableLLNode__GeneratorQueueNode
+public unsafe struct PackableLLNode___GeneratorQueueNode
 {
     // Members
-    public ACBindings.GeneratorQueueNode data;
-    public System.IntPtr next;
-    public System.IntPtr prev;
-
-    // Methods
-}
-
-// PackableLLNode<HousePayment>
-public unsafe struct PackableLLNode__HousePayment
-{
-    // Members
-    public ACBindings.HousePayment data;
+    public ACBindings.Internal.GeneratorQueueNode data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// PackableLLNode<HouseWHouseData>
-public unsafe struct PackableLLNode__HouseWHouseData
+public unsafe struct PackableLLNode___HousePayment
 {
     // Members
-    public ACBindings.HouseWHouseData data;
+    public ACBindings.Internal.HousePayment data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// PackableLLNode<AC1Legacy::PStringBase<char>>
-public unsafe struct PackableLLNode__AC1Legacy_PStringBase__sbyte
+public unsafe struct PackableLLNode___HouseWHouseData
 {
     // Members
-    public ACBindings.AC1Legacy.PStringBase__sbyte data;
+    public ACBindings.Internal.HouseWHouseData data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// PackableLLNode<AdminAccountData>
-public unsafe struct PackableLLNode__AdminAccountData
+public unsafe struct PackableLLNode___AC1Legacy_PStringBase__sbyte
 {
     // Members
-    public ACBindings.AdminAccountData data;
+    public ACBindings.Internal.AC1Legacy.PStringBase__sbyte data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// PackableLLNode<AdminPlayerData>
-public unsafe struct PackableLLNode__AdminPlayerData
+public unsafe struct PackableLLNode___AdminAccountData
 {
     // Members
-    public ACBindings.AdminPlayerData data;
+    public ACBindings.Internal.AdminAccountData data;
+    public System.IntPtr next;
+    public System.IntPtr prev;
+
+    // Methods
+}
+
+public unsafe struct PackableLLNode___AdminPlayerData
+{
+    // Members
+    public ACBindings.Internal.AdminPlayerData data;
     public System.IntPtr next;
     public System.IntPtr prev;
 

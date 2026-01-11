@@ -1,29 +1,27 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SoundTweakedHook
 public unsafe struct SoundTweakedHook
 {
     // Base Classes
-    public ACBindings.CAnimHook BaseClass_CAnimHook; // ACBindings.CAnimHook
+    public ACBindings.Internal.CAnimHook BaseClass_CAnimHook; // ACBindings.Internal.CAnimHook
 
     // Child Types
-    // SoundTweakedHook_vtbl
     public unsafe struct SoundTweakedHook_vtbl
     {
         // Members
-        public System.IntPtr SoundTweakedHook_dtor_0; // function pointer
-        public System.IntPtr Execute; // function pointer
-        public System.IntPtr GetType; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
-        public System.IntPtr pack_size; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SoundTweakedHook*, void> SoundTweakedHook_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SoundTweakedHook*, ACBindings.Internal.CPhysicsObj*, void> Execute; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SoundTweakedHook*, int> GetType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SoundTweakedHook*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SoundTweakedHook*, uint> pack_size; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SoundTweakedHook*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SoundTweakedHook*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.IDClass___tagDataID gid_;
+    public ACBindings.Internal.IDClass____tagDataID gid_;
     public float prio;
     public float prob;
     public float vol;
@@ -34,13 +32,29 @@ public unsafe struct SoundTweakedHook
     }
 
     // Methods
-    // void __thiscall SoundTweakedHook::SoundTweakedHook(SoundTweakedHook*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.SoundTweakedHook, void>)0x00527640)(ref this);
-    // void __thiscall SoundTweakedHook::Execute(SoundTweakedHook*,CPhysicsObj*)
-    public void Execute(ACBindings.CPhysicsObj* physobj) => ((delegate* unmanaged[Thiscall]<ref ACBindings.SoundTweakedHook, ACBindings.CPhysicsObj*, void>)0x00527680)(ref this, physobj);
-    // unsigned int __thiscall SoundTweakedHook::Pack(SoundTweakedHook*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.SoundTweakedHook, void**, uint, uint>)0x00528330)(ref this, addr, size);
-    // int __thiscall SoundTweakedHook::UnPack(SoundTweakedHook*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.SoundTweakedHook, void**, uint, int>)0x00528380)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x00527640
+    /// void __thiscall SoundTweakedHook::SoundTweakedHook(SoundTweakedHook*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SoundTweakedHook, void>)0x00527640)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00527680
+    /// void __thiscall SoundTweakedHook::Execute(SoundTweakedHook*,CPhysicsObj*)</code>
+    /// </summary>
+    public void Execute(ACBindings.Internal.CPhysicsObj* physobj) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SoundTweakedHook, ACBindings.Internal.CPhysicsObj*, void>)0x00527680)(ref this, physobj);
+
+    /// <summary>
+    /// <code>Offset: 0x00528330
+    /// unsigned int __thiscall SoundTweakedHook::Pack(SoundTweakedHook*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SoundTweakedHook, void**, uint, uint>)0x00528330)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x00528380
+    /// int __thiscall SoundTweakedHook::UnPack(SoundTweakedHook*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SoundTweakedHook, void**, uint, int>)0x00528380)(ref this, addr, size);
 }
 

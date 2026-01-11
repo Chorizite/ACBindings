@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // Target_Mode
 public enum Target_Mode : uint

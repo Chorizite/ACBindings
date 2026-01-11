@@ -1,23 +1,21 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Attribute
 public unsafe struct Attribute
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // Attribute_vtbl
     public unsafe struct Attribute_vtbl
     {
         // Members
-        public System.IntPtr Attribute_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Attribute*, void> Attribute_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
-        public System.IntPtr LevelFromExperience; // function pointer
-        public System.IntPtr ExperienceToLevel; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Attribute*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Attribute*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Attribute*, void**, uint, int> UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Attribute*, uint, uint> LevelFromExperience; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Attribute*, uint, uint> ExperienceToLevel; // function pointer
 
         // Methods
     }
@@ -28,18 +26,34 @@ public unsafe struct Attribute
     public uint _cp_spent;
 
     // Generated Constructor
-    public Attribute(ACBindings.Attribute* that) {
+    public Attribute(ACBindings.Internal.Attribute* that) {
         _ConstructorInternal(that);
     }
 
     // Methods
-    // void __thiscall Attribute::Attribute(Attribute*,const Attribute*)
-    public void _ConstructorInternal(ACBindings.Attribute* that) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Attribute, ACBindings.Attribute*, void>)0x00558430)(ref this, that);
-    // unsigned int __thiscall Attribute::LevelFromExperience(Attribute*,unsigned int)
-    public uint LevelFromExperience(uint xp) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Attribute, uint, uint>)0x005CBB00)(ref this, xp);
-    // unsigned int __thiscall Attribute::ExperienceToLevel(Attribute*,unsigned int)
-    public uint ExperienceToLevel(uint level) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Attribute, uint, uint>)0x005CBB10)(ref this, level);
-    // int __thiscall Attribute::UnPack(Attribute*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Attribute, void**, uint, int>)0x005CBB20)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x00558430
+    /// void __thiscall Attribute::Attribute(Attribute*,const Attribute*)</code>
+    /// </summary>
+    public void _ConstructorInternal(ACBindings.Internal.Attribute* that) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Attribute, ACBindings.Internal.Attribute*, void>)0x00558430)(ref this, that);
+
+    /// <summary>
+    /// <code>Offset: 0x005CBB00
+    /// unsigned int __thiscall Attribute::LevelFromExperience(Attribute*,unsigned int)</code>
+    /// </summary>
+    public uint LevelFromExperience(uint xp) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Attribute, uint, uint>)0x005CBB00)(ref this, xp);
+
+    /// <summary>
+    /// <code>Offset: 0x005CBB10
+    /// unsigned int __thiscall Attribute::ExperienceToLevel(Attribute*,unsigned int)</code>
+    /// </summary>
+    public uint ExperienceToLevel(uint level) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Attribute, uint, uint>)0x005CBB10)(ref this, level);
+
+    /// <summary>
+    /// <code>Offset: 0x005CBB20
+    /// int __thiscall Attribute::UnPack(Attribute*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Attribute, void**, uint, int>)0x005CBB20)(ref this, addr, size);
 }
 

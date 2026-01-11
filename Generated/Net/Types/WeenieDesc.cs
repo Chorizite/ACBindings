@@ -1,22 +1,20 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// WeenieDesc
 public unsafe struct WeenieDesc : System.IDisposable
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // WeenieDesc_vtbl
     public unsafe struct WeenieDesc_vtbl
     {
         // Members
-        public System.IntPtr WeenieDesc_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.WeenieDesc*, void> WeenieDesc_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
-        public System.IntPtr pack_size; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.WeenieDesc*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.WeenieDesc*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.WeenieDesc*, void**, uint, int> UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.WeenieDesc*, uint> pack_size; // function pointer
 
         // Methods
     }
@@ -32,9 +30,17 @@ public unsafe struct WeenieDesc : System.IDisposable
     }
 
     // Methods
-    // void __thiscall WeenieDesc::WeenieDesc(WeenieDesc*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.WeenieDesc, void>)0x005AEBE0)(ref this);
-    // void __thiscall WeenieDesc::~WeenieDesc(WeenieDesc*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.WeenieDesc, void>)0x005AEBF0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005AEBE0
+    /// void __thiscall WeenieDesc::WeenieDesc(WeenieDesc*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.WeenieDesc, void>)0x005AEBE0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005AEBF0
+    /// void __thiscall WeenieDesc::~WeenieDesc(WeenieDesc*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.WeenieDesc, void>)0x005AEBF0)(ref this);
 }
 

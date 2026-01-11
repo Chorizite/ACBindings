@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// GlobalVoyeurInfo
 public unsafe struct GlobalVoyeurInfo
 {
     // Members

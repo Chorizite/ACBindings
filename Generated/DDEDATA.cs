@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DDEDATA
 public unsafe struct DDEDATA
 {
     // Members

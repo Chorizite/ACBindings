@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // PowerBarMode
 public enum PowerBarMode : byte

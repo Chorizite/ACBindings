@@ -1,13 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LBMigrationReqBookkeep
 public unsafe struct LBMigrationReqBookkeep
 {
     // Base Classes
-    public ACBindings.PackableNIListElt__LBMigrationReqBookkeep BaseClass_PackableNIListElt; // ACBindings.PackableNIListElt__LBMigrationReqBookkeep
+    public ACBindings.Internal.PackableNIListElt___LBMigrationReqBookkeep BaseClass_PackableNIListElt; // ACBindings.Internal.PackableNIListElt___LBMigrationReqBookkeep
 
     // Members
-    public ACBindings.LBRange region;
+    public ACBindings.Internal.LBRange region;
     public uint destSrv;
     public uint requestingSrv;
     public int seq;

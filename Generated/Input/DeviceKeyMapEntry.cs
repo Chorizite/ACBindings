@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DeviceKeyMapEntry
 public unsafe struct DeviceKeyMapEntry
 {
     // Members
-    public ACBindings.DeviceType dt;
-    public ACBindings.Turbine_GUID guid;
+    public ACBindings.Internal.DeviceType dt;
+    public ACBindings.Internal.Turbine_GUID guid;
 
     // Methods
 }

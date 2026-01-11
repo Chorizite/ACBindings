@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // InputMapPriority
 public enum InputMapPriority : ushort

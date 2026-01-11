@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // NetBlobProcessedStatus
 public enum NetBlobProcessedStatus : uint

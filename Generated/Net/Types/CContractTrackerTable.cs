@@ -1,27 +1,25 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CContractTrackerTable
 public unsafe struct CContractTrackerTable : System.IDisposable
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // CContractTrackerTable_vtbl
     public unsafe struct CContractTrackerTable_vtbl
     {
         // Members
-        public System.IntPtr CContractTrackerTable_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTrackerTable*, void> CContractTrackerTable_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTrackerTable*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTrackerTable*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTrackerTable*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.PackableHashTable__uint__CContractTracker _contractTrackerHash;
+    public ACBindings.Internal.PackableHashTable__uint___CContractTracker _contractTrackerHash;
 
     // Generated Constructor
     public CContractTrackerTable() {
@@ -34,9 +32,17 @@ public unsafe struct CContractTrackerTable : System.IDisposable
     }
 
     // Methods
-    // void __thiscall CContractTrackerTable::~CContractTrackerTable(CContractTrackerTable*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CContractTrackerTable, void>)0x00560020)(ref this);
-    // void __thiscall CContractTrackerTable::CContractTrackerTable(CContractTrackerTable*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CContractTrackerTable, void>)0x0059A250)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00560020
+    /// void __thiscall CContractTrackerTable::~CContractTrackerTable(CContractTrackerTable*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CContractTrackerTable, void>)0x00560020)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0059A250
+    /// void __thiscall CContractTrackerTable::CContractTrackerTable(CContractTrackerTable*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CContractTrackerTable, void>)0x0059A250)(ref this);
 }
 

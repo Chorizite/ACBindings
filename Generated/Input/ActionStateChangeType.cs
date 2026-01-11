@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ActionStateChangeType
 public enum ActionStateChangeType : byte

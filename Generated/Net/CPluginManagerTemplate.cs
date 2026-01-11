@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CPluginManagerTemplate<CLinkStatusPlugin>
-public unsafe struct CPluginManagerTemplate__CLinkStatusPlugin
+public unsafe struct CPluginManagerTemplate___CLinkStatusPlugin
 {
     // Base Classes
-    public ACBindings.CPluginManager BaseClass_CPluginManager; // ACBindings.CPluginManager
+    public ACBindings.Internal.CPluginManager BaseClass_CPluginManager; // ACBindings.Internal.CPluginManager
 
     // Methods
 }

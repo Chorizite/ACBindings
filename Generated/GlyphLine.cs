@@ -1,14 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// GlyphLine
 public unsafe struct GlyphLine
 {
     // Child Types
-    // GlyphLine_vtbl
     public unsafe struct GlyphLine_vtbl
     {
         // Members
-        public System.IntPtr GlyphLine_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GlyphLine*, void> GlyphLine_dtor_0; // function pointer
 
         // Methods
     }

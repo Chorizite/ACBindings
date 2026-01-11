@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// HWLightUsage
 public unsafe struct HWLightUsage
 {
     // Members

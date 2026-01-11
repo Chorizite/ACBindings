@@ -1,20 +1,18 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CAsyncPurgeRequest
 public unsafe struct CAsyncPurgeRequest
 {
     // Base Classes
-    public ACBindings.AsyncCache.CAsyncRequest BaseClass_AsyncCache_CAsyncRequest; // ACBindings.AsyncCache.CAsyncRequest
+    public ACBindings.Internal.AsyncCache.CAsyncRequest BaseClass_AsyncCache_CAsyncRequest; // ACBindings.Internal.AsyncCache.CAsyncRequest
 
     // Child Types
-    // CAsyncPurgeRequest_vtbl
     public unsafe struct CAsyncPurgeRequest_vtbl
     {
         // Members
-        public System.IntPtr CAsyncPurgeRequest_dtor_0; // function pointer
-        public System.IntPtr bAllDependanciesDone; // function pointer
-        public System.IntPtr ReadyToUnhash; // function pointer
-        public System.IntPtr ReleaseDBObj; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncPurgeRequest*, void> CAsyncPurgeRequest_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncPurgeRequest*, byte> bAllDependanciesDone; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncPurgeRequest*, byte> ReadyToUnhash; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncPurgeRequest*, void> ReleaseDBObj; // function pointer
 
         // Methods
     }

@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PalShiftTerrainPal
 public unsafe struct PalShiftTerrainPal
 {
     // Members
-    public ACBindings.LandDefs.TerrainType terrain_index;
-    public ACBindings.IDClass___tagDataID pal_id;
+    public ACBindings.Internal.LandDefs.TerrainType terrain_index;
+    public ACBindings.Internal.IDClass____tagDataID pal_id;
 
     // Methods
 }

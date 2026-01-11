@@ -1,10 +1,8 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CLinkStatusAverages
 public unsafe struct CLinkStatusAverages
 {
     // Child Types
-    // CLinkStatusAverages::CAverager<float,4>
     public unsafe struct CAverager__float
     {
         // Members
@@ -15,7 +13,6 @@ public unsafe struct CLinkStatusAverages
 
         // Methods
     }
-    // CLinkStatusAverages::CAverager<unsigned short,40>
     public unsafe struct CAverager__ushort
     {
         // Members
@@ -26,7 +23,6 @@ public unsafe struct CLinkStatusAverages
 
         // Methods
     }
-    // CLinkStatusAverages::CAverager<unsigned long,2>
     public unsafe struct CAverager__uint
     {
         // Members
@@ -37,7 +33,6 @@ public unsafe struct CLinkStatusAverages
 
         // Methods
     }
-    // CLinkStatusAverages::CAverager<double,2>
     public unsafe struct CAverager__double
     {
         // Members
@@ -50,16 +45,16 @@ public unsafe struct CLinkStatusAverages
     }
 
     // Members
-    public ACBindings.CLinkStatusSnapshot m_Snapshot;
+    public ACBindings.Internal.CLinkStatusSnapshot m_Snapshot;
     public double m_LocalTimeOfSnapshot;
-    public ACBindings.CLinkStatusAverages.CAverager__float m_RoundTripDelays;
-    public ACBindings.CLinkStatusAverages.CAverager__ushort m_nPktsSent;
-    public ACBindings.CLinkStatusAverages.CAverager__ushort m_nPktsRetransmitted;
-    public ACBindings.CLinkStatusAverages.CAverager__ushort m_nPktsReceived;
-    public ACBindings.CLinkStatusAverages.CAverager__ushort m_nPktsNAKed;
-    public ACBindings.CLinkStatusAverages.CAverager__uint m_nBytesSent;
-    public ACBindings.CLinkStatusAverages.CAverager__uint m_nBytesReceived;
-    public ACBindings.CLinkStatusAverages.CAverager__double m_TimeDiffs;
+    public ACBindings.Internal.CLinkStatusAverages.CAverager__float m_RoundTripDelays;
+    public ACBindings.Internal.CLinkStatusAverages.CAverager__ushort m_nPktsSent;
+    public ACBindings.Internal.CLinkStatusAverages.CAverager__ushort m_nPktsRetransmitted;
+    public ACBindings.Internal.CLinkStatusAverages.CAverager__ushort m_nPktsReceived;
+    public ACBindings.Internal.CLinkStatusAverages.CAverager__ushort m_nPktsNAKed;
+    public ACBindings.Internal.CLinkStatusAverages.CAverager__uint m_nBytesSent;
+    public ACBindings.Internal.CLinkStatusAverages.CAverager__uint m_nBytesReceived;
+    public ACBindings.Internal.CLinkStatusAverages.CAverager__double m_TimeDiffs;
 
     // Generated Constructor
     public CLinkStatusAverages() {
@@ -67,13 +62,29 @@ public unsafe struct CLinkStatusAverages
     }
 
     // Methods
-    // void __thiscall CLinkStatusAverages::CLinkStatusAverages(CLinkStatusAverages*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CLinkStatusAverages, void>)0x00542F40)(ref this);
-    // long double __thiscall CLinkStatusAverages::GetAveragePacketLoss(CLinkStatusAverages*)
-    public double GetAveragePacketLoss() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CLinkStatusAverages, double>)0x005471D0)(ref this);
-    // void __thiscall CLinkStatusAverages::AddSnapshot(CLinkStatusAverages*,const CLinkStatusSnapshot*)
-    public void AddSnapshot(ACBindings.CLinkStatusSnapshot* Snap) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CLinkStatusAverages, ACBindings.CLinkStatusSnapshot*, void>)0x00547210)(ref this, Snap);
-    // void __thiscall CLinkStatusAverages::OnPingResponse(CLinkStatusAverages*,float)
-    public void OnPingResponse(float RoundTripDelay) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CLinkStatusAverages, float, void>)0x005472F0)(ref this, RoundTripDelay);
+
+    /// <summary>
+    /// <code>Offset: 0x00542F40
+    /// void __thiscall CLinkStatusAverages::CLinkStatusAverages(CLinkStatusAverages*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CLinkStatusAverages, void>)0x00542F40)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005471D0
+    /// long double __thiscall CLinkStatusAverages::GetAveragePacketLoss(CLinkStatusAverages*)</code>
+    /// </summary>
+    public double GetAveragePacketLoss() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CLinkStatusAverages, double>)0x005471D0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00547210
+    /// void __thiscall CLinkStatusAverages::AddSnapshot(CLinkStatusAverages*,const CLinkStatusSnapshot*)</code>
+    /// </summary>
+    public void AddSnapshot(ACBindings.Internal.CLinkStatusSnapshot* Snap) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CLinkStatusAverages, ACBindings.Internal.CLinkStatusSnapshot*, void>)0x00547210)(ref this, Snap);
+
+    /// <summary>
+    /// <code>Offset: 0x005472F0
+    /// void __thiscall CLinkStatusAverages::OnPingResponse(CLinkStatusAverages*,float)</code>
+    /// </summary>
+    public void OnPingResponse(float RoundTripDelay) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CLinkStatusAverages, float, void>)0x005472F0)(ref this, RoundTripDelay);
 }
 

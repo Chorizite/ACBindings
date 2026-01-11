@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// MediaDescResolver
 public unsafe struct MediaDescResolver
 {
     // Methods

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// _WSABUF
 public unsafe struct _WSABUF
 {
     // Members

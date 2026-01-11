@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // SEND_CODE
 public enum SEND_CODE : uint

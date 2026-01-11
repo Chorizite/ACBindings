@@ -1,23 +1,21 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IDispatch
 public unsafe struct IDispatch
 {
     // Base Classes
-    public ACBindings.IUnknown BaseClass_IUnknown; // ACBindings.IUnknown
+    public ACBindings.Internal.IUnknown BaseClass_IUnknown; // ACBindings.Internal.IUnknown
 
     // Child Types
-    // IDispatch_vtbl
     public unsafe struct IDispatch_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr GetTypeInfoCount; // function pointer
-        public System.IntPtr GetTypeInfo; // function pointer
-        public System.IntPtr GetIDsOfNames; // function pointer
-        public System.IntPtr Invoke; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDispatch*, uint*, int> GetTypeInfoCount; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDispatch*, uint, uint, System.IntPtr, int> GetTypeInfo; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDispatch*, ACBindings.Internal._GUID*, ushort**, uint, uint, int*, int> GetIDsOfNames; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDispatch*, int, ACBindings.Internal._GUID*, uint, ushort, System.IntPtr, System.IntPtr, System.IntPtr, uint*, int> Invoke; // function pointer
 
         // Methods
     }

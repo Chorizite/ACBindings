@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // $2A6324B8E10DEE2666A6A5498DFC667B
 public enum _2A6324B8E10DEE2666A6A5498DFC667B : uint

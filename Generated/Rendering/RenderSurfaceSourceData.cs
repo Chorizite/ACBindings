@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// RenderSurfaceSourceData
 public unsafe struct RenderSurfaceSourceData
 {
     // Members
@@ -8,7 +7,7 @@ public unsafe struct RenderSurfaceSourceData
     public uint height;
     public uint imageSize;
     public byte* sourceBits;
-    public ACBindings.PixelFormatDesc pfDesc;
+    public ACBindings.Internal.PixelFormatDesc pfDesc;
 
     // Methods
 }

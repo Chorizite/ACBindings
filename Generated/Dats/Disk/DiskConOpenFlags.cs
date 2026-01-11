@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // DiskConOpenFlags
 public enum DiskConOpenFlags : byte

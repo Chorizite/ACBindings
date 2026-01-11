@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // CryptoProviderFlags
 public enum CryptoProviderFlags : byte

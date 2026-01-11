@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // DATFILE_TYPE
 public enum DATFILE_TYPE : uint

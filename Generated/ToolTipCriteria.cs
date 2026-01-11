@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ToolTipCriteria
 public unsafe struct ToolTipCriteria
 {
     // Methods

@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // $F43682D933327F9F3CA6C70AFCFC5243
 public enum _F43682D933327F9F3CA6C70AFCFC5243 : byte

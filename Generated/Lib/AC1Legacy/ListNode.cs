@@ -1,6 +1,5 @@
-namespace ACBindings.AC1Legacy;
+namespace ACBindings.Internal.AC1Legacy;
 
-// AC1Legacy::ListNode<unsigned long>
 public unsafe struct ListNode__uint
 {
     // Members
@@ -11,33 +10,30 @@ public unsafe struct ListNode__uint
     // Methods
 }
 
-// AC1Legacy::ListNode<FriendData>
-public unsafe struct ListNode__FriendData
+public unsafe struct ListNode___FriendData
 {
     // Members
-    public ACBindings.FriendData data;
+    public ACBindings.Internal.FriendData data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// AC1Legacy::ListNode<SpellSetTierList>
-public unsafe struct ListNode__SpellSetTierList
+public unsafe struct ListNode___SpellSetTierList
 {
     // Members
-    public ACBindings.SpellSetTierList data;
+    public ACBindings.Internal.SpellSetTierList data;
     public System.IntPtr next;
     public System.IntPtr prev;
 
     // Methods
 }
 
-// AC1Legacy::ListNode<AC1Legacy::PStringBase<char>>
-public unsafe struct ListNode__AC1Legacy_PStringBase__sbyte
+public unsafe struct ListNode___AC1Legacy_PStringBase__sbyte
 {
     // Members
-    public ACBindings.AC1Legacy.PStringBase__sbyte data;
+    public ACBindings.Internal.AC1Legacy.PStringBase__sbyte data;
     public System.IntPtr next;
     public System.IntPtr prev;
 

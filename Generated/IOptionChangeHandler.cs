@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IOptionChangeHandler
 public unsafe struct IOptionChangeHandler
 {
     // Members

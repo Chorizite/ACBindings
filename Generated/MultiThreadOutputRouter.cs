@@ -1,19 +1,17 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// MultiThreadOutputRouter
 public unsafe struct MultiThreadOutputRouter
 {
     // Base Classes
-    public ACBindings.Logger.ITextFileOutputHandler BaseClass_Logger_ITextFileOutputHandler; // ACBindings.Logger.ITextFileOutputHandler
+    public ACBindings.Internal.Logger.ITextFileOutputHandler BaseClass_Logger_ITextFileOutputHandler; // ACBindings.Internal.Logger.ITextFileOutputHandler
 
     // Child Types
-    // MultiThreadOutputRouter_vtbl
     public unsafe struct MultiThreadOutputRouter_vtbl
     {
         // Members
-        public System.IntPtr MultiThreadOutputRouter_dtor_0; // function pointer
-        public System.IntPtr Write; // function pointer
-        public System.IntPtr Flush; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.MultiThreadOutputRouter*, void> MultiThreadOutputRouter_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.MultiThreadOutputRouter*, ACBindings.Internal.Logger.LoggingSeverity, uint, sbyte*, ACBindings.Internal.Logger.LoggerWriteResult> Write; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.MultiThreadOutputRouter*, void> Flush; // function pointer
         public System.IntPtr ChangeLogFile;
         public System.IntPtr GetLogFileName;
 
@@ -21,8 +19,8 @@ public unsafe struct MultiThreadOutputRouter
     }
 
     // Members
-    public ACBindings.CSpinLock m_critsec;
-    public ACBindings.HashTable__uint__Logger_ITextFileOutputHandler_ptr m_hash;
+    public ACBindings.Internal.CSpinLock m_critsec;
+    public ACBindings.Internal.HashTable__uint___Logger_ITextFileOutputHandler_ptr m_hash;
 
     // Methods
 }

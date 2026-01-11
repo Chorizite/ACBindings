@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // MaskDataFormat
 public enum MaskDataFormat : uint

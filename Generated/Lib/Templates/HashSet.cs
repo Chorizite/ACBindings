@@ -1,85 +1,97 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// HashSet<QualifiedDataID>
-public unsafe struct HashSet__QualifiedDataID
+public unsafe struct HashSet___QualifiedDataID
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
-    public ACBindings.IntrusiveHashTable__QualifiedDataID__HashSetData__QualifiedDataID_ptr m_intrusiveTable;
+    public ACBindings.Internal.IntrusiveHashTable___QualifiedDataID___HashSetData___QualifiedDataID_ptr m_intrusiveTable;
 
     // Methods
-    // HashSet<QualifiedDataID>::add (template type method)
-    // HashSet<QualifiedDataID>::erase (template type method)
+
+    /// <summary>Adds the specified QualifiedDataID to the set, allocating a new entry when it is not already present.
+    /// <code>Offset: 0x00414D80
+    /// char __thiscall HashSet&lt;QualifiedDataID&gt;::add(_DWORD*,_DWORD*)</code>
+    /// </summary>
+    /// <param name="qualifiedId">Pointer to the QualifiedDataID to be inserted into the hash set.</param>
+    /// <returns>Non‑zero if the element was added; zero if an equivalent element already existed in the set.</returns>
+    // char __thiscall HashSet<QualifiedDataID>::add(_DWORD*,_DWORD*) (template type method)
+
+    /// <summary>Removes the element identified by the specified key from this hash set, freeing its associated memory when found.
+    /// <code>Offset: 0x00414F50
+    /// char __thiscall HashSet&lt;QualifiedDataID&gt;::erase(_DWORD*,_DWORD*)</code>
+    /// </summary>
+    /// <param name="a2">The identifier of the element to remove.</param>
+    /// <returns>Non-zero if an element was removed; zero otherwise.</returns>
+    // char __thiscall HashSet<QualifiedDataID>::erase(_DWORD*,_DWORD*) (template type method)
 }
 
-// HashSet<unsigned long>
 public unsafe struct HashSet__uint
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
-    public ACBindings.IntrusiveHashTable__uint__HashSetData__uint_ptr m_intrusiveTable;
+    public ACBindings.Internal.IntrusiveHashTable__uint___HashSetData__uint_ptr m_intrusiveTable;
 
     // Methods
 }
 
-// HashSet<UIElement*>
-public unsafe struct HashSet__UIElement_ptr
+public unsafe struct HashSet___UIElement_ptr
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
-    public ACBindings.IntrusiveHashTable__UIElement_ptr__HashSetData__UIElement_ptr_ptr m_intrusiveTable;
+    public ACBindings.Internal.IntrusiveHashTable___UIElement_ptr___HashSetData___UIElement_ptr_ptr m_intrusiveTable;
 
     // Methods
 }
 
-// HashSet<UIListener*>
-public unsafe struct HashSet__UIListener_ptr
+public unsafe struct HashSet___UIListener_ptr
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
-    public ACBindings.IntrusiveHashTable__UIListener_ptr__HashSetData__UIListener_ptr_ptr m_intrusiveTable;
+    public ACBindings.Internal.IntrusiveHashTable___UIListener_ptr___HashSetData___UIListener_ptr_ptr m_intrusiveTable;
 
     // Methods
 }
 
-// HashSet<ImgTex*>
-public unsafe struct HashSet__ImgTex_ptr
+public unsafe struct HashSet___ImgTex_ptr
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
-    public ACBindings.IntrusiveHashTable__ImgTex_ptr__HashSetData__ImgTex_ptr_ptr m_intrusiveTable;
+    public ACBindings.Internal.IntrusiveHashTable___ImgTex_ptr___HashSetData___ImgTex_ptr_ptr m_intrusiveTable;
 
     // Methods
 }
 
-// HashSet<IDClass<_tagDataID,32,0>>
-public unsafe struct HashSet__IDClass___tagDataID
+public unsafe struct HashSet___IDClass____tagDataID
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
-    public ACBindings.IntrusiveHashTable__IDClass___tagDataID__HashSetData__IDClass___tagDataID_ptr m_intrusiveTable;
+    public ACBindings.Internal.IntrusiveHashTable___IDClass____tagDataID___HashSetData___IDClass____tagDataID_ptr m_intrusiveTable;
 
     // Methods
 }
 
-// HashSet<bool (__cdecl*)(HResultDebugData&)>
 public unsafe struct HashSet__void_ptr
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
-    public ACBindings.IntrusiveHashTable__void_ptr__HashSetData__void_ptr_ptr m_intrusiveTable;
+    public ACBindings.Internal.IntrusiveHashTable__void_ptr___HashSetData__void_ptr_ptr m_intrusiveTable;
 
     // Methods
 }
 
-// HashSet<PStringBase<char>>
-public unsafe struct HashSet__PStringBase__sbyte
+public unsafe struct HashSet___PStringBase__sbyte
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
-    public ACBindings.IntrusiveHashTable__PStringBase__sbyte__HashSetData__PStringBase__sbyte_ptr m_intrusiveTable;
+    public ACBindings.Internal.IntrusiveHashTable___PStringBase__sbyte___HashSetData___PStringBase__sbyte_ptr m_intrusiveTable;
 
     // Methods
-    // HashSet<PStringBase<char>>::~HashSet<PStringBase<char>> (template type method)
+
+    /// <summary>Destroys a HashSet&lt;PStringBase&lt;char&gt;&gt; instance, freeing its internal intrusive hash table and deallocating any allocated memory.
+    /// <code>Offset: 0x004136E0
+    /// int __thiscall HashSet&lt;PStringBase&lt;char&gt;&gt;::~HashSet&lt;PStringBase&lt;char&gt;&gt;(void***)</code>
+    /// </summary>
+    /// <returns>Zero on successful completion.</returns>
+    // int __thiscall HashSet<PStringBase<char>>::~HashSet<PStringBase<char>>(void***) (template type method)
 }
 

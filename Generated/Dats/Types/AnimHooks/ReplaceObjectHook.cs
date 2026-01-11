@@ -1,29 +1,27 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ReplaceObjectHook
 public unsafe struct ReplaceObjectHook
 {
     // Base Classes
-    public ACBindings.CAnimHook BaseClass_CAnimHook; // ACBindings.CAnimHook
+    public ACBindings.Internal.CAnimHook BaseClass_CAnimHook; // ACBindings.Internal.CAnimHook
 
     // Child Types
-    // ReplaceObjectHook_vtbl
     public unsafe struct ReplaceObjectHook_vtbl
     {
         // Members
-        public System.IntPtr ReplaceObjectHook_dtor_0; // function pointer
-        public System.IntPtr Execute; // function pointer
-        public System.IntPtr GetType; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
-        public System.IntPtr pack_size; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ReplaceObjectHook*, void> ReplaceObjectHook_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ReplaceObjectHook*, ACBindings.Internal.CPhysicsObj*, void> Execute; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ReplaceObjectHook*, int> GetType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ReplaceObjectHook*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ReplaceObjectHook*, uint> pack_size; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ReplaceObjectHook*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ReplaceObjectHook*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.AnimPartChange ap_change;
+    public ACBindings.Internal.AnimPartChange ap_change;
 
     // Generated Constructor
     public ReplaceObjectHook() {
@@ -31,17 +29,41 @@ public unsafe struct ReplaceObjectHook
     }
 
     // Methods
-    // unsigned int __thiscall ReplaceObjectHook::pack_size(ReplaceObjectHook*)
-    public uint pack_size() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ReplaceObjectHook, uint>)0x00527710)(ref this);
-    // unsigned int __thiscall ReplaceObjectHook::Pack(ReplaceObjectHook*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ReplaceObjectHook, void**, uint, uint>)0x00527730)(ref this, addr, size);
-    // int __thiscall ReplaceObjectHook::UnPack(ReplaceObjectHook*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ReplaceObjectHook, void**, uint, int>)0x00527740)(ref this, addr, size);
-    // void __thiscall ReplaceObjectHook::ReplaceObjectHook(ReplaceObjectHook*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ReplaceObjectHook, void>)0x00527CC0)(ref this);
-    // int __thiscall ReplaceObjectHook::GetType(ReplaceObjectHook*)
-    public int GetType() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ReplaceObjectHook, int>)0x00527CF0)(ref this);
-    // void __thiscall ReplaceObjectHook::GetSubDataIDs(ReplaceObjectHook*,QualifiedDataIDArray*)
-    public void GetSubDataIDs(ACBindings.QualifiedDataIDArray* id_array) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ReplaceObjectHook, ACBindings.QualifiedDataIDArray*, void>)0x00528580)(ref this, id_array);
+
+    /// <summary>
+    /// <code>Offset: 0x00527710
+    /// unsigned int __thiscall ReplaceObjectHook::pack_size(ReplaceObjectHook*)</code>
+    /// </summary>
+    public uint pack_size() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ReplaceObjectHook, uint>)0x00527710)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00527730
+    /// unsigned int __thiscall ReplaceObjectHook::Pack(ReplaceObjectHook*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ReplaceObjectHook, void**, uint, uint>)0x00527730)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x00527740
+    /// int __thiscall ReplaceObjectHook::UnPack(ReplaceObjectHook*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ReplaceObjectHook, void**, uint, int>)0x00527740)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x00527CC0
+    /// void __thiscall ReplaceObjectHook::ReplaceObjectHook(ReplaceObjectHook*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ReplaceObjectHook, void>)0x00527CC0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00527CF0
+    /// int __thiscall ReplaceObjectHook::GetType(ReplaceObjectHook*)</code>
+    /// </summary>
+    public int GetType() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ReplaceObjectHook, int>)0x00527CF0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00528580
+    /// void __thiscall ReplaceObjectHook::GetSubDataIDs(ReplaceObjectHook*,QualifiedDataIDArray*)</code>
+    /// </summary>
+    public void GetSubDataIDs(ACBindings.Internal.QualifiedDataIDArray* id_array) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ReplaceObjectHook, ACBindings.Internal.QualifiedDataIDArray*, void>)0x00528580)(ref this, id_array);
 }
 

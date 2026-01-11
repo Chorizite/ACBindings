@@ -1,23 +1,21 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PlacementType
 public unsafe struct PlacementType
 {
     // Base Classes
-    public ACBindings.LongHashData BaseClass_LongHashData; // ACBindings.LongHashData
+    public ACBindings.Internal.LongHashData BaseClass_LongHashData; // ACBindings.Internal.LongHashData
 
     // Child Types
-    // PlacementType_vtbl
     public unsafe struct PlacementType_vtbl
     {
         // Members
-        public System.IntPtr PlacementType_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PlacementType*, void> PlacementType_dtor_0; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.AnimFrame anim_frame;
+    public ACBindings.Internal.AnimFrame anim_frame;
 
     // Methods
 }

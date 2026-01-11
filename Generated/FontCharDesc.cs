@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// FontCharDesc
 public unsafe struct FontCharDesc
 {
     // Members

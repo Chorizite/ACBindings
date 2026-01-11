@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// view_type
 public unsafe struct view_type
 {
     // Members
     public uint vertex_count_total;
-    public ACBindings.DArray__view_poly poly;
-    public ACBindings.DArray__view_vertex vertex;
+    public ACBindings.Internal.DArray___view_poly poly;
+    public ACBindings.Internal.DArray___view_vertex vertex;
 
     // Methods
 }

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CGrowBuffer
 public unsafe struct CGrowBuffer
 {
     // Members

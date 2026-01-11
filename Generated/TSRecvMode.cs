@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // TSRecvMode
 public enum TSRecvMode : uint

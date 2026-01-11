@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // _D3DPRIMITIVETYPE
 public enum _D3DPRIMITIVETYPE : uint

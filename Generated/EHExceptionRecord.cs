@@ -1,10 +1,8 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// EHExceptionRecord
 public unsafe struct EHExceptionRecord
 {
     // Child Types
-    // EHExceptionRecord::EHParameters
     public unsafe struct EHParameters
     {
         // Members
@@ -21,7 +19,7 @@ public unsafe struct EHExceptionRecord
     public System.IntPtr ExceptionRecord;
     public System.IntPtr ExceptionAddress;
     public uint NumberParameters;
-    public ACBindings.EHExceptionRecord.EHParameters params_;
+    public ACBindings.Internal.EHExceptionRecord.EHParameters params_;
 
     // Methods
 }

@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ItemProfile
 public unsafe struct ItemProfile : System.IDisposable
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // ItemProfile_vtbl
     public unsafe struct ItemProfile_vtbl
     {
         // Members
-        public System.IntPtr ItemProfile_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ItemProfile*, void> ItemProfile_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ItemProfile*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ItemProfile*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ItemProfile*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -23,13 +21,13 @@ public unsafe struct ItemProfile : System.IDisposable
     // Members
     public int amount;
     public uint iid;
-    public ACBindings.PublicWeenieDesc* pwd;
+    public ACBindings.Internal.PublicWeenieDesc* pwd;
 
     // Generated Constructor
     public ItemProfile() {
         _ConstructorInternal();
     }
-    public ItemProfile(ACBindings.ItemProfile* rhs) {
+    public ItemProfile(ACBindings.Internal.ItemProfile* rhs) {
         _ConstructorInternal(rhs);
     }
 
@@ -39,17 +37,41 @@ public unsafe struct ItemProfile : System.IDisposable
     }
 
     // Methods
-    // void __thiscall ItemProfile::Clear(ItemProfile*)
-    public void Clear() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ItemProfile, void>)0x005D2750)(ref this);
-    // void __thiscall ItemProfile::ItemProfile(ItemProfile*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ItemProfile, void>)0x005D2810)(ref this);
-    // void __thiscall ItemProfile::~ItemProfile(ItemProfile*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ItemProfile, void>)0x005D2830)(ref this);
-    // void __thiscall ItemProfile::ItemProfile(ItemProfile*,const ItemProfile*)
-    public void _ConstructorInternal(ACBindings.ItemProfile* rhs) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ItemProfile, ACBindings.ItemProfile*, void>)0x005D2860)(ref this, rhs);
-    // unsigned int __thiscall ItemProfile::Pack(ItemProfile*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ItemProfile, void**, uint, uint>)0x005D2890)(ref this, addr, size);
-    // int __thiscall ItemProfile::UnPack(ItemProfile*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ItemProfile, void**, uint, int>)0x005D2910)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005D2750
+    /// void __thiscall ItemProfile::Clear(ItemProfile*)</code>
+    /// </summary>
+    public void Clear() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ItemProfile, void>)0x005D2750)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005D2810
+    /// void __thiscall ItemProfile::ItemProfile(ItemProfile*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ItemProfile, void>)0x005D2810)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005D2830
+    /// void __thiscall ItemProfile::~ItemProfile(ItemProfile*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ItemProfile, void>)0x005D2830)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005D2860
+    /// void __thiscall ItemProfile::ItemProfile(ItemProfile*,const ItemProfile*)</code>
+    /// </summary>
+    public void _ConstructorInternal(ACBindings.Internal.ItemProfile* rhs) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ItemProfile, ACBindings.Internal.ItemProfile*, void>)0x005D2860)(ref this, rhs);
+
+    /// <summary>
+    /// <code>Offset: 0x005D2890
+    /// unsigned int __thiscall ItemProfile::Pack(ItemProfile*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ItemProfile, void**, uint, uint>)0x005D2890)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005D2910
+    /// int __thiscall ItemProfile::UnPack(ItemProfile*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ItemProfile, void**, uint, int>)0x005D2910)(ref this, addr, size);
 }
 

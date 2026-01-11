@@ -1,17 +1,15 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LongHashData
 public unsafe struct LongHashData
 {
     // Base Classes
-    public ACBindings.HashBaseData__uint BaseClass_HashBaseData; // ACBindings.HashBaseData__uint
+    public ACBindings.Internal.HashBaseData__uint BaseClass_HashBaseData; // ACBindings.Internal.HashBaseData__uint
 
     // Child Types
-    // LongHashData_vtbl
     public unsafe struct LongHashData_vtbl
     {
         // Members
-        public System.IntPtr LongHashData_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LongHashData*, void> LongHashData_dtor_0; // function pointer
 
         // Methods
     }

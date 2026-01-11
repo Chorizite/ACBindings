@@ -1,4 +1,4 @@
-namespace ACBindings.StringTableMetaLanguage;
+namespace ACBindings.Internal.StringTableMetaLanguage;
 
 // StringTableMetaLanguage::NodeType
 public enum NodeType : byte

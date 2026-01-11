@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // CharacterOptions2
 public enum CharacterOptions2 : uint

@@ -1,35 +1,33 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// FellowshipPortalSendingSpell
 public unsafe struct FellowshipPortalSendingSpell
 {
     // Base Classes
-    public ACBindings.PortalSendingSpell BaseClass_PortalSendingSpell; // ACBindings.PortalSendingSpell
+    public ACBindings.Internal.PortalSendingSpell BaseClass_PortalSendingSpell; // ACBindings.Internal.PortalSendingSpell
 
     // Child Types
-    // FellowshipPortalSendingSpell_vtbl
     public unsafe struct FellowshipPortalSendingSpell_vtbl
     {
         // Members
-        public System.IntPtr FellowshipPortalSendingSpell_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, void> FellowshipPortalSendingSpell_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
-        public System.IntPtr SetEqual; // function pointer
-        public System.IntPtr InqDuration; // function pointer
-        public System.IntPtr SetDuration; // function pointer
-        public System.IntPtr IsEnchantmentSpell; // function pointer
-        public System.IntPtr IsBoostSpell; // function pointer
-        public System.IntPtr IsProjectileSpell; // function pointer
-        public System.IntPtr IsTransferSpell; // function pointer
-        public System.IntPtr IsDispelSpell; // function pointer
-        public System.IntPtr IsFellowshipSpell; // function pointer
-        public System.IntPtr BuildEnchantment; // function pointer
-        public System.IntPtr AffectsHealth; // function pointer
-        public System.IntPtr AffectsStamina; // function pointer
-        public System.IntPtr AffectsMana; // function pointer
-        public System.IntPtr pack_size; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, void**, uint, int> UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, ACBindings.Internal.Spell*, ACBindings.Internal.Spell*, void> SetEqual; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, double> InqDuration; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, double, int> SetDuration; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, int> IsEnchantmentSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, int> IsBoostSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, int> IsProjectileSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, int> IsTransferSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, int> IsDispelSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, int> IsFellowshipSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, ACBindings.Internal.Enchantment*, int> BuildEnchantment; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, int> AffectsHealth; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, int> AffectsStamina; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, int> AffectsMana; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipPortalSendingSpell*, uint> pack_size; // function pointer
 
         // Methods
     }

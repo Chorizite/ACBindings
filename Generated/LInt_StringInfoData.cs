@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LInt_StringInfoData
 public unsafe struct LInt_StringInfoData
 {
     // Base Classes
-    public ACBindings.StringInfoData BaseClass_StringInfoData; // ACBindings.StringInfoData
+    public ACBindings.Internal.StringInfoData BaseClass_StringInfoData; // ACBindings.Internal.StringInfoData
 
     // Child Types
-    // LInt_StringInfoData_vtbl
     public unsafe struct LInt_StringInfoData_vtbl
     {
         // Members
-        public System.IntPtr LInt_StringInfoData_dtor_0; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LInt_StringInfoData*, void> LInt_StringInfoData_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LInt_StringInfoData*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
         public System.IntPtr GetSubPrivateIDs;
-        public System.IntPtr IsValid; // function pointer
-        public System.IntPtr Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LInt_StringInfoData*, byte, byte> IsValid; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LInt_StringInfoData*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
         public System.IntPtr ToString;
 
         // Methods
@@ -25,7 +23,13 @@ public unsafe struct LInt_StringInfoData
     public long m_iVal;
 
     // Methods
-    // int* __thiscall LInt_StringInfoData::ToString(__int64*,int*)
-    public int* ToString(int* a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.LInt_StringInfoData, int*, int*>)0x0042FA00)(ref this, a2);
+
+    /// <summary>Converts the 64‑bit integer stored in the object into a decimal string and writes it to the supplied buffer.
+    /// <code>Offset: 0x0042FA00
+    /// int* __thiscall LInt_StringInfoData::ToString(__int64*,int*)</code>
+    /// </summary>
+    /// <param name="a2">Pointer to an output buffer that will contain the resulting null‑terminated string.</param>
+    /// <returns>The same pointer that was passed in, pointing to the formatted string.</returns>
+    public int* ToString(int* a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.LInt_StringInfoData, int*, int*>)0x0042FA00)(ref this, a2);
 }
 

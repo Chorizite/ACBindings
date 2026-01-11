@@ -1,26 +1,23 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CLogonHeader
 public unsafe struct CLogonHeader
 {
     // Base Classes
-    public ACBindings.COptionalHeader BaseClass_COptionalHeader; // ACBindings.COptionalHeader
+    public ACBindings.Internal.COptionalHeader BaseClass_COptionalHeader; // ACBindings.Internal.COptionalHeader
 
     // Child Types
-    // CLogonHeader_vtbl
     public unsafe struct CLogonHeader_vtbl
     {
         // Members
-        public System.IntPtr CLogonHeader_dtor_0; // function pointer
-        public System.IntPtr UpdateTimeSensitivePayload; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLogonHeader*, void> CLogonHeader_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLogonHeader*, int> UpdateTimeSensitivePayload; // function pointer
 
         // Methods
     }
-    // CLogonHeader::HandshakeWireData
     public unsafe struct HandshakeWireData : System.IDisposable
     {
         // Members
-        public ACBindings.AC1Legacy.PStringBase__sbyte ClientVersion;
+        public ACBindings.Internal.AC1Legacy.PStringBase__sbyte ClientVersion;
         public uint cbAuthData;
 
         // Generated Dispose
@@ -29,12 +26,16 @@ public unsafe struct CLogonHeader
         }
 
         // Methods
-        // void __thiscall CLogonHeader::HandshakeWireData::~HandshakeWireData(CLogonHeader::HandshakeWireData*)
-        public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CLogonHeader.HandshakeWireData, void>)0x005ABB30)(ref this);
+
+        /// <summary>
+        /// <code>Offset: 0x005ABB30
+        /// void __thiscall CLogonHeader::HandshakeWireData::~HandshakeWireData(CLogonHeader::HandshakeWireData*)</code>
+        /// </summary>
+        public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CLogonHeader.HandshakeWireData, void>)0x005ABB30)(ref this);
     }
 
     // Members
-    public ACBindings.CLogonHeader.HandshakeWireData m_UnpackedData;
+    public ACBindings.Internal.CLogonHeader.HandshakeWireData m_UnpackedData;
     public fixed byte m_PackedData[65504];
 
     // Generated Constructor
@@ -46,13 +47,29 @@ public unsafe struct CLogonHeader
     }
 
     // Methods
-    // void __thiscall CLogonHeader::CLogonHeader(CLogonHeader*,unsigned int)
-    public void _ConstructorInternal(uint cbPackedData) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CLogonHeader, uint, void>)0x005AC2D0)(ref this, cbPackedData);
-    // void __thiscall CLogonHeader::CLogonHeader(CLogonHeader*,const unsigned __int8*,unsigned int)
-    public void _ConstructorInternal(byte* pRecvBuf, uint cbRecvBuf) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CLogonHeader, byte*, uint, void>)0x005AC320)(ref this, pRecvBuf, cbRecvBuf);
-    // int __cdecl CLogonHeader::CreateFromData(int*,int)
+
+    /// <summary>
+    /// <code>Offset: 0x005AC2D0
+    /// void __thiscall CLogonHeader::CLogonHeader(CLogonHeader*,unsigned int)</code>
+    /// </summary>
+    public void _ConstructorInternal(uint cbPackedData) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CLogonHeader, uint, void>)0x005AC2D0)(ref this, cbPackedData);
+
+    /// <summary>
+    /// <code>Offset: 0x005AC320
+    /// void __thiscall CLogonHeader::CLogonHeader(CLogonHeader*,const unsigned __int8*,unsigned int)</code>
+    /// </summary>
+    public void _ConstructorInternal(byte* pRecvBuf, uint cbRecvBuf) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CLogonHeader, byte*, uint, void>)0x005AC320)(ref this, pRecvBuf, cbRecvBuf);
+
+    /// <summary>
+    /// <code>Offset: 0x005AC3A0
+    /// int __cdecl CLogonHeader::CreateFromData(int*,int)</code>
+    /// </summary>
     public static int CreateFromData(int* a1, int a2) => ((delegate* unmanaged[Cdecl]<int*, int, int>)0x005AC3A0)(a1, a2);
-    // COptionalHeader* __cdecl CLogonHeader::CreateFromStream(CBufferIterator*)
-    public static ACBindings.COptionalHeader* CreateFromStream(ACBindings.CBufferIterator* Buf) => ((delegate* unmanaged[Cdecl]<ACBindings.CBufferIterator*, ACBindings.COptionalHeader*>)0x005AC470)(Buf);
+
+    /// <summary>
+    /// <code>Offset: 0x005AC470
+    /// COptionalHeader* __cdecl CLogonHeader::CreateFromStream(CBufferIterator*)</code>
+    /// </summary>
+    public static ACBindings.Internal.COptionalHeader* CreateFromStream(ACBindings.Internal.CBufferIterator* Buf) => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.CBufferIterator*, ACBindings.Internal.COptionalHeader*>)0x005AC470)(Buf);
 }
 

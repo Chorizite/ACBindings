@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// RenderDevicePresentation
 public unsafe struct RenderDevicePresentation
 {
     // Members
@@ -20,7 +19,11 @@ public unsafe struct RenderDevicePresentation
     }
 
     // Methods
-    // void __thiscall RenderDevicePresentation::RenderDevicePresentation(RenderDevicePresentation*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderDevicePresentation, void>)0x00439140)(ref this);
+
+    /// <summary>Initializes a RenderDevicePresentation instance with default display configuration: an 800×600 window, no render window handle, and standard visual settings such as 32‑bit color depth, no antialiasing, and no fullscreen mode.
+    /// <code>Offset: 0x00439140
+    /// void __thiscall RenderDevicePresentation::RenderDevicePresentation(RenderDevicePresentation*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderDevicePresentation, void>)0x00439140)(ref this);
 }
 

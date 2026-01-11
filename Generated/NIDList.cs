@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// NIDList<SLandBlock*>
-public unsafe struct NIDList__SLandBlock_ptr
+public unsafe struct NIDList___SLandBlock_ptr
 {
     // Members
-    public ACBindings.NIDListNode__SLandBlock_ptr head_;
-    public ACBindings.NIDListNode__SLandBlock_ptr tail_;
+    public ACBindings.Internal.NIDListNode___SLandBlock_ptr head_;
+    public ACBindings.Internal.NIDListNode___SLandBlock_ptr tail_;
 
     // Methods
 }

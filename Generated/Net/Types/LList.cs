@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LList<ActionNode>
-public unsafe struct LList__ActionNode
+public unsafe struct LList___ActionNode
 {
     // Base Classes
-    public ACBindings.LListBase BaseClass_LListBase; // ACBindings.LListBase
+    public ACBindings.Internal.LListBase BaseClass_LListBase; // ACBindings.Internal.LListBase
 
     // Methods
 }

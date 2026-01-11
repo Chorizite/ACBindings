@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // _D3DPOOL
 public enum _D3DPOOL : uint

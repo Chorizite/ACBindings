@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CReferralStruct
 public unsafe struct CReferralStruct
 {
     // Members

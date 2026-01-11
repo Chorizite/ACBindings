@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // AMMO_TYPE
 public enum AMMO_TYPE : uint

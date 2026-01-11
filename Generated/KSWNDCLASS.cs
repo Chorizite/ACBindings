@@ -1,13 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// KSWNDCLASS
 public unsafe struct KSWNDCLASS
 {
     // Members
     public ushort* lpResourceName;
-    public System.IntPtr fnWndProc; // function pointer
-    public System.IntPtr fnASPCallback; // function pointer
-    public System.IntPtr fnSoundCallback; // function pointer
+    public delegate* unmanaged[Cdecl]<ACBindings.Internal.IKeystoneWindow*, uint, uint, int, int> fnWndProc; // function pointer
+    public delegate* unmanaged[Cdecl]<ushort*, ushort*> fnASPCallback; // function pointer
+    public delegate* unmanaged[Cdecl]<ushort*, int> fnSoundCallback; // function pointer
 
     // Methods
 }

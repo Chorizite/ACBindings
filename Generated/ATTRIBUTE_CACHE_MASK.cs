@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ATTRIBUTE_CACHE_MASK
 public enum ATTRIBUTE_CACHE_MASK : uint

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// BV_VertexFormatType
 public unsafe struct BV_VertexFormatType
 {
     // Members

@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ArmorProfile
 public unsafe struct ArmorProfile
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // ArmorProfile_vtbl
     public unsafe struct ArmorProfile_vtbl
     {
         // Members
-        public System.IntPtr ArmorProfile_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArmorProfile*, void> ArmorProfile_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArmorProfile*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArmorProfile*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArmorProfile*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -31,9 +29,17 @@ public unsafe struct ArmorProfile
     public float mod_vs_nether;
 
     // Methods
-    // unsigned int __thiscall ArmorProfile::Pack(ArmorProfile*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ArmorProfile, void**, uint, uint>)0x005D1DA0)(ref this, addr, size);
-    // int __thiscall ArmorProfile::UnPack(ArmorProfile*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ArmorProfile, void**, uint, int>)0x005D1E20)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005D1DA0
+    /// unsigned int __thiscall ArmorProfile::Pack(ArmorProfile*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ArmorProfile, void**, uint, uint>)0x005D1DA0)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005D1E20
+    /// int __thiscall ArmorProfile::UnPack(ArmorProfile*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ArmorProfile, void**, uint, int>)0x005D1E20)(ref this, addr, size);
 }
 

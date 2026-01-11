@@ -1,13 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AddObjectTransactInfo
 public unsafe struct AddObjectTransactInfo
 {
     // Base Classes
-    public ACBindings.DiskTransactInfo BaseClass_DiskTransactInfo; // ACBindings.DiskTransactInfo
+    public ACBindings.Internal.DiskTransactInfo BaseClass_DiskTransactInfo; // ACBindings.Internal.DiskTransactInfo
 
     // Members
-    public ACBindings.BTEntry m_entry;
+    public ACBindings.Internal.BTEntry m_entry;
     public int m_nFirstFreeBlock;
     public int m_nNodeEntries;
 
@@ -17,9 +16,17 @@ public unsafe struct AddObjectTransactInfo
     }
 
     // Methods
-    // void __thiscall AddObjectTransactInfo::Serialize(AddObjectTransactInfo*,Archive*)
-    public void Serialize(ACBindings.Archive* io_rcArchive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AddObjectTransactInfo, ACBindings.Archive*, void>)0x00677310)(ref this, io_rcArchive);
-    // void __thiscall AddObjectTransactInfo::AddObjectTransactInfo(AddObjectTransactInfo*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.AddObjectTransactInfo, void>)0x00677A10)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00677310
+    /// void __thiscall AddObjectTransactInfo::Serialize(AddObjectTransactInfo*,Archive*)</code>
+    /// </summary>
+    public void Serialize(ACBindings.Internal.Archive* io_rcArchive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AddObjectTransactInfo, ACBindings.Internal.Archive*, void>)0x00677310)(ref this, io_rcArchive);
+
+    /// <summary>
+    /// <code>Offset: 0x00677A10
+    /// void __thiscall AddObjectTransactInfo::AddObjectTransactInfo(AddObjectTransactInfo*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AddObjectTransactInfo, void>)0x00677A10)(ref this);
 }
 

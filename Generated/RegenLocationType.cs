@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // RegenLocationType
 public enum RegenLocationType : uint

@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // eTradeListID
 public enum eTradeListID : byte

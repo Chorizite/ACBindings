@@ -1,35 +1,33 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LRUExpandTransactInfo
 public unsafe struct LRUExpandTransactInfo
 {
     // Base Classes
-    public ACBindings.DiskTransactInfo BaseClass_DiskTransactInfo; // ACBindings.DiskTransactInfo
+    public ACBindings.Internal.DiskTransactInfo BaseClass_DiskTransactInfo; // ACBindings.Internal.DiskTransactInfo
 
     // Child Types
-    // LRUExpandTransactInfo_vtbl
     public unsafe struct LRUExpandTransactInfo_vtbl
     {
         // Members
-        public System.IntPtr Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LRUExpandTransactInfo*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr DynamicCast_AddObject; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LRUExpandTransactInfo*, ACBindings.Internal.AddObjectTransactInfo*> DynamicCast_AddObject; // function pointer
         public fixed byte gapC[4];
-        public System.IntPtr DynamicCast_DeleteLeaf; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LRUExpandTransactInfo*, ACBindings.Internal.DeleteLeafTransactInfo*> DynamicCast_DeleteLeaf; // function pointer
         public fixed byte gap14[4];
-        public System.IntPtr DynamicCast_DeleteInternal; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LRUExpandTransactInfo*, ACBindings.Internal.DeleteInternalTransactInfo*> DynamicCast_DeleteInternal; // function pointer
         public fixed byte gap1C[4];
-        public System.IntPtr DynamicCast_MergeNodes; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LRUExpandTransactInfo*, ACBindings.Internal.MergeNodesTransactInfo*> DynamicCast_MergeNodes; // function pointer
         public fixed byte gap24[4];
-        public System.IntPtr DynamicCast_UpdateObject; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LRUExpandTransactInfo*, ACBindings.Internal.UpdateObjectTransactInfo*> DynamicCast_UpdateObject; // function pointer
         public fixed byte gap2C[4];
-        public System.IntPtr DynamicCast_SplitNode; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LRUExpandTransactInfo*, ACBindings.Internal.SplitNodeTransactInfo*> DynamicCast_SplitNode; // function pointer
         public fixed byte gap34[4];
-        public System.IntPtr DynamicCast_RotateEntry; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LRUExpandTransactInfo*, ACBindings.Internal.RotateEntryTransactInfo*> DynamicCast_RotateEntry; // function pointer
         public fixed byte gap3C[4];
-        public System.IntPtr DynamicCast_LRUExpand; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LRUExpandTransactInfo*, ACBindings.Internal.LRUExpandTransactInfo*> DynamicCast_LRUExpand; // function pointer
         public fixed byte gap44[4];
-        public System.IntPtr DynamicCast_LRUDelete; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LRUExpandTransactInfo*, ACBindings.Internal.LRUDeleteTransactInfo*> DynamicCast_LRUDelete; // function pointer
 
         // Methods
     }
@@ -37,7 +35,7 @@ public unsafe struct LRUExpandTransactInfo
     // Members
     public int m_nYoungOffset;
     public int m_nFirstFreeBlock;
-    public ACBindings.IDClass___tagDataID m_cTargetDID;
+    public ACBindings.Internal.IDClass____tagDataID m_cTargetDID;
 
     // Generated Constructor
     public LRUExpandTransactInfo() {
@@ -45,7 +43,11 @@ public unsafe struct LRUExpandTransactInfo
     }
 
     // Methods
-    // void __thiscall LRUExpandTransactInfo::LRUExpandTransactInfo(LRUExpandTransactInfo*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.LRUExpandTransactInfo, void>)0x00677920)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00677920
+    /// void __thiscall LRUExpandTransactInfo::LRUExpandTransactInfo(LRUExpandTransactInfo*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.LRUExpandTransactInfo, void>)0x00677920)(ref this);
 }
 

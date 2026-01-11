@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// COARefTime
 public unsafe struct COARefTime
 {
     // Base Classes
-    public ACBindings.CRefTime BaseClass_CRefTime; // ACBindings.CRefTime
+    public ACBindings.Internal.CRefTime BaseClass_CRefTime; // ACBindings.Internal.CRefTime
 
     // Methods
 }

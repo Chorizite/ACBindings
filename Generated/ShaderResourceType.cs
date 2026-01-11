@@ -1,14 +1,13 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ShaderResourceType
 public unsafe struct ShaderResourceType : System.IDisposable
 {
     // Members
-    public ACBindings.ShaderVersionType Version;
-    public ACBindings.PStringBase__sbyte VertexShaderFunctionName;
-    public ACBindings.PStringBase__sbyte PixelShaderFunctionName;
-    public ACBindings.SmartBuffer BinaryVertexShaderData;
-    public ACBindings.SmartBuffer BinaryPixelShaderData;
+    public ACBindings.Internal.ShaderVersionType Version;
+    public ACBindings.Internal.PStringBase__sbyte VertexShaderFunctionName;
+    public ACBindings.Internal.PStringBase__sbyte PixelShaderFunctionName;
+    public ACBindings.Internal.SmartBuffer BinaryVertexShaderData;
+    public ACBindings.Internal.SmartBuffer BinaryPixelShaderData;
 
     // Generated Dispose
     public void Dispose() {
@@ -16,7 +15,11 @@ public unsafe struct ShaderResourceType : System.IDisposable
     }
 
     // Methods
-    // void __thiscall ShaderResourceType::~ShaderResourceType(ShaderResourceType*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ShaderResourceType, void>)0x0044A3F0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0044A3F0
+    /// void __thiscall ShaderResourceType::~ShaderResourceType(ShaderResourceType*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ShaderResourceType, void>)0x0044A3F0)(ref this);
 }
 

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ServerLog
 public unsafe struct ServerLog
 {
     // Methods

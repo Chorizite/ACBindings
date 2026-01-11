@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// polyListEntry
 public unsafe struct polyListEntry
 {
     // Members
-    public ACBindings.CPolygon* poly;
+    public ACBindings.Internal.CPolygon* poly;
     public int planeMask;
 
     // Methods

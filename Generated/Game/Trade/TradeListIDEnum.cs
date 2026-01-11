@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // TradeListIDEnum
 public enum TradeListIDEnum : uint

@@ -1,28 +1,26 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// HookGroupData
 public unsafe struct HookGroupData
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // HookGroupData_vtbl
     public unsafe struct HookGroupData_vtbl
     {
         // Members
-        public System.IntPtr HookGroupData_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.HookGroupData*, void> HookGroupData_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.HookGroupData*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.HookGroupData*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.HookGroupData*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
     public uint _version;
-    public ACBindings.PackableHashTable__uint__int _data;
+    public ACBindings.Internal.PackableHashTable__uint__int _data;
 
     // Methods
 }

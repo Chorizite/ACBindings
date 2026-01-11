@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TargetInfo
 public unsafe struct TargetInfo
 {
     // Members
@@ -8,15 +7,15 @@ public unsafe struct TargetInfo
     public uint object_id;
     public float radius;
     public double quantum;
-    public ACBindings.Position target_position;
-    public ACBindings.Position interpolated_position;
-    public ACBindings.AC1Legacy.Vector3 interpolated_heading;
-    public ACBindings.AC1Legacy.Vector3 velocity;
-    public ACBindings.TargetStatus status;
+    public ACBindings.Internal.Position target_position;
+    public ACBindings.Internal.Position interpolated_position;
+    public ACBindings.Internal.AC1Legacy.Vector3 interpolated_heading;
+    public ACBindings.Internal.AC1Legacy.Vector3 velocity;
+    public ACBindings.Internal.TargetStatus status;
     public double last_update_time;
 
     // Generated Constructor
-    public TargetInfo(ACBindings.TargetInfo* that) {
+    public TargetInfo(ACBindings.Internal.TargetInfo* that) {
         _ConstructorInternal(that);
     }
     public TargetInfo() {
@@ -24,9 +23,17 @@ public unsafe struct TargetInfo
     }
 
     // Methods
-    // void __thiscall TargetInfo::TargetInfo(TargetInfo*,const TargetInfo*)
-    public void _ConstructorInternal(ACBindings.TargetInfo* that) => ((delegate* unmanaged[Thiscall]<ref ACBindings.TargetInfo, ACBindings.TargetInfo*, void>)0x00511100)(ref this, that);
-    // void __thiscall TargetInfo::TargetInfo(TargetInfo*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.TargetInfo, void>)0x0051AFC0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00511100
+    /// void __thiscall TargetInfo::TargetInfo(TargetInfo*,const TargetInfo*)</code>
+    /// </summary>
+    public void _ConstructorInternal(ACBindings.Internal.TargetInfo* that) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TargetInfo, ACBindings.Internal.TargetInfo*, void>)0x00511100)(ref this, that);
+
+    /// <summary>
+    /// <code>Offset: 0x0051AFC0
+    /// void __thiscall TargetInfo::TargetInfo(TargetInfo*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TargetInfo, void>)0x0051AFC0)(ref this);
 }
 

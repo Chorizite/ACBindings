@@ -1,15 +1,14 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// InterpolationNode
 public unsafe struct InterpolationNode
 {
     // Base Classes
-    public ACBindings.LListData BaseClass_LListData; // ACBindings.LListData
+    public ACBindings.Internal.LListData BaseClass_LListData; // ACBindings.Internal.LListData
 
     // Members
     public uint type;
-    public ACBindings.Position p;
-    public ACBindings.AC1Legacy.Vector3 v;
+    public ACBindings.Internal.Position p;
+    public ACBindings.Internal.AC1Legacy.Vector3 v;
     public float extent;
 
     // Generated Constructor
@@ -18,7 +17,11 @@ public unsafe struct InterpolationNode
     }
 
     // Methods
-    // void __thiscall InterpolationNode::InterpolationNode(InterpolationNode*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.InterpolationNode, void>)0x00556670)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00556670
+    /// void __thiscall InterpolationNode::InterpolationNode(InterpolationNode*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.InterpolationNode, void>)0x00556670)(ref this);
 }
 

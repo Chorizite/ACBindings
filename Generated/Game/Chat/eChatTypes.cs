@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // eChatTypes
 public enum eChatTypes : byte

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ItemUses
 public unsafe struct ItemUses
 {
     // Members
@@ -12,17 +11,41 @@ public unsafe struct ItemUses
     }
 
     // Methods
-    // void __thiscall ItemUses::ItemUses(ItemUses*,const unsigned int)
-    public void _ConstructorInternal(uint useable_bitfield) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ItemUses, uint, void>)0x004FD850)(ref this, useable_bitfield);
-    // int __thiscall ItemUses::IsUseable(ItemUses*)
-    public int IsUseable() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ItemUses, int>)0x004FD860)(ref this);
-    // ITEM_USEABLE __thiscall ItemUses::GetLeastLimitedSourceUse(ItemUses*)
-    public ACBindings.ITEM_USEABLE GetLeastLimitedSourceUse() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ItemUses, ACBindings.ITEM_USEABLE>)0x004FD870)(ref this);
-    // int __thiscall ItemUses::IsUseable_Targeted(ItemUses*)
-    public int IsUseable_Targeted() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ItemUses, int>)0x004FD8B0)(ref this);
-    // int __thiscall ItemUses::IsUseable_SelfTarget(ItemUses*)
-    public int IsUseable_SelfTarget() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ItemUses, int>)0x004FD8D0)(ref this);
-    // ITEM_USEABLE __thiscall ItemUses::GetLeastLimitedTargetUse(ItemUses*)
-    public ACBindings.ITEM_USEABLE GetLeastLimitedTargetUse() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ItemUses, ACBindings.ITEM_USEABLE>)0x004FD8F0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004FD850
+    /// void __thiscall ItemUses::ItemUses(ItemUses*,const unsigned int)</code>
+    /// </summary>
+    public void _ConstructorInternal(uint useable_bitfield) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ItemUses, uint, void>)0x004FD850)(ref this, useable_bitfield);
+
+    /// <summary>
+    /// <code>Offset: 0x004FD860
+    /// int __thiscall ItemUses::IsUseable(ItemUses*)</code>
+    /// </summary>
+    public int IsUseable() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ItemUses, int>)0x004FD860)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004FD870
+    /// ITEM_USEABLE __thiscall ItemUses::GetLeastLimitedSourceUse(ItemUses*)</code>
+    /// </summary>
+    public ACBindings.Internal.ITEM_USEABLE GetLeastLimitedSourceUse() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ItemUses, ACBindings.Internal.ITEM_USEABLE>)0x004FD870)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004FD8B0
+    /// int __thiscall ItemUses::IsUseable_Targeted(ItemUses*)</code>
+    /// </summary>
+    public int IsUseable_Targeted() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ItemUses, int>)0x004FD8B0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004FD8D0
+    /// int __thiscall ItemUses::IsUseable_SelfTarget(ItemUses*)</code>
+    /// </summary>
+    public int IsUseable_SelfTarget() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ItemUses, int>)0x004FD8D0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004FD8F0
+    /// ITEM_USEABLE __thiscall ItemUses::GetLeastLimitedTargetUse(ItemUses*)</code>
+    /// </summary>
+    public ACBindings.Internal.ITEM_USEABLE GetLeastLimitedTargetUse() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ItemUses, ACBindings.Internal.ITEM_USEABLE>)0x004FD8F0)(ref this);
 }
 

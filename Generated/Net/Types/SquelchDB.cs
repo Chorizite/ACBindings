@@ -1,29 +1,27 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SquelchDB
 public unsafe struct SquelchDB : System.IDisposable
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // SquelchDB_vtbl
     public unsafe struct SquelchDB_vtbl
     {
         // Members
-        public System.IntPtr SquelchDB_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SquelchDB*, void> SquelchDB_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SquelchDB*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SquelchDB*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SquelchDB*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.PackableHashTable__AC1Legacy_PStringBase__sbyte__uint _account_hash;
-    public ACBindings.PackableHashTable__uint__SquelchInfo _character_hash;
-    public ACBindings.SquelchInfo _global_squelch_info;
+    public ACBindings.Internal.PackableHashTable___AC1Legacy_PStringBase__sbyte__uint _account_hash;
+    public ACBindings.Internal.PackableHashTable__uint___SquelchInfo _character_hash;
+    public ACBindings.Internal.SquelchInfo _global_squelch_info;
 
     // Generated Constructor
     public SquelchDB() {
@@ -36,19 +34,47 @@ public unsafe struct SquelchDB : System.IDisposable
     }
 
     // Methods
-    // unsigned int __thiscall SquelchDB::Pack(SquelchDB*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.SquelchDB, void**, uint, uint>)0x006B1B70)(ref this, addr, size);
-    // int __thiscall SquelchDB::IsPlayerSquelched(SquelchDB*,unsigned int,unsigned int)
-    public int IsPlayerSquelched(uint player_iid, uint msg_type) => ((delegate* unmanaged[Thiscall]<ref ACBindings.SquelchDB, uint, uint, int>)0x006B1C00)(ref this, player_iid, msg_type);
-    // BOOL __thiscall SquelchDB::IsSquelched(SquelchDB*,unsigned int,int*,unsigned int)
-    public byte IsSquelched(uint player_iid, int* a3, uint msg_type) => ((delegate* unmanaged[Thiscall]<ref ACBindings.SquelchDB, uint, int*, uint, byte>)0x006B2360)(ref this, player_iid, a3, msg_type);
-    // void __thiscall SquelchDB::Clear(SquelchDB*)
-    public void Clear() => ((delegate* unmanaged[Thiscall]<ref ACBindings.SquelchDB, void>)0x006B27B0)(ref this);
-    // int __thiscall SquelchDB::UnPack(SquelchDB*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.SquelchDB, void**, uint, int>)0x006B27D0)(ref this, addr, size);
-    // void __thiscall SquelchDB::SquelchDB(SquelchDB*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.SquelchDB, void>)0x006B2A90)(ref this);
-    // void __thiscall SquelchDB::~SquelchDB(SquelchDB*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.SquelchDB, void>)0x006B2B10)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006B1B70
+    /// unsigned int __thiscall SquelchDB::Pack(SquelchDB*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SquelchDB, void**, uint, uint>)0x006B1B70)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x006B1C00
+    /// int __thiscall SquelchDB::IsPlayerSquelched(SquelchDB*,unsigned int,unsigned int)</code>
+    /// </summary>
+    public int IsPlayerSquelched(uint player_iid, uint msg_type) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SquelchDB, uint, uint, int>)0x006B1C00)(ref this, player_iid, msg_type);
+
+    /// <summary>
+    /// <code>Offset: 0x006B2360
+    /// BOOL __thiscall SquelchDB::IsSquelched(SquelchDB*,unsigned int,int*,unsigned int)</code>
+    /// </summary>
+    public byte IsSquelched(uint player_iid, int* a3, uint msg_type) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SquelchDB, uint, int*, uint, byte>)0x006B2360)(ref this, player_iid, a3, msg_type);
+
+    /// <summary>
+    /// <code>Offset: 0x006B27B0
+    /// void __thiscall SquelchDB::Clear(SquelchDB*)</code>
+    /// </summary>
+    public void Clear() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SquelchDB, void>)0x006B27B0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006B27D0
+    /// int __thiscall SquelchDB::UnPack(SquelchDB*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SquelchDB, void**, uint, int>)0x006B27D0)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x006B2A90
+    /// void __thiscall SquelchDB::SquelchDB(SquelchDB*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SquelchDB, void>)0x006B2A90)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006B2B10
+    /// void __thiscall SquelchDB::~SquelchDB(SquelchDB*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SquelchDB, void>)0x006B2B10)(ref this);
 }
 

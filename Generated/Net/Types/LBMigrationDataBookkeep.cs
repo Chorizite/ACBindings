@@ -1,32 +1,30 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LBMigrationDataBookkeep
 public unsafe struct LBMigrationDataBookkeep
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // LBMigrationDataBookkeep_vtbl
     public unsafe struct LBMigrationDataBookkeep_vtbl
     {
         // Members
-        public System.IntPtr LBMigrationDataBookkeep_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LBMigrationDataBookkeep*, void> LBMigrationDataBookkeep_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LBMigrationDataBookkeep*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LBMigrationDataBookkeep*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LBMigrationDataBookkeep*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.LBRange region;
+    public ACBindings.Internal.LBRange region;
     public int numBlksWithObjects;
     public uint* lbIDs;
     public double* m_rgCheckpointTimes;
     public int numEvQueues;
-    public ACBindings.LBEventQueue* lbEvqs;
+    public ACBindings.Internal.LBEventQueue* lbEvqs;
 
     // Methods
 }

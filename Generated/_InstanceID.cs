@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// _InstanceID
 public unsafe struct _InstanceID
 {
     // Members

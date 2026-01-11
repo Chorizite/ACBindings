@@ -1,34 +1,32 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ID3DXFont
 public unsafe struct ID3DXFont
 {
     // Base Classes
-    public ACBindings.IUnknown BaseClass_IUnknown; // ACBindings.IUnknown
+    public ACBindings.Internal.IUnknown BaseClass_IUnknown; // ACBindings.Internal.IUnknown
 
     // Child Types
-    // ID3DXFont_vtbl
     public unsafe struct ID3DXFont_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr GetDevice; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXFont*, System.IntPtr, int> GetDevice; // function pointer
         public System.IntPtr GetDescA;
         public System.IntPtr GetDescW;
-        public System.IntPtr GetTextMetricsA; // function pointer
-        public System.IntPtr GetTextMetricsW; // function pointer
-        public System.IntPtr GetDC; // function pointer
-        public System.IntPtr GetGlyphData; // function pointer
-        public System.IntPtr PreloadCharacters; // function pointer
-        public System.IntPtr PreloadGlyphs; // function pointer
-        public System.IntPtr PreloadTextA; // function pointer
-        public System.IntPtr PreloadTextW; // function pointer
-        public System.IntPtr DrawTextA; // function pointer
-        public System.IntPtr DrawTextW; // function pointer
-        public System.IntPtr OnLostDevice; // function pointer
-        public System.IntPtr OnResetDevice; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXFont*, System.IntPtr, int> GetTextMetricsA; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXFont*, System.IntPtr, int> GetTextMetricsW; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXFont*, System.IntPtr> GetDC; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXFont*, uint, System.IntPtr, ACBindings.Internal.tagRECT*, ACBindings.Internal.tagPOINT*, int> GetGlyphData; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXFont*, uint, uint, int> PreloadCharacters; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXFont*, uint, uint, int> PreloadGlyphs; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXFont*, sbyte*, int, int> PreloadTextA; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXFont*, ushort*, int, int> PreloadTextW; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXFont*, ACBindings.Internal.ID3DXSprite*, sbyte*, int, ACBindings.Internal.tagRECT*, uint, uint, int> DrawTextA; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXFont*, ACBindings.Internal.ID3DXSprite*, ushort*, int, ACBindings.Internal.tagRECT*, uint, uint, int> DrawTextW; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXFont*, int> OnLostDevice; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXFont*, int> OnResetDevice; // function pointer
 
         // Methods
     }

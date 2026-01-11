@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LRUDeleteTransactInfo
 public unsafe struct LRUDeleteTransactInfo
 {
     // Base Classes
-    public ACBindings.DiskTransactInfo BaseClass_DiskTransactInfo; // ACBindings.DiskTransactInfo
+    public ACBindings.Internal.DiskTransactInfo BaseClass_DiskTransactInfo; // ACBindings.Internal.DiskTransactInfo
 
     // Members
     public int m_nBlockOffset;
@@ -17,9 +16,17 @@ public unsafe struct LRUDeleteTransactInfo
     }
 
     // Methods
-    // void __thiscall LRUDeleteTransactInfo::LRUDeleteTransactInfo(LRUDeleteTransactInfo*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.LRUDeleteTransactInfo, void>)0x006772A0)(ref this);
-    // void __thiscall LRUDeleteTransactInfo::Serialize(LRUDeleteTransactInfo*,Archive*)
-    public void Serialize(ACBindings.Archive* io_rcArchive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.LRUDeleteTransactInfo, ACBindings.Archive*, void>)0x00677950)(ref this, io_rcArchive);
+
+    /// <summary>
+    /// <code>Offset: 0x006772A0
+    /// void __thiscall LRUDeleteTransactInfo::LRUDeleteTransactInfo(LRUDeleteTransactInfo*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.LRUDeleteTransactInfo, void>)0x006772A0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00677950
+    /// void __thiscall LRUDeleteTransactInfo::Serialize(LRUDeleteTransactInfo*,Archive*)</code>
+    /// </summary>
+    public void Serialize(ACBindings.Internal.Archive* io_rcArchive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.LRUDeleteTransactInfo, ACBindings.Internal.Archive*, void>)0x00677950)(ref this, io_rcArchive);
 }
 

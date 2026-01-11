@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ACWTimeStamper
 public unsafe struct ACWTimeStamper
 {
     // Base Classes
-    public ACBindings.WTimeStamper BaseClass_WTimeStamper; // ACBindings.WTimeStamper
+    public ACBindings.Internal.WTimeStamper BaseClass_WTimeStamper; // ACBindings.Internal.WTimeStamper
 
     // Child Types
-    // ACWTimeStamper_vtbl
     public unsafe struct ACWTimeStamper_vtbl
     {
         // Members
-        public System.IntPtr ACWTimeStamper_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACWTimeStamper*, void> ACWTimeStamper_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACWTimeStamper*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACWTimeStamper*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACWTimeStamper*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -26,7 +24,11 @@ public unsafe struct ACWTimeStamper
     }
 
     // Methods
-    // void __thiscall ACWTimeStamper::ACWTimeStamper(ACWTimeStamper*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACWTimeStamper, void>)0x005BE470)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005BE470
+    /// void __thiscall ACWTimeStamper::ACWTimeStamper(ACWTimeStamper*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACWTimeStamper, void>)0x005BE470)(ref this);
 }
 

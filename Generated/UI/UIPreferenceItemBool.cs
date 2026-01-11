@@ -1,42 +1,40 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// UIPreferenceItemBool
 public unsafe struct UIPreferenceItemBool
 {
     // Base Classes
-    public ACBindings.UIPreferenceItem BaseClass_UIPreferenceItem; // ACBindings.UIPreferenceItem
+    public ACBindings.Internal.UIPreferenceItem BaseClass_UIPreferenceItem; // ACBindings.Internal.UIPreferenceItem
 
     // Child Types
-    // UIPreferenceItemBool_vtbl
     public unsafe struct UIPreferenceItemBool_vtbl
     {
         // Members
-        public System.IntPtr UIPreferenceItemBool_dtor_0; // function pointer
-        public System.IntPtr InqBool; // function pointer
-        public System.IntPtr SetBool; // function pointer
-        public System.IntPtr InqInteger; // function pointer
-        public System.IntPtr SetInteger; // function pointer
-        public System.IntPtr InqIntegerRange; // function pointer
-        public System.IntPtr SetIntegerRange; // function pointer
-        public System.IntPtr InqEnum; // function pointer
-        public System.IntPtr SetEnum; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, void> UIPreferenceItemBool_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, byte*, byte> InqBool; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, byte, byte> SetBool; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, int*, byte> InqInteger; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, int, byte> SetInteger; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, int*, int*, byte> InqIntegerRange; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, int, int, byte> SetIntegerRange; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, uint*, byte> InqEnum; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, uint, byte> SetEnum; // function pointer
         public System.IntPtr InqEnumChoices;
         public System.IntPtr SetEnumChoices;
         public System.IntPtr InqEnumValues;
-        public System.IntPtr InqFloat; // function pointer
-        public System.IntPtr SetFloat; // function pointer
-        public System.IntPtr InqFloatRange; // function pointer
-        public System.IntPtr SetFloatRange; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, float*, byte> InqFloat; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, float, byte> SetFloat; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, float*, float*, byte> InqFloatRange; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, float, float, byte> SetFloatRange; // function pointer
         public System.IntPtr InqString;
         public System.IntPtr SetString;
-        public System.IntPtr InqCachedBool; // function pointer
-        public System.IntPtr SetCachedBool; // function pointer
-        public System.IntPtr InqCachedInteger; // function pointer
-        public System.IntPtr SetCachedInteger; // function pointer
-        public System.IntPtr InqCachedEnum; // function pointer
-        public System.IntPtr SetCachedEnum; // function pointer
-        public System.IntPtr InqCachedFloat; // function pointer
-        public System.IntPtr SetCachedFloat; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, byte*, byte> InqCachedBool; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, byte, byte> SetCachedBool; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, int*, byte> InqCachedInteger; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, int, byte> SetCachedInteger; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, uint*, byte> InqCachedEnum; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, uint, byte> SetCachedEnum; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, float*, byte> InqCachedFloat; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIPreferenceItemBool*, float, byte> SetCachedFloat; // function pointer
         public System.IntPtr InqCachedString;
         public System.IntPtr SetCachedString;
 
@@ -52,15 +50,35 @@ public unsafe struct UIPreferenceItemBool
     }
 
     // Methods
-    // void __thiscall UIPreferenceItemBool::UIPreferenceItemBool(UIPreferenceItemBool*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.UIPreferenceItemBool, void>)0x005DE490)(ref this);
-    // bool __thiscall UIPreferenceItemBool::InqBool(UIPreferenceItemBool*,bool*)
-    public byte InqBool(byte* o_value) => ((delegate* unmanaged[Thiscall]<ref ACBindings.UIPreferenceItemBool, byte*, byte>)0x005DE4D0)(ref this, o_value);
-    // bool __thiscall UIPreferenceItemBool::SetBool(UIPreferenceItemBool*,const bool)
-    public byte SetBool(byte i_value) => ((delegate* unmanaged[Thiscall]<ref ACBindings.UIPreferenceItemBool, byte, byte>)0x005DE4F0)(ref this, i_value);
-    // bool __thiscall UIPreferenceItemBool::InqCachedBool(UIPreferenceItemBool*,bool*)
-    public byte InqCachedBool(byte* o_value) => ((delegate* unmanaged[Thiscall]<ref ACBindings.UIPreferenceItemBool, byte*, byte>)0x005DE510)(ref this, o_value);
-    // bool __thiscall UIPreferenceItemBool::SetCachedBool(UIPreferenceItemBool*,const bool)
-    public byte SetCachedBool(byte i_value) => ((delegate* unmanaged[Thiscall]<ref ACBindings.UIPreferenceItemBool, byte, byte>)0x005DE520)(ref this, i_value);
+
+    /// <summary>
+    /// <code>Offset: 0x005DE490
+    /// void __thiscall UIPreferenceItemBool::UIPreferenceItemBool(UIPreferenceItemBool*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.UIPreferenceItemBool, void>)0x005DE490)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005DE4D0
+    /// bool __thiscall UIPreferenceItemBool::InqBool(UIPreferenceItemBool*,bool*)</code>
+    /// </summary>
+    public byte InqBool(byte* o_value) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.UIPreferenceItemBool, byte*, byte>)0x005DE4D0)(ref this, o_value);
+
+    /// <summary>
+    /// <code>Offset: 0x005DE4F0
+    /// bool __thiscall UIPreferenceItemBool::SetBool(UIPreferenceItemBool*,const bool)</code>
+    /// </summary>
+    public byte SetBool(byte i_value) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.UIPreferenceItemBool, byte, byte>)0x005DE4F0)(ref this, i_value);
+
+    /// <summary>
+    /// <code>Offset: 0x005DE510
+    /// bool __thiscall UIPreferenceItemBool::InqCachedBool(UIPreferenceItemBool*,bool*)</code>
+    /// </summary>
+    public byte InqCachedBool(byte* o_value) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.UIPreferenceItemBool, byte*, byte>)0x005DE510)(ref this, o_value);
+
+    /// <summary>
+    /// <code>Offset: 0x005DE520
+    /// bool __thiscall UIPreferenceItemBool::SetCachedBool(UIPreferenceItemBool*,const bool)</code>
+    /// </summary>
+    public byte SetCachedBool(byte i_value) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.UIPreferenceItemBool, byte, byte>)0x005DE520)(ref this, i_value);
 }
 

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// _D3DVSHADERCAPS2_0
 public unsafe struct _D3DVSHADERCAPS2_0
 {
     // Members

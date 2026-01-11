@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AsyncContext
 public unsafe struct AsyncContext
 {
     // Members

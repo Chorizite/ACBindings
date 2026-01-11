@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// HIDREPORTINFO
 public unsafe struct HIDREPORTINFO
 {
     // Members

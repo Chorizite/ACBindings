@@ -1,136 +1,170 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// gmFloatyIndicatorsUI
 public unsafe struct gmFloatyIndicatorsUI
 {
     // Base Classes
-    public ACBindings.gmIndicatorsUI BaseClass_gmIndicatorsUI; // ACBindings.gmIndicatorsUI
+    public ACBindings.Internal.gmIndicatorsUI BaseClass_gmIndicatorsUI; // ACBindings.Internal.gmIndicatorsUI
 
     // Child Types
-    // gmFloatyIndicatorsUI_vtbl
     public unsafe struct gmFloatyIndicatorsUI_vtbl
     {
         // Members
-        public System.IntPtr UIListener_dtor_0; // function pointer
-        public System.IntPtr OnAction; // function pointer
-        public System.IntPtr OnLoseFocus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIListener*, void> UIListener_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIListener*, ACBindings.Internal.InputEvent*, byte> OnAction; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIListener*, uint, uint, uint, ACBindings.Internal.CallbackLoseFocusResult> OnLoseFocus; // function pointer
         public fixed byte gapC[4];
-        public System.IntPtr ListenToElementMessage; // function pointer
-        public System.IntPtr ListenToGlobalMessage; // function pointer
-        public System.IntPtr SetVisible; // function pointer
-        public System.IntPtr SetShouldBlockClicks; // function pointer
-        public System.IntPtr SetShouldEraseBackground; // function pointer
-        public System.IntPtr SetClampGameViewEdge; // function pointer
-        public System.IntPtr CheckOverOverride; // function pointer
-        public System.IntPtr MoveTo; // function pointer
-        public System.IntPtr ResizeTo; // function pointer
-        public System.IntPtr GetSurfaceBox; // function pointer
-        public System.IntPtr CompareZLevel; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIListener*, uint, ACBindings.Internal.UIElement*, uint, int, ACBindings.Internal.UIElementMessageListenResult> ListenToElementMessage; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIListener*, uint, int, void> ListenToGlobalMessage; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, byte, void> SetVisible; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, byte, void> SetShouldBlockClicks; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, byte, void> SetShouldEraseBackground; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, uint, void> SetClampGameViewEdge; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, byte> CheckOverOverride; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, int, int, void> MoveTo; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, int, int, void> ResizeTo; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, ACBindings.Internal.Box2D*, ACBindings.Internal.Box2D*> GetSurfaceBox; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, ACBindings.Internal.UIRegion*, int> CompareZLevel; // function pointer
         public System.IntPtr DrawHere;
         public System.IntPtr EraseSelf;
-        public System.IntPtr SetParent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, ACBindings.Internal.UIRegion*, void> SetParent; // function pointer
         public fixed byte gap48[4];
-        public System.IntPtr MouseMove; // function pointer
-        public System.IntPtr MouseOver; // function pointer
-        public System.IntPtr MouseOverTop; // function pointer
-        public System.IntPtr MouseHover; // function pointer
-        public System.IntPtr MouseUnhover; // function pointer
-        public System.IntPtr MouseDown; // function pointer
-        public System.IntPtr MouseUp; // function pointer
-        public System.IntPtr HasCursor; // function pointer
-        public System.IntPtr AddChild; // function pointer
-        public System.IntPtr RemoveChild; // function pointer
-        public System.IntPtr DrawStart; // function pointer
-        public System.IntPtr EraseBackground; // function pointer
-        public System.IntPtr PreBlit; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, int, int, void> MouseMove; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, byte, void> MouseOver; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, byte, void> MouseOverTop; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, int, int, byte> MouseHover; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, void> MouseUnhover; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, uint, uint, uint, void> MouseDown; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, uint, uint, uint, void> MouseUp; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, byte> HasCursor; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, ACBindings.Internal.UIRegion*, void> AddChild; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, ACBindings.Internal.UIRegion*, void> RemoveChild; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, void> DrawStart; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, ACBindings.Internal.Box2D*, ACBindings.Internal.UISurface*, void> EraseBackground; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, ACBindings.Internal.Box2D*, ACBindings.Internal.UISurface*, void> PreBlit; // function pointer
         public System.IntPtr DrawSelf;
-        public System.IntPtr PostBlit; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, ACBindings.Internal.Box2D*, ACBindings.Internal.UISurface*, void> PostBlit; // function pointer
         public System.IntPtr DrawChildren;
-        public System.IntPtr DrawDone; // function pointer
-        public System.IntPtr MouseTap; // function pointer
-        public System.IntPtr DynamicCast; // function pointer
-        public System.IntPtr GetUIElementType; // function pointer
-        public System.IntPtr SetState; // function pointer
-        public System.IntPtr GetParent; // function pointer
-        public System.IntPtr GetAncestorByID; // function pointer
-        public System.IntPtr KeyUp; // function pointer
-        public System.IntPtr KeyDown; // function pointer
-        public System.IntPtr RegisterInputMaps; // function pointer
-        public System.IntPtr UnregisterInputMaps; // function pointer
-        public System.IntPtr OnChildAction; // function pointer
-        public System.IntPtr Initialize; // function pointer
-        public System.IntPtr PostInit; // function pointer
-        public System.IntPtr InqAvailableProperties; // function pointer
-        public System.IntPtr OnSetAttribute; // function pointer
-        public System.IntPtr ContainsProperty; // function pointer
-        public System.IntPtr InqProperty; // function pointer
-        public System.IntPtr SetProperty; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, void> DrawDone; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIRegion*, uint, uint, uint, void> MouseTap; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, uint, ACBindings.Internal.UIElement*> DynamicCast; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, uint> GetUIElementType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, uint, byte> SetState; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.UIElement*> GetParent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, uint, ACBindings.Internal.UIElement*> GetAncestorByID; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, uint, byte> KeyUp; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, uint, float, byte> KeyDown; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, int, byte> RegisterInputMaps; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, byte> UnregisterInputMaps; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.UIElement*, ACBindings.Internal.InputEvent*, byte> OnChildAction; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, void> Initialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, void> PostInit; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.AvailablePropertySet*, byte> InqAvailableProperties; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.BaseProperty*, void> OnSetAttribute; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, uint, byte> ContainsProperty; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, uint, ACBindings.Internal.BaseProperty*, byte> InqProperty; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.BaseProperty*, byte> SetProperty; // function pointer
         public fixed byte gapD8[4];
-        public System.IntPtr CatchDroppedItem; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.UIElement*, ACBindings.Internal.UIElement.FunctionSignatureChanged> CatchDroppedItem; // function pointer
         public fixed byte gapE0[4];
-        public System.IntPtr DragAndDropComplete; // function pointer
-        public System.IntPtr DragItem; // function pointer
-        public System.IntPtr GetDragAndDropCatcher; // function pointer
-        public System.IntPtr MatchElement; // function pointer
-        public System.IntPtr UpdateForChildSizeChange; // function pointer
-        public System.IntPtr UpdateForParentVisibilityChange; // function pointer
-        public System.IntPtr Activate; // function pointer
-        public System.IntPtr Deactivate; // function pointer
-        public System.IntPtr TakeFocus; // function pointer
-        public System.IntPtr RelinquishFocus; // function pointer
-        public System.IntPtr GetActivatable; // function pointer
-        public System.IntPtr SetMouseVisible; // function pointer
-        public System.IntPtr UpdateForScreenPositionChange; // function pointer
-        public System.IntPtr SetUIObject; // function pointer
-        public System.IntPtr MakeUIObject; // function pointer
-        public System.IntPtr OnChildActivationChanged; // function pointer
-        public System.IntPtr GetShouldBeMouseVisible; // function pointer
-        public System.IntPtr ForwardElementMessage; // function pointer
-        public System.IntPtr DefElementMessageHandler; // function pointer
-        public System.IntPtr OnVisibilityChanged; // function pointer
-        public System.IntPtr Initialized; // function pointer
-        public System.IntPtr UpdateFromPlayerModule; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.UIElement*, byte, ACBindings.Internal.UIElement.FunctionSignatureChanged> DragAndDropComplete; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.UIElement**, byte> DragItem; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.UIElement*, ACBindings.Internal.UIElement*> GetDragAndDropCatcher; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.UIElement*, void> MatchElement; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.UIElement*, void> UpdateForChildSizeChange; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, byte, void> UpdateForParentVisibilityChange; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, byte> Activate; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, byte> Deactivate; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, byte> TakeFocus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, byte> RelinquishFocus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, byte> GetActivatable; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, byte, void> SetMouseVisible; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, void> UpdateForScreenPositionChange; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.UIObject*, byte> SetUIObject; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.UIObject**, byte> MakeUIObject; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.UIElement*, byte, void> OnChildActivationChanged; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, byte> GetShouldBeMouseVisible; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.UIElementMessageInfo*, ACBindings.Internal.UIElementMessageListenResult, ACBindings.Internal.UIElementMessageListenResult> ForwardElementMessage; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.UIElementMessageInfo*, byte> DefElementMessageHandler; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, byte, void> OnVisibilityChanged; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIElement*, ACBindings.Internal.UIElement.Intialized_Has_Been_Replaced_With_PostInit> Initialized; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmFloatyIndicatorsUI*, void> UpdateFromPlayerModule; // function pointer
 
         // Methods
     }
 
     // Members
     public uint m_eWindowID;
-    public ACBindings.UIElement* m_pTopBorder;
-    public ACBindings.UIElement* m_pLeftBorder;
-    public ACBindings.UIElement* m_pBottomBorder;
-    public ACBindings.UIElement* m_pRightBorder;
-    public ACBindings.UIElement* m_pTopLeftCorner;
-    public ACBindings.UIElement* m_pTopRightCorner;
-    public ACBindings.UIElement* m_pBottomLeftCorner;
-    public ACBindings.UIElement* m_pBottomRightCorner;
-    public ACBindings.UIElement* m_pTopBorder_Locked;
-    public ACBindings.UIElement* m_pLeftBorder_Locked;
-    public ACBindings.UIElement* m_pBottomBorder_Locked;
-    public ACBindings.UIElement* m_pRightBorder_Locked;
-    public ACBindings.UIElement* m_pTopLeftCorner_Locked;
-    public ACBindings.UIElement* m_pTopRightCorner_Locked;
-    public ACBindings.UIElement* m_pBottomLeftCorner_Locked;
-    public ACBindings.UIElement* m_pBottomRightCorner_Locked;
+    public ACBindings.Internal.UIElement* m_pTopBorder;
+    public ACBindings.Internal.UIElement* m_pLeftBorder;
+    public ACBindings.Internal.UIElement* m_pBottomBorder;
+    public ACBindings.Internal.UIElement* m_pRightBorder;
+    public ACBindings.Internal.UIElement* m_pTopLeftCorner;
+    public ACBindings.Internal.UIElement* m_pTopRightCorner;
+    public ACBindings.Internal.UIElement* m_pBottomLeftCorner;
+    public ACBindings.Internal.UIElement* m_pBottomRightCorner;
+    public ACBindings.Internal.UIElement* m_pTopBorder_Locked;
+    public ACBindings.Internal.UIElement* m_pLeftBorder_Locked;
+    public ACBindings.Internal.UIElement* m_pBottomBorder_Locked;
+    public ACBindings.Internal.UIElement* m_pRightBorder_Locked;
+    public ACBindings.Internal.UIElement* m_pTopLeftCorner_Locked;
+    public ACBindings.Internal.UIElement* m_pTopRightCorner_Locked;
+    public ACBindings.Internal.UIElement* m_pBottomLeftCorner_Locked;
+    public ACBindings.Internal.UIElement* m_pBottomRightCorner_Locked;
 
     // Methods
-    // UIElement* __thiscall gmFloatyIndicatorsUI::DynamicCast(gmFloatyIndicatorsUI*,unsigned int)
-    public ACBindings.UIElement* DynamicCast(uint i_eType) => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmFloatyIndicatorsUI, uint, ACBindings.UIElement*>)0x004D3B80)(ref this, i_eType);
-    // UIElementMessageListenResult __thiscall gmFloatyIndicatorsUI::ListenToElementMessage(gmFloatyIndicatorsUI*,const UIElementMessageInfo*)
-    public ACBindings.UIElementMessageListenResult ListenToElementMessage(ACBindings.UIElementMessageInfo* i_rMsg) => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmFloatyIndicatorsUI, ACBindings.UIElementMessageInfo*, ACBindings.UIElementMessageListenResult>)0x004D3BF0)(ref this, i_rMsg);
-    // void __thiscall gmFloatyIndicatorsUI::UpdateLockedStatus(gmFloatyIndicatorsUI*)
-    public void UpdateLockedStatus() => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmFloatyIndicatorsUI, void>)0x004D3C20)(ref this);
-    // void __cdecl gmFloatyIndicatorsUI::Register()
+
+    /// <summary>
+    /// <code>Offset: 0x004D3B80
+    /// UIElement* __thiscall gmFloatyIndicatorsUI::DynamicCast(gmFloatyIndicatorsUI*,unsigned int)</code>
+    /// </summary>
+    public ACBindings.Internal.UIElement* DynamicCast(uint i_eType) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmFloatyIndicatorsUI, uint, ACBindings.Internal.UIElement*>)0x004D3B80)(ref this, i_eType);
+
+    /// <summary>
+    /// <code>Offset: 0x004D3BF0
+    /// UIElementMessageListenResult __thiscall gmFloatyIndicatorsUI::ListenToElementMessage(gmFloatyIndicatorsUI*,const UIElementMessageInfo*)</code>
+    /// </summary>
+    public ACBindings.Internal.UIElementMessageListenResult ListenToElementMessage(ACBindings.Internal.UIElementMessageInfo* i_rMsg) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmFloatyIndicatorsUI, ACBindings.Internal.UIElementMessageInfo*, ACBindings.Internal.UIElementMessageListenResult>)0x004D3BF0)(ref this, i_rMsg);
+
+    /// <summary>
+    /// <code>Offset: 0x004D3C20
+    /// void __thiscall gmFloatyIndicatorsUI::UpdateLockedStatus(gmFloatyIndicatorsUI*)</code>
+    /// </summary>
+    public void UpdateLockedStatus() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmFloatyIndicatorsUI, void>)0x004D3C20)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004D3E20
+    /// void __cdecl gmFloatyIndicatorsUI::Register()</code>
+    /// </summary>
     public static void Register() => ((delegate* unmanaged[Cdecl]<void>)0x004D3E20)();
-    // void __thiscall gmFloatyIndicatorsUI::PostInit(gmFloatyIndicatorsUI*)
-    public void PostInit() => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmFloatyIndicatorsUI, void>)0x004D3E40)(ref this);
-    // void __thiscall gmFloatyIndicatorsUI::UpdateFromPlayerModule(gmFloatyIndicatorsUI*)
-    public void UpdateFromPlayerModule() => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmFloatyIndicatorsUI, void>)0x004D4120)(ref this);
-    // void __thiscall gmFloatyIndicatorsUI::ResizeTo(gmFloatyIndicatorsUI*,const int,const int)
-    public void ResizeTo(int i_width, int i_height) => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmFloatyIndicatorsUI, int, int, void>)0x004D4380)(ref this, i_width, i_height);
-    // void __thiscall gmFloatyIndicatorsUI::MoveTo(gmFloatyIndicatorsUI*,const int,const int)
-    public void MoveTo(int i_x, int i_y) => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmFloatyIndicatorsUI, int, int, void>)0x004D44F0)(ref this, i_x, i_y);
-    // void __thiscall gmFloatyIndicatorsUI::SetVisible(gmFloatyIndicatorsUI*,bool)
-    public void SetVisible(byte i_fVisible) => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmFloatyIndicatorsUI, byte, void>)0x004D46F0)(ref this, i_fVisible);
+
+    /// <summary>
+    /// <code>Offset: 0x004D3E40
+    /// void __thiscall gmFloatyIndicatorsUI::PostInit(gmFloatyIndicatorsUI*)</code>
+    /// </summary>
+    public void PostInit() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmFloatyIndicatorsUI, void>)0x004D3E40)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004D4120
+    /// void __thiscall gmFloatyIndicatorsUI::UpdateFromPlayerModule(gmFloatyIndicatorsUI*)</code>
+    /// </summary>
+    public void UpdateFromPlayerModule() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmFloatyIndicatorsUI, void>)0x004D4120)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004D4380
+    /// void __thiscall gmFloatyIndicatorsUI::ResizeTo(gmFloatyIndicatorsUI*,const int,const int)</code>
+    /// </summary>
+    public void ResizeTo(int i_width, int i_height) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmFloatyIndicatorsUI, int, int, void>)0x004D4380)(ref this, i_width, i_height);
+
+    /// <summary>
+    /// <code>Offset: 0x004D44F0
+    /// void __thiscall gmFloatyIndicatorsUI::MoveTo(gmFloatyIndicatorsUI*,const int,const int)</code>
+    /// </summary>
+    public void MoveTo(int i_x, int i_y) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmFloatyIndicatorsUI, int, int, void>)0x004D44F0)(ref this, i_x, i_y);
+
+    /// <summary>
+    /// <code>Offset: 0x004D46F0
+    /// void __thiscall gmFloatyIndicatorsUI::SetVisible(gmFloatyIndicatorsUI*,bool)</code>
+    /// </summary>
+    public void SetVisible(byte i_fVisible) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmFloatyIndicatorsUI, byte, void>)0x004D46F0)(ref this, i_fVisible);
 }
 

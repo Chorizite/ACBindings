@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// FontReference
 public unsafe struct FontReference
 {
     // Members
-    public ACBindings.IDClass___tagDataID dataID;
-    public ACBindings.Font* font;
+    public ACBindings.Internal.IDClass____tagDataID dataID;
+    public ACBindings.Internal.Font* font;
 
     // Methods
 }

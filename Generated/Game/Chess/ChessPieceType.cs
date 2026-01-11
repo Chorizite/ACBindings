@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ChessPieceType
 public enum ChessPieceType : byte

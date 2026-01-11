@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Vertex
 public unsafe struct Vertex
 {
     // Members
-    public ACBindings.Vector3 origin;
+    public ACBindings.Internal.Vector3 origin;
 
     // Methods
 }

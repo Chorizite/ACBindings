@@ -1,35 +1,33 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TransferSpell
 public unsafe struct TransferSpell
 {
     // Base Classes
-    public ACBindings.Spell BaseClass_Spell; // ACBindings.Spell
+    public ACBindings.Internal.Spell BaseClass_Spell; // ACBindings.Internal.Spell
 
     // Child Types
-    // TransferSpell_vtbl
     public unsafe struct TransferSpell_vtbl
     {
         // Members
-        public System.IntPtr TransferSpell_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, void> TransferSpell_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
-        public System.IntPtr SetEqual; // function pointer
-        public System.IntPtr InqDuration; // function pointer
-        public System.IntPtr SetDuration; // function pointer
-        public System.IntPtr IsEnchantmentSpell; // function pointer
-        public System.IntPtr IsBoostSpell; // function pointer
-        public System.IntPtr IsProjectileSpell; // function pointer
-        public System.IntPtr IsTransferSpell; // function pointer
-        public System.IntPtr IsDispelSpell; // function pointer
-        public System.IntPtr IsFellowshipSpell; // function pointer
-        public System.IntPtr BuildEnchantment; // function pointer
-        public System.IntPtr AffectsHealth; // function pointer
-        public System.IntPtr AffectsStamina; // function pointer
-        public System.IntPtr AffectsMana; // function pointer
-        public System.IntPtr pack_size; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, void**, uint, int> UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, ACBindings.Internal.Spell*, ACBindings.Internal.Spell*, void> SetEqual; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, double> InqDuration; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, double, int> SetDuration; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, int> IsEnchantmentSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, int> IsBoostSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, int> IsProjectileSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, int> IsTransferSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, int> IsDispelSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, int> IsFellowshipSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, ACBindings.Internal.Enchantment*, int> BuildEnchantment; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, int> AffectsHealth; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, int> AffectsStamina; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, int> AffectsMana; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransferSpell*, uint> pack_size; // function pointer
 
         // Methods
     }

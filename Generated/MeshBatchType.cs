@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// MeshBatchType
 public unsafe struct MeshBatchType
 {
     // Members

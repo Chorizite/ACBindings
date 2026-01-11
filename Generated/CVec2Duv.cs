@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CVec2Duv
 public unsafe struct CVec2Duv
 {
     // Members

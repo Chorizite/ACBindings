@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // AppraisalLongDescDecorations
 public enum AppraisalLongDescDecorations : byte

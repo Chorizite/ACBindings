@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// tagRECT
 public unsafe struct tagRECT
 {
     // Members

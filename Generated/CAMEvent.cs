@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CAMEvent
 public unsafe struct CAMEvent : System.IDisposable
 {
     // Members
@@ -12,7 +11,11 @@ public unsafe struct CAMEvent : System.IDisposable
     }
 
     // Methods
-    // void __thiscall CAMEvent::~CAMEvent(CAMEvent*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CAMEvent, void>)0x006C1FB0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006C1FB0
+    /// void __thiscall CAMEvent::~CAMEvent(CAMEvent*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CAMEvent, void>)0x006C1FB0)(ref this);
 }
 

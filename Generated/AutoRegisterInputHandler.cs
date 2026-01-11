@@ -1,22 +1,20 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AutoRegisterInputHandler
 public unsafe struct AutoRegisterInputHandler
 {
     // Base Classes
-    public ACBindings.CInputHandler BaseClass_CInputHandler; // ACBindings.CInputHandler
+    public ACBindings.Internal.CInputHandler BaseClass_CInputHandler; // ACBindings.Internal.CInputHandler
 
     // Child Types
-    // AutoRegisterInputHandler_vtbl
     public unsafe struct AutoRegisterInputHandler_vtbl
     {
         // Members
-        public System.IntPtr ActionHandler; // function pointer
-        public System.IntPtr MouseMoveHandler; // function pointer
-        public System.IntPtr MouseLookHandler; // function pointer
-        public System.IntPtr FocusSwitchHandler; // function pointer
-        public System.IntPtr CharacterHandler; // function pointer
-        public System.IntPtr KeyHitHandler; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AutoRegisterInputHandler*, ACBindings.Internal.InputEvent*, void> ActionHandler; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AutoRegisterInputHandler*, int, int, void> MouseMoveHandler; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AutoRegisterInputHandler*, int, int, void> MouseLookHandler; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AutoRegisterInputHandler*, byte, int, void> FocusSwitchHandler; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AutoRegisterInputHandler*, System.Char, void> CharacterHandler; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AutoRegisterInputHandler*, ACBindings.Internal.QualifiedControl*, uint*, byte> KeyHitHandler; // function pointer
 
         // Methods
     }

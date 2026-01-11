@@ -1,17 +1,15 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// FriendDataList
 public unsafe struct FriendDataList
 {
     // Base Classes
-    public ACBindings.PList__FriendData BaseClass_PList; // ACBindings.PList__FriendData
+    public ACBindings.Internal.PList___FriendData BaseClass_PList; // ACBindings.Internal.PList___FriendData
 
     // Child Types
-    // FriendDataList_vtbl
     public unsafe struct FriendDataList_vtbl
     {
         // Members
-        public System.IntPtr FriendDataList_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FriendDataList*, void> FriendDataList_dtor_0; // function pointer
 
         // Methods
     }

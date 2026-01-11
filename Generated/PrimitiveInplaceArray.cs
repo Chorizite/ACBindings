@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PrimitiveInplaceArray<ArchiveVersionRow::VersionEntry,8,1>
-public unsafe struct PrimitiveInplaceArray__ArchiveVersionRow_VersionEntry
+public unsafe struct PrimitiveInplaceArray___ArchiveVersionRow_VersionEntry
 {
     // Base Classes
-    public ACBindings.SmartArray__ArchiveVersionRow_VersionEntry BaseClass_SmartArray; // ACBindings.SmartArray__ArchiveVersionRow_VersionEntry
+    public ACBindings.Internal.SmartArray___ArchiveVersionRow_VersionEntry BaseClass_SmartArray; // ACBindings.Internal.SmartArray___ArchiveVersionRow_VersionEntry
 
     // Members
     public fixed byte m_aPrimitiveInplaceMemory[64];

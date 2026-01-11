@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // EnvCollisionProfile_Bitfield
 public enum EnvCollisionProfile_Bitfield : uint

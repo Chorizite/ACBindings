@@ -1,31 +1,28 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DataHistory
 public unsafe struct DataHistory
 {
     // Child Types
-    // DataHistory::DataIDHistoryData
     public unsafe struct DataIDHistoryData
     {
         // Members
-        public ACBindings.QualifiedDataID qdid;
+        public ACBindings.Internal.QualifiedDataID qdid;
         public uint cbCompressed;
-        public ACBindings.DataHistory.UpdateType utAction;
+        public ACBindings.Internal.DataHistory.UpdateType utAction;
 
         // Methods
     }
-    // DataHistory::IterationData
     public unsafe struct IterationData
     {
         // Members
-        public ACBindings.SmartArray__DataHistory_DataIDHistoryData m_IDs;
+        public ACBindings.Internal.SmartArray___DataHistory_DataIDHistoryData m_IDs;
         public uint m_cbCompressed;
         public uint m_nIDsToPatch;
         public uint m_nIDsToPurge;
-        public ACBindings.DataHistory.IterationType m_IterationType;
+        public ACBindings.Internal.DataHistory.IterationType m_IterationType;
         public int m_AliasedIteration;
-        public ACBindings.IterationKey m_Key;
-        public ACBindings.PStringBase__sbyte m_BuildString;
+        public ACBindings.Internal.IterationKey m_Key;
+        public ACBindings.Internal.PStringBase__sbyte m_BuildString;
 
         // Methods
     }
@@ -45,26 +42,25 @@ public unsafe struct DataHistory
         utIgnore = 0x2,
         utInvalid = 0x3
     }
-    // DataHistory::WriteOnlyData
     public unsafe struct WriteOnlyData
     {
         // Members
-        public ACBindings.PStringBase__ushort HistFileName;
-        public ACBindings.DataHistory.IterationData* pCurrentIteration;
-        public ACBindings.AutoGrowHashTable__QualifiedDataID__int BackHash;
+        public ACBindings.Internal.PStringBase__ushort HistFileName;
+        public ACBindings.Internal.DataHistory.IterationData* pCurrentIteration;
+        public ACBindings.Internal.AutoGrowHashTable___QualifiedDataID__int BackHash;
 
         // Methods
     }
 
     // Members
-    public ACBindings.AutoGrowHashTable__int__DataHistory_IterationData m_Iterations;
-    public ACBindings.CMostlyConsecutiveIntSet m_IterList;
-    public ACBindings.DatIDStamp m_guidStamp;
+    public ACBindings.Internal.AutoGrowHashTable__int___DataHistory_IterationData m_Iterations;
+    public ACBindings.Internal.CMostlyConsecutiveIntSet m_IterList;
+    public ACBindings.Internal.DatIDStamp m_guidStamp;
     public ulong m_CorrespondingDatFileID;
     public int m_idCurrentIteration;
     public byte m_bNewXPackMode;
-    public ACBindings.PStringBase__sbyte m_CurrentBuildString;
-    public ACBindings.DataHistory.WriteOnlyData* m_pWriteData;
+    public ACBindings.Internal.PStringBase__sbyte m_CurrentBuildString;
+    public ACBindings.Internal.DataHistory.WriteOnlyData* m_pWriteData;
 
     // Methods
 }

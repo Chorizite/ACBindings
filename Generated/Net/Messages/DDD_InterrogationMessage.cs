@@ -1,17 +1,15 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DDD_InterrogationMessage
 public unsafe struct DDD_InterrogationMessage : System.IDisposable
 {
     // Base Classes
-    public ACBindings.FakeMessageData BaseClass_FakeMessageData; // ACBindings.FakeMessageData
+    public ACBindings.Internal.FakeMessageData BaseClass_FakeMessageData; // ACBindings.Internal.FakeMessageData
 
     // Child Types
-    // DDD_InterrogationMessage_vtbl
     public unsafe struct DDD_InterrogationMessage_vtbl
     {
         // Members
-        public System.IntPtr Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DDD_InterrogationMessage*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
 
         // Methods
     }
@@ -20,7 +18,7 @@ public unsafe struct DDD_InterrogationMessage : System.IDisposable
     public uint m_dwServersRegion;
     public uint m_NameRuleLanguage;
     public uint m_dwProductID;
-    public ACBindings.SmartArray__uint m_SupportedLanguages;
+    public ACBindings.Internal.SmartArray__uint m_SupportedLanguages;
 
     // Generated Dispose
     public void Dispose() {
@@ -28,9 +26,17 @@ public unsafe struct DDD_InterrogationMessage : System.IDisposable
     }
 
     // Methods
-    // void __thiscall DDD_InterrogationMessage::~DDD_InterrogationMessage(DDD_InterrogationMessage*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DDD_InterrogationMessage, void>)0x004F8C30)(ref this);
-    // void __thiscall DDD_InterrogationMessage::Serialize(DDD_InterrogationMessage*,Archive*)
-    public void Serialize(ACBindings.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DDD_InterrogationMessage, ACBindings.Archive*, void>)0x004F9190)(ref this, io_archive);
+
+    /// <summary>
+    /// <code>Offset: 0x004F8C30
+    /// void __thiscall DDD_InterrogationMessage::~DDD_InterrogationMessage(DDD_InterrogationMessage*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DDD_InterrogationMessage, void>)0x004F8C30)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004F9190
+    /// void __thiscall DDD_InterrogationMessage::Serialize(DDD_InterrogationMessage*,Archive*)</code>
+    /// </summary>
+    public void Serialize(ACBindings.Internal.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DDD_InterrogationMessage, ACBindings.Internal.Archive*, void>)0x004F9190)(ref this, io_archive);
 }
 

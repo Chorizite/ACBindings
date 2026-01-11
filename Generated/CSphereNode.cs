@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CSphereNode
 public unsafe struct CSphereNode
 {
     // Members
-    public ACBindings.CSphere sphere;
+    public ACBindings.Internal.CSphere sphere;
     public uint num_kids;
-    public ACBindings.CSphere** kids;
+    public ACBindings.Internal.CSphere** kids;
 
     // Methods
 }

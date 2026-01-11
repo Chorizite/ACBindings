@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // INVENTORY_LOC
 public enum INVENTORY_LOC : uint

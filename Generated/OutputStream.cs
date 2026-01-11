@@ -1,14 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// OutputStream
 public unsafe struct OutputStream
 {
     // Child Types
-    // OutputStream_vtbl
     public unsafe struct OutputStream_vtbl
     {
         // Members
-        public System.IntPtr OutputStream_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OutputStream*, void> OutputStream_dtor_0; // function pointer
 
         // Methods
     }

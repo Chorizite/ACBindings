@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CICMDCommandStruct
 public unsafe struct CICMDCommandStruct
 {
     // Members
-    public ACBindings.ICMDCommandEnum Cmd;
+    public ACBindings.Internal.ICMDCommandEnum Cmd;
     public uint Param;
 
     // Methods

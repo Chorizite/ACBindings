@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// _SECURITY_DESCRIPTOR
 public unsafe struct _SECURITY_DESCRIPTOR
 {
     // Members

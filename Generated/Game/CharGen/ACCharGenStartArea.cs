@@ -1,28 +1,26 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ACCharGenStartArea
 public unsafe struct ACCharGenStartArea : System.IDisposable
 {
     // Child Types
-    // ACCharGenStartArea_vtbl
     public unsafe struct ACCharGenStartArea_vtbl
     {
         // Members
-        public System.IntPtr Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACCharGenStartArea*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
 
         // Methods
     }
 
     // Members
     public System.IntPtr __vftable; // vtable pointer
-    public ACBindings.PStringBase__sbyte name;
-    public ACBindings.SmartArray__Position mPositionList;
+    public ACBindings.Internal.PStringBase__sbyte name;
+    public ACBindings.Internal.SmartArray___Position mPositionList;
 
     // Generated Constructor
     public ACCharGenStartArea() {
         _ConstructorInternal();
     }
-    public ACCharGenStartArea(ACBindings.ACCharGenStartArea* that) {
+    public ACCharGenStartArea(ACBindings.Internal.ACCharGenStartArea* that) {
         _ConstructorInternal(that);
     }
 
@@ -32,13 +30,29 @@ public unsafe struct ACCharGenStartArea : System.IDisposable
     }
 
     // Methods
-    // void __thiscall ACCharGenStartArea::ACCharGenStartArea(ACCharGenStartArea*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCharGenStartArea, void>)0x005BF950)(ref this);
-    // void __thiscall ACCharGenStartArea::~ACCharGenStartArea(ACCharGenStartArea*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCharGenStartArea, void>)0x005BF980)(ref this);
-    // void __thiscall ACCharGenStartArea::ACCharGenStartArea(ACCharGenStartArea*,const ACCharGenStartArea*)
-    public void _ConstructorInternal(ACBindings.ACCharGenStartArea* that) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCharGenStartArea, ACBindings.ACCharGenStartArea*, void>)0x005C1E10)(ref this, that);
-    // void __thiscall ACCharGenStartArea::Serialize(ACCharGenStartArea*,Archive*)
-    public void Serialize(ACBindings.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ACCharGenStartArea, ACBindings.Archive*, void>)0x005C1E50)(ref this, io_archive);
+
+    /// <summary>
+    /// <code>Offset: 0x005BF950
+    /// void __thiscall ACCharGenStartArea::ACCharGenStartArea(ACCharGenStartArea*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCharGenStartArea, void>)0x005BF950)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005BF980
+    /// void __thiscall ACCharGenStartArea::~ACCharGenStartArea(ACCharGenStartArea*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCharGenStartArea, void>)0x005BF980)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005C1E10
+    /// void __thiscall ACCharGenStartArea::ACCharGenStartArea(ACCharGenStartArea*,const ACCharGenStartArea*)</code>
+    /// </summary>
+    public void _ConstructorInternal(ACBindings.Internal.ACCharGenStartArea* that) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCharGenStartArea, ACBindings.Internal.ACCharGenStartArea*, void>)0x005C1E10)(ref this, that);
+
+    /// <summary>
+    /// <code>Offset: 0x005C1E50
+    /// void __thiscall ACCharGenStartArea::Serialize(ACCharGenStartArea*,Archive*)</code>
+    /// </summary>
+    public void Serialize(ACBindings.Internal.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ACCharGenStartArea, ACBindings.Internal.Archive*, void>)0x005C1E50)(ref this, io_archive);
 }
 

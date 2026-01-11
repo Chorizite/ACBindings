@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LOAD_WEIGHTS
 public unsafe struct LOAD_WEIGHTS
 {
     // Members

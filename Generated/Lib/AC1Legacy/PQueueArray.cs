@@ -1,10 +1,8 @@
-namespace ACBindings.AC1Legacy;
+namespace ACBindings.Internal.AC1Legacy;
 
-// AC1Legacy::PQueueArray<double>
 public unsafe struct PQueueArray__double
 {
     // Child Types
-    // AC1Legacy::PQueueArray<double>::PQueueNode
     public unsafe struct PQueueNode
     {
         // Members
@@ -22,7 +20,17 @@ public unsafe struct PQueueArray__double
     public int minAllocatedNodes;
 
     // Methods
-    // AC1Legacy::PQueueArray<double>::Insert (template type method)
-    // AC1Legacy::PQueueArray<double>::RemoveMin (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x00508470
+    /// int __thiscall AC1Legacy::PQueueArray&lt;double&gt;::Insert(_DWORD*,double,int)</code>
+    /// </summary>
+    // int __thiscall AC1Legacy::PQueueArray<double>::Insert(_DWORD*,double,int) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x005084F0
+    /// int __thiscall AC1Legacy::PQueueArray&lt;double&gt;::RemoveMin(_DWORD*,_DWORD*,_DWORD*)</code>
+    /// </summary>
+    // int __thiscall AC1Legacy::PQueueArray<double>::RemoveMin(_DWORD*,_DWORD*,_DWORD*) (template type method)
 }
 

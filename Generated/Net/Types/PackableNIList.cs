@@ -1,14 +1,13 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PackableNIList<LBRange>
-public unsafe struct PackableNIList__LBRange
+public unsafe struct PackableNIList___LBRange
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
-    public ACBindings.LBRange head_;
-    public ACBindings.LBRange tail_;
+    public ACBindings.Internal.LBRange head_;
+    public ACBindings.Internal.LBRange tail_;
     public int numElts_;
 
     // Methods

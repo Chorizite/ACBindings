@@ -1,18 +1,16 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// FileSource
 public unsafe struct FileSource
 {
     // Base Classes
-    public ACBindings.DataSource BaseClass_DataSource; // ACBindings.DataSource
+    public ACBindings.Internal.DataSource BaseClass_DataSource; // ACBindings.Internal.DataSource
 
     // Child Types
-    // FileSource_vtbl
     public unsafe struct FileSource_vtbl
     {
         // Members
-        public System.IntPtr FileSource_dtor_0; // function pointer
-        public System.IntPtr Close; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FileSource*, void> FileSource_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FileSource*, void> Close; // function pointer
 
         // Methods
     }

@@ -1,18 +1,16 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// MissingFilePlugin
 public unsafe struct MissingFilePlugin
 {
     // Base Classes
-    public ACBindings.CPluginPrototype BaseClass_CPluginPrototype; // ACBindings.CPluginPrototype
+    public ACBindings.Internal.CPluginPrototype BaseClass_CPluginPrototype; // ACBindings.Internal.CPluginPrototype
 
     // Child Types
-    // MissingFilePlugin_vtbl
     public unsafe struct MissingFilePlugin_vtbl
     {
         // Members
-        public System.IntPtr MissingFilePlugin_dtor_0; // function pointer
-        public System.IntPtr OnPluggedIn; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.MissingFilePlugin*, void> MissingFilePlugin_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.MissingFilePlugin*, ACBindings.Internal.CPluginManager*, void> OnPluggedIn; // function pointer
         public System.IntPtr ReportMissingFile;
         public System.IntPtr ReportUnallocatedFile;
 

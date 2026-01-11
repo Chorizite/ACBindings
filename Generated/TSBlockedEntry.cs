@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TSBlockedEntry
 public unsafe struct TSBlockedEntry
 {
     // Members
-    public ACBindings.TSBlockedEntry* m_pNext;
+    public ACBindings.Internal.TSBlockedEntry* m_pNext;
     public uint m_stamp;
     public System.IntPtr m_pObj;
 

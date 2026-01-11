@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CryptoSystem
 public unsafe struct CryptoSystem : System.IDisposable
 {
     // Members
@@ -19,11 +18,23 @@ public unsafe struct CryptoSystem : System.IDisposable
     }
 
     // Methods
-    // void __thiscall CryptoSystem::~CryptoSystem(CryptoSystem*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CryptoSystem, void>)0x006606A0)(ref this);
-    // void __thiscall CryptoSystem::CryptoSystem(CryptoSystem*,unsigned int)
-    public void _ConstructorInternal(uint seed) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CryptoSystem, uint, void>)0x00660BB0)(ref this, seed);
-    // unsigned int __thiscall CryptoSystem::GetNextCryptoSeed(CryptoSystem*,unsigned int)
-    public uint GetNextCryptoSeed(uint iteration) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CryptoSystem, uint, uint>)0x00660EA0)(ref this, iteration);
+
+    /// <summary>
+    /// <code>Offset: 0x006606A0
+    /// void __thiscall CryptoSystem::~CryptoSystem(CryptoSystem*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CryptoSystem, void>)0x006606A0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00660BB0
+    /// void __thiscall CryptoSystem::CryptoSystem(CryptoSystem*,unsigned int)</code>
+    /// </summary>
+    public void _ConstructorInternal(uint seed) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CryptoSystem, uint, void>)0x00660BB0)(ref this, seed);
+
+    /// <summary>
+    /// <code>Offset: 0x00660EA0
+    /// unsigned int __thiscall CryptoSystem::GetNextCryptoSeed(CryptoSystem*,unsigned int)</code>
+    /// </summary>
+    public uint GetNextCryptoSeed(uint iteration) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CryptoSystem, uint, uint>)0x00660EA0)(ref this, iteration);
 }
 

@@ -1,14 +1,17 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LListBase
 public unsafe struct LListBase
 {
     // Members
-    public ACBindings.LListData* head_;
-    public ACBindings.LListData* tail_;
+    public ACBindings.Internal.LListData* head_;
+    public ACBindings.Internal.LListData* tail_;
 
     // Methods
-    // LListData* __thiscall LListBase::RemoveTail(LListBase*)
-    public ACBindings.LListData* RemoveTail() => ((delegate* unmanaged[Thiscall]<ref ACBindings.LListBase, ACBindings.LListData*>)0x00556490)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00556490
+    /// LListData* __thiscall LListBase::RemoveTail(LListBase*)</code>
+    /// </summary>
+    public ACBindings.Internal.LListData* RemoveTail() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.LListBase, ACBindings.Internal.LListData*>)0x00556490)(ref this);
 }
 

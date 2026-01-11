@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// InstanceID_QualityType
 public unsafe struct InstanceID_QualityType
 {
     // Methods

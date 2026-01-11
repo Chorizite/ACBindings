@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CServerSwitchStruct
 public unsafe struct CServerSwitchStruct
 {
     // Members
-    public ACBindings.CTimestamp__uint dwSeqNo;
-    public ACBindings.ServerSwitchType Type;
+    public ACBindings.Internal.CTimestamp__uint dwSeqNo;
+    public ACBindings.Internal.ServerSwitchType Type;
 
     // Methods
 }

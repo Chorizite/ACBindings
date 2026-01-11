@@ -1,28 +1,26 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ChatEmoteData
 public unsafe struct ChatEmoteData : System.IDisposable
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // ChatEmoteData_vtbl
     public unsafe struct ChatEmoteData_vtbl
     {
         // Members
-        public System.IntPtr ChatEmoteData_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ChatEmoteData*, void> ChatEmoteData_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ChatEmoteData*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ChatEmoteData*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ChatEmoteData*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.AC1Legacy.PStringBase__sbyte myEmote;
-    public ACBindings.AC1Legacy.PStringBase__sbyte otherEmote;
+    public ACBindings.Internal.AC1Legacy.PStringBase__sbyte myEmote;
+    public ACBindings.Internal.AC1Legacy.PStringBase__sbyte otherEmote;
 
     // Generated Constructor
     public ChatEmoteData() {
@@ -35,13 +33,29 @@ public unsafe struct ChatEmoteData : System.IDisposable
     }
 
     // Methods
-    // void __thiscall ChatEmoteData::~ChatEmoteData(ChatEmoteData*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ChatEmoteData, void>)0x004FD9D0)(ref this);
-    // unsigned int __thiscall ChatEmoteData::Pack(ChatEmoteData*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ChatEmoteData, void**, uint, uint>)0x004FDA20)(ref this, addr, size);
-    // int __thiscall ChatEmoteData::UnPack(ChatEmoteData*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ChatEmoteData, void**, uint, int>)0x004FDBE0)(ref this, addr, size);
-    // void __thiscall ChatEmoteData::ChatEmoteData(ChatEmoteData*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ChatEmoteData, void>)0x004FE2A0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004FD9D0
+    /// void __thiscall ChatEmoteData::~ChatEmoteData(ChatEmoteData*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ChatEmoteData, void>)0x004FD9D0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004FDA20
+    /// unsigned int __thiscall ChatEmoteData::Pack(ChatEmoteData*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ChatEmoteData, void**, uint, uint>)0x004FDA20)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x004FDBE0
+    /// int __thiscall ChatEmoteData::UnPack(ChatEmoteData*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ChatEmoteData, void**, uint, int>)0x004FDBE0)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x004FE2A0
+    /// void __thiscall ChatEmoteData::ChatEmoteData(ChatEmoteData*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ChatEmoteData, void>)0x004FE2A0)(ref this);
 }
 

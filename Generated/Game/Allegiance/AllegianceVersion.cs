@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // AllegianceVersion
 public enum AllegianceVersion : uint

@@ -1,28 +1,26 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// gmUIFlow
 public unsafe struct gmUIFlow : System.IDisposable
 {
     // Base Classes
-    public ACBindings.UIFlow BaseClass_UIFlow; // ACBindings.UIFlow
-    public ACBindings.gmNoticeHandler BaseClass_gmNoticeHandler; // ACBindings.gmNoticeHandler
+    public ACBindings.Internal.UIFlow BaseClass_UIFlow; // ACBindings.Internal.UIFlow
+    public ACBindings.Internal.gmNoticeHandler BaseClass_gmNoticeHandler; // ACBindings.Internal.gmNoticeHandler
 
     // Child Types
-    // gmUIFlow_vtbl
     public unsafe struct gmUIFlow_vtbl
     {
         // Members
-        public System.IntPtr IUnknown_QueryInterface; // function pointer
-        public System.IntPtr IUnknown_AddRef; // function pointer
-        public System.IntPtr IUnknown_Release; // function pointer
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr You_Must_Not_Have_Multiple_Implementations_Of_AddRef_In_A_Hierarchy; // function pointer
-        public System.IntPtr QueueUIMode; // function pointer
-        public System.IntPtr QueueUIModeWithError; // function pointer
-        public System.IntPtr GetPersistantData; // function pointer
-        public System.IntPtr Update; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFlow*, ACBindings.Internal.UIFlow.Enum19> You_Must_Not_Have_Multiple_Implementations_Of_AddRef_In_A_Hierarchy; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFlow*, uint, void> QueueUIMode; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFlow*, uint, ACBindings.Internal.StringInfo*, void> QueueUIModeWithError; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFlow*, ACBindings.Internal.UIPersistantData*> GetPersistantData; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFlow*, void> Update; // function pointer
 
         // Methods
     }
@@ -38,13 +36,29 @@ public unsafe struct gmUIFlow : System.IDisposable
     }
 
     // Methods
-    // void __thiscall gmUIFlow::gmUIFlow(gmUIFlow*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmUIFlow, void>)0x0047AA10)(ref this);
-    // void __thiscall gmUIFlow::~gmUIFlow(gmUIFlow*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmUIFlow, void>)0x0047AB20)(ref this);
-    // void __thiscall gmUIFlow::RecvNotice_CharacterError(gmUIFlow*,charError)
-    public void RecvNotice_CharacterError(ACBindings.charError error) => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmUIFlow, ACBindings.charError, void>)0x0047ABC0)(ref this, error);
-    // void __thiscall gmUIFlow::RecvNotice_ServerDied(gmUIFlow*)
-    public void RecvNotice_ServerDied() => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmUIFlow, void>)0x0047ADA0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0047AA10
+    /// void __thiscall gmUIFlow::gmUIFlow(gmUIFlow*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmUIFlow, void>)0x0047AA10)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0047AB20
+    /// void __thiscall gmUIFlow::~gmUIFlow(gmUIFlow*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmUIFlow, void>)0x0047AB20)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0047ABC0
+    /// void __thiscall gmUIFlow::RecvNotice_CharacterError(gmUIFlow*,charError)</code>
+    /// </summary>
+    public void RecvNotice_CharacterError(ACBindings.Internal.charError error) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmUIFlow, ACBindings.Internal.charError, void>)0x0047ABC0)(ref this, error);
+
+    /// <summary>
+    /// <code>Offset: 0x0047ADA0
+    /// void __thiscall gmUIFlow::RecvNotice_ServerDied(gmUIFlow*)</code>
+    /// </summary>
+    public void RecvNotice_ServerDied() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmUIFlow, void>)0x0047ADA0)(ref this);
 }
 

@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // GeneratorType
 public enum GeneratorType : uint

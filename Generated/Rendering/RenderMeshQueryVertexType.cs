@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// RenderMeshQueryVertexType
 public unsafe struct RenderMeshQueryVertexType
 {
     // Members
-    public ACBindings.Vector3 Origin;
-    public ACBindings.Vector3 Normal;
+    public ACBindings.Internal.Vector3 Origin;
+    public ACBindings.Internal.Vector3 Normal;
 
     // Methods
 }

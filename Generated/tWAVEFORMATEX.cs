@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// tWAVEFORMATEX
 public unsafe struct tWAVEFORMATEX
 {
     // Members

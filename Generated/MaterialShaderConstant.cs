@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// MaterialShaderConstant
 public unsafe struct MaterialShaderConstant
 {
     // Members
     public uint m_PropertyType;
-    public ACBindings.BasePropertyValue* m_pPropertyValue;
+    public ACBindings.Internal.BasePropertyValue* m_pPropertyValue;
 
     // Methods
 }

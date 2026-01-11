@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // DBOBJ_STATUS
 public enum DBOBJ_STATUS : byte

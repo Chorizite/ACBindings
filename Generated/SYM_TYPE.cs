@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // SYM_TYPE
 public enum SYM_TYPE : byte

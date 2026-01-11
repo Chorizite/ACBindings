@@ -1,10 +1,8 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CircularArray<char,32768,1>
 public unsafe struct CircularArray__sbyte
 {
     // Child Types
-    // CircularArray<char,32768,1>::const_iterator
     public unsafe struct const_iterator
     {
         // Members
@@ -13,7 +11,6 @@ public unsafe struct CircularArray__sbyte
 
         // Methods
     }
-    // CircularArray<char,32768,1>::iterator
     public unsafe struct iterator
     {
         // Members

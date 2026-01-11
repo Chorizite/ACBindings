@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ShadePackage
 public unsafe struct ShadePackage
 {
     // Members
@@ -12,9 +11,17 @@ public unsafe struct ShadePackage
     }
 
     // Methods
-    // void __thiscall ShadePackage::ShadePackage(ShadePackage*,const long double)
-    public void _ConstructorInternal(double val) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ShadePackage, double, void>)0x005A9340)(ref this, val);
-    // long double __thiscall ShadePackage::GetVal(ShadePackage*,const int)
-    public double GetVal(int index) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ShadePackage, int, double>)0x005A9370)(ref this, index);
+
+    /// <summary>
+    /// <code>Offset: 0x005A9340
+    /// void __thiscall ShadePackage::ShadePackage(ShadePackage*,const long double)</code>
+    /// </summary>
+    public void _ConstructorInternal(double val) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ShadePackage, double, void>)0x005A9340)(ref this, val);
+
+    /// <summary>
+    /// <code>Offset: 0x005A9370
+    /// long double __thiscall ShadePackage::GetVal(ShadePackage*,const int)</code>
+    /// </summary>
+    public double GetVal(int index) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ShadePackage, int, double>)0x005A9370)(ref this, index);
 }
 

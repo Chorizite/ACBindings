@@ -1,4 +1,4 @@
-namespace ACBindings.PlatformString;
+namespace ACBindings.Internal.PlatformString;
 
 // PlatformString::DisplayStringMode
 public enum DisplayStringMode : byte

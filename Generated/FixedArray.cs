@@ -1,17 +1,22 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// FixedArray<PStringBase<char>>
-public unsafe struct FixedArray__PStringBase__sbyte
+public unsafe struct FixedArray___PStringBase__sbyte
 {
     // Members
     public System.IntPtr m_data;
     public uint m_num;
 
     // Methods
-    // FixedArray<PStringBase<char>>::Create (template type method)
+
+    /// <summary>Initializes a FixedArray to contain the specified number of PStringBase instances and allocates memory for them.
+    /// <code>Offset: 0x00435390
+    /// LONG __thiscall FixedArray&lt;PStringBase&lt;char&gt;&gt;::Create(PStringBase&lt;char&gt;**,int)</code>
+    /// </summary>
+    /// <param name="a2">The desired count of elements in the array.</param>
+    /// <returns>The number of elements successfully initialized (a2 – 1), or zero if allocation fails.</returns>
+    // LONG __thiscall FixedArray<PStringBase<char>>::Create(PStringBase<char>**,int) (template type method)
 }
 
-// FixedArray<unsigned long>
 public unsafe struct FixedArray__uint
 {
     // Members
@@ -21,17 +26,15 @@ public unsafe struct FixedArray__uint
     // Methods
 }
 
-// FixedArray<TextureBasedFontCharacter>
-public unsafe struct FixedArray__TextureBasedFontCharacter
+public unsafe struct FixedArray___TextureBasedFontCharacter
 {
     // Members
-    public ACBindings.TextureBasedFontCharacter* m_data;
+    public ACBindings.Internal.TextureBasedFontCharacter* m_data;
     public uint m_num;
 
     // Methods
 }
 
-// FixedArray<char*>
 public unsafe struct FixedArray__sbyte_ptr
 {
     // Members

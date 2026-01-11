@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CheckpointData
 public unsafe struct CheckpointData
 {
     // Members

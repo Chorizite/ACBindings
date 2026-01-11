@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// BoolQualityBlob
 public unsafe struct BoolQualityBlob
 {
     // Members

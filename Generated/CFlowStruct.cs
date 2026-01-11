@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CFlowStruct
 public unsafe struct CFlowStruct
 {
     // Members

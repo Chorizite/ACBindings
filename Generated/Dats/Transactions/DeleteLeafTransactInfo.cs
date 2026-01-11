@@ -1,13 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DeleteLeafTransactInfo
 public unsafe struct DeleteLeafTransactInfo
 {
     // Base Classes
-    public ACBindings.DiskTransactInfo BaseClass_DiskTransactInfo; // ACBindings.DiskTransactInfo
+    public ACBindings.Internal.DiskTransactInfo BaseClass_DiskTransactInfo; // ACBindings.Internal.DiskTransactInfo
 
     // Members
-    public ACBindings.IDClass___tagDataID m_cObjectDID;
+    public ACBindings.Internal.IDClass____tagDataID m_cObjectDID;
     public int m_nNodeOffset;
     public int m_nIndex;
 
@@ -17,9 +16,17 @@ public unsafe struct DeleteLeafTransactInfo
     }
 
     // Methods
-    // void __thiscall DeleteLeafTransactInfo::DynamicCast_DeleteLeaf(DiskSpace*)
-    public void DynamicCast_DeleteLeaf() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DeleteLeafTransactInfo, void>)0x0050A140)(ref this);
-    // void __thiscall DeleteLeafTransactInfo::DeleteLeafTransactInfo(DeleteLeafTransactInfo*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DeleteLeafTransactInfo, void>)0x006773D0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0050A140
+    /// void __thiscall DeleteLeafTransactInfo::DynamicCast_DeleteLeaf(DiskSpace*)</code>
+    /// </summary>
+    public void DynamicCast_DeleteLeaf() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DeleteLeafTransactInfo, void>)0x0050A140)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006773D0
+    /// void __thiscall DeleteLeafTransactInfo::DeleteLeafTransactInfo(DeleteLeafTransactInfo*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DeleteLeafTransactInfo, void>)0x006773D0)(ref this);
 }
 

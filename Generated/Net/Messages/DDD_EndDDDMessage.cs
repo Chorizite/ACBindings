@@ -1,17 +1,15 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DDD_EndDDDMessage
 public unsafe struct DDD_EndDDDMessage
 {
     // Base Classes
-    public ACBindings.FakeMessageData BaseClass_FakeMessageData; // ACBindings.FakeMessageData
+    public ACBindings.Internal.FakeMessageData BaseClass_FakeMessageData; // ACBindings.Internal.FakeMessageData
 
     // Child Types
-    // DDD_EndDDDMessage_vtbl
     public unsafe struct DDD_EndDDDMessage_vtbl
     {
         // Members
-        public System.IntPtr Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DDD_EndDDDMessage*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
 
         // Methods
     }

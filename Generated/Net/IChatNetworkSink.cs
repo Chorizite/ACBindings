@@ -1,20 +1,18 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IChatNetworkSink
 public unsafe struct IChatNetworkSink
 {
     // Base Classes
-    public ACBindings.IUnknown BaseClass_IUnknown; // ACBindings.IUnknown
+    public ACBindings.Internal.IUnknown BaseClass_IUnknown; // ACBindings.Internal.IUnknown
 
     // Child Types
-    // IChatNetworkSink_vtbl
     public unsafe struct IChatNetworkSink_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr OnNetworkData; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatNetworkSink*, ACBindings.Internal.tagBLOB, int> OnNetworkData; // function pointer
 
         // Methods
     }

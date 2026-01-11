@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ProtoHeader
 public unsafe struct ProtoHeader
 {
     // Members

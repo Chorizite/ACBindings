@@ -1,14 +1,13 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DeleteInternalTransactInfo
 public unsafe struct DeleteInternalTransactInfo
 {
     // Base Classes
-    public ACBindings.DiskTransactInfo BaseClass_DiskTransactInfo; // ACBindings.DiskTransactInfo
+    public ACBindings.Internal.DiskTransactInfo BaseClass_DiskTransactInfo; // ACBindings.Internal.DiskTransactInfo
 
     // Members
-    public ACBindings.IDClass___tagDataID m_cTargetDID;
-    public ACBindings.IDClass___tagDataID m_cDonorDID;
+    public ACBindings.Internal.IDClass____tagDataID m_cTargetDID;
+    public ACBindings.Internal.IDClass____tagDataID m_cDonorDID;
     public int m_nTargetOffset;
     public int m_nDonorOffset;
     public int m_nTargetIndex;
@@ -20,9 +19,17 @@ public unsafe struct DeleteInternalTransactInfo
     }
 
     // Methods
-    // void __thiscall DeleteInternalTransactInfo::DeleteInternalTransactInfo(DeleteInternalTransactInfo*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DeleteInternalTransactInfo, void>)0x00677400)(ref this);
-    // void __thiscall DeleteInternalTransactInfo::Serialize(DeleteInternalTransactInfo*,Archive*)
-    public void Serialize(ACBindings.Archive* io_rcArchive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DeleteInternalTransactInfo, ACBindings.Archive*, void>)0x00677440)(ref this, io_rcArchive);
+
+    /// <summary>
+    /// <code>Offset: 0x00677400
+    /// void __thiscall DeleteInternalTransactInfo::DeleteInternalTransactInfo(DeleteInternalTransactInfo*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DeleteInternalTransactInfo, void>)0x00677400)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00677440
+    /// void __thiscall DeleteInternalTransactInfo::Serialize(DeleteInternalTransactInfo*,Archive*)</code>
+    /// </summary>
+    public void Serialize(ACBindings.Internal.Archive* io_rcArchive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DeleteInternalTransactInfo, ACBindings.Internal.Archive*, void>)0x00677440)(ref this, io_rcArchive);
 }
 

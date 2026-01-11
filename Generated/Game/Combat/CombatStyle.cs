@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // CombatStyle
 public enum CombatStyle : uint

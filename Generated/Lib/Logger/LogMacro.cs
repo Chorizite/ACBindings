@@ -1,10 +1,9 @@
-namespace ACBindings.Logger;
+namespace ACBindings.Internal.Logger;
 
-// Logger::LogMacro
 public unsafe struct LogMacro
 {
     // Members
-    public ACBindings.Logger.LoggingSeverity m_ls;
+    public ACBindings.Internal.Logger.LoggingSeverity m_ls;
     public uint m_lc;
 
     // Methods

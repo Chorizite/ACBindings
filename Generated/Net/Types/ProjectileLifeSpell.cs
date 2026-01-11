@@ -1,41 +1,43 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ProjectileLifeSpell
 public unsafe struct ProjectileLifeSpell
 {
     // Base Classes
-    public ACBindings.ProjectileSpell BaseClass_ProjectileSpell; // ACBindings.ProjectileSpell
+    public ACBindings.Internal.ProjectileSpell BaseClass_ProjectileSpell; // ACBindings.Internal.ProjectileSpell
 
     // Child Types
-    // ProjectileLifeSpell_vtbl
     public unsafe struct ProjectileLifeSpell_vtbl
     {
         // Members
-        public System.IntPtr ProjectileLifeSpell_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, void> ProjectileLifeSpell_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
-        public System.IntPtr SetEqual; // function pointer
-        public System.IntPtr InqDuration; // function pointer
-        public System.IntPtr SetDuration; // function pointer
-        public System.IntPtr IsEnchantmentSpell; // function pointer
-        public System.IntPtr IsBoostSpell; // function pointer
-        public System.IntPtr IsProjectileSpell; // function pointer
-        public System.IntPtr IsTransferSpell; // function pointer
-        public System.IntPtr IsDispelSpell; // function pointer
-        public System.IntPtr IsFellowshipSpell; // function pointer
-        public System.IntPtr BuildEnchantment; // function pointer
-        public System.IntPtr AffectsHealth; // function pointer
-        public System.IntPtr AffectsStamina; // function pointer
-        public System.IntPtr AffectsMana; // function pointer
-        public System.IntPtr pack_size; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, void**, uint, int> UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, ACBindings.Internal.Spell*, ACBindings.Internal.Spell*, void> SetEqual; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, double> InqDuration; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, double, int> SetDuration; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, int> IsEnchantmentSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, int> IsBoostSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, int> IsProjectileSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, int> IsTransferSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, int> IsDispelSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, int> IsFellowshipSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, ACBindings.Internal.Enchantment*, int> BuildEnchantment; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, int> AffectsHealth; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, int> AffectsStamina; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, int> AffectsMana; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProjectileLifeSpell*, uint> pack_size; // function pointer
 
         // Methods
     }
 
     // Methods
-    // unsigned int __thiscall ProjectileLifeSpell::Pack(ProjectileEnchantmentSpell*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ProjectileLifeSpell, void**, uint, uint>)0x00599DF0)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x00599DF0
+    /// unsigned int __thiscall ProjectileLifeSpell::Pack(ProjectileEnchantmentSpell*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ProjectileLifeSpell, void**, uint, uint>)0x00599DF0)(ref this, addr, size);
 }
 

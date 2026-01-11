@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ScriptAndModData
 public unsafe struct ScriptAndModData
 {
     // Members
     public float mod;
-    public ACBindings.IDClass___tagDataID script_id;
+    public ACBindings.Internal.IDClass____tagDataID script_id;
 
     // Methods
 }

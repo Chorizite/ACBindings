@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ReferenceCountTemplate<1048576,0>
 public unsafe struct ReferenceCountTemplate
 {
     // Members

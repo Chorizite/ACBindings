@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TResult
 public unsafe struct TResult
 {
     // Members

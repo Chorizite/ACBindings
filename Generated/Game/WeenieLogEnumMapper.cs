@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// WeenieLogEnumMapper
 public unsafe struct WeenieLogEnumMapper
 {
     // Methods

@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AllegianceChatBlob
 public unsafe struct AllegianceChatBlob
 {
     // Base Classes
-    public ACBindings.TurbineChatBlob BaseClass_TurbineChatBlob; // ACBindings.TurbineChatBlob
+    public ACBindings.Internal.TurbineChatBlob BaseClass_TurbineChatBlob; // ACBindings.Internal.TurbineChatBlob
 
     // Members
     public uint m_monarchID;

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AlreadyRunningCheck
 public unsafe struct AlreadyRunningCheck
 {
     // Members

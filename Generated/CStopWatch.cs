@@ -1,16 +1,14 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CStopWatch
 public unsafe struct CStopWatch
 {
     // Child Types
-    // CStopWatch_vtbl
     public unsafe struct CStopWatch_vtbl
     {
         // Members
-        public System.IntPtr CStopWatch_dtor_0; // function pointer
-        public System.IntPtr Start; // function pointer
-        public System.IntPtr Stop; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CStopWatch*, void> CStopWatch_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CStopWatch*, void> Start; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CStopWatch*, double> Stop; // function pointer
 
         // Methods
     }

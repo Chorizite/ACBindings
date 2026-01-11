@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ActionNode
 public unsafe struct ActionNode
 {
     // Base Classes
-    public ACBindings.LListData BaseClass_LListData; // ACBindings.LListData
+    public ACBindings.Internal.LListData BaseClass_LListData; // ACBindings.Internal.LListData
 
     // Members
     public uint action;

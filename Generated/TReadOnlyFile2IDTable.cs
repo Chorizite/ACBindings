@@ -1,10 +1,8 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TReadOnlyFile2IDTable
 public unsafe struct TReadOnlyFile2IDTable
 {
     // Child Types
-    // TReadOnlyFile2IDTable_vtbl
     public unsafe struct TReadOnlyFile2IDTable_vtbl
     {
         // Members

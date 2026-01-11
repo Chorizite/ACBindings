@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PaletteTemplateIDEnumMapper
 public unsafe struct PaletteTemplateIDEnumMapper
 {
     // Methods

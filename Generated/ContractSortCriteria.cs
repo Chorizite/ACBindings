@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ContractSortCriteria
 public enum ContractSortCriteria : byte

@@ -1,42 +1,56 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LM_UVTransform
 public unsafe struct LM_UVTransform
 {
     // Base Classes
-    public ACBindings.LayerModifier BaseClass_LayerModifier; // ACBindings.LayerModifier
+    public ACBindings.Internal.LayerModifier BaseClass_LayerModifier; // ACBindings.Internal.LayerModifier
 
     // Child Types
-    // LM_UVTransform_vtbl
     public unsafe struct LM_UVTransform_vtbl
     {
         // Members
-        public System.IntPtr GetType; // function pointer
-        public System.IntPtr GetTCIndex; // function pointer
-        public System.IntPtr GetSize; // function pointer
-        public System.IntPtr DoesModifyVertex; // function pointer
-        public System.IntPtr Copy; // function pointer
-        public System.IntPtr Apply; // function pointer
-        public System.IntPtr ApplyTextureTransform; // function pointer
-        public System.IntPtr Serialize; // function pointer
-        public System.IntPtr LoadFromFileNode; // function pointer
-        public System.IntPtr SaveToFileNode; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LM_UVTransform*, ACBindings.Internal.LayerModType> GetType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LM_UVTransform*, uint> GetTCIndex; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LM_UVTransform*, uint> GetSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LM_UVTransform*, byte> DoesModifyVertex; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LM_UVTransform*, ACBindings.Internal.LayerModifier*> Copy; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LM_UVTransform*, System.IntPtr, ACBindings.Internal.VertexFormatInfo*, void> Apply; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LM_UVTransform*, ACBindings.Internal.Matrix4*, void> ApplyTextureTransform; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LM_UVTransform*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LM_UVTransform*, ACBindings.Internal.PFileNode*, ACBindings.Internal.RenderMaterial*, uint, uint, byte> LoadFromFileNode; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LM_UVTransform*, ACBindings.Internal.PFileNode*, ACBindings.Internal.RenderMaterial*, uint, uint, byte> SaveToFileNode; // function pointer
 
         // Methods
     }
 
     // Members
     public uint m_nStageIndex;
-    public ACBindings.Matrix4 m_mTransform;
+    public ACBindings.Internal.Matrix4 m_mTransform;
 
     // Methods
-    // unsigned int __thiscall LM_UVTransform::GetSize(LM_UVTransform*)
-    public uint GetSize() => ((delegate* unmanaged[Thiscall]<ref ACBindings.LM_UVTransform, uint>)0x00450B10)(ref this);
-    // void __thiscall LM_UVTransform::ApplyTextureTransform(LM_UVTransform*,Matrix4*)
-    public void ApplyTextureTransform(ACBindings.Matrix4* mTextureMatrix) => ((delegate* unmanaged[Thiscall]<ref ACBindings.LM_UVTransform, ACBindings.Matrix4*, void>)0x00450B20)(ref this, mTextureMatrix);
-    // LayerModifier* __thiscall LM_UVTransform::Copy(LM_UVTransform*)
-    public ACBindings.LayerModifier* Copy() => ((delegate* unmanaged[Thiscall]<ref ACBindings.LM_UVTransform, ACBindings.LayerModifier*>)0x00450BE0)(ref this);
-    // void __thiscall LM_UVTransform::Serialize(LM_UVTransform*,Archive*)
-    public void Serialize(ACBindings.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.LM_UVTransform, ACBindings.Archive*, void>)0x00451410)(ref this, io_archive);
+
+    /// <summary>
+    /// <code>Offset: 0x00450B10
+    /// unsigned int __thiscall LM_UVTransform::GetSize(LM_UVTransform*)</code>
+    /// </summary>
+    public uint GetSize() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.LM_UVTransform, uint>)0x00450B10)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00450B20
+    /// void __thiscall LM_UVTransform::ApplyTextureTransform(LM_UVTransform*,Matrix4*)</code>
+    /// </summary>
+    public void ApplyTextureTransform(ACBindings.Internal.Matrix4* mTextureMatrix) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.LM_UVTransform, ACBindings.Internal.Matrix4*, void>)0x00450B20)(ref this, mTextureMatrix);
+
+    /// <summary>
+    /// <code>Offset: 0x00450BE0
+    /// LayerModifier* __thiscall LM_UVTransform::Copy(LM_UVTransform*)</code>
+    /// </summary>
+    public ACBindings.Internal.LayerModifier* Copy() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.LM_UVTransform, ACBindings.Internal.LayerModifier*>)0x00450BE0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00451410
+    /// void __thiscall LM_UVTransform::Serialize(LM_UVTransform*,Archive*)</code>
+    /// </summary>
+    public void Serialize(ACBindings.Internal.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.LM_UVTransform, ACBindings.Internal.Archive*, void>)0x00451410)(ref this, io_archive);
 }
 

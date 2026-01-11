@@ -1,10 +1,8 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// QTIsaac<8,unsigned long>
 public unsafe struct QTIsaac__uint
 {
     // Child Types
-    // QTIsaac<8,unsigned long>::randctx
     public unsafe struct randctx
     {
         // Members
@@ -20,7 +18,7 @@ public unsafe struct QTIsaac__uint
 
     // Members
     public System.IntPtr __vftable; // vtable pointer
-    public ACBindings.QTIsaac__uint.randctx m_rc;
+    public ACBindings.Internal.QTIsaac__uint.randctx m_rc;
 
     // Methods
 }

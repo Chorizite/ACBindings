@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // PlayerModulePackHeader
 public enum PlayerModulePackHeader : uint

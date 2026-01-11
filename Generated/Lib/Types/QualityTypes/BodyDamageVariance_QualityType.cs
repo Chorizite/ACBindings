@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// BodyDamageVariance_QualityType
 public unsafe struct BodyDamageVariance_QualityType
 {
     // Methods

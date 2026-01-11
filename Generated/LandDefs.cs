@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LandDefs
 public unsafe struct LandDefs
 {
     // Statics
@@ -89,35 +88,95 @@ public unsafe struct LandDefs
     }
 
     // Methods
-    // int __cdecl LandDefs::in_bounds(int,int)
+
+    /// <summary>
+    /// <code>Offset: 0x0043D7F0
+    /// int __cdecl LandDefs::in_bounds(int,int)</code>
+    /// </summary>
     public static int in_bounds(int x, int y) => ((delegate* unmanaged[Cdecl]<int, int, int>)0x0043D7F0)(x, y);
-    // int __cdecl LandDefs::blockid_to_lcoord(unsigned int,int*,int*)
+
+    /// <summary>
+    /// <code>Offset: 0x0043D820
+    /// int __cdecl LandDefs::blockid_to_lcoord(unsigned int,int*,int*)</code>
+    /// </summary>
     public static int blockid_to_lcoord(uint block_id, int* x, int* y) => ((delegate* unmanaged[Cdecl]<uint, int*, int*, int>)0x0043D820)(block_id, x, y);
-    // AC1Legacy::Vector3* __cdecl LandDefs::get_block_offset(AC1Legacy::Vector3*,unsigned int,unsigned int)
-    public static ACBindings.AC1Legacy.Vector3* get_block_offset(ACBindings.AC1Legacy.Vector3* result, uint cell_from, uint cell_to) => ((delegate* unmanaged[Cdecl]<ACBindings.AC1Legacy.Vector3*, uint, uint, ACBindings.AC1Legacy.Vector3*>)0x0043E7D0)(result, cell_from, cell_to);
-    // int __cdecl LandDefs::inbound_valid_cellid(unsigned int)
+
+    /// <summary>
+    /// <code>Offset: 0x0043E7D0
+    /// AC1Legacy::Vector3* __cdecl LandDefs::get_block_offset(AC1Legacy::Vector3*,unsigned int,unsigned int)</code>
+    /// </summary>
+    public static ACBindings.Internal.AC1Legacy.Vector3* get_block_offset(ACBindings.Internal.AC1Legacy.Vector3* result, uint cell_from, uint cell_to) => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.AC1Legacy.Vector3*, uint, uint, ACBindings.Internal.AC1Legacy.Vector3*>)0x0043E7D0)(result, cell_from, cell_to);
+
+    /// <summary>
+    /// <code>Offset: 0x00497C80
+    /// int __cdecl LandDefs::inbound_valid_cellid(unsigned int)</code>
+    /// </summary>
     public static int inbound_valid_cellid(uint cell_id) => ((delegate* unmanaged[Cdecl]<uint, int>)0x00497C80)(cell_id);
-    // int __cdecl LandDefs::gid_to_lcoord(unsigned int,int*,int*)
+
+    /// <summary>
+    /// <code>Offset: 0x00497D70
+    /// int __cdecl LandDefs::gid_to_lcoord(unsigned int,int*,int*)</code>
+    /// </summary>
     public static int gid_to_lcoord(uint cell_id, int* x, int* y) => ((delegate* unmanaged[Cdecl]<uint, int*, int*, int>)0x00497D70)(cell_id, x, y);
-    // unsigned int __cdecl LandDefs::lcoord_to_gid(int,int)
+
+    /// <summary>
+    /// <code>Offset: 0x004A1CD0
+    /// unsigned int __cdecl LandDefs::lcoord_to_gid(int,int)</code>
+    /// </summary>
     public static uint lcoord_to_gid(int x, int y) => ((delegate* unmanaged[Cdecl]<int, int, uint>)0x004A1CD0)(x, y);
-    // unsigned int* __cdecl LandDefs::get_block_did(unsigned int*,int,int)
+
+    /// <summary>
+    /// <code>Offset: 0x00505D80
+    /// unsigned int* __cdecl LandDefs::get_block_did(unsigned int*,int,int)</code>
+    /// </summary>
     public static uint* get_block_did(uint* a1, int a2, int a3) => ((delegate* unmanaged[Cdecl]<uint*, int, int, uint*>)0x00505D80)(a1, a2, a3);
-    // int __cdecl LandDefs::within_block(const AC1Legacy::Vector3*,float)
-    public static int within_block(ACBindings.AC1Legacy.Vector3* vc, float radius) => ((delegate* unmanaged[Cdecl]<ACBindings.AC1Legacy.Vector3*, float, int>)0x0050F2D0)(vc, radius);
-    // void __cdecl LandDefs::get_vars(int*,int*,float*,int*,int*,float*,float*,float*)
+
+    /// <summary>
+    /// <code>Offset: 0x0050F2D0
+    /// int __cdecl LandDefs::within_block(const AC1Legacy::Vector3*,float)</code>
+    /// </summary>
+    public static int within_block(ACBindings.Internal.AC1Legacy.Vector3* vc, float radius) => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.AC1Legacy.Vector3*, float, int>)0x0050F2D0)(vc, radius);
+
+    /// <summary>
+    /// <code>Offset: 0x005AAA30
+    /// void __cdecl LandDefs::get_vars(int*,int*,float*,int*,int*,float*,float*,float*)</code>
+    /// </summary>
     public static void get_vars(int* height, int* width, float* cell_size, int* cells_per_block, int* cell_sub_divide, float* max_obj_height, float* sky_height, float* road_width) => ((delegate* unmanaged[Cdecl]<int*, int*, float*, int*, int*, float*, float*, float*, void>)0x005AAA30)(height, width, cell_size, cells_per_block, cell_sub_divide, max_obj_height, sky_height, road_width);
-    // int __cdecl LandDefs::set_height_table(float*)
+
+    /// <summary>
+    /// <code>Offset: 0x005AAA90
+    /// int __cdecl LandDefs::set_height_table(float*)</code>
+    /// </summary>
     public static int set_height_table(float* height_table) => ((delegate* unmanaged[Cdecl]<float*, int>)0x005AAA90)(height_table);
-    // float __cdecl LandDefs::heading(LandDefs::Direction)
-    public static float heading(ACBindings.LandDefs.Direction dir) => ((delegate* unmanaged[Cdecl]<ACBindings.LandDefs.Direction, float>)0x005AAAE0)(dir);
-    // LandDefs::Direction __cdecl LandDefs::get_dir(int,int)
-    public static ACBindings.LandDefs.Direction get_dir(int ix, int iy) => ((delegate* unmanaged[Cdecl]<int, int, ACBindings.LandDefs.Direction>)0x005AAB50)(ix, iy);
-    // int __cdecl LandDefs::get_outside_lcoord(unsigned int,const AC1Legacy::Vector3*,int*,int*)
-    public static int get_outside_lcoord(uint cell_id, ACBindings.AC1Legacy.Vector3* loc, int* x, int* y) => ((delegate* unmanaged[Cdecl]<uint, ACBindings.AC1Legacy.Vector3*, int*, int*, int>)0x005AABB0)(cell_id, loc, x, y);
-    // int __cdecl LandDefs::adjust_to_outside(unsigned int*,AC1Legacy::Vector3*)
-    public static int adjust_to_outside(uint* cell_id, ACBindings.AC1Legacy.Vector3* loc) => ((delegate* unmanaged[Cdecl]<uint*, ACBindings.AC1Legacy.Vector3*, int>)0x005AAC70)(cell_id, loc);
-    // int* __cdecl LandDefs::CellidToCoordinateString(int*,unsigned int)
+
+    /// <summary>
+    /// <code>Offset: 0x005AAAE0
+    /// float __cdecl LandDefs::heading(LandDefs::Direction)</code>
+    /// </summary>
+    public static float heading(ACBindings.Internal.LandDefs.Direction dir) => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.LandDefs.Direction, float>)0x005AAAE0)(dir);
+
+    /// <summary>
+    /// <code>Offset: 0x005AAB50
+    /// LandDefs::Direction __cdecl LandDefs::get_dir(int,int)</code>
+    /// </summary>
+    public static ACBindings.Internal.LandDefs.Direction get_dir(int ix, int iy) => ((delegate* unmanaged[Cdecl]<int, int, ACBindings.Internal.LandDefs.Direction>)0x005AAB50)(ix, iy);
+
+    /// <summary>
+    /// <code>Offset: 0x005AABB0
+    /// int __cdecl LandDefs::get_outside_lcoord(unsigned int,const AC1Legacy::Vector3*,int*,int*)</code>
+    /// </summary>
+    public static int get_outside_lcoord(uint cell_id, ACBindings.Internal.AC1Legacy.Vector3* loc, int* x, int* y) => ((delegate* unmanaged[Cdecl]<uint, ACBindings.Internal.AC1Legacy.Vector3*, int*, int*, int>)0x005AABB0)(cell_id, loc, x, y);
+
+    /// <summary>
+    /// <code>Offset: 0x005AAC70
+    /// int __cdecl LandDefs::adjust_to_outside(unsigned int*,AC1Legacy::Vector3*)</code>
+    /// </summary>
+    public static int adjust_to_outside(uint* cell_id, ACBindings.Internal.AC1Legacy.Vector3* loc) => ((delegate* unmanaged[Cdecl]<uint*, ACBindings.Internal.AC1Legacy.Vector3*, int>)0x005AAC70)(cell_id, loc);
+
+    /// <summary>
+    /// <code>Offset: 0x005AAD60
+    /// int* __cdecl LandDefs::CellidToCoordinateString(int*,unsigned int)</code>
+    /// </summary>
     public static int* CellidToCoordinateString(int* a1, uint cell_id) => ((delegate* unmanaged[Cdecl]<int*, uint, int*>)0x005AAD60)(a1, cell_id);
 }
 

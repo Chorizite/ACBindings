@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // CACHE_OBJECT_CODES
 public enum CACHE_OBJECT_CODES : uint

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// String_QualityType
 public unsafe struct String_QualityType
 {
     // Methods

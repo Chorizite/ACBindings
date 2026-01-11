@@ -1,59 +1,57 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// RenderSurface
 public unsafe struct RenderSurface : System.IDisposable
 {
     // Base Classes
-    public ACBindings.DBObj BaseClass_DBObj; // ACBindings.DBObj
-    public ACBindings.GraphicsResource BaseClass_GraphicsResource; // ACBindings.GraphicsResource
+    public ACBindings.Internal.DBObj BaseClass_DBObj; // ACBindings.Internal.DBObj
+    public ACBindings.Internal.GraphicsResource BaseClass_GraphicsResource; // ACBindings.Internal.GraphicsResource
 
     // Child Types
-    // RenderSurface_vtbl
     public unsafe struct RenderSurface_vtbl
     {
         // Members
-        public System.IntPtr IUnknown_QueryInterface; // function pointer
-        public System.IntPtr IUnknown_AddRef; // function pointer
-        public System.IntPtr IUnknown_Release; // function pointer
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr DBObj_dtor_18; // function pointer
-        public System.IntPtr Serialize; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
-        public System.IntPtr InitLoad; // function pointer
-        public System.IntPtr GetSubObjects; // function pointer
-        public System.IntPtr ReleaseSubObjects; // function pointer
-        public System.IntPtr NotifyFidelityLevel; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> DBObj_dtor_18; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> InitLoad; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> GetSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReleaseSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> NotifyFidelityLevel; // function pointer
         public System.IntPtr Refresh;
-        public System.IntPtr CopyInto; // function pointer
-        public System.IntPtr Destroy; // function pointer
-        public System.IntPtr FillDataGraph; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*, byte> CopyInto; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> Destroy; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.IDataGraph*, void> FillDataGraph; // function pointer
         public System.IntPtr SetDID;
-        public System.IntPtr GetDBOType; // function pointer
-        public System.IntPtr Allocate; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, uint> GetDBOType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*> Allocate; // function pointer
         public System.IntPtr SaveToDisk;
-        public System.IntPtr ReloadFromDisk; // function pointer
-        public System.IntPtr Create; // function pointer
-        public System.IntPtr CreateFromSourceData; // function pointer
-        public System.IntPtr Lock; // function pointer
-        public System.IntPtr Unlock; // function pointer
-        public System.IntPtr Convert; // function pointer
-        public System.IntPtr ConvertToNormalMap; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReloadFromDisk; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.RenderSurface*, uint, uint, ACBindings.Internal.PixelFormatID, byte, byte> Create; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.RenderSurface*, byte> CreateFromSourceData; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.RenderSurface*, ACBindings.Internal.tagRECT*, uint, int*, void**, byte> Lock; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.RenderSurface*, void> Unlock; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.RenderSurface*, ACBindings.Internal.RenderSurface*, byte> Convert; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.RenderSurface*, ACBindings.Internal.RenderSurface*, byte> ConvertToNormalMap; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.RenderSurfaceSourceData sourceData;
+    public ACBindings.Internal.RenderSurfaceSourceData sourceData;
     public uint width;
     public uint height;
     public uint size;
-    public ACBindings.SurfaceWindow window;
+    public ACBindings.Internal.SurfaceWindow window;
     public byte locked;
-    public ACBindings.PixelFormatDesc pfDesc;
+    public ACBindings.Internal.PixelFormatDesc pfDesc;
     public System.IntPtr m_pSurfaceBits;
-    public ACBindings.IDClass___tagDataID m_didPalatte;
+    public ACBindings.Internal.IDClass____tagDataID m_didPalatte;
     public byte m_IsDirty;
     public byte m_ReadOnlyLock;
 
@@ -68,39 +66,107 @@ public unsafe struct RenderSurface : System.IDisposable
     }
 
     // Methods
-    // bool __cdecl RenderSurface::IsD3DFormat(PixelFormatID)
-    public static byte IsD3DFormat(ACBindings.PixelFormatID pf) => ((delegate* unmanaged[Cdecl]<ACBindings.PixelFormatID, byte>)0x00443AC0)(pf);
-    // void __thiscall RenderSurface::Begin(RenderSurface*)
-    public void Begin() => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, void>)0x00443BC0)(ref this);
-    // bool __thiscall RenderSurface::InitLoad(RenderSurface*)
-    public byte InitLoad() => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, byte>)0x00443C20)(ref this);
-    // bool __thiscall RenderSurface::Lock(RenderSurface*,const tagRECT*,const unsigned int,int*,void**)
-    public byte Lock(ACBindings.tagRECT* rect, uint flags, int* pitch, void** data) => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, ACBindings.tagRECT*, uint, int*, void**, byte>)0x00443C40)(ref this, rect, flags, pitch, data);
-    // void __thiscall RenderSurface::Unlock(RenderSurface*)
-    public void Unlock() => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, void>)0x00443CC0)(ref this);
-    // PixelFormatID __thiscall RenderSurface::SelectSurfaceFormat(RenderSurface*,const PixelFormatID)
-    public ACBindings.PixelFormatID SelectSurfaceFormat(ACBindings.PixelFormatID format) => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, ACBindings.PixelFormatID, ACBindings.PixelFormatID>)0x00443CF0)(ref this, format);
-    // char __thiscall RenderSurface::SaveJPG(_DWORD*,const char**)
-    public sbyte SaveJPG(sbyte** a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, sbyte**, sbyte>)0x00443DC0)(ref this, a2);
-    // bool __thiscall RenderSurface::Convert(RenderSurface*,const RenderSurface*)
-    public byte Convert(ACBindings.RenderSurface* source) => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, ACBindings.RenderSurface*, byte>)0x00443F60)(ref this, source);
-    // void __thiscall RenderSurface::DestroySourceSurfaceBits(RenderSurface*)
-    public void DestroySourceSurfaceBits() => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, void>)0x004440D0)(ref this);
-    // void __thiscall RenderSurface::RenderSurface(RenderSurface*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, void>)0x004440F0)(ref this);
-    // bool __thiscall RenderSurface::Create(RenderSurface*,unsigned int,unsigned int,PixelFormatID,bool)
-    public byte Create(uint width, uint height, ACBindings.PixelFormatID pixelFormat, byte bLocalData) => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, uint, uint, ACBindings.PixelFormatID, byte, byte>)0x00444150)(ref this, width, height, pixelFormat, bLocalData);
-    // bool __thiscall RenderSurface::CreateFromSourceData(RenderSurface*)
-    public byte CreateFromSourceData() => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, byte>)0x00444200)(ref this);
-    // DBObj* __thiscall RenderSurface::Allocator(RenderSurface*)
-    public ACBindings.DBObj* Allocator() => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, ACBindings.DBObj*>)0x00444500)(ref this);
-    // void __thiscall RenderSurface::Destroy(RenderSurface*)
-    public void Destroy() => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, void>)0x00444540)(ref this);
-    // void __thiscall RenderSurface::~RenderSurface(RenderSurface*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, void>)0x00444580)(ref this);
-    // void __thiscall RenderSurface::GetSubDataIDs(RenderSurface*,QualifiedDataIDArray*)
-    public void GetSubDataIDs(ACBindings.QualifiedDataIDArray* id_array) => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, ACBindings.QualifiedDataIDArray*, void>)0x004445F0)(ref this, id_array);
-    // void __thiscall RenderSurface::Serialize(RenderSurface*,Archive*)
-    public void Serialize(ACBindings.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderSurface, ACBindings.Archive*, void>)0x00444640)(ref this, io_archive);
+
+    /// <summary>
+    /// <code>Offset: 0x00443AC0
+    /// bool __cdecl RenderSurface::IsD3DFormat(PixelFormatID)</code>
+    /// </summary>
+    public static byte IsD3DFormat(ACBindings.Internal.PixelFormatID pf) => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.PixelFormatID, byte>)0x00443AC0)(pf);
+
+    /// <summary>
+    /// <code>Offset: 0x00443BC0
+    /// void __thiscall RenderSurface::Begin(RenderSurface*)</code>
+    /// </summary>
+    public void Begin() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, void>)0x00443BC0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00443C20
+    /// bool __thiscall RenderSurface::InitLoad(RenderSurface*)</code>
+    /// </summary>
+    public byte InitLoad() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, byte>)0x00443C20)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00443C40
+    /// bool __thiscall RenderSurface::Lock(RenderSurface*,const tagRECT*,const unsigned int,int*,void**)</code>
+    /// </summary>
+    public byte Lock(ACBindings.Internal.tagRECT* rect, uint flags, int* pitch, void** data) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, ACBindings.Internal.tagRECT*, uint, int*, void**, byte>)0x00443C40)(ref this, rect, flags, pitch, data);
+
+    /// <summary>
+    /// <code>Offset: 0x00443CC0
+    /// void __thiscall RenderSurface::Unlock(RenderSurface*)</code>
+    /// </summary>
+    public void Unlock() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, void>)0x00443CC0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00443CF0
+    /// PixelFormatID __thiscall RenderSurface::SelectSurfaceFormat(RenderSurface*,const PixelFormatID)</code>
+    /// </summary>
+    public ACBindings.Internal.PixelFormatID SelectSurfaceFormat(ACBindings.Internal.PixelFormatID format) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, ACBindings.Internal.PixelFormatID, ACBindings.Internal.PixelFormatID>)0x00443CF0)(ref this, format);
+
+    /// <summary>
+    /// <code>Offset: 0x00443DC0
+    /// char __thiscall RenderSurface::SaveJPG(_DWORD*,const char**)</code>
+    /// </summary>
+    public sbyte SaveJPG(sbyte** a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, sbyte**, sbyte>)0x00443DC0)(ref this, a2);
+
+    /// <summary>
+    /// <code>Offset: 0x00443F60
+    /// bool __thiscall RenderSurface::Convert(RenderSurface*,const RenderSurface*)</code>
+    /// </summary>
+    public byte Convert(ACBindings.Internal.RenderSurface* source) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, ACBindings.Internal.RenderSurface*, byte>)0x00443F60)(ref this, source);
+
+    /// <summary>
+    /// <code>Offset: 0x004440D0
+    /// void __thiscall RenderSurface::DestroySourceSurfaceBits(RenderSurface*)</code>
+    /// </summary>
+    public void DestroySourceSurfaceBits() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, void>)0x004440D0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004440F0
+    /// void __thiscall RenderSurface::RenderSurface(RenderSurface*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, void>)0x004440F0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00444150
+    /// bool __thiscall RenderSurface::Create(RenderSurface*,unsigned int,unsigned int,PixelFormatID,bool)</code>
+    /// </summary>
+    public byte Create(uint width, uint height, ACBindings.Internal.PixelFormatID pixelFormat, byte bLocalData) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, uint, uint, ACBindings.Internal.PixelFormatID, byte, byte>)0x00444150)(ref this, width, height, pixelFormat, bLocalData);
+
+    /// <summary>
+    /// <code>Offset: 0x00444200
+    /// bool __thiscall RenderSurface::CreateFromSourceData(RenderSurface*)</code>
+    /// </summary>
+    public byte CreateFromSourceData() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, byte>)0x00444200)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00444500
+    /// DBObj* __thiscall RenderSurface::Allocator(RenderSurface*)</code>
+    /// </summary>
+    public ACBindings.Internal.DBObj* Allocator() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, ACBindings.Internal.DBObj*>)0x00444500)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00444540
+    /// void __thiscall RenderSurface::Destroy(RenderSurface*)</code>
+    /// </summary>
+    public void Destroy() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, void>)0x00444540)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00444580
+    /// void __thiscall RenderSurface::~RenderSurface(RenderSurface*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, void>)0x00444580)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004445F0
+    /// void __thiscall RenderSurface::GetSubDataIDs(RenderSurface*,QualifiedDataIDArray*)</code>
+    /// </summary>
+    public void GetSubDataIDs(ACBindings.Internal.QualifiedDataIDArray* id_array) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, ACBindings.Internal.QualifiedDataIDArray*, void>)0x004445F0)(ref this, id_array);
+
+    /// <summary>
+    /// <code>Offset: 0x00444640
+    /// void __thiscall RenderSurface::Serialize(RenderSurface*,Archive*)</code>
+    /// </summary>
+    public void Serialize(ACBindings.Internal.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderSurface, ACBindings.Internal.Archive*, void>)0x00444640)(ref this, io_archive);
 }
 

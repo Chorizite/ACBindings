@@ -1,18 +1,16 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// COptionalHeader
 public unsafe struct COptionalHeader
 {
     // Base Classes
-    public ACBindings.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.ReferenceCountTemplate
+    public ACBindings.Internal.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.Internal.ReferenceCountTemplate
 
     // Child Types
-    // COptionalHeader_vtbl
     public unsafe struct COptionalHeader_vtbl
     {
         // Members
-        public System.IntPtr COptionalHeader_dtor_0; // function pointer
-        public System.IntPtr UpdateTimeSensitivePayload; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.COptionalHeader*, void> COptionalHeader_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.COptionalHeader*, int> UpdateTimeSensitivePayload; // function pointer
 
         // Methods
     }

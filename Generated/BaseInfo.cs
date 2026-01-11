@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// BaseInfo
 public unsafe struct BaseInfo
 {
     // Members
     public uint elementID;
-    public ACBindings.IDClass___tagDataID layoutID;
+    public ACBindings.Internal.IDClass____tagDataID layoutID;
 
     // Methods
 }

@@ -1,7 +1,6 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// HashSorterIterator<long,DataHistory::IterationData>
-public unsafe struct HashSorterIterator__int__DataHistory_IterationData
+public unsafe struct HashSorterIterator__int___DataHistory_IterationData
 {
     // Members
     public System.IntPtr m_iter;
@@ -9,8 +8,7 @@ public unsafe struct HashSorterIterator__int__DataHistory_IterationData
     // Methods
 }
 
-// HashSorterIterator<unsigned long,StringTableString*>
-public unsafe struct HashSorterIterator__uint__StringTableString_ptr
+public unsafe struct HashSorterIterator__uint___StringTableString_ptr
 {
     // Members
     public System.IntPtr m_iter;
@@ -18,8 +16,7 @@ public unsafe struct HashSorterIterator__uint__StringTableString_ptr
     // Methods
 }
 
-// HashSorterIterator<unsigned long,ElementDesc>
-public unsafe struct HashSorterIterator__uint__ElementDesc
+public unsafe struct HashSorterIterator__uint___ElementDesc
 {
     // Members
     public System.IntPtr m_iter;

@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AlphaConvertArgs
 public unsafe struct AlphaConvertArgs
 {
     // Members
-    public ACBindings.BlitBufferArgs cSrcArgs;
-    public ACBindings.BlitBufferArgs cDstArgs;
+    public ACBindings.Internal.BlitBufferArgs cSrcArgs;
+    public ACBindings.Internal.BlitBufferArgs cDstArgs;
     public uint nWidth;
     public uint nHeight;
 

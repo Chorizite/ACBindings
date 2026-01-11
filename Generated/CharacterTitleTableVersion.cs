@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // CharacterTitleTableVersion
 public enum CharacterTitleTableVersion : uint

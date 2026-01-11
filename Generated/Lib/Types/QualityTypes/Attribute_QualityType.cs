@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Attribute_QualityType
 public unsafe struct Attribute_QualityType
 {
     // Methods

@@ -1,25 +1,23 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DragDropInfo
 public unsafe struct DragDropInfo
 {
     // Base Classes
-    public ACBindings.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.ReferenceCountTemplate
+    public ACBindings.Internal.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.Internal.ReferenceCountTemplate
 
     // Child Types
-    // DragDropInfo_vtbl
     public unsafe struct DragDropInfo_vtbl
     {
         // Members
-        public System.IntPtr DragDropInfo_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DragDropInfo*, void> DragDropInfo_dtor_0; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.UIElement* element;
-    public ACBindings.UIElement* owner;
-    public ACBindings.UIElement* catcher;
+    public ACBindings.Internal.UIElement* element;
+    public ACBindings.Internal.UIElement* owner;
+    public ACBindings.Internal.UIElement* catcher;
     public byte success;
 
     // Methods

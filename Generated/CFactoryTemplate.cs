@@ -1,13 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CFactoryTemplate
 public unsafe struct CFactoryTemplate
 {
     // Members
     public ushort* m_Name;
-    public ACBindings._GUID* m_ClsID;
-    public System.IntPtr m_lpfnNew; // function pointer
-    public System.IntPtr m_lpfnInit; // function pointer
+    public ACBindings.Internal._GUID* m_ClsID;
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, int*, ACBindings.Internal.CUnknown*> m_lpfnNew; // function pointer
+    public delegate* unmanaged[Stdcall]<int, ACBindings.Internal._GUID*, void> m_lpfnInit; // function pointer
     public System.IntPtr m_pAMovieSetup_Filter;
 
     // Methods

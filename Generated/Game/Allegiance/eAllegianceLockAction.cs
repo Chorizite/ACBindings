@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // eAllegianceLockAction
 public enum eAllegianceLockAction : uint

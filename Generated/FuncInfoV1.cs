@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// FuncInfoV1
 public unsafe struct FuncInfoV1
 {
     // Members

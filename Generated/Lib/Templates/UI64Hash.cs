@@ -1,22 +1,30 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// UI64Hash<NetBlob>
-public unsafe struct UI64Hash__NetBlob
+public unsafe struct UI64Hash___NetBlob
 {
     // Base Classes
-    public ACBindings.HashBase__ulong BaseClass_HashBase; // ACBindings.HashBase__ulong
+    public ACBindings.Internal.HashBase__ulong BaseClass_HashBase; // ACBindings.Internal.HashBase__ulong
 
     // Methods
-    // UI64Hash<NetBlob>::add (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0054AD00
+    /// int __thiscall UI64Hash&lt;NetBlob&gt;::add(_DWORD*,int)</code>
+    /// </summary>
+    // int __thiscall UI64Hash<NetBlob>::add(_DWORD*,int) (template type method)
 }
 
-// UI64Hash<ArrivedEphInfo>
-public unsafe struct UI64Hash__ArrivedEphInfo
+public unsafe struct UI64Hash___ArrivedEphInfo
 {
     // Base Classes
-    public ACBindings.HashBase__ulong BaseClass_HashBase; // ACBindings.HashBase__ulong
+    public ACBindings.Internal.HashBase__ulong BaseClass_HashBase; // ACBindings.Internal.HashBase__ulong
 
     // Methods
-    // UI64Hash<ArrivedEphInfo>::destroy_contents (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0054B080
+    /// int __thiscall UI64Hash&lt;ArrivedEphInfo&gt;::destroy_contents(_DWORD**)</code>
+    /// </summary>
+    // int __thiscall UI64Hash<ArrivedEphInfo>::destroy_contents(_DWORD**) (template type method)
 }
 

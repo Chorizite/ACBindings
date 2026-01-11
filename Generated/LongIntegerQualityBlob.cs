@@ -1,13 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LongIntegerQualityBlob
 public unsafe struct LongIntegerQualityBlob
 {
     // Members
     public uint m_eQuality;
     public long m_nSavedValue;
     public long m_nCurValue;
-    public ACBindings.UIElement_Text* m_pCurValueText;
+    public ACBindings.Internal.UIElement_Text* m_pCurValueText;
 
     // Methods
 }

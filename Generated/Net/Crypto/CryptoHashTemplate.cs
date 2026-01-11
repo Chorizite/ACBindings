@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CryptoHashTemplate<32771>
 public unsafe struct CryptoHashTemplate
 {
     // Base Classes
-    public ACBindings.CryptoHash BaseClass_CryptoHash; // ACBindings.CryptoHash
+    public ACBindings.Internal.CryptoHash BaseClass_CryptoHash; // ACBindings.Internal.CryptoHash
 
     // Methods
 }

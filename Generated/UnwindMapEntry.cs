@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// UnwindMapEntry
 public unsafe struct UnwindMapEntry
 {
     // Members

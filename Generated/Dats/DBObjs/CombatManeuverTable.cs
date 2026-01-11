@@ -1,45 +1,43 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CombatManeuverTable
 public unsafe struct CombatManeuverTable : System.IDisposable
 {
     // Base Classes
-    public ACBindings.SerializeUsingPackDBObj BaseClass_SerializeUsingPackDBObj; // ACBindings.SerializeUsingPackDBObj
+    public ACBindings.Internal.SerializeUsingPackDBObj BaseClass_SerializeUsingPackDBObj; // ACBindings.Internal.SerializeUsingPackDBObj
 
     // Child Types
-    // CombatManeuverTable_vtbl
     public unsafe struct CombatManeuverTable_vtbl
     {
         // Members
-        public System.IntPtr IUnknown_QueryInterface; // function pointer
-        public System.IntPtr IUnknown_AddRef; // function pointer
-        public System.IntPtr IUnknown_Release; // function pointer
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr DBObj_dtor_18; // function pointer
-        public System.IntPtr Serialize; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
-        public System.IntPtr InitLoad; // function pointer
-        public System.IntPtr GetSubObjects; // function pointer
-        public System.IntPtr ReleaseSubObjects; // function pointer
-        public System.IntPtr NotifyFidelityLevel; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> DBObj_dtor_18; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> InitLoad; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> GetSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReleaseSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> NotifyFidelityLevel; // function pointer
         public System.IntPtr Refresh;
-        public System.IntPtr CopyInto; // function pointer
-        public System.IntPtr Destroy; // function pointer
-        public System.IntPtr FillDataGraph; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*, byte> CopyInto; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> Destroy; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.IDataGraph*, void> FillDataGraph; // function pointer
         public System.IntPtr SetDID;
-        public System.IntPtr GetDBOType; // function pointer
-        public System.IntPtr Allocate; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, uint> GetDBOType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*> Allocate; // function pointer
         public System.IntPtr SaveToDisk;
-        public System.IntPtr ReloadFromDisk; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReloadFromDisk; // function pointer
 
         // Methods
     }
 
     // Members
     public uint _num_combat_maneuvers;
-    public ACBindings.CombatManeuver* _cmt;
+    public ACBindings.Internal.CombatManeuver* _cmt;
 
     // Generated Constructor
     public CombatManeuverTable(void** a2) {
@@ -52,19 +50,47 @@ public unsafe struct CombatManeuverTable : System.IDisposable
     }
 
     // Methods
-    // DBObj* __cdecl CombatManeuverTable::Get(int)
-    public static ACBindings.DBObj* Get(int a1) => ((delegate* unmanaged[Cdecl]<int, ACBindings.DBObj*>)0x0056B8A0)(a1);
-    // DBObj* __cdecl CombatManeuverTable::Allocator()
-    public static ACBindings.DBObj* Allocator() => ((delegate* unmanaged[Cdecl]<ACBindings.DBObj*>)0x0058B7B0)();
-    // void __thiscall CombatManeuverTable::~CombatManeuverTable(CombatManeuverTable*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CombatManeuverTable, void>)0x005CB4D0)(ref this);
-    // unsigned int __thiscall CombatManeuverTable::Pack(CombatManeuverTable*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CombatManeuverTable, void**, uint, uint>)0x005CB520)(ref this, addr, size);
-    // int __thiscall CombatManeuverTable::Init(CombatManeuverTable*,unsigned int)
-    public int Init(uint num_combat_maneuvers) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CombatManeuverTable, uint, int>)0x005CB5A0)(ref this, num_combat_maneuvers);
-    // int __thiscall CombatManeuverTable::CombatManeuverTable(int,void**)
-    public int _ConstructorInternal(void** a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CombatManeuverTable, void**, int>)0x005CB640)(ref this, a2);
-    // int __thiscall CombatManeuverTable::UnPack(CombatManeuverTable*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CombatManeuverTable, void**, uint, int>)0x005CB690)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x0056B8A0
+    /// DBObj* __cdecl CombatManeuverTable::Get(int)</code>
+    /// </summary>
+    public static ACBindings.Internal.DBObj* Get(int a1) => ((delegate* unmanaged[Cdecl]<int, ACBindings.Internal.DBObj*>)0x0056B8A0)(a1);
+
+    /// <summary>
+    /// <code>Offset: 0x0058B7B0
+    /// DBObj* __cdecl CombatManeuverTable::Allocator()</code>
+    /// </summary>
+    public static ACBindings.Internal.DBObj* Allocator() => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.DBObj*>)0x0058B7B0)();
+
+    /// <summary>
+    /// <code>Offset: 0x005CB4D0
+    /// void __thiscall CombatManeuverTable::~CombatManeuverTable(CombatManeuverTable*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CombatManeuverTable, void>)0x005CB4D0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005CB520
+    /// unsigned int __thiscall CombatManeuverTable::Pack(CombatManeuverTable*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CombatManeuverTable, void**, uint, uint>)0x005CB520)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005CB5A0
+    /// int __thiscall CombatManeuverTable::Init(CombatManeuverTable*,unsigned int)</code>
+    /// </summary>
+    public int Init(uint num_combat_maneuvers) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CombatManeuverTable, uint, int>)0x005CB5A0)(ref this, num_combat_maneuvers);
+
+    /// <summary>
+    /// <code>Offset: 0x005CB640
+    /// int __thiscall CombatManeuverTable::CombatManeuverTable(int,void**)</code>
+    /// </summary>
+    public int _ConstructorInternal(void** a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CombatManeuverTable, void**, int>)0x005CB640)(ref this, a2);
+
+    /// <summary>
+    /// <code>Offset: 0x005CB690
+    /// int __thiscall CombatManeuverTable::UnPack(CombatManeuverTable*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CombatManeuverTable, void**, uint, int>)0x005CB690)(ref this, addr, size);
 }
 

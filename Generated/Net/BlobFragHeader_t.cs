@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// BlobFragHeader_t
 public unsafe struct BlobFragHeader_t
 {
     // Members

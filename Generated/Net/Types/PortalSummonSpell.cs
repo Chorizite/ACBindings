@@ -1,35 +1,33 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PortalSummonSpell
 public unsafe struct PortalSummonSpell
 {
     // Base Classes
-    public ACBindings.Spell BaseClass_Spell; // ACBindings.Spell
+    public ACBindings.Internal.Spell BaseClass_Spell; // ACBindings.Internal.Spell
 
     // Child Types
-    // PortalSummonSpell_vtbl
     public unsafe struct PortalSummonSpell_vtbl
     {
         // Members
-        public System.IntPtr PortalSummonSpell_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, void> PortalSummonSpell_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
-        public System.IntPtr SetEqual; // function pointer
-        public System.IntPtr InqDuration; // function pointer
-        public System.IntPtr SetDuration; // function pointer
-        public System.IntPtr IsEnchantmentSpell; // function pointer
-        public System.IntPtr IsBoostSpell; // function pointer
-        public System.IntPtr IsProjectileSpell; // function pointer
-        public System.IntPtr IsTransferSpell; // function pointer
-        public System.IntPtr IsDispelSpell; // function pointer
-        public System.IntPtr IsFellowshipSpell; // function pointer
-        public System.IntPtr BuildEnchantment; // function pointer
-        public System.IntPtr AffectsHealth; // function pointer
-        public System.IntPtr AffectsStamina; // function pointer
-        public System.IntPtr AffectsMana; // function pointer
-        public System.IntPtr pack_size; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, void**, uint, int> UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, ACBindings.Internal.Spell*, ACBindings.Internal.Spell*, void> SetEqual; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, double> InqDuration; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, double, int> SetDuration; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, int> IsEnchantmentSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, int> IsBoostSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, int> IsProjectileSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, int> IsTransferSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, int> IsDispelSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, int> IsFellowshipSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, ACBindings.Internal.Enchantment*, int> BuildEnchantment; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, int> AffectsHealth; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, int> AffectsStamina; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, int> AffectsMana; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalSummonSpell*, uint> pack_size; // function pointer
 
         // Methods
     }
@@ -38,13 +36,29 @@ public unsafe struct PortalSummonSpell
     public double _portal_lifetime;
 
     // Methods
-    // long double __thiscall PortalSummonSpell::InqDuration(SalvageResult*)
-    public double InqDuration() => ((delegate* unmanaged[Thiscall]<ref ACBindings.PortalSummonSpell, double>)0x00599BA0)(ref this);
-    // unsigned int __thiscall PortalSummonSpell::pack_size(PortalSummonSpell*)
-    public uint pack_size() => ((delegate* unmanaged[Thiscall]<ref ACBindings.PortalSummonSpell, uint>)0x00599EB0)(ref this);
-    // void __thiscall PortalSummonSpell::SetEqual(PortalSummonSpell*,const Spell*,const Spell*)
-    public void SetEqual(ACBindings.Spell* dst, ACBindings.Spell* src) => ((delegate* unmanaged[Thiscall]<ref ACBindings.PortalSummonSpell, ACBindings.Spell*, ACBindings.Spell*, void>)0x00599EF0)(ref this, dst, src);
-    // unsigned int __thiscall PortalSummonSpell::Pack(PortalSummonSpell*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.PortalSummonSpell, void**, uint, uint>)0x00599F20)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x00599BA0
+    /// long double __thiscall PortalSummonSpell::InqDuration(SalvageResult*)</code>
+    /// </summary>
+    public double InqDuration() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PortalSummonSpell, double>)0x00599BA0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00599EB0
+    /// unsigned int __thiscall PortalSummonSpell::pack_size(PortalSummonSpell*)</code>
+    /// </summary>
+    public uint pack_size() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PortalSummonSpell, uint>)0x00599EB0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00599EF0
+    /// void __thiscall PortalSummonSpell::SetEqual(PortalSummonSpell*,const Spell*,const Spell*)</code>
+    /// </summary>
+    public void SetEqual(ACBindings.Internal.Spell* dst, ACBindings.Internal.Spell* src) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PortalSummonSpell, ACBindings.Internal.Spell*, ACBindings.Internal.Spell*, void>)0x00599EF0)(ref this, dst, src);
+
+    /// <summary>
+    /// <code>Offset: 0x00599F20
+    /// unsigned int __thiscall PortalSummonSpell::Pack(PortalSummonSpell*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PortalSummonSpell, void**, uint, uint>)0x00599F20)(ref this, addr, size);
 }
 

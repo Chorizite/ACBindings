@@ -1,38 +1,36 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CLanguageInfo
 public unsafe struct CLanguageInfo : System.IDisposable
 {
     // Base Classes
-    public ACBindings.DBObj BaseClass_DBObj; // ACBindings.DBObj
+    public ACBindings.Internal.DBObj BaseClass_DBObj; // ACBindings.Internal.DBObj
 
     // Child Types
-    // CLanguageInfo_vtbl
     public unsafe struct CLanguageInfo_vtbl
     {
         // Members
-        public System.IntPtr IUnknown_QueryInterface; // function pointer
-        public System.IntPtr IUnknown_AddRef; // function pointer
-        public System.IntPtr IUnknown_Release; // function pointer
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr DBObj_dtor_18; // function pointer
-        public System.IntPtr Serialize; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
-        public System.IntPtr InitLoad; // function pointer
-        public System.IntPtr GetSubObjects; // function pointer
-        public System.IntPtr ReleaseSubObjects; // function pointer
-        public System.IntPtr NotifyFidelityLevel; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> DBObj_dtor_18; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> InitLoad; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> GetSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReleaseSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> NotifyFidelityLevel; // function pointer
         public System.IntPtr Refresh;
-        public System.IntPtr CopyInto; // function pointer
-        public System.IntPtr Destroy; // function pointer
-        public System.IntPtr FillDataGraph; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*, byte> CopyInto; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> Destroy; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.IDataGraph*, void> FillDataGraph; // function pointer
         public System.IntPtr SetDID;
-        public System.IntPtr GetDBOType; // function pointer
-        public System.IntPtr Allocate; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, uint> GetDBOType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*> Allocate; // function pointer
         public System.IntPtr SaveToDisk;
-        public System.IntPtr ReloadFromDisk; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReloadFromDisk; // function pointer
 
         // Methods
     }
@@ -43,20 +41,20 @@ public unsafe struct CLanguageInfo : System.IDisposable
     public ushort numDecimalDigits;
     public byte leadingZero;
     public ushort groupingSize;
-    public ACBindings.PStringBase__ushort numerals;
-    public ACBindings.PStringBase__ushort decimalSeperator;
-    public ACBindings.PStringBase__ushort groupingSeperator;
-    public ACBindings.PStringBase__ushort negativeNumberFormat;
+    public ACBindings.Internal.PStringBase__ushort numerals;
+    public ACBindings.Internal.PStringBase__ushort decimalSeperator;
+    public ACBindings.Internal.PStringBase__ushort groupingSeperator;
+    public ACBindings.Internal.PStringBase__ushort negativeNumberFormat;
     public byte isZeroSingular;
     public byte isOneSingular;
     public byte isNegativeOneSingular;
     public byte isTwoOrMoreSingular;
     public byte isNegativeTwoOrLessSingular;
-    public ACBindings.PStringBase__ushort treasurePrefixLetters;
-    public ACBindings.PStringBase__ushort treasureMiddleLetters;
-    public ACBindings.PStringBase__ushort treasureSuffixLetters;
-    public ACBindings.PStringBase__ushort malePlayerLetters;
-    public ACBindings.PStringBase__ushort femalePlayerLetters;
+    public ACBindings.Internal.PStringBase__ushort treasurePrefixLetters;
+    public ACBindings.Internal.PStringBase__ushort treasureMiddleLetters;
+    public ACBindings.Internal.PStringBase__ushort treasureSuffixLetters;
+    public ACBindings.Internal.PStringBase__ushort malePlayerLetters;
+    public ACBindings.Internal.PStringBase__ushort femalePlayerLetters;
     public uint m_ImeEnabledSetting;
     public uint m_symbolColor;
     public uint m_symbolColorText;
@@ -75,7 +73,7 @@ public unsafe struct CLanguageInfo : System.IDisposable
     public uint m_compColorText;
     public uint m_otherIME;
     public int m_wordWrapOnSpace;
-    public ACBindings.PStringBase__ushort m_additionalSettings;
+    public ACBindings.Internal.PStringBase__ushort m_additionalSettings;
     public uint m_additionalFlags;
 
     // Generated Dispose
@@ -84,11 +82,25 @@ public unsafe struct CLanguageInfo : System.IDisposable
     }
 
     // Methods
-    // void __thiscall CLanguageInfo::~CLanguageInfo(CLanguageInfo*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CLanguageInfo, void>)0x00422380)(ref this);
-    // DBObj* __cdecl CLanguageInfo::Allocator()
-    public static ACBindings.DBObj* Allocator() => ((delegate* unmanaged[Cdecl]<ACBindings.DBObj*>)0x004224D0)();
-    // void __thiscall CLanguageInfo::Serialize(CLanguageInfo*,Archive*)
-    public void Serialize(ACBindings.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CLanguageInfo, ACBindings.Archive*, void>)0x00422870)(ref this, io_archive);
+
+    /// <summary>Releases all dynamically allocated strings and other resources held by a CLanguageInfo instance, then destroys its base DBObj component.
+    /// <code>Offset: 0x00422380
+    /// void __thiscall CLanguageInfo::~CLanguageInfo(CLanguageInfo*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CLanguageInfo, void>)0x00422380)(ref this);
+
+    /// <summary>Allocates a new CLanguageInfo object, initializing all string members to empty buffers and setting the virtual table.
+    /// <code>Offset: 0x004224D0
+    /// DBObj* __cdecl CLanguageInfo::Allocator()</code>
+    /// </summary>
+    /// <returns>A pointer to the newly constructed DBObj base of the allocated CLanguageInfo, or nullptr if memory allocation fails.</returns>
+    public static ACBindings.Internal.DBObj* Allocator() => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.DBObj*>)0x004224D0)();
+
+    /// <summary>Serializes or deserializes the CLanguageInfo object to an Archive, applying proper alignment and reading or writing each field based on archive flags.
+    /// <code>Offset: 0x00422870
+    /// void __thiscall CLanguageInfo::Serialize(CLanguageInfo*,Archive*)</code>
+    /// </summary>
+    /// <param name="io_archive">Archive used for reading from or writing to; determines whether fields are serialized or deserialized.</param>
+    public void Serialize(ACBindings.Internal.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CLanguageInfo, ACBindings.Internal.Archive*, void>)0x00422870)(ref this, io_archive);
 }
 

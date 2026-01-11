@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Position_QualityType
 public unsafe struct Position_QualityType
 {
     // Methods

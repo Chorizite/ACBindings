@@ -1,14 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ArchiveInitializer
 public unsafe struct ArchiveInitializer
 {
     // Child Types
-    // ArchiveInitializer_vtbl
     public unsafe struct ArchiveInitializer_vtbl
     {
         // Members
-        public System.IntPtr InitializeArchive; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArchiveInitializer*, ACBindings.Internal.Archive*, byte> InitializeArchive; // function pointer
 
         // Methods
     }

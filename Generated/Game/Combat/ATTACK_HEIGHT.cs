@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ATTACK_HEIGHT
 public enum ATTACK_HEIGHT : uint

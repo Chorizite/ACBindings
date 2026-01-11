@@ -1,15 +1,13 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// D3DXMATRIX
 public unsafe struct D3DXMATRIX
 {
     // Base Classes
-    public ACBindings._D3DMATRIX BaseClass__D3DMATRIX; // ACBindings._D3DMATRIX
+    public ACBindings.Internal._D3DMATRIX BaseClass__D3DMATRIX; // ACBindings.Internal._D3DMATRIX
 
     // Methods
 }
 
-// D3DXMatrix
 public unsafe struct D3DXMatrix
 {
     // Members

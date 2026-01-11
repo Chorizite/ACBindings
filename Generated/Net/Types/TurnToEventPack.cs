@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TurnToEventPack
 public unsafe struct TurnToEventPack
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // TurnToEventPack_vtbl
     public unsafe struct TurnToEventPack_vtbl
     {
         // Members
-        public System.IntPtr TurnToEventPack_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TurnToEventPack*, void> TurnToEventPack_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TurnToEventPack*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TurnToEventPack*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TurnToEventPack*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }

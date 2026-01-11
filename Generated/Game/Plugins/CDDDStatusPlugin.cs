@@ -1,19 +1,17 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CDDDStatusPlugin
 public unsafe struct CDDDStatusPlugin
 {
     // Base Classes
-    public ACBindings.CPluginPrototype BaseClass_CPluginPrototype; // ACBindings.CPluginPrototype
+    public ACBindings.Internal.CPluginPrototype BaseClass_CPluginPrototype; // ACBindings.Internal.CPluginPrototype
 
     // Child Types
-    // CDDDStatusPlugin_vtbl
     public unsafe struct CDDDStatusPlugin_vtbl
     {
         // Members
-        public System.IntPtr CDDDStatusPlugin_dtor_0; // function pointer
-        public System.IntPtr OnPluggedIn; // function pointer
-        public System.IntPtr OnDDDEvent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CDDDStatusPlugin*, void> CDDDStatusPlugin_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CDDDStatusPlugin*, ACBindings.Internal.CPluginManager*, void> OnPluggedIn; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CDDDStatusPlugin*, ACBindings.Internal.DDDEvent, uint, void> OnDDDEvent; // function pointer
 
         // Methods
     }

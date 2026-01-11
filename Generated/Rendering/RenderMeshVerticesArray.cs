@@ -1,23 +1,21 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// RenderMeshVerticesArray
 public unsafe struct RenderMeshVerticesArray : System.IDisposable
 {
     // Base Classes
-    public ACBindings.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.ReferenceCountTemplate
+    public ACBindings.Internal.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.Internal.ReferenceCountTemplate
 
     // Child Types
-    // RenderMeshVerticesArray_vtbl
     public unsafe struct RenderMeshVerticesArray_vtbl
     {
         // Members
-        public System.IntPtr RenderMeshVerticesArray_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.RenderMeshVerticesArray*, void> RenderMeshVerticesArray_dtor_0; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.SmartArray__RenderVertexBuffer_ptr m_VertexArrays;
+    public ACBindings.Internal.SmartArray___RenderVertexBuffer_ptr m_VertexArrays;
 
     // Generated Dispose
     public void Dispose() {
@@ -25,7 +23,11 @@ public unsafe struct RenderMeshVerticesArray : System.IDisposable
     }
 
     // Methods
-    // void __thiscall RenderMeshVerticesArray::~RenderMeshVerticesArray(RenderMeshVerticesArray*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderMeshVerticesArray, void>)0x00445040)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00445040
+    /// void __thiscall RenderMeshVerticesArray::~RenderMeshVerticesArray(RenderMeshVerticesArray*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderMeshVerticesArray, void>)0x00445040)(ref this);
 }
 

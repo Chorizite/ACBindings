@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CFellowship
 public unsafe struct CFellowship
 {
     // Base Classes
-    public ACBindings.Fellowship BaseClass_Fellowship; // ACBindings.Fellowship
+    public ACBindings.Internal.Fellowship BaseClass_Fellowship; // ACBindings.Internal.Fellowship
 
     // Child Types
-    // CFellowship_vtbl
     public unsafe struct CFellowship_vtbl
     {
         // Members
-        public System.IntPtr CFellowship_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CFellowship*, void> CFellowship_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CFellowship*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CFellowship*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CFellowship*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -26,7 +24,11 @@ public unsafe struct CFellowship
     }
 
     // Methods
-    // void __thiscall CFellowship::CFellowship(CFellowship*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CFellowship, void>)0x0059B570)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0059B570
+    /// void __thiscall CFellowship::CFellowship(CFellowship*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CFellowship, void>)0x0059B570)(ref this);
 }
 

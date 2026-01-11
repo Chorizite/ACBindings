@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PrefDisplayModeType
 public unsafe struct PrefDisplayModeType
 {
     // Members

@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // AsyncResult
 public enum AsyncResult : byte

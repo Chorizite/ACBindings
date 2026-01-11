@@ -1,6 +1,5 @@
-namespace ACBindings.AC1Legacy;
+namespace ACBindings.Internal.AC1Legacy;
 
-// AC1Legacy::List<unsigned long>
 public unsafe struct List__uint
 {
     // Members
@@ -12,8 +11,7 @@ public unsafe struct List__uint
     // Methods
 }
 
-// AC1Legacy::List<FriendData>
-public unsafe struct List__FriendData
+public unsafe struct List___FriendData
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
@@ -22,13 +20,33 @@ public unsafe struct List__FriendData
     public uint _num_elements;
 
     // Methods
-    // AC1Legacy::List<FriendData>::flush (template type method)
-    // AC1Legacy::List<FriendData>::insert (template type method)
-    // AC1Legacy::List<FriendData>::remove (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0048CE50
+    /// void __thiscall AC1Legacy::List&lt;FriendData&gt;::flush(_DWORD*)</code>
+    /// </summary>
+    // void __thiscall AC1Legacy::List<FriendData>::flush(_DWORD*) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0048E080
+    /// int __thiscall AC1Legacy::List&lt;FriendData&gt;::insert(_DWORD*,int,FriendData*)</code>
+    /// </summary>
+    // int __thiscall AC1Legacy::List<FriendData>::insert(_DWORD*,int,FriendData*) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0048E110
+    /// int __thiscall AC1Legacy::List&lt;FriendData&gt;::remove(_DWORD*,FriendData*)</code>
+    /// </summary>
+    // int __thiscall AC1Legacy::List<FriendData>::remove(_DWORD*,FriendData*) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0048E180
+    /// int __thiscall AC1Legacy::List&lt;FriendData&gt;::remove_1(_DWORD*,FriendData*)</code>
+    /// </summary>
+    // int __thiscall AC1Legacy::List<FriendData>::remove_1(_DWORD*,FriendData*) (template type method)
 }
 
-// AC1Legacy::List<SpellSetTierList>
-public unsafe struct List__SpellSetTierList
+public unsafe struct List___SpellSetTierList
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
@@ -37,13 +55,27 @@ public unsafe struct List__SpellSetTierList
     public uint _num_elements;
 
     // Methods
-    // AC1Legacy::List<SpellSetTierList>::pop_front (template type method)
-    // AC1Legacy::List<SpellSetTierList>::flush (template type method)
-    // AC1Legacy::List<SpellSetTierList>::push_back (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x00598B70
+    /// int __thiscall AC1Legacy::List&lt;SpellSetTierList&gt;::pop_front(_DWORD*,_DWORD*)</code>
+    /// </summary>
+    // int __thiscall AC1Legacy::List<SpellSetTierList>::pop_front(_DWORD*,_DWORD*) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x00598BF0
+    /// void __thiscall AC1Legacy::List&lt;SpellSetTierList&gt;::flush(_DWORD*)</code>
+    /// </summary>
+    // void __thiscall AC1Legacy::List<SpellSetTierList>::flush(_DWORD*) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x00598E40
+    /// int __thiscall AC1Legacy::List&lt;SpellSetTierList&gt;::push_back(_DWORD*,SpellSetTierList*)</code>
+    /// </summary>
+    // int __thiscall AC1Legacy::List<SpellSetTierList>::push_back(_DWORD*,SpellSetTierList*) (template type method)
 }
 
-// AC1Legacy::List<AC1Legacy::PStringBase<char>>
-public unsafe struct List__AC1Legacy_PStringBase__sbyte
+public unsafe struct List___AC1Legacy_PStringBase__sbyte
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer

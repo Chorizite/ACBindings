@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // PortalSummonType
 public enum PortalSummonType : uint

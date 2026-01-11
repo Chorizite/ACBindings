@@ -1,20 +1,24 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CaseInsensitiveStringBase<PStringBase<char>>
-public unsafe struct CaseInsensitiveStringBase__PStringBase__sbyte
+public unsafe struct CaseInsensitiveStringBase___PStringBase__sbyte
 {
     // Base Classes
-    public ACBindings.PStringBase__sbyte BaseClass_PStringBase; // ACBindings.PStringBase__sbyte
+    public ACBindings.Internal.PStringBase__sbyte BaseClass_PStringBase; // ACBindings.Internal.PStringBase__sbyte
 
     // Methods
-    // CaseInsensitiveStringBase<PStringBase<char>>::case_insensitive_hash (template type method)
+
+    /// <summary>Computes a case‑insensitive hash of the object’s stored null‑terminated character sequence, treating alphabetic characters without regard to case.
+    /// <code>Offset: 0x0041AA50
+    /// unsigned int __thiscall CaseInsensitiveStringBase&lt;PStringBase&lt;char&gt;&gt;::case_insensitive_hash(char**)</code>
+    /// </summary>
+    /// <returns>The computed unsigned integer hash value.</returns>
+    // unsigned int __thiscall CaseInsensitiveStringBase<PStringBase<char>>::case_insensitive_hash(char**) (template type method)
 }
 
-// CaseInsensitiveStringBase<PStringBase<unsigned short>>
-public unsafe struct CaseInsensitiveStringBase__PStringBase__ushort
+public unsafe struct CaseInsensitiveStringBase___PStringBase__ushort
 {
     // Base Classes
-    public ACBindings.PStringBase__ushort BaseClass_PStringBase; // ACBindings.PStringBase__ushort
+    public ACBindings.Internal.PStringBase__ushort BaseClass_PStringBase; // ACBindings.Internal.PStringBase__ushort
 
     // Methods
 }

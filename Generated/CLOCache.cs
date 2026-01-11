@@ -1,48 +1,50 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CLOCache
 public unsafe struct CLOCache
 {
     // Base Classes
-    public ACBindings.DBOCache BaseClass_DBOCache; // ACBindings.DBOCache
+    public ACBindings.Internal.DBOCache BaseClass_DBOCache; // ACBindings.Internal.DBOCache
 
     // Child Types
-    // CLOCache_vtbl
     public unsafe struct CLOCache_vtbl
     {
         // Members
-        public System.IntPtr CLOCache_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLOCache*, void> CLOCache_dtor_0; // function pointer
         public System.IntPtr GetIfInMemory;
-        public System.IntPtr GetFreeObj; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLOCache*, ACBindings.Internal.DBObj*> GetFreeObj; // function pointer
         public System.IntPtr GetCollection;
-        public System.IntPtr SetCollection; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLOCache*, System.IntPtr, byte> SetCollection; // function pointer
         public System.IntPtr Release;
-        public System.IntPtr AddObj; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLOCache*, ACBindings.Internal.DBObj*, byte> AddObj; // function pointer
         public System.IntPtr RemoveObj;
-        public System.IntPtr CanLoadFromDisk; // function pointer
-        public System.IntPtr CanRequestFromNet; // function pointer
-        public System.IntPtr FlushFreeObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLOCache*, byte> CanLoadFromDisk; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLOCache*, byte> CanRequestFromNet; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLOCache*, void> FlushFreeObjects; // function pointer
         public System.IntPtr SaveObjectToDisk;
         public System.IntPtr ReloadObject;
-        public System.IntPtr LastWords; // function pointer
-        public System.IntPtr AddObj_Internal; // function pointer
-        public System.IntPtr RemoveObj_Internal; // function pointer
-        public System.IntPtr FreeObject; // function pointer
-        public System.IntPtr DestroyObj; // function pointer
-        public System.IntPtr FreelistAdd; // function pointer
-        public System.IntPtr FreelistRemove; // function pointer
-        public System.IntPtr FreelistRemoveOldest; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLOCache*, void> LastWords; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLOCache*, ACBindings.Internal.DBObj*, byte> AddObj_Internal; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLOCache*, ACBindings.Internal.DBObj*, void> RemoveObj_Internal; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLOCache*, ACBindings.Internal.DBObj*, void> FreeObject; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLOCache*, ACBindings.Internal.DBObj*, void> DestroyObj; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLOCache*, ACBindings.Internal.DBObj*, void> FreelistAdd; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLOCache*, ACBindings.Internal.DBObj*, void> FreelistRemove; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CLOCache*, ACBindings.Internal.DBObj*> FreelistRemoveOldest; // function pointer
 
         // Methods
     }
 
     // Generated Constructor
-    public CLOCache(delegate* unmanaged[Cdecl]<ACBindings.DBObj*> allocator, uint dbtype) {
+    public CLOCache(delegate* unmanaged[Cdecl]<ACBindings.Internal.DBObj*> allocator, uint dbtype) {
         _ConstructorInternal(allocator, dbtype);
     }
 
     // Methods
-    // void __thiscall CLOCache::CLOCache(CLOCache*,DBObj*(__cdecl*allocator)(),unsigned int)
-    public void _ConstructorInternal(delegate* unmanaged[Cdecl]<ACBindings.DBObj*> allocator, uint dbtype) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CLOCache, delegate* unmanaged[Cdecl]<ACBindings.DBObj*>, uint, void>)0x004FD0A0)(ref this, allocator, dbtype);
+
+    /// <summary>
+    /// <code>Offset: 0x004FD0A0
+    /// void __thiscall CLOCache::CLOCache(CLOCache*,DBObj*(__cdecl*allocator)(),unsigned int)</code>
+    /// </summary>
+    public void _ConstructorInternal(delegate* unmanaged[Cdecl]<ACBindings.Internal.DBObj*> allocator, uint dbtype) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CLOCache, delegate* unmanaged[Cdecl]<ACBindings.Internal.DBObj*>, uint, void>)0x004FD0A0)(ref this, allocator, dbtype);
 }
 

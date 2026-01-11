@@ -1,30 +1,37 @@
-namespace ACBindings.AC1Legacy;
+namespace ACBindings.Internal.AC1Legacy;
 
-// AC1Legacy::SmartArray<CharacterIdentity>
-public unsafe struct SmartArray__CharacterIdentity
+public unsafe struct SmartArray___CharacterIdentity
 {
     // Members
-    public ACBindings.CharacterIdentity* m_data;
+    public ACBindings.Internal.CharacterIdentity* m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
-    // AC1Legacy::SmartArray<CharacterIdentity>::Reset (template type method)
-    // AC1Legacy::SmartArray<CharacterIdentity>::grow (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x004FE8D0
+    /// void __thiscall AC1Legacy::SmartArray&lt;CharacterIdentity&gt;::Reset(_DWORD*)</code>
+    /// </summary>
+    // void __thiscall AC1Legacy::SmartArray<CharacterIdentity>::Reset(_DWORD*) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x004FEA60
+    /// int __thiscall AC1Legacy::SmartArray&lt;CharacterIdentity&gt;::grow(_DWORD*,unsigned int)</code>
+    /// </summary>
+    // int __thiscall AC1Legacy::SmartArray<CharacterIdentity>::grow(_DWORD*,unsigned int) (template type method)
 }
 
-// AC1Legacy::SmartArray<CAnimHook*>
-public unsafe struct SmartArray__CAnimHook_ptr
+public unsafe struct SmartArray___CAnimHook_ptr
 {
     // Members
-    public ACBindings.CAnimHook** m_data;
+    public ACBindings.Internal.CAnimHook** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<unsigned long>
 public unsafe struct SmartArray__uint
 {
     // Members
@@ -35,8 +42,7 @@ public unsafe struct SmartArray__uint
     // Methods
 }
 
-// AC1Legacy::SmartArray<AC1Legacy::PStringBase<char>>
-public unsafe struct SmartArray__AC1Legacy_PStringBase__sbyte
+public unsafe struct SmartArray___AC1Legacy_PStringBase__sbyte
 {
     // Members
     public System.IntPtr m_data;
@@ -44,278 +50,273 @@ public unsafe struct SmartArray__AC1Legacy_PStringBase__sbyte
     public uint m_num;
 
     // Methods
-    // AC1Legacy::SmartArray<AC1Legacy::PStringBase<char>>::grow (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x005B82E0
+    /// int __thiscall AC1Legacy::SmartArray&lt;AC1Legacy::PStringBase&lt;char&gt;&gt;::grow(_DWORD*,unsigned int)</code>
+    /// </summary>
+    // int __thiscall AC1Legacy::SmartArray<AC1Legacy::PStringBase<char>>::grow(_DWORD*,unsigned int) (template type method)
 }
 
-// AC1Legacy::SmartArray<GfxVelocityDesc*>
-public unsafe struct SmartArray__GfxVelocityDesc_ptr
+public unsafe struct SmartArray___GfxVelocityDesc_ptr
 {
     // Members
-    public ACBindings.GfxVelocityDesc** m_data;
+    public ACBindings.Internal.GfxVelocityDesc** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<CPhysicsObj*>
-public unsafe struct SmartArray__CPhysicsObj_ptr
+public unsafe struct SmartArray___CPhysicsObj_ptr
 {
     // Members
-    public ACBindings.CPhysicsObj** m_data;
+    public ACBindings.Internal.CPhysicsObj** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<ScriptAndModData>
-public unsafe struct SmartArray__ScriptAndModData
+public unsafe struct SmartArray___ScriptAndModData
 {
     // Members
-    public ACBindings.ScriptAndModData* m_data;
+    public ACBindings.Internal.ScriptAndModData* m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
-    // AC1Legacy::SmartArray<ScriptAndModData>::Reset (template type method)
-    // AC1Legacy::SmartArray<ScriptAndModData>::grow (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x005225D0
+    /// void __thiscall AC1Legacy::SmartArray&lt;ScriptAndModData&gt;::Reset(int*)</code>
+    /// </summary>
+    // void __thiscall AC1Legacy::SmartArray<ScriptAndModData>::Reset(int*) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x005226D0
+    /// int __thiscall AC1Legacy::SmartArray&lt;ScriptAndModData&gt;::grow(int*,unsigned int)</code>
+    /// </summary>
+    // int __thiscall AC1Legacy::SmartArray<ScriptAndModData>::grow(int*,unsigned int) (template type method)
 }
 
-// AC1Legacy::SmartArray<CelestialPosition>
-public unsafe struct SmartArray__CelestialPosition
+public unsafe struct SmartArray___CelestialPosition
 {
     // Members
-    public ACBindings.CelestialPosition* m_data;
+    public ACBindings.Internal.CelestialPosition* m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
-    // AC1Legacy::SmartArray<CelestialPosition>::grow (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x00502040
+    /// int __thiscall AC1Legacy::SmartArray&lt;CelestialPosition&gt;::grow(int*,unsigned int)</code>
+    /// </summary>
+    // int __thiscall AC1Legacy::SmartArray<CelestialPosition>::grow(int*,unsigned int) (template type method)
 }
 
-// AC1Legacy::SmartArray<AmbientSoundDesc*>
-public unsafe struct SmartArray__AmbientSoundDesc_ptr
+public unsafe struct SmartArray___AmbientSoundDesc_ptr
 {
     // Members
-    public ACBindings.AmbientSoundDesc** m_data;
-    public uint m_size;
-    public uint m_num;
-
-    // Methods
-}
-
-// AC1Legacy::SmartArray<TimeOfDay*>
-public unsafe struct SmartArray__TimeOfDay_ptr
-{
-    // Members
-    public ACBindings.TimeOfDay** m_data;
-    public uint m_size;
-    public uint m_num;
-
-    // Methods
-}
-
-// AC1Legacy::SmartArray<WeekDay*>
-public unsafe struct SmartArray__WeekDay_ptr
-{
-    // Members
-    public ACBindings.WeekDay** m_data;
+    public ACBindings.Internal.AmbientSoundDesc** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<Season*>
-public unsafe struct SmartArray__Season_ptr
+public unsafe struct SmartArray___TimeOfDay_ptr
 {
     // Members
-    public ACBindings.Season** m_data;
+    public ACBindings.Internal.TimeOfDay** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<PalShiftSubPal*>
-public unsafe struct SmartArray__PalShiftSubPal_ptr
+public unsafe struct SmartArray___WeekDay_ptr
 {
     // Members
-    public ACBindings.PalShiftSubPal** m_data;
+    public ACBindings.Internal.WeekDay** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<PalShiftRoadCode*>
-public unsafe struct SmartArray__PalShiftRoadCode_ptr
+public unsafe struct SmartArray___Season_ptr
 {
     // Members
-    public ACBindings.PalShiftRoadCode** m_data;
+    public ACBindings.Internal.Season** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<PalShiftTerrainPal*>
-public unsafe struct SmartArray__PalShiftTerrainPal_ptr
+public unsafe struct SmartArray___PalShiftSubPal_ptr
 {
     // Members
-    public ACBindings.PalShiftTerrainPal** m_data;
+    public ACBindings.Internal.PalShiftSubPal** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<PalShiftTex*>
-public unsafe struct SmartArray__PalShiftTex_ptr
+public unsafe struct SmartArray___PalShiftRoadCode_ptr
 {
     // Members
-    public ACBindings.PalShiftTex** m_data;
+    public ACBindings.Internal.PalShiftRoadCode** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<TerrainAlphaMap*>
-public unsafe struct SmartArray__TerrainAlphaMap_ptr
+public unsafe struct SmartArray___PalShiftTerrainPal_ptr
 {
     // Members
-    public ACBindings.TerrainAlphaMap** m_data;
+    public ACBindings.Internal.PalShiftTerrainPal** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<RoadAlphaMap*>
-public unsafe struct SmartArray__RoadAlphaMap_ptr
+public unsafe struct SmartArray___PalShiftTex_ptr
 {
     // Members
-    public ACBindings.RoadAlphaMap** m_data;
+    public ACBindings.Internal.PalShiftTex** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<TerrainTex*>
-public unsafe struct SmartArray__TerrainTex_ptr
+public unsafe struct SmartArray___TerrainAlphaMap_ptr
 {
     // Members
-    public ACBindings.TerrainTex** m_data;
+    public ACBindings.Internal.TerrainAlphaMap** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<TMTerrainDesc*>
-public unsafe struct SmartArray__TMTerrainDesc_ptr
+public unsafe struct SmartArray___RoadAlphaMap_ptr
 {
     // Members
-    public ACBindings.TMTerrainDesc** m_data;
+    public ACBindings.Internal.RoadAlphaMap** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<CSurface*>
-public unsafe struct SmartArray__CSurface_ptr
+public unsafe struct SmartArray___TerrainTex_ptr
 {
     // Members
-    public ACBindings.CSurface** m_data;
+    public ACBindings.Internal.TerrainTex** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<CSceneType*>
-public unsafe struct SmartArray__CSceneType_ptr
+public unsafe struct SmartArray___TMTerrainDesc_ptr
 {
     // Members
-    public ACBindings.CSceneType** m_data;
+    public ACBindings.Internal.TMTerrainDesc** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<CTerrainType*>
-public unsafe struct SmartArray__CTerrainType_ptr
+public unsafe struct SmartArray___CSurface_ptr
 {
     // Members
-    public ACBindings.CTerrainType** m_data;
+    public ACBindings.Internal.CSurface** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<SkyObjectReplace*>
-public unsafe struct SmartArray__SkyObjectReplace_ptr
+public unsafe struct SmartArray___CSceneType_ptr
 {
     // Members
-    public ACBindings.SkyObjectReplace** m_data;
+    public ACBindings.Internal.CSceneType** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<SkyTimeOfDay*>
-public unsafe struct SmartArray__SkyTimeOfDay_ptr
+public unsafe struct SmartArray___CTerrainType_ptr
 {
     // Members
-    public ACBindings.SkyTimeOfDay** m_data;
+    public ACBindings.Internal.CTerrainType** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<SkyObject*>
-public unsafe struct SmartArray__SkyObject_ptr
+public unsafe struct SmartArray___SkyObjectReplace_ptr
 {
     // Members
-    public ACBindings.SkyObject** m_data;
+    public ACBindings.Internal.SkyObjectReplace** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<DayGroup*>
-public unsafe struct SmartArray__DayGroup_ptr
+public unsafe struct SmartArray___SkyTimeOfDay_ptr
 {
     // Members
-    public ACBindings.DayGroup** m_data;
+    public ACBindings.Internal.SkyTimeOfDay** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<AmbientSTBDesc*>
-public unsafe struct SmartArray__AmbientSTBDesc_ptr
+public unsafe struct SmartArray___SkyObject_ptr
 {
     // Members
-    public ACBindings.AmbientSTBDesc** m_data;
+    public ACBindings.Internal.SkyObject** m_data;
     public uint m_size;
     public uint m_num;
 
     // Methods
 }
 
-// AC1Legacy::SmartArray<TChessPiece<CBasePiece>*>
-public unsafe struct SmartArray__TChessPiece__CBasePiece_ptr
+public unsafe struct SmartArray___DayGroup_ptr
+{
+    // Members
+    public ACBindings.Internal.DayGroup** m_data;
+    public uint m_size;
+    public uint m_num;
+
+    // Methods
+}
+
+public unsafe struct SmartArray___AmbientSTBDesc_ptr
+{
+    // Members
+    public ACBindings.Internal.AmbientSTBDesc** m_data;
+    public uint m_size;
+    public uint m_num;
+
+    // Methods
+}
+
+public unsafe struct SmartArray___TChessPiece___CBasePiece_ptr
 {
     // Members
     public System.IntPtr m_data;
@@ -325,11 +326,10 @@ public unsafe struct SmartArray__TChessPiece__CBasePiece_ptr
     // Methods
 }
 
-// AC1Legacy::SmartArray<cWObjHierNode*>
-public unsafe struct SmartArray__cWObjHierNode_ptr
+public unsafe struct SmartArray___cWObjHierNode_ptr
 {
     // Members
-    public ACBindings.cWObjHierNode** m_data;
+    public ACBindings.Internal.cWObjHierNode** m_data;
     public uint m_size;
     public uint m_num;
 

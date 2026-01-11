@@ -1,13 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// MasterPropertyGrabber
 public unsafe struct MasterPropertyGrabber
 {
     // Base Classes
-    public ACBindings.DBObjGrabber__MasterProperty BaseClass_DBObjGrabber; // ACBindings.DBObjGrabber__MasterProperty
-
-    // Statics
-    public static ACBindings.DBObjGrabber__MasterProperty* s_spcMasterPropertyList = (ACBindings.DBObjGrabber__MasterProperty*)0x00837DB8;
+    public ACBindings.Internal.DBObjGrabber___MasterProperty BaseClass_DBObjGrabber; // ACBindings.Internal.DBObjGrabber___MasterProperty
 
     // Generated Constructor
     public MasterPropertyGrabber() {
@@ -15,7 +11,11 @@ public unsafe struct MasterPropertyGrabber
     }
 
     // Methods
-    // void __thiscall MasterPropertyGrabber::MasterPropertyGrabber(MasterPropertyGrabber*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.MasterPropertyGrabber, void>)0x00425BA0)(ref this);
+
+    /// <summary>Initializes a MasterPropertyGrabber instance by linking it to the singleton master property list, loading the list when needed and managing reference counts appropriately.
+    /// <code>Offset: 0x00425BA0
+    /// void __thiscall MasterPropertyGrabber::MasterPropertyGrabber(MasterPropertyGrabber*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.MasterPropertyGrabber, void>)0x00425BA0)(ref this);
 }
 

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Mat33
 public unsafe struct Mat33
 {
     // Members

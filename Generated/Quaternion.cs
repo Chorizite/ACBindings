@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Quaternion
 public unsafe struct Quaternion
 {
     // Members

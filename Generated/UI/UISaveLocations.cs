@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// UISaveLocations
 public unsafe struct UISaveLocations
 {
     // Members
-    public ACBindings.HashTable__IDClass___tagDataID__HashTable__uint__UILocationData m_myHash;
+    public ACBindings.Internal.HashTable___IDClass____tagDataID___HashTable__uint___UILocationData m_myHash;
 
     // Methods
 }

@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SpellComponentRegion
 public unsafe struct SpellComponentRegion
 {
     // Members
-    public ACBindings.IDClass___tagDataID classID;
+    public ACBindings.Internal.IDClass____tagDataID classID;
     public uint objectID;
-    public ACBindings.IDClass___tagDataID iconID;
+    public ACBindings.Internal.IDClass____tagDataID iconID;
     public uint numItems;
 
     // Methods

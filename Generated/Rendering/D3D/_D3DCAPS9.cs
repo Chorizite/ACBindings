@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// _D3DCAPS9
 public unsafe struct _D3DCAPS9
 {
     // Members
-    public ACBindings._D3DDEVTYPE DeviceType;
+    public ACBindings.Internal._D3DDEVTYPE DeviceType;
     public uint AdapterOrdinal;
     public uint Caps;
     public uint Caps2;
@@ -66,7 +65,7 @@ public unsafe struct _D3DCAPS9
     public uint DeclTypes;
     public uint NumSimultaneousRTs;
     public uint StretchRectFilterCaps;
-    public ACBindings._D3DVSHADERCAPS2_0 VS20Caps;
+    public ACBindings.Internal._D3DVSHADERCAPS2_0 VS20Caps;
     public _D3DVSHADERCAPS2_0 PS20Caps;
     public uint VertexTextureFilterCaps;
     public uint MaxVShaderInstructionsExecuted;

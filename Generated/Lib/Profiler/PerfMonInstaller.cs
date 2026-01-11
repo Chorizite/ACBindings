@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PerfMonInstaller
 public unsafe struct PerfMonInstaller
 {
     // Members
-    public ACBindings.PStringBase__sbyte m_appName;
-    public ACBindings.PStringBase__ushort m_appNameWide;
-    public ACBindings.PStringBase__sbyte m_registryPath;
+    public ACBindings.Internal.PStringBase__sbyte m_appName;
+    public ACBindings.Internal.PStringBase__ushort m_appNameWide;
+    public ACBindings.Internal.PStringBase__sbyte m_registryPath;
 
     // Methods
 }

@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // eAllegianceHouseAction
 public enum eAllegianceHouseAction : uint

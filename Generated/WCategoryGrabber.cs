@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// WCategoryGrabber
 public unsafe struct WCategoryGrabber
 {
     // Base Classes
-    public ACBindings.DBObjGrabber__DualEnumIDMap BaseClass_DBObjGrabber; // ACBindings.DBObjGrabber__DualEnumIDMap
+    public ACBindings.Internal.DBObjGrabber___DualEnumIDMap BaseClass_DBObjGrabber; // ACBindings.Internal.DBObjGrabber___DualEnumIDMap
 
     // Methods
 }

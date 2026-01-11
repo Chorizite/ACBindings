@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CTerrainType
 public unsafe struct CTerrainType
 {
     // Members
-    public ACBindings.AC1Legacy.PStringBase__sbyte terrain_name;
-    public ACBindings.RGBAUnion terrain_color;
-    public ACBindings.AC1Legacy.SmartArray__CSceneType_ptr scene_types;
+    public ACBindings.Internal.AC1Legacy.PStringBase__sbyte terrain_name;
+    public ACBindings.Internal.RGBAUnion terrain_color;
+    public ACBindings.Internal.AC1Legacy.SmartArray___CSceneType_ptr scene_types;
 
     // Generated Constructor
     public CTerrainType() {
@@ -14,7 +13,11 @@ public unsafe struct CTerrainType
     }
 
     // Methods
-    // void __thiscall CTerrainType::CTerrainType(CTerrainType*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CTerrainType, void>)0x00503010)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00503010
+    /// void __thiscall CTerrainType::CTerrainType(CTerrainType*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CTerrainType, void>)0x00503010)(ref this);
 }
 

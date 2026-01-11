@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // RawParseErrorCode
 public enum RawParseErrorCode : byte

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SkillRecord
 public unsafe struct SkillRecord
 {
     // Members

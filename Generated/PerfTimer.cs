@@ -1,10 +1,8 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PerfTimer
 public unsafe struct PerfTimer
 {
     // Child Types
-    // PerfTimer::Initializer
     public unsafe struct Initializer
     {
         // Methods

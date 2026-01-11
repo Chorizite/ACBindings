@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // PortalRecallType
 public enum PortalRecallType : uint

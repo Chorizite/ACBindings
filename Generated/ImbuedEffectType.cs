@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ImbuedEffectType
 public enum ImbuedEffectType : uint

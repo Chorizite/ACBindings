@@ -1,6 +1,5 @@
-namespace ACBindings.AC1Legacy;
+namespace ACBindings.Internal.AC1Legacy;
 
-// AC1Legacy::VERSION_NO_t
 public unsafe struct VERSION_NO_t
 {
     // Members

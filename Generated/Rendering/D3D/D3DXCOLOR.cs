@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// D3DXCOLOR
 public unsafe struct D3DXCOLOR
 {
     // Members

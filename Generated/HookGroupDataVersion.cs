@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // HookGroupDataVersion
 public enum HookGroupDataVersion : uint

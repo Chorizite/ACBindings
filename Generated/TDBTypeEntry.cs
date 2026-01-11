@@ -1,16 +1,15 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TDBTypeEntry
 public unsafe struct TDBTypeEntry : System.IDisposable
 {
     // Members
     public byte bRecursed;
     public byte bRegistered;
-    public ACBindings.PStringBase__sbyte pRootGamePath;
-    public ACBindings.PStringBase__sbyte pRootEngPath;
-    public ACBindings.PStringBase__sbyte TypeName;
-    public ACBindings.IDClass___tagDataID HighestDIDAssigned;
-    public ACBindings.AutoGrowHashTable__IDClass___tagDataID__TFileEntry_ptr DIDs;
+    public ACBindings.Internal.PStringBase__sbyte pRootGamePath;
+    public ACBindings.Internal.PStringBase__sbyte pRootEngPath;
+    public ACBindings.Internal.PStringBase__sbyte TypeName;
+    public ACBindings.Internal.IDClass____tagDataID HighestDIDAssigned;
+    public ACBindings.Internal.AutoGrowHashTable___IDClass____tagDataID___TFileEntry_ptr DIDs;
 
     // Generated Constructor
     public TDBTypeEntry() {
@@ -23,9 +22,17 @@ public unsafe struct TDBTypeEntry : System.IDisposable
     }
 
     // Methods
-    // void __thiscall TDBTypeEntry::~TDBTypeEntry(TDBTypeEntry*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.TDBTypeEntry, void>)0x0067A200)(ref this);
-    // void __thiscall TDBTypeEntry::TDBTypeEntry(TDBTypeEntry*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.TDBTypeEntry, void>)0x0067B2A0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0067A200
+    /// void __thiscall TDBTypeEntry::~TDBTypeEntry(TDBTypeEntry*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TDBTypeEntry, void>)0x0067A200)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0067B2A0
+    /// void __thiscall TDBTypeEntry::TDBTypeEntry(TDBTypeEntry*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TDBTypeEntry, void>)0x0067B2A0)(ref this);
 }
 

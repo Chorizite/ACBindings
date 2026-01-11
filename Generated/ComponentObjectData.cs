@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ComponentObjectData
 public unsafe struct ComponentObjectData
 {
     // Members

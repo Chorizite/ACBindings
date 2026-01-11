@@ -1,15 +1,14 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CPackObjHeader<NetError,1048576,7>
-public unsafe struct CPackObjHeader__NetError
+public unsafe struct CPackObjHeader___NetError
 {
     // Base Classes
-    public ACBindings.COptionalHeader BaseClass_COptionalHeader; // ACBindings.COptionalHeader
+    public ACBindings.Internal.COptionalHeader BaseClass_COptionalHeader; // ACBindings.Internal.COptionalHeader
 
     // Members
     public byte* m_pAdoptedData;
     public uint m_cbAdoptedData;
-    public ACBindings.NetError m_Obj;
+    public ACBindings.Internal.NetError m_Obj;
     public byte m_bObjValid;
 
     // Methods

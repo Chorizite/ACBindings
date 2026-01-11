@@ -1,4 +1,4 @@
-namespace ACBindings.Logger;
+namespace ACBindings.Internal.Logger;
 
 // Logger::LoggingSeverity
 public enum LoggingSeverity : byte

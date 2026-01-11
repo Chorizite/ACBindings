@@ -1,20 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CharAppearanceData
 public unsafe struct CharAppearanceData
 {
     // Members
-    public ACBindings.IDClass___tagDataID base_palette;
-    public ACBindings.IDClass___tagDataID head_object;
-    public ACBindings.IDClass___tagDataID eyes_texture;
-    public ACBindings.IDClass___tagDataID nose_texture;
-    public ACBindings.IDClass___tagDataID mouth_texture;
-    public ACBindings.IDClass___tagDataID default_eyes_texture;
-    public ACBindings.IDClass___tagDataID default_nose_texture;
-    public ACBindings.IDClass___tagDataID default_mouth_texture;
-    public ACBindings.IDClass___tagDataID hair_palette;
-    public ACBindings.IDClass___tagDataID eyes_palette;
-    public ACBindings.IDClass___tagDataID skin_palette;
+    public ACBindings.Internal.IDClass____tagDataID base_palette;
+    public ACBindings.Internal.IDClass____tagDataID head_object;
+    public ACBindings.Internal.IDClass____tagDataID eyes_texture;
+    public ACBindings.Internal.IDClass____tagDataID nose_texture;
+    public ACBindings.Internal.IDClass____tagDataID mouth_texture;
+    public ACBindings.Internal.IDClass____tagDataID default_eyes_texture;
+    public ACBindings.Internal.IDClass____tagDataID default_nose_texture;
+    public ACBindings.Internal.IDClass____tagDataID default_mouth_texture;
+    public ACBindings.Internal.IDClass____tagDataID hair_palette;
+    public ACBindings.Internal.IDClass____tagDataID eyes_palette;
+    public ACBindings.Internal.IDClass____tagDataID skin_palette;
 
     // Generated Constructor
     public CharAppearanceData() {
@@ -22,7 +21,11 @@ public unsafe struct CharAppearanceData
     }
 
     // Methods
-    // void __thiscall CharAppearanceData::CharAppearanceData(CharAppearanceData*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CharAppearanceData, void>)0x004DEDD0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004DEDD0
+    /// void __thiscall CharAppearanceData::CharAppearanceData(CharAppearanceData*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CharAppearanceData, void>)0x004DEDD0)(ref this);
 }
 

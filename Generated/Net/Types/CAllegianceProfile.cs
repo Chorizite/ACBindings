@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CAllegianceProfile
 public unsafe struct CAllegianceProfile
 {
     // Base Classes
-    public ACBindings.AllegianceProfile BaseClass_AllegianceProfile; // ACBindings.AllegianceProfile
+    public ACBindings.Internal.AllegianceProfile BaseClass_AllegianceProfile; // ACBindings.Internal.AllegianceProfile
 
     // Child Types
-    // CAllegianceProfile_vtbl
     public unsafe struct CAllegianceProfile_vtbl
     {
         // Members
-        public System.IntPtr CAllegianceProfile_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceProfile*, void> CAllegianceProfile_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceProfile*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceProfile*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceProfile*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -26,7 +24,11 @@ public unsafe struct CAllegianceProfile
     }
 
     // Methods
-    // void __thiscall CAllegianceProfile::CAllegianceProfile(CAllegianceProfile*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CAllegianceProfile, void>)0x0059A080)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0059A080
+    /// void __thiscall CAllegianceProfile::CAllegianceProfile(CAllegianceProfile*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CAllegianceProfile, void>)0x0059A080)(ref this);
 }
 

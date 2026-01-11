@@ -1,37 +1,33 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DLList<AnimSequenceNode>
-public unsafe struct DLList__AnimSequenceNode
+public unsafe struct DLList___AnimSequenceNode
 {
     // Base Classes
-    public ACBindings.DLListBase BaseClass_DLListBase; // ACBindings.DLListBase
+    public ACBindings.Internal.DLListBase BaseClass_DLListBase; // ACBindings.Internal.DLListBase
 
     // Methods
 }
 
-// DLList<MotionTableManager::AnimNode>
-public unsafe struct DLList__MotionTableManager_AnimNode
+public unsafe struct DLList___MotionTableManager_AnimNode
 {
     // Base Classes
-    public ACBindings.DLListBase BaseClass_DLListBase; // ACBindings.DLListBase
+    public ACBindings.Internal.DLListBase BaseClass_DLListBase; // ACBindings.Internal.DLListBase
 
     // Methods
 }
 
-// DLList<MoveToManager::MovementNode>
-public unsafe struct DLList__MoveToManager_MovementNode
+public unsafe struct DLList___MoveToManager_MovementNode
 {
     // Base Classes
-    public ACBindings.DLListBase BaseClass_DLListBase; // ACBindings.DLListBase
+    public ACBindings.Internal.DLListBase BaseClass_DLListBase; // ACBindings.Internal.DLListBase
 
     // Methods
 }
 
-// DLList<ComponentData>
-public unsafe struct DLList__ComponentData
+public unsafe struct DLList___ComponentData
 {
     // Base Classes
-    public ACBindings.DLListBase BaseClass_DLListBase; // ACBindings.DLListBase
+    public ACBindings.Internal.DLListBase BaseClass_DLListBase; // ACBindings.Internal.DLListBase
 
     // Methods
 }

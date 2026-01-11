@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IDListNode
 public unsafe struct IDListNode
 {
     // Members
     public uint id;
-    public ACBindings.IDListNode* prev;
-    public ACBindings.IDListNode* next;
+    public ACBindings.Internal.IDListNode* prev;
+    public ACBindings.Internal.IDListNode* next;
 
     // Methods
 }

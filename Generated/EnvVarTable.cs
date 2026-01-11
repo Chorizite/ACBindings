@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// EnvVarTable
 public unsafe struct EnvVarTable
 {
     // Methods

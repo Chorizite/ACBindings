@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DBLevelResource
 public unsafe struct DBLevelResource
 {
     // Members
-    public ACBindings.PStringBase__sbyte m_Name;
-    public ACBindings.IDClass___tagDataID m_LevelID;
-    public ACBindings.RenderSurface* m_pResource;
+    public ACBindings.Internal.PStringBase__sbyte m_Name;
+    public ACBindings.Internal.IDClass____tagDataID m_LevelID;
+    public ACBindings.Internal.RenderSurface* m_pResource;
 
     // Methods
 }

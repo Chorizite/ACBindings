@@ -1,30 +1,28 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// MovementReturn
 public unsafe struct MovementReturn
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // MovementReturn_vtbl
     public unsafe struct MovementReturn_vtbl
     {
         // Members
-        public System.IntPtr MovementReturn_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.MovementReturn*, void> MovementReturn_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.MovementReturn*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.MovementReturn*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.MovementReturn*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.MovementParameters params_;
+    public ACBindings.Internal.MovementParameters params_;
     public uint object_id;
     public uint error;
-    public ACBindings.Position position;
+    public ACBindings.Internal.Position position;
     public float object_radius;
     public float object_height;
 

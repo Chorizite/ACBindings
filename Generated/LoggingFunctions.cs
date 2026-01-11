@@ -1,13 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LoggingFunctions
 public unsafe struct LoggingFunctions
 {
     // Members
-    public System.IntPtr pfnRecvLogger; // function pointer
-    public System.IntPtr pfnSendLogger; // function pointer
-    public System.IntPtr pfnUncompressedRecvLogger; // function pointer
-    public System.IntPtr pfnUncompressedSendLogger; // function pointer
+    public delegate* unmanaged[Cdecl]<ACBindings.Internal.PacketInfo*, uint, void> pfnRecvLogger; // function pointer
+    public delegate* unmanaged[Cdecl]<ACBindings.Internal.PacketInfo*, uint, void> pfnSendLogger; // function pointer
+    public delegate* unmanaged[Cdecl]<ACBindings.Internal.PacketInfo*, uint, void> pfnUncompressedRecvLogger; // function pointer
+    public delegate* unmanaged[Cdecl]<ACBindings.Internal.PacketInfo*, uint, void> pfnUncompressedSendLogger; // function pointer
     public uint dwUserLoggingData;
 
     // Methods

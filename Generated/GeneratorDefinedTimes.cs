@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // GeneratorDefinedTimes
 public enum GeneratorDefinedTimes : uint

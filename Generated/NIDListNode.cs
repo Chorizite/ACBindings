@@ -1,7 +1,6 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// NIDListNode<SLandBlock*>
-public unsafe struct NIDListNode__SLandBlock_ptr
+public unsafe struct NIDListNode___SLandBlock_ptr
 {
     // Members
     public System.IntPtr data_;

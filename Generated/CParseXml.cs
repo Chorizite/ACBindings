@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CParseXml
 public unsafe struct CParseXml : System.IDisposable
 {
     // Generated Constructor
@@ -14,11 +13,23 @@ public unsafe struct CParseXml : System.IDisposable
     }
 
     // Methods
-    // void __thiscall CParseXml::CParseXml(CParseXml*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CParseXml, void>)0x00557E40)(ref this);
-    // void __thiscall CParseXml::~CParseXml(CParseXml*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CParseXml, void>)0x00557E60)(ref this);
-    // bool __thiscall CParseXml::Init(CParseXml*)
-    public byte Init() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CParseXml, byte>)0x00557E80)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00557E40
+    /// void __thiscall CParseXml::CParseXml(CParseXml*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CParseXml, void>)0x00557E40)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00557E60
+    /// void __thiscall CParseXml::~CParseXml(CParseXml*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CParseXml, void>)0x00557E60)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00557E80
+    /// bool __thiscall CParseXml::Init(CParseXml*)</code>
+    /// </summary>
+    public byte Init() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CParseXml, byte>)0x00557E80)(ref this);
 }
 

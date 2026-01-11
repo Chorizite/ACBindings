@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // UIElementMessageListenResult
 public enum UIElementMessageListenResult : byte

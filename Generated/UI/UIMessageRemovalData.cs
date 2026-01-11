@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// UIMessageRemovalData
 public unsafe struct UIMessageRemovalData
 {
     // Members
-    public ACBindings.UIListener* pListener;
+    public ACBindings.Internal.UIListener* pListener;
     public System.IntPtr pListenerArray;
 
     // Methods

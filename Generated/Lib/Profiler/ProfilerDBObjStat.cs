@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ProfilerDBObjStat
 public unsafe struct ProfilerDBObjStat
 {
     // Members
     public uint DBType;
-    public ACBindings.PStringBase__sbyte DBTypeName;
+    public ACBindings.Internal.PStringBase__sbyte DBTypeName;
     public uint NumActive;
     public uint NumFree;
     public double LastLocalTimeNotEmpty;

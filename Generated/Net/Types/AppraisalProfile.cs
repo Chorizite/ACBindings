@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AppraisalProfile
 public unsafe struct AppraisalProfile : System.IDisposable
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // AppraisalProfile_vtbl
     public unsafe struct AppraisalProfile_vtbl
     {
         // Members
-        public System.IntPtr AppraisalProfile_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AppraisalProfile*, void> AppraisalProfile_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AppraisalProfile*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AppraisalProfile*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AppraisalProfile*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -97,10 +95,10 @@ public unsafe struct AppraisalProfile : System.IDisposable
 
     // Members
     public int success_flag;
-    public ACBindings.CreatureAppraisalProfile* creature_profile;
-    public ACBindings.HookAppraisalProfile* hook_profile;
-    public ACBindings.WeaponProfile* weapon_profile;
-    public ACBindings.ArmorProfile* armor_profile;
+    public ACBindings.Internal.CreatureAppraisalProfile* creature_profile;
+    public ACBindings.Internal.HookAppraisalProfile* hook_profile;
+    public ACBindings.Internal.WeaponProfile* weapon_profile;
+    public ACBindings.Internal.ArmorProfile* armor_profile;
     public System.IntPtr _intStatsTable;
     public System.IntPtr _int64StatsTable;
     public System.IntPtr _boolStatsTable;
@@ -132,51 +130,143 @@ public unsafe struct AppraisalProfile : System.IDisposable
     }
 
     // Methods
-    // void __thiscall AppraisalProfile::Clear(AppraisalProfile*)
-    public void Clear() => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, void>)0x005B3BB0)(ref this);
-    // int __thiscall AppraisalProfile::InqCreature(AppraisalProfile*,CreatureAppraisalProfile*)
-    public int InqCreature(ACBindings.CreatureAppraisalProfile* cap) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, ACBindings.CreatureAppraisalProfile*, int>)0x005B3CA0)(ref this, cap);
-    // int __thiscall AppraisalProfile::InqIntEnchantmentMod(AppraisalProfile*,unsigned int,int*)
-    public int InqIntEnchantmentMod(uint stype, int* raised) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, uint, int*, int>)0x005B3CC0)(ref this, stype, raised);
-    // int __thiscall AppraisalProfile::InqFloatEnchantmentMod(AppraisalProfile*,unsigned int,int*)
-    public int InqFloatEnchantmentMod(uint stype, int* raised) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, uint, int*, int>)0x005B3D20)(ref this, stype, raised);
-    // int __thiscall AppraisalProfile::IsHookedItemInscribable(AppraisalProfile*)
-    public int IsHookedItemInscribable() => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, int>)0x005B4040)(ref this);
-    // int __thiscall AppraisalProfile::IsHookedItemHealer(AppraisalProfile*)
-    public int IsHookedItemHealer() => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, int>)0x005B4050)(ref this);
-    // int __thiscall AppraisalProfile::IsHookedItemLockpick(AppraisalProfile*)
-    public int IsHookedItemLockpick() => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, int>)0x005B4060)(ref this);
-    // unsigned int __thiscall AppraisalProfile::GetHookedItemValidLocations(AppraisalProfile*)
-    public uint GetHookedItemValidLocations() => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, uint>)0x005B4070)(ref this);
-    // AMMO_TYPE __thiscall AppraisalProfile::GetHookedItemAmmoType(AppraisalProfile*)
-    public ACBindings.AMMO_TYPE GetHookedItemAmmoType() => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, ACBindings.AMMO_TYPE>)0x005B4080)(ref this);
-    // void __thiscall AppraisalProfile::SetPackHeader(AppraisalProfile*,unsigned int*)
-    public void SetPackHeader(uint* bitfield) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, uint*, void>)0x005B4090)(ref this, bitfield);
-    // unsigned int __thiscall AppraisalProfile::pack_size(AppraisalProfile*)
-    public uint pack_size() => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, uint>)0x005B4180)(ref this);
-    // void __thiscall AppraisalProfile::AppraisalProfile(AppraisalProfile*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, void>)0x005B4350)(ref this);
-    // void __thiscall AppraisalProfile::~AppraisalProfile(AppraisalProfile*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, void>)0x005B4390)(ref this);
-    // int __thiscall AppraisalProfile::InqArmor(AppraisalProfile*,ArmorProfile*)
-    public int InqArmor(ACBindings.ArmorProfile* aap) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, ACBindings.ArmorProfile*, int>)0x005B4420)(ref this, aap);
-    // unsigned int __thiscall AppraisalProfile::Pack(AppraisalProfile*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, void**, uint, uint>)0x005B4470)(ref this, addr, size);
-    // int __thiscall AppraisalProfile::InqWeapon(AppraisalProfile*,WeaponProfile*)
-    public int InqWeapon(ACBindings.WeaponProfile* wap) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, ACBindings.WeaponProfile*, int>)0x005B48C0)(ref this, wap);
-    // int __thiscall AppraisalProfile::InqInt(AppraisalProfile*,unsigned int,int*)
-    public int InqInt(uint stype, int* retval) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, uint, int*, int>)0x005B48E0)(ref this, stype, retval);
-    // int __thiscall AppraisalProfile::InqInt64(AppraisalProfile*,unsigned int,__int64*)
-    public int InqInt64(uint stype, long* retval) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, uint, long*, int>)0x005B4910)(ref this, stype, retval);
-    // int __thiscall AppraisalProfile::InqBool(AppraisalProfile*,unsigned int,int*)
-    public int InqBool(uint stype, int* retval) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, uint, int*, int>)0x005B4940)(ref this, stype, retval);
-    // int __thiscall AppraisalProfile::InqFloat(AppraisalProfile*,unsigned int,long double*)
-    public int InqFloat(uint stype, double* retval) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, uint, double*, int>)0x005B4970)(ref this, stype, retval);
-    // int __thiscall AppraisalProfile::InqDataID(_DWORD*,int,_DWORD*)
-    public int InqDataID(int a2, int* a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, int, int*, int>)0x005B49A0)(ref this, a2, a3);
-    // int __thiscall AppraisalProfile::InqString(_DWORD*,int,int*)
-    public int InqString(int a2, int* a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, int, int*, int>)0x005B4A00)(ref this, a2, a3);
-    // int __thiscall AppraisalProfile::UnPack(AppraisalProfile*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AppraisalProfile, void**, uint, int>)0x005B4A30)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005B3BB0
+    /// void __thiscall AppraisalProfile::Clear(AppraisalProfile*)</code>
+    /// </summary>
+    public void Clear() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, void>)0x005B3BB0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005B3CA0
+    /// int __thiscall AppraisalProfile::InqCreature(AppraisalProfile*,CreatureAppraisalProfile*)</code>
+    /// </summary>
+    public int InqCreature(ACBindings.Internal.CreatureAppraisalProfile* cap) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, ACBindings.Internal.CreatureAppraisalProfile*, int>)0x005B3CA0)(ref this, cap);
+
+    /// <summary>
+    /// <code>Offset: 0x005B3CC0
+    /// int __thiscall AppraisalProfile::InqIntEnchantmentMod(AppraisalProfile*,unsigned int,int*)</code>
+    /// </summary>
+    public int InqIntEnchantmentMod(uint stype, int* raised) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, uint, int*, int>)0x005B3CC0)(ref this, stype, raised);
+
+    /// <summary>
+    /// <code>Offset: 0x005B3D20
+    /// int __thiscall AppraisalProfile::InqFloatEnchantmentMod(AppraisalProfile*,unsigned int,int*)</code>
+    /// </summary>
+    public int InqFloatEnchantmentMod(uint stype, int* raised) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, uint, int*, int>)0x005B3D20)(ref this, stype, raised);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4040
+    /// int __thiscall AppraisalProfile::IsHookedItemInscribable(AppraisalProfile*)</code>
+    /// </summary>
+    public int IsHookedItemInscribable() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, int>)0x005B4040)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4050
+    /// int __thiscall AppraisalProfile::IsHookedItemHealer(AppraisalProfile*)</code>
+    /// </summary>
+    public int IsHookedItemHealer() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, int>)0x005B4050)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4060
+    /// int __thiscall AppraisalProfile::IsHookedItemLockpick(AppraisalProfile*)</code>
+    /// </summary>
+    public int IsHookedItemLockpick() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, int>)0x005B4060)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4070
+    /// unsigned int __thiscall AppraisalProfile::GetHookedItemValidLocations(AppraisalProfile*)</code>
+    /// </summary>
+    public uint GetHookedItemValidLocations() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, uint>)0x005B4070)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4080
+    /// AMMO_TYPE __thiscall AppraisalProfile::GetHookedItemAmmoType(AppraisalProfile*)</code>
+    /// </summary>
+    public ACBindings.Internal.AMMO_TYPE GetHookedItemAmmoType() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, ACBindings.Internal.AMMO_TYPE>)0x005B4080)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4090
+    /// void __thiscall AppraisalProfile::SetPackHeader(AppraisalProfile*,unsigned int*)</code>
+    /// </summary>
+    public void SetPackHeader(uint* bitfield) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, uint*, void>)0x005B4090)(ref this, bitfield);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4180
+    /// unsigned int __thiscall AppraisalProfile::pack_size(AppraisalProfile*)</code>
+    /// </summary>
+    public uint pack_size() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, uint>)0x005B4180)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4350
+    /// void __thiscall AppraisalProfile::AppraisalProfile(AppraisalProfile*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, void>)0x005B4350)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4390
+    /// void __thiscall AppraisalProfile::~AppraisalProfile(AppraisalProfile*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, void>)0x005B4390)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4420
+    /// int __thiscall AppraisalProfile::InqArmor(AppraisalProfile*,ArmorProfile*)</code>
+    /// </summary>
+    public int InqArmor(ACBindings.Internal.ArmorProfile* aap) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, ACBindings.Internal.ArmorProfile*, int>)0x005B4420)(ref this, aap);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4470
+    /// unsigned int __thiscall AppraisalProfile::Pack(AppraisalProfile*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, void**, uint, uint>)0x005B4470)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005B48C0
+    /// int __thiscall AppraisalProfile::InqWeapon(AppraisalProfile*,WeaponProfile*)</code>
+    /// </summary>
+    public int InqWeapon(ACBindings.Internal.WeaponProfile* wap) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, ACBindings.Internal.WeaponProfile*, int>)0x005B48C0)(ref this, wap);
+
+    /// <summary>
+    /// <code>Offset: 0x005B48E0
+    /// int __thiscall AppraisalProfile::InqInt(AppraisalProfile*,unsigned int,int*)</code>
+    /// </summary>
+    public int InqInt(uint stype, int* retval) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, uint, int*, int>)0x005B48E0)(ref this, stype, retval);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4910
+    /// int __thiscall AppraisalProfile::InqInt64(AppraisalProfile*,unsigned int,__int64*)</code>
+    /// </summary>
+    public int InqInt64(uint stype, long* retval) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, uint, long*, int>)0x005B4910)(ref this, stype, retval);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4940
+    /// int __thiscall AppraisalProfile::InqBool(AppraisalProfile*,unsigned int,int*)</code>
+    /// </summary>
+    public int InqBool(uint stype, int* retval) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, uint, int*, int>)0x005B4940)(ref this, stype, retval);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4970
+    /// int __thiscall AppraisalProfile::InqFloat(AppraisalProfile*,unsigned int,long double*)</code>
+    /// </summary>
+    public int InqFloat(uint stype, double* retval) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, uint, double*, int>)0x005B4970)(ref this, stype, retval);
+
+    /// <summary>
+    /// <code>Offset: 0x005B49A0
+    /// int __thiscall AppraisalProfile::InqDataID(_DWORD*,int,_DWORD*)</code>
+    /// </summary>
+    public int InqDataID(int a2, int* a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, int, int*, int>)0x005B49A0)(ref this, a2, a3);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4A00
+    /// int __thiscall AppraisalProfile::InqString(_DWORD*,int,int*)</code>
+    /// </summary>
+    public int InqString(int a2, int* a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, int, int*, int>)0x005B4A00)(ref this, a2, a3);
+
+    /// <summary>
+    /// <code>Offset: 0x005B4A30
+    /// int __thiscall AppraisalProfile::UnPack(AppraisalProfile*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AppraisalProfile, void**, uint, int>)0x005B4A30)(ref this, addr, size);
 }
 

@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LIGHTOBJ
 public unsafe struct LIGHTOBJ
 {
     // Members
-    public ACBindings.LIGHTINFO* lightinfo;
-    public ACBindings.Frame global_offset;
+    public ACBindings.Internal.LIGHTINFO* lightinfo;
+    public ACBindings.Internal.Frame global_offset;
     public int state;
 
     // Methods

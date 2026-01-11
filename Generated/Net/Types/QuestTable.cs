@@ -1,27 +1,25 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// QuestTable
 public unsafe struct QuestTable
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // QuestTable_vtbl
     public unsafe struct QuestTable_vtbl
     {
         // Members
-        public System.IntPtr QuestTable_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestTable*, void> QuestTable_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestTable*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestTable*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestTable*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.PackableHashTable__AC1Legacy_CaseInsensitiveStringBase__AC1Legacy_PStringBase__sbyte__QuestProfile _quest_table;
+    public ACBindings.Internal.PackableHashTable___AC1Legacy_CaseInsensitiveStringBase___AC1Legacy_PStringBase__sbyte___QuestProfile _quest_table;
 
     // Methods
 }

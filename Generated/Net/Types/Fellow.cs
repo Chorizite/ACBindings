@@ -1,27 +1,25 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Fellow
 public unsafe struct Fellow : System.IDisposable
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // Fellow_vtbl
     public unsafe struct Fellow_vtbl
     {
         // Members
-        public System.IntPtr Fellow_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Fellow*, void> Fellow_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Fellow*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Fellow*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Fellow*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.AC1Legacy.PStringBase__sbyte _name;
+    public ACBindings.Internal.AC1Legacy.PStringBase__sbyte _name;
     public uint _level;
     public uint _cp_cache;
     public uint _lum_cache;
@@ -37,7 +35,7 @@ public unsafe struct Fellow : System.IDisposable
     public Fellow() {
         _ConstructorInternal();
     }
-    public Fellow(ACBindings.Fellow* rhs) {
+    public Fellow(ACBindings.Internal.Fellow* rhs) {
         _ConstructorInternal(rhs);
     }
 
@@ -47,17 +45,41 @@ public unsafe struct Fellow : System.IDisposable
     }
 
     // Methods
-    // void __thiscall Fellow::~Fellow(Fellow*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Fellow, void>)0x0048ED20)(ref this);
-    // void __thiscall Fellow::Fellow(Fellow*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Fellow, void>)0x005BA9E0)(ref this);
-    // void __thiscall Fellow::Fellow(Fellow*,const Fellow*)
-    public void _ConstructorInternal(ACBindings.Fellow* rhs) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Fellow, ACBindings.Fellow*, void>)0x005BAA30)(ref this, rhs);
-    // unsigned int __thiscall Fellow::GetPackSize(Fellow*)
-    public uint GetPackSize() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Fellow, uint>)0x005BAB30)(ref this);
-    // unsigned int __thiscall Fellow::Pack(Fellow*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Fellow, void**, uint, uint>)0x005BAB50)(ref this, addr, size);
-    // int __thiscall Fellow::UnPack(Fellow*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Fellow, void**, uint, int>)0x005BAC10)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x0048ED20
+    /// void __thiscall Fellow::~Fellow(Fellow*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Fellow, void>)0x0048ED20)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005BA9E0
+    /// void __thiscall Fellow::Fellow(Fellow*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Fellow, void>)0x005BA9E0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005BAA30
+    /// void __thiscall Fellow::Fellow(Fellow*,const Fellow*)</code>
+    /// </summary>
+    public void _ConstructorInternal(ACBindings.Internal.Fellow* rhs) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Fellow, ACBindings.Internal.Fellow*, void>)0x005BAA30)(ref this, rhs);
+
+    /// <summary>
+    /// <code>Offset: 0x005BAB30
+    /// unsigned int __thiscall Fellow::GetPackSize(Fellow*)</code>
+    /// </summary>
+    public uint GetPackSize() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Fellow, uint>)0x005BAB30)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005BAB50
+    /// unsigned int __thiscall Fellow::Pack(Fellow*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Fellow, void**, uint, uint>)0x005BAB50)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005BAC10
+    /// int __thiscall Fellow::UnPack(Fellow*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Fellow, void**, uint, int>)0x005BAC10)(ref this, addr, size);
 }
 

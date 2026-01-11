@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CInvSlotInfo
 public unsafe struct CInvSlotInfo
 {
     // Members

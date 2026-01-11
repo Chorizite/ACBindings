@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ServerSwitchType
 public enum ServerSwitchType : uint

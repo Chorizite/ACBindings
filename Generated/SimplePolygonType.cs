@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // SimplePolygonType
 public enum SimplePolygonType : byte

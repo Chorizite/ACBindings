@@ -1,22 +1,20 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IDataFilter
 public unsafe struct IDataFilter
 {
     // Base Classes
-    public ACBindings.IUnknown BaseClass_IUnknown; // ACBindings.IUnknown
+    public ACBindings.Internal.IUnknown BaseClass_IUnknown; // ACBindings.Internal.IUnknown
 
     // Child Types
-    // IDataFilter_vtbl
     public unsafe struct IDataFilter_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr DoEncode; // function pointer
-        public System.IntPtr DoDecode; // function pointer
-        public System.IntPtr SetEncodingLevel; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDataFilter*, uint, int, byte*, int, byte*, int, int*, int*, uint, int> DoEncode; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDataFilter*, uint, int, byte*, int, byte*, int, int*, int*, uint, int> DoDecode; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDataFilter*, uint, int> SetEncodingLevel; // function pointer
 
         // Methods
     }

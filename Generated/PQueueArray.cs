@@ -1,10 +1,8 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PQueueArray<double,void*>
 public unsafe struct PQueueArray__double__void_ptr
 {
     // Child Types
-    // PQueueArray<double,void*>::PQueueNode
     public unsafe struct PQueueNode
     {
         // Members
@@ -24,11 +22,9 @@ public unsafe struct PQueueArray__double__void_ptr
     // Methods
 }
 
-// PQueueArray<unsigned long,void*>
 public unsafe struct PQueueArray__uint__void_ptr
 {
     // Child Types
-    // PQueueArray<unsigned long,void*>::PQueueNode
     public unsafe struct PQueueNode
     {
         // Members

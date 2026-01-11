@@ -1,4 +1,4 @@
-namespace ACBindings.ProfilerBudget;
+namespace ACBindings.Internal.ProfilerBudget;
 
 // ProfilerBudget::Stat
 public enum Stat : byte

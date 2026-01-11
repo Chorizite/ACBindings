@@ -1,32 +1,18 @@
-namespace ACBindings.AC1Legacy;
-
-// AC1Legacy::PSRefBuffer<char>
+namespace ACBindings.Internal.AC1Legacy;
 public unsafe struct PSRefBuffer__sbyte
 {
-    // Base Classes
-    public ACBindings.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.ReferenceCountTemplate
-
-    // Members
-    public uint m_len;
+    public Turbine_RefCount _ref;
+    public int m_len;
     public uint m_size;
     public uint m_hash;
-    public fixed sbyte m_data[1];
-
-    // Methods
+    public fixed sbyte m_data[512];
 }
 
-// AC1Legacy::PSRefBuffer<unsigned short>
 public unsafe struct PSRefBuffer__ushort
 {
-    // Base Classes
-    public ACBindings.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.ReferenceCountTemplate
-
-    // Members
-    public uint m_len;
+    public Turbine_RefCount _ref;
+    public int m_len;
     public uint m_size;
     public uint m_hash;
-    public fixed ushort m_data[1];
-
-    // Methods
+    public fixed ushort m_data[256];
 }
-

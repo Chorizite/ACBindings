@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// FilenameList
 public unsafe struct FilenameList
 {
     // Members
-    public ACBindings.OldList pathList;
-    public ACBindings.OldList fileList;
+    public ACBindings.Internal.OldList pathList;
+    public ACBindings.Internal.OldList fileList;
     public fixed sbyte fullname[256];
 
     // Methods

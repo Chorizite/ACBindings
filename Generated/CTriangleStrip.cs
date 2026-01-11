@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CTriangleStrip
 public unsafe struct CTriangleStrip : System.IDisposable
 {
     // Members
@@ -13,7 +12,11 @@ public unsafe struct CTriangleStrip : System.IDisposable
     }
 
     // Methods
-    // void __thiscall CTriangleStrip::~CTriangleStrip(CTriangleStrip*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CTriangleStrip, void>)0x00535A70)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00535A70
+    /// void __thiscall CTriangleStrip::~CTriangleStrip(CTriangleStrip*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CTriangleStrip, void>)0x00535A70)(ref this);
 }
 

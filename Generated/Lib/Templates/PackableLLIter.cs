@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PackableLLIter<unsigned long>
 public unsafe struct PackableLLIter__uint
 {
     // Members
@@ -10,8 +9,7 @@ public unsafe struct PackableLLIter__uint
     // Methods
 }
 
-// PackableLLIter<ItemProfile>
-public unsafe struct PackableLLIter__ItemProfile
+public unsafe struct PackableLLIter___ItemProfile
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
@@ -20,8 +18,7 @@ public unsafe struct PackableLLIter__ItemProfile
     // Methods
 }
 
-// PackableLLIter<Enchantment>
-public unsafe struct PackableLLIter__Enchantment
+public unsafe struct PackableLLIter___Enchantment
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
@@ -30,8 +27,7 @@ public unsafe struct PackableLLIter__Enchantment
     // Methods
 }
 
-// PackableLLIter<SalvageResult>
-public unsafe struct PackableLLIter__SalvageResult
+public unsafe struct PackableLLIter___SalvageResult
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
@@ -40,8 +36,7 @@ public unsafe struct PackableLLIter__SalvageResult
     // Methods
 }
 
-// PackableLLIter<ContentProfile>
-public unsafe struct PackableLLIter__ContentProfile
+public unsafe struct PackableLLIter___ContentProfile
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
@@ -50,8 +45,7 @@ public unsafe struct PackableLLIter__ContentProfile
     // Methods
 }
 
-// PackableLLIter<GeneratorProfile>
-public unsafe struct PackableLLIter__GeneratorProfile
+public unsafe struct PackableLLIter___GeneratorProfile
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
@@ -60,8 +54,7 @@ public unsafe struct PackableLLIter__GeneratorProfile
     // Methods
 }
 
-// PackableLLIter<GeneratorQueueNode>
-public unsafe struct PackableLLIter__GeneratorQueueNode
+public unsafe struct PackableLLIter___GeneratorQueueNode
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
@@ -70,8 +63,7 @@ public unsafe struct PackableLLIter__GeneratorQueueNode
     // Methods
 }
 
-// PackableLLIter<EmoteSet>
-public unsafe struct PackableLLIter__EmoteSet
+public unsafe struct PackableLLIter___EmoteSet
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
@@ -80,8 +72,7 @@ public unsafe struct PackableLLIter__EmoteSet
     // Methods
 }
 
-// PackableLLIter<Emote>
-public unsafe struct PackableLLIter__Emote
+public unsafe struct PackableLLIter___Emote
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
@@ -90,8 +81,7 @@ public unsafe struct PackableLLIter__Emote
     // Methods
 }
 
-// PackableLLIter<InventoryPlacement>
-public unsafe struct PackableLLIter__InventoryPlacement
+public unsafe struct PackableLLIter___InventoryPlacement
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
@@ -100,8 +90,7 @@ public unsafe struct PackableLLIter__InventoryPlacement
     // Methods
 }
 
-// PackableLLIter<HousePayment>
-public unsafe struct PackableLLIter__HousePayment
+public unsafe struct PackableLLIter___HousePayment
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
@@ -110,8 +99,7 @@ public unsafe struct PackableLLIter__HousePayment
     // Methods
 }
 
-// PackableLLIter<AC1Legacy::PStringBase<char>>
-public unsafe struct PackableLLIter__AC1Legacy_PStringBase__sbyte
+public unsafe struct PackableLLIter___AC1Legacy_PStringBase__sbyte
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer
@@ -120,8 +108,7 @@ public unsafe struct PackableLLIter__AC1Legacy_PStringBase__sbyte
     // Methods
 }
 
-// PackableLLIter<CreationProfile>
-public unsafe struct PackableLLIter__CreationProfile
+public unsafe struct PackableLLIter___CreationProfile
 {
     // Members
     public System.IntPtr __vftable; // vtable pointer

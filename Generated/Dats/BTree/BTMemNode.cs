@@ -1,15 +1,14 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// BTMemNode
 public unsafe struct BTMemNode
 {
     // Members
     public int time_stamp_lm;
     public byte dirty_fm;
-    public ACBindings.BTMemNode* ahead_pm;
-    public ACBindings.BTMemNode* behind_pm;
+    public ACBindings.Internal.BTMemNode* ahead_pm;
+    public ACBindings.Internal.BTMemNode* behind_pm;
     public int offset_m;
-    public ACBindings.BTNode node_m;
+    public ACBindings.Internal.BTNode node_m;
 
     // Methods
 }

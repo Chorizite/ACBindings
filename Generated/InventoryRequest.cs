@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // InventoryRequest
 public enum InventoryRequest : uint

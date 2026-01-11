@@ -1,27 +1,25 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IBasicAudio
 public unsafe struct IBasicAudio
 {
     // Base Classes
-    public ACBindings.IDispatch BaseClass_IDispatch; // ACBindings.IDispatch
+    public ACBindings.Internal.IDispatch BaseClass_IDispatch; // ACBindings.Internal.IDispatch
 
     // Child Types
-    // IBasicAudio_vtbl
     public unsafe struct IBasicAudio_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr GetTypeInfoCount; // function pointer
-        public System.IntPtr GetTypeInfo; // function pointer
-        public System.IntPtr GetIDsOfNames; // function pointer
-        public System.IntPtr Invoke; // function pointer
-        public System.IntPtr put_Volume; // function pointer
-        public System.IntPtr get_Volume; // function pointer
-        public System.IntPtr put_Balance; // function pointer
-        public System.IntPtr get_Balance; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDispatch*, uint*, int> GetTypeInfoCount; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDispatch*, uint, uint, System.IntPtr, int> GetTypeInfo; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDispatch*, ACBindings.Internal._GUID*, ushort**, uint, uint, int*, int> GetIDsOfNames; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDispatch*, int, ACBindings.Internal._GUID*, uint, ushort, System.IntPtr, System.IntPtr, System.IntPtr, uint*, int> Invoke; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IBasicAudio*, int, int> put_Volume; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IBasicAudio*, int*, int> get_Volume; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IBasicAudio*, int, int> put_Balance; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IBasicAudio*, int*, int> get_Balance; // function pointer
 
         // Methods
     }

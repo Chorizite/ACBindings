@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // _D3DRESOURCETYPE
 public enum _D3DRESOURCETYPE : uint

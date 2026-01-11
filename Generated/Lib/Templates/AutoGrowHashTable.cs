@@ -1,181 +1,161 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AutoGrowHashTable<PStringBase<char>,unsigned long>
-public unsafe struct AutoGrowHashTable__PStringBase__sbyte__uint
+public unsafe struct AutoGrowHashTable___PStringBase__sbyte__uint
 {
     // Base Classes
-    public ACBindings.HashTable__PStringBase__sbyte__uint BaseClass_HashTable; // ACBindings.HashTable__PStringBase__sbyte__uint
+    public ACBindings.Internal.HashTable___PStringBase__sbyte__uint BaseClass_HashTable; // ACBindings.Internal.HashTable___PStringBase__sbyte__uint
 
     // Methods
 }
 
-// AutoGrowHashTable<CaseInsensitiveStringBase<PStringBase<unsigned short>>,long>
-public unsafe struct AutoGrowHashTable__CaseInsensitiveStringBase__PStringBase__ushort__int
+public unsafe struct AutoGrowHashTable___CaseInsensitiveStringBase___PStringBase__ushort__int
 {
     // Base Classes
-    public ACBindings.HashTable__CaseInsensitiveStringBase__PStringBase__ushort__int BaseClass_HashTable; // ACBindings.HashTable__CaseInsensitiveStringBase__PStringBase__ushort__int
+    public ACBindings.Internal.HashTable___CaseInsensitiveStringBase___PStringBase__ushort__int BaseClass_HashTable; // ACBindings.Internal.HashTable___CaseInsensitiveStringBase___PStringBase__ushort__int
 
     // Methods
 }
 
-// AutoGrowHashTable<unsigned short,long>
 public unsafe struct AutoGrowHashTable__ushort__int
 {
     // Base Classes
-    public ACBindings.HashTable__ushort__int BaseClass_HashTable; // ACBindings.HashTable__ushort__int
+    public ACBindings.Internal.HashTable__ushort__int BaseClass_HashTable; // ACBindings.Internal.HashTable__ushort__int
 
     // Methods
 }
 
-// AutoGrowHashTable<IDClass<_tagDataID,32,0>,DBObj*>
-public unsafe struct AutoGrowHashTable__IDClass___tagDataID__DBObj_ptr
+public unsafe struct AutoGrowHashTable___IDClass____tagDataID___DBObj_ptr
 {
     // Base Classes
-    public ACBindings.HashTable__IDClass___tagDataID__DBObj_ptr BaseClass_HashTable; // ACBindings.HashTable__IDClass___tagDataID__DBObj_ptr
+    public ACBindings.Internal.HashTable___IDClass____tagDataID___DBObj_ptr BaseClass_HashTable; // ACBindings.Internal.HashTable___IDClass____tagDataID___DBObj_ptr
 
     // Methods
 }
 
-// AutoGrowHashTable<CaseInsensitiveStringBase<PStringBase<char>>,unsigned long>
-public unsafe struct AutoGrowHashTable__CaseInsensitiveStringBase__PStringBase__sbyte__uint
+public unsafe struct AutoGrowHashTable___CaseInsensitiveStringBase___PStringBase__sbyte__uint
 {
     // Base Classes
-    public ACBindings.HashTable__CaseInsensitiveStringBase__PStringBase__sbyte__uint BaseClass_HashTable; // ACBindings.HashTable__CaseInsensitiveStringBase__PStringBase__sbyte__uint
+    public ACBindings.Internal.HashTable___CaseInsensitiveStringBase___PStringBase__sbyte__uint BaseClass_HashTable; // ACBindings.Internal.HashTable___CaseInsensitiveStringBase___PStringBase__sbyte__uint
 
     // Methods
 }
 
-// AutoGrowHashTable<unsigned long,CaseInsensitiveStringBase<PStringBase<char>>>
-public unsafe struct AutoGrowHashTable__uint__CaseInsensitiveStringBase__PStringBase__sbyte
+public unsafe struct AutoGrowHashTable__uint___CaseInsensitiveStringBase___PStringBase__sbyte
 {
     // Base Classes
-    public ACBindings.HashTable__uint__CaseInsensitiveStringBase__PStringBase__sbyte BaseClass_HashTable; // ACBindings.HashTable__uint__CaseInsensitiveStringBase__PStringBase__sbyte
+    public ACBindings.Internal.HashTable__uint___CaseInsensitiveStringBase___PStringBase__sbyte BaseClass_HashTable; // ACBindings.Internal.HashTable__uint___CaseInsensitiveStringBase___PStringBase__sbyte
 
     // Methods
 }
 
-// AutoGrowHashTable<unsigned long,BaseProperty>
-public unsafe struct AutoGrowHashTable__uint__BaseProperty
+public unsafe struct AutoGrowHashTable__uint___BaseProperty
 {
     // Base Classes
-    public ACBindings.HashTable__uint__BaseProperty BaseClass_HashTable; // ACBindings.HashTable__uint__BaseProperty
+    public ACBindings.Internal.HashTable__uint___BaseProperty BaseClass_HashTable; // ACBindings.Internal.HashTable__uint___BaseProperty
 
     // Methods
 }
 
-// AutoGrowHashTable<unsigned __int64,ImgTex*>
-public unsafe struct AutoGrowHashTable__ulong__ImgTex_ptr
+public unsafe struct AutoGrowHashTable__ulong___ImgTex_ptr
 {
     // Base Classes
-    public ACBindings.HashTable__ulong__ImgTex_ptr BaseClass_HashTable; // ACBindings.HashTable__ulong__ImgTex_ptr
+    public ACBindings.Internal.HashTable__ulong___ImgTex_ptr BaseClass_HashTable; // ACBindings.Internal.HashTable__ulong___ImgTex_ptr
 
     // Methods
 }
 
-// AutoGrowHashTable<unsigned long,SmartArray<UIMessageData,1>>
-public unsafe struct AutoGrowHashTable__uint__SmartArray__UIMessageData
+public unsafe struct AutoGrowHashTable__uint___SmartArray___UIMessageData
 {
     // Base Classes
-    public ACBindings.HashTable__uint__SmartArray__UIMessageData BaseClass_HashTable; // ACBindings.HashTable__uint__SmartArray__UIMessageData
+    public ACBindings.Internal.HashTable__uint___SmartArray___UIMessageData BaseClass_HashTable; // ACBindings.Internal.HashTable__uint___SmartArray___UIMessageData
 
     // Methods
 }
 
-// AutoGrowHashTable<QualifiedDataID,CAsyncGetRequest*>
-public unsafe struct AutoGrowHashTable__QualifiedDataID__CAsyncGetRequest_ptr
+public unsafe struct AutoGrowHashTable___QualifiedDataID___CAsyncGetRequest_ptr
 {
     // Base Classes
-    public ACBindings.HashTable__QualifiedDataID__CAsyncGetRequest_ptr BaseClass_HashTable; // ACBindings.HashTable__QualifiedDataID__CAsyncGetRequest_ptr
+    public ACBindings.Internal.HashTable___QualifiedDataID___CAsyncGetRequest_ptr BaseClass_HashTable; // ACBindings.Internal.HashTable___QualifiedDataID___CAsyncGetRequest_ptr
 
     // Methods
 }
 
-// AutoGrowHashTable<AsyncContext,AsyncCache::CCallbackHandler*>
-public unsafe struct AutoGrowHashTable__AsyncContext__AsyncCache_CCallbackHandler_ptr
+public unsafe struct AutoGrowHashTable___AsyncContext___AsyncCache_CCallbackHandler_ptr
 {
     // Base Classes
-    public ACBindings.HashTable__AsyncContext__AsyncCache_CCallbackHandler_ptr BaseClass_HashTable; // ACBindings.HashTable__AsyncContext__AsyncCache_CCallbackHandler_ptr
+    public ACBindings.Internal.HashTable___AsyncContext___AsyncCache_CCallbackHandler_ptr BaseClass_HashTable; // ACBindings.Internal.HashTable___AsyncContext___AsyncCache_CCallbackHandler_ptr
 
     // Methods
 }
 
-// AutoGrowHashTable<QualifiedDataID,MissingIteration*>
-public unsafe struct AutoGrowHashTable__QualifiedDataID__MissingIteration_ptr
+public unsafe struct AutoGrowHashTable___QualifiedDataID___MissingIteration_ptr
 {
     // Base Classes
-    public ACBindings.HashTable__QualifiedDataID__MissingIteration_ptr BaseClass_HashTable; // ACBindings.HashTable__QualifiedDataID__MissingIteration_ptr
+    public ACBindings.Internal.HashTable___QualifiedDataID___MissingIteration_ptr BaseClass_HashTable; // ACBindings.Internal.HashTable___QualifiedDataID___MissingIteration_ptr
 
     // Methods
 }
 
-// AutoGrowHashTable<Turbine_GUID,Interface*>
-public unsafe struct AutoGrowHashTable__Turbine_GUID__Interface_ptr
+public unsafe struct AutoGrowHashTable___Turbine_GUID___Interface_ptr
 {
     // Base Classes
-    public ACBindings.HashTable__Turbine_GUID__Interface_ptr BaseClass_HashTable; // ACBindings.HashTable__Turbine_GUID__Interface_ptr
+    public ACBindings.Internal.HashTable___Turbine_GUID___Interface_ptr BaseClass_HashTable; // ACBindings.Internal.HashTable___Turbine_GUID___Interface_ptr
 
     // Methods
 }
 
-// AutoGrowHashTable<long,DataHistory::IterationData>
-public unsafe struct AutoGrowHashTable__int__DataHistory_IterationData
+public unsafe struct AutoGrowHashTable__int___DataHistory_IterationData
 {
     // Base Classes
-    public ACBindings.HashTable__int__DataHistory_IterationData BaseClass_HashTable; // ACBindings.HashTable__int__DataHistory_IterationData
+    public ACBindings.Internal.HashTable__int___DataHistory_IterationData BaseClass_HashTable; // ACBindings.Internal.HashTable__int___DataHistory_IterationData
 
     // Methods
 }
 
-// AutoGrowHashTable<QualifiedDataID,long>
-public unsafe struct AutoGrowHashTable__QualifiedDataID__int
+public unsafe struct AutoGrowHashTable___QualifiedDataID__int
 {
     // Base Classes
-    public ACBindings.HashTable__QualifiedDataID__int BaseClass_HashTable; // ACBindings.HashTable__QualifiedDataID__int
+    public ACBindings.Internal.HashTable___QualifiedDataID__int BaseClass_HashTable; // ACBindings.Internal.HashTable___QualifiedDataID__int
 
     // Methods
 }
 
-// AutoGrowHashTable<unsigned long,AutoGrowHashTable<unsigned long,SmartArray<UIMessageData,1>>>
-public unsafe struct AutoGrowHashTable__uint__AutoGrowHashTable__uint__SmartArray__UIMessageData
+public unsafe struct AutoGrowHashTable__uint___AutoGrowHashTable__uint___SmartArray___UIMessageData
 {
     // Base Classes
-    public ACBindings.HashTable__uint__AutoGrowHashTable__uint__SmartArray__UIMessageData BaseClass_HashTable; // ACBindings.HashTable__uint__AutoGrowHashTable__uint__SmartArray__UIMessageData
+    public ACBindings.Internal.HashTable__uint___AutoGrowHashTable__uint___SmartArray___UIMessageData BaseClass_HashTable; // ACBindings.Internal.HashTable__uint___AutoGrowHashTable__uint___SmartArray___UIMessageData
 
     // Methods
 }
 
-// AutoGrowHashTable<unsigned long,SmartArray<UIElement*,1>>
-public unsafe struct AutoGrowHashTable__uint__SmartArray__UIElement_ptr
+public unsafe struct AutoGrowHashTable__uint___SmartArray___UIElement_ptr
 {
     // Base Classes
-    public ACBindings.HashTable__uint__SmartArray__UIElement_ptr BaseClass_HashTable; // ACBindings.HashTable__uint__SmartArray__UIElement_ptr
+    public ACBindings.Internal.HashTable__uint___SmartArray___UIElement_ptr BaseClass_HashTable; // ACBindings.Internal.HashTable__uint___SmartArray___UIElement_ptr
 
     // Methods
 }
 
-// AutoGrowHashTable<CaseInsensitiveStringBase<PStringBase<char>>,TFileEntry*>
-public unsafe struct AutoGrowHashTable__CaseInsensitiveStringBase__PStringBase__sbyte__TFileEntry_ptr
+public unsafe struct AutoGrowHashTable___CaseInsensitiveStringBase___PStringBase__sbyte___TFileEntry_ptr
 {
     // Base Classes
-    public ACBindings.HashTable__CaseInsensitiveStringBase__PStringBase__sbyte__TFileEntry_ptr BaseClass_HashTable; // ACBindings.HashTable__CaseInsensitiveStringBase__PStringBase__sbyte__TFileEntry_ptr
+    public ACBindings.Internal.HashTable___CaseInsensitiveStringBase___PStringBase__sbyte___TFileEntry_ptr BaseClass_HashTable; // ACBindings.Internal.HashTable___CaseInsensitiveStringBase___PStringBase__sbyte___TFileEntry_ptr
 
     // Methods
 }
 
-// AutoGrowHashTable<IDClass<_tagDataID,32,0>,TFileEntry*>
-public unsafe struct AutoGrowHashTable__IDClass___tagDataID__TFileEntry_ptr
+public unsafe struct AutoGrowHashTable___IDClass____tagDataID___TFileEntry_ptr
 {
     // Base Classes
-    public ACBindings.HashTable__IDClass___tagDataID__TFileEntry_ptr BaseClass_HashTable; // ACBindings.HashTable__IDClass___tagDataID__TFileEntry_ptr
+    public ACBindings.Internal.HashTable___IDClass____tagDataID___TFileEntry_ptr BaseClass_HashTable; // ACBindings.Internal.HashTable___IDClass____tagDataID___TFileEntry_ptr
 
     // Methods
 }
 
-// AutoGrowHashTable<unsigned long,TDBTypeEntry*>
-public unsafe struct AutoGrowHashTable__uint__TDBTypeEntry_ptr
+public unsafe struct AutoGrowHashTable__uint___TDBTypeEntry_ptr
 {
     // Base Classes
-    public ACBindings.HashTable__uint__TDBTypeEntry_ptr BaseClass_HashTable; // ACBindings.HashTable__uint__TDBTypeEntry_ptr
+    public ACBindings.Internal.HashTable__uint___TDBTypeEntry_ptr BaseClass_HashTable; // ACBindings.Internal.HashTable__uint___TDBTypeEntry_ptr
 
     // Methods
 }

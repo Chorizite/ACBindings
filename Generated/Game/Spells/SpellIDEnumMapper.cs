@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SpellIDEnumMapper
 public unsafe struct SpellIDEnumMapper
 {
     // Methods

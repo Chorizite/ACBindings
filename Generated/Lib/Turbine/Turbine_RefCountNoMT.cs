@@ -1,17 +1,15 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Turbine_RefCountNoMT
 public unsafe struct Turbine_RefCountNoMT
 {
     // Base Classes
-    public ACBindings.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.ReferenceCountTemplate
+    public ACBindings.Internal.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.Internal.ReferenceCountTemplate
 
     // Child Types
-    // Turbine_RefCountNoMT_vtbl
     public unsafe struct Turbine_RefCountNoMT_vtbl
     {
         // Members
-        public System.IntPtr Turbine_RefCountNoMT_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Turbine_RefCountNoMT*, void> Turbine_RefCountNoMT_dtor_0; // function pointer
 
         // Methods
     }

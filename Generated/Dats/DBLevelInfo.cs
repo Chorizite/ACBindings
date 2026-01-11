@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DBLevelInfo
 public unsafe struct DBLevelInfo : System.IDisposable
 {
     // Members
     public fixed byte m_Resources_Raw[72];
-    public ACBindings.DBLevelResource* m_Resources => (ACBindings.DBLevelResource*)System.Runtime.CompilerServices.Unsafe.AsPointer(ref m_Resources_Raw[0]);
+    public ACBindings.Internal.DBLevelResource* m_Resources => (ACBindings.Internal.DBLevelResource*)System.Runtime.CompilerServices.Unsafe.AsPointer(ref m_Resources_Raw[0]);
 
     // Generated Constructor
     public DBLevelInfo() {
@@ -18,9 +17,17 @@ public unsafe struct DBLevelInfo : System.IDisposable
     }
 
     // Methods
-    // void __thiscall DBLevelInfo::DBLevelInfo(DBLevelInfo*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DBLevelInfo, void>)0x0044C030)(ref this);
-    // void __thiscall DBLevelInfo::~DBLevelInfo(DBLevelInfo*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DBLevelInfo, void>)0x0044C080)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0044C030
+    /// void __thiscall DBLevelInfo::DBLevelInfo(DBLevelInfo*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DBLevelInfo, void>)0x0044C030)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0044C080
+    /// void __thiscall DBLevelInfo::~DBLevelInfo(DBLevelInfo*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DBLevelInfo, void>)0x0044C080)(ref this);
 }
 

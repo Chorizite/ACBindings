@@ -1,24 +1,22 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CClientsideLoginStateHandler
 public unsafe struct CClientsideLoginStateHandler
 {
     // Base Classes
-    public ACBindings.CAsyncStateHandler BaseClass_CAsyncStateHandler; // ACBindings.CAsyncStateHandler
+    public ACBindings.Internal.CAsyncStateHandler BaseClass_CAsyncStateHandler; // ACBindings.Internal.CAsyncStateHandler
 
     // Child Types
-    // CClientsideLoginStateHandler_vtbl
     public unsafe struct CClientsideLoginStateHandler_vtbl
     {
         // Members
-        public System.IntPtr CClientsideLoginStateHandler_dtor_0; // function pointer
-        public System.IntPtr OnContextBegun; // function pointer
-        public System.IntPtr OnStateBegun; // function pointer
-        public System.IntPtr OnStateEnded; // function pointer
-        public System.IntPtr OnContextEnded; // function pointer
-        public System.IntPtr CleanupContextData; // function pointer
-        public System.IntPtr OnStateHandlerInit; // function pointer
-        public System.IntPtr OnStateHandlerDone; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CClientsideLoginStateHandler*, void> CClientsideLoginStateHandler_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CClientsideLoginStateHandler*, ACBindings.Internal.AsyncContext, void> OnContextBegun; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CClientsideLoginStateHandler*, ACBindings.Internal.AsyncContext, void> OnStateBegun; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CClientsideLoginStateHandler*, ACBindings.Internal.AsyncContext, ACBindings.Internal.AsyncStateMachineStatus, void> OnStateEnded; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CClientsideLoginStateHandler*, ACBindings.Internal.AsyncContext, ACBindings.Internal.AsyncStateMachineStatus, void> OnContextEnded; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CClientsideLoginStateHandler*, ACBindings.Internal.AsyncContext, void> CleanupContextData; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CClientsideLoginStateHandler*, void> OnStateHandlerInit; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CClientsideLoginStateHandler*, void> OnStateHandlerDone; // function pointer
 
         // Methods
     }
@@ -30,7 +28,11 @@ public unsafe struct CClientsideLoginStateHandler
     public uint m_idxFailureReason;
 
     // Methods
-    // void __thiscall CClientsideLoginStateHandler::OnStateHandlerInit(CClientsideLoginStateHandler*)
-    public void OnStateHandlerInit() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CClientsideLoginStateHandler, void>)0x00545150)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00545150
+    /// void __thiscall CClientsideLoginStateHandler::OnStateHandlerInit(CClientsideLoginStateHandler*)</code>
+    /// </summary>
+    public void OnStateHandlerInit() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CClientsideLoginStateHandler, void>)0x00545150)(ref this);
 }
 

@@ -1,18 +1,16 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// OSSpecificProfilerUIInfo
 public unsafe struct OSSpecificProfilerUIInfo
 {
     // Child Types
-    // OSSpecificProfilerUIInfo_vtbl
     public unsafe struct OSSpecificProfilerUIInfo_vtbl
     {
         // Members
-        public System.IntPtr FillInOSSpecificInfo; // function pointer
-        public System.IntPtr GetSystemMemoryAllocated; // function pointer
-        public System.IntPtr GetPeakSystemMemoryAllocated; // function pointer
-        public System.IntPtr GetVirtualMemoryReserved; // function pointer
-        public System.IntPtr GetPeakVirtualMemoryReserved; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OSSpecificProfilerUIInfo*, ACBindings.Internal.ProfilerUI*, void> FillInOSSpecificInfo; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OSSpecificProfilerUIInfo*, uint> GetSystemMemoryAllocated; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OSSpecificProfilerUIInfo*, uint> GetPeakSystemMemoryAllocated; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OSSpecificProfilerUIInfo*, uint> GetVirtualMemoryReserved; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OSSpecificProfilerUIInfo*, uint> GetPeakVirtualMemoryReserved; // function pointer
 
         // Methods
     }

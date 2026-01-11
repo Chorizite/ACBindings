@@ -1,4 +1,4 @@
-namespace ACBindings.DBUpdateType;
+namespace ACBindings.Internal.DBUpdateType;
 
 // DBUpdateType::Type
 public enum Type : byte

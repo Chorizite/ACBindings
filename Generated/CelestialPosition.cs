@@ -1,14 +1,13 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CelestialPosition
 public unsafe struct CelestialPosition
 {
     // Members
-    public ACBindings.IDClass___tagDataID gfx_id;
-    public ACBindings.IDClass___tagDataID pes_id;
+    public ACBindings.Internal.IDClass____tagDataID gfx_id;
+    public ACBindings.Internal.IDClass____tagDataID pes_id;
     public float heading;
     public float rotation;
-    public ACBindings.AC1Legacy.Vector3 tex_velocity;
+    public ACBindings.Internal.AC1Legacy.Vector3 tex_velocity;
     public float transparent;
     public float luminosity;
     public float max_bright;

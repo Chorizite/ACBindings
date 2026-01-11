@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // AlphaTestFunc
 public enum AlphaTestFunc : uint

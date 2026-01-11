@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// OldSmartArray<PhysicsScriptData*>
-public unsafe struct OldSmartArray__PhysicsScriptData_ptr
+public unsafe struct OldSmartArray___PhysicsScriptData_ptr
 {
     // Members
-    public ACBindings.PhysicsScriptData** data;
+    public ACBindings.Internal.PhysicsScriptData** data;
     public int grow_size;
     public int mem_size;
     public int num_in_array;

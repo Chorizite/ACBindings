@@ -1,19 +1,17 @@
-namespace ACBindings.Logger;
+namespace ACBindings.Internal.Logger;
 
-// Logger::ILoggingOutputHandler
 public unsafe struct ILoggingOutputHandler
 {
     // Base Classes
-    public ACBindings.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.ReferenceCountTemplate
+    public ACBindings.Internal.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.Internal.ReferenceCountTemplate
 
     // Child Types
-    // Logger::ILoggingOutputHandler_vtbl
     public unsafe struct ILoggingOutputHandler_vtbl
     {
         // Members
-        public System.IntPtr Logger; // function pointer
-        public System.IntPtr Write; // function pointer
-        public System.IntPtr Flush; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Logger.ILoggingOutputHandler*, void> Logger; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Logger.ILoggingOutputHandler*, ACBindings.Internal.Logger.LoggingSeverity, uint, sbyte*, ACBindings.Internal.Logger.LoggerWriteResult> Write; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Logger.ILoggingOutputHandler*, void> Flush; // function pointer
 
         // Methods
     }

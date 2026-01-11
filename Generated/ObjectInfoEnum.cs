@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ObjectInfoEnum
 public enum ObjectInfoEnum : uint

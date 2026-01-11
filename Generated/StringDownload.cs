@@ -1,28 +1,26 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// StringDownload
 public unsafe struct StringDownload
 {
     // Base Classes
-    public ACBindings.AsyncCacheCallback BaseClass_AsyncCacheCallback; // ACBindings.AsyncCacheCallback
+    public ACBindings.Internal.AsyncCacheCallback BaseClass_AsyncCacheCallback; // ACBindings.Internal.AsyncCacheCallback
 
     // Child Types
-    // StringDownload_vtbl
     public unsafe struct StringDownload_vtbl
     {
         // Members
-        public System.IntPtr OnContextFinished; // function pointer
-        public System.IntPtr OnTopLevelRequestFinished; // function pointer
-        public System.IntPtr StringDownload_dtor_8; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.StringDownload*, ACBindings.Internal.AsyncContext, ACBindings.Internal.AsyncResult, uint, void> OnContextFinished; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.StringDownload*, ACBindings.Internal.AsyncContext, ACBindings.Internal.QualifiedDataID, ACBindings.Internal.AsyncResult, uint, int, System.IntPtr, void> OnTopLevelRequestFinished; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.StringDownload*, void> StringDownload_dtor_8; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.StringInfo m_info;
+    public ACBindings.Internal.StringInfo m_info;
     public uint m_fontDIDNum;
     public uint m_fontColorNum;
-    public ACBindings.AsyncContext m_prefetchContext;
+    public ACBindings.Internal.AsyncContext m_prefetchContext;
 
     // Methods
 }

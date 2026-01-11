@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Vector4
 public unsafe struct Vector4
 {
     // Members

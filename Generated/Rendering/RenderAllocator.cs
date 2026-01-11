@@ -1,10 +1,13 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// RenderAllocator
 public unsafe struct RenderAllocator
 {
     // Methods
-    // void* RenderAllocator::AllocateRender()
+
+    /// <summary>
+    /// <code>Offset: 0x0058BF30
+    /// void* RenderAllocator::AllocateRender()</code>
+    /// </summary>
     public static System.IntPtr AllocateRender() => ((delegate* unmanaged[Cdecl]<System.IntPtr>)0x0058BF30)();
 }
 

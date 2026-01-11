@@ -1,38 +1,36 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Scene
 public unsafe struct Scene
 {
     // Base Classes
-    public ACBindings.SerializeUsingPackDBObj BaseClass_SerializeUsingPackDBObj; // ACBindings.SerializeUsingPackDBObj
+    public ACBindings.Internal.SerializeUsingPackDBObj BaseClass_SerializeUsingPackDBObj; // ACBindings.Internal.SerializeUsingPackDBObj
 
     // Child Types
-    // Scene_vtbl
     public unsafe struct Scene_vtbl
     {
         // Members
-        public System.IntPtr IUnknown_QueryInterface; // function pointer
-        public System.IntPtr IUnknown_AddRef; // function pointer
-        public System.IntPtr IUnknown_Release; // function pointer
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr DBObj_dtor_18; // function pointer
-        public System.IntPtr Serialize; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
-        public System.IntPtr InitLoad; // function pointer
-        public System.IntPtr GetSubObjects; // function pointer
-        public System.IntPtr ReleaseSubObjects; // function pointer
-        public System.IntPtr NotifyFidelityLevel; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> DBObj_dtor_18; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> InitLoad; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> GetSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReleaseSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> NotifyFidelityLevel; // function pointer
         public System.IntPtr Refresh;
-        public System.IntPtr CopyInto; // function pointer
-        public System.IntPtr Destroy; // function pointer
-        public System.IntPtr FillDataGraph; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*, byte> CopyInto; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> Destroy; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.IDataGraph*, void> FillDataGraph; // function pointer
         public System.IntPtr SetDID;
-        public System.IntPtr GetDBOType; // function pointer
-        public System.IntPtr Allocate; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, uint> GetDBOType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*> Allocate; // function pointer
         public System.IntPtr SaveToDisk;
-        public System.IntPtr ReloadFromDisk; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReloadFromDisk; // function pointer
 
         // Methods
     }
@@ -40,7 +38,7 @@ public unsafe struct Scene
     // Members
     public uint version;
     public uint num_objects;
-    public ACBindings.ObjectDesc* objects;
+    public ACBindings.Internal.ObjectDesc* objects;
 
     // Generated Constructor
     public Scene(void** a2) {
@@ -48,17 +46,41 @@ public unsafe struct Scene
     }
 
     // Methods
-    // DBObj* __cdecl Scene::Allocator()
-    public static ACBindings.DBObj* Allocator() => ((delegate* unmanaged[Cdecl]<ACBindings.DBObj*>)0x004F7DC0)();
-    // int __thiscall Scene::Scene(int,void**)
-    public int _ConstructorInternal(void** a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Scene, void**, int>)0x005A6FD0)(ref this, a2);
-    // unsigned int __thiscall Scene::GetDBOType(Scene*)
-    public uint GetDBOType() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Scene, uint>)0x005A7000)(ref this);
-    // void __thiscall Scene::Destroy(Scene*)
-    public void Destroy() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Scene, void>)0x005A7350)(ref this);
-    // unsigned int __thiscall Scene::Pack(Scene*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Scene, void**, uint, uint>)0x005A7380)(ref this, addr, size);
-    // int __thiscall Scene::UnPack(Scene*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Scene, void**, uint, int>)0x005A7410)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x004F7DC0
+    /// DBObj* __cdecl Scene::Allocator()</code>
+    /// </summary>
+    public static ACBindings.Internal.DBObj* Allocator() => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.DBObj*>)0x004F7DC0)();
+
+    /// <summary>
+    /// <code>Offset: 0x005A6FD0
+    /// int __thiscall Scene::Scene(int,void**)</code>
+    /// </summary>
+    public int _ConstructorInternal(void** a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Scene, void**, int>)0x005A6FD0)(ref this, a2);
+
+    /// <summary>
+    /// <code>Offset: 0x005A7000
+    /// unsigned int __thiscall Scene::GetDBOType(Scene*)</code>
+    /// </summary>
+    public uint GetDBOType() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Scene, uint>)0x005A7000)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005A7350
+    /// void __thiscall Scene::Destroy(Scene*)</code>
+    /// </summary>
+    public void Destroy() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Scene, void>)0x005A7350)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005A7380
+    /// unsigned int __thiscall Scene::Pack(Scene*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Scene, void**, uint, uint>)0x005A7380)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005A7410
+    /// int __thiscall Scene::UnPack(Scene*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Scene, void**, uint, int>)0x005A7410)(ref this, addr, size);
 }
 

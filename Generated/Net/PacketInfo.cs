@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PacketInfo
 public unsafe struct PacketInfo
 {
     // Child Types
@@ -17,11 +16,11 @@ public unsafe struct PacketInfo
     public System.IntPtr saRemote;
     public uint cbData;
     public void* pvData;
-    public ACBindings._WSABUF* aIOVecs;
+    public ACBindings.Internal._WSABUF* aIOVecs;
     public uint nVecs;
     public uint cbRemote;
-    public ACBindings.PacketInfo.Protocol eProto;
-    public ACBindings._WSABUF iovOldSchool;
+    public ACBindings.Internal.PacketInfo.Protocol eProto;
+    public ACBindings.Internal._WSABUF iovOldSchool;
 
     // Methods
 }

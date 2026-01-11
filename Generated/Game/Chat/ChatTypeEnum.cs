@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ChatTypeEnum
 public enum ChatTypeEnum : uint

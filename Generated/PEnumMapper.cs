@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PEnumMapper
 public unsafe struct PEnumMapper
 {
     // Child Types
@@ -15,10 +14,10 @@ public unsafe struct PEnumMapper
     }
 
     // Members
-    public ACBindings.SmartArray__PEnum m_enum_array;
-    public ACBindings.SmartArray__PAlias m_alias_array;
-    public ACBindings.EnumMapper m_enum_mapper;
-    public ACBindings.AutoGrowHashTable__CaseInsensitiveStringBase__PStringBase__sbyte__uint m_all_mappings;
+    public ACBindings.Internal.SmartArray___PEnum m_enum_array;
+    public ACBindings.Internal.SmartArray___PAlias m_alias_array;
+    public ACBindings.Internal.EnumMapper m_enum_mapper;
+    public ACBindings.Internal.AutoGrowHashTable___CaseInsensitiveStringBase___PStringBase__sbyte__uint m_all_mappings;
     public uint m_nextEnumValue;
     public uint m_inheritance_depth;
     public uint m_numbering_type;

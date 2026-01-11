@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// StopWatchScope
 public unsafe struct StopWatchScope
 {
     // Members
-    public ACBindings.CStopWatch* m_pcWatch;
+    public ACBindings.Internal.CStopWatch* m_pcWatch;
 
     // Methods
 }

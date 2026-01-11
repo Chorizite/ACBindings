@@ -1,19 +1,17 @@
-namespace ACBindings.TurbineDwExceptionFilter;
+namespace ACBindings.Internal.TurbineDwExceptionFilter;
 
-// TurbineDwExceptionFilter::WatsonCrashReportHelper
 public unsafe struct WatsonCrashReportHelper : System.IDisposable
 {
     // Base Classes
-    public ACBindings.CPluginPrototype BaseClass_CPluginPrototype; // ACBindings.CPluginPrototype
+    public ACBindings.Internal.CPluginPrototype BaseClass_CPluginPrototype; // ACBindings.Internal.CPluginPrototype
 
     // Child Types
-    // TurbineDwExceptionFilter::WatsonCrashReportHelper_vtbl
     public unsafe struct WatsonCrashReportHelper_vtbl
     {
         // Members
-        public System.IntPtr TurbineDwExceptionFilter; // function pointer
-        public System.IntPtr OnPluggedIn; // function pointer
-        public System.IntPtr IncludeFileInWatsonUpload; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TurbineDwExceptionFilter.WatsonCrashReportHelper*, void> TurbineDwExceptionFilter; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TurbineDwExceptionFilter.WatsonCrashReportHelper*, ACBindings.Internal.CPluginManager*, void> OnPluggedIn; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TurbineDwExceptionFilter.WatsonCrashReportHelper*, ushort*, uint, int> IncludeFileInWatsonUpload; // function pointer
 
         // Methods
     }
@@ -29,9 +27,17 @@ public unsafe struct WatsonCrashReportHelper : System.IDisposable
     }
 
     // Methods
-    // void __thiscall TurbineDwExceptionFilter::WatsonCrashReportHelper::~WatsonCrashReportHelper(TurbineDwExceptionFilter::WatsonCrashReportHelper*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.TurbineDwExceptionFilter.WatsonCrashReportHelper, void>)0x006B6C70)(ref this);
-    // void __thiscall TurbineDwExceptionFilter::WatsonCrashReportHelper::WatsonCrashReportHelper(TurbineDwExceptionFilter::WatsonCrashReportHelper*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.TurbineDwExceptionFilter.WatsonCrashReportHelper, void>)0x006B6D80)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006B6C70
+    /// void __thiscall TurbineDwExceptionFilter::WatsonCrashReportHelper::~WatsonCrashReportHelper(TurbineDwExceptionFilter::WatsonCrashReportHelper*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TurbineDwExceptionFilter.WatsonCrashReportHelper, void>)0x006B6C70)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006B6D80
+    /// void __thiscall TurbineDwExceptionFilter::WatsonCrashReportHelper::WatsonCrashReportHelper(TurbineDwExceptionFilter::WatsonCrashReportHelper*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TurbineDwExceptionFilter.WatsonCrashReportHelper, void>)0x006B6D80)(ref this);
 }
 

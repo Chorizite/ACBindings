@@ -1,15 +1,18 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CEncounterDesc
 public unsafe struct CEncounterDesc
 {
     // Members
     public uint num_encounter_type;
-    public ACBindings.EncounterType** encounter_table;
+    public ACBindings.Internal.EncounterType** encounter_table;
     public byte* encounter_map;
 
     // Methods
-    // void __thiscall CEncounterDesc::Destroy(CEncounterDesc*)
-    public void Destroy() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CEncounterDesc, void>)0x00503440)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00503440
+    /// void __thiscall CEncounterDesc::Destroy(CEncounterDesc*)</code>
+    /// </summary>
+    public void Destroy() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CEncounterDesc, void>)0x00503440)(ref this);
 }
 

@@ -1,37 +1,33 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IntrusiveHashListIterator<int,CAsyncStateHandler*,1>
-public unsafe struct IntrusiveHashListIterator__int__CAsyncStateHandler_ptr
+public unsafe struct IntrusiveHashListIterator__int___CAsyncStateHandler_ptr
 {
     // Members
-    public ACBindings.CAsyncStateHandler* m_pData;
+    public ACBindings.Internal.CAsyncStateHandler* m_pData;
     public System.IntPtr m_pHashList;
 
     // Methods
 }
 
-// IntrusiveHashListIterator<AsyncContext,CAsyncStateMachine::CAsyncStateData*,1>
-public unsafe struct IntrusiveHashListIterator__AsyncContext__CAsyncStateMachine_CAsyncStateData_ptr
+public unsafe struct IntrusiveHashListIterator___AsyncContext___CAsyncStateMachine_CAsyncStateData_ptr
 {
     // Members
-    public ACBindings.CAsyncStateMachine.CAsyncStateData* m_pData;
+    public ACBindings.Internal.CAsyncStateMachine.CAsyncStateData* m_pData;
     public System.IntPtr m_pHashList;
 
     // Methods
 }
 
-// IntrusiveHashListIterator<IDClass<_tagVersionHandle,32,0>,InArchiveVersionStack::VersionRowHolder*,1>
-public unsafe struct IntrusiveHashListIterator__IDClass___tagVersionHandle__InArchiveVersionStack_VersionRowHolder_ptr
+public unsafe struct IntrusiveHashListIterator___IDClass____tagVersionHandle___InArchiveVersionStack_VersionRowHolder_ptr
 {
     // Members
-    public ACBindings.InArchiveVersionStack.VersionRowHolder* m_pData;
+    public ACBindings.Internal.InArchiveVersionStack.VersionRowHolder* m_pData;
     public System.IntPtr m_pHashList;
 
     // Methods
 }
 
-// IntrusiveHashListIterator<QualifiedControl,HashList<QualifiedControl,unsigned long,1>::HashListData*,1>
-public unsafe struct IntrusiveHashListIterator__QualifiedControl__HashList__QualifiedControl__uint_HashListData_ptr
+public unsafe struct IntrusiveHashListIterator___QualifiedControl___HashList___QualifiedControl__uint_HashListData_ptr
 {
     // Members
     public System.IntPtr m_pData;
@@ -40,8 +36,7 @@ public unsafe struct IntrusiveHashListIterator__QualifiedControl__HashList__Qual
     // Methods
 }
 
-// IntrusiveHashListIterator<ControlSpecification,HashList<ControlSpecification,unsigned long,1>::HashListData*,1>
-public unsafe struct IntrusiveHashListIterator__ControlSpecification__HashList__ControlSpecification__uint_HashListData_ptr
+public unsafe struct IntrusiveHashListIterator___ControlSpecification___HashList___ControlSpecification__uint_HashListData_ptr
 {
     // Members
     public System.IntPtr m_pData;
@@ -50,8 +45,7 @@ public unsafe struct IntrusiveHashListIterator__ControlSpecification__HashList__
     // Methods
 }
 
-// IntrusiveHashListIterator<unsigned long,HashList<unsigned long,CInputMap*,1>::HashListData*,1>
-public unsafe struct IntrusiveHashListIterator__uint__HashList__uint__CInputMap_ptr_HashListData_ptr
+public unsafe struct IntrusiveHashListIterator__uint___HashList__uint___CInputMap_ptr_HashListData_ptr
 {
     // Members
     public System.IntPtr m_pData;
@@ -60,8 +54,7 @@ public unsafe struct IntrusiveHashListIterator__uint__HashList__uint__CInputMap_
     // Methods
 }
 
-// IntrusiveHashListIterator<UIObject*,HashList<UIObject*,UIObject*,1>::HashListData*,1>
-public unsafe struct IntrusiveHashListIterator__UIObject_ptr__HashList__UIObject_ptr__UIObject_ptr_HashListData_ptr
+public unsafe struct IntrusiveHashListIterator___UIObject_ptr___HashList___UIObject_ptr___UIObject_ptr_HashListData_ptr
 {
     // Members
     public System.IntPtr m_pData;
@@ -70,8 +63,7 @@ public unsafe struct IntrusiveHashListIterator__UIObject_ptr__HashList__UIObject
     // Methods
 }
 
-// IntrusiveHashListIterator<UIRegion*,HashList<UIRegion*,UIRegion*,1>::HashListData*,1>
-public unsafe struct IntrusiveHashListIterator__UIRegion_ptr__HashList__UIRegion_ptr__UIRegion_ptr_HashListData_ptr
+public unsafe struct IntrusiveHashListIterator___UIRegion_ptr___HashList___UIRegion_ptr___UIRegion_ptr_HashListData_ptr
 {
     // Members
     public System.IntPtr m_pData;
@@ -80,8 +72,7 @@ public unsafe struct IntrusiveHashListIterator__UIRegion_ptr__HashList__UIRegion
     // Methods
 }
 
-// IntrusiveHashListIterator<unsigned long,HashList<unsigned long,HashList<unsigned long,List<unsigned long>,1>,1>::HashListData*,1>
-public unsafe struct IntrusiveHashListIterator__uint__HashList__uint__HashList__uint__List__uint_HashListData_ptr
+public unsafe struct IntrusiveHashListIterator__uint___HashList__uint___HashList__uint___List__uint_HashListData_ptr
 {
     // Members
     public System.IntPtr m_pData;
@@ -90,8 +81,7 @@ public unsafe struct IntrusiveHashListIterator__uint__HashList__uint__HashList__
     // Methods
 }
 
-// IntrusiveHashListIterator<unsigned long,HashList<unsigned long,HashList<unsigned long,ActionMapValue,1>,1>::HashListData*,1>
-public unsafe struct IntrusiveHashListIterator__uint__HashList__uint__HashList__uint__ActionMapValue_HashListData_ptr
+public unsafe struct IntrusiveHashListIterator__uint___HashList__uint___HashList__uint___ActionMapValue_HashListData_ptr
 {
     // Members
     public System.IntPtr m_pData;
@@ -100,8 +90,7 @@ public unsafe struct IntrusiveHashListIterator__uint__HashList__uint__HashList__
     // Methods
 }
 
-// IntrusiveHashListIterator<unsigned long,HashList<unsigned long,ActionMapValue,1>::HashListData*,1>
-public unsafe struct IntrusiveHashListIterator__uint__HashList__uint__ActionMapValue_HashListData_ptr
+public unsafe struct IntrusiveHashListIterator__uint___HashList__uint___ActionMapValue_HashListData_ptr
 {
     // Members
     public System.IntPtr m_pData;
@@ -110,8 +99,7 @@ public unsafe struct IntrusiveHashListIterator__uint__HashList__uint__ActionMapV
     // Methods
 }
 
-// IntrusiveHashListIterator<unsigned long,HashList<unsigned long,List<unsigned long>,1>::HashListData*,1>
-public unsafe struct IntrusiveHashListIterator__uint__HashList__uint__List__uint_HashListData_ptr
+public unsafe struct IntrusiveHashListIterator__uint___HashList__uint___List__uint_HashListData_ptr
 {
     // Members
     public System.IntPtr m_pData;

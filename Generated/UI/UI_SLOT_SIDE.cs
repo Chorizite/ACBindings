@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // UI_SLOT_SIDE
 public enum UI_SLOT_SIDE : uint

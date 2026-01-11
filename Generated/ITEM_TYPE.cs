@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ITEM_TYPE
 public enum ITEM_TYPE : uint

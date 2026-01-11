@@ -1,56 +1,54 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CSurface
 public unsafe struct CSurface
 {
     // Base Classes
-    public ACBindings.DBObj BaseClass_DBObj; // ACBindings.DBObj
-    public ACBindings.GraphicsResource BaseClass_GraphicsResource; // ACBindings.GraphicsResource
+    public ACBindings.Internal.DBObj BaseClass_DBObj; // ACBindings.Internal.DBObj
+    public ACBindings.Internal.GraphicsResource BaseClass_GraphicsResource; // ACBindings.Internal.GraphicsResource
 
     // Child Types
-    // CSurface_vtbl
     public unsafe struct CSurface_vtbl
     {
         // Members
-        public System.IntPtr IUnknown_QueryInterface; // function pointer
-        public System.IntPtr IUnknown_AddRef; // function pointer
-        public System.IntPtr IUnknown_Release; // function pointer
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr DBObj_dtor_18; // function pointer
-        public System.IntPtr Serialize; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
-        public System.IntPtr InitLoad; // function pointer
-        public System.IntPtr GetSubObjects; // function pointer
-        public System.IntPtr ReleaseSubObjects; // function pointer
-        public System.IntPtr NotifyFidelityLevel; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> DBObj_dtor_18; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> InitLoad; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> GetSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReleaseSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> NotifyFidelityLevel; // function pointer
         public System.IntPtr Refresh;
-        public System.IntPtr CopyInto; // function pointer
-        public System.IntPtr Destroy; // function pointer
-        public System.IntPtr FillDataGraph; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*, byte> CopyInto; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> Destroy; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.IDataGraph*, void> FillDataGraph; // function pointer
         public System.IntPtr SetDID;
-        public System.IntPtr GetDBOType; // function pointer
-        public System.IntPtr Allocate; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, uint> GetDBOType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*> Allocate; // function pointer
         public System.IntPtr SaveToDisk;
-        public System.IntPtr ReloadFromDisk; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReloadFromDisk; // function pointer
 
         // Methods
     }
 
     // Members
     public uint type;
-    public ACBindings.SurfaceHandlerEnum handler;
+    public ACBindings.Internal.SurfaceHandlerEnum handler;
     public uint color_value;
     public int solid_index;
-    public ACBindings.IDClass___tagDataID indexed_texture_id;
-    public ACBindings.ImgTex* base1map;
-    public ACBindings.Palette* base1pal;
+    public ACBindings.Internal.IDClass____tagDataID indexed_texture_id;
+    public ACBindings.Internal.ImgTex* base1map;
+    public ACBindings.Internal.Palette* base1pal;
     public float translucency;
     public float luminosity;
     public float diffuse;
-    public ACBindings.IDClass___tagDataID orig_texture_id;
-    public ACBindings.IDClass___tagDataID orig_palette_id;
+    public ACBindings.Internal.IDClass____tagDataID orig_texture_id;
+    public ACBindings.Internal.IDClass____tagDataID orig_palette_id;
     public float orig_luminosity;
     public float orig_diffuse;
 
@@ -58,60 +56,160 @@ public unsafe struct CSurface
     public CSurface() {
         _ConstructorInternal();
     }
-    public CSurface(ACBindings.CSurface* cs) {
+    public CSurface(ACBindings.Internal.CSurface* cs) {
         _ConstructorInternal(cs);
     }
 
     // Methods
-    // DBObj* __cdecl CSurface::Allocator()
-    public static ACBindings.DBObj* Allocator() => ((delegate* unmanaged[Cdecl]<ACBindings.DBObj*>)0x004F7BB0)();
-    // unsigned int __thiscall CSurface::GetDBOType(CSurface*)
-    public uint GetDBOType() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, uint>)0x00527D70)(ref this);
-    // void __thiscall CSurface::SetPalette(CSurface*,Palette*)
-    public void SetPalette(ACBindings.Palette* palette) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, ACBindings.Palette*, void>)0x00536BE0)(ref this, palette);
-    // void __cdecl CSurface::releaseCustomSurface(CSurface*)
-    public static void releaseCustomSurface(ACBindings.CSurface* surface) => ((delegate* unmanaged[Cdecl]<ACBindings.CSurface*, void>)0x00536C10)(surface);
-    // int __thiscall CSurface::ClearSurface(CSurface*)
-    public int ClearSurface() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, int>)0x00536C20)(ref this);
-    // int __thiscall CSurface::UsePalette(CSurface*,Palette*)
-    public int UsePalette(ACBindings.Palette* pal) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, ACBindings.Palette*, int>)0x00536C60)(ref this, pal);
-    // int __thiscall CSurface::RestorePalette(CSurface*)
-    public int RestorePalette() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, int>)0x00536CA0)(ref this);
-    // int __thiscall CSurface::SetTextureAndPalette(CSurface*,ImgTex*,const Palette*)
-    public int SetTextureAndPalette(ACBindings.ImgTex* texture, ACBindings.Palette* palette) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, ACBindings.ImgTex*, ACBindings.Palette*, int>)0x00536CF0)(ref this, texture, palette);
-    // bool __thiscall CSurface::PurgeResource(CSurface*)
-    public byte PurgeResource() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, byte>)0x00536D70)(ref this);
-    // void __thiscall CSurface::CSurface(CSurface*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, void>)0x00536DA0)(ref this);
-    // void __thiscall CSurface::CSurface(CSurface*,const CSurface*)
-    public void _ConstructorInternal(ACBindings.CSurface* cs) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, ACBindings.CSurface*, void>)0x00536E40)(ref this, cs);
-    // void __thiscall CSurface::Destroy(CSurface*)
-    public void Destroy() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, void>)0x00536F30)(ref this);
-    // CSurface* __cdecl CSurface::makeCustomSurface(SurfaceHandlerEnum)
-    public static ACBindings.CSurface* makeCustomSurface(ACBindings.SurfaceHandlerEnum sh) => ((delegate* unmanaged[Cdecl]<ACBindings.SurfaceHandlerEnum, ACBindings.CSurface*>)0x00536FB0)(sh);
-    // CSurface* __cdecl CSurface::makeCustomSurface(CSurface*)
-    public static ACBindings.CSurface* makeCustomSurface(ACBindings.CSurface* copy_surface) => ((delegate* unmanaged[Cdecl]<ACBindings.CSurface*, ACBindings.CSurface*>)0x00536FF0)(copy_surface);
-    // int __thiscall CSurface::UseTextureMap(int,int,int)
-    public int UseTextureMap(int a2, int a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, int, int, int>)0x00537020)(ref this, a2, a3);
-    // int __thiscall CSurface::UseTextureMap(CSurface*,ImgTex*,SurfaceHandlerEnum)
-    public int UseTextureMap(ACBindings.ImgTex* texture, ACBindings.SurfaceHandlerEnum sh) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, ACBindings.ImgTex*, ACBindings.SurfaceHandlerEnum, int>)0x00537090)(ref this, texture, sh);
-    // _DWORD* __thiscall CSurface::GetOriginalTextureMapID(_DWORD*,_DWORD*)
-    public int* GetOriginalTextureMapID(int* a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, int*, int*>)0x00537120)(ref this, a2);
-    // _DWORD* __thiscall CSurface::GetOriginalPaletteID(_DWORD*,_DWORD*)
-    public int* GetOriginalPaletteID(int* a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, int*, int*>)0x00537130)(ref this, a2);
-    // void __thiscall CSurface::InitEnd(CSurface*,SurfaceInitType)
-    public void InitEnd(ACBindings.SurfaceInitType init_type) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, ACBindings.SurfaceInitType, void>)0x00537140)(ref this, init_type);
-    // bool __thiscall CSurface::RestorePalShiftSurface(CSurface*)
-    public byte RestorePalShiftSurface() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, byte>)0x00537270)(ref this);
-    // void __thiscall CSurface::Serialize(CSurface*,Archive*)
-    public void Serialize(ACBindings.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, ACBindings.Archive*, void>)0x00537330)(ref this, io_archive);
-    // void __thiscall CSurface::GetSubDataIDs(CSurface*,QualifiedDataIDArray*)
-    public void GetSubDataIDs(ACBindings.QualifiedDataIDArray* id_array) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, ACBindings.QualifiedDataIDArray*, void>)0x00537490)(ref this, id_array);
-    // bool __thiscall CSurface::RestoreLostSurface(CSurface*)
-    public byte RestoreLostSurface() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, byte>)0x005374C0)(ref this);
-    // bool __thiscall CSurface::RestoreResource(CSurface*)
-    public byte RestoreResource() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, byte>)0x005375E0)(ref this);
-    // ImgTex* __thiscall CSurface::GetTextureMap(CSurface*)
-    public ACBindings.ImgTex* GetTextureMap() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurface, ACBindings.ImgTex*>)0x0059D4C0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004F7BB0
+    /// DBObj* __cdecl CSurface::Allocator()</code>
+    /// </summary>
+    public static ACBindings.Internal.DBObj* Allocator() => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.DBObj*>)0x004F7BB0)();
+
+    /// <summary>
+    /// <code>Offset: 0x00527D70
+    /// unsigned int __thiscall CSurface::GetDBOType(CSurface*)</code>
+    /// </summary>
+    public uint GetDBOType() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, uint>)0x00527D70)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00536BE0
+    /// void __thiscall CSurface::SetPalette(CSurface*,Palette*)</code>
+    /// </summary>
+    public void SetPalette(ACBindings.Internal.Palette* palette) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, ACBindings.Internal.Palette*, void>)0x00536BE0)(ref this, palette);
+
+    /// <summary>
+    /// <code>Offset: 0x00536C10
+    /// void __cdecl CSurface::releaseCustomSurface(CSurface*)</code>
+    /// </summary>
+    public static void releaseCustomSurface(ACBindings.Internal.CSurface* surface) => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.CSurface*, void>)0x00536C10)(surface);
+
+    /// <summary>
+    /// <code>Offset: 0x00536C20
+    /// int __thiscall CSurface::ClearSurface(CSurface*)</code>
+    /// </summary>
+    public int ClearSurface() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, int>)0x00536C20)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00536C60
+    /// int __thiscall CSurface::UsePalette(CSurface*,Palette*)</code>
+    /// </summary>
+    public int UsePalette(ACBindings.Internal.Palette* pal) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, ACBindings.Internal.Palette*, int>)0x00536C60)(ref this, pal);
+
+    /// <summary>
+    /// <code>Offset: 0x00536CA0
+    /// int __thiscall CSurface::RestorePalette(CSurface*)</code>
+    /// </summary>
+    public int RestorePalette() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, int>)0x00536CA0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00536CF0
+    /// int __thiscall CSurface::SetTextureAndPalette(CSurface*,ImgTex*,const Palette*)</code>
+    /// </summary>
+    public int SetTextureAndPalette(ACBindings.Internal.ImgTex* texture, ACBindings.Internal.Palette* palette) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, ACBindings.Internal.ImgTex*, ACBindings.Internal.Palette*, int>)0x00536CF0)(ref this, texture, palette);
+
+    /// <summary>
+    /// <code>Offset: 0x00536D70
+    /// bool __thiscall CSurface::PurgeResource(CSurface*)</code>
+    /// </summary>
+    public byte PurgeResource() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, byte>)0x00536D70)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00536DA0
+    /// void __thiscall CSurface::CSurface(CSurface*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, void>)0x00536DA0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00536E40
+    /// void __thiscall CSurface::CSurface(CSurface*,const CSurface*)</code>
+    /// </summary>
+    public void _ConstructorInternal(ACBindings.Internal.CSurface* cs) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, ACBindings.Internal.CSurface*, void>)0x00536E40)(ref this, cs);
+
+    /// <summary>
+    /// <code>Offset: 0x00536F30
+    /// void __thiscall CSurface::Destroy(CSurface*)</code>
+    /// </summary>
+    public void Destroy() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, void>)0x00536F30)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00536FB0
+    /// CSurface* __cdecl CSurface::makeCustomSurface(SurfaceHandlerEnum)</code>
+    /// </summary>
+    public static ACBindings.Internal.CSurface* makeCustomSurface(ACBindings.Internal.SurfaceHandlerEnum sh) => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.SurfaceHandlerEnum, ACBindings.Internal.CSurface*>)0x00536FB0)(sh);
+
+    /// <summary>
+    /// <code>Offset: 0x00536FF0
+    /// CSurface* __cdecl CSurface::makeCustomSurface(CSurface*)</code>
+    /// </summary>
+    public static ACBindings.Internal.CSurface* makeCustomSurface(ACBindings.Internal.CSurface* copy_surface) => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.CSurface*, ACBindings.Internal.CSurface*>)0x00536FF0)(copy_surface);
+
+    /// <summary>
+    /// <code>Offset: 0x00537020
+    /// int __thiscall CSurface::UseTextureMap(int,int,int)</code>
+    /// </summary>
+    public int UseTextureMap(int a2, int a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, int, int, int>)0x00537020)(ref this, a2, a3);
+
+    /// <summary>
+    /// <code>Offset: 0x00537090
+    /// int __thiscall CSurface::UseTextureMap(CSurface*,ImgTex*,SurfaceHandlerEnum)</code>
+    /// </summary>
+    public int UseTextureMap(ACBindings.Internal.ImgTex* texture, ACBindings.Internal.SurfaceHandlerEnum sh) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, ACBindings.Internal.ImgTex*, ACBindings.Internal.SurfaceHandlerEnum, int>)0x00537090)(ref this, texture, sh);
+
+    /// <summary>
+    /// <code>Offset: 0x00537120
+    /// _DWORD* __thiscall CSurface::GetOriginalTextureMapID(_DWORD*,_DWORD*)</code>
+    /// </summary>
+    public int* GetOriginalTextureMapID(int* a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, int*, int*>)0x00537120)(ref this, a2);
+
+    /// <summary>
+    /// <code>Offset: 0x00537130
+    /// _DWORD* __thiscall CSurface::GetOriginalPaletteID(_DWORD*,_DWORD*)</code>
+    /// </summary>
+    public int* GetOriginalPaletteID(int* a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, int*, int*>)0x00537130)(ref this, a2);
+
+    /// <summary>
+    /// <code>Offset: 0x00537140
+    /// void __thiscall CSurface::InitEnd(CSurface*,SurfaceInitType)</code>
+    /// </summary>
+    public void InitEnd(ACBindings.Internal.SurfaceInitType init_type) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, ACBindings.Internal.SurfaceInitType, void>)0x00537140)(ref this, init_type);
+
+    /// <summary>
+    /// <code>Offset: 0x00537270
+    /// bool __thiscall CSurface::RestorePalShiftSurface(CSurface*)</code>
+    /// </summary>
+    public byte RestorePalShiftSurface() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, byte>)0x00537270)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00537330
+    /// void __thiscall CSurface::Serialize(CSurface*,Archive*)</code>
+    /// </summary>
+    public void Serialize(ACBindings.Internal.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, ACBindings.Internal.Archive*, void>)0x00537330)(ref this, io_archive);
+
+    /// <summary>
+    /// <code>Offset: 0x00537490
+    /// void __thiscall CSurface::GetSubDataIDs(CSurface*,QualifiedDataIDArray*)</code>
+    /// </summary>
+    public void GetSubDataIDs(ACBindings.Internal.QualifiedDataIDArray* id_array) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, ACBindings.Internal.QualifiedDataIDArray*, void>)0x00537490)(ref this, id_array);
+
+    /// <summary>
+    /// <code>Offset: 0x005374C0
+    /// bool __thiscall CSurface::RestoreLostSurface(CSurface*)</code>
+    /// </summary>
+    public byte RestoreLostSurface() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, byte>)0x005374C0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005375E0
+    /// bool __thiscall CSurface::RestoreResource(CSurface*)</code>
+    /// </summary>
+    public byte RestoreResource() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, byte>)0x005375E0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0059D4C0
+    /// ImgTex* __thiscall CSurface::GetTextureMap(CSurface*)</code>
+    /// </summary>
+    public ACBindings.Internal.ImgTex* GetTextureMap() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurface, ACBindings.Internal.ImgTex*>)0x0059D4C0)(ref this);
 }
 

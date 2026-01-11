@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // MouseLookBehavior
 public enum MouseLookBehavior : byte

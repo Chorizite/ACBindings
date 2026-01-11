@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // PixelFormatID
 public enum PixelFormatID : uint

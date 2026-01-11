@@ -1,23 +1,21 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TransparentHook
 public unsafe struct TransparentHook
 {
     // Base Classes
-    public ACBindings.CAnimHook BaseClass_CAnimHook; // ACBindings.CAnimHook
+    public ACBindings.Internal.CAnimHook BaseClass_CAnimHook; // ACBindings.Internal.CAnimHook
 
     // Child Types
-    // TransparentHook_vtbl
     public unsafe struct TransparentHook_vtbl
     {
         // Members
-        public System.IntPtr TransparentHook_dtor_0; // function pointer
-        public System.IntPtr Execute; // function pointer
-        public System.IntPtr GetType; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
-        public System.IntPtr pack_size; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, void> TransparentHook_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, ACBindings.Internal.CPhysicsObj*, void> Execute; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, int> GetType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, uint> pack_size; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -28,9 +26,17 @@ public unsafe struct TransparentHook
     public float time;
 
     // Methods
-    // void __thiscall TransparentHook::Execute(TransparentHook*,CPhysicsObj*)
-    public void Execute(ACBindings.CPhysicsObj* object_) => ((delegate* unmanaged[Thiscall]<ref ACBindings.TransparentHook, ACBindings.CPhysicsObj*, void>)0x00527830)(ref this, object_);
-    // int __thiscall TransparentHook::GetType(TransparentHook*)
-    public int GetType() => ((delegate* unmanaged[Thiscall]<ref ACBindings.TransparentHook, int>)0x00683760)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00527830
+    /// void __thiscall TransparentHook::Execute(TransparentHook*,CPhysicsObj*)</code>
+    /// </summary>
+    public void Execute(ACBindings.Internal.CPhysicsObj* object_) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TransparentHook, ACBindings.Internal.CPhysicsObj*, void>)0x00527830)(ref this, object_);
+
+    /// <summary>
+    /// <code>Offset: 0x00683760
+    /// int __thiscall TransparentHook::GetType(TransparentHook*)</code>
+    /// </summary>
+    public int GetType() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TransparentHook, int>)0x00683760)(ref this);
 }
 

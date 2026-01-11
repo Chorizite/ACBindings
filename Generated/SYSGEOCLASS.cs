@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // SYSGEOCLASS
 public enum SYSGEOCLASS : byte

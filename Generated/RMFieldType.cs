@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // RMFieldType
 public enum RMFieldType : byte

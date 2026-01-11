@@ -1,15 +1,13 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IAlternateDCProvider
 public unsafe struct IAlternateDCProvider
 {
     // Child Types
-    // IAlternateDCProvider_vtbl
     public unsafe struct IAlternateDCProvider_vtbl
     {
         // Members
-        public System.IntPtr GetDC; // function pointer
-        public System.IntPtr ReleaseDC; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IAlternateDCProvider*, int*, System.IntPtr, byte> GetDC; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IAlternateDCProvider*, System.IntPtr, int*, byte> ReleaseDC; // function pointer
 
         // Methods
     }

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DLLMap
 public unsafe struct DLLMap
 {
     // Members

@@ -1,64 +1,57 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LongHashIter<CPhysicsObj>
-public unsafe struct LongHashIter__CPhysicsObj
+public unsafe struct LongHashIter___CPhysicsObj
 {
     // Base Classes
-    public ACBindings.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.HashBaseIter__uint
+    public ACBindings.Internal.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.Internal.HashBaseIter__uint
 
     // Methods
 }
 
-// LongHashIter<CObjectInventory>
-public unsafe struct LongHashIter__CObjectInventory
+public unsafe struct LongHashIter___CObjectInventory
 {
     // Base Classes
-    public ACBindings.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.HashBaseIter__uint
+    public ACBindings.Internal.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.Internal.HashBaseIter__uint
 
     // Methods
 }
 
-// LongHashIter<CWeenieObject>
-public unsafe struct LongHashIter__CWeenieObject
+public unsafe struct LongHashIter___CWeenieObject
 {
     // Base Classes
-    public ACBindings.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.HashBaseIter__uint
+    public ACBindings.Internal.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.Internal.HashBaseIter__uint
 
     // Methods
 }
 
-// LongHashIter<PlacementType>
-public unsafe struct LongHashIter__PlacementType
+public unsafe struct LongHashIter___PlacementType
 {
     // Base Classes
-    public ACBindings.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.HashBaseIter__uint
+    public ACBindings.Internal.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.Internal.HashBaseIter__uint
 
     // Methods
 }
 
-// LongHashIter<LocationType>
-public unsafe struct LongHashIter__LocationType
+public unsafe struct LongHashIter___LocationType
 {
     // Base Classes
-    public ACBindings.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.HashBaseIter__uint
+    public ACBindings.Internal.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.Internal.HashBaseIter__uint
 
     // Methods
 }
 
-// LongHashIter<MotionData>
-public unsafe struct LongHashIter__MotionData
+public unsafe struct LongHashIter___MotionData
 {
     // Base Classes
-    public ACBindings.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.HashBaseIter__uint
+    public ACBindings.Internal.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.Internal.HashBaseIter__uint
 
     // Methods
 }
 
-// LongHashIter<IconData>
-public unsafe struct LongHashIter__IconData
+public unsafe struct LongHashIter___IconData
 {
     // Base Classes
-    public ACBindings.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.HashBaseIter__uint
+    public ACBindings.Internal.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.Internal.HashBaseIter__uint
 
     // Methods
 }

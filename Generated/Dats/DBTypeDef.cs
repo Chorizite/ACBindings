@@ -1,19 +1,18 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DBTypeDef
 public unsafe struct DBTypeDef
 {
     // Members
-    public ACBindings.IDClass___tagDataID m_base_did;
-    public ACBindings.IDClass___tagDataID m_top_did;
-    public ACBindings.SmartArray__PStringBase__sbyte m_extensions;
+    public ACBindings.Internal.IDClass____tagDataID m_base_did;
+    public ACBindings.Internal.IDClass____tagDataID m_top_did;
+    public ACBindings.Internal.SmartArray___PStringBase__sbyte m_extensions;
     public uint m_packVersion;
-    public ACBindings.DBUpdateType.Type m_updateType;
+    public ACBindings.Internal.DBUpdateType.Type m_updateType;
     public byte m_bHasFile;
     public byte m_bIsPortalType;
     public byte m_bIsCellType;
     public byte m_bIsLocalType;
-    public ACBindings.PStringBase__sbyte m_strDataDir;
+    public ACBindings.Internal.PStringBase__sbyte m_strDataDir;
     public byte m_bIsClientType;
     public byte m_bIsServerType;
     public byte m_bIsEngineType;
@@ -21,20 +20,29 @@ public unsafe struct DBTypeDef
     public byte m_bIsWBEditable;
     public byte m_bIsCategorized;
     public byte m_bForceExpire;
-    public ACBindings.FreelistDef m_freelistDef;
+    public ACBindings.Internal.FreelistDef m_freelistDef;
 
     // Generated Constructor
     public DBTypeDef() {
         _ConstructorInternal();
     }
-    public DBTypeDef(ACBindings.DBTypeDef* that) {
+    public DBTypeDef(ACBindings.Internal.DBTypeDef* that) {
         _ConstructorInternal(that);
     }
 
     // Methods
-    // void __thiscall DBTypeDef::DBTypeDef(DBTypeDef*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DBTypeDef, void>)0x0041C380)(ref this);
-    // void __thiscall DBTypeDef::DBTypeDef(DBTypeDef*,const DBTypeDef*)
-    public void _ConstructorInternal(ACBindings.DBTypeDef* that) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DBTypeDef, ACBindings.DBTypeDef*, void>)0x0041F850)(ref this, that);
+
+    /// <summary>Initializes a DBTypeDef instance with default values, setting identifiers to invalid, clearing extensions and data directory, resetting all type flags, and configuring the freelist with standard parameters.
+    /// <code>Offset: 0x0041C380
+    /// void __thiscall DBTypeDef::DBTypeDef(DBTypeDef*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DBTypeDef, void>)0x0041C380)(ref this);
+
+    /// <summary>Creates a new DBTypeDef by copying all fields from the supplied object, including identifiers, flags, and reference‑counted string resources.
+    /// <code>Offset: 0x0041F850
+    /// void __thiscall DBTypeDef::DBTypeDef(DBTypeDef*,const DBTypeDef*)</code>
+    /// </summary>
+    /// <param name="that">The source DBTypeDef whose data is copied into the new instance.</param>
+    public void _ConstructorInternal(ACBindings.Internal.DBTypeDef* that) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DBTypeDef, ACBindings.Internal.DBTypeDef*, void>)0x0041F850)(ref this, that);
 }
 

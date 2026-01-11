@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DiskTransactInfoResolver
 public unsafe struct DiskTransactInfoResolver
 {
     // Methods

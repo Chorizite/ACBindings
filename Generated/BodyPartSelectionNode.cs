@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// BodyPartSelectionNode
 public unsafe struct BodyPartSelectionNode
 {
     // Members

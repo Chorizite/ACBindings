@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// VertexRange
 public unsafe struct VertexRange
 {
     // Members

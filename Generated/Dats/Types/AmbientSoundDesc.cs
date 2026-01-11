@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AmbientSoundDesc
 public unsafe struct AmbientSoundDesc
 {
     // Members
-    public ACBindings.SoundType stype;
+    public ACBindings.Internal.SoundType stype;
     public int is_continuous;
     public float volume;
     public float base_chance;

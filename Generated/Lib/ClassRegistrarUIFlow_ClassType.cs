@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ClassRegistrarUIFlow_ClassType
 public unsafe struct ClassRegistrarUIFlow_ClassType
 {
     // Methods

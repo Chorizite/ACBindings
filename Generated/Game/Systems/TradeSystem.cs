@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TradeSystem
 public unsafe struct TradeSystem
 {
     // Methods

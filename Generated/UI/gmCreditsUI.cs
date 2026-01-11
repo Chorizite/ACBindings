@@ -1,33 +1,31 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// gmCreditsUI
 public unsafe struct gmCreditsUI : System.IDisposable
 {
     // Base Classes
-    public ACBindings.gmUIMainFramework BaseClass_gmUIMainFramework; // ACBindings.gmUIMainFramework
+    public ACBindings.Internal.gmUIMainFramework BaseClass_gmUIMainFramework; // ACBindings.Internal.gmUIMainFramework
 
     // Child Types
-    // gmCreditsUI_vtbl
     public unsafe struct gmCreditsUI_vtbl
     {
         // Members
-        public System.IntPtr gmCreditsUI_dtor_0; // function pointer
-        public System.IntPtr OnAction; // function pointer
-        public System.IntPtr OnLoseFocus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmCreditsUI*, void> gmCreditsUI_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmCreditsUI*, ACBindings.Internal.InputEvent*, byte> OnAction; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmCreditsUI*, uint, uint, uint, ACBindings.Internal.CallbackLoseFocusResult> OnLoseFocus; // function pointer
         public fixed byte gapC[4];
-        public System.IntPtr ListenToElementMessage; // function pointer
-        public System.IntPtr ListenToGlobalMessage; // function pointer
-        public System.IntPtr CreateAndAddRootElement; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmCreditsUI*, uint, ACBindings.Internal.UIElement*, uint, int, ACBindings.Internal.UIElementMessageListenResult> ListenToElementMessage; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmCreditsUI*, uint, int, void> ListenToGlobalMessage; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmCreditsUI*, uint, uint, ACBindings.Internal.UIElement*> CreateAndAddRootElement; // function pointer
         public System.IntPtr CreateAndAddRootElementByDataID;
-        public System.IntPtr RemoveRootElement; // function pointer
-        public System.IntPtr Show; // function pointer
-        public System.IntPtr Shown; // function pointer
-        public System.IntPtr ForceHidden; // function pointer
-        public System.IntPtr AddChild; // function pointer
-        public System.IntPtr RemoveChild; // function pointer
-        public System.IntPtr FindChild; // function pointer
-        public System.IntPtr SetErrorMsg; // function pointer
-        public System.IntPtr Update; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmCreditsUI*, ACBindings.Internal.UIElement**, void> RemoveRootElement; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmCreditsUI*, byte, void> Show; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmCreditsUI*, byte> Shown; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmCreditsUI*, byte, void> ForceHidden; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmCreditsUI*, ACBindings.Internal.UIChildFramework*, void> AddChild; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmCreditsUI*, ACBindings.Internal.UIChildFramework*, void> RemoveChild; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmCreditsUI*, ACBindings.Internal.UIChildFramework*, int> FindChild; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmCreditsUI*, ACBindings.Internal.StringInfo*, void> SetErrorMsg; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.gmCreditsUI*, void> Update; // function pointer
 
         // Methods
     }
@@ -37,14 +35,14 @@ public unsafe struct gmCreditsUI : System.IDisposable
     public int m_lastPicture;
     public int m_lastX;
     public int m_lastY;
-    public ACBindings.BaseProperty m_pictureProp;
+    public ACBindings.Internal.BaseProperty m_pictureProp;
     public uint m_numPictures;
     public float m_duration;
     public double m_endTime;
-    public ACBindings.SmartArray__UIElement_ptr m_aPictureElements;
-    public ACBindings.UIElement* m_pictureField;
-    public ACBindings.UIElement* m_textField;
-    public ACBindings.UIElement_Text* m_textArea;
+    public ACBindings.Internal.SmartArray___UIElement_ptr m_aPictureElements;
+    public ACBindings.Internal.UIElement* m_pictureField;
+    public ACBindings.Internal.UIElement* m_textField;
+    public ACBindings.Internal.UIElement_Text* m_textArea;
     public byte m_alternate;
 
     // Generated Constructor
@@ -58,31 +56,83 @@ public unsafe struct gmCreditsUI : System.IDisposable
     }
 
     // Methods
-    // void __thiscall gmCreditsUI::ListenToGlobalMessage(gmCreditsUI*,unsigned int,int)
-    public void ListenToGlobalMessage(uint messageID, int data_int) => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmCreditsUI, uint, int, void>)0x004E7AD0)(ref this, messageID, data_int);
-    // IDClass<_tagDataID,32,0>* __thiscall gmCreditsUI::GetNextPictureID(_DWORD*,IDClass<_tagDataID,32,0>*)
-    public ACBindings.IDClass___tagDataID* GetNextPictureID(ACBindings.IDClass___tagDataID* a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmCreditsUI, ACBindings.IDClass___tagDataID*, ACBindings.IDClass___tagDataID*>)0x004E7B00)(ref this, a2);
-    // void __thiscall gmCreditsUI::~gmCreditsUI(gmCreditsUI*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmCreditsUI, void>)0x004E7C50)(ref this);
-    // void __thiscall gmCreditsUI::Initialize(gmCreditsUI*)
-    public void Initialize() => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmCreditsUI, void>)0x004E7D30)(ref this);
-    // void __thiscall gmCreditsUI::gmCreditsUI(gmCreditsUI*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmCreditsUI, void>)0x004E7FA0)(ref this);
-    // UIMainFramework* __cdecl gmCreditsUI::Create()
-    public static ACBindings.UIMainFramework* Create() => ((delegate* unmanaged[Cdecl]<ACBindings.UIMainFramework*>)0x004E8170)();
-    // void __cdecl gmCreditsUI::Register(unsigned int)
+
+    /// <summary>
+    /// <code>Offset: 0x004E7AD0
+    /// void __thiscall gmCreditsUI::ListenToGlobalMessage(gmCreditsUI*,unsigned int,int)</code>
+    /// </summary>
+    public void ListenToGlobalMessage(uint messageID, int data_int) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmCreditsUI, uint, int, void>)0x004E7AD0)(ref this, messageID, data_int);
+
+    /// <summary>
+    /// <code>Offset: 0x004E7B00
+    /// IDClass&lt;_tagDataID,32,0&gt;* __thiscall gmCreditsUI::GetNextPictureID(_DWORD*,IDClass&lt;_tagDataID,32,0&gt;*)</code>
+    /// </summary>
+    public ACBindings.Internal.IDClass____tagDataID* GetNextPictureID(ACBindings.Internal.IDClass____tagDataID* a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmCreditsUI, ACBindings.Internal.IDClass____tagDataID*, ACBindings.Internal.IDClass____tagDataID*>)0x004E7B00)(ref this, a2);
+
+    /// <summary>
+    /// <code>Offset: 0x004E7C50
+    /// void __thiscall gmCreditsUI::~gmCreditsUI(gmCreditsUI*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmCreditsUI, void>)0x004E7C50)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004E7D30
+    /// void __thiscall gmCreditsUI::Initialize(gmCreditsUI*)</code>
+    /// </summary>
+    public void Initialize() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmCreditsUI, void>)0x004E7D30)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004E7FA0
+    /// void __thiscall gmCreditsUI::gmCreditsUI(gmCreditsUI*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmCreditsUI, void>)0x004E7FA0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004E8170
+    /// UIMainFramework* __cdecl gmCreditsUI::Create()</code>
+    /// </summary>
+    public static ACBindings.Internal.UIMainFramework* Create() => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.UIMainFramework*>)0x004E8170)();
+
+    /// <summary>
+    /// <code>Offset: 0x004E8190
+    /// void __cdecl gmCreditsUI::Register(unsigned int)</code>
+    /// </summary>
     public static void Register(uint mode) => ((delegate* unmanaged[Cdecl]<uint, void>)0x004E8190)(mode);
-    // void __thiscall gmCreditsUI::CreateAndAddPicture(gmCreditsUI*)
-    public void CreateAndAddPicture() => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmCreditsUI, void>)0x004E81B0)(ref this);
-    // void __thiscall gmCreditsUI::ScrollPictures(gmCreditsUI*,int)
-    public void ScrollPictures(int pixels) => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmCreditsUI, int, void>)0x004E82A0)(ref this, pixels);
-    // void __thiscall gmCreditsUI::MakePleaseWaitDialog(gmCreditsUI*)
-    public void MakePleaseWaitDialog() => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmCreditsUI, void>)0x004E8380)(ref this);
-    // int __thiscall gmCreditsUI::ScrollText(gmCreditsUI*)
-    public int ScrollText() => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmCreditsUI, int>)0x004E84E0)(ref this);
-    // bool __thiscall gmCreditsUI::OnAction(gmCreditsUI*,const InputEvent*)
-    public byte OnAction(ACBindings.InputEvent* i_evt) => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmCreditsUI, ACBindings.InputEvent*, byte>)0x004E8630)(ref this, i_evt);
-    // void __thiscall gmCreditsUI::Update(gmCreditsUI*)
-    public void Update() => ((delegate* unmanaged[Thiscall]<ref ACBindings.gmCreditsUI, void>)0x004E8660)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004E81B0
+    /// void __thiscall gmCreditsUI::CreateAndAddPicture(gmCreditsUI*)</code>
+    /// </summary>
+    public void CreateAndAddPicture() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmCreditsUI, void>)0x004E81B0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004E82A0
+    /// void __thiscall gmCreditsUI::ScrollPictures(gmCreditsUI*,int)</code>
+    /// </summary>
+    public void ScrollPictures(int pixels) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmCreditsUI, int, void>)0x004E82A0)(ref this, pixels);
+
+    /// <summary>
+    /// <code>Offset: 0x004E8380
+    /// void __thiscall gmCreditsUI::MakePleaseWaitDialog(gmCreditsUI*)</code>
+    /// </summary>
+    public void MakePleaseWaitDialog() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmCreditsUI, void>)0x004E8380)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004E84E0
+    /// int __thiscall gmCreditsUI::ScrollText(gmCreditsUI*)</code>
+    /// </summary>
+    public int ScrollText() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmCreditsUI, int>)0x004E84E0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004E8630
+    /// bool __thiscall gmCreditsUI::OnAction(gmCreditsUI*,const InputEvent*)</code>
+    /// </summary>
+    public byte OnAction(ACBindings.Internal.InputEvent* i_evt) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmCreditsUI, ACBindings.Internal.InputEvent*, byte>)0x004E8630)(ref this, i_evt);
+
+    /// <summary>
+    /// <code>Offset: 0x004E8660
+    /// void __thiscall gmCreditsUI::Update(gmCreditsUI*)</code>
+    /// </summary>
+    public void Update() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.gmCreditsUI, void>)0x004E8660)(ref this);
 }
 

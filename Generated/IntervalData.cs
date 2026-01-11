@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IntervalData
 public unsafe struct IntervalData
 {
     // Members

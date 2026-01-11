@@ -1,21 +1,18 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CCliDatEvent
 public unsafe struct CCliDatEvent
 {
     // Base Classes
-    public ACBindings.NetBlob BaseClass_NetBlob; // ACBindings.NetBlob
+    public ACBindings.Internal.NetBlob BaseClass_NetBlob; // ACBindings.Internal.NetBlob
 
     // Child Types
-    // CCliDatEvent_vtbl
     public unsafe struct CCliDatEvent_vtbl
     {
         // Members
-        public System.IntPtr CCliDatEvent_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CCliDatEvent*, void> CCliDatEvent_dtor_0; // function pointer
 
         // Methods
     }
-    // CCliDatEvent::CDataFormat
     public unsafe struct CDataFormat
     {
         // Members
@@ -30,7 +27,11 @@ public unsafe struct CCliDatEvent
     }
 
     // Methods
-    // void __thiscall CCliDatEvent::CCliDatEvent(CCliDatEvent*,unsigned __int8*,int)
-    public void _ConstructorInternal(byte* pData, int DataLen) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CCliDatEvent, byte*, int, void>)0x005A82F0)(ref this, pData, DataLen);
+
+    /// <summary>
+    /// <code>Offset: 0x005A82F0
+    /// void __thiscall CCliDatEvent::CCliDatEvent(CCliDatEvent*,unsigned __int8*,int)</code>
+    /// </summary>
+    public void _ConstructorInternal(byte* pData, int DataLen) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CCliDatEvent, byte*, int, void>)0x005A82F0)(ref this, pData, DataLen);
 }
 

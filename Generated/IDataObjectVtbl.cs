@@ -1,21 +1,20 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IDataObjectVtbl
 public unsafe struct IDataObjectVtbl
 {
     // Members
-    public System.IntPtr QueryInterface; // function pointer
-    public System.IntPtr AddRef; // function pointer
-    public System.IntPtr Release; // function pointer
-    public System.IntPtr GetData; // function pointer
-    public System.IntPtr GetDataHere; // function pointer
-    public System.IntPtr QueryGetData; // function pointer
-    public System.IntPtr GetCanonicalFormatEtc; // function pointer
-    public System.IntPtr SetData; // function pointer
-    public System.IntPtr EnumFormatEtc; // function pointer
-    public System.IntPtr DAdvise; // function pointer
-    public System.IntPtr DUnadvise; // function pointer
-    public System.IntPtr EnumDAdvise; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDataObject*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDataObject*, uint> AddRef; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDataObject*, uint> Release; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDataObject*, System.IntPtr, System.IntPtr, int> GetData; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDataObject*, System.IntPtr, System.IntPtr, int> GetDataHere; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDataObject*, System.IntPtr, int> QueryGetData; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDataObject*, System.IntPtr, System.IntPtr, int> GetCanonicalFormatEtc; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDataObject*, System.IntPtr, System.IntPtr, int, int> SetData; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDataObject*, uint, System.IntPtr, int> EnumFormatEtc; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDataObject*, System.IntPtr, uint, System.IntPtr, uint*, int> DAdvise; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDataObject*, uint, int> DUnadvise; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDataObject*, System.IntPtr, int> EnumDAdvise; // function pointer
 
     // Methods
 }

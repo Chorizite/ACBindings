@@ -1,54 +1,52 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IKeystoneDocument
 public unsafe struct IKeystoneDocument
 {
     // Base Classes
-    public ACBindings.IKeystoneBaseWindow BaseClass_IKeystoneBaseWindow; // ACBindings.IKeystoneBaseWindow
+    public ACBindings.Internal.IKeystoneBaseWindow BaseClass_IKeystoneBaseWindow; // ACBindings.Internal.IKeystoneBaseWindow
 
     // Child Types
-    // IKeystoneDocument_vtbl
     public unsafe struct IKeystoneDocument_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr NotifyResourceStatus; // function pointer
-        public System.IntPtr GetName; // function pointer
-        public System.IntPtr SendMessageA; // function pointer
-        public System.IntPtr GetParent; // function pointer
-        public System.IntPtr GetFirstChild; // function pointer
-        public System.IntPtr GetNextSibling; // function pointer
-        public System.IntPtr GetRegion; // function pointer
-        public System.IntPtr SetParent; // function pointer
-        public System.IntPtr SetFirstChild; // function pointer
-        public System.IntPtr SetNextSibling; // function pointer
-        public System.IntPtr SetRegion; // function pointer
-        public System.IntPtr Serialize; // function pointer
-        public System.IntPtr SerializeForPrint; // function pointer
-        public System.IntPtr SetFocus; // function pointer
-        public System.IntPtr GetZOrder; // function pointer
-        public System.IntPtr SetZOrder; // function pointer
-        public System.IntPtr IsAbsolute; // function pointer
-        public System.IntPtr GetType; // function pointer
-        public System.IntPtr GetStatus; // function pointer
-        public System.IntPtr GetDocumentSource; // function pointer
-        public System.IntPtr SetASPCallback; // function pointer
-        public System.IntPtr SetSoundCallback; // function pointer
-        public System.IntPtr SetWndProc; // function pointer
-        public System.IntPtr GetASPCallback; // function pointer
-        public System.IntPtr GetSoundCallback; // function pointer
-        public System.IntPtr GetWndProc; // function pointer
-        public System.IntPtr CreateElement; // function pointer
-        public System.IntPtr SetLogicalSurfaceDimensions; // function pointer
-        public System.IntPtr GetLogicalSurfaceDimensions; // function pointer
-        public System.IntPtr GetGet; // function pointer
-        public System.IntPtr GetLayoutArea; // function pointer
-        public System.IntPtr SetLayoutArea; // function pointer
-        public System.IntPtr InsertLineBreak; // function pointer
-        public System.IntPtr AdjustForMargin; // function pointer
-        public System.IntPtr IsInIFrame; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IResourceNotify*, ACBindings.Internal.IResourceNotify*, ACBindings.Internal.KS_STATUS, int> NotifyResourceStatus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IResourceNotify*, ushort*> GetName; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, uint, uint, int, int> SendMessageA; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.IKeystoneBaseWindow*> GetParent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.IKeystoneBaseWindow*> GetFirstChild; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.IKeystoneBaseWindow*> GetNextSibling; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.Region*> GetRegion; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.IKeystoneBaseWindow*, int> SetParent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.IKeystoneBaseWindow*, int> SetFirstChild; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.IKeystoneBaseWindow*, int> SetNextSibling; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.Region*, int> SetRegion; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, System.IntPtr, int> Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, System.IntPtr, int> SerializeForPrint; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, int> SetFocus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, float> GetZOrder; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, float, int> SetZOrder; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, int> IsAbsolute; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.E_BASEWINDOW_TYPE> GetType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, ACBindings.Internal.KS_STATUS> GetStatus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, ACBindings.Internal.IKeystoneResourceKSML*> GetDocumentSource; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, System.IntPtr, void> SetASPCallback; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, System.IntPtr, void> SetSoundCallback; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, System.IntPtr, void> SetWndProc; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, System.IntPtr> GetASPCallback; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, System.IntPtr> GetSoundCallback; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, System.IntPtr> GetWndProc; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, ushort*, ACBindings.Internal.IKeystoneControl**, int> CreateElement; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, ACBindings.Internal.tagRECT*, int> SetLogicalSurfaceDimensions; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, ACBindings.Internal.tagRECT*> GetLogicalSurfaceDimensions; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, ushort*> GetGet; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, ACBindings.Internal.Region*> GetLayoutArea; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, ACBindings.Internal.Region*, void> SetLayoutArea; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, int, void> InsertLineBreak; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, void> AdjustForMargin; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneDocument*, int> IsInIFrame; // function pointer
 
         // Methods
     }

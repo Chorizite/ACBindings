@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ViewIntervalType
 public unsafe struct ViewIntervalType
 {
     // Members

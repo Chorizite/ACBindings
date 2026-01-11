@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ClassRegistrarClient_ClassType
 public unsafe struct ClassRegistrarClient_ClassType
 {
     // Methods

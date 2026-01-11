@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// OrderHdr
 public unsafe struct OrderHdr
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // OrderHdr_vtbl
     public unsafe struct OrderHdr_vtbl
     {
         // Members
-        public System.IntPtr OrderHdr_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OrderHdr*, void> OrderHdr_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OrderHdr*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OrderHdr*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OrderHdr*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -24,9 +22,17 @@ public unsafe struct OrderHdr
     public uint stamp_;
 
     // Methods
-    // unsigned int __thiscall OrderHdr::Pack(OrderHdr*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.OrderHdr, void**, uint, uint>)0x006B4010)(ref this, addr, size);
-    // int __thiscall OrderHdr::UnPack(OrderHdr*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.OrderHdr, void**, uint, int>)0x006B4040)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x006B4010
+    /// unsigned int __thiscall OrderHdr::Pack(OrderHdr*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.OrderHdr, void**, uint, uint>)0x006B4010)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x006B4040
+    /// int __thiscall OrderHdr::UnPack(OrderHdr*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.OrderHdr, void**, uint, int>)0x006B4040)(ref this, addr, size);
 }
 

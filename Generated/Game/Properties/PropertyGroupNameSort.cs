@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PropertyGroupNameSort
 public unsafe struct PropertyGroupNameSort
 {
     // Methods

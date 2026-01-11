@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CSurfaceTriStrips
 public unsafe struct CSurfaceTriStrips : System.IDisposable
 {
     // Members
     public uint surface_index;
     public uint num_strips;
-    public ACBindings.CTriangleStrip* strips;
+    public ACBindings.Internal.CTriangleStrip* strips;
 
     // Generated Dispose
     public void Dispose() {
@@ -14,7 +13,11 @@ public unsafe struct CSurfaceTriStrips : System.IDisposable
     }
 
     // Methods
-    // void __thiscall CSurfaceTriStrips::~CSurfaceTriStrips(CSurfaceTriStrips*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CSurfaceTriStrips, void>)0x00535A30)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00535A30
+    /// void __thiscall CSurfaceTriStrips::~CSurfaceTriStrips(CSurfaceTriStrips*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CSurfaceTriStrips, void>)0x00535A30)(ref this);
 }
 

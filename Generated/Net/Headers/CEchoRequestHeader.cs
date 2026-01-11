@@ -1,18 +1,16 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CEchoRequestHeader
 public unsafe struct CEchoRequestHeader
 {
     // Base Classes
-    public ACBindings.COptionalHeader BaseClass_COptionalHeader; // ACBindings.COptionalHeader
+    public ACBindings.Internal.COptionalHeader BaseClass_COptionalHeader; // ACBindings.Internal.COptionalHeader
 
     // Child Types
-    // CEchoRequestHeader_vtbl
     public unsafe struct CEchoRequestHeader_vtbl
     {
         // Members
-        public System.IntPtr CEchoRequestHeader_dtor_0; // function pointer
-        public System.IntPtr UpdateTimeSensitivePayload; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CEchoRequestHeader*, void> CEchoRequestHeader_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CEchoRequestHeader*, int> UpdateTimeSensitivePayload; // function pointer
 
         // Methods
     }
@@ -21,11 +19,23 @@ public unsafe struct CEchoRequestHeader
     public float m_LocalTime;
 
     // Methods
-    // int __thiscall CEchoRequestHeader::UpdateTimeSensitivePayload(CEchoRequestHeader*)
-    public int UpdateTimeSensitivePayload() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CEchoRequestHeader, int>)0x00547E60)(ref this);
-    // COptionalHeader* __cdecl CEchoRequestHeader::CreateFromData()
-    public static ACBindings.COptionalHeader* CreateFromData() => ((delegate* unmanaged[Cdecl]<ACBindings.COptionalHeader*>)0x005481E0)();
-    // COptionalHeader* __cdecl CEchoRequestHeader::CreateFromStream(CBufferIterator*)
-    public static ACBindings.COptionalHeader* CreateFromStream(ACBindings.CBufferIterator* Buf) => ((delegate* unmanaged[Cdecl]<ACBindings.CBufferIterator*, ACBindings.COptionalHeader*>)0x005ABB50)(Buf);
+
+    /// <summary>
+    /// <code>Offset: 0x00547E60
+    /// int __thiscall CEchoRequestHeader::UpdateTimeSensitivePayload(CEchoRequestHeader*)</code>
+    /// </summary>
+    public int UpdateTimeSensitivePayload() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CEchoRequestHeader, int>)0x00547E60)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005481E0
+    /// COptionalHeader* __cdecl CEchoRequestHeader::CreateFromData()</code>
+    /// </summary>
+    public static ACBindings.Internal.COptionalHeader* CreateFromData() => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.COptionalHeader*>)0x005481E0)();
+
+    /// <summary>
+    /// <code>Offset: 0x005ABB50
+    /// COptionalHeader* __cdecl CEchoRequestHeader::CreateFromStream(CBufferIterator*)</code>
+    /// </summary>
+    public static ACBindings.Internal.COptionalHeader* CreateFromStream(ACBindings.Internal.CBufferIterator* Buf) => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.CBufferIterator*, ACBindings.Internal.COptionalHeader*>)0x005ABB50)(Buf);
 }
 

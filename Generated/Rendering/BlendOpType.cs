@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // BlendOpType
 public enum BlendOpType : uint

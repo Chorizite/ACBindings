@@ -1,23 +1,21 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TextureVelocityPartHook
 public unsafe struct TextureVelocityPartHook
 {
     // Base Classes
-    public ACBindings.CAnimHook BaseClass_CAnimHook; // ACBindings.CAnimHook
+    public ACBindings.Internal.CAnimHook BaseClass_CAnimHook; // ACBindings.Internal.CAnimHook
 
     // Child Types
-    // TextureVelocityPartHook_vtbl
     public unsafe struct TextureVelocityPartHook_vtbl
     {
         // Members
-        public System.IntPtr TextureVelocityPartHook_dtor_0; // function pointer
-        public System.IntPtr Execute; // function pointer
-        public System.IntPtr GetType; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
-        public System.IntPtr pack_size; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TextureVelocityPartHook*, void> TextureVelocityPartHook_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TextureVelocityPartHook*, ACBindings.Internal.CPhysicsObj*, void> Execute; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TextureVelocityPartHook*, int> GetType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TextureVelocityPartHook*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TextureVelocityPartHook*, uint> pack_size; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TextureVelocityPartHook*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TextureVelocityPartHook*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -33,11 +31,23 @@ public unsafe struct TextureVelocityPartHook
     }
 
     // Methods
-    // void __thiscall TextureVelocityPartHook::TextureVelocityPartHook(TextureVelocityPartHook*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.TextureVelocityPartHook, void>)0x005274C0)(ref this);
-    // void __thiscall TextureVelocityPartHook::Execute(TextureVelocityPartHook*,CPhysicsObj*)
-    public void Execute(ACBindings.CPhysicsObj* object_) => ((delegate* unmanaged[Thiscall]<ref ACBindings.TextureVelocityPartHook, ACBindings.CPhysicsObj*, void>)0x00527B50)(ref this, object_);
-    // unsigned int __thiscall TextureVelocityPartHook::Pack(TextureVelocityPartHook*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.TextureVelocityPartHook, void**, uint, uint>)0x00527B70)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005274C0
+    /// void __thiscall TextureVelocityPartHook::TextureVelocityPartHook(TextureVelocityPartHook*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TextureVelocityPartHook, void>)0x005274C0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00527B50
+    /// void __thiscall TextureVelocityPartHook::Execute(TextureVelocityPartHook*,CPhysicsObj*)</code>
+    /// </summary>
+    public void Execute(ACBindings.Internal.CPhysicsObj* object_) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TextureVelocityPartHook, ACBindings.Internal.CPhysicsObj*, void>)0x00527B50)(ref this, object_);
+
+    /// <summary>
+    /// <code>Offset: 0x00527B70
+    /// unsigned int __thiscall TextureVelocityPartHook::Pack(TextureVelocityPartHook*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TextureVelocityPartHook, void**, uint, uint>)0x00527B70)(ref this, addr, size);
 }
 

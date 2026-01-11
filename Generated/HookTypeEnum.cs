@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // HookTypeEnum
 public enum HookTypeEnum : uint

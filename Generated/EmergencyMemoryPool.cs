@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// EmergencyMemoryPool
 public unsafe struct EmergencyMemoryPool
 {
     // Members

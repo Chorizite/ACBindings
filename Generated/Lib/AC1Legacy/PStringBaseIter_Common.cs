@@ -1,10 +1,8 @@
-namespace ACBindings.AC1Legacy;
+namespace ACBindings.Internal.AC1Legacy;
 
-// AC1Legacy::PStringBaseIter_Common<char>
 public unsafe struct PStringBaseIter_Common__sbyte
 {
     // Child Types
-    // AC1Legacy::PStringBaseIter_Common_vtbl<char>
     public unsafe struct PStringBaseIter_Common_vtbl__sbyte
     {
         // Members
@@ -16,7 +14,6 @@ public unsafe struct PStringBaseIter_Common__sbyte
 
         // Methods
     }
-    // AC1Legacy::PStringBaseIter_Common_vtbl<unsigned short>
     public unsafe struct PStringBaseIter_Common_vtbl__ushort
     {
         // Members
@@ -37,7 +34,6 @@ public unsafe struct PStringBaseIter_Common__sbyte
     // Methods
 }
 
-// AC1Legacy::PStringBaseIter_Common<unsigned short>
 public unsafe struct PStringBaseIter_Common__ushort
 {
     // Members

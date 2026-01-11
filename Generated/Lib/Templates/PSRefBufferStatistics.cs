@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PSRefBufferStatistics<unsigned short>
 public unsafe struct PSRefBufferStatistics__ushort
 {
     // Base Classes
-    public ACBindings.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.ReferenceCountTemplate
+    public ACBindings.Internal.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.Internal.ReferenceCountTemplate
 
     // Members
     public uint m_size;
@@ -14,11 +13,10 @@ public unsafe struct PSRefBufferStatistics__ushort
     // Methods
 }
 
-// PSRefBufferStatistics<char>
 public unsafe struct PSRefBufferStatistics__sbyte
 {
     // Base Classes
-    public ACBindings.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.ReferenceCountTemplate
+    public ACBindings.Internal.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.Internal.ReferenceCountTemplate
 
     // Members
     public uint m_size;

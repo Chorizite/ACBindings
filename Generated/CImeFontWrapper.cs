@@ -1,18 +1,16 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CImeFontWrapper
 public unsafe struct CImeFontWrapper
 {
     // Child Types
-    // CImeFontWrapper_vtbl
     public unsafe struct CImeFontWrapper_vtbl
     {
         // Members
-        public System.IntPtr SetHeight; // function pointer
-        public System.IntPtr SetColor; // function pointer
-        public System.IntPtr SetPosition; // function pointer
-        public System.IntPtr GetTextExtent; // function pointer
-        public System.IntPtr DrawTextA; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CImeFontWrapper*, uint, void> SetHeight; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CImeFontWrapper*, uint, void> SetColor; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CImeFontWrapper*, int, int, void> SetPosition; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CImeFontWrapper*, sbyte*, uint*, uint*, void> GetTextExtent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CImeFontWrapper*, sbyte*, void> DrawTextA; // function pointer
 
         // Methods
     }
@@ -22,7 +20,7 @@ public unsafe struct CImeFontWrapper
     public uint m_color;
     public int m_x;
     public int m_y;
-    public ACBindings.Font* m_font;
+    public ACBindings.Internal.Font* m_font;
 
     // Methods
 }

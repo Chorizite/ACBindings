@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// RenderConfig
 public unsafe struct RenderConfig
 {
     // Members
-    public ACBindings.GraphicsDriver m_GraphicsDriver;
+    public ACBindings.Internal.GraphicsDriver m_GraphicsDriver;
 
     // Methods
 }

@@ -1,6 +1,5 @@
-namespace ACBindings.Turbine;
+namespace ACBindings.Internal.Turbine;
 
-// Turbine::InplaceString<4096,char>
 public unsafe struct InplaceString__sbyte
 {
     // Members

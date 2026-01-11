@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// _D3DVECTOR
 public unsafe struct _D3DVECTOR
 {
     // Members

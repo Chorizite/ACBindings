@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// RenderDeviceDisplayInfo
 public unsafe struct RenderDeviceDisplayInfo
 {
     // Members
@@ -9,17 +8,17 @@ public unsafe struct RenderDeviceDisplayInfo
     public byte bMultiSampling;
     public byte bMultiSample_2_Samples;
     public byte bMultiSample_4_Samples;
-    public ACBindings.PixelFormatID pfRenderTargets;
-    public ACBindings.PixelFormatID pfDepthBuffers;
-    public ACBindings.PixelFormatID pfRGBTextures;
-    public ACBindings.PixelFormatID pfARGBTextures;
-    public ACBindings.PixelFormatID pfAlphaTextures;
-    public ACBindings.PixelFormatID pfRGBSurfaces;
-    public ACBindings.PixelFormatID pfARGBSurfaces;
-    public ACBindings.PixelFormatID pfAlphaSurfaces;
-    public ACBindings.PixelFormatID pfLowRGBSurfaces;
-    public ACBindings.PixelFormatID pfLowARGBSurfaces;
-    public ACBindings.PixelFormatID pfLowAlphaSurfaces;
+    public ACBindings.Internal.PixelFormatID pfRenderTargets;
+    public ACBindings.Internal.PixelFormatID pfDepthBuffers;
+    public ACBindings.Internal.PixelFormatID pfRGBTextures;
+    public ACBindings.Internal.PixelFormatID pfARGBTextures;
+    public ACBindings.Internal.PixelFormatID pfAlphaTextures;
+    public ACBindings.Internal.PixelFormatID pfRGBSurfaces;
+    public ACBindings.Internal.PixelFormatID pfARGBSurfaces;
+    public ACBindings.Internal.PixelFormatID pfAlphaSurfaces;
+    public ACBindings.Internal.PixelFormatID pfLowRGBSurfaces;
+    public ACBindings.Internal.PixelFormatID pfLowARGBSurfaces;
+    public ACBindings.Internal.PixelFormatID pfLowAlphaSurfaces;
 
     // Methods
 }

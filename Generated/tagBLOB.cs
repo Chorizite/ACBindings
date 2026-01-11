@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// tagBLOB
 public unsafe struct tagBLOB
 {
     // Members

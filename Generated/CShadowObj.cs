@@ -1,28 +1,30 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CShadowObj
 public unsafe struct CShadowObj
 {
     // Base Classes
-    public ACBindings.LongHashData BaseClass_LongHashData; // ACBindings.LongHashData
+    public ACBindings.Internal.LongHashData BaseClass_LongHashData; // ACBindings.Internal.LongHashData
 
     // Child Types
-    // CShadowObj_vtbl
     public unsafe struct CShadowObj_vtbl
     {
         // Members
-        public System.IntPtr CShadowObj_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CShadowObj*, void> CShadowObj_dtor_0; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.CPhysicsObj* physobj;
+    public ACBindings.Internal.CPhysicsObj* physobj;
     public uint cell_id;
-    public ACBindings.CObjCell* cell;
+    public ACBindings.Internal.CObjCell* cell;
 
     // Methods
-    // void __thiscall CShadowObj::set_physobj(CShadowObj*,CPhysicsObj*)
-    public void set_physobj(ACBindings.CPhysicsObj* physobj) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CShadowObj, ACBindings.CPhysicsObj*, void>)0x0051C660)(ref this, physobj);
+
+    /// <summary>
+    /// <code>Offset: 0x0051C660
+    /// void __thiscall CShadowObj::set_physobj(CShadowObj*,CPhysicsObj*)</code>
+    /// </summary>
+    public void set_physobj(ACBindings.Internal.CPhysicsObj* physobj) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CShadowObj, ACBindings.Internal.CPhysicsObj*, void>)0x0051C660)(ref this, physobj);
 }
 

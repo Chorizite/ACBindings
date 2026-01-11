@@ -1,21 +1,18 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CChatEvent
 public unsafe struct CChatEvent
 {
     // Base Classes
-    public ACBindings.CCliDatEvent BaseClass_CCliDatEvent; // ACBindings.CCliDatEvent
+    public ACBindings.Internal.CCliDatEvent BaseClass_CCliDatEvent; // ACBindings.Internal.CCliDatEvent
 
     // Child Types
-    // CChatEvent_vtbl
     public unsafe struct CChatEvent_vtbl
     {
         // Members
-        public System.IntPtr CChatEvent_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CChatEvent*, void> CChatEvent_dtor_0; // function pointer
 
         // Methods
     }
-    // CChatEvent::CDataFormat
     public unsafe struct CDataFormat
     {
         // Members
@@ -26,7 +23,11 @@ public unsafe struct CChatEvent
     }
 
     // Methods
-    // NetBlob* __cdecl CChatEvent::CreateForSend(const unsigned __int8*,unsigned int)
-    public static ACBindings.NetBlob* CreateForSend(byte* pChatData, uint DataLen) => ((delegate* unmanaged[Cdecl]<byte*, uint, ACBindings.NetBlob*>)0x00556F70)(pChatData, DataLen);
+
+    /// <summary>
+    /// <code>Offset: 0x00556F70
+    /// NetBlob* __cdecl CChatEvent::CreateForSend(const unsigned __int8*,unsigned int)</code>
+    /// </summary>
+    public static ACBindings.Internal.NetBlob* CreateForSend(byte* pChatData, uint DataLen) => ((delegate* unmanaged[Cdecl]<byte*, uint, ACBindings.Internal.NetBlob*>)0x00556F70)(pChatData, DataLen);
 }
 

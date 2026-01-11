@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// HashBaseData<unsigned long>
 public unsafe struct HashBaseData__uint
 {
     // Members
@@ -11,7 +10,6 @@ public unsafe struct HashBaseData__uint
     // Methods
 }
 
-// HashBaseData<unsigned __int64>
 public unsafe struct HashBaseData__ulong
 {
     // Members

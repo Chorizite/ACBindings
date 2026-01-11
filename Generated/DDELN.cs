@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DDELN
 public unsafe struct DDELN
 {
     // Members

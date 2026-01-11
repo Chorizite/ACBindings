@@ -1,17 +1,15 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// InputMapList
 public unsafe struct InputMapList
 {
     // Base Classes
-    public ACBindings.List__uint BaseClass_List; // ACBindings.List__uint
+    public ACBindings.Internal.List__uint BaseClass_List; // ACBindings.Internal.List__uint
 
     // Child Types
-    // InputMapList_vtbl
     public unsafe struct InputMapList_vtbl
     {
         // Members
-        public System.IntPtr InputMapList_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.InputMapList*, void> InputMapList_dtor_0; // function pointer
 
         // Methods
     }

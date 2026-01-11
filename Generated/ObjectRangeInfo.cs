@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ObjectRangeInfo
 public unsafe struct ObjectRangeInfo
 {
     // Members
-    public ACBindings.ObjectRangeHandler* m_handler;
+    public ACBindings.Internal.ObjectRangeHandler* m_handler;
     public uint m_objectID;
     public double m_range;
     public byte m_useRadii;

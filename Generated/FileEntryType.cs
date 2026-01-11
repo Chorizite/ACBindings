@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // FileEntryType
 public enum FileEntryType : byte

@@ -1,9 +1,13 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// MouseHitTester<MouseOverCriteria>
-public unsafe struct MouseHitTester__MouseOverCriteria
+public unsafe struct MouseHitTester___MouseOverCriteria
 {
     // Methods
-    // MouseHitTester<MouseOverCriteria>::Recurse (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x00459490
+    /// bool __cdecl MouseHitTester&lt;MouseOverCriteria&gt;::Recurse(UIElement*,int,int,UIElement**)</code>
+    /// </summary>
+    // bool __cdecl MouseHitTester<MouseOverCriteria>::Recurse(UIElement*,int,int,UIElement**) (template type method)
 }
 

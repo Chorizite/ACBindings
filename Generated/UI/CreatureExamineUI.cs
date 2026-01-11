@@ -1,30 +1,36 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CreatureExamineUI
 public unsafe struct CreatureExamineUI
 {
     // Base Classes
-    public ACBindings.BasicCreatureExamineUI BaseClass_BasicCreatureExamineUI; // ACBindings.BasicCreatureExamineUI
+    public ACBindings.Internal.BasicCreatureExamineUI BaseClass_BasicCreatureExamineUI; // ACBindings.Internal.BasicCreatureExamineUI
 
     // Child Types
-    // CreatureExamineUI_vtbl
     public unsafe struct CreatureExamineUI_vtbl
     {
         // Members
-        public System.IntPtr Init; // function pointer
-        public System.IntPtr SetAppraiseInfo; // function pointer
-        public System.IntPtr Show; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CreatureExamineUI*, uint, ACBindings.Internal.ACCWeenieObject*, void> Init; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CreatureExamineUI*, ACBindings.Internal.AppraisalProfile*, int, void> SetAppraiseInfo; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CreatureExamineUI*, byte, void> Show; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.UIElement_Text* m_creatureDisplayName;
+    public ACBindings.Internal.UIElement_Text* m_creatureDisplayName;
 
     // Methods
-    // void __thiscall CreatureExamineUI::Show(CreatureExamineUI*,bool)
-    public void Show(byte shown) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CreatureExamineUI, byte, void>)0x004AB920)(ref this, shown);
-    // void __thiscall CreatureExamineUI::SetAppraiseInfo(CreatureExamineUI*,const AppraisalProfile*,int)
-    public void SetAppraiseInfo(ACBindings.AppraisalProfile* prof, int is_new) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CreatureExamineUI, ACBindings.AppraisalProfile*, int, void>)0x004B4690)(ref this, prof, is_new);
+
+    /// <summary>
+    /// <code>Offset: 0x004AB920
+    /// void __thiscall CreatureExamineUI::Show(CreatureExamineUI*,bool)</code>
+    /// </summary>
+    public void Show(byte shown) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CreatureExamineUI, byte, void>)0x004AB920)(ref this, shown);
+
+    /// <summary>
+    /// <code>Offset: 0x004B4690
+    /// void __thiscall CreatureExamineUI::SetAppraiseInfo(CreatureExamineUI*,const AppraisalProfile*,int)</code>
+    /// </summary>
+    public void SetAppraiseInfo(ACBindings.Internal.AppraisalProfile* prof, int is_new) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CreatureExamineUI, ACBindings.Internal.AppraisalProfile*, int, void>)0x004B4690)(ref this, prof, is_new);
 }
 

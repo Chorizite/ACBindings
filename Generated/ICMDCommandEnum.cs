@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ICMDCommandEnum
 public enum ICMDCommandEnum : uint

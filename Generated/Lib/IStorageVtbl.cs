@@ -1,27 +1,26 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IStorageVtbl
 public unsafe struct IStorageVtbl
 {
     // Members
-    public System.IntPtr QueryInterface; // function pointer
-    public System.IntPtr AddRef; // function pointer
-    public System.IntPtr Release; // function pointer
-    public System.IntPtr CreateStream; // function pointer
-    public System.IntPtr OpenStream; // function pointer
-    public System.IntPtr CreateStorage; // function pointer
-    public System.IntPtr OpenStorage; // function pointer
-    public System.IntPtr CopyTo; // function pointer
-    public System.IntPtr MoveElementTo; // function pointer
-    public System.IntPtr Commit; // function pointer
-    public System.IntPtr Revert; // function pointer
-    public System.IntPtr EnumElements; // function pointer
-    public System.IntPtr DestroyElement; // function pointer
-    public System.IntPtr RenameElement; // function pointer
-    public System.IntPtr SetElementTimes; // function pointer
-    public System.IntPtr SetClass; // function pointer
-    public System.IntPtr SetStateBits; // function pointer
-    public System.IntPtr Stat; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, uint> AddRef; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, uint> Release; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, ushort*, uint, uint, uint, ACBindings.Internal.IStream**, int> CreateStream; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, ushort*, System.IntPtr, uint, uint, ACBindings.Internal.IStream**, int> OpenStream; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, ushort*, uint, uint, uint, ACBindings.Internal.IStorage**, int> CreateStorage; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, ushort*, ACBindings.Internal.IStorage*, uint, ushort**, uint, ACBindings.Internal.IStorage**, int> OpenStorage; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, uint, ACBindings.Internal._GUID*, ushort**, ACBindings.Internal.IStorage*, int> CopyTo; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, ushort*, ACBindings.Internal.IStorage*, ushort*, uint, int> MoveElementTo; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, uint, int> Commit; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, int> Revert; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, uint, System.IntPtr, uint, System.IntPtr, int> EnumElements; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, ushort*, int> DestroyElement; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, ushort*, ushort*, int> RenameElement; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, ushort*, System.IntPtr, System.IntPtr, System.IntPtr, int> SetElementTimes; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, ACBindings.Internal._GUID*, int> SetClass; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, uint, uint, int> SetStateBits; // function pointer
+    public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStorage*, System.IntPtr, uint, int> Stat; // function pointer
 
     // Methods
 }

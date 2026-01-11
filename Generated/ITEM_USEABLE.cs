@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ITEM_USEABLE
 public enum ITEM_USEABLE : uint

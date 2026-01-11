@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PalShiftSubPal
 public unsafe struct PalShiftSubPal
 {
     // Members

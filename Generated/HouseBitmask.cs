@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // HouseBitmask
 public enum HouseBitmask : uint

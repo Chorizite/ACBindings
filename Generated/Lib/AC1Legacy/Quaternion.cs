@@ -1,6 +1,5 @@
-namespace ACBindings.AC1Legacy;
+namespace ACBindings.Internal.AC1Legacy;
 
-// AC1Legacy::Quaternion
 public unsafe struct Quaternion
 {
     // Members

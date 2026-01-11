@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // GODOTUNICODE
 public enum GODOTUNICODE : byte

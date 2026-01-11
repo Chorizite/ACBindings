@@ -1,16 +1,14 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ExamineSubUI
 public unsafe struct ExamineSubUI
 {
     // Child Types
-    // ExamineSubUI_vtbl
     public unsafe struct ExamineSubUI_vtbl
     {
         // Members
-        public System.IntPtr Init; // function pointer
-        public System.IntPtr SetAppraiseInfo; // function pointer
-        public System.IntPtr Show; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ExamineSubUI*, uint, ACBindings.Internal.ACCWeenieObject*, void> Init; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ExamineSubUI*, ACBindings.Internal.AppraisalProfile*, int, void> SetAppraiseInfo; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ExamineSubUI*, byte, void> Show; // function pointer
 
         // Methods
     }
@@ -18,12 +16,16 @@ public unsafe struct ExamineSubUI
     // Members
     public System.IntPtr __vftable; // vtable pointer
     public uint cur_objid;
-    public ACBindings.ACCWeenieObject* cur_weenobj;
-    public ACBindings.AppraisalProfile cur_prof;
-    public ACBindings.gmExaminationUI* m_pParentElement;
+    public ACBindings.Internal.ACCWeenieObject* cur_weenobj;
+    public ACBindings.Internal.AppraisalProfile cur_prof;
+    public ACBindings.Internal.gmExaminationUI* m_pParentElement;
 
     // Methods
-    // void __thiscall ExamineSubUI::Init(ExamineSubUI*,unsigned int,ACCWeenieObject*)
-    public void Init(uint objid, ACBindings.ACCWeenieObject* weenObj) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ExamineSubUI, uint, ACBindings.ACCWeenieObject*, void>)0x004AB530)(ref this, objid, weenObj);
+
+    /// <summary>
+    /// <code>Offset: 0x004AB530
+    /// void __thiscall ExamineSubUI::Init(ExamineSubUI*,unsigned int,ACCWeenieObject*)</code>
+    /// </summary>
+    public void Init(uint objid, ACBindings.Internal.ACCWeenieObject* weenObj) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ExamineSubUI, uint, ACBindings.Internal.ACCWeenieObject*, void>)0x004AB530)(ref this, objid, weenObj);
 }
 

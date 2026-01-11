@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ID3D10Blob
 public unsafe struct ID3D10Blob
 {
     // Members

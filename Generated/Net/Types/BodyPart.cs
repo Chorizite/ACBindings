@@ -1,38 +1,36 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// BodyPart
 public unsafe struct BodyPart : System.IDisposable
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // BodyPart_vtbl
     public unsafe struct BodyPart_vtbl
     {
         // Members
-        public System.IntPtr BodyPart_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.BodyPart*, void> BodyPart_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.BodyPart*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.BodyPart*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.BodyPart*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.DAMAGE_TYPE _dtype;
+    public ACBindings.Internal.DAMAGE_TYPE _dtype;
     public int _dval;
     public float _dvar;
-    public ACBindings.ArmorCache _acache;
-    public ACBindings.BODY_HEIGHT _bh;
-    public ACBindings.BodyPartSelectionData* _bpsd;
+    public ACBindings.Internal.ArmorCache _acache;
+    public ACBindings.Internal.BODY_HEIGHT _bh;
+    public ACBindings.Internal.BodyPartSelectionData* _bpsd;
 
     // Generated Constructor
     public BodyPart() {
         _ConstructorInternal();
     }
-    public BodyPart(ACBindings.BodyPart* rhs) {
+    public BodyPart(ACBindings.Internal.BodyPart* rhs) {
         _ConstructorInternal(rhs);
     }
 
@@ -42,17 +40,41 @@ public unsafe struct BodyPart : System.IDisposable
     }
 
     // Methods
-    // void __thiscall BodyPart::BodyPart(BodyPart*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.BodyPart, void>)0x0058FFF0)(ref this);
-    // unsigned int __thiscall BodyPart::GetPackSize(BodyPart*)
-    public uint GetPackSize() => ((delegate* unmanaged[Thiscall]<ref ACBindings.BodyPart, uint>)0x005D20A0)(ref this);
-    // void __thiscall BodyPart::~BodyPart(BodyPart*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.BodyPart, void>)0x005D2180)(ref this);
-    // unsigned int __thiscall BodyPart::Pack(BodyPart*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.BodyPart, void**, uint, uint>)0x005D2210)(ref this, addr, size);
-    // int __thiscall BodyPart::UnPack(BodyPart*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.BodyPart, void**, uint, int>)0x005D22A0)(ref this, addr, size);
-    // void __thiscall BodyPart::BodyPart(BodyPart*,const BodyPart*)
-    public void _ConstructorInternal(ACBindings.BodyPart* rhs) => ((delegate* unmanaged[Thiscall]<ref ACBindings.BodyPart, ACBindings.BodyPart*, void>)0x005D2460)(ref this, rhs);
+
+    /// <summary>
+    /// <code>Offset: 0x0058FFF0
+    /// void __thiscall BodyPart::BodyPart(BodyPart*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.BodyPart, void>)0x0058FFF0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005D20A0
+    /// unsigned int __thiscall BodyPart::GetPackSize(BodyPart*)</code>
+    /// </summary>
+    public uint GetPackSize() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.BodyPart, uint>)0x005D20A0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005D2180
+    /// void __thiscall BodyPart::~BodyPart(BodyPart*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.BodyPart, void>)0x005D2180)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005D2210
+    /// unsigned int __thiscall BodyPart::Pack(BodyPart*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.BodyPart, void**, uint, uint>)0x005D2210)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005D22A0
+    /// int __thiscall BodyPart::UnPack(BodyPart*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.BodyPart, void**, uint, int>)0x005D22A0)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005D2460
+    /// void __thiscall BodyPart::BodyPart(BodyPart*,const BodyPart*)</code>
+    /// </summary>
+    public void _ConstructorInternal(ACBindings.Internal.BodyPart* rhs) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.BodyPart, ACBindings.Internal.BodyPart*, void>)0x005D2460)(ref this, rhs);
 }
 

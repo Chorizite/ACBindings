@@ -1,12 +1,7 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Heading
 public unsafe struct Heading
 {
-    // Statics
-    public static ACBindings.Heading* ZERO = (ACBindings.Heading*)0x008F86A4;
-    public static ACBindings.Heading* EPSILON = (ACBindings.Heading*)0x008F86A8;
-
     // Child Types
     // Heading::unit_type
     public enum unit_type : byte

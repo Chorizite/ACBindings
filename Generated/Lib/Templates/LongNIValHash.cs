@@ -1,50 +1,65 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LongNIValHash<unsigned long>
 public unsafe struct LongNIValHash__uint
 {
     // Base Classes
-    public ACBindings.HashBase__uint BaseClass_HashBase; // ACBindings.HashBase__uint
+    public ACBindings.Internal.HashBase__uint BaseClass_HashBase; // ACBindings.Internal.HashBase__uint
 
     // Methods
 }
 
-// LongNIValHash<LongHash<MotionData>*>
-public unsafe struct LongNIValHash__LongHash__MotionData_ptr
+public unsafe struct LongNIValHash___LongHash___MotionData_ptr
 {
     // Base Classes
-    public ACBindings.HashBase__uint BaseClass_HashBase; // ACBindings.HashBase__uint
+    public ACBindings.Internal.HashBase__uint BaseClass_HashBase; // ACBindings.Internal.HashBase__uint
 
     // Methods
 }
 
-// LongNIValHash<GlobalVoyeurInfo>
-public unsafe struct LongNIValHash__GlobalVoyeurInfo
+public unsafe struct LongNIValHash___GlobalVoyeurInfo
 {
     // Base Classes
-    public ACBindings.HashBase__uint BaseClass_HashBase; // ACBindings.HashBase__uint
+    public ACBindings.Internal.HashBase__uint BaseClass_HashBase; // ACBindings.Internal.HashBase__uint
 
     // Methods
-    // LongNIValHash<GlobalVoyeurInfo>::LongNIValHash<GlobalVoyeurInfo> (template type method)
-    // LongNIValHash<GlobalVoyeurInfo>::add (template type method)
-    // LongNIValHash<GlobalVoyeurInfo>::~LongNIValHash<GlobalVoyeurInfo> (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0052C6C0
+    /// void*** __thiscall LongNIValHash&lt;GlobalVoyeurInfo&gt;::LongNIValHash&lt;GlobalVoyeurInfo&gt;(void***,unsigned int)</code>
+    /// </summary>
+    // void*** __thiscall LongNIValHash<GlobalVoyeurInfo>::LongNIValHash<GlobalVoyeurInfo>(void***,unsigned int) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0052C700
+    /// int __thiscall LongNIValHash&lt;GlobalVoyeurInfo&gt;::add(_DWORD*,int,int,int,int)</code>
+    /// </summary>
+    // int __thiscall LongNIValHash<GlobalVoyeurInfo>::add(_DWORD*,int,int,int,int) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0052CB20
+    /// void __thiscall LongNIValHash&lt;GlobalVoyeurInfo&gt;::~LongNIValHash&lt;GlobalVoyeurInfo&gt;(int)</code>
+    /// </summary>
+    // void __thiscall LongNIValHash<GlobalVoyeurInfo>::~LongNIValHash<GlobalVoyeurInfo>(int) (template type method)
 }
 
-// LongNIValHash<CPhysicsObj::CollisionRecord>
-public unsafe struct LongNIValHash__CPhysicsObj_CollisionRecord
+public unsafe struct LongNIValHash___CPhysicsObj_CollisionRecord
 {
     // Base Classes
-    public ACBindings.HashBase__uint BaseClass_HashBase; // ACBindings.HashBase__uint
+    public ACBindings.Internal.HashBase__uint BaseClass_HashBase; // ACBindings.Internal.HashBase__uint
 
     // Methods
-    // LongNIValHash<CPhysicsObj::CollisionRecord>::clobber (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x00514330
+    /// int __thiscall LongNIValHash&lt;CPhysicsObj::CollisionRecord&gt;::clobber(_DWORD*,int*,int)</code>
+    /// </summary>
+    // int __thiscall LongNIValHash<CPhysicsObj::CollisionRecord>::clobber(_DWORD*,int*,int) (template type method)
 }
 
-// LongNIValHash<SurfInfo*>
-public unsafe struct LongNIValHash__SurfInfo_ptr
+public unsafe struct LongNIValHash___SurfInfo_ptr
 {
     // Base Classes
-    public ACBindings.HashBase__uint BaseClass_HashBase; // ACBindings.HashBase__uint
+    public ACBindings.Internal.HashBase__uint BaseClass_HashBase; // ACBindings.Internal.HashBase__uint
 
     // Methods
 }

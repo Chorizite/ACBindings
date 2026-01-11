@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// GfxVelocityDesc
 public unsafe struct GfxVelocityDesc
 {
     // Members
-    public ACBindings.IDClass___tagDataID id;
-    public ACBindings.CVec2Duv offset;
-    public ACBindings.CVec2Duv total;
+    public ACBindings.Internal.IDClass____tagDataID id;
+    public ACBindings.Internal.CVec2Duv offset;
+    public ACBindings.Internal.CVec2Duv total;
 
     // Methods
 }

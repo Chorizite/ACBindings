@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // STREAMTYPE
 public enum STREAMTYPE : byte

@@ -1,31 +1,29 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Subpalette
 public unsafe struct Subpalette
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // Subpalette_vtbl
     public unsafe struct Subpalette_vtbl
     {
         // Members
-        public System.IntPtr Subpalette_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Subpalette*, void> Subpalette_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Subpalette*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Subpalette*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Subpalette*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.IDClass___tagDataID subID;
+    public ACBindings.Internal.IDClass____tagDataID subID;
     public uint offset;
     public uint numcolors;
-    public ACBindings.Subpalette* prev;
-    public ACBindings.Subpalette* next;
+    public ACBindings.Internal.Subpalette* prev;
+    public ACBindings.Internal.Subpalette* next;
 
     // Generated Constructor
     public Subpalette() {
@@ -33,15 +31,35 @@ public unsafe struct Subpalette
     }
 
     // Methods
-    // void __thiscall Subpalette::Subpalette(Subpalette*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Subpalette, void>)0x00500660)(ref this);
-    // int __thiscall Subpalette::replaces(Subpalette*,const Subpalette*)
-    public int replaces(ACBindings.Subpalette* change) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Subpalette, ACBindings.Subpalette*, int>)0x005AE8E0)(ref this, change);
-    // int __thiscall Subpalette::supercedes(Subpalette*,const Subpalette*)
-    public int supercedes(ACBindings.Subpalette* change) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Subpalette, ACBindings.Subpalette*, int>)0x005AE920)(ref this, change);
-    // unsigned int __thiscall Subpalette::Pack(Subpalette*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Subpalette, void**, uint, uint>)0x005AEB00)(ref this, addr, size);
-    // int __thiscall Subpalette::UnPack(Subpalette*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Subpalette, void**, uint, int>)0x005AEB60)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x00500660
+    /// void __thiscall Subpalette::Subpalette(Subpalette*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Subpalette, void>)0x00500660)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005AE8E0
+    /// int __thiscall Subpalette::replaces(Subpalette*,const Subpalette*)</code>
+    /// </summary>
+    public int replaces(ACBindings.Internal.Subpalette* change) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Subpalette, ACBindings.Internal.Subpalette*, int>)0x005AE8E0)(ref this, change);
+
+    /// <summary>
+    /// <code>Offset: 0x005AE920
+    /// int __thiscall Subpalette::supercedes(Subpalette*,const Subpalette*)</code>
+    /// </summary>
+    public int supercedes(ACBindings.Internal.Subpalette* change) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Subpalette, ACBindings.Internal.Subpalette*, int>)0x005AE920)(ref this, change);
+
+    /// <summary>
+    /// <code>Offset: 0x005AEB00
+    /// unsigned int __thiscall Subpalette::Pack(Subpalette*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Subpalette, void**, uint, uint>)0x005AEB00)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005AEB60
+    /// int __thiscall Subpalette::UnPack(Subpalette*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Subpalette, void**, uint, int>)0x005AEB60)(ref this, addr, size);
 }
 

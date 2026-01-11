@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CShortCutData
 public unsafe struct CShortCutData
 {
     // Base Classes
-    public ACBindings.ShortCutData BaseClass_ShortCutData; // ACBindings.ShortCutData
+    public ACBindings.Internal.ShortCutData BaseClass_ShortCutData; // ACBindings.Internal.ShortCutData
 
     // Child Types
-    // CShortCutData_vtbl
     public unsafe struct CShortCutData_vtbl
     {
         // Members
-        public System.IntPtr CShortCutData_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CShortCutData*, void> CShortCutData_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CShortCutData*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CShortCutData*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CShortCutData*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -26,7 +24,11 @@ public unsafe struct CShortCutData
     }
 
     // Methods
-    // void __thiscall CShortCutData::CShortCutData(CShortCutData*,int,unsigned int,unsigned int)
-    public void _ConstructorInternal(int index, uint objectID, uint spellID) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CShortCutData, int, uint, uint, void>)0x0059B5B0)(ref this, index, objectID, spellID);
+
+    /// <summary>
+    /// <code>Offset: 0x0059B5B0
+    /// void __thiscall CShortCutData::CShortCutData(CShortCutData*,int,unsigned int,unsigned int)</code>
+    /// </summary>
+    public void _ConstructorInternal(int index, uint objectID, uint spellID) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CShortCutData, int, uint, uint, void>)0x0059B5B0)(ref this, index, objectID, spellID);
 }
 

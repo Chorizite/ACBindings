@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// EncounterType
 public unsafe struct EncounterType
 {
     // Members

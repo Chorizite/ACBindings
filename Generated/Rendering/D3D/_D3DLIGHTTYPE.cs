@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // _D3DLIGHTTYPE
 public enum _D3DLIGHTTYPE : uint

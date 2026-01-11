@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CLinkStatusSnapshot
 public unsafe struct CLinkStatusSnapshot
 {
     // Members

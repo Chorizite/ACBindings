@@ -1,73 +1,65 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// HashSetIterator<UIListener*>
-public unsafe struct HashSetIterator__UIListener_ptr
+public unsafe struct HashSetIterator___UIListener_ptr
 {
     // Members
-    public ACBindings.IntrusiveHashIterator__UIListener_ptr__HashSetData__UIListener_ptr_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashIterator___UIListener_ptr___HashSetData___UIListener_ptr_ptr m_iter;
 
     // Methods
 }
 
-// HashSetIterator<unsigned long>
 public unsafe struct HashSetIterator__uint
 {
     // Members
-    public ACBindings.IntrusiveHashIterator__uint__HashSetData__uint_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashIterator__uint___HashSetData__uint_ptr m_iter;
 
     // Methods
 }
 
-// HashSetIterator<IDClass<_tagDataID,32,0>>
-public unsafe struct HashSetIterator__IDClass___tagDataID
+public unsafe struct HashSetIterator___IDClass____tagDataID
 {
     // Members
-    public ACBindings.IntrusiveHashIterator__IDClass___tagDataID__HashSetData__IDClass___tagDataID_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashIterator___IDClass____tagDataID___HashSetData___IDClass____tagDataID_ptr m_iter;
 
     // Methods
 }
 
-// HashSetIterator<UIElement*>
-public unsafe struct HashSetIterator__UIElement_ptr
+public unsafe struct HashSetIterator___UIElement_ptr
 {
     // Members
-    public ACBindings.IntrusiveHashIterator__UIElement_ptr__HashSetData__UIElement_ptr_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashIterator___UIElement_ptr___HashSetData___UIElement_ptr_ptr m_iter;
 
     // Methods
 }
 
-// HashSetIterator<ImgTex*>
-public unsafe struct HashSetIterator__ImgTex_ptr
+public unsafe struct HashSetIterator___ImgTex_ptr
 {
     // Members
-    public ACBindings.IntrusiveHashIterator__ImgTex_ptr__HashSetData__ImgTex_ptr_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashIterator___ImgTex_ptr___HashSetData___ImgTex_ptr_ptr m_iter;
 
     // Methods
 }
 
-// HashSetIterator<bool (__cdecl*)(HResultDebugData&)>
 public unsafe struct HashSetIterator__void_ptr
 {
     // Members
-    public ACBindings.IntrusiveHashIterator__void_ptr__HashSetData__void_ptr_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashIterator__void_ptr___HashSetData__void_ptr_ptr m_iter;
 
     // Methods
 }
 
-// HashSetIterator<PStringBase<char>>
-public unsafe struct HashSetIterator__PStringBase__sbyte
+public unsafe struct HashSetIterator___PStringBase__sbyte
 {
     // Members
-    public ACBindings.IntrusiveHashIterator__PStringBase__sbyte__HashSetData__PStringBase__sbyte_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashIterator___PStringBase__sbyte___HashSetData___PStringBase__sbyte_ptr m_iter;
 
     // Methods
 }
 
-// HashSetIterator<QualifiedDataID>
-public unsafe struct HashSetIterator__QualifiedDataID
+public unsafe struct HashSetIterator___QualifiedDataID
 {
     // Members
-    public ACBindings.IntrusiveHashIterator__QualifiedDataID__HashSetData__QualifiedDataID_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashIterator___QualifiedDataID___HashSetData___QualifiedDataID_ptr m_iter;
 
     // Methods
 }

@@ -1,48 +1,58 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// FontLocal
 public unsafe struct FontLocal
 {
     // Base Classes
-    public ACBindings.Font BaseClass_Font; // ACBindings.Font
+    public ACBindings.Internal.Font BaseClass_Font; // ACBindings.Internal.Font
 
     // Child Types
-    // FontLocal_vtbl
     public unsafe struct FontLocal_vtbl
     {
         // Members
-        public System.IntPtr IUnknown_QueryInterface; // function pointer
-        public System.IntPtr IUnknown_AddRef; // function pointer
-        public System.IntPtr IUnknown_Release; // function pointer
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr DBObj_dtor_18; // function pointer
-        public System.IntPtr Serialize; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
-        public System.IntPtr InitLoad; // function pointer
-        public System.IntPtr GetSubObjects; // function pointer
-        public System.IntPtr ReleaseSubObjects; // function pointer
-        public System.IntPtr NotifyFidelityLevel; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> DBObj_dtor_18; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> InitLoad; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> GetSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReleaseSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> NotifyFidelityLevel; // function pointer
         public System.IntPtr Refresh;
-        public System.IntPtr CopyInto; // function pointer
-        public System.IntPtr Destroy; // function pointer
-        public System.IntPtr FillDataGraph; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*, byte> CopyInto; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> Destroy; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.IDataGraph*, void> FillDataGraph; // function pointer
         public System.IntPtr SetDID;
-        public System.IntPtr GetDBOType; // function pointer
-        public System.IntPtr Allocate; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, uint> GetDBOType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*> Allocate; // function pointer
         public System.IntPtr SaveToDisk;
-        public System.IntPtr ReloadFromDisk; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReloadFromDisk; // function pointer
 
         // Methods
     }
 
     // Methods
-    // DBObj* __cdecl FontLocal::GetGlobalOrLocalFont(int)
-    public static ACBindings.DBObj* GetGlobalOrLocalFont(int a1) => ((delegate* unmanaged[Cdecl]<int, ACBindings.DBObj*>)0x0044B680)(a1);
-    // unsigned int __thiscall FontLocal::GetDBOType(FontLocal*)
-    public uint GetDBOType() => ((delegate* unmanaged[Thiscall]<ref ACBindings.FontLocal, uint>)0x004F8300)(ref this);
-    // DBObj* __thiscall FontLocal::Allocate(FontLocal*)
-    public ACBindings.DBObj* Allocate() => ((delegate* unmanaged[Thiscall]<ref ACBindings.FontLocal, ACBindings.DBObj*>)0x004F8800)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0044B680
+    /// DBObj* __cdecl FontLocal::GetGlobalOrLocalFont(int)</code>
+    /// </summary>
+    public static ACBindings.Internal.DBObj* GetGlobalOrLocalFont(int a1) => ((delegate* unmanaged[Cdecl]<int, ACBindings.Internal.DBObj*>)0x0044B680)(a1);
+
+    /// <summary>
+    /// <code>Offset: 0x004F8300
+    /// unsigned int __thiscall FontLocal::GetDBOType(FontLocal*)</code>
+    /// </summary>
+    public uint GetDBOType() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.FontLocal, uint>)0x004F8300)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004F8800
+    /// DBObj* __thiscall FontLocal::Allocate(FontLocal*)</code>
+    /// </summary>
+    public ACBindings.Internal.DBObj* Allocate() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.FontLocal, ACBindings.Internal.DBObj*>)0x004F8800)(ref this);
 }
 

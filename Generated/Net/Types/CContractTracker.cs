@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CContractTracker
 public unsafe struct CContractTracker
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // CContractTracker_vtbl
     public unsafe struct CContractTracker_vtbl
     {
         // Members
-        public System.IntPtr CContractTracker_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTracker*, void> CContractTracker_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTracker*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTracker*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTracker*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -32,18 +30,34 @@ public unsafe struct CContractTracker
     public CContractTracker() {
         _ConstructorInternal();
     }
-    public CContractTracker(ACBindings.CContractTracker* contract) {
+    public CContractTracker(ACBindings.Internal.CContractTracker* contract) {
         _ConstructorInternal(contract);
     }
 
     // Methods
-    // void __thiscall CContractTracker::CContractTracker(CContractTracker*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CContractTracker, void>)0x0059A100)(ref this);
-    // void __thiscall CContractTracker::CContractTracker(CContractTracker*,const CContractTracker*)
-    public void _ConstructorInternal(ACBindings.CContractTracker* contract) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CContractTracker, ACBindings.CContractTracker*, void>)0x0059A130)(ref this, contract);
-    // unsigned int __thiscall CContractTracker::Pack(CContractTracker*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CContractTracker, void**, uint, uint>)0x0059A180)(ref this, addr, size);
-    // int __thiscall CContractTracker::UnPack(CContractTracker*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CContractTracker, void**, uint, int>)0x0059A1E0)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x0059A100
+    /// void __thiscall CContractTracker::CContractTracker(CContractTracker*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CContractTracker, void>)0x0059A100)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0059A130
+    /// void __thiscall CContractTracker::CContractTracker(CContractTracker*,const CContractTracker*)</code>
+    /// </summary>
+    public void _ConstructorInternal(ACBindings.Internal.CContractTracker* contract) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CContractTracker, ACBindings.Internal.CContractTracker*, void>)0x0059A130)(ref this, contract);
+
+    /// <summary>
+    /// <code>Offset: 0x0059A180
+    /// unsigned int __thiscall CContractTracker::Pack(CContractTracker*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CContractTracker, void**, uint, uint>)0x0059A180)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x0059A1E0
+    /// int __thiscall CContractTracker::UnPack(CContractTracker*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CContractTracker, void**, uint, int>)0x0059A1E0)(ref this, addr, size);
 }
 

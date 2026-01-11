@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DBObjGrabber<RenderSurface>
-public unsafe struct DBObjGrabber__RenderSurface
+public unsafe struct DBObjGrabber___RenderSurface
 {
     // Members
-    public ACBindings.RenderSurface* m_object;
+    public ACBindings.Internal.RenderSurface* m_object;
 
     // Methods
 }

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CTimestamp<unsigned long,0>
 public unsafe struct CTimestamp__uint
 {
     // Members

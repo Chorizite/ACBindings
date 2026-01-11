@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // JournalSortCriteria
 public enum JournalSortCriteria : byte

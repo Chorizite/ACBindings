@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// EtherealWeenieType
 public unsafe struct EtherealWeenieType
 {
     // Members
     public ulong m_wtype_mask;
-    public ACBindings.SmartArray__uint m_ethereal_list;
-    public ACBindings.SmartArray__uint m_solid_list;
+    public ACBindings.Internal.SmartArray__uint m_ethereal_list;
+    public ACBindings.Internal.SmartArray__uint m_solid_list;
 
     // Methods
 }

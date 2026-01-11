@@ -1,22 +1,20 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CryptoProvider
 public unsafe struct CryptoProvider
 {
     // Base Classes
-    public ACBindings.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.ReferenceCountTemplate
+    public ACBindings.Internal.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.Internal.ReferenceCountTemplate
 
     // Child Types
-    // CryptoProvider_vtbl
     public unsafe struct CryptoProvider_vtbl
     {
         // Members
-        public System.IntPtr CryptoProvider_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoProvider*, void> CryptoProvider_dtor_0; // function pointer
         public System.IntPtr Init;
-        public System.IntPtr Cleanup; // function pointer
-        public System.IntPtr VerifyCryptoAlgorithmSupported; // function pointer
-        public System.IntPtr GenRandom; // function pointer
-        public System.IntPtr AcquireProvider; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoProvider*, byte> Cleanup; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoProvider*, uint, byte> VerifyCryptoAlgorithmSupported; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoProvider*, System.IntPtr, uint, byte> GenRandom; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoProvider*, uint, byte> AcquireProvider; // function pointer
 
         // Methods
     }
@@ -24,11 +22,11 @@ public unsafe struct CryptoProvider
     // Members
     public uint m_hProv;
     public uint m_LastError;
-    public ACBindings.PStringBase__sbyte m_ContainerName;
+    public ACBindings.Internal.PStringBase__sbyte m_ContainerName;
     public sbyte _bf_14;
     public fixed byte _padding_15[3];
-    public ACBindings.IntrusiveSmartPointer__CryptoKey m_spIdentityKey;
-    public ACBindings.IntrusiveSmartPointer__CryptoKey m_spExchangeKey;
+    public ACBindings.Internal.IntrusiveSmartPointer___CryptoKey m_spIdentityKey;
+    public ACBindings.Internal.IntrusiveSmartPointer___CryptoKey m_spExchangeKey;
 
     // Methods
 }

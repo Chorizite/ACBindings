@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// D3DXPLANE
 public unsafe struct D3DXPLANE
 {
     // Members
@@ -12,7 +11,6 @@ public unsafe struct D3DXPLANE
     // Methods
 }
 
-// D3DXPlane
 public unsafe struct D3DXPlane
 {
     // Members

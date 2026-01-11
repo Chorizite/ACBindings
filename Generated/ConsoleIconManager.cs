@@ -1,25 +1,23 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ConsoleIconManager
 public unsafe struct ConsoleIconManager
 {
     // Base Classes
-    public ACBindings.DialogBoxGateway BaseClass_DialogBoxGateway; // ACBindings.DialogBoxGateway
-    public ACBindings.CrashCleaner BaseClass_CrashCleaner; // ACBindings.CrashCleaner
+    public ACBindings.Internal.DialogBoxGateway BaseClass_DialogBoxGateway; // ACBindings.Internal.DialogBoxGateway
+    public ACBindings.Internal.CrashCleaner BaseClass_CrashCleaner; // ACBindings.Internal.CrashCleaner
 
     // Child Types
-    // ConsoleIconManager_vtbl
     public unsafe struct ConsoleIconManager_vtbl
     {
         // Members
-        public System.IntPtr ConsoleIconManager_dtor_0; // function pointer
-        public System.IntPtr OnPluggedIn; // function pointer
-        public System.IntPtr OnDialogBoxBegin; // function pointer
-        public System.IntPtr OnDialogBoxEnd; // function pointer
-        public System.IntPtr ReportThread_OnDialogBoxBegin; // function pointer
-        public System.IntPtr ReportThread_OnDialogBoxEnd; // function pointer
-        public System.IntPtr DialogThread_OnDialogBoxBegin; // function pointer
-        public System.IntPtr DialogThread_OnDialogBoxEnd; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConsoleIconManager*, void> ConsoleIconManager_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConsoleIconManager*, ACBindings.Internal.CPluginManager*, void> OnPluggedIn; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConsoleIconManager*, ACBindings.Internal.DialogBoxGateway.ThisFunctionHasBeenRenamed> OnDialogBoxBegin; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConsoleIconManager*, byte, ACBindings.Internal.DialogBoxGateway.ThisFunctionHasBeenRenamed> OnDialogBoxEnd; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConsoleIconManager*, byte> ReportThread_OnDialogBoxBegin; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConsoleIconManager*, byte, void> ReportThread_OnDialogBoxEnd; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConsoleIconManager*, byte> DialogThread_OnDialogBoxBegin; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConsoleIconManager*, byte, void> DialogThread_OnDialogBoxEnd; // function pointer
 
         // Methods
     }
@@ -30,7 +28,7 @@ public unsafe struct ConsoleIconManager
     public System.IntPtr m_hOldIconBig;
     public System.IntPtr m_hOldIconSmall;
     public int* m_hKernel32;
-    public System.IntPtr m_pfGetConsoleWindow; // function pointer
+    public delegate* unmanaged[Stdcall]<int*> m_pfGetConsoleWindow; // function pointer
 
     // Methods
 }

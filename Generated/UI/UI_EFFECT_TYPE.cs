@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // UI_EFFECT_TYPE
 public enum UI_EFFECT_TYPE : uint

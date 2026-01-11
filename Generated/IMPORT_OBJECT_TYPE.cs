@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // IMPORT_OBJECT_TYPE
 public enum IMPORT_OBJECT_TYPE : byte

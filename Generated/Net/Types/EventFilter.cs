@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// EventFilter
 public unsafe struct EventFilter
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // EventFilter_vtbl
     public unsafe struct EventFilter_vtbl
     {
         // Members
-        public System.IntPtr EventFilter_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EventFilter*, void> EventFilter_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EventFilter*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EventFilter*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EventFilter*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -25,9 +23,17 @@ public unsafe struct EventFilter
     public uint* event_filter;
 
     // Methods
-    // unsigned int __thiscall EventFilter::Pack(EventFilter*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.EventFilter, void**, uint, uint>)0x006B2C60)(ref this, addr, size);
-    // int __thiscall EventFilter::UnPack(EventFilter*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.EventFilter, void**, uint, int>)0x006B2CB0)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x006B2C60
+    /// unsigned int __thiscall EventFilter::Pack(EventFilter*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.EventFilter, void**, uint, uint>)0x006B2C60)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x006B2CB0
+    /// int __thiscall EventFilter::UnPack(EventFilter*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.EventFilter, void**, uint, int>)0x006B2CB0)(ref this, addr, size);
 }
 

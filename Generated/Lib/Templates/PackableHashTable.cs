@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PackableHashTable<AC1Legacy::PStringBase<char>,unsigned long>
-public unsafe struct PackableHashTable__AC1Legacy_PStringBase__sbyte__uint
+public unsafe struct PackableHashTable___AC1Legacy_PStringBase__sbyte__uint
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -15,11 +14,10 @@ public unsafe struct PackableHashTable__AC1Legacy_PStringBase__sbyte__uint
     // Methods
 }
 
-// PackableHashTable<unsigned long,SquelchInfo>
-public unsafe struct PackableHashTable__uint__SquelchInfo
+public unsafe struct PackableHashTable__uint___SquelchInfo
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -30,11 +28,10 @@ public unsafe struct PackableHashTable__uint__SquelchInfo
     // Methods
 }
 
-// PackableHashTable<unsigned long,Fellow>
-public unsafe struct PackableHashTable__uint__Fellow
+public unsafe struct PackableHashTable__uint___Fellow
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -45,11 +42,10 @@ public unsafe struct PackableHashTable__uint__Fellow
     // Methods
 }
 
-// PackableHashTable<unsigned long,long>
 public unsafe struct PackableHashTable__uint__int
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -60,11 +56,10 @@ public unsafe struct PackableHashTable__uint__int
     // Methods
 }
 
-// PackableHashTable<unsigned long,GuestInfo>
-public unsafe struct PackableHashTable__uint__GuestInfo
+public unsafe struct PackableHashTable__uint___GuestInfo
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -75,11 +70,10 @@ public unsafe struct PackableHashTable__uint__GuestInfo
     // Methods
 }
 
-// PackableHashTable<unsigned long,CContractTracker>
-public unsafe struct PackableHashTable__uint__CContractTracker
+public unsafe struct PackableHashTable__uint___CContractTracker
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -90,11 +84,10 @@ public unsafe struct PackableHashTable__uint__CContractTracker
     // Methods
 }
 
-// PackableHashTable<long,BodyPart>
-public unsafe struct PackableHashTable__int__BodyPart
+public unsafe struct PackableHashTable__int___BodyPart
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -105,11 +98,10 @@ public unsafe struct PackableHashTable__int__BodyPart
     // Methods
 }
 
-// PackableHashTable<unsigned long,SpellBookPage>
-public unsafe struct PackableHashTable__uint__SpellBookPage
+public unsafe struct PackableHashTable__uint___SpellBookPage
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -120,11 +112,10 @@ public unsafe struct PackableHashTable__uint__SpellBookPage
     // Methods
 }
 
-// PackableHashTable<unsigned long,PackableList<EmoteSet>>
-public unsafe struct PackableHashTable__uint__PackableList__EmoteSet
+public unsafe struct PackableHashTable__uint___PackableList___EmoteSet
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -135,11 +126,10 @@ public unsafe struct PackableHashTable__uint__PackableList__EmoteSet
     // Methods
 }
 
-// PackableHashTable<unsigned long,GeneratorRegistryNode>
-public unsafe struct PackableHashTable__uint__GeneratorRegistryNode
+public unsafe struct PackableHashTable__uint___GeneratorRegistryNode
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -150,11 +140,10 @@ public unsafe struct PackableHashTable__uint__GeneratorRegistryNode
     // Methods
 }
 
-// PackableHashTable<unsigned long,SkillBase>
-public unsafe struct PackableHashTable__uint__SkillBase
+public unsafe struct PackableHashTable__uint___SkillBase
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -165,11 +154,10 @@ public unsafe struct PackableHashTable__uint__SkillBase
     // Methods
 }
 
-// PackableHashTable<unsigned long,CContract>
-public unsafe struct PackableHashTable__uint__CContract
+public unsafe struct PackableHashTable__uint___CContract
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -180,11 +168,10 @@ public unsafe struct PackableHashTable__uint__CContract
     // Methods
 }
 
-// PackableHashTable<IDClass<_tagDataID,32,0>,long>
-public unsafe struct PackableHashTable__IDClass___tagDataID__int
+public unsafe struct PackableHashTable___IDClass____tagDataID__int
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -195,11 +182,10 @@ public unsafe struct PackableHashTable__IDClass___tagDataID__int
     // Methods
 }
 
-// PackableHashTable<unsigned long,unsigned long>
 public unsafe struct PackableHashTable__uint__uint
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -210,11 +196,10 @@ public unsafe struct PackableHashTable__uint__uint
     // Methods
 }
 
-// PackableHashTable<unsigned long,PackableList<unsigned long>>
-public unsafe struct PackableHashTable__uint__PackableList__uint
+public unsafe struct PackableHashTable__uint___PackableList__uint
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -225,11 +210,10 @@ public unsafe struct PackableHashTable__uint__PackableList__uint
     // Methods
 }
 
-// PackableHashTable<unsigned long,double>
 public unsafe struct PackableHashTable__uint__double
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -240,11 +224,10 @@ public unsafe struct PackableHashTable__uint__double
     // Methods
 }
 
-// PackableHashTable<unsigned long,AC1Legacy::PStringBase<char>>
-public unsafe struct PackableHashTable__uint__AC1Legacy_PStringBase__sbyte
+public unsafe struct PackableHashTable__uint___AC1Legacy_PStringBase__sbyte
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -255,11 +238,10 @@ public unsafe struct PackableHashTable__uint__AC1Legacy_PStringBase__sbyte
     // Methods
 }
 
-// PackableHashTable<unsigned long,__int64>
 public unsafe struct PackableHashTable__uint__long
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -270,11 +252,10 @@ public unsafe struct PackableHashTable__uint__long
     // Methods
 }
 
-// PackableHashTable<unsigned long,IDClass<_tagDataID,32,0>>
-public unsafe struct PackableHashTable__uint__IDClass___tagDataID
+public unsafe struct PackableHashTable__uint___IDClass____tagDataID
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -285,11 +266,10 @@ public unsafe struct PackableHashTable__uint__IDClass___tagDataID
     // Methods
 }
 
-// PackableHashTable<AC1Legacy::CaseInsensitiveStringBase<AC1Legacy::PStringBase<char>>,QuestProfile>
-public unsafe struct PackableHashTable__AC1Legacy_CaseInsensitiveStringBase__AC1Legacy_PStringBase__sbyte__QuestProfile
+public unsafe struct PackableHashTable___AC1Legacy_CaseInsensitiveStringBase___AC1Legacy_PStringBase__sbyte___QuestProfile
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -300,11 +280,10 @@ public unsafe struct PackableHashTable__AC1Legacy_CaseInsensitiveStringBase__AC1
     // Methods
 }
 
-// PackableHashTable<unsigned long,Position>
-public unsafe struct PackableHashTable__uint__Position
+public unsafe struct PackableHashTable__uint___Position
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -315,11 +294,10 @@ public unsafe struct PackableHashTable__uint__Position
     // Methods
 }
 
-// PackableHashTable<unsigned long,Skill>
-public unsafe struct PackableHashTable__uint__Skill
+public unsafe struct PackableHashTable__uint___Skill
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -330,11 +308,10 @@ public unsafe struct PackableHashTable__uint__Skill
     // Methods
 }
 
-// PackableHashTable<unsigned long,CSpellBase>
-public unsafe struct PackableHashTable__uint__CSpellBase
+public unsafe struct PackableHashTable__uint___CSpellBase
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -345,11 +322,10 @@ public unsafe struct PackableHashTable__uint__CSpellBase
     // Methods
 }
 
-// PackableHashTable<unsigned long,SpellComponentBase>
-public unsafe struct PackableHashTable__uint__SpellComponentBase
+public unsafe struct PackableHashTable__uint___SpellComponentBase
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -360,11 +336,10 @@ public unsafe struct PackableHashTable__uint__SpellComponentBase
     // Methods
 }
 
-// PackableHashTable<IDClass<_tagDataID,32,0>,ClothingBase>
-public unsafe struct PackableHashTable__IDClass___tagDataID__ClothingBase
+public unsafe struct PackableHashTable___IDClass____tagDataID___ClothingBase
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -375,11 +350,10 @@ public unsafe struct PackableHashTable__IDClass___tagDataID__ClothingBase
     // Methods
 }
 
-// PackableHashTable<unsigned long,CloPaletteTemplate>
-public unsafe struct PackableHashTable__uint__CloPaletteTemplate
+public unsafe struct PackableHashTable__uint___CloPaletteTemplate
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -390,11 +364,10 @@ public unsafe struct PackableHashTable__uint__CloPaletteTemplate
     // Methods
 }
 
-// PackableHashTable<AC1Legacy::CaseInsensitiveStringBase<AC1Legacy::PStringBase<char>>,AC1Legacy::PStringBase<char>>
-public unsafe struct PackableHashTable__AC1Legacy_CaseInsensitiveStringBase__AC1Legacy_PStringBase__sbyte__AC1Legacy_PStringBase__sbyte
+public unsafe struct PackableHashTable___AC1Legacy_CaseInsensitiveStringBase___AC1Legacy_PStringBase__sbyte___AC1Legacy_PStringBase__sbyte
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -405,11 +378,10 @@ public unsafe struct PackableHashTable__AC1Legacy_CaseInsensitiveStringBase__AC1
     // Methods
 }
 
-// PackableHashTable<AC1Legacy::PStringBase<char>,ChatEmoteData>
-public unsafe struct PackableHashTable__AC1Legacy_PStringBase__sbyte__ChatEmoteData
+public unsafe struct PackableHashTable___AC1Legacy_PStringBase__sbyte___ChatEmoteData
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;
@@ -420,11 +392,10 @@ public unsafe struct PackableHashTable__AC1Legacy_PStringBase__sbyte__ChatEmoteD
     // Methods
 }
 
-// PackableHashTable<AC1Legacy::CaseInsensitiveStringBase<AC1Legacy::PStringBase<char>>,QuestDef>
-public unsafe struct PackableHashTable__AC1Legacy_CaseInsensitiveStringBase__AC1Legacy_PStringBase__sbyte__QuestDef
+public unsafe struct PackableHashTable___AC1Legacy_CaseInsensitiveStringBase___AC1Legacy_PStringBase__sbyte___QuestDef
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
     public int m_fThrowawayDuplicateKeysOnUnPack;

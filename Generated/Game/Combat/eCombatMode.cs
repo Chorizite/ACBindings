@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // eCombatMode
 public enum eCombatMode : byte

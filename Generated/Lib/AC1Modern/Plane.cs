@@ -1,10 +1,9 @@
-namespace ACBindings.AC1Modern;
+namespace ACBindings.Internal.AC1Modern;
 
-// AC1Modern::Plane
 public unsafe struct Plane
 {
     // Members
-    public ACBindings.Vector3 N;
+    public ACBindings.Internal.Vector3 N;
     public float d;
 
     // Methods

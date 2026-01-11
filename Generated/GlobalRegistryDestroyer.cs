@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// GlobalRegistryDestroyer
 public unsafe struct GlobalRegistryDestroyer
 {
     // Methods

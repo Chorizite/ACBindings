@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TexCoordPair
 public unsafe struct TexCoordPair
 {
     // Members

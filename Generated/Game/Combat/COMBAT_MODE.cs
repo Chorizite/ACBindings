@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // COMBAT_MODE
 public enum COMBAT_MODE : uint

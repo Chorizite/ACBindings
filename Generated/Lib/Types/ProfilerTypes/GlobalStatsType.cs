@@ -1,10 +1,9 @@
-namespace ACBindings.ProfilerTypes;
+namespace ACBindings.Internal.ProfilerTypes;
 
-// ProfilerTypes::GlobalStatsType
 public unsafe struct GlobalStatsType
 {
     // Members
-    public ACBindings._32F96AD321CDC6745C0A66C54DC7D599 AC1;
+    public ACBindings.Internal._32F96AD321CDC6745C0A66C54DC7D599 AC1;
     public uint TextureVideoMemoryAllocated;
     public uint SurfaceVideoMemoryAllocated;
     public uint StaticVertexBufferVideoMemoryAllocated;

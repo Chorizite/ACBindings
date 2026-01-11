@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // SubControlIndex
 public enum SubControlIndex : byte

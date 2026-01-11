@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // SYSGEOTYPE
 public enum SYSGEOTYPE : byte

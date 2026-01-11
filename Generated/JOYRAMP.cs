@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// JOYRAMP
 public unsafe struct JOYRAMP
 {
     // Members

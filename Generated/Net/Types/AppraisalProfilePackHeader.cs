@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // AppraisalProfilePackHeader
 public enum AppraisalProfilePackHeader : uint

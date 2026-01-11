@@ -1,15 +1,13 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// QualityChangeHandler
 public unsafe struct QualityChangeHandler
 {
     // Child Types
-    // QualityChangeHandler_vtbl
     public unsafe struct QualityChangeHandler_vtbl
     {
         // Members
-        public System.IntPtr OnQualityChanged; // function pointer
-        public System.IntPtr OnQualityRemoved; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.QualityChangeHandler*, ACBindings.Internal.CWeenieObject*, ACBindings.Internal.StatType, uint, void> OnQualityChanged; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.QualityChangeHandler*, ACBindings.Internal.CWeenieObject*, ACBindings.Internal.StatType, uint, void> OnQualityRemoved; // function pointer
 
         // Methods
     }

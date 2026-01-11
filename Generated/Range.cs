@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Range
 public unsafe struct Range
 {
     // Members

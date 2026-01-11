@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // AsyncStateMachineStatus
 public enum AsyncStateMachineStatus : byte

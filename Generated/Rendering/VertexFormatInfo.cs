@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// VertexFormatInfo
 public unsafe struct VertexFormatInfo
 {
     // Members
@@ -28,7 +27,11 @@ public unsafe struct VertexFormatInfo
     public uint offsetMWeights;
 
     // Methods
-    // void __thiscall VertexFormatInfo::GenerateOffsets(VertexFormatInfo*)
-    public void GenerateOffsets() => ((delegate* unmanaged[Thiscall]<ref ACBindings.VertexFormatInfo, void>)0x005D97F0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005D97F0
+    /// void __thiscall VertexFormatInfo::GenerateOffsets(VertexFormatInfo*)</code>
+    /// </summary>
+    public void GenerateOffsets() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.VertexFormatInfo, void>)0x005D97F0)(ref this);
 }
 

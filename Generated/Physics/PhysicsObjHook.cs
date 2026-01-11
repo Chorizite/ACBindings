@@ -1,14 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PhysicsObjHook
 public unsafe struct PhysicsObjHook
 {
     // Child Types
-    // PhysicsObjHook_vtbl
     public unsafe struct PhysicsObjHook_vtbl
     {
         // Members
-        public System.IntPtr Execute; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PhysicsObjHook*, ACBindings.Internal.CPhysicsObj*, int> Execute; // function pointer
 
         // Methods
     }
@@ -39,11 +37,11 @@ public unsafe struct PhysicsObjHook
 
     // Members
     public System.IntPtr __vftable; // vtable pointer
-    public ACBindings.PhysicsObjHook.HookType hook_type;
+    public ACBindings.Internal.PhysicsObjHook.HookType hook_type;
     public double time_created;
     public double interpolation_time;
-    public ACBindings.PhysicsObjHook* prev;
-    public ACBindings.PhysicsObjHook* next;
+    public ACBindings.Internal.PhysicsObjHook* prev;
+    public ACBindings.Internal.PhysicsObjHook* next;
     public System.IntPtr user_data;
 
     // Methods

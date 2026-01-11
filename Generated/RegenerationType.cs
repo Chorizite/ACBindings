@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // RegenerationType
 public enum RegenerationType : uint

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// view_poly
 public unsafe struct view_poly
 {
     // Members

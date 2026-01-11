@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CELLINFO
 public unsafe struct CELLINFO
 {
     // Members
     public uint cell_id;
-    public ACBindings.CObjCell* cell;
+    public ACBindings.Internal.CObjCell* cell;
 
     // Methods
 }

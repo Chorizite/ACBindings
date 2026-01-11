@@ -1,26 +1,28 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DDD_RequestDataMessage
 public unsafe struct DDD_RequestDataMessage
 {
     // Base Classes
-    public ACBindings.FakeMessageData BaseClass_FakeMessageData; // ACBindings.FakeMessageData
+    public ACBindings.Internal.FakeMessageData BaseClass_FakeMessageData; // ACBindings.Internal.FakeMessageData
 
     // Child Types
-    // DDD_RequestDataMessage_vtbl
     public unsafe struct DDD_RequestDataMessage_vtbl
     {
         // Members
-        public System.IntPtr Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DDD_RequestDataMessage*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.QualifiedDataID m_qdid;
+    public ACBindings.Internal.QualifiedDataID m_qdid;
 
     // Methods
-    // void __thiscall DDD_RequestDataMessage::Serialize(DDD_RequestDataMessage*,Archive*)
-    public void Serialize(ACBindings.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DDD_RequestDataMessage, ACBindings.Archive*, void>)0x004F89F0)(ref this, io_archive);
+
+    /// <summary>
+    /// <code>Offset: 0x004F89F0
+    /// void __thiscall DDD_RequestDataMessage::Serialize(DDD_RequestDataMessage*,Archive*)</code>
+    /// </summary>
+    public void Serialize(ACBindings.Internal.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DDD_RequestDataMessage, ACBindings.Internal.Archive*, void>)0x004F89F0)(ref this, io_archive);
 }
 

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// BaseCriteria
 public unsafe struct BaseCriteria
 {
     // Methods

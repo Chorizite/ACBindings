@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DBObjSaveInfo
 public unsafe struct DBObjSaveInfo
 {
     // Base Classes
-    public ACBindings.IntrusiveHashData__QualifiedDataID__DBObjSaveInfo_ptr BaseClass_IntrusiveHashData; // ACBindings.IntrusiveHashData__QualifiedDataID__DBObjSaveInfo_ptr
+    public ACBindings.Internal.IntrusiveHashData___QualifiedDataID___DBObjSaveInfo_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData___QualifiedDataID___DBObjSaveInfo_ptr
 
     // Members
     public uint m_dwSubDataIDFlags;

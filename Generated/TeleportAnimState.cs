@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // TeleportAnimState
 public enum TeleportAnimState : uint

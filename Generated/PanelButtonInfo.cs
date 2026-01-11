@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PanelButtonInfo
 public unsafe struct PanelButtonInfo
 {
     // Members
-    public ACBindings.UIElement* button;
+    public ACBindings.Internal.UIElement* button;
     public uint panelID;
 
     // Methods

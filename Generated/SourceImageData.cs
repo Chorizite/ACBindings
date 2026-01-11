@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SourceImageData
 public unsafe struct SourceImageData
 {
     // Members

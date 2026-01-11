@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// GenericQualitiesData
 public unsafe struct GenericQualitiesData : System.IDisposable
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // GenericQualitiesData_vtbl
     public unsafe struct GenericQualitiesData_vtbl
     {
         // Members
-        public System.IntPtr GenericQualitiesData_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GenericQualitiesData*, void> GenericQualitiesData_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GenericQualitiesData*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GenericQualitiesData*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GenericQualitiesData*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -37,17 +35,41 @@ public unsafe struct GenericQualitiesData : System.IDisposable
     }
 
     // Methods
-    // void __thiscall GenericQualitiesData::GenericQualitiesData(GenericQualitiesData*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.GenericQualitiesData, void>)0x006B8740)(ref this);
-    // void __thiscall GenericQualitiesData::~GenericQualitiesData(GenericQualitiesData*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.GenericQualitiesData, void>)0x006B8760)(ref this);
-    // unsigned int __thiscall GenericQualitiesData::Pack(GenericQualitiesData*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.GenericQualitiesData, void**, uint, uint>)0x006B87C0)(ref this, addr, size);
-    // int __thiscall GenericQualitiesData::UnPack(GenericQualitiesData*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.GenericQualitiesData, void**, uint, int>)0x006B8880)(ref this, addr, size);
-    // int __thiscall GenericQualitiesData::InqString(_DWORD*,int,int*)
-    public int InqString(int a2, int* a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.GenericQualitiesData, int, int*, int>)0x006B8A30)(ref this, a2, a3);
-    // int __thiscall GenericQualitiesData::SetString(_DWORD*,unsigned int,int*)
-    public int SetString(uint a2, int* a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.GenericQualitiesData, uint, int*, int>)0x006B8A60)(ref this, a2, a3);
+
+    /// <summary>
+    /// <code>Offset: 0x006B8740
+    /// void __thiscall GenericQualitiesData::GenericQualitiesData(GenericQualitiesData*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.GenericQualitiesData, void>)0x006B8740)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006B8760
+    /// void __thiscall GenericQualitiesData::~GenericQualitiesData(GenericQualitiesData*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.GenericQualitiesData, void>)0x006B8760)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006B87C0
+    /// unsigned int __thiscall GenericQualitiesData::Pack(GenericQualitiesData*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.GenericQualitiesData, void**, uint, uint>)0x006B87C0)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x006B8880
+    /// int __thiscall GenericQualitiesData::UnPack(GenericQualitiesData*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.GenericQualitiesData, void**, uint, int>)0x006B8880)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x006B8A30
+    /// int __thiscall GenericQualitiesData::InqString(_DWORD*,int,int*)</code>
+    /// </summary>
+    public int InqString(int a2, int* a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.GenericQualitiesData, int, int*, int>)0x006B8A30)(ref this, a2, a3);
+
+    /// <summary>
+    /// <code>Offset: 0x006B8A60
+    /// int __thiscall GenericQualitiesData::SetString(_DWORD*,unsigned int,int*)</code>
+    /// </summary>
+    public int SetString(uint a2, int* a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.GenericQualitiesData, uint, int*, int>)0x006B8A60)(ref this, a2, a3);
 }
 

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IterationKey
 public unsafe struct IterationKey
 {
     // Child Types

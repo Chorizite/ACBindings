@@ -1,51 +1,49 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IKeystoneControl
 public unsafe struct IKeystoneControl
 {
     // Base Classes
-    public ACBindings.IKeystoneBaseWindow BaseClass_IKeystoneBaseWindow; // ACBindings.IKeystoneBaseWindow
+    public ACBindings.Internal.IKeystoneBaseWindow BaseClass_IKeystoneBaseWindow; // ACBindings.Internal.IKeystoneBaseWindow
 
     // Child Types
-    // IKeystoneControl_vtbl
     public unsafe struct IKeystoneControl_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr NotifyResourceStatus; // function pointer
-        public System.IntPtr GetName; // function pointer
-        public System.IntPtr SendMessageA; // function pointer
-        public System.IntPtr GetParent; // function pointer
-        public System.IntPtr GetFirstChild; // function pointer
-        public System.IntPtr GetNextSibling; // function pointer
-        public System.IntPtr GetRegion; // function pointer
-        public System.IntPtr SetParent; // function pointer
-        public System.IntPtr SetFirstChild; // function pointer
-        public System.IntPtr SetNextSibling; // function pointer
-        public System.IntPtr SetRegion; // function pointer
-        public System.IntPtr Serialize; // function pointer
-        public System.IntPtr SerializeForPrint; // function pointer
-        public System.IntPtr SetFocus; // function pointer
-        public System.IntPtr GetZOrder; // function pointer
-        public System.IntPtr SetZOrder; // function pointer
-        public System.IntPtr IsAbsolute; // function pointer
-        public System.IntPtr GetType; // function pointer
-        public System.IntPtr GetDimensions; // function pointer
-        public System.IntPtr GetTabStop; // function pointer
-        public System.IntPtr GetTabIndex; // function pointer
-        public System.IntPtr GetAttribute; // function pointer
-        public System.IntPtr GetDefaultAttribute; // function pointer
-        public System.IntPtr GetTagName; // function pointer
-        public System.IntPtr SetAttribute; // function pointer
-        public System.IntPtr SetDefaultAttribute; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IResourceNotify*, ACBindings.Internal.IResourceNotify*, ACBindings.Internal.KS_STATUS, int> NotifyResourceStatus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IResourceNotify*, ushort*> GetName; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, uint, uint, int, int> SendMessageA; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.IKeystoneBaseWindow*> GetParent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.IKeystoneBaseWindow*> GetFirstChild; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.IKeystoneBaseWindow*> GetNextSibling; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.Region*> GetRegion; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.IKeystoneBaseWindow*, int> SetParent; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.IKeystoneBaseWindow*, int> SetFirstChild; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.IKeystoneBaseWindow*, int> SetNextSibling; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.Region*, int> SetRegion; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, System.IntPtr, int> Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, System.IntPtr, int> SerializeForPrint; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, int> SetFocus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, float> GetZOrder; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, float, int> SetZOrder; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, int> IsAbsolute; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneBaseWindow*, ACBindings.Internal.E_BASEWINDOW_TYPE> GetType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneControl*, ACBindings.Internal.Region**, ACBindings.Internal.tagPOINT*, uint*, int> GetDimensions; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneControl*, int> GetTabStop; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneControl*, int> GetTabIndex; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneControl*, ushort*, ushort*> GetAttribute; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneControl*, ushort*, ushort*> GetDefaultAttribute; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneControl*, ushort*> GetTagName; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneControl*, ushort*, ushort*, int> SetAttribute; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneControl*, ushort*, ushort*, int> SetDefaultAttribute; // function pointer
         public System.IntPtr GetNamesOfAttributes;
-        public System.IntPtr SetDocument; // function pointer
-        public System.IntPtr SetWindow; // function pointer
-        public System.IntPtr GetWindow; // function pointer
-        public System.IntPtr GetFont; // function pointer
-        public System.IntPtr GetDirectory; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneControl*, ACBindings.Internal.IKeystoneDocument*, int> SetDocument; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneControl*, ACBindings.Internal.IKeystoneWindow*, int> SetWindow; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneControl*, ACBindings.Internal.IKeystoneWindow*> GetWindow; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneControl*, ACBindings.Internal.IKeystoneResourceFont*> GetFont; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneControl*, ushort*> GetDirectory; // function pointer
         public System.IntPtr CleanUpAttributeNameStruct;
 
         // Methods

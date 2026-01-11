@@ -1,23 +1,21 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IChatClientAsyncResultSink
 public unsafe struct IChatClientAsyncResultSink
 {
     // Base Classes
-    public ACBindings.IUnknown BaseClass_IUnknown; // ACBindings.IUnknown
+    public ACBindings.Internal.IUnknown BaseClass_IUnknown; // ACBindings.Internal.IUnknown
 
     // Child Types
-    // IChatClientAsyncResultSink_vtbl
     public unsafe struct IChatClientAsyncResultSink_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr OnEnterRoomByNameResult; // function pointer
-        public System.IntPtr OnExitRoomByNameResult; // function pointer
-        public System.IntPtr OnSendToRoomByNameResult; // function pointer
-        public System.IntPtr OnSendToRoomByIDResult; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClientAsyncResultSink*, int, ushort*, ACBindings.Internal.tagBLOB, void> OnEnterRoomByNameResult; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClientAsyncResultSink*, int, ushort*, ACBindings.Internal.tagBLOB, void> OnExitRoomByNameResult; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClientAsyncResultSink*, int, ushort*, ushort*, ACBindings.Internal.tagBLOB, void> OnSendToRoomByNameResult; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IChatClientAsyncResultSink*, int, uint, ushort*, ACBindings.Internal.tagBLOB, void> OnSendToRoomByIDResult; // function pointer
 
         // Methods
     }

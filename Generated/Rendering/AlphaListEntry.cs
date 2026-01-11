@@ -1,14 +1,13 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AlphaListEntry
 public unsafe struct AlphaListEntry
 {
     // Members
-    public ACBindings.MeshBuffer* pMeshBuffer;
+    public ACBindings.Internal.MeshBuffer* pMeshBuffer;
     public int surfaceNum;
-    public ACBindings.CSurface* surface;
-    public ACBindings.CMaterial* material;
-    public ACBindings.Matrix4 worldMatrix;
+    public ACBindings.Internal.CSurface* surface;
+    public ACBindings.Internal.CMaterial* material;
+    public ACBindings.Internal.Matrix4 worldMatrix;
     public byte bNewObject;
     public byte overrideClipmapSetting;
 

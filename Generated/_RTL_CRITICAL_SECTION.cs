@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// _RTL_CRITICAL_SECTION
 public unsafe struct _RTL_CRITICAL_SECTION
 {
     // Members

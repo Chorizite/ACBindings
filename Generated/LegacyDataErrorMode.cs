@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // LegacyDataErrorMode
 public enum LegacyDataErrorMode : byte

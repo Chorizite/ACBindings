@@ -1,14 +1,13 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SkillQualityBlob
 public unsafe struct SkillQualityBlob
 {
     // Members
     public uint m_eQuality;
-    public ACBindings.Skill m_skillSavedValue;
-    public ACBindings.Skill m_skillCurValue;
-    public ACBindings.UIElement_Menu* m_pAdvancementMenu;
-    public ACBindings.UIElement_Text* m_pCurInitLevelText;
+    public ACBindings.Internal.Skill m_skillSavedValue;
+    public ACBindings.Internal.Skill m_skillCurValue;
+    public ACBindings.Internal.UIElement_Menu* m_pAdvancementMenu;
+    public ACBindings.Internal.UIElement_Text* m_pCurInitLevelText;
 
     // Methods
 }

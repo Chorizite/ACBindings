@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// D3DXVECTOR4
 public unsafe struct D3DXVECTOR4
 {
     // Members
@@ -12,7 +11,6 @@ public unsafe struct D3DXVECTOR4
     // Methods
 }
 
-// D3DXVector4
 public unsafe struct D3DXVector4
 {
     // Members

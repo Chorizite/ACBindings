@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// WSAData
 public unsafe struct WSAData
 {
     // Members

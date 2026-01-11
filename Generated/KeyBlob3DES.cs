@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// KeyBlob3DES
 public unsafe struct KeyBlob3DES
 {
     // Members
-    public ACBindings._PUBLICKEYSTRUC hdr;
+    public ACBindings.Internal._PUBLICKEYSTRUC hdr;
     public uint aiPrivKeyAlg;
     public fixed byte KeyData[24];
     public byte KeyNul;

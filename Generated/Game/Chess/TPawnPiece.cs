@@ -1,14 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TPawnPiece<CBasePiece>
-public unsafe struct TPawnPiece__CBasePiece
+public unsafe struct TPawnPiece___CBasePiece
 {
     // Base Classes
-    public ACBindings.TChessPiece__CBasePiece BaseClass_TChessPiece; // ACBindings.TChessPiece__CBasePiece
+    public ACBindings.Internal.TChessPiece___CBasePiece BaseClass_TChessPiece; // ACBindings.Internal.TChessPiece___CBasePiece
 
     // Child Types
-    // TPawnPiece_vtbl<CBasePiece>
-    public unsafe struct TPawnPiece_vtbl__CBasePiece
+    public unsafe struct TPawnPiece_vtbl___CBasePiece
     {
         // Members
         public System.IntPtr bCanGoTo;
@@ -21,6 +19,11 @@ public unsafe struct TPawnPiece__CBasePiece
     }
 
     // Methods
-    // TPawnPiece<CBasePiece>::bCanAttack (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x004A8750
+    /// int __stdcall TPawnPiece&lt;CBasePiece&gt;::bCanAttack(int,int)</code>
+    /// </summary>
+    // int __stdcall TPawnPiece<CBasePiece>::bCanAttack(int,int) (template type method)
 }
 

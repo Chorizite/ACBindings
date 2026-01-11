@@ -1,14 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TKnightPiece<CBasePiece>
-public unsafe struct TKnightPiece__CBasePiece
+public unsafe struct TKnightPiece___CBasePiece
 {
     // Base Classes
-    public ACBindings.TChessPiece__CBasePiece BaseClass_TChessPiece; // ACBindings.TChessPiece__CBasePiece
+    public ACBindings.Internal.TChessPiece___CBasePiece BaseClass_TChessPiece; // ACBindings.Internal.TChessPiece___CBasePiece
 
     // Child Types
-    // TKnightPiece_vtbl<CBasePiece>
-    public unsafe struct TKnightPiece_vtbl__CBasePiece
+    public unsafe struct TKnightPiece_vtbl___CBasePiece
     {
         // Members
         public System.IntPtr bCanGoTo;

@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PageInfo
 public unsafe struct PageInfo
 {
     // Members
-    public ACBindings.PStringBase__ushort m_Label;
-    public ACBindings.PStringBase__ushort m_Title;
-    public ACBindings.PStringBase__ushort m_Notes;
+    public ACBindings.Internal.PStringBase__ushort m_Label;
+    public ACBindings.Internal.PStringBase__ushort m_Title;
+    public ACBindings.Internal.PStringBase__ushort m_Notes;
     public int m_PageNumber;
     public byte m_TimerRunning;
     public double m_TimerStamp;
@@ -21,16 +20,28 @@ public unsafe struct PageInfo
     public PageInfo() {
         _ConstructorInternal();
     }
-    public PageInfo(ACBindings.PageInfo* rhs) {
+    public PageInfo(ACBindings.Internal.PageInfo* rhs) {
         _ConstructorInternal(rhs);
     }
 
     // Methods
-    // void __thiscall PageInfo::PageInfo(PageInfo*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.PageInfo, void>)0x00494E50)(ref this);
-    // void __thiscall PageInfo::Clear(PageInfo*)
-    public void Clear() => ((delegate* unmanaged[Thiscall]<ref ACBindings.PageInfo, void>)0x00494F70)(ref this);
-    // void __thiscall PageInfo::PageInfo(PageInfo*,const PageInfo*)
-    public void _ConstructorInternal(ACBindings.PageInfo* rhs) => ((delegate* unmanaged[Thiscall]<ref ACBindings.PageInfo, ACBindings.PageInfo*, void>)0x004951D0)(ref this, rhs);
+
+    /// <summary>
+    /// <code>Offset: 0x00494E50
+    /// void __thiscall PageInfo::PageInfo(PageInfo*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PageInfo, void>)0x00494E50)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00494F70
+    /// void __thiscall PageInfo::Clear(PageInfo*)</code>
+    /// </summary>
+    public void Clear() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PageInfo, void>)0x00494F70)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004951D0
+    /// void __thiscall PageInfo::PageInfo(PageInfo*,const PageInfo*)</code>
+    /// </summary>
+    public void _ConstructorInternal(ACBindings.Internal.PageInfo* rhs) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PageInfo, ACBindings.Internal.PageInfo*, void>)0x004951D0)(ref this, rhs);
 }
 

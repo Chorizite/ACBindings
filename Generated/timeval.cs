@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// timeval
 public unsafe struct timeval
 {
     // Members

@@ -1,33 +1,31 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// GamePlayUI
 public unsafe struct GamePlayUI
 {
     // Base Classes
-    public ACBindings.UIMainFramework BaseClass_UIMainFramework; // ACBindings.UIMainFramework
+    public ACBindings.Internal.UIMainFramework BaseClass_UIMainFramework; // ACBindings.Internal.UIMainFramework
 
     // Child Types
-    // GamePlayUI_vtbl
     public unsafe struct GamePlayUI_vtbl
     {
         // Members
-        public System.IntPtr GamePlayUI_dtor_0; // function pointer
-        public System.IntPtr OnAction; // function pointer
-        public System.IntPtr OnLoseFocus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GamePlayUI*, void> GamePlayUI_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GamePlayUI*, ACBindings.Internal.InputEvent*, byte> OnAction; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GamePlayUI*, uint, uint, uint, ACBindings.Internal.CallbackLoseFocusResult> OnLoseFocus; // function pointer
         public fixed byte gapC[4];
-        public System.IntPtr ListenToElementMessage; // function pointer
-        public System.IntPtr ListenToGlobalMessage; // function pointer
-        public System.IntPtr CreateAndAddRootElement; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GamePlayUI*, uint, ACBindings.Internal.UIElement*, uint, int, ACBindings.Internal.UIElementMessageListenResult> ListenToElementMessage; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GamePlayUI*, uint, int, void> ListenToGlobalMessage; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GamePlayUI*, uint, uint, ACBindings.Internal.UIElement*> CreateAndAddRootElement; // function pointer
         public System.IntPtr CreateAndAddRootElementByDataID;
-        public System.IntPtr RemoveRootElement; // function pointer
-        public System.IntPtr Show; // function pointer
-        public System.IntPtr Shown; // function pointer
-        public System.IntPtr ForceHidden; // function pointer
-        public System.IntPtr AddChild; // function pointer
-        public System.IntPtr RemoveChild; // function pointer
-        public System.IntPtr FindChild; // function pointer
-        public System.IntPtr SetErrorMsg; // function pointer
-        public System.IntPtr Update; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GamePlayUI*, ACBindings.Internal.UIElement**, void> RemoveRootElement; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GamePlayUI*, byte, void> Show; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GamePlayUI*, byte> Shown; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GamePlayUI*, byte, void> ForceHidden; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GamePlayUI*, ACBindings.Internal.UIChildFramework*, void> AddChild; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GamePlayUI*, ACBindings.Internal.UIChildFramework*, void> RemoveChild; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GamePlayUI*, ACBindings.Internal.UIChildFramework*, int> FindChild; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GamePlayUI*, ACBindings.Internal.StringInfo*, void> SetErrorMsg; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GamePlayUI*, void> Update; // function pointer
 
         // Methods
     }
@@ -38,7 +36,11 @@ public unsafe struct GamePlayUI
     }
 
     // Methods
-    // void __thiscall GamePlayUI::GamePlayUI(GamePlayUI*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.GamePlayUI, void>)0x006A1BC0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006A1BC0
+    /// void __thiscall GamePlayUI::GamePlayUI(GamePlayUI*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.GamePlayUI, void>)0x006A1BC0)(ref this);
 }
 

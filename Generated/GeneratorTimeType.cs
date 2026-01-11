@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // GeneratorTimeType
 public enum GeneratorTimeType : uint

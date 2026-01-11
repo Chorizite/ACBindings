@@ -1,4 +1,4 @@
-namespace ACBindings.StringTableMetaLanguage;
+namespace ACBindings.Internal.StringTableMetaLanguage;
 
 // StringTableMetaLanguage::RenderErrorCode
 public enum RenderErrorCode : byte

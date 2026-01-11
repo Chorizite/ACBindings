@@ -1,25 +1,23 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AlwaysLoaded
 public unsafe struct AlwaysLoaded
 {
     // Base Classes
-    public ACBindings.BlockListLoader BaseClass_BlockListLoader; // ACBindings.BlockListLoader
+    public ACBindings.Internal.BlockListLoader BaseClass_BlockListLoader; // ACBindings.Internal.BlockListLoader
 
     // Child Types
-    // AlwaysLoaded_vtbl
     public unsafe struct AlwaysLoaded_vtbl
     {
         // Members
-        public System.IntPtr AlwaysLoaded_dtor_0; // function pointer
-        public System.IntPtr Reload; // function pointer
-        public System.IntPtr fEntryInBlockList; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AlwaysLoaded*, void> AlwaysLoaded_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AlwaysLoaded*, sbyte*, int> Reload; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AlwaysLoaded*, uint, int> fEntryInBlockList; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.CQuickTimer m_timerDoUseTime;
+    public ACBindings.Internal.CQuickTimer m_timerDoUseTime;
     public int fEnableDontTouch_;
     public double lastDontTouchMode_;
     public int fInDontTouchMode_;

@@ -1,4 +1,4 @@
-namespace ACBindings.MovementTypes;
+namespace ACBindings.Internal.MovementTypes;
 
 // MovementTypes::Type
 public enum Type : uint

@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// BlitArgs
 public unsafe struct BlitArgs
 {
     // Members
-    public ACBindings.BlitMode eMode;
-    public ACBindings.BlitBufferArgs cSrcArgs;
-    public ACBindings.BlitBufferArgs cDstArgs;
+    public ACBindings.Internal.BlitMode eMode;
+    public ACBindings.Internal.BlitBufferArgs cSrcArgs;
+    public ACBindings.Internal.BlitBufferArgs cDstArgs;
     public uint nWidth;
     public uint nHeight;
     public byte i8AlphaModifier;

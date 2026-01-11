@@ -1,37 +1,35 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// UIChildFramework
 public unsafe struct UIChildFramework
 {
     // Base Classes
-    public ACBindings.UIFramework BaseClass_UIFramework; // ACBindings.UIFramework
+    public ACBindings.Internal.UIFramework BaseClass_UIFramework; // ACBindings.Internal.UIFramework
 
     // Child Types
-    // UIChildFramework_vtbl
     public unsafe struct UIChildFramework_vtbl
     {
         // Members
-        public System.IntPtr UIFramework_dtor_0; // function pointer
-        public System.IntPtr OnAction; // function pointer
-        public System.IntPtr OnLoseFocus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFramework*, void> UIFramework_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFramework*, ACBindings.Internal.InputEvent*, byte> OnAction; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFramework*, uint, uint, uint, ACBindings.Internal.CallbackLoseFocusResult> OnLoseFocus; // function pointer
         public fixed byte gapC[4];
-        public System.IntPtr ListenToElementMessage; // function pointer
-        public System.IntPtr ListenToGlobalMessage; // function pointer
-        public System.IntPtr CreateAndAddRootElement; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFramework*, uint, ACBindings.Internal.UIElement*, uint, int, ACBindings.Internal.UIElementMessageListenResult> ListenToElementMessage; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFramework*, uint, int, void> ListenToGlobalMessage; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFramework*, uint, uint, ACBindings.Internal.UIElement*> CreateAndAddRootElement; // function pointer
         public System.IntPtr CreateAndAddRootElementByDataID;
-        public System.IntPtr RemoveRootElement; // function pointer
-        public System.IntPtr Show; // function pointer
-        public System.IntPtr Shown; // function pointer
-        public System.IntPtr ForceHidden; // function pointer
-        public System.IntPtr AddChild; // function pointer
-        public System.IntPtr RemoveChild; // function pointer
-        public System.IntPtr FindChild; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFramework*, ACBindings.Internal.UIElement**, void> RemoveRootElement; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFramework*, byte, void> Show; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFramework*, byte> Shown; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFramework*, byte, void> ForceHidden; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFramework*, ACBindings.Internal.UIChildFramework*, void> AddChild; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFramework*, ACBindings.Internal.UIChildFramework*, void> RemoveChild; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.UIFramework*, ACBindings.Internal.UIChildFramework*, int> FindChild; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.UIFramework* m_parent;
+    public ACBindings.Internal.UIFramework* m_parent;
 
     // Methods
 }

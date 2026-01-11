@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DArray<CPhysicsObj*>
-public unsafe struct DArray__CPhysicsObj_ptr
+public unsafe struct DArray___CPhysicsObj_ptr
 {
     // Members
-    public ACBindings.CPhysicsObj** data;
+    public ACBindings.Internal.CPhysicsObj** data;
     public uint blocksize;
     public uint next_available;
     public uint sizeOf;
@@ -12,49 +11,33 @@ public unsafe struct DArray__CPhysicsObj_ptr
     // Methods
 }
 
-// DArray<CShadowObj>
-public unsafe struct DArray__CShadowObj
+public unsafe struct DArray___CShadowObj
 {
     // Members
-    public ACBindings.CShadowObj* data;
+    public ACBindings.Internal.CShadowObj* data;
     public uint blocksize;
     public uint next_available;
     public uint sizeOf;
 
     // Methods
-    // DArray<CShadowObj>::grow (template type method)
-    // DArray<CShadowObj>::shrink (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x00514D50
+    /// void __thiscall DArray&lt;CShadowObj&gt;::grow(_DWORD*,unsigned int)</code>
+    /// </summary>
+    // void __thiscall DArray<CShadowObj>::grow(_DWORD*,unsigned int) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x00514E90
+    /// void __thiscall DArray&lt;CShadowObj&gt;::shrink(_DWORD*,unsigned int)</code>
+    /// </summary>
+    // void __thiscall DArray<CShadowObj>::shrink(_DWORD*,unsigned int) (template type method)
 }
 
-// DArray<CShadowPart*>
-public unsafe struct DArray__CShadowPart_ptr
+public unsafe struct DArray___CShadowPart_ptr
 {
     // Members
-    public ACBindings.CShadowPart** data;
-    public uint blocksize;
-    public uint next_available;
-    public uint sizeOf;
-
-    // Methods
-}
-
-// DArray<LIGHTOBJ const*>
-public unsafe struct DArray__LIGHTOBJ_ptr
-{
-    // Members
-    public ACBindings.LIGHTOBJ** data;
-    public uint blocksize;
-    public uint next_available;
-    public uint sizeOf;
-
-    // Methods
-}
-
-// DArray<CShadowObj*>
-public unsafe struct DArray__CShadowObj_ptr
-{
-    // Members
-    public ACBindings.CShadowObj** data;
+    public ACBindings.Internal.CShadowPart** data;
     public uint blocksize;
     public uint next_available;
     public uint sizeOf;
@@ -62,39 +45,10 @@ public unsafe struct DArray__CShadowObj_ptr
     // Methods
 }
 
-// DArray<ClipPlane>
-public unsafe struct DArray__ClipPlane
+public unsafe struct DArray___LIGHTOBJ_ptr
 {
     // Members
-    public ACBindings.ClipPlane* data;
-    public uint blocksize;
-    public uint next_available;
-    public uint sizeOf;
-
-    // Methods
-    // DArray<ClipPlane>::grow (template type method)
-    // DArray<ClipPlane>::shrink (template type method)
-}
-
-// DArray<CELLINFO>
-public unsafe struct DArray__CELLINFO
-{
-    // Members
-    public ACBindings.CELLINFO* data;
-    public uint blocksize;
-    public uint next_available;
-    public uint sizeOf;
-
-    // Methods
-    // DArray<CELLINFO>::grow (template type method)
-    // DArray<CELLINFO>::shrink (template type method)
-}
-
-// DArray<portal_view_type*>
-public unsafe struct DArray__portal_view_type_ptr
-{
-    // Members
-    public ACBindings.portal_view_type** data;
+    public ACBindings.Internal.LIGHTOBJ** data;
     public uint blocksize;
     public uint next_available;
     public uint sizeOf;
@@ -102,50 +56,149 @@ public unsafe struct DArray__portal_view_type_ptr
     // Methods
 }
 
-// DArray<portal_info>
-public unsafe struct DArray__portal_info
+public unsafe struct DArray___CShadowObj_ptr
 {
     // Members
-    public ACBindings.portal_info* data;
+    public ACBindings.Internal.CShadowObj** data;
     public uint blocksize;
     public uint next_available;
     public uint sizeOf;
 
     // Methods
-    // DArray<portal_info>::grow (template type method)
-    // DArray<portal_info>::shrink (template type method)
 }
 
-// DArray<view_poly>
-public unsafe struct DArray__view_poly
+public unsafe struct DArray___ClipPlane
 {
     // Members
-    public ACBindings.view_poly* data;
+    public ACBindings.Internal.ClipPlane* data;
     public uint blocksize;
     public uint next_available;
     public uint sizeOf;
 
     // Methods
-    // DArray<view_poly>::grow (template type method)
-    // DArray<view_poly>::shrink (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0052DAE0
+    /// void __thiscall DArray&lt;ClipPlane&gt;::grow(int*,unsigned int)</code>
+    /// </summary>
+    // void __thiscall DArray<ClipPlane>::grow(int*,unsigned int) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0052DBE0
+    /// void __thiscall DArray&lt;ClipPlane&gt;::shrink(int*,unsigned int)</code>
+    /// </summary>
+    // void __thiscall DArray<ClipPlane>::shrink(int*,unsigned int) (template type method)
 }
 
-// DArray<view_vertex>
-public unsafe struct DArray__view_vertex
+public unsafe struct DArray___CELLINFO
 {
     // Members
-    public ACBindings.view_vertex* data;
+    public ACBindings.Internal.CELLINFO* data;
     public uint blocksize;
     public uint next_available;
     public uint sizeOf;
 
     // Methods
-    // DArray<view_vertex>::~DArray<view_vertex> (template type method)
-    // DArray<view_vertex>::grow (template type method)
-    // DArray<view_vertex>::shrink (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x006B5DF0
+    /// void __thiscall DArray&lt;CELLINFO&gt;::grow(int*,unsigned int)</code>
+    /// </summary>
+    // void __thiscall DArray<CELLINFO>::grow(int*,unsigned int) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x006B5E80
+    /// void __thiscall DArray&lt;CELLINFO&gt;::shrink(int*,unsigned int)</code>
+    /// </summary>
+    // void __thiscall DArray<CELLINFO>::shrink(int*,unsigned int) (template type method)
 }
 
-// DArray<unsigned long>
+public unsafe struct DArray___portal_view_type_ptr
+{
+    // Members
+    public ACBindings.Internal.portal_view_type** data;
+    public uint blocksize;
+    public uint next_available;
+    public uint sizeOf;
+
+    // Methods
+}
+
+public unsafe struct DArray___portal_info
+{
+    // Members
+    public ACBindings.Internal.portal_info* data;
+    public uint blocksize;
+    public uint next_available;
+    public uint sizeOf;
+
+    // Methods
+
+    /// <summary>
+    /// <code>Offset: 0x005A55B0
+    /// void __thiscall DArray&lt;portal_info&gt;::grow(int,unsigned int)</code>
+    /// </summary>
+    // void __thiscall DArray<portal_info>::grow(int,unsigned int) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x005A5740
+    /// void __thiscall DArray&lt;portal_info&gt;::shrink(int,unsigned int)</code>
+    /// </summary>
+    // void __thiscall DArray<portal_info>::shrink(int,unsigned int) (template type method)
+}
+
+public unsafe struct DArray___view_poly
+{
+    // Members
+    public ACBindings.Internal.view_poly* data;
+    public uint blocksize;
+    public uint next_available;
+    public uint sizeOf;
+
+    // Methods
+
+    /// <summary>
+    /// <code>Offset: 0x0054D5C0
+    /// void __thiscall DArray&lt;view_poly&gt;::grow(int,unsigned int)</code>
+    /// </summary>
+    // void __thiscall DArray<view_poly>::grow(int,unsigned int) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0054D640
+    /// unsigned int __thiscall DArray&lt;view_poly&gt;::shrink(int,unsigned int)</code>
+    /// </summary>
+    // unsigned int __thiscall DArray<view_poly>::shrink(int,unsigned int) (template type method)
+}
+
+public unsafe struct DArray___view_vertex
+{
+    // Members
+    public ACBindings.Internal.view_vertex* data;
+    public uint blocksize;
+    public uint next_available;
+    public uint sizeOf;
+
+    // Methods
+
+    /// <summary>
+    /// <code>Offset: 0x0052DF80
+    /// void __thiscall DArray&lt;view_vertex&gt;::~DArray&lt;view_vertex&gt;(int*)</code>
+    /// </summary>
+    // void __thiscall DArray<view_vertex>::~DArray<view_vertex>(int*) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0054E930
+    /// void __thiscall DArray&lt;view_vertex&gt;::grow(int*,unsigned int)</code>
+    /// </summary>
+    // void __thiscall DArray<view_vertex>::grow(int*,unsigned int) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0054EA40
+    /// void __thiscall DArray&lt;view_vertex&gt;::shrink(int*,unsigned int)</code>
+    /// </summary>
+    // void __thiscall DArray<view_vertex>::shrink(int*,unsigned int) (template type method)
+}
+
 public unsafe struct DArray__uint
 {
     // Members
@@ -157,37 +210,33 @@ public unsafe struct DArray__uint
     // Methods
 }
 
-// DArray<ObjectInfo>
-public unsafe struct DArray__ObjectInfo
+public unsafe struct DArray___ObjectInfo
 {
     // Members
-    public ACBindings.ObjectInfo* data;
+    public ACBindings.Internal.ObjectInfo* data;
     public uint blocksize;
     public uint next_available;
     public uint sizeOf;
 
     // Methods
-    // DArray<ObjectInfo>::grow (template type method)
-    // DArray<ObjectInfo>::shrink (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0051ABB0
+    /// void __thiscall DArray&lt;ObjectInfo&gt;::grow(int,unsigned int)</code>
+    /// </summary>
+    // void __thiscall DArray<ObjectInfo>::grow(int,unsigned int) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0051AC20
+    /// void __thiscall DArray&lt;ObjectInfo&gt;::shrink(int,unsigned int)</code>
+    /// </summary>
+    // void __thiscall DArray<ObjectInfo>::shrink(int,unsigned int) (template type method)
 }
 
-// DArray<AmbientSound*>
-public unsafe struct DArray__AmbientSound_ptr
+public unsafe struct DArray___AmbientSound_ptr
 {
     // Members
-    public ACBindings.AmbientSound** data;
-    public uint blocksize;
-    public uint next_available;
-    public uint sizeOf;
-
-    // Methods
-}
-
-// DArray<CEnvCell*>
-public unsafe struct DArray__CEnvCell_ptr
-{
-    // Members
-    public ACBindings.CEnvCell** data;
+    public ACBindings.Internal.AmbientSound** data;
     public uint blocksize;
     public uint next_available;
     public uint sizeOf;
@@ -195,11 +244,21 @@ public unsafe struct DArray__CEnvCell_ptr
     // Methods
 }
 
-// DArray<CellListType*>
-public unsafe struct DArray__CellListType_ptr
+public unsafe struct DArray___CEnvCell_ptr
 {
     // Members
-    public ACBindings.CellListType** data;
+    public ACBindings.Internal.CEnvCell** data;
+    public uint blocksize;
+    public uint next_available;
+    public uint sizeOf;
+
+    // Methods
+}
+
+public unsafe struct DArray___CellListType_ptr
+{
+    // Members
+    public ACBindings.Internal.CellListType** data;
     public uint blocksize;
     public uint next_available;
     public uint sizeOf;

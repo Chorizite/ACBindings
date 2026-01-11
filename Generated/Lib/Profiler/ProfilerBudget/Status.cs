@@ -1,4 +1,4 @@
-namespace ACBindings.ProfilerBudget;
+namespace ACBindings.Internal.ProfilerBudget;
 
 // ProfilerBudget::Status
 public enum Status : byte

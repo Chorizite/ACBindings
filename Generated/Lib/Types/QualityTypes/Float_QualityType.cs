@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Float_QualityType
 public unsafe struct Float_QualityType
 {
     // Methods

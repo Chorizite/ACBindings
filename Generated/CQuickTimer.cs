@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CQuickTimer
 public unsafe struct CQuickTimer
 {
     // Members

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PStringSimple<char>
 public unsafe struct PStringSimple__sbyte
 {
     // Members
@@ -9,7 +8,6 @@ public unsafe struct PStringSimple__sbyte
     // Methods
 }
 
-// PStringSimple<unsigned short>
 public unsafe struct PStringSimple__ushort
 {
     // Members

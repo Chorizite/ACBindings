@@ -1,27 +1,25 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IKeystoneResource
 public unsafe struct IKeystoneResource
 {
     // Base Classes
-    public ACBindings.IResourceNotify BaseClass_IResourceNotify; // ACBindings.IResourceNotify
+    public ACBindings.Internal.IResourceNotify BaseClass_IResourceNotify; // ACBindings.Internal.IResourceNotify
 
     // Child Types
-    // IKeystoneResource_vtbl
     public unsafe struct IKeystoneResource_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr NotifyResourceStatus; // function pointer
-        public System.IntPtr GetName; // function pointer
-        public System.IntPtr GetType; // function pointer
-        public System.IntPtr DecodeData; // function pointer
-        public System.IntPtr AddOwner; // function pointer
-        public System.IntPtr RemoveOwner; // function pointer
-        public System.IntPtr SetStatus; // function pointer
-        public System.IntPtr GetStatus; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IResourceNotify*, ACBindings.Internal.IResourceNotify*, ACBindings.Internal.KS_STATUS, int> NotifyResourceStatus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IResourceNotify*, ushort*> GetName; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResource*, ushort*> GetType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResource*, System.IntPtr, int> DecodeData; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResource*, ACBindings.Internal.IResourceNotify*, int> AddOwner; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResource*, ACBindings.Internal.IResourceNotify*, int> RemoveOwner; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResource*, ACBindings.Internal.KS_STATUS, int> SetStatus; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IKeystoneResource*, ACBindings.Internal.KS_STATUS> GetStatus; // function pointer
 
         // Methods
     }

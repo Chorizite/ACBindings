@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SqCoord
 public unsafe struct SqCoord
 {
     // Members

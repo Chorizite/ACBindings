@@ -1,25 +1,23 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CryptoKeyRC4
 public unsafe struct CryptoKeyRC4
 {
     // Base Classes
-    public ACBindings.CryptoKey BaseClass_CryptoKey; // ACBindings.CryptoKey
+    public ACBindings.Internal.CryptoKey BaseClass_CryptoKey; // ACBindings.Internal.CryptoKey
 
     // Child Types
-    // CryptoKeyRC4_vtbl
     public unsafe struct CryptoKeyRC4_vtbl
     {
         // Members
-        public System.IntPtr CryptoKeyRC4_dtor_0; // function pointer
-        public System.IntPtr GenerateNewKey; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoKeyRC4*, void> CryptoKeyRC4_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoKeyRC4*, byte> GenerateNewKey; // function pointer
         public System.IntPtr StreamEncrypt;
         public System.IntPtr StreamDecrypt;
         public System.IntPtr Encrypt;
         public System.IntPtr Decrypt;
-        public System.IntPtr Serialize; // function pointer
-        public System.IntPtr ShouldSerializeWithExchangeKey; // function pointer
-        public System.IntPtr GetBlobType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoKeyRC4*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoKeyRC4*, byte> ShouldSerializeWithExchangeKey; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoKeyRC4*, uint> GetBlobType; // function pointer
 
         // Methods
     }

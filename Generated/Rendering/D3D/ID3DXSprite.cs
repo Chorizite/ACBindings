@@ -1,30 +1,28 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ID3DXSprite
 public unsafe struct ID3DXSprite
 {
     // Base Classes
-    public ACBindings.IUnknown BaseClass_IUnknown; // ACBindings.IUnknown
+    public ACBindings.Internal.IUnknown BaseClass_IUnknown; // ACBindings.Internal.IUnknown
 
     // Child Types
-    // ID3DXSprite_vtbl
     public unsafe struct ID3DXSprite_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr GetDevice; // function pointer
-        public System.IntPtr GetTransform; // function pointer
-        public System.IntPtr SetTransform; // function pointer
-        public System.IntPtr SetWorldViewRH; // function pointer
-        public System.IntPtr SetWorldViewLH; // function pointer
-        public System.IntPtr Begin; // function pointer
-        public System.IntPtr Draw; // function pointer
-        public System.IntPtr Flush; // function pointer
-        public System.IntPtr End; // function pointer
-        public System.IntPtr OnLostDevice; // function pointer
-        public System.IntPtr OnResetDevice; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXSprite*, System.IntPtr, int> GetDevice; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXSprite*, ACBindings.Internal.D3DXMATRIX*, int> GetTransform; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXSprite*, ACBindings.Internal.D3DXMATRIX*, int> SetTransform; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXSprite*, ACBindings.Internal.D3DXMATRIX*, ACBindings.Internal.D3DXMATRIX*, int> SetWorldViewRH; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXSprite*, ACBindings.Internal.D3DXMATRIX*, ACBindings.Internal.D3DXMATRIX*, int> SetWorldViewLH; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXSprite*, uint, int> Begin; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXSprite*, System.IntPtr, ACBindings.Internal.tagRECT*, ACBindings.Internal.D3DXVECTOR3*, ACBindings.Internal.D3DXVECTOR3*, uint, int> Draw; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXSprite*, int> Flush; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXSprite*, int> End; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXSprite*, int> OnLostDevice; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ID3DXSprite*, int> OnResetDevice; // function pointer
 
         // Methods
     }

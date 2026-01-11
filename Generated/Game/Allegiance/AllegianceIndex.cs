@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // AllegianceIndex
 public enum AllegianceIndex : uint

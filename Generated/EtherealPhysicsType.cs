@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// EtherealPhysicsType
 public unsafe struct EtherealPhysicsType
 {
     // Members

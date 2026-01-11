@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // CallbackLoseFocusResult
 public enum CallbackLoseFocusResult : byte

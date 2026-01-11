@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LongNIHashData
 public unsafe struct LongNIHashData
 {
     // Members
-    public ACBindings.LongNIHashData* next;
+    public ACBindings.Internal.LongNIHashData* next;
     public System.IntPtr data;
     public uint key;
 

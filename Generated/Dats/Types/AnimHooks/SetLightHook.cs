@@ -1,23 +1,21 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SetLightHook
 public unsafe struct SetLightHook
 {
     // Base Classes
-    public ACBindings.CAnimHook BaseClass_CAnimHook; // ACBindings.CAnimHook
+    public ACBindings.Internal.CAnimHook BaseClass_CAnimHook; // ACBindings.Internal.CAnimHook
 
     // Child Types
-    // SetLightHook_vtbl
     public unsafe struct SetLightHook_vtbl
     {
         // Members
-        public System.IntPtr SetLightHook_dtor_0; // function pointer
-        public System.IntPtr Execute; // function pointer
-        public System.IntPtr GetType; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
-        public System.IntPtr pack_size; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SetLightHook*, void> SetLightHook_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SetLightHook*, ACBindings.Internal.CPhysicsObj*, void> Execute; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SetLightHook*, int> GetType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SetLightHook*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SetLightHook*, uint> pack_size; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SetLightHook*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SetLightHook*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -26,7 +24,11 @@ public unsafe struct SetLightHook
     public int _lights_on;
 
     // Methods
-    // void __thiscall SetLightHook::Execute(SetLightHook*,CPhysicsObj*)
-    public void Execute(ACBindings.CPhysicsObj* object_) => ((delegate* unmanaged[Thiscall]<ref ACBindings.SetLightHook, ACBindings.CPhysicsObj*, void>)0x00527BD0)(ref this, object_);
+
+    /// <summary>
+    /// <code>Offset: 0x00527BD0
+    /// void __thiscall SetLightHook::Execute(SetLightHook*,CPhysicsObj*)</code>
+    /// </summary>
+    public void Execute(ACBindings.Internal.CPhysicsObj* object_) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SetLightHook, ACBindings.Internal.CPhysicsObj*, void>)0x00527BD0)(ref this, object_);
 }
 

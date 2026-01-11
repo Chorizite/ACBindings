@@ -1,12 +1,11 @@
-namespace ACBindings.StringTableMetaLanguage;
+namespace ACBindings.Internal.StringTableMetaLanguage;
 
-// StringTableMetaLanguage::RenderErr
 public unsafe struct RenderErr
 {
     // Members
     public int pos;
-    public ACBindings.StringTableMetaLanguage.RenderErrorCode code;
-    public ACBindings.PStringBase__sbyte msg;
+    public ACBindings.Internal.StringTableMetaLanguage.RenderErrorCode code;
+    public ACBindings.Internal.PStringBase__sbyte msg;
 
     // Methods
 }

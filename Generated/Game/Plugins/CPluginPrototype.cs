@@ -1,25 +1,28 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CPluginPrototype
 public unsafe struct CPluginPrototype
 {
     // Child Types
-    // CPluginPrototype_vtbl
     public unsafe struct CPluginPrototype_vtbl
     {
         // Members
-        public System.IntPtr CPluginPrototype_dtor_0; // function pointer
-        public System.IntPtr OnPluggedIn; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CPluginPrototype*, void> CPluginPrototype_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CPluginPrototype*, ACBindings.Internal.CPluginManager*, void> OnPluggedIn; // function pointer
 
         // Methods
     }
 
     // Members
     public System.IntPtr __vftable; // vtable pointer
-    public ACBindings.CPluginManager* m_pManager;
+    public ACBindings.Internal.CPluginManager* m_pManager;
 
     // Methods
-    // void __thiscall CPluginPrototype::OnPluggedIn(CPluginPrototype*,CPluginManager*)
-    public void OnPluggedIn(ACBindings.CPluginManager* pManager) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CPluginPrototype, ACBindings.CPluginManager*, void>)0x00401D80)(ref this, pManager);
+
+    /// <summary>Stores the supplied plugin manager instance within the prototype to enable future interactions.
+    /// <code>Offset: 0x00401D80
+    /// void __thiscall CPluginPrototype::OnPluggedIn(CPluginPrototype*,CPluginManager*)</code>
+    /// </summary>
+    /// <param name="pManager">The plugin manager that has registered this prototype.</param>
+    public void OnPluggedIn(ACBindings.Internal.CPluginManager* pManager) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CPluginPrototype, ACBindings.Internal.CPluginManager*, void>)0x00401D80)(ref this, pManager);
 }
 

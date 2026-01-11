@@ -1,31 +1,37 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DefaultScriptHook
 public unsafe struct DefaultScriptHook
 {
     // Base Classes
-    public ACBindings.CAnimHook BaseClass_CAnimHook; // ACBindings.CAnimHook
+    public ACBindings.Internal.CAnimHook BaseClass_CAnimHook; // ACBindings.Internal.CAnimHook
 
     // Child Types
-    // DefaultScriptHook_vtbl
     public unsafe struct DefaultScriptHook_vtbl
     {
         // Members
-        public System.IntPtr DefaultScriptHook_dtor_0; // function pointer
-        public System.IntPtr Execute; // function pointer
-        public System.IntPtr GetType; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
-        public System.IntPtr pack_size; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DefaultScriptHook*, void> DefaultScriptHook_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DefaultScriptHook*, ACBindings.Internal.CPhysicsObj*, void> Execute; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DefaultScriptHook*, int> GetType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DefaultScriptHook*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DefaultScriptHook*, uint> pack_size; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DefaultScriptHook*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DefaultScriptHook*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Methods
-    // int __thiscall DefaultScriptHook::UnPack(DefaultScriptHook*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DefaultScriptHook, void**, uint, int>)0x00525400)(ref this, addr, size);
-    // void __thiscall DefaultScriptHook::Execute(DefaultScriptHook*,CPhysicsObj*)
-    public void Execute(ACBindings.CPhysicsObj* object_) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DefaultScriptHook, ACBindings.CPhysicsObj*, void>)0x00527810)(ref this, object_);
+
+    /// <summary>
+    /// <code>Offset: 0x00525400
+    /// int __thiscall DefaultScriptHook::UnPack(DefaultScriptHook*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DefaultScriptHook, void**, uint, int>)0x00525400)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x00527810
+    /// void __thiscall DefaultScriptHook::Execute(DefaultScriptHook*,CPhysicsObj*)</code>
+    /// </summary>
+    public void Execute(ACBindings.Internal.CPhysicsObj* object_) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DefaultScriptHook, ACBindings.Internal.CPhysicsObj*, void>)0x00527810)(ref this, object_);
 }
 

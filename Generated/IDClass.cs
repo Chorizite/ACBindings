@@ -1,7 +1,6 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IDClass<_tagCellID,16,65535>
-public unsafe struct IDClass___tagCellID
+public unsafe struct IDClass____tagCellID
 {
     // Base Classes
     public uint BaseClass_uint; // uint
@@ -9,8 +8,7 @@ public unsafe struct IDClass___tagCellID
     // Methods
 }
 
-// IDClass<_tagVersionHandle,32,0>
-public unsafe struct IDClass___tagVersionHandle
+public unsafe struct IDClass____tagVersionHandle
 {
     // Base Classes
     public uint BaseClass_uint; // uint
@@ -18,8 +16,7 @@ public unsafe struct IDClass___tagVersionHandle
     // Methods
 }
 
-// IDClass<_tagDataID,32,0>
-public unsafe struct IDClass___tagDataID
+public unsafe struct IDClass____tagDataID
 {
     // Base Classes
     public uint BaseClass_uint; // uint

@@ -1,32 +1,30 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IRpcChannelBuffer3
 public unsafe struct IRpcChannelBuffer3
 {
     // Base Classes
-    public ACBindings.IRpcChannelBuffer2 BaseClass_IRpcChannelBuffer2; // ACBindings.IRpcChannelBuffer2
+    public ACBindings.Internal.IRpcChannelBuffer2 BaseClass_IRpcChannelBuffer2; // ACBindings.Internal.IRpcChannelBuffer2
 
     // Child Types
-    // IRpcChannelBuffer3_vtbl
     public unsafe struct IRpcChannelBuffer3_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr GetBuffer; // function pointer
-        public System.IntPtr SendReceive; // function pointer
-        public System.IntPtr FreeBuffer; // function pointer
-        public System.IntPtr GetDestCtx; // function pointer
-        public System.IntPtr IsConnected; // function pointer
-        public System.IntPtr GetProtocolVersion; // function pointer
-        public System.IntPtr Send; // function pointer
-        public System.IntPtr Receive; // function pointer
-        public System.IntPtr Cancel; // function pointer
-        public System.IntPtr GetCallContext; // function pointer
-        public System.IntPtr GetDestCtxEx; // function pointer
-        public System.IntPtr GetState; // function pointer
-        public System.IntPtr RegisterAsync; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer*, uint> Release; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer*, System.IntPtr, ACBindings.Internal._GUID*, int> GetBuffer; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer*, System.IntPtr, uint*, int> SendReceive; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer*, System.IntPtr, int> FreeBuffer; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer*, uint*, void**, int> GetDestCtx; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer*, int> IsConnected; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer2*, uint*, int> GetProtocolVersion; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer3*, System.IntPtr, uint*, int> Send; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer3*, System.IntPtr, uint, uint*, int> Receive; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer3*, System.IntPtr, int> Cancel; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer3*, System.IntPtr, ACBindings.Internal._GUID*, void**, int> GetCallContext; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer3*, System.IntPtr, uint*, void**, int> GetDestCtxEx; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer3*, System.IntPtr, uint*, int> GetState; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcChannelBuffer3*, System.IntPtr, System.IntPtr, int> RegisterAsync; // function pointer
 
         // Methods
     }

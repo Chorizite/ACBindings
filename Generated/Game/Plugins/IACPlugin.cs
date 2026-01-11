@@ -1,37 +1,35 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IACPlugin
 public unsafe struct IACPlugin
 {
     // Base Classes
-    public ACBindings.IUnknown BaseClass_IUnknown; // ACBindings.IUnknown
+    public ACBindings.Internal.IUnknown BaseClass_IUnknown; // ACBindings.Internal.IUnknown
 
     // Child Types
-    // IACPlugin_vtbl
     public unsafe struct IACPlugin_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr QueryPluginList; // function pointer
-        public System.IntPtr QueryPluginInformation; // function pointer
-        public System.IntPtr OnUIInitialized; // function pointer
-        public System.IntPtr OnLoginComplete; // function pointer
-        public System.IntPtr OnChatWindowText; // function pointer
-        public System.IntPtr OnChatBarEnter; // function pointer
-        public System.IntPtr OnDeleteObject; // function pointer
-        public System.IntPtr OnSelectedTargetChange; // function pointer
-        public System.IntPtr OnCombatModeChange; // function pointer
-        public System.IntPtr OnBusyCountDecremented; // function pointer
-        public System.IntPtr OnBusyCountIncremented; // function pointer
-        public System.IntPtr OnTradeWindowOpened; // function pointer
-        public System.IntPtr OnTradeWindowItemAdded; // function pointer
-        public System.IntPtr OnTradeWindowClosed; // function pointer
-        public System.IntPtr OnTradeWindowAccepted; // function pointer
-        public System.IntPtr OnTradeWindowDeclined; // function pointer
-        public System.IntPtr OnTradeWindowCleared; // function pointer
-        public System.IntPtr OnTradeCompleted; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, ushort**, int> QueryPluginList; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, ushort*, ushort**, ushort**, ushort**, int> QueryPluginInformation; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, int> OnUIInitialized; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, int> OnLoginComplete; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, ushort*, ACBindings.Internal.eChatTypes, int*, int> OnChatWindowText; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, ushort*, int*, int> OnChatBarEnter; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, uint, int> OnDeleteObject; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, uint, uint, int> OnSelectedTargetChange; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, ACBindings.Internal.eCombatMode, ACBindings.Internal.eCombatMode, int, int> OnCombatModeChange; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, int, int> OnBusyCountDecremented; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, int, int> OnBusyCountIncremented; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, uint, int> OnTradeWindowOpened; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, ACBindings.Internal.eTradeListID, uint, int> OnTradeWindowItemAdded; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, int> OnTradeWindowClosed; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, ACBindings.Internal.eTradeListID, int> OnTradeWindowAccepted; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, ACBindings.Internal.eTradeListID, int> OnTradeWindowDeclined; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, int> OnTradeWindowCleared; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IACPlugin*, int> OnTradeCompleted; // function pointer
 
         // Methods
     }

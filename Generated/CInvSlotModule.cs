@@ -1,33 +1,32 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CInvSlotModule
 public unsafe struct CInvSlotModule : System.IDisposable
 {
     // Members
-    public ACBindings.CInvSlotInfo* neckSlot;
-    public ACBindings.CInvSlotInfo* leftWristSlot;
-    public ACBindings.CInvSlotInfo* leftRingSlot;
-    public ACBindings.CInvSlotInfo* rightWristSlot;
-    public ACBindings.CInvSlotInfo* rightRingSlot;
-    public ACBindings.CInvSlotInfo* weaponReadySlot;
-    public ACBindings.CInvSlotInfo* ammoReadySlot;
-    public ACBindings.CInvSlotInfo* shieldReadySlot;
-    public ACBindings.CInvSlotInfo* clothesPantsSlot;
-    public ACBindings.CInvSlotInfo* clothesShirtSlot;
-    public ACBindings.CInvSlotInfo* trinketOneSlot;
-    public ACBindings.CInvSlotInfo* cloakSlot;
-    public ACBindings.CInvSlotInfo* sigilOneSlot;
-    public ACBindings.CInvSlotInfo* sigilTwoSlot;
-    public ACBindings.CInvSlotInfo* sigilThreeSlot;
-    public ACBindings.CInvSlotInfo* headSlot;
-    public ACBindings.CInvSlotInfo* chestSlot;
-    public ACBindings.CInvSlotInfo* abdomenSlot;
-    public ACBindings.CInvSlotInfo* upperArmSlot;
-    public ACBindings.CInvSlotInfo* lowerArmSlot;
-    public ACBindings.CInvSlotInfo* handSlot;
-    public ACBindings.CInvSlotInfo* upperLegSlot;
-    public ACBindings.CInvSlotInfo* lowerLegSlot;
-    public ACBindings.CInvSlotInfo* footSlot;
+    public ACBindings.Internal.CInvSlotInfo* neckSlot;
+    public ACBindings.Internal.CInvSlotInfo* leftWristSlot;
+    public ACBindings.Internal.CInvSlotInfo* leftRingSlot;
+    public ACBindings.Internal.CInvSlotInfo* rightWristSlot;
+    public ACBindings.Internal.CInvSlotInfo* rightRingSlot;
+    public ACBindings.Internal.CInvSlotInfo* weaponReadySlot;
+    public ACBindings.Internal.CInvSlotInfo* ammoReadySlot;
+    public ACBindings.Internal.CInvSlotInfo* shieldReadySlot;
+    public ACBindings.Internal.CInvSlotInfo* clothesPantsSlot;
+    public ACBindings.Internal.CInvSlotInfo* clothesShirtSlot;
+    public ACBindings.Internal.CInvSlotInfo* trinketOneSlot;
+    public ACBindings.Internal.CInvSlotInfo* cloakSlot;
+    public ACBindings.Internal.CInvSlotInfo* sigilOneSlot;
+    public ACBindings.Internal.CInvSlotInfo* sigilTwoSlot;
+    public ACBindings.Internal.CInvSlotInfo* sigilThreeSlot;
+    public ACBindings.Internal.CInvSlotInfo* headSlot;
+    public ACBindings.Internal.CInvSlotInfo* chestSlot;
+    public ACBindings.Internal.CInvSlotInfo* abdomenSlot;
+    public ACBindings.Internal.CInvSlotInfo* upperArmSlot;
+    public ACBindings.Internal.CInvSlotInfo* lowerArmSlot;
+    public ACBindings.Internal.CInvSlotInfo* handSlot;
+    public ACBindings.Internal.CInvSlotInfo* upperLegSlot;
+    public ACBindings.Internal.CInvSlotInfo* lowerLegSlot;
+    public ACBindings.Internal.CInvSlotInfo* footSlot;
 
     // Generated Constructor
     public CInvSlotModule() {
@@ -40,11 +39,23 @@ public unsafe struct CInvSlotModule : System.IDisposable
     }
 
     // Methods
-    // void __thiscall CInvSlotModule::CInvSlotModule(CInvSlotModule*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CInvSlotModule, void>)0x0055E680)(ref this);
-    // void __thiscall CInvSlotModule::Reset(CInvSlotModule*)
-    public void Reset() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CInvSlotModule, void>)0x0055E9C0)(ref this);
-    // void __thiscall CInvSlotModule::~CInvSlotModule(CInvSlotModule*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CInvSlotModule, void>)0x0055F240)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0055E680
+    /// void __thiscall CInvSlotModule::CInvSlotModule(CInvSlotModule*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CInvSlotModule, void>)0x0055E680)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0055E9C0
+    /// void __thiscall CInvSlotModule::Reset(CInvSlotModule*)</code>
+    /// </summary>
+    public void Reset() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CInvSlotModule, void>)0x0055E9C0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0055F240
+    /// void __thiscall CInvSlotModule::~CInvSlotModule(CInvSlotModule*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CInvSlotModule, void>)0x0055F240)(ref this);
 }
 

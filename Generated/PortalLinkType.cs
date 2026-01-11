@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // PortalLinkType
 public enum PortalLinkType : uint

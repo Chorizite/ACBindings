@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // PhysicsTimeStamp
 public enum PhysicsTimeStamp : uint

@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // PublicWeenieDescPackHeader2
 public enum PublicWeenieDescPackHeader2 : uint

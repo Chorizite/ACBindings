@@ -1,10 +1,13 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TinkeringSystem
 public unsafe struct TinkeringSystem
 {
     // Methods
-    // int __cdecl TinkeringSystem::IsValidMaterialType(unsigned int)
+
+    /// <summary>
+    /// <code>Offset: 0x005CA650
+    /// int __cdecl TinkeringSystem::IsValidMaterialType(unsigned int)</code>
+    /// </summary>
     public static int IsValidMaterialType(uint material) => ((delegate* unmanaged[Cdecl]<uint, int>)0x005CA650)(material);
 }
 

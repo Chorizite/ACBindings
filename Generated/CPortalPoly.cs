@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CPortalPoly
 public unsafe struct CPortalPoly : System.IDisposable
 {
     // Members
     public uint portal_index;
-    public ACBindings.CPolygon* portal;
+    public ACBindings.Internal.CPolygon* portal;
 
     // Generated Constructor
     public CPortalPoly() {
@@ -18,9 +17,17 @@ public unsafe struct CPortalPoly : System.IDisposable
     }
 
     // Methods
-    // void __thiscall CPortalPoly::CPortalPoly(CPortalPoly*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CPortalPoly, void>)0x0053ECD0)(ref this);
-    // void __thiscall CPortalPoly::~CPortalPoly(CPortalPoly*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CPortalPoly, void>)0x0053ECE0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0053ECD0
+    /// void __thiscall CPortalPoly::CPortalPoly(CPortalPoly*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CPortalPoly, void>)0x0053ECD0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0053ECE0
+    /// void __thiscall CPortalPoly::~CPortalPoly(CPortalPoly*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CPortalPoly, void>)0x0053ECE0)(ref this);
 }
 

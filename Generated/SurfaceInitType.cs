@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // SurfaceInitType
 public enum SurfaceInitType : uint

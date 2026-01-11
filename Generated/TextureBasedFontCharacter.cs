@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// TextureBasedFontCharacter
 public unsafe struct TextureBasedFontCharacter
 {
     // Members

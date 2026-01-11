@@ -1,35 +1,41 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CNetLayerPacket
 public unsafe struct CNetLayerPacket
 {
     // Base Classes
-    public ACBindings.NetPacket BaseClass_NetPacket; // ACBindings.NetPacket
+    public ACBindings.Internal.NetPacket BaseClass_NetPacket; // ACBindings.Internal.NetPacket
 
     // Child Types
-    // CNetLayerPacket_vtbl
     public unsafe struct CNetLayerPacket_vtbl
     {
         // Members
-        public System.IntPtr CNetLayerPacket_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CNetLayerPacket*, void> CNetLayerPacket_dtor_0; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.ProtoHeader m_Hdr;
+    public ACBindings.Internal.ProtoHeader m_Hdr;
     public fixed byte m_Data[65484];
     public int m_Addr;
-    public ACBindings.CBufferIterator m_Iter;
+    public ACBindings.Internal.CBufferIterator m_Iter;
     public byte m_bValid;
-    public ACBindings.ReceiverData* m_pRecv;
-    public ACBindings.RecipientData* m_pRecip;
+    public ACBindings.Internal.ReceiverData* m_pRecv;
+    public ACBindings.Internal.RecipientData* m_pRecip;
     public uint m_CryptoKey;
 
     // Methods
-    // CNetLayerPacket* __cdecl CNetLayerPacket::Create()
-    public static ACBindings.CNetLayerPacket* Create() => ((delegate* unmanaged[Cdecl]<ACBindings.CNetLayerPacket*>)0x005AB6A0)();
-    // void __thiscall CNetLayerPacket::Clear(CNetLayerPacket*)
-    public void Clear() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CNetLayerPacket, void>)0x005AB6C0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005AB6A0
+    /// CNetLayerPacket* __cdecl CNetLayerPacket::Create()</code>
+    /// </summary>
+    public static ACBindings.Internal.CNetLayerPacket* Create() => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.CNetLayerPacket*>)0x005AB6A0)();
+
+    /// <summary>
+    /// <code>Offset: 0x005AB6C0
+    /// void __thiscall CNetLayerPacket::Clear(CNetLayerPacket*)</code>
+    /// </summary>
+    public void Clear() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CNetLayerPacket, void>)0x005AB6C0)(ref this);
 }
 

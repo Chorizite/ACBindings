@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// MergeNodesTransactInfo
 public unsafe struct MergeNodesTransactInfo
 {
     // Base Classes
-    public ACBindings.DiskTransactInfo BaseClass_DiskTransactInfo; // ACBindings.DiskTransactInfo
+    public ACBindings.Internal.DiskTransactInfo BaseClass_DiskTransactInfo; // ACBindings.Internal.DiskTransactInfo
 
     // Members
     public int m_nNodeOffset;
@@ -19,9 +18,17 @@ public unsafe struct MergeNodesTransactInfo
     }
 
     // Methods
-    // void __thiscall MergeNodesTransactInfo::MergeNodesTransactInfo(MergeNodesTransactInfo*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.MergeNodesTransactInfo, void>)0x00677240)(ref this);
-    // void __thiscall MergeNodesTransactInfo::Serialize(MergeNodesTransactInfo*,Archive*)
-    public void Serialize(ACBindings.Archive* io_rcArchive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.MergeNodesTransactInfo, ACBindings.Archive*, void>)0x00677570)(ref this, io_rcArchive);
+
+    /// <summary>
+    /// <code>Offset: 0x00677240
+    /// void __thiscall MergeNodesTransactInfo::MergeNodesTransactInfo(MergeNodesTransactInfo*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.MergeNodesTransactInfo, void>)0x00677240)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00677570
+    /// void __thiscall MergeNodesTransactInfo::Serialize(MergeNodesTransactInfo*,Archive*)</code>
+    /// </summary>
+    public void Serialize(ACBindings.Internal.Archive* io_rcArchive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.MergeNodesTransactInfo, ACBindings.Internal.Archive*, void>)0x00677570)(ref this, io_rcArchive);
 }
 

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// HashBaseIter<unsigned long>
 public unsafe struct HashBaseIter__uint
 {
     // Members
@@ -13,7 +12,6 @@ public unsafe struct HashBaseIter__uint
     // Methods
 }
 
-// HashBaseIter<unsigned __int64>
 public unsafe struct HashBaseIter__ulong
 {
     // Members

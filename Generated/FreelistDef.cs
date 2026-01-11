@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// FreelistDef
 public unsafe struct FreelistDef
 {
     // Members

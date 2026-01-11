@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// UIObjectSort
 public unsafe struct UIObjectSort
 {
     // Methods

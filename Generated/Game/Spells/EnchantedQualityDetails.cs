@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// EnchantedQualityDetails
 public unsafe struct EnchantedQualityDetails
 {
     // Members

@@ -1,17 +1,15 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PortalThread
 public unsafe struct PortalThread : System.IDisposable
 {
     // Child Types
-    // PortalThread_vtbl
     public unsafe struct PortalThread_vtbl
     {
         // Members
-        public System.IntPtr PortalThread_dtor_0; // function pointer
-        public System.IntPtr Startup; // function pointer
-        public System.IntPtr SetShouldExit; // function pointer
-        public System.IntPtr WakeForTheReaper; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalThread*, void> PortalThread_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalThread*, int> Startup; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalThread*, byte, void> SetShouldExit; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PortalThread*, void> WakeForTheReaper; // function pointer
 
         // Methods
     }
@@ -35,13 +33,29 @@ public unsafe struct PortalThread : System.IDisposable
     }
 
     // Methods
-    // void __thiscall PortalThread::SetShouldExit(PortalThread*,bool)
-    public void SetShouldExit(byte fExit) => ((delegate* unmanaged[Thiscall]<ref ACBindings.PortalThread, byte, void>)0x004FCB90)(ref this, fExit);
-    // void __thiscall PortalThread::~PortalThread(PortalThread*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.PortalThread, void>)0x0065E960)(ref this);
-    // bool __thiscall PortalThread::Resume(PortalThread*)
-    public byte Resume() => ((delegate* unmanaged[Thiscall]<ref ACBindings.PortalThread, byte>)0x0065E9A0)(ref this);
-    // void __thiscall PortalThread::PortalThread(PortalThread*,unsigned int)
-    public void _ConstructorInternal(uint i_defaultStackSize) => ((delegate* unmanaged[Thiscall]<ref ACBindings.PortalThread, uint, void>)0x0065EA90)(ref this, i_defaultStackSize);
+
+    /// <summary>
+    /// <code>Offset: 0x004FCB90
+    /// void __thiscall PortalThread::SetShouldExit(PortalThread*,bool)</code>
+    /// </summary>
+    public void SetShouldExit(byte fExit) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PortalThread, byte, void>)0x004FCB90)(ref this, fExit);
+
+    /// <summary>
+    /// <code>Offset: 0x0065E960
+    /// void __thiscall PortalThread::~PortalThread(PortalThread*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PortalThread, void>)0x0065E960)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0065E9A0
+    /// bool __thiscall PortalThread::Resume(PortalThread*)</code>
+    /// </summary>
+    public byte Resume() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PortalThread, byte>)0x0065E9A0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0065EA90
+    /// void __thiscall PortalThread::PortalThread(PortalThread*,unsigned int)</code>
+    /// </summary>
+    public void _ConstructorInternal(uint i_defaultStackSize) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PortalThread, uint, void>)0x0065EA90)(ref this, i_defaultStackSize);
 }
 

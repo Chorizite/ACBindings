@@ -1,24 +1,22 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ConstantSound
 public unsafe struct ConstantSound
 {
     // Base Classes
-    public ACBindings.AmbientSound BaseClass_AmbientSound; // ACBindings.AmbientSound
+    public ACBindings.Internal.AmbientSound BaseClass_AmbientSound; // ACBindings.Internal.AmbientSound
 
     // Child Types
-    // ConstantSound_vtbl
     public unsafe struct ConstantSound_vtbl
     {
         // Members
-        public System.IntPtr ResetCount; // function pointer
-        public System.IntPtr GetVolume; // function pointer
-        public System.IntPtr CanHear; // function pointer
-        public System.IntPtr PlayNow; // function pointer
-        public System.IntPtr GetPlayInterval; // function pointer
-        public System.IntPtr AddTo; // function pointer
-        public System.IntPtr UpdateSound; // function pointer
-        public System.IntPtr GetSoundPos; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConstantSound*, void> ResetCount; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConstantSound*, float> GetVolume; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConstantSound*, int> CanHear; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConstantSound*, int> PlayNow; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConstantSound*, float> GetPlayInterval; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConstantSound*, float, ACBindings.Internal.AC1Legacy.Vector3*, ACBindings.Internal.LandDefs.Direction, void> AddTo; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConstantSound*, float, void> UpdateSound; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConstantSound*, ACBindings.Internal.Position*, int> GetSoundPos; // function pointer
 
         // Methods
     }
@@ -27,15 +25,35 @@ public unsafe struct ConstantSound
     public float current_volume;
 
     // Methods
-    // float __thiscall ConstantSound::GetVolume(ConstantSound*)
-    public float GetVolume() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ConstantSound, float>)0x005519A0)(ref this);
-    // int __thiscall ConstantSound::CanHear(ConstantSound*)
-    public int CanHear() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ConstantSound, int>)0x00551BF0)(ref this);
-    // void __thiscall ConstantSound::AddTo(ConstantSound*,float,const AC1Legacy::Vector3*,LandDefs::Direction)
-    public void AddTo(float weight, ACBindings.AC1Legacy.Vector3* diff, ACBindings.LandDefs.Direction dir) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ConstantSound, float, ACBindings.AC1Legacy.Vector3*, ACBindings.LandDefs.Direction, void>)0x00551C20)(ref this, weight, diff, dir);
-    // float __thiscall ConstantSound::GetPlayInterval(ConstantSound*)
-    public float GetPlayInterval() => ((delegate* unmanaged[Thiscall]<ref ACBindings.ConstantSound, float>)0x00551CC0)(ref this);
-    // void __thiscall ConstantSound::UpdateSound(ConstantSound*,float)
-    public void UpdateSound(float total_weight) => ((delegate* unmanaged[Thiscall]<ref ACBindings.ConstantSound, float, void>)0x00552160)(ref this, total_weight);
+
+    /// <summary>
+    /// <code>Offset: 0x005519A0
+    /// float __thiscall ConstantSound::GetVolume(ConstantSound*)</code>
+    /// </summary>
+    public float GetVolume() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ConstantSound, float>)0x005519A0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00551BF0
+    /// int __thiscall ConstantSound::CanHear(ConstantSound*)</code>
+    /// </summary>
+    public int CanHear() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ConstantSound, int>)0x00551BF0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00551C20
+    /// void __thiscall ConstantSound::AddTo(ConstantSound*,float,const AC1Legacy::Vector3*,LandDefs::Direction)</code>
+    /// </summary>
+    public void AddTo(float weight, ACBindings.Internal.AC1Legacy.Vector3* diff, ACBindings.Internal.LandDefs.Direction dir) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ConstantSound, float, ACBindings.Internal.AC1Legacy.Vector3*, ACBindings.Internal.LandDefs.Direction, void>)0x00551C20)(ref this, weight, diff, dir);
+
+    /// <summary>
+    /// <code>Offset: 0x00551CC0
+    /// float __thiscall ConstantSound::GetPlayInterval(ConstantSound*)</code>
+    /// </summary>
+    public float GetPlayInterval() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ConstantSound, float>)0x00551CC0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00552160
+    /// void __thiscall ConstantSound::UpdateSound(ConstantSound*,float)</code>
+    /// </summary>
+    public void UpdateSound(float total_weight) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ConstantSound, float, void>)0x00552160)(ref this, total_weight);
 }
 

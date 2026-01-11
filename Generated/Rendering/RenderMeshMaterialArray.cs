@@ -1,23 +1,21 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// RenderMeshMaterialArray
 public unsafe struct RenderMeshMaterialArray : System.IDisposable
 {
     // Base Classes
-    public ACBindings.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.ReferenceCountTemplate
+    public ACBindings.Internal.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.Internal.ReferenceCountTemplate
 
     // Child Types
-    // RenderMeshMaterialArray_vtbl
     public unsafe struct RenderMeshMaterialArray_vtbl
     {
         // Members
-        public System.IntPtr RenderMeshMaterialArray_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.RenderMeshMaterialArray*, void> RenderMeshMaterialArray_dtor_0; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.SmartArray___STL_pair__IDClass___tagDataID__MaterialInstance_ptr m_Materials;
+    public ACBindings.Internal.SmartArray____STL_pair___IDClass____tagDataID___MaterialInstance_ptr m_Materials;
 
     // Generated Dispose
     public void Dispose() {
@@ -25,7 +23,11 @@ public unsafe struct RenderMeshMaterialArray : System.IDisposable
     }
 
     // Methods
-    // void __thiscall RenderMeshMaterialArray::~RenderMeshMaterialArray(RenderMeshMaterialArray*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.RenderMeshMaterialArray, void>)0x00444FD0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00444FD0
+    /// void __thiscall RenderMeshMaterialArray::~RenderMeshMaterialArray(RenderMeshMaterialArray*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RenderMeshMaterialArray, void>)0x00444FD0)(ref this);
 }
 

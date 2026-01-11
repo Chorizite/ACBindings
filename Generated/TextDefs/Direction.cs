@@ -1,4 +1,4 @@
-namespace ACBindings.TextDefs;
+namespace ACBindings.Internal.TextDefs;
 
 // TextDefs::Direction
 public enum Direction : byte

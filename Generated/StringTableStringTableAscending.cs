@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// StringTableStringTableAscending
 public unsafe struct StringTableStringTableAscending
 {
     // Methods

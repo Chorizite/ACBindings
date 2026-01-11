@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LBUnit
 public unsafe struct LBUnit
 {
     // Members

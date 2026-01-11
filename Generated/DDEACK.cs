@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DDEACK
 public unsafe struct DDEACK
 {
     // Members

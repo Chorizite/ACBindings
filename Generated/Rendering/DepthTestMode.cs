@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // DepthTestMode
 public enum DepthTestMode : uint

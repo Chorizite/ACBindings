@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AFrame
 public unsafe struct AFrame
 {
     // Child Types
@@ -11,7 +10,7 @@ public unsafe struct AFrame
     }
 
     // Members
-    public ACBindings.AC1Legacy.Vector3 m_fOrigin;
+    public ACBindings.Internal.AC1Legacy.Vector3 m_fOrigin;
     public float qw;
     public float qx;
     public float qy;
@@ -23,13 +22,29 @@ public unsafe struct AFrame
     }
 
     // Methods
-    // void __thiscall AFrame::AFrame(AFrame*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.AFrame, void>)0x00520180)(ref this);
-    // int __thiscall AFrame::IsValid(AFrame*)
-    public int IsValid() => ((delegate* unmanaged[Thiscall]<ref ACBindings.AFrame, int>)0x005AAEE0)(ref this);
-    // unsigned int __thiscall AFrame::Pack(AFrame*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AFrame, void**, uint, uint>)0x005AAFF0)(ref this, addr, size);
-    // int __thiscall AFrame::UnPack(AFrame*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AFrame, void**, uint, int>)0x005AB060)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x00520180
+    /// void __thiscall AFrame::AFrame(AFrame*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AFrame, void>)0x00520180)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005AAEE0
+    /// int __thiscall AFrame::IsValid(AFrame*)</code>
+    /// </summary>
+    public int IsValid() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AFrame, int>)0x005AAEE0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005AAFF0
+    /// unsigned int __thiscall AFrame::Pack(AFrame*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AFrame, void**, uint, uint>)0x005AAFF0)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005AB060
+    /// int __thiscall AFrame::UnPack(AFrame*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AFrame, void**, uint, int>)0x005AB060)(ref this, addr, size);
 }
 

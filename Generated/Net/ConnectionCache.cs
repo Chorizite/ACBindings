@@ -1,15 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ConnectionCache
 public unsafe struct ConnectionCache
 {
     // Child Types
-    // ConnectionCache::CloseConnection
     public unsafe struct CloseConnection
     {
         // Methods
     }
-    // ConnectionCache::Entry
     public unsafe struct Entry
     {
         // Members

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// RenderDeviceConfig
 public unsafe struct RenderDeviceConfig
 {
     // Members

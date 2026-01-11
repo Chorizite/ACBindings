@@ -1,51 +1,65 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DualEnumIDMap
 public unsafe struct DualEnumIDMap
 {
     // Base Classes
-    public ACBindings.EnumIDMap BaseClass_EnumIDMap; // ACBindings.EnumIDMap
+    public ACBindings.Internal.EnumIDMap BaseClass_EnumIDMap; // ACBindings.Internal.EnumIDMap
 
     // Child Types
-    // DualEnumIDMap_vtbl
     public unsafe struct DualEnumIDMap_vtbl
     {
         // Members
-        public System.IntPtr IUnknown_QueryInterface; // function pointer
-        public System.IntPtr IUnknown_AddRef; // function pointer
-        public System.IntPtr IUnknown_Release; // function pointer
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr DBObj_dtor_18; // function pointer
-        public System.IntPtr Serialize; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
-        public System.IntPtr InitLoad; // function pointer
-        public System.IntPtr GetSubObjects; // function pointer
-        public System.IntPtr ReleaseSubObjects; // function pointer
-        public System.IntPtr NotifyFidelityLevel; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> DBObj_dtor_18; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> InitLoad; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> GetSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReleaseSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> NotifyFidelityLevel; // function pointer
         public System.IntPtr Refresh;
-        public System.IntPtr CopyInto; // function pointer
-        public System.IntPtr Destroy; // function pointer
-        public System.IntPtr FillDataGraph; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*, byte> CopyInto; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> Destroy; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.IDataGraph*, void> FillDataGraph; // function pointer
         public System.IntPtr SetDID;
-        public System.IntPtr GetDBOType; // function pointer
-        public System.IntPtr Allocate; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, uint> GetDBOType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*> Allocate; // function pointer
         public System.IntPtr SaveToDisk;
-        public System.IntPtr ReloadFromDisk; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReloadFromDisk; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.HashTable__IDClass___tagDataID__uint m_IDToEnum;
+    public ACBindings.Internal.HashTable___IDClass____tagDataID__uint m_IDToEnum;
 
     // Methods
-    // char __thiscall DualEnumIDMap::DIDToEnum(_DWORD*,unsigned int,_DWORD*)
-    public sbyte DIDToEnum(uint a2, int* a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DualEnumIDMap, uint, int*, sbyte>)0x00415CE0)(ref this, a2, a3);
-    // bool __thiscall DualEnumIDMap::InitLoad(DualEnumIDMap*)
-    public byte InitLoad() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DualEnumIDMap, byte>)0x00416180)(ref this);
-    // DBObj* __thiscall DualEnumIDMap::Allocate(DualEnumIDMap*)
-    public ACBindings.DBObj* Allocate() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DualEnumIDMap, ACBindings.DBObj*>)0x004FB7E0)(ref this);
+
+    /// <summary>Translates a data identifier into its corresponding enumeration value using an internal hash table.
+    /// <code>Offset: 0x00415CE0
+    /// char __thiscall DualEnumIDMap::DIDToEnum(_DWORD*,unsigned int,_DWORD*)</code>
+    /// </summary>
+    /// <param name="a2">The data identifier (ID) to look up.</param>
+    /// <param name="a3">Receives the mapped enumeration value when the lookup succeeds.</param>
+    /// <returns>Non‑zero if the ID was found and *a3 was set; zero otherwise.</returns>
+    public sbyte DIDToEnum(uint a2, int* a3) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DualEnumIDMap, uint, int*, sbyte>)0x00415CE0)(ref this, a2, a3);
+
+    /// <summary>Initializes the internal ID‑to‑enum hash table by copying mappings from the base enumeration tables, reporting errors if an ID appears more than once.
+    /// <code>Offset: 0x00416180
+    /// bool __thiscall DualEnumIDMap::InitLoad(DualEnumIDMap*)</code>
+    /// </summary>
+    /// <returns>True if all entries were inserted successfully; false if duplicate IDs were detected.</returns>
+    public byte InitLoad() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DualEnumIDMap, byte>)0x00416180)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004FB7E0
+    /// DBObj* __thiscall DualEnumIDMap::Allocate(DualEnumIDMap*)</code>
+    /// </summary>
+    public ACBindings.Internal.DBObj* Allocate() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DualEnumIDMap, ACBindings.Internal.DBObj*>)0x004FB7E0)(ref this);
 }
 

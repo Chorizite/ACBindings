@@ -1,35 +1,33 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// EnchantmentSpell
 public unsafe struct EnchantmentSpell
 {
     // Base Classes
-    public ACBindings.Spell BaseClass_Spell; // ACBindings.Spell
+    public ACBindings.Internal.Spell BaseClass_Spell; // ACBindings.Internal.Spell
 
     // Child Types
-    // EnchantmentSpell_vtbl
     public unsafe struct EnchantmentSpell_vtbl
     {
         // Members
-        public System.IntPtr EnchantmentSpell_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, void> EnchantmentSpell_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
-        public System.IntPtr SetEqual; // function pointer
-        public System.IntPtr InqDuration; // function pointer
-        public System.IntPtr SetDuration; // function pointer
-        public System.IntPtr IsEnchantmentSpell; // function pointer
-        public System.IntPtr IsBoostSpell; // function pointer
-        public System.IntPtr IsProjectileSpell; // function pointer
-        public System.IntPtr IsTransferSpell; // function pointer
-        public System.IntPtr IsDispelSpell; // function pointer
-        public System.IntPtr IsFellowshipSpell; // function pointer
-        public System.IntPtr BuildEnchantment; // function pointer
-        public System.IntPtr AffectsHealth; // function pointer
-        public System.IntPtr AffectsStamina; // function pointer
-        public System.IntPtr AffectsMana; // function pointer
-        public System.IntPtr pack_size; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, void**, uint, int> UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, ACBindings.Internal.Spell*, ACBindings.Internal.Spell*, void> SetEqual; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, double> InqDuration; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, double, int> SetDuration; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, int> IsEnchantmentSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, int> IsBoostSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, int> IsProjectileSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, int> IsTransferSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, int> IsDispelSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, int> IsFellowshipSpell; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, ACBindings.Internal.Enchantment*, int> BuildEnchantment; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, int> AffectsHealth; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, int> AffectsStamina; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, int> AffectsMana; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.EnchantmentSpell*, uint> pack_size; // function pointer
 
         // Methods
     }
@@ -51,15 +49,35 @@ public unsafe struct EnchantmentSpell
     public int _damage_over_time;
 
     // Methods
-    // int __thiscall EnchantmentSpell::BuildEnchantment(EnchantmentSpell*,Enchantment*)
-    public int BuildEnchantment(ACBindings.Enchantment* e) => ((delegate* unmanaged[Thiscall]<ref ACBindings.EnchantmentSpell, ACBindings.Enchantment*, int>)0x00599B10)(ref this, e);
-    // unsigned int __thiscall EnchantmentSpell::pack_size(EnchantmentSpell*)
-    public uint pack_size() => ((delegate* unmanaged[Thiscall]<ref ACBindings.EnchantmentSpell, uint>)0x00599B50)(ref this);
-    // int __thiscall EnchantmentSpell::SetDuration(EnchantmentSpell*,const long double)
-    public int SetDuration(double d) => ((delegate* unmanaged[Thiscall]<ref ACBindings.EnchantmentSpell, double, int>)0x00599BB0)(ref this, d);
-    // unsigned int __thiscall EnchantmentSpell::Pack(EnchantmentSpell*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.EnchantmentSpell, void**, uint, uint>)0x00599BF0)(ref this, addr, size);
-    // int __thiscall EnchantmentSpell::UnPack(EnchantmentSpell*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.EnchantmentSpell, void**, uint, int>)0x00599C40)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x00599B10
+    /// int __thiscall EnchantmentSpell::BuildEnchantment(EnchantmentSpell*,Enchantment*)</code>
+    /// </summary>
+    public int BuildEnchantment(ACBindings.Internal.Enchantment* e) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.EnchantmentSpell, ACBindings.Internal.Enchantment*, int>)0x00599B10)(ref this, e);
+
+    /// <summary>
+    /// <code>Offset: 0x00599B50
+    /// unsigned int __thiscall EnchantmentSpell::pack_size(EnchantmentSpell*)</code>
+    /// </summary>
+    public uint pack_size() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.EnchantmentSpell, uint>)0x00599B50)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00599BB0
+    /// int __thiscall EnchantmentSpell::SetDuration(EnchantmentSpell*,const long double)</code>
+    /// </summary>
+    public int SetDuration(double d) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.EnchantmentSpell, double, int>)0x00599BB0)(ref this, d);
+
+    /// <summary>
+    /// <code>Offset: 0x00599BF0
+    /// unsigned int __thiscall EnchantmentSpell::Pack(EnchantmentSpell*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.EnchantmentSpell, void**, uint, uint>)0x00599BF0)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x00599C40
+    /// int __thiscall EnchantmentSpell::UnPack(EnchantmentSpell*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.EnchantmentSpell, void**, uint, int>)0x00599C40)(ref this, addr, size);
 }
 

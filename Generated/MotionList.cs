@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// MotionList
 public unsafe struct MotionList
 {
     // Members
     public uint motion;
     public float speed_mod;
-    public ACBindings.MotionList* next;
+    public ACBindings.Internal.MotionList* next;
 
     // Methods
 }

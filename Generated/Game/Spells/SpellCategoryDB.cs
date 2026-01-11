@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SpellCategoryDB
 public unsafe struct SpellCategoryDB
 {
     // Methods

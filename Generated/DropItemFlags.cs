@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // DropItemFlags
 public enum DropItemFlags : uint

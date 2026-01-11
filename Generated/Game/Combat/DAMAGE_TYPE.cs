@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // DAMAGE_TYPE
 public enum DAMAGE_TYPE : uint

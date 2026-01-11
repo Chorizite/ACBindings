@@ -1,16 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CEmoteTable
 public unsafe struct CEmoteTable
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Members
-    public ACBindings.PackableHashTable__uint__PackableList__EmoteSet _emote_table;
+    public ACBindings.Internal.PackableHashTable__uint___PackableList___EmoteSet _emote_table;
 
     // Methods
-    // int __thiscall CEmoteTable::UnPack(CEmoteTable*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CEmoteTable, void**, uint, int>)0x00595C90)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x00595C90
+    /// int __thiscall CEmoteTable::UnPack(CEmoteTable*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CEmoteTable, void**, uint, int>)0x00595C90)(ref this, addr, size);
 }
 

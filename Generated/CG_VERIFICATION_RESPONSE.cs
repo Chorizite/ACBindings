@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // CG_VERIFICATION_RESPONSE
 public enum CG_VERIFICATION_RESPONSE : uint

@@ -1,46 +1,41 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LongNIValHashIter<unsigned long>
 public unsafe struct LongNIValHashIter__uint
 {
     // Base Classes
-    public ACBindings.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.HashBaseIter__uint
+    public ACBindings.Internal.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.Internal.HashBaseIter__uint
 
     // Methods
 }
 
-// LongNIValHashIter<LongHash<MotionData>*>
-public unsafe struct LongNIValHashIter__LongHash__MotionData_ptr
+public unsafe struct LongNIValHashIter___LongHash___MotionData_ptr
 {
     // Base Classes
-    public ACBindings.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.HashBaseIter__uint
+    public ACBindings.Internal.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.Internal.HashBaseIter__uint
 
     // Methods
 }
 
-// LongNIValHashIter<SurfInfo*>
-public unsafe struct LongNIValHashIter__SurfInfo_ptr
+public unsafe struct LongNIValHashIter___SurfInfo_ptr
 {
     // Base Classes
-    public ACBindings.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.HashBaseIter__uint
+    public ACBindings.Internal.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.Internal.HashBaseIter__uint
 
     // Methods
 }
 
-// LongNIValHashIter<CPhysicsObj::CollisionRecord>
-public unsafe struct LongNIValHashIter__CPhysicsObj_CollisionRecord
+public unsafe struct LongNIValHashIter___CPhysicsObj_CollisionRecord
 {
     // Base Classes
-    public ACBindings.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.HashBaseIter__uint
+    public ACBindings.Internal.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.Internal.HashBaseIter__uint
 
     // Methods
 }
 
-// LongNIValHashIter<GlobalVoyeurInfo>
-public unsafe struct LongNIValHashIter__GlobalVoyeurInfo
+public unsafe struct LongNIValHashIter___GlobalVoyeurInfo
 {
     // Base Classes
-    public ACBindings.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.HashBaseIter__uint
+    public ACBindings.Internal.HashBaseIter__uint BaseClass_HashBaseIter; // ACBindings.Internal.HashBaseIter__uint
 
     // Methods
 }

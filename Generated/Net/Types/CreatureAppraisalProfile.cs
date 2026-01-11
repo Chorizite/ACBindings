@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CreatureAppraisalProfile
 public unsafe struct CreatureAppraisalProfile
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // CreatureAppraisalProfile_vtbl
     public unsafe struct CreatureAppraisalProfile_vtbl
     {
         // Members
-        public System.IntPtr CreatureAppraisalProfile_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CreatureAppraisalProfile*, void> CreatureAppraisalProfile_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CreatureAppraisalProfile*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CreatureAppraisalProfile*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CreatureAppraisalProfile*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -64,19 +62,47 @@ public unsafe struct CreatureAppraisalProfile
     }
 
     // Methods
-    // int __thiscall CreatureAppraisalProfile::InqAttribute(CreatureAppraisalProfile*,unsigned int,unsigned int*)
-    public int InqAttribute(uint stype, uint* retval) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CreatureAppraisalProfile, uint, uint*, int>)0x005B6E30)(ref this, stype, retval);
-    // int __thiscall CreatureAppraisalProfile::InqAttribute2nd(CreatureAppraisalProfile*,unsigned int,unsigned int*)
-    public int InqAttribute2nd(uint stype, uint* retval) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CreatureAppraisalProfile, uint, uint*, int>)0x005B6ED0)(ref this, stype, retval);
-    // int __thiscall CreatureAppraisalProfile::InqAttributeEnchantmentMod(CreatureAppraisalProfile*,unsigned int,int*)
-    public int InqAttributeEnchantmentMod(uint stype, int* raised) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CreatureAppraisalProfile, uint, int*, int>)0x005B6F70)(ref this, stype, raised);
-    // int __thiscall CreatureAppraisalProfile::InqAttribute2ndEnchantmentMod(CreatureAppraisalProfile*,unsigned int,int*)
-    public int InqAttribute2ndEnchantmentMod(uint stype, int* raised) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CreatureAppraisalProfile, uint, int*, int>)0x005B7060)(ref this, stype, raised);
-    // void __thiscall CreatureAppraisalProfile::CreatureAppraisalProfile(CreatureAppraisalProfile*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CreatureAppraisalProfile, void>)0x005B70D0)(ref this);
-    // unsigned int __thiscall CreatureAppraisalProfile::Pack(CreatureAppraisalProfile*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CreatureAppraisalProfile, void**, uint, uint>)0x005B7110)(ref this, addr, size);
-    // int __thiscall CreatureAppraisalProfile::UnPack(CreatureAppraisalProfile*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CreatureAppraisalProfile, void**, uint, int>)0x005B7240)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005B6E30
+    /// int __thiscall CreatureAppraisalProfile::InqAttribute(CreatureAppraisalProfile*,unsigned int,unsigned int*)</code>
+    /// </summary>
+    public int InqAttribute(uint stype, uint* retval) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CreatureAppraisalProfile, uint, uint*, int>)0x005B6E30)(ref this, stype, retval);
+
+    /// <summary>
+    /// <code>Offset: 0x005B6ED0
+    /// int __thiscall CreatureAppraisalProfile::InqAttribute2nd(CreatureAppraisalProfile*,unsigned int,unsigned int*)</code>
+    /// </summary>
+    public int InqAttribute2nd(uint stype, uint* retval) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CreatureAppraisalProfile, uint, uint*, int>)0x005B6ED0)(ref this, stype, retval);
+
+    /// <summary>
+    /// <code>Offset: 0x005B6F70
+    /// int __thiscall CreatureAppraisalProfile::InqAttributeEnchantmentMod(CreatureAppraisalProfile*,unsigned int,int*)</code>
+    /// </summary>
+    public int InqAttributeEnchantmentMod(uint stype, int* raised) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CreatureAppraisalProfile, uint, int*, int>)0x005B6F70)(ref this, stype, raised);
+
+    /// <summary>
+    /// <code>Offset: 0x005B7060
+    /// int __thiscall CreatureAppraisalProfile::InqAttribute2ndEnchantmentMod(CreatureAppraisalProfile*,unsigned int,int*)</code>
+    /// </summary>
+    public int InqAttribute2ndEnchantmentMod(uint stype, int* raised) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CreatureAppraisalProfile, uint, int*, int>)0x005B7060)(ref this, stype, raised);
+
+    /// <summary>
+    /// <code>Offset: 0x005B70D0
+    /// void __thiscall CreatureAppraisalProfile::CreatureAppraisalProfile(CreatureAppraisalProfile*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CreatureAppraisalProfile, void>)0x005B70D0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005B7110
+    /// unsigned int __thiscall CreatureAppraisalProfile::Pack(CreatureAppraisalProfile*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CreatureAppraisalProfile, void**, uint, uint>)0x005B7110)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005B7240
+    /// int __thiscall CreatureAppraisalProfile::UnPack(CreatureAppraisalProfile*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CreatureAppraisalProfile, void**, uint, int>)0x005B7240)(ref this, addr, size);
 }
 

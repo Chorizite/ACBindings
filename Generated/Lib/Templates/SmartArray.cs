@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SmartArray<unsigned long,1>
 public unsafe struct SmartArray__uint
 {
     // Members
@@ -11,7 +10,6 @@ public unsafe struct SmartArray__uint
     // Methods
 }
 
-// SmartArray<char*,1>
 public unsafe struct SmartArray__sbyte_ptr
 {
     // Members
@@ -22,7 +20,6 @@ public unsafe struct SmartArray__sbyte_ptr
     // Methods
 }
 
-// SmartArray<long,1>
 public unsafe struct SmartArray__int
 {
     // Members
@@ -33,40 +30,36 @@ public unsafe struct SmartArray__int
     // Methods
 }
 
-// SmartArray<ArchiveVersionRow::VersionEntry,1>
-public unsafe struct SmartArray__ArchiveVersionRow_VersionEntry
+public unsafe struct SmartArray___ArchiveVersionRow_VersionEntry
 {
     // Members
-    public ACBindings.ArchiveVersionRow.VersionEntry* m_data;
+    public ACBindings.Internal.ArchiveVersionRow.VersionEntry* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<Logger::ILoggingOutputHandler*,1>
-public unsafe struct SmartArray__Logger_ILoggingOutputHandler_ptr
+public unsafe struct SmartArray___Logger_ILoggingOutputHandler_ptr
 {
     // Members
-    public ACBindings.Logger.ILoggingOutputHandler** m_data;
+    public ACBindings.Internal.Logger.ILoggingOutputHandler** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<CommandLineArg const*,1>
-public unsafe struct SmartArray__CommandLineArg_ptr
+public unsafe struct SmartArray___CommandLineArg_ptr
 {
     // Members
-    public ACBindings.CommandLineArg** m_data;
+    public ACBindings.Internal.CommandLineArg** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<unsigned short*,1>
 public unsafe struct SmartArray__ushort_ptr
 {
     // Members
@@ -77,8 +70,7 @@ public unsafe struct SmartArray__ushort_ptr
     // Methods
 }
 
-// SmartArray<PStringBase<unsigned short>,1>
-public unsafe struct SmartArray__PStringBase__ushort
+public unsafe struct SmartArray___PStringBase__ushort
 {
     // Members
     public System.IntPtr m_data;
@@ -88,41 +80,37 @@ public unsafe struct SmartArray__PStringBase__ushort
     // Methods
 }
 
-// SmartArray<CommandLineArg,1>
-public unsafe struct SmartArray__CommandLineArg
+public unsafe struct SmartArray___CommandLineArg
 {
     // Members
-    public ACBindings.CommandLineArg* m_data;
+    public ACBindings.Internal.CommandLineArg* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<BTEntry,1>
-public unsafe struct SmartArray__BTEntry
+public unsafe struct SmartArray___BTEntry
 {
     // Members
-    public ACBindings.BTEntry* m_data;
+    public ACBindings.Internal.BTEntry* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<PFileNode*,1>
-public unsafe struct SmartArray__PFileNode_ptr
+public unsafe struct SmartArray___PFileNode_ptr
 {
     // Members
-    public ACBindings.PFileNode** m_data;
+    public ACBindings.Internal.PFileNode** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<PStringBase<char>,1>
-public unsafe struct SmartArray__PStringBase__sbyte
+public unsafe struct SmartArray___PStringBase__sbyte
 {
     // Members
     public System.IntPtr m_data;
@@ -132,51 +120,46 @@ public unsafe struct SmartArray__PStringBase__sbyte
     // Methods
 }
 
-// SmartArray<CAsyncGetRequest*,1>
-public unsafe struct SmartArray__CAsyncGetRequest_ptr
+public unsafe struct SmartArray___CAsyncGetRequest_ptr
 {
     // Members
-    public ACBindings.CAsyncGetRequest** m_data;
+    public ACBindings.Internal.CAsyncGetRequest** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<AsyncCache::CAsyncRequest::CCallbackWrapper,1>
-public unsafe struct SmartArray__AsyncCache_CAsyncRequest_CCallbackWrapper
+public unsafe struct SmartArray___AsyncCache_CAsyncRequest_CCallbackWrapper
 {
     // Members
-    public ACBindings.AsyncCache.CCallbackWrapper* m_data;
+    public ACBindings.Internal.AsyncCache.CAsyncRequest.CCallbackWrapper* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<AsyncCache::CAsyncRequest*,1>
-public unsafe struct SmartArray__AsyncCache_CAsyncRequest_ptr
+public unsafe struct SmartArray___AsyncCache_CAsyncRequest_ptr
 {
     // Members
-    public ACBindings.AsyncCache.CAsyncRequest** m_data;
+    public ACBindings.Internal.AsyncCache.CAsyncRequest** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<BaseProperty,1>
-public unsafe struct SmartArray__BaseProperty
+public unsafe struct SmartArray___BaseProperty
 {
     // Members
-    public ACBindings.BaseProperty* m_data;
+    public ACBindings.Internal.BaseProperty* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<__int64,1>
 public unsafe struct SmartArray__long
 {
     // Members
@@ -187,30 +170,27 @@ public unsafe struct SmartArray__long
     // Methods
 }
 
-// SmartArray<DeviceKeyMapEntry,1>
-public unsafe struct SmartArray__DeviceKeyMapEntry
+public unsafe struct SmartArray___DeviceKeyMapEntry
 {
     // Members
-    public ACBindings.DeviceKeyMapEntry* m_data;
+    public ACBindings.Internal.DeviceKeyMapEntry* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<ActionState::SingleKeyInfo,1>
-public unsafe struct SmartArray__ActionState_SingleKeyInfo
+public unsafe struct SmartArray___ActionState_SingleKeyInfo
 {
     // Members
-    public ACBindings.ActionState.SingleKeyInfo* m_data;
+    public ACBindings.Internal.ActionState.SingleKeyInfo* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<_STL::pair<QualifiedControl,unsigned long>,1>
-public unsafe struct SmartArray___STL_pair__QualifiedControl__uint
+public unsafe struct SmartArray____STL_pair___QualifiedControl__uint
 {
     // Members
     public System.IntPtr m_data;
@@ -220,30 +200,17 @@ public unsafe struct SmartArray___STL_pair__QualifiedControl__uint
     // Methods
 }
 
-// SmartArray<Glyph,1>
-public unsafe struct SmartArray__Glyph
+public unsafe struct SmartArray___Glyph
 {
     // Members
-    public ACBindings.Glyph* m_data;
+    public ACBindings.Internal.Glyph* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<GRPVariableObject const*,1>
-public unsafe struct SmartArray__GRPVariableObject_ptr
-{
-    // Members
-    public System.IntPtr m_data;
-    public uint m_sizeAndDeallocate;
-    public uint m_num;
-
-    // Methods
-}
-
-// SmartArray<_STL::pair<PStringBase<char>,PStringBase<char>>,1>
-public unsafe struct SmartArray___STL_pair__PStringBase__sbyte__PStringBase__sbyte
+public unsafe struct SmartArray___GRPVariableObject_ptr
 {
     // Members
     public System.IntPtr m_data;
@@ -253,18 +220,26 @@ public unsafe struct SmartArray___STL_pair__PStringBase__sbyte__PStringBase__sby
     // Methods
 }
 
-// SmartArray<PrefDisplayModeType,1>
-public unsafe struct SmartArray__PrefDisplayModeType
+public unsafe struct SmartArray____STL_pair___PStringBase__sbyte___PStringBase__sbyte
 {
     // Members
-    public ACBindings.PrefDisplayModeType* m_data;
+    public System.IntPtr m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<unsigned char,0>
+public unsafe struct SmartArray___PrefDisplayModeType
+{
+    // Members
+    public ACBindings.Internal.PrefDisplayModeType* m_data;
+    public uint m_sizeAndDeallocate;
+    public uint m_num;
+
+    // Methods
+}
+
 public unsafe struct SmartArray__byte
 {
     // Members
@@ -275,139 +250,126 @@ public unsafe struct SmartArray__byte
     // Methods
 }
 
-// SmartArray<DBLevelInfo,1>
-public unsafe struct SmartArray__DBLevelInfo
+public unsafe struct SmartArray___DBLevelInfo
 {
     // Members
-    public ACBindings.DBLevelInfo* m_data;
+    public ACBindings.Internal.DBLevelInfo* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<MaterialProperty*,1>
-public unsafe struct SmartArray__MaterialProperty_ptr
+public unsafe struct SmartArray___MaterialProperty_ptr
 {
     // Members
-    public ACBindings.MaterialProperty** m_data;
+    public ACBindings.Internal.MaterialProperty** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<MaterialField*,1>
-public unsafe struct SmartArray__MaterialField_ptr
+public unsafe struct SmartArray___MaterialField_ptr
 {
     // Members
-    public ACBindings.MaterialField** m_data;
+    public ACBindings.Internal.MaterialField** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<ModifierRef*,1>
-public unsafe struct SmartArray__ModifierRef_ptr
+public unsafe struct SmartArray___ModifierRef_ptr
 {
     // Members
-    public ACBindings.ModifierRef** m_data;
+    public ACBindings.Internal.ModifierRef** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<MaterialModifier*,1>
-public unsafe struct SmartArray__MaterialModifier_ptr
+public unsafe struct SmartArray___MaterialModifier_ptr
 {
     // Members
-    public ACBindings.MaterialModifier** m_data;
+    public ACBindings.Internal.MaterialModifier** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<MaterialLayer*,1>
-public unsafe struct SmartArray__MaterialLayer_ptr
+public unsafe struct SmartArray___MaterialLayer_ptr
 {
     // Members
-    public ACBindings.MaterialLayer** m_data;
+    public ACBindings.Internal.MaterialLayer** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<MaterialShaderConstant,1>
-public unsafe struct SmartArray__MaterialShaderConstant
+public unsafe struct SmartArray___MaterialShaderConstant
 {
     // Members
-    public ACBindings.MaterialShaderConstant* m_data;
+    public ACBindings.Internal.MaterialShaderConstant* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<ShaderResourceType,1>
-public unsafe struct SmartArray__ShaderResourceType
+public unsafe struct SmartArray___ShaderResourceType
 {
     // Members
-    public ACBindings.ShaderResourceType* m_data;
+    public ACBindings.Internal.ShaderResourceType* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<LayerStage*,1>
-public unsafe struct SmartArray__LayerStage_ptr
+public unsafe struct SmartArray___LayerStage_ptr
 {
     // Members
-    public ACBindings.LayerStage** m_data;
+    public ACBindings.Internal.LayerStage** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<LayerModifier*,1>
-public unsafe struct SmartArray__LayerModifier_ptr
+public unsafe struct SmartArray___LayerModifier_ptr
 {
     // Members
-    public ACBindings.LayerModifier** m_data;
+    public ACBindings.Internal.LayerModifier** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<RenderMeshBatch*,1>
-public unsafe struct SmartArray__RenderMeshBatch_ptr
+public unsafe struct SmartArray___RenderMeshBatch_ptr
 {
     // Members
-    public ACBindings.RenderMeshBatch** m_data;
+    public ACBindings.Internal.RenderMeshBatch** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<RenderMeshFragmentTopology::TopBatchType,1>
-public unsafe struct SmartArray__RenderMeshFragmentTopology_TopBatchType
+public unsafe struct SmartArray___RenderMeshFragmentTopology_TopBatchType
 {
     // Members
-    public ACBindings.RenderMeshFragmentTopology.TopBatchType* m_data;
+    public ACBindings.Internal.RenderMeshFragmentTopology.TopBatchType* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<unsigned short,1>
 public unsafe struct SmartArray__ushort
 {
     // Members
@@ -418,30 +380,27 @@ public unsafe struct SmartArray__ushort
     // Methods
 }
 
-// SmartArray<Vector3,1>
-public unsafe struct SmartArray__Vector3
+public unsafe struct SmartArray___Vector3
 {
     // Members
-    public ACBindings.Vector3* m_data;
+    public ACBindings.Internal.Vector3* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<Box2D,1>
-public unsafe struct SmartArray__Box2D
+public unsafe struct SmartArray___Box2D
 {
     // Members
-    public ACBindings.Box2D* m_data;
+    public ACBindings.Internal.Box2D* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<IDClass<_tagDataID,32,0>,1>
-public unsafe struct SmartArray__IDClass___tagDataID
+public unsafe struct SmartArray___IDClass____tagDataID
 {
     // Members
     public System.IntPtr m_data;
@@ -451,151 +410,137 @@ public unsafe struct SmartArray__IDClass___tagDataID
     // Methods
 }
 
-// SmartArray<UIElement*,1>
-public unsafe struct SmartArray__UIElement_ptr
+public unsafe struct SmartArray___UIElement_ptr
 {
     // Members
-    public ACBindings.UIElement** m_data;
+    public ACBindings.Internal.UIElement** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<MediaDesc*,1>
-public unsafe struct SmartArray__MediaDesc_ptr
+public unsafe struct SmartArray___MediaDesc_ptr
 {
     // Members
-    public ACBindings.MediaDesc** m_data;
+    public ACBindings.Internal.MediaDesc** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<BaseInfo,1>
-public unsafe struct SmartArray__BaseInfo
+public unsafe struct SmartArray___BaseInfo
 {
     // Members
-    public ACBindings.BaseInfo* m_data;
+    public ACBindings.Internal.BaseInfo* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<SurfaceUsageSummary,1>
-public unsafe struct SmartArray__SurfaceUsageSummary
+public unsafe struct SmartArray___SurfaceUsageSummary
 {
     // Members
-    public ACBindings.SurfaceUsageSummary* m_data;
+    public ACBindings.Internal.SurfaceUsageSummary* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<GlyphLine,1>
-public unsafe struct SmartArray__GlyphLine
+public unsafe struct SmartArray___GlyphLine
 {
     // Members
-    public ACBindings.GlyphLine* m_data;
+    public ACBindings.Internal.GlyphLine* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<UIChildFramework*,1>
-public unsafe struct SmartArray__UIChildFramework_ptr
+public unsafe struct SmartArray___UIChildFramework_ptr
 {
     // Members
-    public ACBindings.UIChildFramework** m_data;
+    public ACBindings.Internal.UIChildFramework** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<StringDownload*,1>
-public unsafe struct SmartArray__StringDownload_ptr
+public unsafe struct SmartArray___StringDownload_ptr
 {
     // Members
-    public ACBindings.StringDownload** m_data;
+    public ACBindings.Internal.StringDownload** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<Skill_CG,1>
-public unsafe struct SmartArray__Skill_CG
+public unsafe struct SmartArray___Skill_CG
 {
     // Members
-    public ACBindings.Skill_CG* m_data;
+    public ACBindings.Internal.Skill_CG* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<Template_CG,1>
-public unsafe struct SmartArray__Template_CG
+public unsafe struct SmartArray___Template_CG
 {
     // Members
-    public ACBindings.Template_CG* m_data;
+    public ACBindings.Internal.Template_CG* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<HairStyle_CG,1>
-public unsafe struct SmartArray__HairStyle_CG
+public unsafe struct SmartArray___HairStyle_CG
 {
     // Members
-    public ACBindings.HairStyle_CG* m_data;
+    public ACBindings.Internal.HairStyle_CG* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<EyesStrip_CG,1>
-public unsafe struct SmartArray__EyesStrip_CG
+public unsafe struct SmartArray___EyesStrip_CG
 {
     // Members
-    public ACBindings.EyesStrip_CG* m_data;
+    public ACBindings.Internal.EyesStrip_CG* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<FaceStrip_CG,1>
-public unsafe struct SmartArray__FaceStrip_CG
+public unsafe struct SmartArray___FaceStrip_CG
 {
     // Members
-    public ACBindings.FaceStrip_CG* m_data;
+    public ACBindings.Internal.FaceStrip_CG* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<Style_CG,1>
-public unsafe struct SmartArray__Style_CG
+public unsafe struct SmartArray___Style_CG
 {
     // Members
-    public ACBindings.Style_CG* m_data;
+    public ACBindings.Internal.Style_CG* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<_STL::pair<unsigned long,_STL::pair<QualifiedControl,unsigned long>>,1>
-public unsafe struct SmartArray___STL_pair__uint___STL_pair__QualifiedControl__uint
+public unsafe struct SmartArray____STL_pair__uint____STL_pair___QualifiedControl__uint
 {
     // Members
     public System.IntPtr m_data;
@@ -605,63 +550,57 @@ public unsafe struct SmartArray___STL_pair__uint___STL_pair__QualifiedControl__u
     // Methods
 }
 
-// SmartArray<CAllIterationList::PTaggedIterationList,1>
-public unsafe struct SmartArray__CAllIterationList_PTaggedIterationList
+public unsafe struct SmartArray___CAllIterationList_PTaggedIterationList
 {
     // Members
-    public ACBindings.CAllIterationList.PTaggedIterationList* m_data;
+    public ACBindings.Internal.CAllIterationList.PTaggedIterationList* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<MissingIteration,1>
-public unsafe struct SmartArray__MissingIteration
+public unsafe struct SmartArray___MissingIteration
 {
     // Members
-    public ACBindings.MissingIteration* m_data;
+    public ACBindings.Internal.MissingIteration* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<QualifiedDataID,1>
-public unsafe struct SmartArray__QualifiedDataID
+public unsafe struct SmartArray___QualifiedDataID
 {
     // Members
-    public ACBindings.QualifiedDataID* m_data;
+    public ACBindings.Internal.QualifiedDataID* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<BSPNODE*,1>
-public unsafe struct SmartArray__BSPNODE_ptr
+public unsafe struct SmartArray___BSPNODE_ptr
 {
     // Members
-    public ACBindings.BSPNODE** m_data;
+    public ACBindings.Internal.BSPNODE** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<MeshBatchType,0>
-public unsafe struct SmartArray__MeshBatchType
+public unsafe struct SmartArray___MeshBatchType
 {
     // Members
-    public ACBindings.MeshBatchType* m_data;
+    public ACBindings.Internal.MeshBatchType* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<_D3DXATTRIBUTERANGE,0>
-public unsafe struct SmartArray___D3DXATTRIBUTERANGE
+public unsafe struct SmartArray____D3DXATTRIBUTERANGE
 {
     // Members
     public System.IntPtr m_data;
@@ -671,173 +610,157 @@ public unsafe struct SmartArray___D3DXATTRIBUTERANGE
     // Methods
 }
 
-// SmartArray<Position,1>
-public unsafe struct SmartArray__Position
+public unsafe struct SmartArray___Position
 {
     // Members
-    public ACBindings.Position* m_data;
+    public ACBindings.Internal.Position* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<ACCharGenStartArea,1>
-public unsafe struct SmartArray__ACCharGenStartArea
+public unsafe struct SmartArray___ACCharGenStartArea
 {
     // Members
-    public ACBindings.ACCharGenStartArea* m_data;
+    public ACBindings.Internal.ACCharGenStartArea* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<LOAD_WEIGHTS,1>
-public unsafe struct SmartArray__LOAD_WEIGHTS
+public unsafe struct SmartArray___LOAD_WEIGHTS
 {
     // Members
-    public ACBindings.LOAD_WEIGHTS* m_data;
+    public ACBindings.Internal.LOAD_WEIGHTS* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<LOAD_UVPAIR,1>
-public unsafe struct SmartArray__LOAD_UVPAIR
+public unsafe struct SmartArray___LOAD_UVPAIR
 {
     // Members
-    public ACBindings.LOAD_UVPAIR* m_data;
+    public ACBindings.Internal.LOAD_UVPAIR* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<GraphicsResource*,1>
-public unsafe struct SmartArray__GraphicsResource_ptr
+public unsafe struct SmartArray___GraphicsResource_ptr
 {
     // Members
-    public ACBindings.GraphicsResource** m_data;
+    public ACBindings.Internal.GraphicsResource** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<FontReference,1>
-public unsafe struct SmartArray__FontReference
+public unsafe struct SmartArray___FontReference
 {
     // Members
-    public ACBindings.FontReference* m_data;
+    public ACBindings.Internal.FontReference* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<CPluginPrototype*,1>
-public unsafe struct SmartArray__CPluginPrototype_ptr
+public unsafe struct SmartArray___CPluginPrototype_ptr
 {
     // Members
-    public ACBindings.CPluginPrototype** m_data;
+    public ACBindings.Internal.CPluginPrototype** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<InfoRegion*,1>
-public unsafe struct SmartArray__InfoRegion_ptr
+public unsafe struct SmartArray___InfoRegion_ptr
 {
     // Members
-    public ACBindings.InfoRegion** m_data;
+    public ACBindings.Internal.InfoRegion** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<bool (__cdecl*)(void),1>
 public unsafe struct SmartArray__void_ptr
 {
     // Members
-    public System.IntPtr m_data; // function pointer
+    public delegate* unmanaged[Cdecl]<byte> m_data; // function pointer
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<TextureBasedFontVertexType,1>
-public unsafe struct SmartArray__TextureBasedFontVertexType
+public unsafe struct SmartArray___TextureBasedFontVertexType
 {
     // Members
-    public ACBindings.TextureBasedFontVertexType* m_data;
+    public ACBindings.Internal.TextureBasedFontVertexType* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<RenderLight,1>
-public unsafe struct SmartArray__RenderLight
+public unsafe struct SmartArray___RenderLight
 {
     // Members
-    public ACBindings.RenderLight* m_data;
+    public ACBindings.Internal.RenderLight* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<DiskController*,1>
-public unsafe struct SmartArray__DiskController_ptr
+public unsafe struct SmartArray___DiskController_ptr
 {
     // Members
-    public ACBindings.DiskController** m_data;
+    public ACBindings.Internal.DiskController** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<CPhysicsObj*,1>
-public unsafe struct SmartArray__CPhysicsObj_ptr
+public unsafe struct SmartArray___CPhysicsObj_ptr
 {
     // Members
-    public ACBindings.CPhysicsObj** m_data;
+    public ACBindings.Internal.CPhysicsObj** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<LIGHTINFO*,1>
-public unsafe struct SmartArray__LIGHTINFO_ptr
+public unsafe struct SmartArray___LIGHTINFO_ptr
 {
     // Members
-    public ACBindings.LIGHTINFO** m_data;
+    public ACBindings.Internal.LIGHTINFO** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<IConsoleCallbackObject*,1>
-public unsafe struct SmartArray__IConsoleCallbackObject_ptr
+public unsafe struct SmartArray___IConsoleCallbackObject_ptr
 {
     // Members
-    public ACBindings.IConsoleCallbackObject** m_data;
+    public ACBindings.Internal.IConsoleCallbackObject** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<_STL::pair<unsigned long,QualifiedDataIDArray>,1>
-public unsafe struct SmartArray___STL_pair__uint__QualifiedDataIDArray
+public unsafe struct SmartArray____STL_pair__uint___QualifiedDataIDArray
 {
     // Members
     public System.IntPtr m_data;
@@ -847,19 +770,17 @@ public unsafe struct SmartArray___STL_pair__uint__QualifiedDataIDArray
     // Methods
 }
 
-// SmartArray<DataHistory::DataIDHistoryData,1>
-public unsafe struct SmartArray__DataHistory_DataIDHistoryData
+public unsafe struct SmartArray___DataHistory_DataIDHistoryData
 {
     // Members
-    public ACBindings.DataHistory.DataIDHistoryData* m_data;
+    public ACBindings.Internal.DataHistory.DataIDHistoryData* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<HashSorterNode<long,DataHistory::IterationData>,1>
-public unsafe struct SmartArray__HashSorterNode__int__DataHistory_IterationData
+public unsafe struct SmartArray___HashSorterNode__int___DataHistory_IterationData
 {
     // Members
     public System.IntPtr m_data;
@@ -869,8 +790,7 @@ public unsafe struct SmartArray__HashSorterNode__int__DataHistory_IterationData
     // Methods
 }
 
-// SmartArray<_STL::pair<IDClass<_tagDataID,32,0>,MaterialInstance*>,1>
-public unsafe struct SmartArray___STL_pair__IDClass___tagDataID__MaterialInstance_ptr
+public unsafe struct SmartArray____STL_pair___IDClass____tagDataID___MaterialInstance_ptr
 {
     // Members
     public System.IntPtr m_data;
@@ -880,8 +800,7 @@ public unsafe struct SmartArray___STL_pair__IDClass___tagDataID__MaterialInstanc
     // Methods
 }
 
-// SmartArray<RenderVertexBuffer*,1>
-public unsafe struct SmartArray__RenderVertexBuffer_ptr
+public unsafe struct SmartArray___RenderVertexBuffer_ptr
 {
     // Members
     public System.IntPtr m_data;
@@ -891,85 +810,77 @@ public unsafe struct SmartArray__RenderVertexBuffer_ptr
     // Methods
 }
 
-// SmartArray<RenderIndexBuffer*,1>
-public unsafe struct SmartArray__RenderIndexBuffer_ptr
+public unsafe struct SmartArray___RenderIndexBuffer_ptr
 {
     // Members
-    public ACBindings.RenderIndexBuffer** m_data;
+    public ACBindings.Internal.RenderIndexBuffer** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<RenderMeshFragmentTopology::TopVertexType,1>
-public unsafe struct SmartArray__RenderMeshFragmentTopology_TopVertexType
+public unsafe struct SmartArray___RenderMeshFragmentTopology_TopVertexType
 {
     // Members
-    public ACBindings.RenderMeshFragmentTopology.TopVertexType* m_data;
+    public ACBindings.Internal.RenderMeshFragmentTopology.TopVertexType* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<RenderMeshFragmentTopology::TopTriangleType,1>
-public unsafe struct SmartArray__RenderMeshFragmentTopology_TopTriangleType
+public unsafe struct SmartArray___RenderMeshFragmentTopology_TopTriangleType
 {
     // Members
-    public ACBindings.RenderMeshFragmentTopology.TopTriangleType* m_data;
+    public ACBindings.Internal.RenderMeshFragmentTopology.TopTriangleType* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<RenderMeshFragmentTopology::TopEdgeType,1>
-public unsafe struct SmartArray__RenderMeshFragmentTopology_TopEdgeType
+public unsafe struct SmartArray___RenderMeshFragmentTopology_TopEdgeType
 {
     // Members
-    public ACBindings.RenderMeshFragmentTopology.TopEdgeType* m_data;
+    public ACBindings.Internal.RenderMeshFragmentTopology.TopEdgeType* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<RenderMeshFragment*,1>
-public unsafe struct SmartArray__RenderMeshFragment_ptr
+public unsafe struct SmartArray___RenderMeshFragment_ptr
 {
     // Members
-    public ACBindings.RenderMeshFragment** m_data;
+    public ACBindings.Internal.RenderMeshFragment** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<QualityChangeHandler*,1>
-public unsafe struct SmartArray__QualityChangeHandler_ptr
+public unsafe struct SmartArray___QualityChangeHandler_ptr
 {
     // Members
-    public ACBindings.QualityChangeHandler** m_data;
+    public ACBindings.Internal.QualityChangeHandler** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<ClientNet::CReferralQueueEntry,1>
-public unsafe struct SmartArray__ClientNet_CReferralQueueEntry
+public unsafe struct SmartArray___ClientNet_CReferralQueueEntry
 {
     // Members
-    public ACBindings.ClientNet.CReferralQueueEntry* m_data;
+    public ACBindings.Internal.ClientNet.CReferralQueueEntry* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<HashSorterNode<unsigned long,ElementDesc>,1>
-public unsafe struct SmartArray__HashSorterNode__uint__ElementDesc
+public unsafe struct SmartArray___HashSorterNode__uint___ElementDesc
 {
     // Members
     public System.IntPtr m_data;
@@ -979,162 +890,147 @@ public unsafe struct SmartArray__HashSorterNode__uint__ElementDesc
     // Methods
 }
 
-// SmartArray<ClientSystem*,1>
-public unsafe struct SmartArray__ClientSystem_ptr
+public unsafe struct SmartArray___ClientSystem_ptr
 {
     // Members
-    public ACBindings.ClientSystem** m_data;
+    public ACBindings.Internal.ClientSystem** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<DbgReportGenPage*,1>
-public unsafe struct SmartArray__DbgReportGenPage_ptr
+public unsafe struct SmartArray___DbgReportGenPage_ptr
 {
     // Members
-    public ACBindings.DbgReportGenPage** m_data;
+    public ACBindings.Internal.DbgReportGenPage** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<UIMessageData,1>
-public unsafe struct SmartArray__UIMessageData
+public unsafe struct SmartArray___UIMessageData
 {
     // Members
-    public ACBindings.UIMessageData* m_data;
+    public ACBindings.Internal.UIMessageData* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<UIMessageRemovalData,1>
-public unsafe struct SmartArray__UIMessageRemovalData
+public unsafe struct SmartArray___UIMessageRemovalData
 {
     // Members
-    public ACBindings.UIMessageRemovalData* m_data;
+    public ACBindings.Internal.UIMessageRemovalData* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<ContextMenuData,1>
-public unsafe struct SmartArray__ContextMenuData
+public unsafe struct SmartArray___ContextMenuData
 {
     // Members
-    public ACBindings.ContextMenuData* m_data;
+    public ACBindings.Internal.ContextMenuData* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<ProfilerUIWindow*,1>
-public unsafe struct SmartArray__ProfilerUIWindow_ptr
+public unsafe struct SmartArray___ProfilerUIWindow_ptr
 {
     // Members
-    public ACBindings.ProfilerUIWindow** m_data;
+    public ACBindings.Internal.ProfilerUIWindow** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<QuickButton*,1>
-public unsafe struct SmartArray__QuickButton_ptr
+public unsafe struct SmartArray___QuickButton_ptr
 {
     // Members
-    public ACBindings.QuickButton** m_data;
+    public ACBindings.Internal.QuickButton** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<BudgetStatItem,1>
-public unsafe struct SmartArray__BudgetStatItem
+public unsafe struct SmartArray___BudgetStatItem
 {
     // Members
-    public ACBindings.BudgetStatItem* m_data;
+    public ACBindings.Internal.BudgetStatItem* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<ProfilerDBObjStat,1>
-public unsafe struct SmartArray__ProfilerDBObjStat
+public unsafe struct SmartArray___ProfilerDBObjStat
 {
     // Members
-    public ACBindings.ProfilerDBObjStat* m_data;
+    public ACBindings.Internal.ProfilerDBObjStat* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<RenderDisplayModeType,1>
-public unsafe struct SmartArray__RenderDisplayModeType
+public unsafe struct SmartArray___RenderDisplayModeType
 {
     // Members
-    public ACBindings.RenderDisplayModeType* m_data;
+    public ACBindings.Internal.RenderDisplayModeType* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<PEnum,1>
-public unsafe struct SmartArray__PEnum
+public unsafe struct SmartArray___PEnum
 {
     // Members
-    public ACBindings.PEnum* m_data;
+    public ACBindings.Internal.PEnum* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<PAlias,1>
-public unsafe struct SmartArray__PAlias
+public unsafe struct SmartArray___PAlias
 {
     // Members
-    public ACBindings.PAlias* m_data;
+    public ACBindings.Internal.PAlias* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<QualifiedIteration,1>
-public unsafe struct SmartArray__QualifiedIteration
+public unsafe struct SmartArray___QualifiedIteration
 {
     // Members
-    public ACBindings.QualifiedIteration* m_data;
+    public ACBindings.Internal.QualifiedIteration* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<DDD_DataMessage*,1>
-public unsafe struct SmartArray__DDD_DataMessage_ptr
+public unsafe struct SmartArray___DDD_DataMessage_ptr
 {
     // Members
-    public ACBindings.DDD_DataMessage** m_data;
+    public ACBindings.Internal.DDD_DataMessage** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<HashSorterNode<unsigned long,StringTableString*>,1>
-public unsafe struct SmartArray__HashSorterNode__uint__StringTableString_ptr
+public unsafe struct SmartArray___HashSorterNode__uint___StringTableString_ptr
 {
     // Members
     public System.IntPtr m_data;
@@ -1144,19 +1040,17 @@ public unsafe struct SmartArray__HashSorterNode__uint__StringTableString_ptr
     // Methods
 }
 
-// SmartArray<CInputManager_WIN32::InputDevice,1>
-public unsafe struct SmartArray__CInputManager_WIN32_InputDevice
+public unsafe struct SmartArray___CInputManager_WIN32_InputDevice
 {
     // Members
-    public ACBindings.CInputManager_WIN32.InputDevice* m_data;
+    public ACBindings.Internal.CInputManager_WIN32.InputDevice* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<PriorityHash<ControlSpecification,CInputManager_WIN32::ButtonHistoryEntry,1>::PriorityHashData*,1>
-public unsafe struct SmartArray__PriorityHash__ControlSpecification__CInputManager_WIN32_ButtonHistoryEntry_PriorityHashData_ptr
+public unsafe struct SmartArray___PriorityHash___ControlSpecification___CInputManager_WIN32_ButtonHistoryEntry_PriorityHashData_ptr
 {
     // Members
     public System.IntPtr m_data;
@@ -1166,209 +1060,190 @@ public unsafe struct SmartArray__PriorityHash__ControlSpecification__CInputManag
     // Methods
 }
 
-// SmartArray<VertexRange,1>
-public unsafe struct SmartArray__VertexRange
+public unsafe struct SmartArray___VertexRange
 {
     // Members
-    public ACBindings.VertexRange* m_data;
+    public ACBindings.Internal.VertexRange* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<RenderVertexStreamD3D*,1>
-public unsafe struct SmartArray__RenderVertexStreamD3D_ptr
+public unsafe struct SmartArray___RenderVertexStreamD3D_ptr
 {
     // Members
-    public ACBindings.RenderVertexStreamD3D** m_data;
+    public ACBindings.Internal.RenderVertexStreamD3D** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<D3DLevelResourceType,1>
-public unsafe struct SmartArray__D3DLevelResourceType
+public unsafe struct SmartArray___D3DLevelResourceType
 {
     // Members
-    public ACBindings.D3DLevelResourceType* m_data;
+    public ACBindings.Internal.D3DLevelResourceType* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<Font*,1>
-public unsafe struct SmartArray__Font_ptr
+public unsafe struct SmartArray___Font_ptr
 {
     // Members
-    public ACBindings.Font** m_data;
+    public ACBindings.Internal.Font** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<RenderMeshQueryVertexType,1>
-public unsafe struct SmartArray__RenderMeshQueryVertexType
+public unsafe struct SmartArray___RenderMeshQueryVertexType
 {
     // Members
-    public ACBindings.RenderMeshQueryVertexType* m_data;
+    public ACBindings.Internal.RenderMeshQueryVertexType* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<View,1>
-public unsafe struct SmartArray__View
+public unsafe struct SmartArray___View
 {
     // Members
-    public ACBindings.View* m_data;
+    public ACBindings.Internal.View* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<UIElement_Button*,1>
-public unsafe struct SmartArray__UIElement_Button_ptr
+public unsafe struct SmartArray___UIElement_Button_ptr
 {
     // Members
-    public ACBindings.UIElement_Button** m_data;
+    public ACBindings.Internal.UIElement_Button** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<UIOption*,1>
-public unsafe struct SmartArray__UIOption_ptr
+public unsafe struct SmartArray___UIOption_ptr
 {
     // Members
-    public ACBindings.UIOption** m_data;
+    public ACBindings.Internal.UIOption** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<RadarInfo,1>
-public unsafe struct SmartArray__RadarInfo
+public unsafe struct SmartArray___RadarInfo
 {
     // Members
-    public ACBindings.RadarInfo* m_data;
+    public ACBindings.Internal.RadarInfo* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<RenderSurface*,1>
-public unsafe struct SmartArray__RenderSurface_ptr
+public unsafe struct SmartArray___RenderSurface_ptr
 {
     // Members
-    public ACBindings.RenderSurface** m_data;
+    public ACBindings.Internal.RenderSurface** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<StringInfo,1>
-public unsafe struct SmartArray__StringInfo
+public unsafe struct SmartArray___StringInfo
 {
     // Members
-    public ACBindings.StringInfo* m_data;
+    public ACBindings.Internal.StringInfo* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<gmCombatPanelUI::PanelChildInfo,1>
-public unsafe struct SmartArray__gmCombatPanelUI_PanelChildInfo
+public unsafe struct SmartArray___gmCombatPanelUI_PanelChildInfo
 {
     // Members
-    public ACBindings.gmCombatPanelUI.PanelChildInfo* m_data;
+    public ACBindings.Internal.gmCombatPanelUI.PanelChildInfo* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<gmEnvPanelUI::PanelChildInfo,1>
-public unsafe struct SmartArray__gmEnvPanelUI_PanelChildInfo
+public unsafe struct SmartArray___gmEnvPanelUI_PanelChildInfo
 {
     // Members
-    public ACBindings.gmEnvPanelUI.PanelChildInfo* m_data;
+    public ACBindings.Internal.gmEnvPanelUI.PanelChildInfo* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<UIElement_Text*,1>
-public unsafe struct SmartArray__UIElement_Text_ptr
+public unsafe struct SmartArray___UIElement_Text_ptr
 {
     // Members
-    public ACBindings.UIElement_Text** m_data;
+    public ACBindings.Internal.UIElement_Text** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<gmPanelUI::PanelChildInfo,1>
-public unsafe struct SmartArray__gmPanelUI_PanelChildInfo
+public unsafe struct SmartArray___gmPanelUI_PanelChildInfo
 {
     // Members
-    public ACBindings.gmPanelUI.PanelChildInfo* m_data;
+    public ACBindings.Internal.gmPanelUI.PanelChildInfo* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<PanelButtonInfo,1>
-public unsafe struct SmartArray__PanelButtonInfo
+public unsafe struct SmartArray___PanelButtonInfo
 {
     // Members
-    public ACBindings.PanelButtonInfo* m_data;
+    public ACBindings.Internal.PanelButtonInfo* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<UIElement_ItemList*,1>
-public unsafe struct SmartArray__UIElement_ItemList_ptr
+public unsafe struct SmartArray___UIElement_ItemList_ptr
 {
     // Members
-    public ACBindings.UIElement_ItemList** m_data;
+    public ACBindings.Internal.UIElement_ItemList** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<EffectInfoRegion*,1>
-public unsafe struct SmartArray__EffectInfoRegion_ptr
+public unsafe struct SmartArray___EffectInfoRegion_ptr
 {
     // Members
-    public ACBindings.EffectInfoRegion** m_data;
+    public ACBindings.Internal.EffectInfoRegion** m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
-// SmartArray<UIOption_CheckboxBitfield64::ChildInfo,1>
-public unsafe struct SmartArray__UIOption_CheckboxBitfield64_ChildInfo
+public unsafe struct SmartArray___UIOption_CheckboxBitfield64_ChildInfo
 {
     // Members
-    public ACBindings.UIOption_CheckboxBitfield64.ChildInfo* m_data;
+    public ACBindings.Internal.UIOption_CheckboxBitfield64.ChildInfo* m_data;
     public uint m_sizeAndDeallocate;
     public uint m_num;
 

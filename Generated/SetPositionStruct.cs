@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SetPositionStruct
 public unsafe struct SetPositionStruct
 {
     // Members
-    public ACBindings.Position pos;
+    public ACBindings.Internal.Position pos;
     public uint flags;
-    public ACBindings.AC1Legacy.Vector3 line;
+    public ACBindings.Internal.AC1Legacy.Vector3 line;
     public float xrad;
     public float yrad;
     public uint num_tries;
@@ -17,11 +16,23 @@ public unsafe struct SetPositionStruct
     }
 
     // Methods
-    // void __thiscall SetPositionStruct::SetFlags(SetPositionStruct*,const unsigned int)
-    public void SetFlags(uint new_flags) => ((delegate* unmanaged[Thiscall]<ref ACBindings.SetPositionStruct, uint, void>)0x0051C670)(ref this, new_flags);
-    // void __thiscall SetPositionStruct::SetPositionStruct(SetPositionStruct*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.SetPositionStruct, void>)0x0051C680)(ref this);
-    // void __thiscall SetPositionStruct::SetPosition(SetPositionStruct*,const Position*)
-    public void SetPosition(ACBindings.Position* new_pos) => ((delegate* unmanaged[Thiscall]<ref ACBindings.SetPositionStruct, ACBindings.Position*, void>)0x0051C6D0)(ref this, new_pos);
+
+    /// <summary>
+    /// <code>Offset: 0x0051C670
+    /// void __thiscall SetPositionStruct::SetFlags(SetPositionStruct*,const unsigned int)</code>
+    /// </summary>
+    public void SetFlags(uint new_flags) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SetPositionStruct, uint, void>)0x0051C670)(ref this, new_flags);
+
+    /// <summary>
+    /// <code>Offset: 0x0051C680
+    /// void __thiscall SetPositionStruct::SetPositionStruct(SetPositionStruct*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SetPositionStruct, void>)0x0051C680)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0051C6D0
+    /// void __thiscall SetPositionStruct::SetPosition(SetPositionStruct*,const Position*)</code>
+    /// </summary>
+    public void SetPosition(ACBindings.Internal.Position* new_pos) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SetPositionStruct, ACBindings.Internal.Position*, void>)0x0051C6D0)(ref this, new_pos);
 }
 

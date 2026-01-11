@@ -1,13 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// $61F57390BB6FFB5D14C460FC52611691
 public unsafe struct _61F57390BB6FFB5D14C460FC52611691
 {
     // Members
     public int x;
     public int y;
     public int iSide;
-    public ACBindings.ChessPieceType type;
+    public ACBindings.Internal.ChessPieceType type;
 
     // Methods
 }

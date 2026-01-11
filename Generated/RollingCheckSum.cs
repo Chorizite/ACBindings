@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// RollingCheckSum
 public unsafe struct RollingCheckSum
 {
     // Members

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// RenderDeviceCaps
 public unsafe struct RenderDeviceCaps
 {
     // Members

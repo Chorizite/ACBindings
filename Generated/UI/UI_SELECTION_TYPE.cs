@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // UI_SELECTION_TYPE
 public enum UI_SELECTION_TYPE : uint

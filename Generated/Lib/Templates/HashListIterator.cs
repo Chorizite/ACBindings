@@ -1,82 +1,73 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// HashListIterator<HashList<QualifiedControl,unsigned long,1>>
-public unsafe struct HashListIterator__HashList__QualifiedControl__uint
+public unsafe struct HashListIterator___HashList___QualifiedControl__uint
 {
     // Members
-    public ACBindings.IntrusiveHashListIterator__QualifiedControl__HashList__QualifiedControl__uint_HashListData_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashListIterator___QualifiedControl___HashList___QualifiedControl__uint_HashListData_ptr m_iter;
 
     // Methods
 }
 
-// HashListIterator<HashList<ControlSpecification,unsigned long,1>>
-public unsafe struct HashListIterator__HashList__ControlSpecification__uint
+public unsafe struct HashListIterator___HashList___ControlSpecification__uint
 {
     // Members
-    public ACBindings.IntrusiveHashListIterator__ControlSpecification__HashList__ControlSpecification__uint_HashListData_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashListIterator___ControlSpecification___HashList___ControlSpecification__uint_HashListData_ptr m_iter;
 
     // Methods
 }
 
-// HashListIterator<HashList<unsigned long,CInputMap*,1>>
-public unsafe struct HashListIterator__HashList__uint__CInputMap_ptr
+public unsafe struct HashListIterator___HashList__uint___CInputMap_ptr
 {
     // Members
-    public ACBindings.IntrusiveHashListIterator__uint__HashList__uint__CInputMap_ptr_HashListData_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashListIterator__uint___HashList__uint___CInputMap_ptr_HashListData_ptr m_iter;
 
     // Methods
 }
 
-// HashListIterator<HashList<UIObject*,UIObject*,1>>
-public unsafe struct HashListIterator__HashList__UIObject_ptr__UIObject_ptr
+public unsafe struct HashListIterator___HashList___UIObject_ptr___UIObject_ptr
 {
     // Members
-    public ACBindings.IntrusiveHashListIterator__UIObject_ptr__HashList__UIObject_ptr__UIObject_ptr_HashListData_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashListIterator___UIObject_ptr___HashList___UIObject_ptr___UIObject_ptr_HashListData_ptr m_iter;
 
     // Methods
 }
 
-// HashListIterator<HashList<UIRegion*,UIRegion*,1>>
-public unsafe struct HashListIterator__HashList__UIRegion_ptr__UIRegion_ptr
+public unsafe struct HashListIterator___HashList___UIRegion_ptr___UIRegion_ptr
 {
     // Members
-    public ACBindings.IntrusiveHashListIterator__UIRegion_ptr__HashList__UIRegion_ptr__UIRegion_ptr_HashListData_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashListIterator___UIRegion_ptr___HashList___UIRegion_ptr___UIRegion_ptr_HashListData_ptr m_iter;
 
     // Methods
 }
 
-// HashListIterator<HashList<unsigned long,HashList<unsigned long,List<unsigned long>,1>,1>>
-public unsafe struct HashListIterator__HashList__uint__HashList__uint__List__uint
+public unsafe struct HashListIterator___HashList__uint___HashList__uint___List__uint
 {
     // Members
-    public ACBindings.IntrusiveHashListIterator__uint__HashList__uint__HashList__uint__List__uint_HashListData_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashListIterator__uint___HashList__uint___HashList__uint___List__uint_HashListData_ptr m_iter;
 
     // Methods
 }
 
-// HashListIterator<HashList<unsigned long,HashList<unsigned long,ActionMapValue,1>,1>>
-public unsafe struct HashListIterator__HashList__uint__HashList__uint__ActionMapValue
+public unsafe struct HashListIterator___HashList__uint___HashList__uint___ActionMapValue
 {
     // Members
-    public ACBindings.IntrusiveHashListIterator__uint__HashList__uint__HashList__uint__ActionMapValue_HashListData_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashListIterator__uint___HashList__uint___HashList__uint___ActionMapValue_HashListData_ptr m_iter;
 
     // Methods
 }
 
-// HashListIterator<HashList<unsigned long,ActionMapValue,1>>
-public unsafe struct HashListIterator__HashList__uint__ActionMapValue
+public unsafe struct HashListIterator___HashList__uint___ActionMapValue
 {
     // Members
-    public ACBindings.IntrusiveHashListIterator__uint__HashList__uint__ActionMapValue_HashListData_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashListIterator__uint___HashList__uint___ActionMapValue_HashListData_ptr m_iter;
 
     // Methods
 }
 
-// HashListIterator<HashList<unsigned long,List<unsigned long>,1>>
-public unsafe struct HashListIterator__HashList__uint__List__uint
+public unsafe struct HashListIterator___HashList__uint___List__uint
 {
     // Members
-    public ACBindings.IntrusiveHashListIterator__uint__HashList__uint__List__uint_HashListData_ptr m_iter;
+    public ACBindings.Internal.IntrusiveHashListIterator__uint___HashList__uint___List__uint_HashListData_ptr m_iter;
 
     // Methods
 }

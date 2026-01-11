@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// OldHashIterator<unsigned long,unsigned long>
 public unsafe struct OldHashIterator__uint__uint
 {
     // Members

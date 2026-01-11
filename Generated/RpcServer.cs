@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// RpcServer
 public unsafe struct RpcServer : System.IDisposable
 {
     // Statics
-    public static ACBindings._SECURITY_DESCRIPTOR* sm_sid = (ACBindings._SECURITY_DESCRIPTOR*)0x009065C0;
+    public static ACBindings.Internal._SECURITY_DESCRIPTOR* sm_sid = (ACBindings.Internal._SECURITY_DESCRIPTOR*)0x009065C0;
 
     // Members
     public uint m_dwProtocols;
@@ -21,9 +20,17 @@ public unsafe struct RpcServer : System.IDisposable
     }
 
     // Methods
-    // unsigned int __thiscall RpcServer::UnRegisterInterface(RpcServer*)
-    public uint UnRegisterInterface() => ((delegate* unmanaged[Thiscall]<ref ACBindings.RpcServer, uint>)0x006BA9F0)(ref this);
-    // void __thiscall RpcServer::~RpcServer(RpcServer*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.RpcServer, void>)0x006BAA50)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006BA9F0
+    /// unsigned int __thiscall RpcServer::UnRegisterInterface(RpcServer*)</code>
+    /// </summary>
+    public uint UnRegisterInterface() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RpcServer, uint>)0x006BA9F0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x006BAA50
+    /// void __thiscall RpcServer::~RpcServer(RpcServer*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.RpcServer, void>)0x006BAA50)(ref this);
 }
 

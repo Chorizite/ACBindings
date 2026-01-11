@@ -1,44 +1,42 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// MaterialModifier
 public unsafe struct MaterialModifier : System.IDisposable
 {
     // Base Classes
-    public ACBindings.DBObj BaseClass_DBObj; // ACBindings.DBObj
+    public ACBindings.Internal.DBObj BaseClass_DBObj; // ACBindings.Internal.DBObj
 
     // Child Types
-    // MaterialModifier_vtbl
     public unsafe struct MaterialModifier_vtbl
     {
         // Members
-        public System.IntPtr IUnknown_QueryInterface; // function pointer
-        public System.IntPtr IUnknown_AddRef; // function pointer
-        public System.IntPtr IUnknown_Release; // function pointer
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr DBObj_dtor_18; // function pointer
-        public System.IntPtr Serialize; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
-        public System.IntPtr InitLoad; // function pointer
-        public System.IntPtr GetSubObjects; // function pointer
-        public System.IntPtr ReleaseSubObjects; // function pointer
-        public System.IntPtr NotifyFidelityLevel; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> DBObj_dtor_18; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> InitLoad; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> GetSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReleaseSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> NotifyFidelityLevel; // function pointer
         public System.IntPtr Refresh;
-        public System.IntPtr CopyInto; // function pointer
-        public System.IntPtr Destroy; // function pointer
-        public System.IntPtr FillDataGraph; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*, byte> CopyInto; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> Destroy; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.IDataGraph*, void> FillDataGraph; // function pointer
         public System.IntPtr SetDID;
-        public System.IntPtr GetDBOType; // function pointer
-        public System.IntPtr Allocate; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, uint> GetDBOType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*> Allocate; // function pointer
         public System.IntPtr SaveToDisk;
-        public System.IntPtr ReloadFromDisk; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReloadFromDisk; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.SmartArray__MaterialProperty_ptr properties;
+    public ACBindings.Internal.SmartArray___MaterialProperty_ptr properties;
 
     // Generated Dispose
     public void Dispose() {
@@ -46,21 +44,53 @@ public unsafe struct MaterialModifier : System.IDisposable
     }
 
     // Methods
-    // void __thiscall MaterialModifier::GetSubDataIDs(MaterialModifier*,QualifiedDataIDArray*)
-    public void GetSubDataIDs(ACBindings.QualifiedDataIDArray* id_array) => ((delegate* unmanaged[Thiscall]<ref ACBindings.MaterialModifier, ACBindings.QualifiedDataIDArray*, void>)0x004503F0)(ref this, id_array);
-    // bool __thiscall MaterialModifier::GetSubObjects(MaterialModifier*)
-    public byte GetSubObjects() => ((delegate* unmanaged[Thiscall]<ref ACBindings.MaterialModifier, byte>)0x00450420)(ref this);
-    // bool __thiscall MaterialModifier::ReleaseSubObjects(MaterialModifier*)
-    public byte ReleaseSubObjects() => ((delegate* unmanaged[Thiscall]<ref ACBindings.MaterialModifier, byte>)0x00450450)(ref this);
-    // void __thiscall MaterialModifier::End(MaterialModifier*)
-    public void End() => ((delegate* unmanaged[Thiscall]<ref ACBindings.MaterialModifier, void>)0x004504C0)(ref this);
-    // DBObj* __cdecl MaterialModifier::Allocator()
-    public static ACBindings.DBObj* Allocator() => ((delegate* unmanaged[Cdecl]<ACBindings.DBObj*>)0x004505A0)();
-    // void __thiscall MaterialModifier::~MaterialModifier(MaterialModifier*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.MaterialModifier, void>)0x004505F0)(ref this);
-    // bool __thiscall MaterialModifier::CopyInto(MaterialModifier*,DBObj*)
-    public byte CopyInto(ACBindings.DBObj* retval) => ((delegate* unmanaged[Thiscall]<ref ACBindings.MaterialModifier, ACBindings.DBObj*, byte>)0x00450680)(ref this, retval);
-    // void __thiscall MaterialModifier::Serialize(MaterialModifier*,Archive*)
-    public void Serialize(ACBindings.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.MaterialModifier, ACBindings.Archive*, void>)0x00450700)(ref this, io_archive);
+
+    /// <summary>
+    /// <code>Offset: 0x004503F0
+    /// void __thiscall MaterialModifier::GetSubDataIDs(MaterialModifier*,QualifiedDataIDArray*)</code>
+    /// </summary>
+    public void GetSubDataIDs(ACBindings.Internal.QualifiedDataIDArray* id_array) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.MaterialModifier, ACBindings.Internal.QualifiedDataIDArray*, void>)0x004503F0)(ref this, id_array);
+
+    /// <summary>
+    /// <code>Offset: 0x00450420
+    /// bool __thiscall MaterialModifier::GetSubObjects(MaterialModifier*)</code>
+    /// </summary>
+    public byte GetSubObjects() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.MaterialModifier, byte>)0x00450420)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00450450
+    /// bool __thiscall MaterialModifier::ReleaseSubObjects(MaterialModifier*)</code>
+    /// </summary>
+    public byte ReleaseSubObjects() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.MaterialModifier, byte>)0x00450450)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004504C0
+    /// void __thiscall MaterialModifier::End(MaterialModifier*)</code>
+    /// </summary>
+    public void End() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.MaterialModifier, void>)0x004504C0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004505A0
+    /// DBObj* __cdecl MaterialModifier::Allocator()</code>
+    /// </summary>
+    public static ACBindings.Internal.DBObj* Allocator() => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.DBObj*>)0x004505A0)();
+
+    /// <summary>
+    /// <code>Offset: 0x004505F0
+    /// void __thiscall MaterialModifier::~MaterialModifier(MaterialModifier*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.MaterialModifier, void>)0x004505F0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00450680
+    /// bool __thiscall MaterialModifier::CopyInto(MaterialModifier*,DBObj*)</code>
+    /// </summary>
+    public byte CopyInto(ACBindings.Internal.DBObj* retval) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.MaterialModifier, ACBindings.Internal.DBObj*, byte>)0x00450680)(ref this, retval);
+
+    /// <summary>
+    /// <code>Offset: 0x00450700
+    /// void __thiscall MaterialModifier::Serialize(MaterialModifier*,Archive*)</code>
+    /// </summary>
+    public void Serialize(ACBindings.Internal.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.MaterialModifier, ACBindings.Internal.Archive*, void>)0x00450700)(ref this, io_archive);
 }
 

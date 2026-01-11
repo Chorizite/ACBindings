@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AvailableProperty
 public unsafe struct AvailableProperty
 {
     // Members

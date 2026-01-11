@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // enumDMUS_SEGF_FLAGS
 public enum enumDMUS_SEGF_FLAGS : uint

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// D3DXFLOAT16
 public unsafe struct D3DXFLOAT16
 {
     // Members

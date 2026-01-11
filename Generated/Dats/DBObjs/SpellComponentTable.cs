@@ -1,44 +1,42 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SpellComponentTable
 public unsafe struct SpellComponentTable
 {
     // Base Classes
-    public ACBindings.SerializeUsingPackDBObj BaseClass_SerializeUsingPackDBObj; // ACBindings.SerializeUsingPackDBObj
+    public ACBindings.Internal.SerializeUsingPackDBObj BaseClass_SerializeUsingPackDBObj; // ACBindings.Internal.SerializeUsingPackDBObj
 
     // Child Types
-    // SpellComponentTable_vtbl
     public unsafe struct SpellComponentTable_vtbl
     {
         // Members
-        public System.IntPtr IUnknown_QueryInterface; // function pointer
-        public System.IntPtr IUnknown_AddRef; // function pointer
-        public System.IntPtr IUnknown_Release; // function pointer
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr DBObj_dtor_18; // function pointer
-        public System.IntPtr Serialize; // function pointer
-        public System.IntPtr GetSubDataIDs; // function pointer
-        public System.IntPtr InitLoad; // function pointer
-        public System.IntPtr GetSubObjects; // function pointer
-        public System.IntPtr ReleaseSubObjects; // function pointer
-        public System.IntPtr NotifyFidelityLevel; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> DBObj_dtor_18; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> InitLoad; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> GetSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReleaseSubObjects; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> NotifyFidelityLevel; // function pointer
         public System.IntPtr Refresh;
-        public System.IntPtr CopyInto; // function pointer
-        public System.IntPtr Destroy; // function pointer
-        public System.IntPtr FillDataGraph; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*, byte> CopyInto; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, void> Destroy; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.IDataGraph*, void> FillDataGraph; // function pointer
         public System.IntPtr SetDID;
-        public System.IntPtr GetDBOType; // function pointer
-        public System.IntPtr Allocate; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, uint> GetDBOType; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, ACBindings.Internal.DBObj*> Allocate; // function pointer
         public System.IntPtr SaveToDisk;
-        public System.IntPtr ReloadFromDisk; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBObj*, byte> ReloadFromDisk; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.PackableHashTable__uint__SpellComponentBase _spellComponentBaseHash;
+    public ACBindings.Internal.PackableHashTable__uint___SpellComponentBase _spellComponentBaseHash;
 
     // Generated Constructor
     public SpellComponentTable(void** a2) {
@@ -46,21 +44,53 @@ public unsafe struct SpellComponentTable
     }
 
     // Methods
-    // int __thiscall SpellComponentTable::InqSpellComponentBase(SpellComponentTable*,const unsigned int,SpellComponentBase*)
-    public int InqSpellComponentBase(uint key, ACBindings.SpellComponentBase* sbase) => ((delegate* unmanaged[Thiscall]<ref ACBindings.SpellComponentTable, uint, ACBindings.SpellComponentBase*, int>)0x0048A1F0)(ref this, key, sbase);
-    // DBObj* __cdecl SpellComponentTable::Allocator()
-    public static ACBindings.DBObj* Allocator() => ((delegate* unmanaged[Cdecl]<ACBindings.DBObj*>)0x0058B730)();
-    // unsigned int __cdecl SpellComponentTable::GetTargetTypeFromComponentID(const unsigned int)
+
+    /// <summary>
+    /// <code>Offset: 0x0048A1F0
+    /// int __thiscall SpellComponentTable::InqSpellComponentBase(SpellComponentTable*,const unsigned int,SpellComponentBase*)</code>
+    /// </summary>
+    public int InqSpellComponentBase(uint key, ACBindings.Internal.SpellComponentBase* sbase) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SpellComponentTable, uint, ACBindings.Internal.SpellComponentBase*, int>)0x0048A1F0)(ref this, key, sbase);
+
+    /// <summary>
+    /// <code>Offset: 0x0058B730
+    /// DBObj* __cdecl SpellComponentTable::Allocator()</code>
+    /// </summary>
+    public static ACBindings.Internal.DBObj* Allocator() => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.DBObj*>)0x0058B730)();
+
+    /// <summary>
+    /// <code>Offset: 0x005BD070
+    /// unsigned int __cdecl SpellComponentTable::GetTargetTypeFromComponentID(const unsigned int)</code>
+    /// </summary>
     public static uint GetTargetTypeFromComponentID(uint scid) => ((delegate* unmanaged[Cdecl]<uint, uint>)0x005BD070)(scid);
-    // unsigned int* __cdecl SpellComponentTable::SchoolOfMagic2WCID(unsigned int*,unsigned int)
+
+    /// <summary>
+    /// <code>Offset: 0x005BD2C0
+    /// unsigned int* __cdecl SpellComponentTable::SchoolOfMagic2WCID(unsigned int*,unsigned int)</code>
+    /// </summary>
     public static uint* SchoolOfMagic2WCID(uint* a1, uint a2) => ((delegate* unmanaged[Cdecl]<uint*, uint, uint*>)0x005BD2C0)(a1, a2);
-    // int __cdecl SpellComponentTable::WCIDtoSCID(unsigned int)
+
+    /// <summary>
+    /// <code>Offset: 0x005BD310
+    /// int __cdecl SpellComponentTable::WCIDtoSCID(unsigned int)</code>
+    /// </summary>
     public static int WCIDtoSCID(uint a1) => ((delegate* unmanaged[Cdecl]<uint, int>)0x005BD310)(a1);
-    // unsigned int* __cdecl SpellComponentTable::SCIDtoWCID(unsigned int*,unsigned int)
+
+    /// <summary>
+    /// <code>Offset: 0x005BD3C0
+    /// unsigned int* __cdecl SpellComponentTable::SCIDtoWCID(unsigned int*,unsigned int)</code>
+    /// </summary>
     public static uint* SCIDtoWCID(uint* a1, uint a2) => ((delegate* unmanaged[Cdecl]<uint*, uint, uint*>)0x005BD3C0)(a1, a2);
-    // void __thiscall SpellComponentTable::GetSubDataIDs(SpellComponentTable*,QualifiedDataIDArray*)
-    public void GetSubDataIDs(ACBindings.QualifiedDataIDArray* id_array) => ((delegate* unmanaged[Thiscall]<ref ACBindings.SpellComponentTable, ACBindings.QualifiedDataIDArray*, void>)0x005BD410)(ref this, id_array);
-    // int __thiscall SpellComponentTable::SpellComponentTable(int,void**)
-    public int _ConstructorInternal(void** a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.SpellComponentTable, void**, int>)0x005BD840)(ref this, a2);
+
+    /// <summary>
+    /// <code>Offset: 0x005BD410
+    /// void __thiscall SpellComponentTable::GetSubDataIDs(SpellComponentTable*,QualifiedDataIDArray*)</code>
+    /// </summary>
+    public void GetSubDataIDs(ACBindings.Internal.QualifiedDataIDArray* id_array) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SpellComponentTable, ACBindings.Internal.QualifiedDataIDArray*, void>)0x005BD410)(ref this, id_array);
+
+    /// <summary>
+    /// <code>Offset: 0x005BD840
+    /// int __thiscall SpellComponentTable::SpellComponentTable(int,void**)</code>
+    /// </summary>
+    public int _ConstructorInternal(void** a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.SpellComponentTable, void**, int>)0x005BD840)(ref this, a2);
 }
 

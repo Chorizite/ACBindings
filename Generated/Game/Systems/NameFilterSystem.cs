@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// NameFilterSystem
 public unsafe struct NameFilterSystem
 {
     // Methods

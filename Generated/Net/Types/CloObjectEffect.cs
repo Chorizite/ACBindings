@@ -1,30 +1,28 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CloObjectEffect
 public unsafe struct CloObjectEffect : System.IDisposable
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // CloObjectEffect_vtbl
     public unsafe struct CloObjectEffect_vtbl
     {
         // Members
-        public System.IntPtr CloObjectEffect_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CloObjectEffect*, void> CloObjectEffect_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CloObjectEffect*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CloObjectEffect*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CloObjectEffect*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
     public uint partNum;
-    public ACBindings.IDClass___tagDataID objectID;
+    public ACBindings.Internal.IDClass____tagDataID objectID;
     public uint numTextureEffects;
-    public ACBindings.CloTextureEffect* textureEffects;
+    public ACBindings.Internal.CloTextureEffect* textureEffects;
 
     // Generated Constructor
     public CloObjectEffect() {
@@ -37,15 +35,35 @@ public unsafe struct CloObjectEffect : System.IDisposable
     }
 
     // Methods
-    // unsigned int __thiscall CloObjectEffect::pack_size(CloObjectEffect*)
-    public uint pack_size() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CloObjectEffect, uint>)0x005A9390)(ref this);
-    // void __thiscall CloObjectEffect::CloObjectEffect(CloObjectEffect*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CloObjectEffect, void>)0x005A9430)(ref this);
-    // void __thiscall CloObjectEffect::~CloObjectEffect(CloObjectEffect*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.CloObjectEffect, void>)0x005A94B0)(ref this);
-    // unsigned int __thiscall CloObjectEffect::Pack(CloObjectEffect*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CloObjectEffect, void**, uint, uint>)0x005A9700)(ref this, addr, size);
-    // int __thiscall CloObjectEffect::UnPack(CloObjectEffect*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.CloObjectEffect, void**, uint, int>)0x005A9780)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005A9390
+    /// unsigned int __thiscall CloObjectEffect::pack_size(CloObjectEffect*)</code>
+    /// </summary>
+    public uint pack_size() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CloObjectEffect, uint>)0x005A9390)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005A9430
+    /// void __thiscall CloObjectEffect::CloObjectEffect(CloObjectEffect*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CloObjectEffect, void>)0x005A9430)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005A94B0
+    /// void __thiscall CloObjectEffect::~CloObjectEffect(CloObjectEffect*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CloObjectEffect, void>)0x005A94B0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x005A9700
+    /// unsigned int __thiscall CloObjectEffect::Pack(CloObjectEffect*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CloObjectEffect, void**, uint, uint>)0x005A9700)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005A9780
+    /// int __thiscall CloObjectEffect::UnPack(CloObjectEffect*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CloObjectEffect, void**, uint, int>)0x005A9780)(ref this, addr, size);
 }
 

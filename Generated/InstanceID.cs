@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// InstanceID
 public unsafe struct InstanceID
 {
     // Base Classes
-    public ACBindings._InstanceID BaseClass__InstanceID; // ACBindings._InstanceID
+    public ACBindings.Internal._InstanceID BaseClass__InstanceID; // ACBindings.Internal._InstanceID
 
     // Methods
 }

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// StringInfoDataResolver
 public unsafe struct StringInfoDataResolver
 {
     // Methods

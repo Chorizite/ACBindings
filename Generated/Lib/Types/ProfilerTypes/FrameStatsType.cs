@@ -1,6 +1,5 @@
-namespace ACBindings.ProfilerTypes;
+namespace ACBindings.Internal.ProfilerTypes;
 
-// ProfilerTypes::FrameStatsType
 public unsafe struct FrameStatsType
 {
     // Members
@@ -30,7 +29,7 @@ public unsafe struct FrameStatsType
     public uint SoundsPlaying;
     public uint SoundsQueued;
     public uint UIElementsProcessed;
-    public ACBindings._EA7D754458462534F92FF185238D0A0C AC1;
+    public ACBindings.Internal._EA7D754458462534F92FF185238D0A0C AC1;
 
     // Methods
 }

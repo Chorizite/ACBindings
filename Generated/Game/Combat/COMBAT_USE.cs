@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // COMBAT_USE
 public enum COMBAT_USE : uint

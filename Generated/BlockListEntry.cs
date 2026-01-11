@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// BlockListEntry
 public unsafe struct BlockListEntry
 {
     // Members

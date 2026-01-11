@@ -1,37 +1,33 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CPluginManagerTemplate<CrashCleaner>
-public unsafe struct CPluginManagerTemplate__CrashCleaner
+public unsafe struct CPluginManagerTemplate___CrashCleaner
 {
     // Base Classes
-    public ACBindings.CPluginManager BaseClass_CPluginManager; // ACBindings.CPluginManager
+    public ACBindings.Internal.CPluginManager BaseClass_CPluginManager; // ACBindings.Internal.CPluginManager
 
     // Methods
 }
 
-// CPluginManagerTemplate<DialogBoxGateway>
-public unsafe struct CPluginManagerTemplate__DialogBoxGateway
+public unsafe struct CPluginManagerTemplate___DialogBoxGateway
 {
     // Base Classes
-    public ACBindings.CPluginManager BaseClass_CPluginManager; // ACBindings.CPluginManager
+    public ACBindings.Internal.CPluginManager BaseClass_CPluginManager; // ACBindings.Internal.CPluginManager
 
     // Methods
 }
 
-// CPluginManagerTemplate<TurbineDwExceptionFilter::WatsonCrashReportHelper>
-public unsafe struct CPluginManagerTemplate__TurbineDwExceptionFilter_WatsonCrashReportHelper
+public unsafe struct CPluginManagerTemplate___TurbineDwExceptionFilter_WatsonCrashReportHelper
 {
     // Base Classes
-    public ACBindings.CPluginManager BaseClass_CPluginManager; // ACBindings.CPluginManager
+    public ACBindings.Internal.CPluginManager BaseClass_CPluginManager; // ACBindings.Internal.CPluginManager
 
     // Methods
 }
 
-// CPluginManagerTemplate<CDDDStatusPlugin>
-public unsafe struct CPluginManagerTemplate__CDDDStatusPlugin
+public unsafe struct CPluginManagerTemplate___CDDDStatusPlugin
 {
     // Base Classes
-    public ACBindings.CPluginManager BaseClass_CPluginManager; // ACBindings.CPluginManager
+    public ACBindings.Internal.CPluginManager BaseClass_CPluginManager; // ACBindings.Internal.CPluginManager
 
     // Methods
 }

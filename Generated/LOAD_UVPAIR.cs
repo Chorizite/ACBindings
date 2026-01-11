@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LOAD_UVPAIR
 public unsafe struct LOAD_UVPAIR
 {
     // Members

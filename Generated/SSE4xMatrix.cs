@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SSE4xMatrix
 public unsafe struct SSE4xMatrix
 {
     // Members

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AtkCollisionProfile
 public unsafe struct AtkCollisionProfile
 {
     // Members
@@ -14,7 +13,11 @@ public unsafe struct AtkCollisionProfile
     }
 
     // Methods
-    // void __thiscall AtkCollisionProfile::AtkCollisionProfile(AtkCollisionProfile*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.AtkCollisionProfile, void>)0x0051C430)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0051C430
+    /// void __thiscall AtkCollisionProfile::AtkCollisionProfile(AtkCollisionProfile*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AtkCollisionProfile, void>)0x0051C430)(ref this);
 }
 

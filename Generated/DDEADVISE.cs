@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DDEADVISE
 public unsafe struct DDEADVISE
 {
     // Members

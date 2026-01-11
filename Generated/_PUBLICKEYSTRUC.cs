@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// _PUBLICKEYSTRUC
 public unsafe struct _PUBLICKEYSTRUC
 {
     // Members

@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LockGrabber<SharedCriticalSection>
-public unsafe struct LockGrabber__SharedCriticalSection
+public unsafe struct LockGrabber___SharedCriticalSection
 {
     // Members
-    public ACBindings.SharedCriticalSection* m_Lock;
+    public ACBindings.Internal.SharedCriticalSection* m_Lock;
     public byte m_bEntered;
 
     // Methods

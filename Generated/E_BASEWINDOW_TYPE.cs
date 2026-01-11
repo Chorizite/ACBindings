@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // E_BASEWINDOW_TYPE
 public enum E_BASEWINDOW_TYPE : byte

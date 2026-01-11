@@ -1,25 +1,23 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AsyncIUnknown
 public unsafe struct AsyncIUnknown
 {
     // Base Classes
-    public ACBindings.IUnknown BaseClass_IUnknown; // ACBindings.IUnknown
+    public ACBindings.Internal.IUnknown BaseClass_IUnknown; // ACBindings.Internal.IUnknown
 
     // Child Types
-    // AsyncIUnknown_vtbl
     public unsafe struct AsyncIUnknown_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr Begin_QueryInterface; // function pointer
-        public System.IntPtr Finish_QueryInterface; // function pointer
-        public System.IntPtr Begin_AddRef; // function pointer
-        public System.IntPtr Finish_AddRef; // function pointer
-        public System.IntPtr Begin_Release; // function pointer
-        public System.IntPtr Finish_Release; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.AsyncIUnknown*, ACBindings.Internal._GUID*, int> Begin_QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.AsyncIUnknown*, void**, int> Finish_QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.AsyncIUnknown*, int> Begin_AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.AsyncIUnknown*, uint> Finish_AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.AsyncIUnknown*, int> Begin_Release; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.AsyncIUnknown*, uint> Finish_Release; // function pointer
 
         // Methods
     }

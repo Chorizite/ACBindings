@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// AttackManager
 public unsafe struct AttackManager : System.IDisposable
 {
     // Members
     public float attack_radius;
     public uint current_attack;
-    public ACBindings.LongNIHash__AttackInfo pending_attacks;
+    public ACBindings.Internal.LongNIHash___AttackInfo pending_attacks;
 
     // Generated Constructor
     public AttackManager() {
@@ -19,13 +18,29 @@ public unsafe struct AttackManager : System.IDisposable
     }
 
     // Methods
-    // void __thiscall AttackManager::AttackManager(AttackManager*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.AttackManager, void>)0x0051ADD0)(ref this);
-    // void __thiscall AttackManager::~AttackManager(AttackManager*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.AttackManager, void>)0x0051AE10)(ref this);
-    // AttackInfo* __thiscall AttackManager::NewAttack(AttackManager*,int)
-    public ACBindings.AttackInfo* NewAttack(int part_index) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AttackManager, int, ACBindings.AttackInfo*>)0x0051AEA0)(ref this, part_index);
-    // void __thiscall AttackManager::AttackDone(AttackManager*,AttackInfo*)
-    public void AttackDone(ACBindings.AttackInfo* attack_info) => ((delegate* unmanaged[Thiscall]<ref ACBindings.AttackManager, ACBindings.AttackInfo*, void>)0x0051AF20)(ref this, attack_info);
+
+    /// <summary>
+    /// <code>Offset: 0x0051ADD0
+    /// void __thiscall AttackManager::AttackManager(AttackManager*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AttackManager, void>)0x0051ADD0)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0051AE10
+    /// void __thiscall AttackManager::~AttackManager(AttackManager*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AttackManager, void>)0x0051AE10)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0051AEA0
+    /// AttackInfo* __thiscall AttackManager::NewAttack(AttackManager*,int)</code>
+    /// </summary>
+    public ACBindings.Internal.AttackInfo* NewAttack(int part_index) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AttackManager, int, ACBindings.Internal.AttackInfo*>)0x0051AEA0)(ref this, part_index);
+
+    /// <summary>
+    /// <code>Offset: 0x0051AF20
+    /// void __thiscall AttackManager::AttackDone(AttackManager*,AttackInfo*)</code>
+    /// </summary>
+    public void AttackDone(ACBindings.Internal.AttackInfo* attack_info) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AttackManager, ACBindings.Internal.AttackInfo*, void>)0x0051AF20)(ref this, attack_info);
 }
 

@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// LListData
 public unsafe struct LListData
 {
     // Members
-    public ACBindings.LListData* llist_next;
+    public ACBindings.Internal.LListData* llist_next;
 
     // Methods
 }

@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// Int64_QualityType
 public unsafe struct Int64_QualityType
 {
     // Methods

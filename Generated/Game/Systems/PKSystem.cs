@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// PKSystem
 public unsafe struct PKSystem
 {
     // Methods

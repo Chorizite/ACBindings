@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CreationEnumMapper
 public unsafe struct CreationEnumMapper
 {
     // Methods

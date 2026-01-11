@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// NIListIter<unsigned long>
 public unsafe struct NIListIter__uint
 {
     // Members
@@ -11,8 +10,7 @@ public unsafe struct NIListIter__uint
     // Methods
 }
 
-// NIListIter<NetPacket*>
-public unsafe struct NIListIter__NetPacket_ptr
+public unsafe struct NIListIter___NetPacket_ptr
 {
     // Members
     public System.IntPtr list_;

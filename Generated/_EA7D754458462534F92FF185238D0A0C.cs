@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// $EA7D754458462534F92FF185238D0A0C
 public unsafe struct _EA7D754458462534F92FF185238D0A0C
 {
     // Members

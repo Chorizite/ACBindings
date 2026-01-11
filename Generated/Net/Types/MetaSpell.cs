@@ -1,28 +1,26 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// MetaSpell
 public unsafe struct MetaSpell : System.IDisposable
 {
     // Base Classes
-    public ACBindings.PackObj BaseClass_PackObj; // ACBindings.PackObj
+    public ACBindings.Internal.PackObj BaseClass_PackObj; // ACBindings.Internal.PackObj
 
     // Child Types
-    // MetaSpell_vtbl
     public unsafe struct MetaSpell_vtbl
     {
         // Members
-        public System.IntPtr MetaSpell_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.MetaSpell*, void> MetaSpell_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public System.IntPtr GetPackSize; // function pointer
-        public System.IntPtr Pack; // function pointer
-        public System.IntPtr UnPack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.MetaSpell*, uint> GetPackSize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.MetaSpell*, void**, uint, uint> Pack; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.MetaSpell*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
 
     // Members
-    public ACBindings.SpellType _sp_type;
-    public ACBindings.Spell* _spell;
+    public ACBindings.Internal.SpellType _sp_type;
+    public ACBindings.Internal.Spell* _spell;
 
     // Generated Constructor
     public MetaSpell() {
@@ -35,13 +33,29 @@ public unsafe struct MetaSpell : System.IDisposable
     }
 
     // Methods
-    // void __thiscall MetaSpell::MetaSpell(MetaSpell*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.MetaSpell, void>)0x00599710)(ref this);
-    // unsigned int __thiscall MetaSpell::Pack(MetaSpell*,void**,unsigned int)
-    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.MetaSpell, void**, uint, uint>)0x00599750)(ref this, addr, size);
-    // int __thiscall MetaSpell::UnPack(MetaSpell*,void**,unsigned int)
-    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.MetaSpell, void**, uint, int>)0x005997B0)(ref this, addr, size);
-    // void __thiscall MetaSpell::~MetaSpell(MetaSpell*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.MetaSpell, void>)0x00599890)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00599710
+    /// void __thiscall MetaSpell::MetaSpell(MetaSpell*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.MetaSpell, void>)0x00599710)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x00599750
+    /// unsigned int __thiscall MetaSpell::Pack(MetaSpell*,void**,unsigned int)</code>
+    /// </summary>
+    public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.MetaSpell, void**, uint, uint>)0x00599750)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x005997B0
+    /// int __thiscall MetaSpell::UnPack(MetaSpell*,void**,unsigned int)</code>
+    /// </summary>
+    public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.MetaSpell, void**, uint, int>)0x005997B0)(ref this, addr, size);
+
+    /// <summary>
+    /// <code>Offset: 0x00599890
+    /// void __thiscall MetaSpell::~MetaSpell(MetaSpell*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.MetaSpell, void>)0x00599890)(ref this);
 }
 

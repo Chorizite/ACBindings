@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // SecurityLevelEnum
 public enum SecurityLevelEnum : uint

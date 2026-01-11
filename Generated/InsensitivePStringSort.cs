@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// InsensitivePStringSort
 public unsafe struct InsensitivePStringSort
 {
     // Methods

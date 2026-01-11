@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // RenderPassType
 public enum RenderPassType : byte

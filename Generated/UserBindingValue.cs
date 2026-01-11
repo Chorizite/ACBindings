@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// UserBindingValue
 public unsafe struct UserBindingValue
 {
     // Members

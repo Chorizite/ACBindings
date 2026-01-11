@@ -1,11 +1,10 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DLListData
 public unsafe struct DLListData
 {
     // Members
-    public ACBindings.DLListData* dllist_next;
-    public ACBindings.DLListData* dllist_prev;
+    public ACBindings.Internal.DLListData* dllist_next;
+    public ACBindings.Internal.DLListData* dllist_prev;
 
     // Methods
 }

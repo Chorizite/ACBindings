@@ -1,11 +1,10 @@
-namespace ACBindings.AC1Modern;
+namespace ACBindings.Internal.AC1Modern;
 
-// AC1Modern::AFrame
 public unsafe struct AFrame
 {
     // Members
-    public ACBindings.Vector3 m_vOrigin;
-    public ACBindings.Quaternion m_qOrientation;
+    public ACBindings.Internal.Vector3 m_vOrigin;
+    public ACBindings.Internal.Quaternion m_qOrientation;
 
     // Methods
 }

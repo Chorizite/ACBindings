@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SoundPlayingData
 public unsafe struct SoundPlayingData
 {
     // Members
-    public ACBindings.SoundBuf* buffer;
+    public ACBindings.Internal.SoundBuf* buffer;
     public float priority;
     public double start_time;
 

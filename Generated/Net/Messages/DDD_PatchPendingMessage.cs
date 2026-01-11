@@ -1,17 +1,15 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DDD_PatchPendingMessage
 public unsafe struct DDD_PatchPendingMessage
 {
     // Base Classes
-    public ACBindings.FakeMessageData BaseClass_FakeMessageData; // ACBindings.FakeMessageData
+    public ACBindings.Internal.FakeMessageData BaseClass_FakeMessageData; // ACBindings.Internal.FakeMessageData
 
     // Child Types
-    // DDD_PatchPendingMessage_vtbl
     public unsafe struct DDD_PatchPendingMessage_vtbl
     {
         // Members
-        public System.IntPtr Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DDD_PatchPendingMessage*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
 
         // Methods
     }

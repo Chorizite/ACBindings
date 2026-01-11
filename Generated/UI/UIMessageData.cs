@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// UIMessageData
 public unsafe struct UIMessageData
 {
     // Members
-    public ACBindings.UIListener* pListener;
+    public ACBindings.Internal.UIListener* pListener;
     public int nCount;
 
     // Methods

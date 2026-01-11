@@ -1,21 +1,19 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// IRpcProxyBuffer
 public unsafe struct IRpcProxyBuffer
 {
     // Base Classes
-    public ACBindings.IUnknown BaseClass_IUnknown; // ACBindings.IUnknown
+    public ACBindings.Internal.IUnknown BaseClass_IUnknown; // ACBindings.Internal.IUnknown
 
     // Child Types
-    // IRpcProxyBuffer_vtbl
     public unsafe struct IRpcProxyBuffer_vtbl
     {
         // Members
-        public System.IntPtr QueryInterface; // function pointer
-        public System.IntPtr AddRef; // function pointer
-        public System.IntPtr Release; // function pointer
-        public System.IntPtr Connect; // function pointer
-        public System.IntPtr Disconnect; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcProxyBuffer*, ACBindings.Internal.IRpcChannelBuffer*, int> Connect; // function pointer
+        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcProxyBuffer*, void> Disconnect; // function pointer
 
         // Methods
     }

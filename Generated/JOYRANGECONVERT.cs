@@ -1,12 +1,11 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// JOYRANGECONVERT
 public unsafe struct JOYRANGECONVERT
 {
     // Members
     public int fRaw;
-    public ACBindings.JOYRAMP rmpLow;
-    public ACBindings.JOYRAMP rmpHigh;
+    public ACBindings.Internal.JOYRAMP rmpLow;
+    public ACBindings.Internal.JOYRAMP rmpHigh;
     public uint dwPmin;
     public uint dwPmax;
     public uint dwPc;

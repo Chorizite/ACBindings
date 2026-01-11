@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // _D3DDEVTYPE
 public enum _D3DDEVTYPE : uint

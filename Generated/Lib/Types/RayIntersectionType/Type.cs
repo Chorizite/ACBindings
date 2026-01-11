@@ -1,4 +1,4 @@
-namespace ACBindings.RayIntersectionType;
+namespace ACBindings.Internal.RayIntersectionType;
 
 // RayIntersectionType::Type
 public enum Type : byte

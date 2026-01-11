@@ -1,28 +1,35 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// SArray<CPhysicsObj*>
-public unsafe struct SArray__CPhysicsObj_ptr
+public unsafe struct SArray___CPhysicsObj_ptr
 {
     // Members
-    public ACBindings.CPhysicsObj** data;
+    public ACBindings.Internal.CPhysicsObj** data;
     public ushort sizeOf;
 
     // Methods
 }
 
-// SArray<Frame>
-public unsafe struct SArray__Frame
+public unsafe struct SArray___Frame
 {
     // Members
-    public ACBindings.Frame* data;
+    public ACBindings.Internal.Frame* data;
     public ushort sizeOf;
 
     // Methods
-    // SArray<Frame>::grow (template type method)
-    // SArray<Frame>::shrink (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0051BBF0
+    /// void __thiscall SArray&lt;Frame&gt;::grow(_WORD*,int)</code>
+    /// </summary>
+    // void __thiscall SArray<Frame>::grow(_WORD*,int) (template type method)
+
+    /// <summary>
+    /// <code>Offset: 0x0051BC80
+    /// void __thiscall SArray&lt;Frame&gt;::shrink(_WORD*,int)</code>
+    /// </summary>
+    // void __thiscall SArray<Frame>::shrink(_WORD*,int) (template type method)
 }
 
-// SArray<unsigned long>
 public unsafe struct SArray__uint
 {
     // Members

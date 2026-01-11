@@ -1,23 +1,18 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// GlobalEventHandler
 public unsafe struct GlobalEventHandler : System.IDisposable
 {
     // Base Classes
-    public ACBindings.NoticeRegistrar BaseClass_NoticeRegistrar; // ACBindings.NoticeRegistrar
-
-    // Statics
-    public static ACBindings.GlobalEventHandler* geh = (ACBindings.GlobalEventHandler*)0x00838374;
+    public ACBindings.Internal.NoticeRegistrar BaseClass_NoticeRegistrar; // ACBindings.Internal.NoticeRegistrar
 
     // Child Types
-    // GlobalEventHandler_vtbl
     public unsafe struct GlobalEventHandler_vtbl
     {
         // Members
-        public System.IntPtr GlobalEventHandler_dtor_0; // function pointer
-        public System.IntPtr RegisterNoticeHandler; // function pointer
-        public System.IntPtr UnRegisterNoticeHandler; // function pointer
-        public System.IntPtr UnRegisterAllNoticeHandlers; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GlobalEventHandler*, void> GlobalEventHandler_dtor_0; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GlobalEventHandler*, uint, ACBindings.Internal.NoticeHandler*, byte> RegisterNoticeHandler; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GlobalEventHandler*, uint, ACBindings.Internal.NoticeHandler*, byte> UnRegisterNoticeHandler; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GlobalEventHandler*, ACBindings.Internal.NoticeHandler*, byte> UnRegisterAllNoticeHandlers; // function pointer
         public System.IntPtr GetNoticeHandlers;
 
         // Methods
@@ -34,11 +29,23 @@ public unsafe struct GlobalEventHandler : System.IDisposable
     }
 
     // Methods
-    // void __thiscall GlobalEventHandler::GlobalEventHandler(GlobalEventHandler*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.GlobalEventHandler, void>)0x0043C640)(ref this);
-    // void __thiscall GlobalEventHandler::~GlobalEventHandler(GlobalEventHandler*)
-    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.GlobalEventHandler, void>)0x0043C660)(ref this);
-    // GlobalEventHandler* __cdecl GlobalEventHandler::GetGlobalEventHandler()
-    public static ACBindings.GlobalEventHandler* GetGlobalEventHandler() => ((delegate* unmanaged[Cdecl]<ACBindings.GlobalEventHandler*>)0x0043C680)();
+
+    /// <summary>
+    /// <code>Offset: 0x0043C640
+    /// void __thiscall GlobalEventHandler::GlobalEventHandler(GlobalEventHandler*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.GlobalEventHandler, void>)0x0043C640)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0043C660
+    /// void __thiscall GlobalEventHandler::~GlobalEventHandler(GlobalEventHandler*)</code>
+    /// </summary>
+    public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.GlobalEventHandler, void>)0x0043C660)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x0043C680
+    /// GlobalEventHandler* __cdecl GlobalEventHandler::GetGlobalEventHandler()</code>
+    /// </summary>
+    public static ACBindings.Internal.GlobalEventHandler* GetGlobalEventHandler() => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.GlobalEventHandler*>)0x0043C680)();
 }
 

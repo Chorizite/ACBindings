@@ -1,25 +1,23 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// DDD_DataMessage
 public unsafe struct DDD_DataMessage
 {
     // Base Classes
-    public ACBindings.FakeMessageData BaseClass_FakeMessageData; // ACBindings.FakeMessageData
+    public ACBindings.Internal.FakeMessageData BaseClass_FakeMessageData; // ACBindings.Internal.FakeMessageData
 
     // Child Types
-    // DDD_DataMessage_vtbl
     public unsafe struct DDD_DataMessage_vtbl
     {
         // Members
-        public System.IntPtr Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DDD_DataMessage*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
 
         // Methods
     }
 
     // Members
     public ulong m_idDatFile;
-    public ACBindings.QualifiedDataID m_qdid;
-    public ACBindings.Cache_Pack_t m_cpData;
+    public ACBindings.Internal.QualifiedDataID m_qdid;
+    public ACBindings.Internal.Cache_Pack_t m_cpData;
     public int m_idIteration;
     public byte m_bCompressed;
 
@@ -29,11 +27,23 @@ public unsafe struct DDD_DataMessage
     }
 
     // Methods
-    // unsigned int __thiscall DDD_DataMessage::GetCompressedSize(DDD_DataMessage*)
-    public uint GetCompressedSize() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DDD_DataMessage, uint>)0x004F7F20)(ref this);
-    // void __thiscall DDD_DataMessage::DDD_DataMessage(DDD_DataMessage*)
-    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.DDD_DataMessage, void>)0x004F8350)(ref this);
-    // void __thiscall DDD_DataMessage::Serialize(DDD_DataMessage*,Archive*)
-    public void Serialize(ACBindings.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.DDD_DataMessage, ACBindings.Archive*, void>)0x004F8820)(ref this, io_archive);
+
+    /// <summary>
+    /// <code>Offset: 0x004F7F20
+    /// unsigned int __thiscall DDD_DataMessage::GetCompressedSize(DDD_DataMessage*)</code>
+    /// </summary>
+    public uint GetCompressedSize() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DDD_DataMessage, uint>)0x004F7F20)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004F8350
+    /// void __thiscall DDD_DataMessage::DDD_DataMessage(DDD_DataMessage*)</code>
+    /// </summary>
+    public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DDD_DataMessage, void>)0x004F8350)(ref this);
+
+    /// <summary>
+    /// <code>Offset: 0x004F8820
+    /// void __thiscall DDD_DataMessage::Serialize(DDD_DataMessage*,Archive*)</code>
+    /// </summary>
+    public void Serialize(ACBindings.Internal.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DDD_DataMessage, ACBindings.Internal.Archive*, void>)0x004F8820)(ref this, io_archive);
 }
 

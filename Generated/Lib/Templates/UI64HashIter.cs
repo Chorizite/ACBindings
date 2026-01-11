@@ -1,19 +1,17 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// UI64HashIter<ArrivedEphInfo>
-public unsafe struct UI64HashIter__ArrivedEphInfo
+public unsafe struct UI64HashIter___ArrivedEphInfo
 {
     // Base Classes
-    public ACBindings.HashBaseIter__ulong BaseClass_HashBaseIter; // ACBindings.HashBaseIter__ulong
+    public ACBindings.Internal.HashBaseIter__ulong BaseClass_HashBaseIter; // ACBindings.Internal.HashBaseIter__ulong
 
     // Methods
 }
 
-// UI64HashIter<NetBlob>
-public unsafe struct UI64HashIter__NetBlob
+public unsafe struct UI64HashIter___NetBlob
 {
     // Base Classes
-    public ACBindings.HashBaseIter__ulong BaseClass_HashBaseIter; // ACBindings.HashBaseIter__ulong
+    public ACBindings.Internal.HashBaseIter__ulong BaseClass_HashBaseIter; // ACBindings.Internal.HashBaseIter__ulong
 
     // Methods
 }

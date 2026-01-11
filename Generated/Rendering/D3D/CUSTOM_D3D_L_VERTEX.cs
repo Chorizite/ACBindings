@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// CUSTOM_D3D_L_VERTEX
 public unsafe struct CUSTOM_D3D_L_VERTEX
 {
     // Members

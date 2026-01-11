@@ -1,6 +1,5 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// QualifiedIteration
 public unsafe struct QualifiedIteration
 {
     // Members

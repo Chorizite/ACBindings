@@ -1,14 +1,12 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// FakeMessageData
 public unsafe struct FakeMessageData
 {
     // Child Types
-    // FakeMessageData_vtbl
     public unsafe struct FakeMessageData_vtbl
     {
         // Members
-        public System.IntPtr Serialize; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FakeMessageData*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
 
         // Methods
     }
@@ -18,7 +16,11 @@ public unsafe struct FakeMessageData
     public uint m_et;
 
     // Methods
-    // void __thiscall FakeMessageData::Serialize(FakeMessageData*,Archive*)
-    public void Serialize(ACBindings.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.FakeMessageData, ACBindings.Archive*, void>)0x004F8310)(ref this, io_archive);
+
+    /// <summary>
+    /// <code>Offset: 0x004F8310
+    /// void __thiscall FakeMessageData::Serialize(FakeMessageData*,Archive*)</code>
+    /// </summary>
+    public void Serialize(ACBindings.Internal.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.FakeMessageData, ACBindings.Internal.Archive*, void>)0x004F8310)(ref this, io_archive);
 }
 

@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // _D3DFORMAT
 public enum _D3DFORMAT : uint

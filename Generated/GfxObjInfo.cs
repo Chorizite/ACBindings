@@ -1,10 +1,9 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// GfxObjInfo
 public unsafe struct GfxObjInfo
 {
     // Members
-    public ACBindings.IDClass___tagDataID gfxobj_id;
+    public ACBindings.Internal.IDClass____tagDataID gfxobj_id;
     public int degrade_mode;
     public float min_dist;
     public float ideal_dist;

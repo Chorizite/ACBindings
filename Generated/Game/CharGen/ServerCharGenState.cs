@@ -1,19 +1,17 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
-// ServerCharGenState
 public unsafe struct ServerCharGenState
 {
     // Base Classes
-    public ACBindings.CharGenState BaseClass_CharGenState; // ACBindings.CharGenState
+    public ACBindings.Internal.CharGenState BaseClass_CharGenState; // ACBindings.Internal.CharGenState
 
     // Child Types
-    // ServerCharGenState_vtbl
     public unsafe struct ServerCharGenState_vtbl
     {
         // Members
-        public System.IntPtr UpdateTrueFacePal; // function pointer
-        public System.IntPtr GetRandomInt; // function pointer
-        public System.IntPtr GetRandomReal; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ServerCharGenState*, void> UpdateTrueFacePal; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ServerCharGenState*, int, int> GetRandomInt; // function pointer
+        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ServerCharGenState*, double> GetRandomReal; // function pointer
 
         // Methods
     }

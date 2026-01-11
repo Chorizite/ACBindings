@@ -1,4 +1,4 @@
-namespace ACBindings;
+namespace ACBindings.Internal;
 
 // ChessMoveResult
 public enum ChessMoveResult : uint
