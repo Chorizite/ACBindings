@@ -13,6 +13,27 @@
         <DebugType>pdbonly</DebugType>
         <NoWarn>1591;CS1587;CS1572</NoWarn>
     </PropertyGroup>
+
+    <PropertyGroup>
+		<Title>Chorizite.ACBindings</Title>
+		<Product>Chorizite.ACBindings</Product>
+		<PackageId>Chorizite.ACBindings</PackageId>
+		<Authors>Chorizite</Authors>
+		<Company>Chorizite</Company>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Description>ACClient CSharp Bindings</Description>
+		<RepositoryUrl>https://github.com/Chorizite/ACBindings/</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<GenerateAssemblyFileVersionAttribute>true</GenerateAssemblyFileVersionAttribute>
+		<GenerateAssemblyInformationalVersionAttribute>true</GenerateAssemblyInformationalVersionAttribute>
+		<GenerateAssemblyVersionAttribute>true</GenerateAssemblyVersionAttribute>
+		<UpdateAssemblyInfo>false</UpdateAssemblyInfo>
+		<UseProjectNamespaceForGitVersionInformation>true</UseProjectNamespaceForGitVersionInformation>
+		<PackageOutputPath>.\bin\</PackageOutputPath>
+	</PropertyGroup>
+    
     <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
         <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
     </ItemGroup>
