@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Global registry instance that stores console command definitions, object references, and callback handlers, enabling dynamic lookup, enumeration, and modification of registered entities during program execution.</summary>
 public unsafe struct GlobalRegistryInstance : System.IDisposable
 {
     // Members

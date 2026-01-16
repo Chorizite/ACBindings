@@ -1,50 +1,54 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Coordinates asynchronous caching operations for database objects, tracking pending requests, callback handlers, and active contexts. Provides a thread‑safety mechanism to retrieve, save, or purge data via async requests while managing their lifecycle.</summary>
 public unsafe struct AsyncCache : System.IDisposable
 {
     // Child Types
+
+    /// <summary>Function table exposing asynchronous cache operations, supporting blocking and non‑blocking get, save, and purge requests across memory and disk layers.</summary>
     public unsafe struct AsyncCache_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, uint, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.DBObj*> BlockingGet; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, byte> BlockingPurge; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.Cache_Pack_t*, byte> BlockingSave; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncContext*, ACBindings.Internal.AsyncCacheCallback*, uint, ACBindings.Internal.AsyncContext*> CreateContext; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, uint, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.DBObj*> BlockingGet; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, byte> BlockingPurge; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.Cache_Pack_t*, byte> BlockingSave; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncContext*, ACBindings.Internal.AsyncCacheCallback*, uint, ACBindings.Internal.AsyncContext*> CreateContext; // function pointer
         public fixed byte gap10[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncContext*, uint, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.AsyncCacheCallback*, uint, ACBindings.Internal.AsyncContext*> AsyncGet; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncContext*, uint, ACBindings.Internal.QualifiedDataIDArray*, ACBindings.Internal.AsyncCacheCallback*, uint, void> AsyncGetImmediate; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncContext*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.AsyncCacheCallback*, uint, ACBindings.Internal.AsyncContext*> AsyncPurge; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncContext*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.Cache_Pack_t*, ulong, ACBindings.Internal.AsyncCacheCallback*, uint, ACBindings.Internal.AsyncContext*> AsyncSave; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncContext*, uint, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.AsyncCacheCallback*, uint, ACBindings.Internal.AsyncContext*> AsyncGet; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncContext*, uint, ACBindings.Internal.QualifiedDataIDArray*, ACBindings.Internal.AsyncCacheCallback*, uint, void> AsyncGetImmediate; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncContext*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.AsyncCacheCallback*, uint, ACBindings.Internal.AsyncContext*> AsyncPurge; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncContext*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.Cache_Pack_t*, ulong, ACBindings.Internal.AsyncCacheCallback*, uint, ACBindings.Internal.AsyncContext*> AsyncSave; // function pointer
         public fixed byte gap28[8];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncContext, uint, ACBindings.Internal.QualifiedDataIDArray*, byte> AddToAsyncGet; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncContext, void> ReleaseContext; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.DBOCache*> GetDBOCache; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, byte> IsOnDisk; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataIDArray*, byte> AreOnDisk; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, void> UseTime; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.CAsyncGetRequest*, void> HashAndEnqueue; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncCache.CAsyncRequest*, void> EnqueueAsyncRequest; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.CAsyncGetRequest*, ACBindings.Internal.CAsyncGetRequest*, void> UnhashPendingGet; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, void> FlushPendingRequests; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncCache.CAsyncRequest*, void> OnRequestFinished; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.CAsyncGetRequest*, void> OnGetRequestFinished; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.CAsyncSaveRequest*, void> OnSaveRequestFinished; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.CAsyncPurgeRequest*, void> OnPurgeRequestFinished; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncCache.CAsyncRequest*, void> NotifyCallback; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.CAsyncGetRequest*, void> OnAsyncGetFinished; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, void> CallPendingCallbacks; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*> BlockingGetFromDisk; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.DBObj*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.DBOCache*, byte> BlockingLoadInto; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.DBObj*, ACBindings.Internal.Cache_Pack_t*, byte> SerializeFromCachePack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*> GetIfInMemory; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*> GetFreeObj; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.DBOCache*, byte> AsyncGetFromOtherSources; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, void> OnAsyncGetFromOtherSourcesFailed; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.DBObj*, ACBindings.Internal.DBOCache*, byte> AddObjToDBOCache; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ulong, ACBindings.Internal.DiskController*> GetDiskController; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.Cache_Pack_t*, ulong, byte> LoadData; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.Cache_Pack_t*, ulong, byte> SaveData; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ulong, byte> PurgeData; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncContext, uint, ACBindings.Internal.QualifiedDataIDArray*, byte> AddToAsyncGet; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncContext, void> ReleaseContext; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.DBOCache*> GetDBOCache; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, byte> IsOnDisk; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataIDArray*, byte> AreOnDisk; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, void> UseTime; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.CAsyncGetRequest*, void> HashAndEnqueue; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncCache.CAsyncRequest*, void> EnqueueAsyncRequest; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.CAsyncGetRequest*, ACBindings.Internal.CAsyncGetRequest*, void> UnhashPendingGet; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, void> FlushPendingRequests; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncCache.CAsyncRequest*, void> OnRequestFinished; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.CAsyncGetRequest*, void> OnGetRequestFinished; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.CAsyncSaveRequest*, void> OnSaveRequestFinished; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.CAsyncPurgeRequest*, void> OnPurgeRequestFinished; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.AsyncCache.CAsyncRequest*, void> NotifyCallback; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.CAsyncGetRequest*, void> OnAsyncGetFinished; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, void> CallPendingCallbacks; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*> BlockingGetFromDisk; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.DBObj*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.DBOCache*, byte> BlockingLoadInto; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.DBObj*, ACBindings.Internal.Cache_Pack_t*, byte> SerializeFromCachePack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*> GetIfInMemory; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*> GetFreeObj; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.DBOCache*, byte> AsyncGetFromOtherSources; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, void> OnAsyncGetFromOtherSourcesFailed; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.DBObj*, ACBindings.Internal.DBOCache*, byte> AddObjToDBOCache; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ulong, ACBindings.Internal.DiskController*> GetDiskController; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.Cache_Pack_t*, ulong, byte> LoadData; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ACBindings.Internal.Cache_Pack_t*, ulong, byte> SaveData; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache*, ACBindings.Internal.QualifiedDataID*, ulong, byte> PurgeData; // function pointer
 
         // Methods
     }
@@ -56,6 +60,10 @@ public unsafe struct AsyncCache : System.IDisposable
         opAsyncSave = 0x2,
         opAsyncCacheNextAsyncOperation = 0x3
     }
+
+    /// <summary>
+    /// Handles asynchronous cache requests by maintaining the operation result, associated callbacks, qualified data identifier, and target database object.
+    /// </summary>
     public unsafe struct CAsyncRequest : System.IDisposable
     {
         // Base Classes
@@ -65,13 +73,15 @@ public unsafe struct AsyncCache : System.IDisposable
         public unsafe struct CAsyncRequest_vtbl
         {
             // Members
-            public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache.CAsyncRequest*, void> AsyncCache; // function pointer
-            public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache.CAsyncRequest*, byte> bAllDependanciesDone; // function pointer
-            public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache.CAsyncRequest*, byte> ReadyToUnhash; // function pointer
-            public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache.CAsyncRequest*, void> ReleaseDBObj; // function pointer
+            public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache.CAsyncRequest*, void> AsyncCache; // function pointer
+            public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache.CAsyncRequest*, byte> bAllDependanciesDone; // function pointer
+            public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache.CAsyncRequest*, byte> ReadyToUnhash; // function pointer
+            public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache.CAsyncRequest*, void> ReleaseDBObj; // function pointer
 
             // Methods
         }
+
+        /// <summary>Wraps a callback handler used by an asynchronous cache request and tracks how many times the operation has completed.</summary>
         public unsafe struct CCallbackWrapper
         {
             // Members
@@ -143,6 +153,8 @@ public unsafe struct AsyncCache : System.IDisposable
         /// <param name="pCallback">The callback handler to be invoked when the request completes.</param>
         public void AddCallback(ACBindings.Internal.AsyncCache.CCallbackHandler* pCallback) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AsyncCache.CAsyncRequest, ACBindings.Internal.AsyncCache.CCallbackHandler*, void>)0x004186A0)(ref this, pCallback);
     }
+
+    /// <summary>Manages callbacks for asynchronous cache operations, tracking pending requests, accumulating results, and handling the lifecycle of request contexts within the AsyncCache system.</summary>
     public unsafe struct CCallbackHandler : System.IDisposable
     {
         // Base Classes
@@ -152,7 +164,7 @@ public unsafe struct AsyncCache : System.IDisposable
         public unsafe struct CCallbackHandler_vtbl
         {
             // Members
-            public delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache.CCallbackHandler*, void> AsyncCache; // function pointer
+            public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AsyncCache.CCallbackHandler*, void> AsyncCache; // function pointer
 
             // Methods
         }
@@ -600,10 +612,14 @@ public unsafe struct AsyncCache : System.IDisposable
     /// </summary>
     public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AsyncCache, void>)0x0041A210)(ref this);
 
-    /// <summary>
+    /// <summary>Initiates retrieval of the specified UI preference item from external sources within a numeric range.
     /// <code>Offset: 0x006A1040
     /// bool __thiscall AsyncCache::AsyncGetFromOtherSources(UIPreferenceItem*,const float,const float)</code>
     /// </summary>
+    /// <param name="preferenceItem">The UIPreferenceItem whose data is requested.</param>
+    /// <param name="i_nMin">Lower bound for the value to query.</param>
+    /// <param name="i_nMax">Upper bound for the value to query.</param>
+    /// <returns>True if the request was successfully started; otherwise false.</returns>
     public byte AsyncGetFromOtherSources(float i_nMin, float i_nMax) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.AsyncCache, float, float, byte>)0x006A1040)(ref this, i_nMin, i_nMax);
 }
 

@@ -1,8 +1,15 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Cache of all Direct3D render states used to avoid repeated API calls, including blend settings, depth testing, texture sampler and stage configurations, and lighting parameters.</summary>
 public unsafe struct RenderStateCacheType
 {
     // Child Types
+
+    /// <summary>
+    ///   Defines the configuration for texture sampling, specifying address modes,
+    ///   filter types, and mipmap LOD bias.
+    /// </summary>
     public unsafe struct SamplerType
     {
         // Members
@@ -15,6 +22,9 @@ public unsafe struct RenderStateCacheType
 
         // Methods
     }
+
+    /// <summary>Encapsulates the state of a fixed‑function render stage, including texture reference, alpha/color blending arguments, operations, and transformation flags.</summary>
+    /// <remarks>Used by the rendering engine to cache and restore pipeline state efficiently.</remarks>
     public unsafe struct StageType
     {
         // Members
@@ -77,7 +87,7 @@ public unsafe struct RenderStateCacheType
 
     // Methods
 
-    /// <summary>
+    /// <summary>Initializes a RenderStateCacheType instance with all rendering parameters set to safe defaults, including blend modes, sampler settings, texture stages, and lighting/fog configuration.
     /// <code>Offset: 0x0059CB40
     /// void __thiscall RenderStateCacheType::RenderStateCacheType(RenderStateCacheType*)</code>
     /// </summary>

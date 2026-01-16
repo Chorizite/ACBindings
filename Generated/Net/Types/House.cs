@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// House structure holds all data related to an in‑game house, including its unique ID, type, owner information, name, access rights, positional data, maintenance flags, level constraints, hook usage limits, and payment schedules for buying and renting.
+/// </summary>
 public unsafe struct House
 {
     // Base Classes
@@ -9,11 +13,11 @@ public unsafe struct House
     public unsafe struct House_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.House*, void> House_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.House*, void> House_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.House*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.House*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.House*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.House*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.House*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.House*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }

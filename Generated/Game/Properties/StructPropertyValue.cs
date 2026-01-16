@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates a collection of named properties stored in an auto‑growing hash table, providing serialization, comparison, and manipulation operations for structured data within the application.</summary>
 public unsafe struct StructPropertyValue
 {
     // Base Classes

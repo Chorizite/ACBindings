@@ -1,7 +1,12 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Central repository for runtime commands, variables and console callbacks, enabling registration, lookup, and execution throughout the application.</summary>
 public unsafe struct GlobalRegistry
 {
+    // Statics
+    public static ACBindings.Internal.GlobalRegistryInstance** s_pcGlobalRegistry = (ACBindings.Internal.GlobalRegistryInstance**)0x008380C8;
+
     // Methods
 
     /// <summary>Creates a global registry instance on first call, ensuring a single shared registry exists for the lifetime of the application.
@@ -89,16 +94,22 @@ public unsafe struct GlobalRegistry
     /// <param name="a1">Pointer to the C-style string containing the name of the variable to be unregistered.</param>
     public static void UnregisterVariable(sbyte** a1) => ((delegate* unmanaged[Cdecl]<sbyte**, void>)0x00436CF0)(a1);
 
-    /// <summary>
+    /// <summary>Retrieves a byte‑valued variable from the global registry by searching for an object identified through the first parameter and stores it at the address supplied by the second parameter.
     /// <code>Offset: 0x005D9DD0
     /// char __thiscall GlobalRegistry::InqTypedVariable(volatile LONG**,_BYTE*)</code>
     /// </summary>
+    /// <param name="this">Pointer to the identifier (typically a string or ID) used to locate the desired object within the global registry.</param>
+    /// <param name="a2">Address where the retrieved byte value will be written if the object is found and its type matches the expected format.</param>
+    /// <returns>Zero if no matching object is found, the object's data type does not match, or another lookup failure occurs; non‑zero otherwise (does not guarantee that a2 has been updated).</returns>
     public sbyte InqTypedVariable(byte* a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.GlobalRegistry, byte*, sbyte>)0x005D9DD0)(ref this, a2);
 
-    /// <summary>
+    /// <summary>Retrieves a DWORD value from the global registry using the supplied variable name, indicating success via the return value and writing the result to the provided out parameter.
     /// <code>Offset: 0x005D9E40
     /// char __thiscall GlobalRegistry::InqTypedVariable(volatile LONG**,_DWORD*)</code>
     /// </summary>
+    /// <param name="variableName">Pointer to the variable name used as key in the registry lookup.</param>
+    /// <param name="valueOut">Output location where the retrieved DWORD will be stored on successful lookup.</param>
+    /// <returns>Non‑zero if the variable was found and successfully read; zero otherwise.</returns>
     public sbyte InqTypedVariable(int* a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.GlobalRegistry, int*, sbyte>)0x005D9E40)(ref this, a2);
 }
 

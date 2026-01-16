@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents an account identifier, storing the base string and flags indicating expansion status such as Dark Majesty and Throne of Destiny.</summary>
 public unsafe struct accountID
 {
     // Base Classes
@@ -17,10 +19,11 @@ public unsafe struct accountID
 
     // Methods
 
-    /// <summary>
+    /// <summary>Copies an existing accountID into a new instance, duplicating its identifier string and expansion flags while converting the identifier to lowercase.
     /// <code>Offset: 0x004E9280
     /// void __thiscall accountID::accountID(accountID*,const accountID*)</code>
     /// </summary>
+    /// <param name="rhs">The accountID object whose data will be copied.</param>
     public void _ConstructorInternal(ACBindings.Internal.accountID* rhs) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.accountID, ACBindings.Internal.accountID*, void>)0x004E9280)(ref this, rhs);
 }
 

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Iterates over a HashSet of UIListener pointers via an intrusive hash iterator, exposing each element for processing or traversal.</summary>
 public unsafe struct HashSetIterator___UIListener_ptr
 {
     // Members
@@ -8,6 +10,8 @@ public unsafe struct HashSetIterator___UIListener_ptr
     // Methods
 }
 
+
+/// <summary>Represents an iterator over a hash set of unsigned long values, facilitating traversal and access to individual elements within the collection.</summary>
 public unsafe struct HashSetIterator__uint
 {
     // Members

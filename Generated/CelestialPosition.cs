@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Defines data for a celestial object’s appearance and positioning in the scene, including graphics identifiers, orientation angles, texture motion, transparency, luminosity, maximum brightness, and property flags used by the rendering system.</summary>
 public unsafe struct CelestialPosition
 {
     // Members

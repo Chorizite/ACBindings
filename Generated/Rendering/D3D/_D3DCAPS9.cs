@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Describes the capabilities and limitations of a DirectX 9 graphics device, including supported features, limits, and configuration options. Applications use this information to adapt rendering pipelines for optimal compatibility.</summary>
 public unsafe struct _D3DCAPS9
 {
     // Members

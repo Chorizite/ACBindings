@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Placeholder indicating future support for Windows Registry editing.</summary>
+/// <remarks>Currently defined without members, it serves as a compile‑time marker for registry‑related functionality that may be added later.</remarks>
 public unsafe struct RegEdit
 {
     // Methods

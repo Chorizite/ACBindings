@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a binary data stream providing sequential and random access operations such as read, write, seek, and other manipulation methods.</summary>
 public unsafe struct IStream
 {
     // Base Classes
@@ -9,20 +11,20 @@ public unsafe struct IStream
     public unsafe struct IStream_vtbl
     {
         // Members
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ISequentialStream*, System.IntPtr, uint, uint*, int> Read; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.ISequentialStream*, void*, uint, uint*, int> Write; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, ACBindings.Internal._LARGE_INTEGER, uint, ACBindings.Internal._ULARGE_INTEGER*, int> Seek; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, ACBindings.Internal._ULARGE_INTEGER, int> SetSize; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, ACBindings.Internal.IStream*, ACBindings.Internal._ULARGE_INTEGER, ACBindings.Internal._ULARGE_INTEGER*, ACBindings.Internal._ULARGE_INTEGER*, int> CopyTo; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, uint, int> Commit; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, int> Revert; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, ACBindings.Internal._ULARGE_INTEGER, ACBindings.Internal._ULARGE_INTEGER, uint, int> LockRegion; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, ACBindings.Internal._ULARGE_INTEGER, ACBindings.Internal._ULARGE_INTEGER, uint, int> UnlockRegion; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, System.IntPtr, uint, int> Stat; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, ACBindings.Internal.IStream**, int> Clone; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.ISequentialStream*, System.IntPtr, uint, uint*, int> Read; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.ISequentialStream*, void*, uint, uint*, int> Write; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, ACBindings.Internal._LARGE_INTEGER, uint, ACBindings.Internal._ULARGE_INTEGER*, int> Seek; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, ACBindings.Internal._ULARGE_INTEGER, int> SetSize; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, ACBindings.Internal.IStream*, ACBindings.Internal._ULARGE_INTEGER, ACBindings.Internal._ULARGE_INTEGER*, ACBindings.Internal._ULARGE_INTEGER*, int> CopyTo; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, uint, int> Commit; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, int> Revert; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, ACBindings.Internal._ULARGE_INTEGER, ACBindings.Internal._ULARGE_INTEGER, uint, int> LockRegion; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, ACBindings.Internal._ULARGE_INTEGER, ACBindings.Internal._ULARGE_INTEGER, uint, int> UnlockRegion; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, System.IntPtr, uint, int> Stat; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IStream*, ACBindings.Internal.IStream**, int> Clone; // function pointer
 
         // Methods
     }

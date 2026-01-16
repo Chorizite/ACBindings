@@ -1,22 +1,28 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Facilitates serialization of data into a buffer, tracking flags, error status, current offset, and versioning information.</summary>
 public unsafe struct Archive : System.IDisposable
 {
     // Statics
     public static ACBindings.Internal.Archive.tagSetCurrentCoreVersion* SetCurrentCoreVersion = (ACBindings.Internal.Archive.tagSetCurrentCoreVersion*)0x008183B8;
 
     // Child Types
+
+    /// <summary>Provides the virtual function table for Archive operations, including initialization, checkpointing, and version stack management.</summary>
     public unsafe struct Archive_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Archive*, ACBindings.Internal.ArchiveInitializer*, ACBindings.Internal.SmartBuffer*, void> InitForPacking; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Archive*, ACBindings.Internal.ArchiveInitializer*, ACBindings.Internal.SmartBuffer*, void> InitForUnpacking; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Archive*, byte, void> SetCheckpointing; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Archive*, void> InitVersionStack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Archive*, void> CreateVersionStack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Archive*, ACBindings.Internal.ArchiveInitializer*, ACBindings.Internal.SmartBuffer*, void> InitForPacking; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Archive*, ACBindings.Internal.ArchiveInitializer*, ACBindings.Internal.SmartBuffer*, void> InitForUnpacking; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Archive*, byte, void> SetCheckpointing; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Archive*, void> InitVersionStack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Archive*, void> CreateVersionStack; // function pointer
 
         // Methods
     }
+
+    /// <summary>Holds initialization parameters and a reference to the first ArchiveVersionRow for an archive. Used by InitializeArchive to push this data as a new version row when creating or updating archives.</summary>
     public unsafe struct SetVersionRow
     {
         // Base Classes
@@ -26,7 +32,7 @@ public unsafe struct Archive : System.IDisposable
         public unsafe struct SetVersionRow_vtbl
         {
             // Members
-            public delegate* unmanaged[Thiscall]<ACBindings.Internal.Archive.SetVersionRow*, ACBindings.Internal.Archive*, byte> InitializeArchive; // function pointer
+            public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Archive.SetVersionRow*, ACBindings.Internal.Archive*, byte> InitializeArchive; // function pointer
 
             // Methods
         }
@@ -50,6 +56,8 @@ public unsafe struct Archive : System.IDisposable
     {
         Packing = 0x0
     }
+
+    /// <summary>Functions as a marker for setting the archive’s current core version during initialization, holding an ArchiveInitializer base class instance.</summary>
     public unsafe struct tagSetCurrentCoreVersion
     {
         // Base Classes
@@ -59,7 +67,7 @@ public unsafe struct Archive : System.IDisposable
         public unsafe struct tagSetCurrentCoreVersion_vtbl
         {
             // Members
-            public delegate* unmanaged[Thiscall]<ACBindings.Internal.Archive.tagSetCurrentCoreVersion*, ACBindings.Internal.Archive*, byte> InitializeArchive; // function pointer
+            public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Archive.tagSetCurrentCoreVersion*, ACBindings.Internal.Archive*, byte> InitializeArchive; // function pointer
 
             // Methods
         }

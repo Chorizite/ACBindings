@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a property value that stores a string used in file node structures and archives. Provides mechanisms for copying, comparison, validation, and serialization within the system.</summary>
 public unsafe struct StringPropertyValue
 {
     // Base Classes

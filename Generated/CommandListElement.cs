@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a node in a doubly linked list of executable commands, holding the command identifier, speed parameter, and hold/run flag used during command processing.</summary>
 public unsafe struct CommandListElement
 {
     // Members

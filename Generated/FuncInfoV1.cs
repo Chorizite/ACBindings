@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Stores metadata required by the runtime to perform stack unwinding and exception handling, including a magic number, maximum state count, unwind map, try block table, and instruction‑pointer to state mapping.</summary>
 public unsafe struct FuncInfoV1
 {
     // Members

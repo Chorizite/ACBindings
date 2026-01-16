@@ -1,9 +1,14 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Maintains a globally shared high‑resolution timer, providing elapsed time calculations and synchronization across the application via a singleton PreciseTimerInstance.</summary>
 public unsafe struct Timer
 {
     // Statics
-    public static ACBindings.Internal.PreciseTimerInstance* s_pcTimerInstance = (ACBindings.Internal.PreciseTimerInstance*)0x008379A0;
+    public static ACBindings.Internal.PreciseTimerInstance** s_pcTimerInstance = (ACBindings.Internal.PreciseTimerInstance**)0x008379A0;
+    public static double* cur_time = (double*)0x008379A8;
+    public static double* local_time = (double*)0x008379B0;
+    public static byte* initialized_ = (byte*)0x008379B8;
 
     // Methods
 

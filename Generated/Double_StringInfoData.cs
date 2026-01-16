@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates a double value with an associated display precision, enabling formatted text representation and binary persistence within the string information subsystem.</summary>
 public unsafe struct Double_StringInfoData
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct Double_StringInfoData
     public unsafe struct Double_StringInfoData_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Double_StringInfoData*, void> Double_StringInfoData_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Double_StringInfoData*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Double_StringInfoData*, void> Double_StringInfoData_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Double_StringInfoData*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
         public System.IntPtr GetSubPrivateIDs;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Double_StringInfoData*, byte, byte> IsValid; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Double_StringInfoData*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Double_StringInfoData*, byte, byte> IsValid; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Double_StringInfoData*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
         public System.IntPtr ToString;
 
         // Methods

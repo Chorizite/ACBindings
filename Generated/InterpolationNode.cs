@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Represents a node in an interpolation sequence, storing positional data, orientation quaternion, type classification, and extent for motion or animation calculations. Links to adjacent nodes via a singly linked list for efficient traversal during interpolation.
+/// </summary>
 public unsafe struct InterpolationNode
 {
     // Base Classes
@@ -18,7 +22,7 @@ public unsafe struct InterpolationNode
 
     // Methods
 
-    /// <summary>
+    /// <summary>Initializes an InterpolationNode instance with default values, setting up its linked list pointer, type, position data, and frame quaternion for a stationary identity transform. Also caches the frame for future use.
     /// <code>Offset: 0x00556670
     /// void __thiscall InterpolationNode::InterpolationNode(InterpolationNode*)</code>
     /// </summary>

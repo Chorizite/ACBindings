@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a spatial location tied to an object part, containing its unique hash, part identifier, and transformation frame.</summary>
 public unsafe struct LocationType
 {
     // Base Classes
@@ -9,7 +11,7 @@ public unsafe struct LocationType
     public unsafe struct LocationType_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LocationType*, void> LocationType_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.LocationType*, void> LocationType_dtor_0; // function pointer
 
         // Methods
     }

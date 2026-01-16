@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Central manager for processing user input, maintaining lists of handlers for actions, character entry, mouse look/movement, and focus changes while tracking modes such as text entry and mouse‑look activation. Handles registration and removal of handlers and action maps, updates action states over time, and dispatches events to listeners based on the current state.</summary>
 public unsafe struct CInputManager : System.IDisposable
 {
     // Base Classes
@@ -13,56 +15,58 @@ public unsafe struct CInputManager : System.IDisposable
     public unsafe struct CInputManager_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, void> CInputManager_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, int, byte> OnStartup; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte> InitializeKeymap; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, void> OnShutdown; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, void> UseTime; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, double> GetLastInputTimestamp; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, int> GetMouseX; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, int> GetMouseY; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, int, int, byte> SetMouseXY; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte> ClearKeyMap; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, void> CInputManager_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, int, byte> OnStartup; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte> InitializeKeymap; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, void> OnShutdown; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, void> UseTime; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, double> GetLastInputTimestamp; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, int> GetMouseX; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, int> GetMouseY; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, int, int, byte> SetMouseXY; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte> ClearKeyMap; // function pointer
         public fixed byte gap28[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, uint, byte> AddKeyMap; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, uint, byte> AddKeyMap; // function pointer
         public System.IntPtr SaveKeyMap;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, uint, ACBindings.Internal.IInputActionCallback*, int, byte> RegisterInputMap; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, uint, ACBindings.Internal.IInputActionCallback*, byte> UnregisterInputMap; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.IInputActionCallback*, void> UnregisterCallback; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, uint, byte> SetActionMap; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.ActionMap*> GetActionMap; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.CInputHandler*, uint, byte> RegisterInputHandler; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.CInputHandler*, uint, byte> UnregisterInputHandler; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.ControlSpecification, byte> IsMetaKey; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.ControlSpecification, ACBindings.Internal.DeviceType> GetDeviceTypeFromKey; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte> ShiftKeyDown; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte> CtrlKeyDown; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte> AltKeyDown; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte, void> SetMouseLookMode; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte> GetMouseLookMode; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.MouseLookBehavior, int, int, void> ConfigureMouseLookMode; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, System.IntPtr, byte*, int> OnMessage; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte, void> Activate; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, void> OnUIElementActivationChanging; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, uint, ACBindings.Internal.IInputActionCallback*, int, byte> RegisterInputMap; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, uint, ACBindings.Internal.IInputActionCallback*, byte> UnregisterInputMap; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.IInputActionCallback*, void> UnregisterCallback; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, uint, byte> SetActionMap; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.ActionMap*> GetActionMap; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.CInputHandler*, uint, byte> RegisterInputHandler; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.CInputHandler*, uint, byte> UnregisterInputHandler; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.ControlSpecification, byte> IsMetaKey; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.ControlSpecification, ACBindings.Internal.DeviceType> GetDeviceTypeFromKey; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte> ShiftKeyDown; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte> CtrlKeyDown; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte> AltKeyDown; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte, void> SetMouseLookMode; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte> GetMouseLookMode; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.MouseLookBehavior, int, int, void> ConfigureMouseLookMode; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, System.IntPtr, byte*, int> OnMessage; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte, void> Activate; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, void> OnUIElementActivationChanging; // function pointer
         public fixed byte gap7C[4];
         public System.IntPtr GetNameFromKey;
         public System.IntPtr GetNameFromMetaKey;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.QualifiedControl, uint, uint, byte> BindAction; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.QualifiedControl, uint, byte> UnbindByKey; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.QualifiedControl, uint, uint, byte> BindAction; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.QualifiedControl, uint, byte> UnbindByKey; // function pointer
         public System.IntPtr FindKeysForAction;
         public System.IntPtr FindConflictingInputMaps;
         public System.IntPtr FindConflictingControls;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, uint, uint, byte> UnbindAllByAction; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, uint> GetDoubleClickDelay; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, uint> GetTapDelay; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte, void> SetTextMode; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte> GetTextMode; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte, void> OnSwitchMouseMode; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte, void> OnSwitchTextMode; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.InputEvent*, void> SendActionToListeners; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, uint, uint, byte> UnbindAllByAction; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, uint> GetDoubleClickDelay; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, uint> GetTapDelay; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte, void> SetTextMode; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte> GetTextMode; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte, void> OnSwitchMouseMode; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, byte, void> OnSwitchTextMode; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CInputManager*, ACBindings.Internal.InputEvent*, void> SendActionToListeners; // function pointer
 
         // Methods
     }
+
+    /// <summary>Links a specific input map identifier to an input action callback and assigns its handling priority within the input manager.</summary>
     public unsafe struct InputMapEntry
     {
         // Members
@@ -343,10 +347,12 @@ public unsafe struct CInputManager : System.IDisposable
     /// <param name="i_inEvt">The input event to fire; contains action information, input extent, and key data. Its toggle type is set according to the action map before processing.</param>
     public void FireActionEvent(ACBindings.Internal.InputEvent* i_inEvt) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CInputManager, ACBindings.Internal.InputEvent*, void>)0x004328C0)(ref this, i_inEvt);
 
-    /// <summary>
+    /// <summary>Retrieves the shortcut manager associated with a specified player module, providing access to the player's configured shortcuts.
     /// <code>Offset: 0x004F1B20
     /// ShortCutManager* __thiscall CInputManager::GetMouseX(PlayerModule*)</code>
     /// </summary>
+    /// <param name="this">Pointer to the PlayerModule whose shortcuts are requested.</param>
+    /// <returns>Pointer to the ShortCutManager instance stored in the given PlayerModule.</returns>
     public ACBindings.Internal.ShortCutManager* GetMouseX() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CInputManager, ACBindings.Internal.ShortCutManager*>)0x004F1B20)(ref this);
 }
 

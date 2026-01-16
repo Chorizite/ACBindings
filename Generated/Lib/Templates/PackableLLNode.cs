@@ -109,10 +109,12 @@ public unsafe struct PackableLLNode___GeneratorProfile
 
     // Methods
 
-    /// <summary>
+    /// <summary>Initializes a PackableLLNode&lt;GeneratorProfile&gt; by setting up default vtable pointers, initializing its frame to an identity transform with zero origin, caching the frame, and copying profile data from the supplied source.
     /// <code>Offset: 0x005D1030
     /// void*** __thiscall PackableLLNode&lt;GeneratorProfile&gt;::PackableLLNode&lt;GeneratorProfile&gt;(void***,_DWORD*)</code>
     /// </summary>
+    /// <param name="a2">Pointer to the GeneratorProfile data used to initialize this node.</param>
+    /// <returns>Pointer to the newly constructed PackableLLNode&lt;GeneratorProfile&gt; instance.</returns>
     // void*** __thiscall PackableLLNode<GeneratorProfile>::PackableLLNode<GeneratorProfile>(void***,_DWORD*) (template type method)
 }
 

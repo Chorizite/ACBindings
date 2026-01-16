@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Iterates over a packed linked list of unsigned long values, maintaining a reference to the current element.</summary>
 public unsafe struct PackableLLIter__uint
 {
     // Members
@@ -9,6 +11,8 @@ public unsafe struct PackableLLIter__uint
     // Methods
 }
 
+
+/// <summary>Provides iteration over a packed linked list of ItemProfile objects, maintaining the current node pointer for traversal.</summary>
 public unsafe struct PackableLLIter___ItemProfile
 {
     // Members
@@ -18,6 +22,8 @@ public unsafe struct PackableLLIter___ItemProfile
     // Methods
 }
 
+
+/// <summary>Facilitates traversal of Enchantment objects by storing a virtual function table pointer and a reference to the current element.</summary>
 public unsafe struct PackableLLIter___Enchantment
 {
     // Members

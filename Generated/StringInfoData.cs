@@ -1,16 +1,19 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Base structure for string metadata, holding a type identifier and variable ID used in serialization and comparison logic.</summary>
+/// <remarks>Serves as the foundation for derived classes that handle specific string formats such as simple strings, doubles, formatted integers, and other variants.</remarks>
 public unsafe struct StringInfoData
 {
     // Child Types
     public unsafe struct StringInfoData_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.StringInfoData*, void> StringInfoData_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.StringInfoData*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.StringInfoData*, void> StringInfoData_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.StringInfoData*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
         public System.IntPtr GetSubPrivateIDs;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.StringInfoData*, byte, byte> IsValid; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.StringInfoData*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.StringInfoData*, byte, byte> IsValid; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.StringInfoData*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
         public System.IntPtr ToString;
 
         // Methods

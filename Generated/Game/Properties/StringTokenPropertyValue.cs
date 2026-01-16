@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a property value that associates a string token with its hashed integer identifier, enabling fast comparisons and serialization in configuration files. Stores the token name as a PStringBase&lt;char&gt; and maintains a precomputed hash used for lookup operations.</summary>
 public unsafe struct StringTokenPropertyValue
 {
     // Base Classes

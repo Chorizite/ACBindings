@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Encapsulates an enumeration value in the property framework, storing it as a 32‑bit unsigned integer. Provides operations for copying, comparison, serialization, file node conversion, and string representation.
+/// </summary>
 public unsafe struct EnumPropertyValue
 {
     // Base Classes

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates information about a drag‑and‑drop operation within the UI system, tracking the involved element, its owner, potential catcher, and whether the transfer succeeded.</summary>
 public unsafe struct DragDropInfo
 {
     // Base Classes
@@ -9,7 +11,7 @@ public unsafe struct DragDropInfo
     public unsafe struct DragDropInfo_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DragDropInfo*, void> DragDropInfo_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DragDropInfo*, void> DragDropInfo_dtor_0; // function pointer
 
         // Methods
     }

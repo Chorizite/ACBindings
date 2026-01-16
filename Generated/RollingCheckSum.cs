@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Maintains a rolling checksum over data, storing intermediate components and an accumulated sum used for quick integrity checks across sequential data blocks.</summary>
 public unsafe struct RollingCheckSum
 {
     // Members

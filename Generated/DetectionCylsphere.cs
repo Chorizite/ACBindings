@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Defines a cylindrical detection zone identified by context ID, storing its radius, detection status, type, and associated object information.
+/// </summary>
 public unsafe struct DetectionCylsphere
 {
     // Members

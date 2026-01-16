@@ -1,14 +1,17 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Tracks high‑resolution timestamps to calculate elapsed intervals, using m_startTime as the starting point.</summary>
+/// <remarks>Holds a virtual function table pointer for polymorphic behavior within the application.</remarks>
 public unsafe struct CStopWatch
 {
     // Child Types
     public unsafe struct CStopWatch_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CStopWatch*, void> CStopWatch_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CStopWatch*, void> Start; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CStopWatch*, double> Stop; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CStopWatch*, void> CStopWatch_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CStopWatch*, void> Start; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CStopWatch*, double> Stop; // function pointer
 
         // Methods
     }

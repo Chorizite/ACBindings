@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Combines 64‑bit integer string information with formatting parameters, enabling conversion to formatted text and serialization of the value, grouping flag, and base index.</summary>
 public unsafe struct Formatted_LInt_StringInfoData
 {
     // Base Classes
@@ -10,11 +12,11 @@ public unsafe struct Formatted_LInt_StringInfoData
     public unsafe struct Formatted_LInt_StringInfoData_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Formatted_LInt_StringInfoData*, void> Formatted_LInt_StringInfoData_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Formatted_LInt_StringInfoData*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Formatted_LInt_StringInfoData*, void> Formatted_LInt_StringInfoData_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Formatted_LInt_StringInfoData*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
         public System.IntPtr GetSubPrivateIDs;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Formatted_LInt_StringInfoData*, byte, byte> IsValid; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Formatted_LInt_StringInfoData*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Formatted_LInt_StringInfoData*, byte, byte> IsValid; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Formatted_LInt_StringInfoData*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
         public System.IntPtr ToString;
 
         // Methods

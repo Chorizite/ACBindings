@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Iterates over a collection of StringTableMetaLanguage::Node objects, maintaining the current position and reference to the underlying list.</summary>
 public unsafe struct ListIterator___StringTableMetaLanguage_Node_ptr
 {
     // Members
@@ -10,6 +12,8 @@ public unsafe struct ListIterator___StringTableMetaLanguage_Node_ptr
     // Methods
 }
 
+
+/// <summary>Iterates over a list of Glyph elements, exposing the current item and maintaining list context for traversal operations.</summary>
 public unsafe struct ListIterator___Glyph
 {
     // Members
@@ -20,6 +24,8 @@ public unsafe struct ListIterator___Glyph
     // Methods
 }
 
+
+/// <summary>Iterates through a collection of NoticeHandler objects, maintaining pointers to the current element and underlying list, while supporting virtual function dispatch via its vtable.</summary>
 public unsafe struct ListIterator___NoticeHandler_ptr
 {
     // Members
@@ -30,6 +36,8 @@ public unsafe struct ListIterator___NoticeHandler_ptr
     // Methods
 }
 
+
+/// <summary>Provides sequential access to elements in a collection of SkillRecord objects, maintaining internal state such as current position and reference to the underlying list.</summary>
 public unsafe struct ListIterator___SkillRecord_ptr
 {
     // Members
@@ -40,6 +48,9 @@ public unsafe struct ListIterator___SkillRecord_ptr
     // Methods
 }
 
+
+/// <summary>Facilitates traversal over a list of DualHashData entries holding pairs of UIOption_Slider pointers, enabling sequential access to slider configuration objects.
+/// Maintains internal references to the current element and the containing list for efficient iteration.</summary>
 public unsafe struct ListIterator___DualHashData___UIOption_Slider_ptr___UIOption_Slider_ptr_ptr
 {
     // Members
@@ -50,6 +61,8 @@ public unsafe struct ListIterator___DualHashData___UIOption_Slider_ptr___UIOptio
     // Methods
 }
 
+
+/// <summary>Iterates over a list of QualifiedControl objects, exposing the current element and the underlying collection for traversal.</summary>
 public unsafe struct ListIterator___QualifiedControl
 {
     // Members
@@ -60,6 +73,8 @@ public unsafe struct ListIterator___QualifiedControl
     // Methods
 }
 
+
+/// <summary>Iterates over a collection of unsigned long values, maintaining references to the current element and its parent list. Provides virtual function support for iterator operations.</summary>
 public unsafe struct ListIterator__uint
 {
     // Members

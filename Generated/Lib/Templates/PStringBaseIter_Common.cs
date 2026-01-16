@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>PStringBaseIter_Common offers an iterator interface for string processing, tracking the current position and mark within the underlying character sequence while supporting virtual dispatch through its vftable pointer.</summary>
 public unsafe struct PStringBaseIter_Common__sbyte
 {
     // Child Types
@@ -86,19 +88,28 @@ public unsafe struct PStringBaseIter_Common__sbyte
     /// <returns>Nonzero on success; zero if the underlying string is null.</returns>
     // char __thiscall PStringBaseIter_Common<char>::Split(unsigned int*,int*,void**,int*) (template type method)
 
-    /// <summary>
+    /// <summary>Determines whether the string starting at the provided position begins with a specified substring, performing a case‑insensitive comparison.
     /// <code>Offset: 0x0056F510
     /// bool __cdecl PStringBaseIter_Common&lt;char&gt;::FindSubStringIter(const char*,const char*)</code>
     /// </summary>
+    /// <param name="my_curr">Pointer to the current position in the source string from which the search starts.</param>
+    /// <param name="substring_curr">Pointer to the null‑terminated substring to match against the source string.</param>
+    /// <returns>True if the substring matches the sequence at the given position; otherwise, false.</returns>
     // bool __cdecl PStringBaseIter_Common<char>::FindSubStringIter(const char*,const char*) (template type method)
 
-    /// <summary>
+    /// <summary>Searches the current position in the iterator for the substring specified by a2 and updates internal markers if found.
     /// <code>Offset: 0x0056F710
     /// char __thiscall PStringBaseIter_Common&lt;char&gt;::FindSubString(int,const char**,char)</code>
     /// </summary>
+    /// <param name="this">The string iterator instance.</param>
+    /// <param name="a2">Pointer to the C-style string pattern to locate.</param>
+    /// <param name="a3">Flag that selects an alternate search path when non-zero.</param>
+    /// <returns>Returns 1 if the substring is located; otherwise, returns 0.</returns>
     // char __thiscall PStringBaseIter_Common<char>::FindSubString(int,const char**,char) (template type method)
 }
 
+
+/// <summary>Iterates over a sequence of unsigned short elements, tracking the current index and a mark to allow resetting or rewinding during traversal.</summary>
 public unsafe struct PStringBaseIter_Common__ushort
 {
     // Members

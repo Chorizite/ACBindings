@@ -1,12 +1,14 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a single entry within a context menu system, including its display text, action handler, optional submenu, activation status, and associated icon. Supports both command and boolean toggle entries.</summary>
 public unsafe struct ContextMenuData
 {
     // Child Types
     public unsafe struct ContextMenuData_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ContextMenuData*, void> ContextMenuData_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ContextMenuData*, void> ContextMenuData_dtor_0; // function pointer
 
         // Methods
     }

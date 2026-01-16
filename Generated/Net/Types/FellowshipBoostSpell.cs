@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a boost spell tailored for use within fellowship systems, encapsulating the standard BoostSpell data structure.</summary>
 public unsafe struct FellowshipBoostSpell
 {
     // Base Classes
@@ -9,25 +11,25 @@ public unsafe struct FellowshipBoostSpell
     public unsafe struct FellowshipBoostSpell_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, void> FellowshipBoostSpell_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, void> FellowshipBoostSpell_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, void**, uint, int> UnPack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, ACBindings.Internal.Spell*, ACBindings.Internal.Spell*, void> SetEqual; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, double> InqDuration; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, double, int> SetDuration; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> IsEnchantmentSpell; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> IsBoostSpell; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> IsProjectileSpell; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> IsTransferSpell; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> IsDispelSpell; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> IsFellowshipSpell; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, ACBindings.Internal.Enchantment*, int> BuildEnchantment; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> AffectsHealth; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> AffectsStamina; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> AffectsMana; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, uint> pack_size; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, ACBindings.Internal.Spell*, ACBindings.Internal.Spell*, void> SetEqual; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, double> InqDuration; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, double, int> SetDuration; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> IsEnchantmentSpell; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> IsBoostSpell; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> IsProjectileSpell; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> IsTransferSpell; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> IsDispelSpell; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> IsFellowshipSpell; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, ACBindings.Internal.Enchantment*, int> BuildEnchantment; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> AffectsHealth; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> AffectsStamina; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, int> AffectsMana; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FellowshipBoostSpell*, uint> pack_size; // function pointer
 
         // Methods
     }
@@ -39,7 +41,7 @@ public unsafe struct FellowshipBoostSpell
 
     // Methods
 
-    /// <summary>
+    /// <summary>Initializes a new FellowshipBoostSpell instance, setting up its base BoostSpell and Spell properties.
     /// <code>Offset: 0x00599D10
     /// void __thiscall FellowshipBoostSpell::FellowshipBoostSpell(FellowshipBoostSpell*)</code>
     /// </summary>

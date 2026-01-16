@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates metadata and buffers for a network packet, including remote socket address, payload length, I/O vector configuration, and protocol type.</summary>
 public unsafe struct PacketInfo
 {
     // Child Types

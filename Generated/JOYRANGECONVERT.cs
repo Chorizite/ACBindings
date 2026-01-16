@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Converts raw joystick input into calibrated, range‑limited values using low/high ramp curves and configurable minimum/maximum limits for both analog axes and POV hats.</summary>
 public unsafe struct JOYRANGECONVERT
 {
     // Members

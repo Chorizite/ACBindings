@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a node in an action sequence, storing the action type, execution speed, timestamp, and autonomy flag used by the system to schedule behaviors.</summary>
 public unsafe struct ActionNode
 {
     // Base Classes

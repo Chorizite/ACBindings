@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates an IUnknown interface reference used within the application.</summary>
+/// <remarks>The struct aligns its member to a 4-byte boundary to satisfy binary layout constraints.</remarks>
 public unsafe struct IWrappedProtocol
 {
     // Base Classes
@@ -9,10 +12,10 @@ public unsafe struct IWrappedProtocol
     public unsafe struct IWrappedProtocol_vtbl
     {
         // Members
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IWrappedProtocol*, int*, uint, int> GetWrapperCode; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IWrappedProtocol*, int*, uint, int> GetWrapperCode; // function pointer
 
         // Methods
     }

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Describes the rendering device’s display configuration, indicating support for stencil buffers, multisampling, texture render targets, and available pixel formats for render targets, depth buffers, textures, and surfaces.</summary>
 public unsafe struct RenderDeviceDisplayInfo
 {
     // Members

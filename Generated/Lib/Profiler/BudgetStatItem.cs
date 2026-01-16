@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a single budget statistic item, storing its descriptive information, current value, and status as reported by the profiler.</summary>
 public unsafe struct BudgetStatItem
 {
     // Members

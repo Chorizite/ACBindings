@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds an array of vertex buffer pointers for rendering meshes, managing reference counts and memory allocation to ensure efficient GPU resource reuse.</summary>
 public unsafe struct RenderMeshVerticesArray : System.IDisposable
 {
     // Base Classes
@@ -9,7 +11,7 @@ public unsafe struct RenderMeshVerticesArray : System.IDisposable
     public unsafe struct RenderMeshVerticesArray_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.RenderMeshVerticesArray*, void> RenderMeshVerticesArray_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.RenderMeshVerticesArray*, void> RenderMeshVerticesArray_dtor_0; // function pointer
 
         // Methods
     }
@@ -24,7 +26,7 @@ public unsafe struct RenderMeshVerticesArray : System.IDisposable
 
     // Methods
 
-    /// <summary>
+    /// <summary>Releases all stored vertex buffer references, decrements their reference counts, frees any allocated memory for the vertex array, and resets the container’s internal state to empty.
     /// <code>Offset: 0x00445040
     /// void __thiscall RenderMeshVerticesArray::~RenderMeshVerticesArray(RenderMeshVerticesArray*)</code>
     /// </summary>

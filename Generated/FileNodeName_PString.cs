@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a file node name implemented as a reference-counted character string, enabling cloning, serialization, and conversion through the IFileNodeName interface.</summary>
 public unsafe struct FileNodeName_PString
 {
     // Base Classes

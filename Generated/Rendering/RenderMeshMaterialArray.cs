@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Manages the collection of material instances used by a render mesh, providing reference‑counted ownership and dynamic array handling for efficient resource cleanup. Pairs data identifiers with MaterialInstance pointers to enable rapid lookup and deterministic deallocation during object destruction.</summary>
 public unsafe struct RenderMeshMaterialArray : System.IDisposable
 {
     // Base Classes
@@ -9,7 +11,7 @@ public unsafe struct RenderMeshMaterialArray : System.IDisposable
     public unsafe struct RenderMeshMaterialArray_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.RenderMeshMaterialArray*, void> RenderMeshMaterialArray_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.RenderMeshMaterialArray*, void> RenderMeshMaterialArray_dtor_0; // function pointer
 
         // Methods
     }
@@ -24,7 +26,7 @@ public unsafe struct RenderMeshMaterialArray : System.IDisposable
 
     // Methods
 
-    /// <summary>
+    /// <summary>Destroys a RenderMeshMaterialArray instance by releasing each MaterialInstance, clearing its internal SmartArray, deallocating any allocated memory as needed, and restoring base class virtual function tables.
     /// <code>Offset: 0x00444FD0
     /// void __thiscall RenderMeshMaterialArray::~RenderMeshMaterialArray(RenderMeshMaterialArray*)</code>
     /// </summary>

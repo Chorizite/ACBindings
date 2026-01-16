@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Handles metadata for an audio clip, including its unique ID, priority level, playback probability, and volume setting within the sound system.</summary>
 public unsafe struct SoundData
 {
     // Members
@@ -15,7 +17,7 @@ public unsafe struct SoundData
 
     // Methods
 
-    /// <summary>
+    /// <summary>Initializes a new instance of the SoundData structure with default values: sound ID set to zero, priority zero, probability one, and volume one.
     /// <code>Offset: 0x005528D0
     /// void __thiscall SoundData::SoundData(SoundData*)</code>
     /// </summary>

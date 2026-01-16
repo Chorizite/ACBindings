@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates cache metadata including an offset, version identifier, and a SmartBuffer that holds packed data for efficient storage and retrieval.</summary>
 public unsafe struct Cache_Pack_t : System.IDisposable
 {
     // Members
@@ -45,16 +47,18 @@ public unsafe struct Cache_Pack_t : System.IDisposable
     /// </summary>
     public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Cache_Pack_t, void>)0x004178A0)(ref this);
 
-    /// <summary>
+    /// <summary>Serializes or deserializes the Cache_Pack's version and data buffer to or from an Archive. When writing, it records the current version and appends the buffer contents; when reading, it reconstructs the buffer by creating a window over the remaining archive data.
     /// <code>Offset: 0x004F88C0
     /// void __thiscall Cache_Pack_t::SerializeOrWindow(Cache_Pack_t*,Archive*)</code>
     /// </summary>
+    /// <param name="io_rcArchive">The Archive instance used for reading or writing cache data.</param>
     public void SerializeOrWindow(ACBindings.Internal.Archive* io_rcArchive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Cache_Pack_t, ACBindings.Internal.Archive*, void>)0x004F88C0)(ref this, io_rcArchive);
 
-    /// <summary>
+    /// <summary>Adjusts the internal cache pack's SmartBuffer to match the size of a supplied buffer, reallocating and copying data when the source buffer aligns with the pack's expected location.
     /// <code>Offset: 0x00671440
     /// void __thiscall Cache_Pack_t::UpdatePackedSize(Cache_Pack_t*,const SmartBuffer*)</code>
     /// </summary>
+    /// <param name="i_buff">The buffer whose size and contents are used to update the cache pack.</param>
     public void UpdatePackedSize(ACBindings.Internal.SmartBuffer* i_buff) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Cache_Pack_t, ACBindings.Internal.SmartBuffer*, void>)0x00671440)(ref this, i_buff);
 }
 

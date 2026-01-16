@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Describes a RIFF chunk header used by the Windows multimedia API, containing the chunk identifier, size, type code, data offset, and flag bits.</summary>
 public unsafe struct _MMCKINFO
 {
     // Members

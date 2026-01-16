@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents metrics for a single character glyph in a font, including Unicode code point, positioning offsets, and dimensions used during text layout and rendering.</summary>
+/// <remarks>Encapsulates the data required by font rasterizers and layout engines to position each glyph accurately on screen or print media.</remarks>
 public unsafe struct FontCharDesc
 {
     // Members

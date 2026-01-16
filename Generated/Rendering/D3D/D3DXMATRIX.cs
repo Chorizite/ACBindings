@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a 4×4 matrix used for 3D transformations in DirectX, encapsulating translation, rotation, scaling, and projection operations.</summary>
 public unsafe struct D3DXMATRIX
 {
     // Base Classes
@@ -8,6 +10,8 @@ public unsafe struct D3DXMATRIX
     // Methods
 }
 
+
+/// <summary>Represents a 4×4 matrix used in DirectX to perform transformations such as translation, rotation, scaling, and perspective projection.</summary>
 public unsafe struct D3DXMatrix
 {
     // Members

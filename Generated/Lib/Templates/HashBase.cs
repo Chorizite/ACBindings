@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Core storage layout and configuration for a hash table keyed by unsigned long values, including table size, mask, and bucket pointers.</summary>
 public unsafe struct HashBase__uint
 {
     // Members

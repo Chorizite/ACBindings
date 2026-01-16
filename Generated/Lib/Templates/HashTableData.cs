@@ -347,7 +347,7 @@ public unsafe struct HashTableData__uint__void_ptr
     public ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint__void_ptr_ptr BaseClass_IntrusiveHashData__uint___HashTableData__uint__void_ptr_ptr; // ACBindings.Internal.IntrusiveHashData__uint___HashTableData__uint__void_ptr_ptr
 
     // Members
-    public delegate* unmanaged[Cdecl]<ACBindings.Internal.LayoutDesc*, ACBindings.Internal.ElementDesc*, ACBindings.Internal.UIElement*> m_data; // function pointer
+    public static delegate* unmanaged[Cdecl]<ACBindings.Internal.LayoutDesc*, ACBindings.Internal.ElementDesc*, ACBindings.Internal.UIElement*> m_data; // function pointer
 
     // Methods
 }

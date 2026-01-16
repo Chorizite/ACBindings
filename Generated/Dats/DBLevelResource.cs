@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a level resource entry with its identifier, name, and associated rendering surface.</summary>
 public unsafe struct DBLevelResource
 {
     // Members

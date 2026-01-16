@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a vertex for Direct3D with 3‑dimensional position, diffuse color and two sets of texture coordinates used in rendering pipelines.</summary>
 public unsafe struct CUSTOM_D3D_L_VERTEX2
 {
     // Members

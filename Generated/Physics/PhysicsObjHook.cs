@@ -1,12 +1,16 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a node in the physics system’s hook chain, holding timing data and linkage for callbacks. Stores creation time, interpolation parameters, and optional user data used during physics processing.</summary>
 public unsafe struct PhysicsObjHook
 {
     // Child Types
+
+    /// <summary>Virtual function table for PhysicsObjHook, exposing an Execute callback that processes CPhysicsObj instances.</summary>
     public unsafe struct PhysicsObjHook_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PhysicsObjHook*, ACBindings.Internal.CPhysicsObj*, int> Execute; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.PhysicsObjHook*, ACBindings.Internal.CPhysicsObj*, int> Execute; // function pointer
 
         // Methods
     }

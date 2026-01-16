@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates optional header data for an object, providing mask and flag fields to describe its attributes, a pointer to the payload, and its length. Reference counting enables shared ownership across components.</summary>
 public unsafe struct COptionalHeader
 {
     // Base Classes
@@ -9,8 +11,8 @@ public unsafe struct COptionalHeader
     public unsafe struct COptionalHeader_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.COptionalHeader*, void> COptionalHeader_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.COptionalHeader*, int> UpdateTimeSensitivePayload; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.COptionalHeader*, void> COptionalHeader_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.COptionalHeader*, int> UpdateTimeSensitivePayload; // function pointer
 
         // Methods
     }

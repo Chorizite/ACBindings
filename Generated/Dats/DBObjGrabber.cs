@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Facilitates safe, read‑only retrieval of an EnumMapper instance for database operations.</summary>
 public unsafe struct DBObjGrabber___EnumMapper
 {
     // Members
@@ -16,6 +18,8 @@ public unsafe struct DBObjGrabber___EnumMapper
     // DBObj** __thiscall DBObjGrabber<EnumMapper>::DBObjGrabber<EnumMapper>(DBObj**,int) (template type method)
 }
 
+
+/// <summary>Encapsulates a pointer to an EnumIDMap instance, providing read‑only access while maintaining 4‑byte alignment for efficient memory usage.</summary>
 public unsafe struct DBObjGrabber___EnumIDMap
 {
     // Members
@@ -33,6 +37,8 @@ public unsafe struct DBObjGrabber___EnumIDMap
     // DBObj** __thiscall DBObjGrabber<EnumIDMap>::DBObjGrabber<EnumIDMap>(DBObj**,int) (template type method)
 }
 
+
+/// <summary>Retrieves a DualEnumIDMap from the database context, exposing it for use by client code.</summary>
 public unsafe struct DBObjGrabber___DualEnumIDMap
 {
     // Members
@@ -50,6 +56,8 @@ public unsafe struct DBObjGrabber___DualEnumIDMap
     // DBObj** __thiscall DBObjGrabber<DualEnumIDMap>::DBObjGrabber<DualEnumIDMap>(DBObj**,int) (template type method)
 }
 
+
+/// <summary>Stores an immutable pointer to a MasterProperty instance, enabling read‑only interaction with database objects.</summary>
 public unsafe struct DBObjGrabber___MasterProperty
 {
     // Members
@@ -58,6 +66,8 @@ public unsafe struct DBObjGrabber___MasterProperty
     // Methods
 }
 
+
+/// <summary>Represents a reference to a StringTable instance within the database system.</summary>
 public unsafe struct DBObjGrabber___StringTable
 {
     // Members
@@ -74,13 +84,16 @@ public unsafe struct DBObjGrabber___StringTable
     /// <returns>Returns the same pointer passed in after assignment.</returns>
     // DBObj** __thiscall DBObjGrabber<StringTable>::DBObjGrabber<StringTable>(DBObj**,int) (template type method)
 
-    /// <summary>
+    /// <summary>Releases the referenced StringTable by invoking its cleanup routine and clears the internal pointer.
     /// <code>Offset: 0x0049B890
     /// int __thiscall DBObjGrabber&lt;StringTable&gt;::~DBObjGrabber&lt;StringTable&gt;(int*)</code>
     /// </summary>
+    /// <returns>Integer result from the release operation; undefined if no object was held.</returns>
     // int __thiscall DBObjGrabber<StringTable>::~DBObjGrabber<StringTable>(int*) (template type method)
 }
 
+
+/// <summary>Provides read‑only access to a LayoutDesc instance via an internal const pointer.</summary>
 public unsafe struct DBObjGrabber___LayoutDesc
 {
     // Members
@@ -88,13 +101,17 @@ public unsafe struct DBObjGrabber___LayoutDesc
 
     // Methods
 
-    /// <summary>
+    /// <summary>Sets the grabber’s internal database object based on the supplied identifier, releasing any previously held reference.
     /// <code>Offset: 0x00459A40
     /// bool __thiscall DBObjGrabber&lt;LayoutDesc&gt;::set(DBObj**,int)</code>
     /// </summary>
+    /// <param name="a2">The numeric identifier used to locate the desired DBObj instance.</param>
+    /// <returns>True when a non‑null DBObj is retrieved; otherwise false.</returns>
     // bool __thiscall DBObjGrabber<LayoutDesc>::set(DBObj**,int) (template type method)
 }
 
+
+/// <summary>Provides read‑only access to a SkillTable instance for internal use, holding a constant pointer to the underlying table.</summary>
 public unsafe struct DBObjGrabber___SkillTable
 {
     // Members
@@ -103,6 +120,13 @@ public unsafe struct DBObjGrabber___SkillTable
     // Methods
 }
 
+
+/// <summary>
+/// Provides immutable access to a CContractTable object, encapsulating a pointer for database interactions.
+/// </summary>
+/// <remarks>
+/// Used by system components that require read‑only views of contract data without owning the underlying object.
+/// </remarks>
 public unsafe struct DBObjGrabber___CContractTable
 {
     // Members
@@ -111,6 +135,8 @@ public unsafe struct DBObjGrabber___CContractTable
     // Methods
 }
 
+
+/// <summary>Provides a lightweight handle to a DBPropertyCollection, resolving and updating its reference via an identifier.</summary>
 public unsafe struct DBObjGrabber___DBPropertyCollection
 {
     // Members
@@ -118,10 +144,13 @@ public unsafe struct DBObjGrabber___DBPropertyCollection
 
     // Methods
 
-    /// <summary>
+    /// <summary>Updates the supplied DBObj*** to point to the next link of the database object identified by the provided ID and indicates whether the operation succeeded.
     /// <code>Offset: 0x004F0010
     /// bool __thiscall DBObjGrabber&lt;DBPropertyCollection&gt;::set(DBObj***,int)</code>
     /// </summary>
+    /// <param name="this">Pointer to the DBObj*** that will receive the new reference.</param>
+    /// <param name="a2">Identifier for the target DBObj instance.</param>
+    /// <returns>True if a valid DBObj was located; otherwise, false.</returns>
     // bool __thiscall DBObjGrabber<DBPropertyCollection>::set(DBObj***,int) (template type method)
 }
 

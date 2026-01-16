@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates arguments for a blit operation, specifying source and destination buffer parameters, dimensions, mode, and an optional alpha modifier.</summary>
 public unsafe struct BlitArgs
 {
     // Members

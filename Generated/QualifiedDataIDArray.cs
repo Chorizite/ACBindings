@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds a collection of qualified data identifiers mapped to their corresponding database object save information, enabling efficient lookup and bracketed iteration.</summary>
 public unsafe struct QualifiedDataIDArray : System.IDisposable
 {
     // Base Classes
@@ -9,7 +11,7 @@ public unsafe struct QualifiedDataIDArray : System.IDisposable
     public unsafe struct QualifiedDataIDArray_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.QualifiedDataIDArray*, void> QualifiedDataIDArray_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.QualifiedDataIDArray*, void> QualifiedDataIDArray_dtor_0; // function pointer
 
         // Methods
     }

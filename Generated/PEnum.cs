@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates an enumeration entry, storing its name, header index, assignment status, scope flags (client/server/internal), symbol, source file, comment string, and a reference to related data node.</summary>
 public unsafe struct PEnum
 {
     // Members

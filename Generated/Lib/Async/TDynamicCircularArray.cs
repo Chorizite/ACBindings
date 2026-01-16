@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides a dynamic circular array for AsyncCache::CCallbackHandler pointers, enabling efficient storage and retrieval of callback handlers during asynchronous operations.</summary>
 public unsafe struct TDynamicCircularArray___AsyncCache_CCallbackHandler_ptr
 {
     // Members

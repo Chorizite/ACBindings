@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates a spatial position within the property framework, enabling storage, retrieval, comparison, parsing from files, and serialization to archives.</summary>
 public unsafe struct PositionPropertyValue
 {
     // Base Classes

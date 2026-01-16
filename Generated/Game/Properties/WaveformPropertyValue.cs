@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates a waveform value as a property, offering copy, comparison, serialization, and XML node conversion functionalities.</summary>
 public unsafe struct WaveformPropertyValue
 {
     // Base Classes

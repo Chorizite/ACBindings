@@ -1,32 +1,36 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Maintains cached database objects, providing efficient lookup and memory management through hashing, freelists, and optional object reuse strategies.</summary>
 public unsafe struct DBOCache : System.IDisposable
 {
     // Child Types
+
+    /// <summary>Defines the virtual function table for a database object cache, exposing operations for allocation, deallocation, persistence, and collection management.</summary>
     public unsafe struct DBOCache_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, void> DBOCache_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, void> DBOCache_dtor_0; // function pointer
         public System.IntPtr GetIfInMemory;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*> GetFreeObj; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*> GetFreeObj; // function pointer
         public System.IntPtr GetCollection;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, System.IntPtr, byte> SetCollection; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, System.IntPtr, byte> SetCollection; // function pointer
         public System.IntPtr Release;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*, byte> AddObj; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*, byte> AddObj; // function pointer
         public System.IntPtr RemoveObj;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, byte> CanLoadFromDisk; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, byte> CanRequestFromNet; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, void> FlushFreeObjects; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, byte> CanLoadFromDisk; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, byte> CanRequestFromNet; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, void> FlushFreeObjects; // function pointer
         public System.IntPtr SaveObjectToDisk;
         public System.IntPtr ReloadObject;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, void> LastWords; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*, byte> AddObj_Internal; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*, void> RemoveObj_Internal; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*, void> FreeObject; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*, void> DestroyObj; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*, void> FreelistAdd; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*, void> FreelistRemove; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*> FreelistRemoveOldest; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, void> LastWords; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*, byte> AddObj_Internal; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*, void> RemoveObj_Internal; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*, void> FreeObject; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*, void> DestroyObj; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*, void> FreelistAdd; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*, void> FreelistRemove; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBOCache*, ACBindings.Internal.DBObj*> FreelistRemoveOldest; // function pointer
 
         // Methods
     }
@@ -44,7 +48,7 @@ public unsafe struct DBOCache : System.IDisposable
     public ACBindings.Internal.DBObj* m_pYoungestFree;
     public uint m_nFree;
     public uint m_nTotalCount;
-    public delegate* unmanaged[Cdecl]<ACBindings.Internal.DBObj*> m_pfnAllocator; // function pointer
+    public static delegate* unmanaged[Cdecl]<ACBindings.Internal.DBObj*> m_pfnAllocator; // function pointer
 
     // Generated Constructor
     public DBOCache(delegate* unmanaged[Cdecl]<ACBindings.Internal.DBObj*> allocator, uint dbtype) {

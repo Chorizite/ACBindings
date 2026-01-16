@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Defines a display mode by specifying resolution, pixel format, and refresh rate for rendering output.</summary>
 public unsafe struct RenderDisplayModeType
 {
     // Members

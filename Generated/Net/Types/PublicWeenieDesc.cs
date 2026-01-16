@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Describes the public attributes of a game object, including identifiers, visual properties, behavior flags, capacity limits, and restriction rules, enabling packing/unpacking and runtime manipulation.</summary>
 public unsafe struct PublicWeenieDesc : System.IDisposable
 {
     // Base Classes
@@ -9,12 +11,12 @@ public unsafe struct PublicWeenieDesc : System.IDisposable
     public unsafe struct PublicWeenieDesc_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PublicWeenieDesc*, void> PublicWeenieDesc_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.PublicWeenieDesc*, void> PublicWeenieDesc_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PublicWeenieDesc*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PublicWeenieDesc*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PublicWeenieDesc*, void**, uint, int> UnPack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PublicWeenieDesc*, uint> pack_size; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.PublicWeenieDesc*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.PublicWeenieDesc*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.PublicWeenieDesc*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.PublicWeenieDesc*, uint> pack_size; // function pointer
 
         // Methods
     }
@@ -109,58 +111,70 @@ public unsafe struct PublicWeenieDesc : System.IDisposable
 
     // Methods
 
-    /// <summary>
+    /// <summary>Determines if a given item type represents a creature that can be interacted with through conversation.
     /// <code>Offset: 0x005AD860
     /// int __cdecl PublicWeenieDesc::IsTalkable(const ITEM_TYPE)</code>
     /// </summary>
+    /// <param name="itemType">The type of the item to evaluate.</param>
+    /// <returns>Non‑zero if the item type is talkable (i.e., a creature); otherwise zero.</returns>
     public static int IsTalkable(ACBindings.Internal.ITEM_TYPE itemType) => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.ITEM_TYPE, int>)0x005AD860)(itemType);
 
-    /// <summary>
+    /// <summary>Updates the object's internal bitfield to reflect the specified player killer status flag, setting or clearing specific bits based on the supplied value.
     /// <code>Offset: 0x005AD870
     /// void __thiscall PublicWeenieDesc::SetPlayerKillerStatus(PublicWeenieDesc*,unsigned int)</code>
     /// </summary>
+    /// <param name="pk">Bitmask indicating which killer status flag should be set or cleared; values 4, 0x20, and 0x40 correspond to different status bits, while any other value clears all related flags.</param>
     public void SetPlayerKillerStatus(uint pk) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PublicWeenieDesc, uint, void>)0x005AD870)(ref this, pk);
 
-    /// <summary>
+    /// <summary>Sets flag bits in the supplied header according to which properties of the weenie are defined or non‑zero.
     /// <code>Offset: 0x005AD8D0
     /// void __thiscall PublicWeenieDesc::set_pack_header(PublicWeenieDesc*,unsigned int*)</code>
     /// </summary>
+    /// <param name="header">A pointer to an unsigned integer that receives ORed flag values indicating present attributes.</param>
     public void set_pack_header(uint* header) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PublicWeenieDesc, uint*, void>)0x005AD8D0)(ref this, header);
 
-    /// <summary>
+    /// <summary>Destroys a PublicWeenieDesc instance, releasing owned resources such as the associated RestrictionDB and string buffers, then invokes its base WeenieDesc destructor.
     /// <code>Offset: 0x005ADA90
     /// void __thiscall PublicWeenieDesc::~PublicWeenieDesc(PublicWeenieDesc*)</code>
     /// </summary>
+    /// <param name="this">Pointer to the object being destroyed.</param>
     public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PublicWeenieDesc, void>)0x005ADA90)(ref this);
 
-    /// <summary>
+    /// <summary>Reinitializes a PublicWeenieDesc instance, resetting all member fields—including names, IDs, capacities, flags, and any allocated resources—to their default states.
     /// <code>Offset: 0x005ADD20
     /// void __thiscall PublicWeenieDesc::Reset(PublicWeenieDesc*)</code>
     /// </summary>
     public void Reset() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PublicWeenieDesc, void>)0x005ADD20)(ref this);
 
-    /// <summary>
+    /// <summary>Computes the size in bytes required to pack a PublicWeenieDesc object for serialization.
     /// <code>Offset: 0x005ADEB0
     /// unsigned int __thiscall PublicWeenieDesc::pack_size(PublicWeenieDesc*)</code>
     /// </summary>
+    /// <returns>The number of bytes necessary to represent the object when packed.</returns>
     public uint pack_size() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PublicWeenieDesc, uint>)0x005ADEB0)(ref this);
 
-    /// <summary>
+    /// <summary>Packs the PublicWeenieDesc into a binary buffer, writing fields according to internal flags and updating bitfields as required.
     /// <code>Offset: 0x005AE120
     /// unsigned int __thiscall PublicWeenieDesc::Pack(PublicWeenieDesc*,void**,unsigned int)</code>
     /// </summary>
+    /// <param name="addr">Pointer to a buffer pointer that receives the packed data; after packing it points past the last byte written.</param>
+    /// <param name="size">Maximum number of bytes available for packing.</param>
+    /// <returns>The size in bytes needed to serialize the object, which is also the number of bytes written when the supplied buffer has sufficient space. If the requested buffer is too small, no data is written but the returned value indicates the required size.</returns>
     public uint Pack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PublicWeenieDesc, void**, uint, uint>)0x005AE120)(ref this, addr, size);
 
-    /// <summary>
+    /// <summary>Initializes a new PublicWeenieDesc instance, establishing the base class, allocating empty name strings, nullifying the restriction database pointer, and resetting all fields to their default values.
     /// <code>Offset: 0x005AE4D0
     /// void __thiscall PublicWeenieDesc::PublicWeenieDesc(PublicWeenieDesc*)</code>
     /// </summary>
     public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PublicWeenieDesc, void>)0x005AE4D0)(ref this);
 
-    /// <summary>
+    /// <summary>Resets this PublicWeenieDesc and reads a serialized representation from the supplied buffer, populating all fields according to embedded flags and bitfields; returns success status.
     /// <code>Offset: 0x005AE520
     /// int __thiscall PublicWeenieDesc::UnPack(PublicWeenieDesc*,void**,unsigned int)</code>
     /// </summary>
+    /// <param name="addr">Pointer to the packed data buffer; it is advanced as each field is read.</param>
+    /// <param name="size">Size of the available data in bytes. If the size is insufficient for any expected field, unpacking fails.</param>
+    /// <returns>Non‑zero if all fields were successfully unpacked; zero otherwise.</returns>
     public int UnPack(void** addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.PublicWeenieDesc, void**, uint, int>)0x005AE520)(ref this, addr, size);
 }
 

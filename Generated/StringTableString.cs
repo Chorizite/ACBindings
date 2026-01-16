@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds a string table entry identified by an ID, containing the entry’s name, localized strings, associated variables, comments, and optionally a list of variable names for packing optimization.</summary>
 public unsafe struct StringTableString : System.IDisposable
 {
     // Members

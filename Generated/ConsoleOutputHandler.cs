@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Writes log entries directly to standard output, implementing Logger::ILoggingOutputHandler.</summary>
+/// <remarks>Severity levels and event codes are ignored; all messages are printed verbatim.</remarks>
 public unsafe struct ConsoleOutputHandler
 {
     // Base Classes
@@ -9,9 +12,9 @@ public unsafe struct ConsoleOutputHandler
     public unsafe struct ConsoleOutputHandler_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConsoleOutputHandler*, void> ConsoleOutputHandler_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConsoleOutputHandler*, ACBindings.Internal.Logger.LoggingSeverity, uint, sbyte*, ACBindings.Internal.Logger.LoggerWriteResult> Write; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ConsoleOutputHandler*, void> Flush; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ConsoleOutputHandler*, void> ConsoleOutputHandler_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ConsoleOutputHandler*, ACBindings.Internal.Logger.LoggingSeverity, uint, sbyte*, ACBindings.Internal.Logger.LoggerWriteResult> Write; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ConsoleOutputHandler*, void> Flush; // function pointer
 
         // Methods
     }

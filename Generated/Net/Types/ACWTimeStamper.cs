@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Wraps a WTimeStamper instance, initializing its state and assigning a custom virtual function table to provide specialized timestamp handling in the system.</summary>
 public unsafe struct ACWTimeStamper
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct ACWTimeStamper
     public unsafe struct ACWTimeStamper_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACWTimeStamper*, void> ACWTimeStamper_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ACWTimeStamper*, void> ACWTimeStamper_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACWTimeStamper*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACWTimeStamper*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ACWTimeStamper*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ACWTimeStamper*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ACWTimeStamper*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ACWTimeStamper*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -25,7 +27,7 @@ public unsafe struct ACWTimeStamper
 
     // Methods
 
-    /// <summary>
+    /// <summary>Initializes a new ACWTimeStamper instance by constructing its WTimeStamper base part and assigning the correct virtual function table.
     /// <code>Offset: 0x005BE470
     /// void __thiscall ACWTimeStamper::ACWTimeStamper(ACWTimeStamper*)</code>
     /// </summary>

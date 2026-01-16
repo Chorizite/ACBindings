@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides information for a graphical object, including its unique identifier, degradation mode, and spatial distance thresholds used to determine rendering level of detail.</summary>
 public unsafe struct GfxObjInfo
 {
     // Members

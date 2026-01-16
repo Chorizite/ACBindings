@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Central client object orchestrating networking, user preferences, UI rendering, database caching, and application state for the game client. Handles connection lifecycle, configuration, event processing, and resource management across subsystems.</summary>
 public unsafe struct Client : System.IDisposable
 {
     // Base Classes
@@ -10,48 +12,48 @@ public unsafe struct Client : System.IDisposable
     public ACBindings.Internal.LinkStatusHolder BaseClass_LinkStatusHolder; // ACBindings.Internal.LinkStatusHolder
 
     // Statics
-    public static ACBindings.Internal.Client* m_instance = (ACBindings.Internal.Client*)0x008379E4;
+    public static ACBindings.Internal.Client** m_instance = (ACBindings.Internal.Client**)0x008379E4;
 
     // Child Types
     public unsafe struct Client_vtbl
     {
         // Members
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, ACBindings.Internal.Client.Enum5> You_Must_Not_Have_Multiple_Implementations_Of_AddRef_In_A_Hierarchy; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, ACBindings.Internal.Client.Enum5> You_Must_Not_Have_Multiple_Implementations_Of_AddRef_In_A_Hierarchy; // function pointer
         public System.IntPtr Init;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, void> Cleanup; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, ACBindings.Internal.NetError*, ACBindings.Internal.NetError*> Connect; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, byte> Disconnect; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, byte> Run; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, byte> UseTime; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, ACBindings.Internal.accountID*> GetAccountName; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, ACBindings.Internal.accountID*, void> SetAccountName; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, void> Cleanup; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, ACBindings.Internal.NetError*, ACBindings.Internal.NetError*> Connect; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, byte> Disconnect; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, byte> Run; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, byte> UseTime; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, ACBindings.Internal.accountID*> GetAccountName; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, ACBindings.Internal.accountID*, void> SetAccountName; // function pointer
         public System.IntPtr GetHostName;
         public System.IntPtr SetHostName;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, int> GetPort; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, int, void> SetPortA; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, int> GetLanguage; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, int> GetPort; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, int, void> SetPortA; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, int> GetLanguage; // function pointer
         public System.IntPtr SetLanguage;
         public System.IntPtr GetWorldName;
         public System.IntPtr SetWorldName;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, ACBindings.Internal.CDDDStatusPlugin*, byte> AddDDDStatusPlugin; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, ACBindings.Internal.CDDDStatusPlugin*, byte> RemoveDDDStatusPlugin; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, uint> GetNameRuleLanguage; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, byte> InitPreferences; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, void> CleanupPreferences; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, byte> InitNet; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, int, int, byte, byte> InitDatabase; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, byte> InitAuth; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, ACBindings.Internal.CDDDStatusPlugin*, byte> AddDDDStatusPlugin; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, ACBindings.Internal.CDDDStatusPlugin*, byte> RemoveDDDStatusPlugin; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, uint> GetNameRuleLanguage; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, byte> InitPreferences; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, void> CleanupPreferences; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, byte> InitNet; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, int, int, byte, byte> InitDatabase; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, byte> InitAuth; // function pointer
         public System.IntPtr InitUI;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, byte> IsAlreadyRunning; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, void> CleanupUI; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, void> CleanupDatabase; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, void> CleanupNet; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, byte> IsAlreadyRunning; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, void> CleanupUI; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, void> CleanupDatabase; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Client*, void> CleanupNet; // function pointer
 
         // Methods
     }

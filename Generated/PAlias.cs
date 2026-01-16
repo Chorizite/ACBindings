@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Captures alias information including identifier, associated value(s), numeric representation, header index, symbol form, and descriptive comments.</summary>
+/// <remarks>Used within the system to map symbolic names to concrete values, facilitating code generation or debugging tasks that require detailed alias metadata.</remarks>
 public unsafe struct PAlias
 {
     // Members

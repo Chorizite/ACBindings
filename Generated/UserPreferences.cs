@@ -1,7 +1,14 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Manages user configuration data, loading from and saving to an INI file. Registers console commands for preference operations and interacts with a global registry of settings. Provides helper functions to query and modify individual preferences.</summary>
 public unsafe struct UserPreferences
 {
+    // Statics
+    public static byte* sm_bTools = (byte*)0x00818AFC;
+    public static byte* sm_bPrefsLoadedOK = (byte*)0x00818AFD;
+    public static ACBindings.Internal.PStringBase__sbyte* sm_strDefaultFile = (ACBindings.Internal.PStringBase__sbyte*)0x00838188;
+
     // Methods
 
     /// <summary>Registers a new user preference variable in the global registry, initializing the registry if necessary and marking the variable as active when found.
@@ -162,10 +169,13 @@ public unsafe struct UserPreferences
     /// <returns>Always returns true.</returns>
     public static byte ConsoleCommand_LoadPreferences() => ((delegate* unmanaged[Cdecl]<byte>)0x00438F50)();
 
-    /// <summary>
+    /// <summary>Sets up user preferences handling by registering console commands, configuring internal flags, resolving the default preferences file, and returning a status indicator.
     /// <code>Offset: 0x00438FE0
     /// char __cdecl UserPreferences::Initialize(volatile LONG*,volatile LONG**)</code>
     /// </summary>
+    /// <param name="a1">Pointer whose value is used to set an internal tool‑mode flag.</param>
+    /// <param name="a2">Reference to a reference‑counted object that may provide context for locating the default preference file.</param>
+    /// <returns>Non‑zero if setting the default file succeeded; zero otherwise.</returns>
     public static sbyte Initialize(int* a1, int** a2) => ((delegate* unmanaged[Cdecl]<int*, int**, sbyte>)0x00438FE0)(a1, a2);
 }
 

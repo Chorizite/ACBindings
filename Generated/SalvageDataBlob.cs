@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a salvageable item, storing its ID, name, material type, workmanship level, value, material flag, power rating, and quantity available for processing.</summary>
 public unsafe struct SalvageDataBlob
 {
     // Members

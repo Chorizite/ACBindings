@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Captures metadata for a memory checkpoint, storing pointers to the data block and its starting address, size of the region, allocation status, and formatting preference.</summary>
 public unsafe struct CheckpointData
 {
     // Members

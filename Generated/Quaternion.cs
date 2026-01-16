@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a quaternion with components w, x, y, and z, encoding 3‑D rotations without gimbal lock.</summary>
 public unsafe struct Quaternion
 {
     // Members

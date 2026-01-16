@@ -1,12 +1,14 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Handles the presentation and interaction logic for generic dialogs, including optional email prompts, button configuration, timeout handling, and state tracking of user actions.</summary>
 public unsafe struct SuperGenericDlg
 {
     // Child Types
     public unsafe struct SuperGenericDlg_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SuperGenericDlg*, int> Create; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.SuperGenericDlg*, int> Create; // function pointer
 
         // Methods
     }

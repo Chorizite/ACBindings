@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Maintains a singly‑linked list of blocked objects, each entry holding a reference, a timestamp, and a link to the next node.</summary>
 public unsafe struct TSBlockedEntry
 {
     // Members

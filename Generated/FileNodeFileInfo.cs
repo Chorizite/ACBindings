@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Maintains metadata for a file node, including its path, reference count, error and warning tallies, and compatibility version.</summary>
 public unsafe struct FileNodeFileInfo
 {
     // Base Classes
@@ -9,7 +11,7 @@ public unsafe struct FileNodeFileInfo
     public unsafe struct FileNodeFileInfo_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FileNodeFileInfo*, void> FileNodeFileInfo_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FileNodeFileInfo*, void> FileNodeFileInfo_dtor_0; // function pointer
 
         // Methods
     }

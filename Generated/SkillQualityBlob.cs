@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents the state and presentation of a skill’s quality, storing its current and saved values along with related UI components for progression and level display.</summary>
 public unsafe struct SkillQualityBlob
 {
     // Members

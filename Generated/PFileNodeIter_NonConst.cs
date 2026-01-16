@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Iterates through child nodes of a PFileNode with mutable access, tracking the current position and applying an optional string filter.</summary>
 public unsafe struct PFileNodeIter_NonConst
 {
     // Members

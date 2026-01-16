@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a property instance that associates a descriptor with its current value, enabling dynamic property handling within the system.</summary>
 public unsafe struct BaseProperty : System.IDisposable
 {
     // Members

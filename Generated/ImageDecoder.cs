@@ -1,13 +1,15 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Decodes raw image data from a source into a destination buffer, handling palette mapping, pixel format conversion, and exposing image dimensions and format information.</summary>
 public unsafe struct ImageDecoder
 {
     // Child Types
     public unsafe struct ImageDecoder_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ImageDecoder*, int*, int*, ACBindings.Internal.PixelFormatID*, int> ReadHeader; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ImageDecoder*, int> Decode; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ImageDecoder*, int*, int*, ACBindings.Internal.PixelFormatID*, int> ReadHeader; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ImageDecoder*, int> Decode; // function pointer
 
         // Methods
     }

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Handles core client initialization and termination tasks, such as resource release and numeric precision setup.</summary>
 public unsafe struct ClientMain
 {
     // Methods

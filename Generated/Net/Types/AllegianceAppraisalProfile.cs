@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates appraisal data for an allegiance, storing its name, primary and secondary titles, and follower count.</summary>
 public unsafe struct AllegianceAppraisalProfile
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct AllegianceAppraisalProfile
     public unsafe struct AllegianceAppraisalProfile_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AllegianceAppraisalProfile*, void> AllegianceAppraisalProfile_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AllegianceAppraisalProfile*, void> AllegianceAppraisalProfile_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AllegianceAppraisalProfile*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AllegianceAppraisalProfile*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AllegianceAppraisalProfile*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AllegianceAppraisalProfile*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AllegianceAppraisalProfile*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AllegianceAppraisalProfile*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Facilitates iteration over a character string by maintaining common iterator state and a reference to the underlying string data.</summary>
 public unsafe struct PStringBaseIter__sbyte
 {
     // Base Classes
@@ -70,6 +72,8 @@ public unsafe struct PStringBaseIter__sbyte
     // char __thiscall PStringBaseIter<char>::Replace(int,char**) (template type method)
 }
 
+
+/// <summary>Provides an iterator base for unsigned short string types, combining common iteration logic with a pointer to the underlying string data.</summary>
 public unsafe struct PStringBaseIter__ushort
 {
     // Base Classes

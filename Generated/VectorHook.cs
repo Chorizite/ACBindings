@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a physics object hook linking to a base entity, specifying a directed line from a start vector to an end vector within the legacy AC1 coordinate system.</summary>
 public unsafe struct VectorHook
 {
     // Base Classes
@@ -9,7 +11,7 @@ public unsafe struct VectorHook
     public unsafe struct VectorHook_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.VectorHook*, ACBindings.Internal.CPhysicsObj*, int> Execute; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.VectorHook*, ACBindings.Internal.CPhysicsObj*, int> Execute; // function pointer
 
         // Methods
     }

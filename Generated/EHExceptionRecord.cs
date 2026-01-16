@@ -1,8 +1,12 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Captures the details of an exception thrown by Windows Structured Exception Handling (SEH), including code, flags, nested record, address, and parameters.</summary>
 public unsafe struct EHExceptionRecord
 {
     // Child Types
+
+    /// <summary>Defines the parameters used by an EHExceptionRecord for exception handling, including a magic identifier, a pointer to the thrown object, and associated throw information.</summary>
     public unsafe struct EHParameters
     {
         // Members

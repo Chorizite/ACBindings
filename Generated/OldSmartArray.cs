@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Dynamic container that stores and manages an array of PhysicsScriptData pointers, automatically resizing as elements are inserted.</summary>
 public unsafe struct OldSmartArray___PhysicsScriptData_ptr
 {
     // Members

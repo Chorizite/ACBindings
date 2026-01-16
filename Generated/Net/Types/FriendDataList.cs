@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds a collection of FriendData entries, providing storage for a player’s friends within the system.</summary>
 public unsafe struct FriendDataList
 {
     // Base Classes
@@ -9,7 +11,7 @@ public unsafe struct FriendDataList
     public unsafe struct FriendDataList_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FriendDataList*, void> FriendDataList_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FriendDataList*, void> FriendDataList_dtor_0; // function pointer
 
         // Methods
     }

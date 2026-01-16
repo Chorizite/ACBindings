@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Entry in the alpha rendering queue, holding mesh buffer, associated surface and material, transformation matrix, and flags indicating a newly added object or clipmap override.</summary>
 public unsafe struct AlphaListEntry
 {
     // Members

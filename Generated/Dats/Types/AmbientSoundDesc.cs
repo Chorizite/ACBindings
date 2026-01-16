@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Defines parameters for ambient sound playback, including type, continuity flag, volume, probability and rate limits.</summary>
 public unsafe struct AmbientSoundDesc
 {
     // Members

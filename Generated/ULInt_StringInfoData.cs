@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a 64‑bit unsigned integer value within the string information system, extending StringInfoData to provide serialization and conversion to text.</summary>
 public unsafe struct ULInt_StringInfoData
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct ULInt_StringInfoData
     public unsafe struct ULInt_StringInfoData_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ULInt_StringInfoData*, void> ULInt_StringInfoData_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ULInt_StringInfoData*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ULInt_StringInfoData*, void> ULInt_StringInfoData_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ULInt_StringInfoData*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
         public System.IntPtr GetSubPrivateIDs;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ULInt_StringInfoData*, byte, byte> IsValid; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ULInt_StringInfoData*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ULInt_StringInfoData*, byte, byte> IsValid; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ULInt_StringInfoData*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
         public System.IntPtr ToString;
 
         // Methods

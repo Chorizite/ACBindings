@@ -1,21 +1,27 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates a growable byte buffer, handling allocation, optional freelist reuse, and ownership semantics while providing size tracking and controlled resizing capabilities.</summary>
 public unsafe struct GrowBuffer
 {
     // Base Classes
     public ACBindings.Internal.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.Internal.ReferenceCountTemplate
 
     // Statics
-    public static ACBindings.Internal.GrowBuffer.FreeGrowBuffer* m_FreeList = (ACBindings.Internal.GrowBuffer.FreeGrowBuffer*)0x00837758;
+    public static ACBindings.Internal.GrowBuffer.FreeGrowBuffer** m_FreeList = (ACBindings.Internal.GrowBuffer.FreeGrowBuffer**)0x00837758;
+    public static ACBindings.Internal.CSpinLock** m_pFreeListLock = (ACBindings.Internal.CSpinLock**)0x00837798;
+    public static uint* m_nFreeListEntries = (uint*)0x0083779C;
 
     // Child Types
     public unsafe struct GrowBuffer_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GrowBuffer*, void> GrowBuffer_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.GrowBuffer*, void> GrowBuffer_dtor_0; // function pointer
 
         // Methods
     }
+
+    /// <summary>Stores a pointer to dynamically allocated memory and its size for use by GrowBuffer, enabling flexible data growth.</summary>
     public unsafe struct FreeGrowBuffer
     {
         // Members
@@ -24,6 +30,9 @@ public unsafe struct GrowBuffer
 
         // Methods
     }
+
+    /// <summary>Specifies the allocator type employed by GrowBuffer’s exact growth mechanism, acting as a policy tag within template specializations.</summary>
+    /// <remarks>This empty struct provides a compile‑time identifier for selecting the appropriate allocation strategy used during buffer growth operations.</remarks>
     public unsafe struct GrowExact____l2__FreeListLockAllocator
     {
         // Methods

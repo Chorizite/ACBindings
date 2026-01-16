@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Stores surface source properties for rendering, including dimensions, image size, a pointer to raw pixel data, and the corresponding pixel format description.</summary>
 public unsafe struct RenderSurfaceSourceData
 {
     // Members

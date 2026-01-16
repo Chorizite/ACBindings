@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds a high‑precision timestamp value for runtime event tracking, with –1.0 representing an invalid or uninitialized state. Supports serialization, comparison, and conversion to/from file nodes within the property framework.</summary>
 public unsafe struct TimeStampPropertyValue
 {
     // Base Classes

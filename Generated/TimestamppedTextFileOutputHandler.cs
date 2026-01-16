@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Logs messages to a text file, prefixing each entry with the current timestamp and creating a fresh file when instantiated.</summary>
 public unsafe struct TimestamppedTextFileOutputHandler
 {
     // Base Classes
@@ -9,9 +11,9 @@ public unsafe struct TimestamppedTextFileOutputHandler
     public unsafe struct TimestamppedTextFileOutputHandler_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TimestamppedTextFileOutputHandler*, void> TimestamppedTextFileOutputHandler_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TimestamppedTextFileOutputHandler*, ACBindings.Internal.Logger.LoggingSeverity, uint, sbyte*, ACBindings.Internal.Logger.LoggerWriteResult> Write; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TimestamppedTextFileOutputHandler*, void> Flush; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TimestamppedTextFileOutputHandler*, void> TimestamppedTextFileOutputHandler_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TimestamppedTextFileOutputHandler*, ACBindings.Internal.Logger.LoggingSeverity, uint, sbyte*, ACBindings.Internal.Logger.LoggerWriteResult> Write; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TimestamppedTextFileOutputHandler*, void> Flush; // function pointer
         public System.IntPtr ChangeLogFile;
         public System.IntPtr GetLogFileName;
 

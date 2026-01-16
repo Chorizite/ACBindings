@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Maintains global profiler statistics and five category-specific frame metrics, enabling detailed performance analysis across various execution segments.</summary>
 public unsafe struct ProfilerStats
 {
     // Members

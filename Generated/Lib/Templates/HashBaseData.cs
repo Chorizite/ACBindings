@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// HashBaseData&lt;unsigned long&gt; models an element in a hash table, holding a unique identifier and a link to the next entry for collision resolution. The vtable pointer allows derived types to implement virtual functions.
+/// </summary>
 public unsafe struct HashBaseData__uint
 {
     // Members

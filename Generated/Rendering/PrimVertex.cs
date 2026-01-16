@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a vertex used in primitive rendering, holding an origin point and one set of texture coordinates.</summary>
 public unsafe struct PrimVertex
 {
     // Members

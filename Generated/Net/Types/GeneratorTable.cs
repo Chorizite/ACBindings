@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Maintains a collection of generator profiles and exposes pack/unpack operations through an embedded PackObj instance.</summary>
 public unsafe struct GeneratorTable
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct GeneratorTable
     public unsafe struct GeneratorTable_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GeneratorTable*, void> GeneratorTable_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.GeneratorTable*, void> GeneratorTable_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GeneratorTable*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GeneratorTable*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.GeneratorTable*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.GeneratorTable*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.GeneratorTable*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.GeneratorTable*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -28,7 +30,7 @@ public unsafe struct GeneratorTable
 
     // Methods
 
-    /// <summary>
+    /// <summary>Constructs a GeneratorTable instance by initializing its virtual table pointer and preparing an empty list of generator profiles.
     /// <code>Offset: 0x005D1300
     /// void __thiscall GeneratorTable::GeneratorTable(GeneratorTable*)</code>
     /// </summary>

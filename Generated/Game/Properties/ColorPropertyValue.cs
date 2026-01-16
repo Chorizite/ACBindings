@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Represents an RGBA color property value within the property system, handling storage, comparison, serialization, and conversion between file nodes and archive formats.
+/// </summary>
 public unsafe struct ColorPropertyValue
 {
     // Base Classes

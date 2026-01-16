@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Defines material properties used in rendering, including diffuse, ambient, specular and emissive color values, and a power factor.</summary>
 public unsafe struct _D3DMATERIAL9
 {
     // Members

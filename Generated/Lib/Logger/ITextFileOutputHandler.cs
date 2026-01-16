@@ -1,5 +1,7 @@
 namespace ACBindings.Internal.Logger;
 
+
+/// <summary>Extends generic logging functionality to write text-based logs into files, enabling persistent storage of log data.</summary>
 public unsafe struct ITextFileOutputHandler
 {
     // Base Classes
@@ -9,9 +11,9 @@ public unsafe struct ITextFileOutputHandler
     public unsafe struct ITextFileOutputHandler_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Logger.ITextFileOutputHandler*, void> Logger; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Logger.ITextFileOutputHandler*, ACBindings.Internal.Logger.LoggingSeverity, uint, sbyte*, ACBindings.Internal.Logger.LoggerWriteResult> Write; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Logger.ITextFileOutputHandler*, void> Flush; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Logger.ITextFileOutputHandler*, void> Logger; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Logger.ITextFileOutputHandler*, ACBindings.Internal.Logger.LoggingSeverity, uint, sbyte*, ACBindings.Internal.Logger.LoggerWriteResult> Write; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Logger.ITextFileOutputHandler*, void> Flush; // function pointer
         public System.IntPtr ChangeLogFile;
         public System.IntPtr GetLogFileName;
 

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides a 4-byte-aligned container holding a single PStringBase&lt;char&gt;, enabling efficient storage and access to character strings within the system.</summary>
 public unsafe struct PStringBaseArray__sbyte
 {
     // Base Classes

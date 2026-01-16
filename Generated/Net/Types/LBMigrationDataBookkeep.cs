@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Tracks migration state for a simulation region, including block identifiers, checkpoint timestamps, and event queues used during load‑balancing operations.</summary>
 public unsafe struct LBMigrationDataBookkeep
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct LBMigrationDataBookkeep
     public unsafe struct LBMigrationDataBookkeep_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LBMigrationDataBookkeep*, void> LBMigrationDataBookkeep_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.LBMigrationDataBookkeep*, void> LBMigrationDataBookkeep_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LBMigrationDataBookkeep*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LBMigrationDataBookkeep*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LBMigrationDataBookkeep*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.LBMigrationDataBookkeep*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.LBMigrationDataBookkeep*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.LBMigrationDataBookkeep*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }

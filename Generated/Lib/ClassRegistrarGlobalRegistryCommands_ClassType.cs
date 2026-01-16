@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Creates and registers a GlobalRegistryCommands instance in the global registry upon construction, enabling system-wide access to command functionality.</summary>
 public unsafe struct ClassRegistrarGlobalRegistryCommands_ClassType
 {
     // Generated Constructor

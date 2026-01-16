@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Associates a script ID with a numeric modifier used to adjust runtime behavior.</summary>
 public unsafe struct ScriptAndModData
 {
     // Members

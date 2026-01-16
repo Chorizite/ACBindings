@@ -1,5 +1,12 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Handles asynchronous prefetch operations within the database cache, tracking pending contexts and preventing duplicate requests.
+/// </summary>
+/// <remarks>
+/// Maintains a current prefetch context handle and a set of qualified data identifiers that have already been requested to ensure efficient cache loading and cleanup when fetches complete.
+/// </remarks>
 public unsafe struct DBCachePrefetchCallback
 {
     // Base Classes
@@ -9,8 +16,8 @@ public unsafe struct DBCachePrefetchCallback
     public unsafe struct DBCachePrefetchCallback_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBCachePrefetchCallback*, ACBindings.Internal.AsyncContext, ACBindings.Internal.AsyncResult, uint, void> OnContextFinished; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DBCachePrefetchCallback*, ACBindings.Internal.AsyncContext, ACBindings.Internal.QualifiedDataID, ACBindings.Internal.AsyncResult, uint, int, System.IntPtr, void> OnTopLevelRequestFinished; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBCachePrefetchCallback*, ACBindings.Internal.AsyncContext, ACBindings.Internal.AsyncResult, uint, void> OnContextFinished; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DBCachePrefetchCallback*, ACBindings.Internal.AsyncContext, ACBindings.Internal.QualifiedDataID, ACBindings.Internal.AsyncResult, uint, int, System.IntPtr, void> OnTopLevelRequestFinished; // function pointer
 
         // Methods
     }

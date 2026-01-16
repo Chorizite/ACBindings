@@ -1,31 +1,35 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Parses command‑line arguments, stores error text, tracks supported option prefixes, and maintains parsing state such as the argv array, argument count, and current position.</summary>
 public unsafe struct ArgumentParser
 {
     // Child Types
     public unsafe struct ArgumentParser_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, void> Usage; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, void> Usage; // function pointer
         public fixed byte gap4[12];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, sbyte**, int, byte, byte> ParseArgs; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, sbyte**, int, byte, byte> ParseArgs; // function pointer
         public fixed byte gap14[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, sbyte*, byte, byte> ParseCommandLine; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, ACBindings.Internal.ArgumentParser.CommandLineArgList*, void> DisplayUsage; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, sbyte*, byte, byte> ParseCommandLine; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, ACBindings.Internal.ArgumentParser.CommandLineArgList*, void> DisplayUsage; // function pointer
         public System.IntPtr SetErrorText;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, sbyte*, ACBindings.Internal.ArgumentParser.OutputTextType, void> AppendOutputText; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, sbyte*, int, int, ACBindings.Internal.ArgumentParser.OutputTextType, int> AppendAndWordWrap; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, sbyte*, ACBindings.Internal.ArgumentParser.OutputTextType, void> AppendOutputText; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, sbyte*, int, int, ACBindings.Internal.ArgumentParser.OutputTextType, int> AppendAndWordWrap; // function pointer
         public System.IntPtr AppendArgumentText;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, void> FinishOutputText; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, int> GetCharactersToWrapUsageTo; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, ACBindings.Internal.ArgumentParser.CommandLineArgList*, void> BuildCommandLineArgs; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, void> FinishOutputText; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, int> GetCharactersToWrapUsageTo; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, ACBindings.Internal.ArgumentParser.CommandLineArgList*, void> BuildCommandLineArgs; // function pointer
         public fixed byte gap3C[4];
         public System.IntPtr EvaluateCommandLineArg;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, byte> OnCommandLineEvaluationDone; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ArgumentParser*, byte> OnCommandLineEvaluationDone; // function pointer
         public System.IntPtr IsCommandLineArgument;
 
         // Methods
     }
+
+    /// <summary>Maintains a collection of parsed command‑line arguments with efficient lookup by long or short names. Stores the arguments in an array and indexes them via hash tables for rapid access during parsing and validation.</summary>
     public unsafe struct CommandLineArgList : System.IDisposable
     {
         // Base Classes

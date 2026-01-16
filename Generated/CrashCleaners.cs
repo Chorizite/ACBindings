@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Handles crash‑cleaner plugin lifecycle, registering instances via a template manager and ensuring each is invoked exactly once during shutdown.</summary>
 public unsafe struct CrashCleaners
 {
     // Base Classes

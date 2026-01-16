@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Manages asynchronous cache retrieval operations, tracking dependencies, pending requests, and buffered results within the database object cache.</summary>
 public unsafe struct CAsyncGetRequest : System.IDisposable
 {
     // Base Classes
@@ -9,10 +11,10 @@ public unsafe struct CAsyncGetRequest : System.IDisposable
     public unsafe struct CAsyncGetRequest_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncGetRequest*, void> CAsyncGetRequest_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncGetRequest*, byte> bAllDependanciesDone; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncGetRequest*, byte> ReadyToUnhash; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncGetRequest*, void> ReleaseDBObj; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncGetRequest*, void> CAsyncGetRequest_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncGetRequest*, byte> bAllDependanciesDone; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncGetRequest*, byte> ReadyToUnhash; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncGetRequest*, void> ReleaseDBObj; // function pointer
 
         // Methods
     }

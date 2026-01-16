@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides access to a Windows Cryptographic Service Provider context, storing the provider handle, container name, identity and exchange keys, along with reference counting and error tracking.</summary>
 public unsafe struct CryptoProvider
 {
     // Base Classes
@@ -9,12 +11,12 @@ public unsafe struct CryptoProvider
     public unsafe struct CryptoProvider_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoProvider*, void> CryptoProvider_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoProvider*, void> CryptoProvider_dtor_0; // function pointer
         public System.IntPtr Init;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoProvider*, byte> Cleanup; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoProvider*, uint, byte> VerifyCryptoAlgorithmSupported; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoProvider*, System.IntPtr, uint, byte> GenRandom; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoProvider*, uint, byte> AcquireProvider; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoProvider*, byte> Cleanup; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoProvider*, uint, byte> VerifyCryptoAlgorithmSupported; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoProvider*, System.IntPtr, uint, byte> GenRandom; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CryptoProvider*, uint, byte> AcquireProvider; // function pointer
 
         // Methods
     }

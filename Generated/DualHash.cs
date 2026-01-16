@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Stores paired UIOption_Slider pointers in a hash table, maintaining separate bucket arrays for keys and values to support fast lookup and management within the UI framework.</summary>
 public unsafe struct DualHash___UIOption_Slider_ptr___UIOption_Slider_ptr
 {
     // Members

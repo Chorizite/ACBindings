@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a network error, embedding a PackObj instance for serialization handling while storing an identifier for the localized message string and an integer referencing the relevant error table.</summary>
 public unsafe struct NetError
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct NetError
     public unsafe struct NetError_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NetError*, void> NetError_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.NetError*, void> NetError_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NetError*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NetError*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.NetError*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.NetError*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.NetError*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.NetError*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }

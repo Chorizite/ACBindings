@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a structured debug report used by the application to convey diagnostic information. It stores an optional pointer for custom user debugging data, a brief summary, an extended report text, and contextual metadata.</summary>
 public unsafe struct DbgReportObject
 {
     // Members

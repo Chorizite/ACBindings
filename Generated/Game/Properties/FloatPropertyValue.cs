@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Stores a single floating-point property value and supplies methods for copying, comparing, serializing to file nodes, and formatting as text.</summary>
 public unsafe struct FloatPropertyValue
 {
     // Base Classes

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides an efficient storage container for up to eight ArchiveVersionRow::VersionEntry objects, packing them directly into a 64‑byte buffer for low‑overhead access.</summary>
 public unsafe struct PrimitiveInplaceArray___ArchiveVersionRow_VersionEntry
 {
     // Base Classes

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Stores a dynamic collection of BaseProperty elements, offering manipulation, comparison, and serialization capabilities within the property framework.</summary>
 public unsafe struct ArrayPropertyValue
 {
     // Base Classes

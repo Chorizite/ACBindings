@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Represents a DDE advise notification structure containing a format identifier and internal flag bits used during data exchange callbacks.
+/// </summary>
 public unsafe struct DDEADVISE
 {
     // Members

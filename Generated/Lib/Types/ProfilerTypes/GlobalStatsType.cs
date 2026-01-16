@@ -1,5 +1,8 @@
 namespace ACBindings.Internal.ProfilerTypes;
 
+
+/// <summary>Aggregates runtime statistics for memory allocation and resource usage across graphics, audio, UI, and scene components, providing a consolidated view of system performance.</summary>
+/// <remarks>Fields represent amounts of video memory allocated for textures, buffers, surfaces, as well as CPU-side memory allocations for fonts, audio data, and other engine resources. The struct is used by the profiling subsystem to expose global metrics for diagnostics and optimization.</remarks>
 public unsafe struct GlobalStatsType
 {
     // Members

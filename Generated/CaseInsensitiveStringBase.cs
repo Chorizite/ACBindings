@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates a PStringBase&lt;char&gt; instance used to represent strings processed case‑insensitively.</summary>
 public unsafe struct CaseInsensitiveStringBase___PStringBase__sbyte
 {
     // Base Classes

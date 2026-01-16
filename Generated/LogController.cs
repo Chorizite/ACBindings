@@ -1,8 +1,12 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Central controller for the logging subsystem that tracks category handlers, manages global severity states, and routes log messages to file, console, or ODS outputs.</summary>
 public unsafe struct LogController : System.IDisposable
 {
     // Child Types
+
+    /// <summary>Handles individual logging categories within LogController, managing enabled state, attached output handlers, and context identifiers for log routing.</summary>
     public unsafe struct CategoryHandler
     {
         // Base Classes

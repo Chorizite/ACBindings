@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Implements Logger::ILoggingOutputHandler, forwarding logged events to the debugger’s output window when a debugger is present.</summary>
 public unsafe struct OutputDebugStringOutputHandler
 {
     // Base Classes
@@ -9,9 +11,9 @@ public unsafe struct OutputDebugStringOutputHandler
     public unsafe struct OutputDebugStringOutputHandler_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OutputDebugStringOutputHandler*, void> OutputDebugStringOutputHandler_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OutputDebugStringOutputHandler*, ACBindings.Internal.Logger.LoggingSeverity, uint, sbyte*, ACBindings.Internal.Logger.LoggerWriteResult> Write; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OutputDebugStringOutputHandler*, void> Flush; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.OutputDebugStringOutputHandler*, void> OutputDebugStringOutputHandler_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.OutputDebugStringOutputHandler*, ACBindings.Internal.Logger.LoggingSeverity, uint, sbyte*, ACBindings.Internal.Logger.LoggerWriteResult> Write; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.OutputDebugStringOutputHandler*, void> Flush; // function pointer
 
         // Methods
     }

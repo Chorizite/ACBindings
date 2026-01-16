@@ -1,15 +1,21 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents an archive's version data, storing a fixed-size array of version entries and exposing functionality through a virtual table.</summary>
 public unsafe struct ArchiveVersionRow
 {
     // Child Types
+
+    /// <summary>Defines the virtual function table for ArchiveVersionRow, exposing a method to obtain the version associated with a given token.</summary>
     public unsafe struct ArchiveVersionRow_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ArchiveVersionRow*, uint, uint> GetVersionByToken; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ArchiveVersionRow*, uint, uint> GetVersionByToken; // function pointer
 
         // Methods
     }
+
+    /// <summary>Represents an archive version entry containing a token version and its corresponding incremented version number. Used to track schema changes and ensure backward compatibility during data loading.</summary>
     public unsafe struct VersionEntry
     {
         // Members

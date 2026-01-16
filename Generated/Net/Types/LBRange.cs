@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a range of landblock identifiers, tracking load status and pending operations within the game world.</summary>
+/// <remarks>lowID and highID define inclusive bounds; srvID links to a server instance. Flags indicate deletion pending, frozen state, and whether to request non‑landblocks. Counters record how many blocks have been loaded, including those with unique objects, and track loading in unpopulated areas.</remarks>
 public unsafe struct LBRange
 {
     // Base Classes

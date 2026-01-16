@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides human‑readable information for HRESULT codes, including symbolic name and textual description, facilitating debugging and logging.</summary>
 public unsafe struct HResultDebugData
 {
     // Members

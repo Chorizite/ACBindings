@@ -1,19 +1,25 @@
 namespace ACBindings.Internal.Turbine;
 
+
+/// <summary>Turbine::Debug encapsulates the debugging subsystem state and behavior for the Turbine engine, managing debug flags, exception handling, logging initialization, and crash cleanup routines.</summary>
 public unsafe struct Debug
 {
     // Statics
     public static uint* DebugFlags = (uint*)0x00818338;
-    public static ACBindings.Internal.Turbine.Debug* s_pDebug = (ACBindings.Internal.Turbine.Debug*)0x00818550;
+    public static ACBindings.Internal.Turbine.Debug** s_pDebug = (ACBindings.Internal.Turbine.Debug**)0x00818550;
 
     // Child Types
+
+    /// <summary>Holds function pointers defining Turbine::Debug’s virtual interface, including initialization support for the debug subsystem.</summary>
     public unsafe struct Debug_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Turbine.Debug*, byte> InitDebug; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Turbine.Debug*, byte> InitDebug; // function pointer
 
         // Methods
     }
+
+    /// <summary>Encapsulates information about a failed boolean expression in debug builds, including the source file, condition text, line number, and optional flags for formatting or handling.</summary>
     public unsafe struct AssertIfFalseFmt
     {
         // Members
@@ -33,6 +39,8 @@ public unsafe struct Debug
         AssertionLogOnly = 0x4,
         AssertionIsFatal = 0x8
     }
+
+    /// <summary>Encapsulates information needed to report an assert failure, including the result code, source location and diagnostic flags.</summary>
     public unsafe struct AssertOnFailureFmtHelper
     {
         // Members

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a heading angle expressed in degrees, used for directional calculations.</summary>
 public unsafe struct Heading
 {
     // Child Types

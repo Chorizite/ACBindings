@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Gradually changes a physics object’s translucency from a starting to an ending value over a defined time period.</summary>
 public unsafe struct TransparentHook
 {
     // Base Classes
@@ -9,13 +11,13 @@ public unsafe struct TransparentHook
     public unsafe struct TransparentHook_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, void> TransparentHook_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, ACBindings.Internal.CPhysicsObj*, void> Execute; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, int> GetType; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, uint> pack_size; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, void> TransparentHook_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, ACBindings.Internal.CPhysicsObj*, void> Execute; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, int> GetType; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, ACBindings.Internal.QualifiedDataIDArray*, void> GetSubDataIDs; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, uint> pack_size; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TransparentHook*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -27,16 +29,19 @@ public unsafe struct TransparentHook
 
     // Methods
 
-    /// <summary>
+    /// <summary>Transitions the given physics object's translucency from a starting value to an ending value over the specified duration.
     /// <code>Offset: 0x00527830
     /// void __thiscall TransparentHook::Execute(TransparentHook*,CPhysicsObj*)</code>
     /// </summary>
+    /// <param name="this">The TransparentHook instance specifying start, end, and time parameters for the transition.</param>
+    /// <param name="object">The CPhysicsObj whose translucency is adjusted.</param>
     public void Execute(ACBindings.Internal.CPhysicsObj* object_) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TransparentHook, ACBindings.Internal.CPhysicsObj*, void>)0x00527830)(ref this, object_);
 
-    /// <summary>
+    /// <summary>Gets the type identifier of a TransparentHook instance.
     /// <code>Offset: 0x00683760
     /// int __thiscall TransparentHook::GetType(TransparentHook*)</code>
     /// </summary>
+    /// <returns>An integer constant that represents the hook's type, currently 20.</returns>
     public int GetType() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TransparentHook, int>)0x00683760)(ref this);
 }
 

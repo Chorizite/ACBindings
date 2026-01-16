@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Tracks a network link’s state, including heartbeat timing, packet‑loss estimation, connection progress, and final error details.
+/// </summary>
 public unsafe struct LinkStatusHolder
 {
     // Base Classes
@@ -9,10 +13,10 @@ public unsafe struct LinkStatusHolder
     public unsafe struct LinkStatusHolder_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LinkStatusHolder*, void> LinkStatusHolder_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LinkStatusHolder*, ACBindings.Internal.CPluginManager*, void> OnPluggedIn; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LinkStatusHolder*, ACBindings.Internal.CLinkStatusAverages*, void> OnHeartbeat; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LinkStatusHolder*, ACBindings.Internal.NetStatus, int, int, void> OnNetStatusChange; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.LinkStatusHolder*, void> LinkStatusHolder_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.LinkStatusHolder*, ACBindings.Internal.CPluginManager*, void> OnPluggedIn; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.LinkStatusHolder*, ACBindings.Internal.CLinkStatusAverages*, void> OnHeartbeat; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.LinkStatusHolder*, ACBindings.Internal.NetStatus, int, int, void> OnNetStatusChange; // function pointer
 
         // Methods
     }

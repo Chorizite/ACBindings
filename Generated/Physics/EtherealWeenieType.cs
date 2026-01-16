@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Specifies which weenie types are ethereal versus solid, maintaining a bitmask of all relevant type identifiers and separate arrays for each category.</summary>
 public unsafe struct EtherealWeenieType
 {
     // Members

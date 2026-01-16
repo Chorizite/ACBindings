@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Contains identifiers for character appearance components such as base palette, head object, facial textures, and color palettes.</summary>
+/// <remarks>All members are initialized to an invalid data ID, indicating the absence of a defined appearance until explicitly set.</remarks>
 public unsafe struct CharAppearanceData
 {
     // Members
@@ -22,7 +25,7 @@ public unsafe struct CharAppearanceData
 
     // Methods
 
-    /// <summary>
+    /// <summary>Initializes character appearance data by setting all palette and texture identifiers to an invalid value.
     /// <code>Offset: 0x004DEDD0
     /// void __thiscall CharAppearanceData::CharAppearanceData(CharAppearanceData*)</code>
     /// </summary>

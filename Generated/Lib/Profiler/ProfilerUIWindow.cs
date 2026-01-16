@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Defines a UI window used by the profiler engine, storing the native window handle, auto-positioning flag, category type, and related quick window reference.</summary>
 public unsafe struct ProfilerUIWindow
 {
     // Members

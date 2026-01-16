@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents an aligned collection of LBRange objects stored within a PackableNIList, enabling efficient packing and quick access to range data.</summary>
 public unsafe struct LBRanges
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct LBRanges
     public unsafe struct LBRanges_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LBRanges*, void> LBRanges_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.LBRanges*, void> LBRanges_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LBRanges*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LBRanges*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.LBRanges*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.LBRanges*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.LBRanges*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.LBRanges*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }

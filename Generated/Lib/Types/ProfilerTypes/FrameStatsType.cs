@@ -1,5 +1,7 @@
 namespace ACBindings.Internal.ProfilerTypes;
 
+
+/// <summary>Collects per-frame rendering metrics such as geometry counts, texture uploads, memory usage, audio activity, and UI processing, enabling detailed performance analysis of a 32-bit Windows application.</summary>
 public unsafe struct FrameStatsType
 {
     // Members

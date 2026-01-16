@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides a high‑precision timer based on the system query performance counter, enabling accurate measurement of elapsed time.</summary>
 public unsafe struct PreciseTimerInstance
 {
     // Base Classes
@@ -9,7 +11,7 @@ public unsafe struct PreciseTimerInstance
     public unsafe struct PreciseTimerInstance_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.PreciseTimerInstance*, void> PreciseTimerInstance_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.PreciseTimerInstance*, void> PreciseTimerInstance_dtor_0; // function pointer
 
         // Methods
     }

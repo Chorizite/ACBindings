@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Specifies the rectangular area occupied by a UI element in screen coordinates, along with its visibility status.</summary>
 public unsafe struct UILocationData
 {
     // Members
@@ -16,7 +18,7 @@ public unsafe struct UILocationData
 
     // Methods
 
-    /// <summary>
+    /// <summary>Initializes a UILocationData instance with default coordinates set to –3.0 and visibility enabled.
     /// <code>Offset: 0x006791D0
     /// void __thiscall UILocationData::UILocationData(UILocationData*)</code>
     /// </summary>

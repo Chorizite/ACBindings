@@ -1,5 +1,7 @@
 namespace ACBindings.Internal.AC1Legacy;
 
+
+/// <summary>Provides a hash-based container that associates 32‑bit identifiers with double precision values, enabling efficient storage and retrieval in the legacy system.</summary>
 public unsafe struct HashTable__uint__double
 {
     // Members

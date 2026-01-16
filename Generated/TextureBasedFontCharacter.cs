@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents the metrics and texture coordinates of an individual character in a texture‑based font system, including its glyph rectangle within the atlas and positioning offsets.</summary>
 public unsafe struct TextureBasedFontCharacter
 {
     // Members

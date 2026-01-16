@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Specifies configuration parameters for a color blitting operation, including the blit mode, optional mask buffer settings, and target width and height. These arguments guide how pixel data is copied or transformed during rendering.</summary>
 public unsafe struct ColorArgs
 {
     // Members

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds a 32‑bit bitfield used to represent a set of flags or enumerated options. Provides functionality for parsing from file nodes, comparing values, serializing back, and manipulating individual bits.</summary>
 public unsafe struct Bitfield32PropertyValue
 {
     // Base Classes

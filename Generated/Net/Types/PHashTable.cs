@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides an aligned hash table mapping unsigned long keys to unsigned long values, incorporating stream packing capabilities for efficient serialization and memory access.</summary>
 public unsafe struct PHashTable__uint__uint
 {
     // Base Classes
@@ -9,6 +11,8 @@ public unsafe struct PHashTable__uint__uint
     // Methods
 }
 
+
+/// <summary>PHashTable holds a hash table mapping unsigned long keys to unsigned char values, leveraging serialization capabilities through its StreamPackObj base class.</summary>
 public unsafe struct PHashTable__uint__byte
 {
     // Base Classes

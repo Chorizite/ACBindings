@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides a mapping from quest identifiers to their corresponding quest profiles, facilitating efficient lookup and packable serialization through an aligned hash table.</summary>
+/// <remarks>The struct contains a PackObj baseclass_0 for packing operations and a packed hash table that stores QuestProfile objects keyed by case‑insensitive strings.</remarks>
 public unsafe struct QuestTable
 {
     // Base Classes
@@ -9,11 +12,11 @@ public unsafe struct QuestTable
     public unsafe struct QuestTable_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestTable*, void> QuestTable_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestTable*, void> QuestTable_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestTable*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestTable*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestTable*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestTable*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestTable*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestTable*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }

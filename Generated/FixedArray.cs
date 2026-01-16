@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a fixed-size array of PStringBase&lt;char&gt; elements, storing raw data pointer and element count for efficient access.</summary>
 public unsafe struct FixedArray___PStringBase__sbyte
 {
     // Members
@@ -17,6 +19,9 @@ public unsafe struct FixedArray___PStringBase__sbyte
     // LONG __thiscall FixedArray<PStringBase<char>>::Create(PStringBase<char>**,int) (template type method)
 }
 
+
+/// <summary>Encapsulates an array of unsigned integers, storing a raw pointer and the number of elements.</summary>
+/// <remarks>m_data points to allocated storage; m_num records current length.</remarks>
 public unsafe struct FixedArray__uint
 {
     // Members

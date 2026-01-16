@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a property holding an integer value within the application’s configuration system, enabling storage, comparison, serialization, and string conversion of that value.</summary>
 public unsafe struct IntegerPropertyValue
 {
     // Base Classes

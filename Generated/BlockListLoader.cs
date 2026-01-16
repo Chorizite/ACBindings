@@ -1,14 +1,17 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Manages block entries by storing them in an ordered list and providing hash‑based lookup, enabling efficient loading and retrieval of block data.</summary>
+/// <remarks>Includes a virtual function table pointer to support polymorphism.</remarks>
 public unsafe struct BlockListLoader
 {
     // Child Types
     public unsafe struct BlockListLoader_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.BlockListLoader*, void> BlockListLoader_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.BlockListLoader*, sbyte*, int> Reload; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.BlockListLoader*, uint, int> fEntryInBlockList; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.BlockListLoader*, void> BlockListLoader_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.BlockListLoader*, sbyte*, int> Reload; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.BlockListLoader*, uint, int> fEntryInBlockList; // function pointer
 
         // Methods
     }

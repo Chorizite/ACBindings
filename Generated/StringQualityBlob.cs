@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Tracks the quality state of a string property by storing its persisted value, the currently edited value, and linking to the UI element that displays or edits the text.</summary>
 public unsafe struct StringQualityBlob
 {
     // Members

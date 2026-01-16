@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Assigns a name stem, creates a named mutex to guarantee a unique instance index, and stores that index internally.</summary>
 public unsafe struct InstanceDiviner
 {
     // Members

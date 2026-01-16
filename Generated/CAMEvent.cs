@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates a Windows event handle for synchronization purposes, automatically closing it when the object is destroyed.</summary>
 public unsafe struct CAMEvent : System.IDisposable
 {
     // Members
@@ -12,7 +14,7 @@ public unsafe struct CAMEvent : System.IDisposable
 
     // Methods
 
-    /// <summary>
+    /// <summary>Destroys a CAMEvent instance by closing its associated event handle when it is valid.
     /// <code>Offset: 0x006C1FB0
     /// void __thiscall CAMEvent::~CAMEvent(CAMEvent*)</code>
     /// </summary>

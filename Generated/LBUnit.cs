@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a land‑block unit within the server, tracking identifiers, load statistics, and status information for synchronization and checkpointing.</summary>
 public unsafe struct LBUnit
 {
     // Members

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides a hash table that maps PStringBase&lt;char&gt; keys to unsigned long values, leveraging an IntrusiveHashTable for efficient storage and lookup.</summary>
 public unsafe struct HashTable___PStringBase__sbyte__uint
 {
     // Members
@@ -9,6 +11,8 @@ public unsafe struct HashTable___PStringBase__sbyte__uint
     // Methods
 }
 
+
+/// <summary>Stores key-value pairs with case-insensitive string keys and long values, leveraging an intrusive hash table for efficient lookup.</summary>
 public unsafe struct HashTable___CaseInsensitiveStringBase___PStringBase__ushort__int
 {
     // Members
@@ -18,6 +22,8 @@ public unsafe struct HashTable___CaseInsensitiveStringBase___PStringBase__ushort
     // Methods
 }
 
+
+/// <summary>Maps unsigned short keys to long values using an intrusive hash table implementation, enabling fast lookups and minimal allocation overhead.</summary>
 public unsafe struct HashTable__ushort__int
 {
     // Members
@@ -27,6 +33,8 @@ public unsafe struct HashTable__ushort__int
     // Methods
 }
 
+
+/// <summary>Manages a collection of StringInfoData pointers keyed by unsigned long values, leveraging an intrusive hash table for efficient storage and lookup.</summary>
 public unsafe struct HashTable__uint___StringInfoData_ptr
 {
     // Members
@@ -36,6 +44,8 @@ public unsafe struct HashTable__uint___StringInfoData_ptr
     // Methods
 }
 
+
+/// <summary>Associates unique data identifiers of type IDClass&lt;_tagDataID,32,0&gt; with DBObj pointers, using an intrusive hash table to enable rapid lookup and efficient storage within the system.</summary>
 public unsafe struct HashTable___IDClass____tagDataID___DBObj_ptr
 {
     // Members
@@ -45,6 +55,8 @@ public unsafe struct HashTable___IDClass____tagDataID___DBObj_ptr
     // Methods
 }
 
+
+/// <summary>Provides a hash table mapping unsigned long keys to floating‑point values, leveraging an intrusive hash implementation for efficient memory usage and fast lookups.</summary>
 public unsafe struct HashTable__uint__float
 {
     // Members
@@ -54,6 +66,8 @@ public unsafe struct HashTable__uint__float
     // Methods
 }
 
+
+/// <summary>Maps unsigned long identifiers to ArchiveVersionRow instances, enabling efficient retrieval and storage within the archive subsystem.</summary>
 public unsafe struct HashTable__uint___ArchiveVersionRow
 {
     // Members
@@ -63,6 +77,8 @@ public unsafe struct HashTable__uint___ArchiveVersionRow
     // Methods
 }
 
+
+/// <summary>Provides a hash table mapping case‑insensitive string keys to unsigned long values, enabling fast name‑based lookup and efficient identifier management within the application.</summary>
 public unsafe struct HashTable___CaseInsensitiveStringBase___PStringBase__sbyte__uint
 {
     // Members
@@ -72,6 +88,8 @@ public unsafe struct HashTable___CaseInsensitiveStringBase___PStringBase__sbyte_
     // Methods
 }
 
+
+/// <summary>Offers a hash map keyed by unsigned long values, storing case‑insensitive string data via an intrusive table for fast lookup.</summary>
 public unsafe struct HashTable__uint___CaseInsensitiveStringBase___PStringBase__sbyte
 {
     // Members
@@ -81,6 +99,8 @@ public unsafe struct HashTable__uint___CaseInsensitiveStringBase___PStringBase__
     // Methods
 }
 
+
+/// <summary>Maps unsigned long identifiers to IDClass&lt;_tagDataID,32,0&gt; instances via an intrusive hash table, enabling efficient storage and retrieval of data ID objects within the system.</summary>
 public unsafe struct HashTable__uint___IDClass____tagDataID
 {
     // Members
@@ -90,6 +110,8 @@ public unsafe struct HashTable__uint___IDClass____tagDataID
     // Methods
 }
 
+
+/// <summary>Provides a hash table mapping unsigned long keys to PStringBase&lt;char&gt; values, leveraging an intrusive hash implementation for efficient storage and lookup.</summary>
 public unsafe struct HashTable__uint___PStringBase__sbyte
 {
     // Members
@@ -99,6 +121,8 @@ public unsafe struct HashTable__uint___PStringBase__sbyte
     // Methods
 }
 
+
+/// <summary>Provides a hash table mapping 32‑bit identifier keys of type IDClass&lt;_tagDataID,32,0&gt; to unsigned long values, using an intrusive storage backend for efficient data management.</summary>
 public unsafe struct HashTable___IDClass____tagDataID__uint
 {
     // Members
@@ -108,6 +132,8 @@ public unsafe struct HashTable___IDClass____tagDataID__uint
     // Methods
 }
 
+
+/// <summary>Stores property values indexed by unsigned long keys within an intrusive hash table, enabling efficient lookup and memory management for system properties.</summary>
 public unsafe struct HashTable__uint___IntrusiveSmartPointer___BasePropertyValue
 {
     // Members
@@ -117,6 +143,8 @@ public unsafe struct HashTable__uint___IntrusiveSmartPointer___BasePropertyValue
     // Methods
 }
 
+
+/// <summary>Associates unsigned long identifiers with BasePropertyDesc* objects, enabling efficient retrieval of property descriptors in the system.</summary>
 public unsafe struct HashTable__uint___BasePropertyDesc_ptr
 {
     // Members
@@ -126,6 +154,8 @@ public unsafe struct HashTable__uint___BasePropertyDesc_ptr
     // Methods
 }
 
+
+/// <summary>Represents a specialized hash table mapping unsigned long identifiers to AvailableProperty entries, managing the collection via an intrusive storage structure for efficient lookups.</summary>
 public unsafe struct HashTable__uint___AvailableProperty
 {
     // Members
@@ -135,6 +165,8 @@ public unsafe struct HashTable__uint___AvailableProperty
     // Methods
 }
 
+
+/// <summary>Represents a hash map from unsigned long keys to StringTableString pointers, using an intrusive hash table for efficient lookup and memory management.</summary>
 public unsafe struct HashTable__uint___StringTableString_ptr
 {
     // Members
@@ -144,6 +176,8 @@ public unsafe struct HashTable__uint___StringTableString_ptr
     // Methods
 }
 
+
+/// <summary>Maps unsigned long keys to PStringBase&lt;unsigned short&gt; values using an intrusive hash table for fast lookup and efficient memory usage.</summary>
 public unsafe struct HashTable__uint___PStringBase__ushort
 {
     // Members
@@ -153,6 +187,8 @@ public unsafe struct HashTable__uint___PStringBase__ushort
     // Methods
 }
 
+
+/// <summary>Specialized hash table mapping unsigned long keys to lists of PStringBase&lt;char&gt;, enabling efficient lookup and organization of string collections.</summary>
 public unsafe struct HashTable__uint___List___PStringBase__sbyte
 {
     // Members
@@ -162,6 +198,8 @@ public unsafe struct HashTable__uint___List___PStringBase__sbyte
     // Methods
 }
 
+
+/// <summary>Provides an intrusive hash table keyed by unsigned long, storing HashTableData pointers for efficient lookup and manipulation of key/value associations.</summary>
 public unsafe struct HashTable__uint__uint
 {
     // Members
@@ -171,6 +209,8 @@ public unsafe struct HashTable__uint__uint
     // Methods
 }
 
+
+/// <summary>Associates 64‑bit identifiers with arrays of QualityChangeHandler objects, enabling efficient storage, retrieval, and management of handler collections within the system.</summary>
 public unsafe struct HashTable__ulong___SmartArray___QualityChangeHandler_ptr_ptr
 {
     // Members
@@ -180,6 +220,8 @@ public unsafe struct HashTable__ulong___SmartArray___QualityChangeHandler_ptr_pt
     // Methods
 }
 
+
+/// <summary>Maps unsigned long keys to double values using an intrusive hash table for efficient lookups and minimal memory overhead.</summary>
 public unsafe struct HashTable__uint__double
 {
     // Members
@@ -189,6 +231,8 @@ public unsafe struct HashTable__uint__double
     // Methods
 }
 
+
+/// <summary>Provides an aligned hash table mapping unsigned long keys to BaseProperty objects via intrusive storage, enabling efficient lookup and memory management.</summary>
 public unsafe struct HashTable__uint___BaseProperty
 {
     // Members
@@ -198,6 +242,8 @@ public unsafe struct HashTable__uint___BaseProperty
     // Methods
 }
 
+
+/// <summary>Manages a mapping from unsigned long keys to PhysicsScriptTableData pointers using an intrusive hash table implementation.</summary>
 public unsafe struct HashTable__uint___PhysicsScriptTableData_ptr
 {
     // Members
@@ -207,6 +253,8 @@ public unsafe struct HashTable__uint___PhysicsScriptTableData_ptr
     // Methods
 }
 
+
+/// <summary>Provides a hash table that maps unsigned long keys to ElementDesc instances, utilizing an intrusive hash implementation for efficient storage and rapid lookup operations.</summary>
 public unsafe struct HashTable__uint___ElementDesc
 {
     // Members
@@ -216,6 +264,8 @@ public unsafe struct HashTable__uint___ElementDesc
     // Methods
 }
 
+
+/// <summary>Fast associative container mapping unsigned long keys to StateDesc instances, implemented via an intrusive hash table for efficient lookup and memory usage.</summary>
 public unsafe struct HashTable__uint___StateDesc
 {
     // Members
@@ -225,6 +275,8 @@ public unsafe struct HashTable__uint___StateDesc
     // Methods
 }
 
+
+/// <summary>Provides a hash‑table‑based lookup for Sex_CG instances keyed by unsigned long identifiers, utilizing an intrusive hash table internally.</summary>
 public unsafe struct HashTable__uint___Sex_CG
 {
     // Members
@@ -234,6 +286,8 @@ public unsafe struct HashTable__uint___Sex_CG
     // Methods
 }
 
+
+/// <summary>Provides a lightweight associative container mapping 32‑bit unsigned integer keys to 8‑bit unsigned char values, implemented with an intrusive hash table for efficient memory usage and rapid lookups.</summary>
 public unsafe struct HashTable__uint__byte
 {
     // Members
@@ -243,6 +297,8 @@ public unsafe struct HashTable__uint__byte
     // Methods
 }
 
+
+/// <summary>Maps unsigned long keys to HeritageGroup_CG objects with efficient lookup, using an internal intrusive hash table implementation.</summary>
 public unsafe struct HashTable__uint___HeritageGroup_CG
 {
     // Members
@@ -252,6 +308,8 @@ public unsafe struct HashTable__uint___HeritageGroup_CG
     // Methods
 }
 
+
+/// <summary>Associates unsigned long identifiers with collections of DialogInfo instances, enabling fast lookup and management of dialog data within the application.</summary>
 public unsafe struct HashTable__uint___List___DialogInfo
 {
     // Members
@@ -270,6 +328,8 @@ public unsafe struct HashTable__uint__void_ptr
     // Methods
 }
 
+
+/// <summary>Maps unique data identifiers to internal hash tables that associate unsigned long indices with ElementDesc objects, enabling efficient retrieval of element descriptors for each data set.</summary>
 public unsafe struct HashTable___IDClass____tagDataID___HashTable__uint___ElementDesc
 {
     // Members
@@ -279,6 +339,8 @@ public unsafe struct HashTable___IDClass____tagDataID___HashTable__uint___Elemen
     // Methods
 }
 
+
+/// <summary>Stores DialogInfo objects keyed by an unsigned long identifier, using an intrusive hash table implementation for efficient lookup and memory management.</summary>
 public unsafe struct HashTable__uint___DialogInfo
 {
     // Members
@@ -288,6 +350,13 @@ public unsafe struct HashTable__uint___DialogInfo
     // Methods
 }
 
+
+/// <summary>
+/// Maps pixel format IDs to hash tables that link resource identifiers to image texture objects, serving as a fast lookup structure for textures in the rendering system.
+/// </summary>
+/// <remarks>
+/// Implemented with an intrusive hash table for efficient memory layout and iteration over entries.
+/// </remarks>
 public unsafe struct HashTable___PixelFormatID___HashTable__uint___ImgTex_ptr_ptr
 {
     // Members
@@ -297,6 +366,8 @@ public unsafe struct HashTable___PixelFormatID___HashTable__uint___ImgTex_ptr_pt
     // Methods
 }
 
+
+/// <summary>Provides a hash table that maps unsigned long identifiers to CEnvCell pointers, enabling fast lookup and management of environment cell objects within the system.</summary>
 public unsafe struct HashTable__uint___CEnvCell_ptr
 {
     // Members
@@ -306,6 +377,8 @@ public unsafe struct HashTable__uint___CEnvCell_ptr
     // Methods
 }
 
+
+/// <summary>Stores UIPreferenceItem pointers keyed by string identifiers, using an intrusive hash table for efficient lookup and memory management within the UI preferences system.</summary>
 public unsafe struct HashTable___PStringBase__sbyte___UIPreferenceItem_ptr
 {
     // Members
@@ -315,6 +388,8 @@ public unsafe struct HashTable___PStringBase__sbyte___UIPreferenceItem_ptr
     // Methods
 }
 
+
+/// <summary>Stores and manages a collection of DBOCache instances keyed by unsigned long identifiers, leveraging an intrusive hash table for efficient lookups.</summary>
 public unsafe struct HashTable__uint___DBOCache_ptr
 {
     // Members
@@ -324,6 +399,8 @@ public unsafe struct HashTable__uint___DBOCache_ptr
     // Methods
 }
 
+
+/// <summary>Maps unsigned long identifiers to DBTypeDef entries using an internal intrusive hash table, providing efficient lookup and storage for database type definitions.</summary>
 public unsafe struct HashTable__uint___DBTypeDef
 {
     // Members
@@ -333,6 +410,8 @@ public unsafe struct HashTable__uint___DBTypeDef
     // Methods
 }
 
+
+/// <summary>Maintains a hash table associating 64‑bit keys with ImgTex pointers, enabling efficient retrieval and management of image textures used by the application.</summary>
 public unsafe struct HashTable__ulong___ImgTex_ptr
 {
     // Members
@@ -342,6 +421,8 @@ public unsafe struct HashTable__ulong___ImgTex_ptr
     // Methods
 }
 
+
+/// <summary>Holds UIMessageData collections in smart arrays, keyed by unsigned long values, and utilizes an intrusive hash table for efficient lookup.</summary>
 public unsafe struct HashTable__uint___SmartArray___UIMessageData
 {
     // Members
@@ -351,6 +432,8 @@ public unsafe struct HashTable__uint___SmartArray___UIMessageData
     // Methods
 }
 
+
+/// <summary>Maps QualifiedDataID keys to CAsyncGetRequest pointers, providing fast lookup and organized management of pending asynchronous data requests.</summary>
 public unsafe struct HashTable___QualifiedDataID___CAsyncGetRequest_ptr
 {
     // Members
@@ -360,6 +443,8 @@ public unsafe struct HashTable___QualifiedDataID___CAsyncGetRequest_ptr
     // Methods
 }
 
+
+/// <summary>Maps AsyncContext keys to AsyncCache::CCallbackHandler pointers, enabling fast lookup and management of pending asynchronous callbacks through an intrusive hash table.</summary>
 public unsafe struct HashTable___AsyncContext___AsyncCache_CCallbackHandler_ptr
 {
     // Members

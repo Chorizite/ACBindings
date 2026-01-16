@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds an array of four preprocessor header strings stored as PStringBase&lt;char&gt; objects.</summary>
 public unsafe struct PreprocHeader
 {
     // Members

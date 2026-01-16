@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Handles logging output to a text file, managing file creation, size limits, timestamping, and write statistics within the application’s logging subsystem.</summary>
 public unsafe struct ManagedLogFileOutputHandler
 {
     // Base Classes
@@ -9,17 +11,19 @@ public unsafe struct ManagedLogFileOutputHandler
     public unsafe struct ManagedLogFileOutputHandler_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ManagedLogFileOutputHandler*, void> ManagedLogFileOutputHandler_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ManagedLogFileOutputHandler*, ACBindings.Internal.Logger.LoggingSeverity, uint, sbyte*, ACBindings.Internal.Logger.LoggerWriteResult> Write; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ManagedLogFileOutputHandler*, void> Flush; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ManagedLogFileOutputHandler*, void> ManagedLogFileOutputHandler_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ManagedLogFileOutputHandler*, ACBindings.Internal.Logger.LoggingSeverity, uint, sbyte*, ACBindings.Internal.Logger.LoggerWriteResult> Write; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ManagedLogFileOutputHandler*, void> Flush; // function pointer
         public System.IntPtr ChangeLogFile;
         public System.IntPtr GetLogFileName;
         public System.IntPtr GetLogRootName;
         public System.IntPtr ChangeDescription;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ManagedLogFileOutputHandler*, byte, void> UsePeriodicRealTimeEntries; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ManagedLogFileOutputHandler*, byte, void> UsePeriodicRealTimeEntries; // function pointer
 
         // Methods
     }
+
+    /// <summary>Wraps a reference‑counted character string for asynchronous log file output, providing the underlying storage accessed by ManagedLogFileOutputHandler.</summary>
     public unsafe struct AsyncIOString
     {
         // Base Classes

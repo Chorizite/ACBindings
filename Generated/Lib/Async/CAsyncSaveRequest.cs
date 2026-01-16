@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Asynchronous save request for a disk controller, encapsulating target file identifier, save flags, iteration counter, buffer pack, and associated disk controller pointer.</summary>
 public unsafe struct CAsyncSaveRequest
 {
     // Base Classes
@@ -9,10 +11,10 @@ public unsafe struct CAsyncSaveRequest
     public unsafe struct CAsyncSaveRequest_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncSaveRequest*, void> CAsyncSaveRequest_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncSaveRequest*, byte> bAllDependanciesDone; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncSaveRequest*, byte> ReadyToUnhash; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncSaveRequest*, void> ReleaseDBObj; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncSaveRequest*, void> CAsyncSaveRequest_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncSaveRequest*, byte> bAllDependanciesDone; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncSaveRequest*, byte> ReadyToUnhash; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAsyncSaveRequest*, void> ReleaseDBObj; // function pointer
 
         // Methods
     }

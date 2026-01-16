@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Boolean file node name used by the IFileNodeName interface, storing a true/false identifier for file nodes.</summary>
 public unsafe struct FileNodeName_Bool
 {
     // Base Classes
@@ -24,16 +26,20 @@ public unsafe struct FileNodeName_Bool
     /// <param name="io_archive">Archive used for serialization of the FileNodeName_Bool instance.</param>
     public void Serialize(ACBindings.Internal.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.FileNodeName_Bool, ACBindings.Internal.Archive*, void>)0x00424530)(ref this, io_archive);
 
-    /// <summary>
+    /// <summary>Parses the supplied string and stores the result as a boolean name field. Accepts case‑insensitive "TRUE" or "ONE" to set true; any other value sets false.
     /// <code>Offset: 0x0065BC10
     /// int __thiscall FileNodeName_Bool::FromPString(_BYTE*,const char**)</code>
     /// </summary>
+    /// <param name="a2">Pointer to a C-style string containing the value to parse.</param>
+    /// <returns>Integer status code (always 1) indicating that the operation succeeded.</returns>
     public int FromPString(sbyte** a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.FileNodeName_Bool, sbyte**, int>)0x0065BC10)(ref this, a2);
 
-    /// <summary>
+    /// <summary>Converts the boolean file node name to a PString by providing its character buffer and incrementing the reference count.
     /// <code>Offset: 0x0065BC60
     /// volatile LONG** __thiscall FileNodeName_Bool::ToPString(_BYTE*,volatile LONG**)</code>
     /// </summary>
+    /// <param name="a2">Receives a pointer to the string's character buffer.</param>
+    /// <returns>The same pointer passed in, now pointing to the referenced buffer.</returns>
     public int** ToPString(int** a2) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.FileNodeName_Bool, int**, int**>)0x0065BC60)(ref this, a2);
 }
 

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a tri‑state property value with states TRUE, FALSE, or UNDEF used for configuration settings and serialization.</summary>
 public unsafe struct TriStatePropertyValue
 {
     // Base Classes

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Iterates over a hash table mapping Turbine_GUID keys to Interface* values, facilitating traversal of turbine-related interfaces.</summary>
 public unsafe struct HashIterator___Turbine_GUID___Interface_ptr
 {
     // Members
@@ -8,6 +10,8 @@ public unsafe struct HashIterator___Turbine_GUID___Interface_ptr
     // Methods
 }
 
+
+/// <summary>Iterates over a hash table that maps unsigned long keys to DBOCache pointer values, exposing each entry in sequence for traversal and processing.</summary>
 public unsafe struct HashIterator__uint___DBOCache_ptr
 {
     // Members
@@ -16,6 +20,8 @@ public unsafe struct HashIterator__uint___DBOCache_ptr
     // Methods
 }
 
+
+/// <summary>Provides traversal over a hash table mapping unsigned long keys to IDClass&lt;_tagDataID,32,0&gt; elements, exposing an intrusive iterator interface for sequential access.</summary>
 public unsafe struct HashIterator__uint___IDClass____tagDataID
 {
     // Members
@@ -24,6 +30,9 @@ public unsafe struct HashIterator__uint___IDClass____tagDataID
     // Methods
 }
 
+
+/// <summary>Iterates over a hash table mapping case‑insensitive string keys to file entry pointers.</summary>
+/// <remarks>Encapsulates an intrusive iterator for efficient traversal of the underlying data structure.</remarks>
 public unsafe struct HashIterator___CaseInsensitiveStringBase___PStringBase__sbyte___TFileEntry_ptr
 {
     // Members
@@ -32,6 +41,8 @@ public unsafe struct HashIterator___CaseInsensitiveStringBase___PStringBase__sby
     // Methods
 }
 
+
+/// <summary>Iterates through the hash table of unsigned long keys mapping to TDBTypeEntry pointers. Holds an intrusive iterator that tracks position within the underlying HashTableData structure, enabling efficient traversal and manipulation of stored entries.</summary>
 public unsafe struct HashIterator__uint___TDBTypeEntry_ptr
 {
     // Members
@@ -40,6 +51,8 @@ public unsafe struct HashIterator__uint___TDBTypeEntry_ptr
     // Methods
 }
 
+
+/// <summary>Encapsulates an intrusive iterator for traversing entries in a hash table keyed by unsigned long and storing BaseProperty objects.</summary>
 public unsafe struct HashIterator__uint___BaseProperty
 {
     // Members
@@ -48,6 +61,8 @@ public unsafe struct HashIterator__uint___BaseProperty
     // Methods
 }
 
+
+/// <summary>Iterates over entries in a hash table that maps unsigned long keys to BasePropertyDesc* values, providing sequential access through an underlying intrusive iterator.</summary>
 public unsafe struct HashIterator__uint___BasePropertyDesc_ptr
 {
     // Members
@@ -56,6 +71,8 @@ public unsafe struct HashIterator__uint___BasePropertyDesc_ptr
     // Methods
 }
 
+
+/// <summary>Iterates through hash table entries keyed by unsigned long, delegating traversal to an intrusive iterator over HashTableData pointers.</summary>
 public unsafe struct HashIterator__uint___AvailableProperty
 {
     // Members
@@ -64,6 +81,8 @@ public unsafe struct HashIterator__uint___AvailableProperty
     // Methods
 }
 
+
+/// <summary>Iterates over entries in a hash table keyed by unsigned long values, yielding associated StringInfoData pointers. Wraps an intrusive iterator implementation, providing sequential access during lookup or enumeration.</summary>
 public unsafe struct HashIterator__uint___StringInfoData_ptr
 {
     // Members
@@ -72,6 +91,8 @@ public unsafe struct HashIterator__uint___StringInfoData_ptr
     // Methods
 }
 
+
+/// <summary>Iterates over a hash table that maps unsigned long keys to lists of PStringBase&lt;char&gt;, providing an intrusive iterator for efficient traversal.</summary>
 public unsafe struct HashIterator__uint___List___PStringBase__sbyte
 {
     // Members
@@ -80,6 +101,8 @@ public unsafe struct HashIterator__uint___List___PStringBase__sbyte
     // Methods
 }
 
+
+/// <summary>Iterates over a hash table mapping string keys to GRPCommand pointers, leveraging an intrusive iterator for efficient traversal.</summary>
 public unsafe struct HashIterator___PStringBase__sbyte___GRPCommand_ptr
 {
     // Members
@@ -88,6 +111,8 @@ public unsafe struct HashIterator___PStringBase__sbyte___GRPCommand_ptr
     // Methods
 }
 
+
+/// <summary>Specialized iterator for traversing a hash table keyed by PStringBase&lt;char&gt; and storing GRPObject* values, facilitating efficient lookup and enumeration of group objects.</summary>
 public unsafe struct HashIterator___PStringBase__sbyte___GRPObject_ptr
 {
     // Members
@@ -96,6 +121,8 @@ public unsafe struct HashIterator___PStringBase__sbyte___GRPObject_ptr
     // Methods
 }
 
+
+/// <summary>Facilitates sequential access to entries in a hash table mapping 64‑bit identifiers to arrays of quality change handler pointers.</summary>
 public unsafe struct HashIterator__ulong___SmartArray___QualityChangeHandler_ptr_ptr
 {
     // Members
@@ -104,6 +131,8 @@ public unsafe struct HashIterator__ulong___SmartArray___QualityChangeHandler_ptr
     // Methods
 }
 
+
+/// <summary>Iterates over elements stored in an intrusive hash table keyed by unsigned long, providing access to ElementDesc entries.</summary>
 public unsafe struct HashIterator__uint___ElementDesc
 {
     // Members
@@ -112,6 +141,8 @@ public unsafe struct HashIterator__uint___ElementDesc
     // Methods
 }
 
+
+/// <summary>Iterates over a hash table that maps unsigned long keys to StateDesc objects, providing an intrusive iterator for efficient traversal of the collection.</summary>
 public unsafe struct HashIterator__uint___StateDesc
 {
     // Members
@@ -120,6 +151,8 @@ public unsafe struct HashIterator__uint___StateDesc
     // Methods
 }
 
+
+/// <summary>Iterates over an AutoGrowHashTable that maps unsigned long keys to SmartArray&lt;UIMessageData&gt;, enabling traversal and access to stored message data.</summary>
 public unsafe struct HashIterator__uint___AutoGrowHashTable__uint___SmartArray___UIMessageData
 {
     // Members
@@ -128,6 +161,10 @@ public unsafe struct HashIterator__uint___AutoGrowHashTable__uint___SmartArray__
     // Methods
 }
 
+
+/// <summary>
+/// Iterates over entries in a hash table mapping unsigned long keys to smart arrays of UIElement pointers, enabling traversal of grouped UI elements. Internally employs an intrusive iterator for efficient access to the underlying hash table data.
+/// </summary>
 public unsafe struct HashIterator__uint___SmartArray___UIElement_ptr
 {
     // Members
@@ -136,6 +173,8 @@ public unsafe struct HashIterator__uint___SmartArray___UIElement_ptr
     // Methods
 }
 
+
+/// <summary>Iterates through a hash table mapping unsigned long keys to unsigned long values using an intrusive iterator, providing sequential access to each entry within the table.</summary>
 public unsafe struct HashIterator__uint__uint
 {
     // Members
@@ -144,6 +183,8 @@ public unsafe struct HashIterator__uint__uint
     // Methods
 }
 
+
+/// <summary>Iterates over entries in a hash table mapping unsigned long identifiers to DialogInfo objects, providing sequential access during traversal.</summary>
 public unsafe struct HashIterator__uint___DialogInfo
 {
     // Members
@@ -152,6 +193,8 @@ public unsafe struct HashIterator__uint___DialogInfo
     // Methods
 }
 
+
+/// <summary>Iterates over a hash table mapping unsigned integer keys to gmCGSkillsPage::tagSkillRecord values, leveraging an intrusive iterator for efficient traversal of each skill record.</summary>
 public unsafe struct HashIterator__uint___gmCGSkillsPage_tagSkillRecord
 {
     // Members
@@ -160,6 +203,8 @@ public unsafe struct HashIterator__uint___gmCGSkillsPage_tagSkillRecord
     // Methods
 }
 
+
+/// <summary>Iterates over a hash table mapping unsigned long keys to unsigned char values, providing efficient traversal through an intrusive iterator implementation.</summary>
 public unsafe struct HashIterator__uint__byte
 {
     // Members
@@ -168,6 +213,9 @@ public unsafe struct HashIterator__uint__byte
     // Methods
 }
 
+
+/// <summary>Iterates over a hash table mapping unsigned long keys to PhysicsScriptTableData pointers.</summary>
+/// <remarks>Encapsulates an IntrusiveHashIterator for internal traversal of the physics script data structure.</remarks>
 public unsafe struct HashIterator__uint___PhysicsScriptTableData_ptr
 {
     // Members
@@ -176,6 +224,9 @@ public unsafe struct HashIterator__uint___PhysicsScriptTableData_ptr
     // Methods
 }
 
+
+/// <summary>Iterates over a hash table of SpellSet objects keyed by unsigned long, providing type‑safe traversal.</summary>
+/// <remarks>Wraps IntrusiveHashIterator&lt;unsigned long, HashTableData&lt;unsigned long, SpellSet&gt; *, 0&gt; to expose an iterator interface for SpellSet collections.</remarks>
 public unsafe struct HashIterator__uint___SpellSet
 {
     // Members
@@ -184,6 +235,8 @@ public unsafe struct HashIterator__uint___SpellSet
     // Methods
 }
 
+
+/// <summary>Provides iteration over a hash table of RenderVertexStreamD3D pointers keyed by unsigned long, delegating traversal logic to an IntrusiveHashIterator instance.</summary>
 public unsafe struct HashIterator__uint___RenderVertexStreamD3D_ptr
 {
     // Members
@@ -192,6 +245,8 @@ public unsafe struct HashIterator__uint___RenderVertexStreamD3D_ptr
     // Methods
 }
 
+
+/// <summary>Iterates over entries in a hash table mapping unsigned long keys to case‑insensitive string values, exposing an intrusive iterator for traversal.</summary>
 public unsafe struct HashIterator__uint___CaseInsensitiveStringBase___PStringBase__sbyte
 {
     // Members

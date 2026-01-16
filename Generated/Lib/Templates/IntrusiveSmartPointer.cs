@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates a raw pointer to FileNodeFileInfo, intended for use as an intrusive smart pointer.</summary>
+/// <remarks>Aligned to 4-byte boundaries for efficient memory usage.</remarks>
 public unsafe struct IntrusiveSmartPointer___FileNodeFileInfo
 {
     // Members
@@ -7,13 +10,17 @@ public unsafe struct IntrusiveSmartPointer___FileNodeFileInfo
 
     // Methods
 
-    /// <summary>
+    /// <summary>Creates a new FileNodeFileInfo object, updates reference counts for any existing instance referenced by the supplied pointer, and stores the new object at that location.
     /// <code>Offset: 0x0065CFC0
     /// LONG __thiscall IntrusiveSmartPointer&lt;FileNodeFileInfo&gt;::create(PStringBase&lt;char&gt;**)</code>
     /// </summary>
+    /// <param name="this">Pointer to the current FileNodeFileInfo instance; receives address of newly created object. Any previous instance is released if its reference count reaches zero.</param>
+    /// <returns>Non‑zero on success; zero if memory allocation fails or creation could not be performed.</returns>
     // LONG __thiscall IntrusiveSmartPointer<FileNodeFileInfo>::create(PStringBase<char>**) (template type method)
 }
 
+
+/// <summary>Wraps a BasePropertyValue pointer, providing intrusive reference‑counting semantics for automatic lifetime management.</summary>
 public unsafe struct IntrusiveSmartPointer___BasePropertyValue
 {
     // Members

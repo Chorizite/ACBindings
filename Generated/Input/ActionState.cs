@@ -1,11 +1,15 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Tracks the state of an input action, recording when the action began, how many times it has repeated, its toggle status, and a callback reference. Holds key information for single-key actions via a smart array.</summary>
 public unsafe struct ActionState
 {
     // Base Classes
     public ACBindings.Internal.IntrusiveHashData__uint___ActionState_ptr BaseClass_IntrusiveHashData; // ACBindings.Internal.IntrusiveHashData__uint___ActionState_ptr
 
     // Child Types
+
+    /// <summary>Describes a single key input event, including its control specification and the extent of activation.</summary>
     public unsafe struct SingleKeyInfo
     {
         // Members
@@ -19,7 +23,7 @@ public unsafe struct ActionState
 
         // Methods
 
-        /// <summary>
+        /// <summary>Initializes the key field to an invalid identifier, marking the instance as unused or unassigned.
         /// <code>Offset: 0x00677BE0
         /// void __thiscall ActionState::SingleKeyInfo::SingleKeyInfo(ActionState::SingleKeyInfo*)</code>
         /// </summary>

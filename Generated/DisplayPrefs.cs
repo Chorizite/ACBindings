@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Defines display configuration settings including resolution, fullscreen mode, refresh rate, and visual quality options such as triple buffering, VSync, and antialiasing.</summary>
 public unsafe struct DisplayPrefs
 {
     // Members

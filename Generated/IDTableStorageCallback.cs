@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Enables polymorphic callbacks in ID table storage by holding a pointer to the virtual function table.</summary>
 public unsafe struct IDTableStorageCallback
 {
     // Child Types

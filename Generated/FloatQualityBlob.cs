@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a floating-point quality metric, storing its current and saved values along with a UI element for displaying the current value.</summary>
 public unsafe struct FloatQualityBlob
 {
     // Members

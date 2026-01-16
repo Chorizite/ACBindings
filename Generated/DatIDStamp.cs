@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates a unique identifier stamp composed of a major GUID and a minor version number, used for tracking component identity or schema evolution.</summary>
 public unsafe struct DatIDStamp
 {
     // Members

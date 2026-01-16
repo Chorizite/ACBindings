@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a screen‑space vector with an internal implementation detail and a single floating‑point field.</summary>
 public unsafe struct Vec2Dscreen
 {
     // Members

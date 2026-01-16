@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides a hashed collection of contract tracker entries keyed by unique identifier, enabling efficient lookup and management of active contracts.</summary>
 public unsafe struct CContractTrackerTable : System.IDisposable
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct CContractTrackerTable : System.IDisposable
     public unsafe struct CContractTrackerTable_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTrackerTable*, void> CContractTrackerTable_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTrackerTable*, void> CContractTrackerTable_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTrackerTable*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTrackerTable*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTrackerTable*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTrackerTable*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTrackerTable*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CContractTrackerTable*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -33,13 +35,13 @@ public unsafe struct CContractTrackerTable : System.IDisposable
 
     // Methods
 
-    /// <summary>
+    /// <summary>Destroys a CContractTrackerTable instance by clearing its internal hash table and freeing any allocated bucket memory.
     /// <code>Offset: 0x00560020
     /// void __thiscall CContractTrackerTable::~CContractTrackerTable(CContractTrackerTable*)</code>
     /// </summary>
     public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CContractTrackerTable, void>)0x00560020)(ref this);
 
-    /// <summary>
+    /// <summary>Initializes a new contract tracker table, setting up its base object and internal hash table with default parameters.
     /// <code>Offset: 0x0059A250
     /// void __thiscall CContractTrackerTable::CContractTrackerTable(CContractTrackerTable*)</code>
     /// </summary>

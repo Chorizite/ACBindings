@@ -1,5 +1,10 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+///     Manages dialog boxes through plugin registration, offering hooks for beginning and completion events.
+///     Acts as a gateway between the UI layer and the underlying plugin infrastructure.
+/// </summary>
 public unsafe struct DialogBoxGateway : System.IDisposable
 {
     // Base Classes
@@ -9,14 +14,14 @@ public unsafe struct DialogBoxGateway : System.IDisposable
     public unsafe struct DialogBoxGateway_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, void> DialogBoxGateway_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, ACBindings.Internal.CPluginManager*, void> OnPluggedIn; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, ACBindings.Internal.DialogBoxGateway.ThisFunctionHasBeenRenamed> OnDialogBoxBegin; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, byte, ACBindings.Internal.DialogBoxGateway.ThisFunctionHasBeenRenamed> OnDialogBoxEnd; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, byte> ReportThread_OnDialogBoxBegin; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, byte, void> ReportThread_OnDialogBoxEnd; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, byte> DialogThread_OnDialogBoxBegin; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, byte, void> DialogThread_OnDialogBoxEnd; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, void> DialogBoxGateway_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, ACBindings.Internal.CPluginManager*, void> OnPluggedIn; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, ACBindings.Internal.DialogBoxGateway.ThisFunctionHasBeenRenamed> OnDialogBoxBegin; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, byte, ACBindings.Internal.DialogBoxGateway.ThisFunctionHasBeenRenamed> OnDialogBoxEnd; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, byte> ReportThread_OnDialogBoxBegin; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, byte, void> ReportThread_OnDialogBoxEnd; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, byte> DialogThread_OnDialogBoxBegin; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DialogBoxGateway*, byte, void> DialogThread_OnDialogBoxEnd; // function pointer
 
         // Methods
     }

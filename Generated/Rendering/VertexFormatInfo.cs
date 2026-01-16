@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Describes the layout and characteristics of a vertex buffer used by the graphics engine. Stores format identifiers, component counts, compatibility flags, and byte offsets for positions, weights, normals, texture coordinates, colors, and skinning data.
+/// </summary>
 public unsafe struct VertexFormatInfo
 {
     // Members
@@ -28,7 +32,7 @@ public unsafe struct VertexFormatInfo
 
     // Methods
 
-    /// <summary>
+    /// <summary>Calculates vertex field offsets and total stride based on format flags in the VertexFormatInfo instance, updating offset members, FVF compatibility flag, and size.
     /// <code>Offset: 0x005D97F0
     /// void __thiscall VertexFormatInfo::GenerateOffsets(VertexFormatInfo*)</code>
     /// </summary>

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Specifies rendering preferences, controlling texture filtering, detail levels, draw distances, aspect ratio, brightness, field of view, and hardware class for the graphics subsystem.</summary>
 public unsafe struct RenderPrefs
 {
     // Members

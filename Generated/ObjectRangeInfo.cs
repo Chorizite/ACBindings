@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Manages per-object configuration for range-based visibility or interaction checks, storing the target’s identifier, spatial limits, optional radius usage, Z-axis handling preference, and timing data for periodic updates and deletion scheduling.
+/// </summary>
 public unsafe struct ObjectRangeInfo
 {
     // Members

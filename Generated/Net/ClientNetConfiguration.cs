@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds client networking settings including logging callbacks, preferred interface, port assignment, and an option for automatic unique port generation.</summary>
 public unsafe struct ClientNetConfiguration
 {
     // Base Classes

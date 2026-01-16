@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Contains parameters for a blit operation, including two buffer-related fields and the stride applied during copying.</summary>
 public unsafe struct BlitBufferArgs
 {
     // Members

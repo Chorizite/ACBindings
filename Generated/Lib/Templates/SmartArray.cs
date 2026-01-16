@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Stores a dynamic array of unsigned int values with size tracking and deallocation control, aligned on 4‑byte boundaries.</summary>
+/// <remarks>Uses an internal pointer to the data, a counter for elements, and a flag indicating whether memory should be freed automatically.</remarks>
 public unsafe struct SmartArray__uint
 {
     // Members
@@ -10,6 +13,8 @@ public unsafe struct SmartArray__uint
     // Methods
 }
 
+
+/// <summary>Holds an owned array of character pointers, maintaining the data buffer, its allocation status, and element count.</summary>
 public unsafe struct SmartArray__sbyte_ptr
 {
     // Members
@@ -20,6 +25,9 @@ public unsafe struct SmartArray__sbyte_ptr
     // Methods
 }
 
+
+/// <summary>Manages a one-dimensional array of 32‑bit integers, tracking allocated storage and element count.</summary>
+/// <remarks>m_data points to the contiguous integer buffer; m_sizeAndDeallocate encodes allocation size with a deallocation flag; m_num indicates how many elements are currently stored.</remarks>
 public unsafe struct SmartArray__int
 {
     // Members
@@ -30,6 +38,8 @@ public unsafe struct SmartArray__int
     // Methods
 }
 
+
+/// <summary>Manages a contiguous collection of ArchiveVersionRow::VersionEntry objects, tracking element count and ownership semantics for automatic memory release.</summary>
 public unsafe struct SmartArray___ArchiveVersionRow_VersionEntry
 {
     // Members
@@ -40,6 +50,8 @@ public unsafe struct SmartArray___ArchiveVersionRow_VersionEntry
     // Methods
 }
 
+
+/// <summary>Maintains a compact array of Logger::ILoggingOutputHandler pointers, tracking size and deallocation status for efficient logging handler management.</summary>
 public unsafe struct SmartArray___Logger_ILoggingOutputHandler_ptr
 {
     // Members
@@ -50,6 +62,8 @@ public unsafe struct SmartArray___Logger_ILoggingOutputHandler_ptr
     // Methods
 }
 
+
+/// <summary>Lightweight container for a fixed-size array of immutable command line arguments, managing pointer storage and optional deallocation responsibility.</summary>
 public unsafe struct SmartArray___CommandLineArg_ptr
 {
     // Members
@@ -60,6 +74,8 @@ public unsafe struct SmartArray___CommandLineArg_ptr
     // Methods
 }
 
+
+/// <summary>Handles dynamic storage of an array of wide-character strings, tracks allocation size and element count, and ensures proper deallocation when no longer needed.</summary>
 public unsafe struct SmartArray__ushort_ptr
 {
     // Members
@@ -70,6 +86,8 @@ public unsafe struct SmartArray__ushort_ptr
     // Methods
 }
 
+
+/// <summary>Stores a single <c>PStringBase&lt;unsigned short&gt;</c> instance with automatic memory management, tracking the data pointer, allocation flags, and element count within a 4‑byte aligned structure.</summary>
 public unsafe struct SmartArray___PStringBase__ushort
 {
     // Members
@@ -80,6 +98,8 @@ public unsafe struct SmartArray___PStringBase__ushort
     // Methods
 }
 
+
+/// <summary>Holds a dynamically sized collection of CommandLineArg objects, tracking the number of elements and whether it owns the underlying storage for deallocation.</summary>
 public unsafe struct SmartArray___CommandLineArg
 {
     // Members
@@ -90,6 +110,8 @@ public unsafe struct SmartArray___CommandLineArg
     // Methods
 }
 
+
+/// <summary>Stores a dynamic collection of BTEntry objects, tracking the number of elements and deallocation state for efficient memory management.</summary>
 public unsafe struct SmartArray___BTEntry
 {
     // Members
@@ -100,6 +122,8 @@ public unsafe struct SmartArray___BTEntry
     // Methods
 }
 
+
+/// <summary>Manages an array of PFileNode pointers, tracks element count, and controls deallocation behavior for its owned resources.</summary>
 public unsafe struct SmartArray___PFileNode_ptr
 {
     // Members
@@ -110,6 +134,8 @@ public unsafe struct SmartArray___PFileNode_ptr
     // Methods
 }
 
+
+/// <summary>Holds a reference to dynamically allocated storage for a PStringBase&lt;char&gt; instance, along with metadata indicating allocation state and element count. Supports efficient management of a single string object within aligned memory.</summary>
 public unsafe struct SmartArray___PStringBase__sbyte
 {
     // Members
@@ -120,6 +146,8 @@ public unsafe struct SmartArray___PStringBase__sbyte
     // Methods
 }
 
+
+/// <summary>Holds a dynamically allocated array of CAsyncGetRequest pointers, tracks the number of stored requests and whether the memory should be freed automatically. Used internally by asynchronous request handling mechanisms.</summary>
 public unsafe struct SmartArray___CAsyncGetRequest_ptr
 {
     // Members
@@ -130,6 +158,8 @@ public unsafe struct SmartArray___CAsyncGetRequest_ptr
     // Methods
 }
 
+
+/// <summary>Provides dynamic storage for CCallbackWrapper objects used in async cache requests, maintaining a data pointer, element count, and deallocation status.</summary>
 public unsafe struct SmartArray___AsyncCache_CAsyncRequest_CCallbackWrapper
 {
     // Members
@@ -140,6 +170,8 @@ public unsafe struct SmartArray___AsyncCache_CAsyncRequest_CCallbackWrapper
     // Methods
 }
 
+
+/// <summary>Holds an array of AsyncCache::CAsyncRequest pointers with capacity defined by the template parameter, tracking current usage and deallocation responsibility. Provides lightweight storage for asynchronous cache request objects within a fixed-size container.</summary>
 public unsafe struct SmartArray___AsyncCache_CAsyncRequest_ptr
 {
     // Members
@@ -150,6 +182,8 @@ public unsafe struct SmartArray___AsyncCache_CAsyncRequest_ptr
     // Methods
 }
 
+
+/// <summary>Provides storage for a single BaseProperty instance, tracking allocation status and the number of elements stored.</summary>
 public unsafe struct SmartArray___BaseProperty
 {
     // Members
@@ -160,6 +194,8 @@ public unsafe struct SmartArray___BaseProperty
     // Methods
 }
 
+
+/// <summary>Handles a resizable collection of 64‑bit integer values, maintaining element count and ownership semantics for memory management.</summary>
 public unsafe struct SmartArray__long
 {
     // Members
@@ -170,6 +206,8 @@ public unsafe struct SmartArray__long
     // Methods
 }
 
+
+/// <summary>Holds a contiguous array of DeviceKeyMapEntry objects, tracking the buffer pointer, element count, and allocation state.</summary>
 public unsafe struct SmartArray___DeviceKeyMapEntry
 {
     // Members
@@ -180,6 +218,8 @@ public unsafe struct SmartArray___DeviceKeyMapEntry
     // Methods
 }
 
+
+/// <summary>Container that holds a single ActionState::SingleKeyInfo instance, managing its allocation, deallocation, and size metadata.</summary>
 public unsafe struct SmartArray___ActionState_SingleKeyInfo
 {
     // Members
@@ -190,6 +230,8 @@ public unsafe struct SmartArray___ActionState_SingleKeyInfo
     // Methods
 }
 
+
+/// <summary>Stores a single‑element array of QualifiedControl and unsigned long pairs, tracking allocation status and element count.</summary>
 public unsafe struct SmartArray____STL_pair___QualifiedControl__uint
 {
     // Members
@@ -200,6 +242,8 @@ public unsafe struct SmartArray____STL_pair___QualifiedControl__uint
     // Methods
 }
 
+
+/// <summary>Holds a pointer to a contiguous sequence of Glyph objects along with compact metadata indicating the array’s length and automatic deallocation policy.</summary>
 public unsafe struct SmartArray___Glyph
 {
     // Members
@@ -210,6 +254,8 @@ public unsafe struct SmartArray___Glyph
     // Methods
 }
 
+
+/// <summary>Manages a single-element array of const GRPVariableObject pointers, handling storage and ownership semantics for variable objects within the system.</summary>
 public unsafe struct SmartArray___GRPVariableObject_ptr
 {
     // Members
@@ -220,6 +266,8 @@ public unsafe struct SmartArray___GRPVariableObject_ptr
     // Methods
 }
 
+
+/// <summary>Encapsulates an array of string pairs, providing automatic memory management and size tracking within a compact structure.</summary>
 public unsafe struct SmartArray____STL_pair___PStringBase__sbyte___PStringBase__sbyte
 {
     // Members
@@ -230,6 +278,8 @@ public unsafe struct SmartArray____STL_pair___PStringBase__sbyte___PStringBase__
     // Methods
 }
 
+
+/// <summary>Manages an array of PrefDisplayModeType instances, handling allocation and deallocation based on internal flags. Provides storage, size tracking, and element count for use in preference display logic.</summary>
 public unsafe struct SmartArray___PrefDisplayModeType
 {
     // Members
@@ -240,6 +290,8 @@ public unsafe struct SmartArray___PrefDisplayModeType
     // Methods
 }
 
+
+/// <summary>Dynamic byte array that stores raw data and tracks its size, incorporating smart memory management through a deallocation flag.</summary>
 public unsafe struct SmartArray__byte
 {
     // Members
@@ -250,6 +302,8 @@ public unsafe struct SmartArray__byte
     // Methods
 }
 
+
+/// <summary>Holds a dynamically allocated array of DBLevelInfo objects, tracking the number of elements and memory ownership.</summary>
 public unsafe struct SmartArray___DBLevelInfo
 {
     // Members
@@ -260,6 +314,8 @@ public unsafe struct SmartArray___DBLevelInfo
     // Methods
 }
 
+
+/// <summary>Lightweight container for MaterialProperty pointers, maintaining allocation state and element count.</summary>
 public unsafe struct SmartArray___MaterialProperty_ptr
 {
     // Members
@@ -270,6 +326,9 @@ public unsafe struct SmartArray___MaterialProperty_ptr
     // Methods
 }
 
+
+/// <summary>A lightweight container for a single-dimensional array of MaterialField pointers, handling allocation state and element count.</summary>
+/// <remarks>Encapsulates dynamic array storage with metadata for size and deallocation control. The m_data member points to the underlying buffer, while m_num records current element count, and m_sizeAndDeallocate flags allocation status.</remarks>
 public unsafe struct SmartArray___MaterialField_ptr
 {
     // Members
@@ -280,6 +339,8 @@ public unsafe struct SmartArray___MaterialField_ptr
     // Methods
 }
 
+
+/// <summary>Represents a lightweight container that holds up to one ModifierRef pointer, storing size and deallocation flags for efficient memory handling of single‑modifier scenarios.</summary>
 public unsafe struct SmartArray___ModifierRef_ptr
 {
     // Members
@@ -290,6 +351,8 @@ public unsafe struct SmartArray___ModifierRef_ptr
     // Methods
 }
 
+
+/// <summary>Stores an array of MaterialModifier pointers, managing their ownership and automatic memory deallocation while tracking the number of elements.</summary>
 public unsafe struct SmartArray___MaterialModifier_ptr
 {
     // Members
@@ -300,6 +363,8 @@ public unsafe struct SmartArray___MaterialModifier_ptr
     // Methods
 }
 
+
+/// <summary>Manages an array of MaterialLayer pointers with automatic memory handling and size tracking, facilitating efficient layer storage within the material system.</summary>
 public unsafe struct SmartArray___MaterialLayer_ptr
 {
     // Members
@@ -310,6 +375,10 @@ public unsafe struct SmartArray___MaterialLayer_ptr
     // Methods
 }
 
+
+/// <summary>
+/// Stores a collection of MaterialShaderConstant elements and tracks allocation state, enabling efficient memory handling for shader constant data.
+/// </summary>
 public unsafe struct SmartArray___MaterialShaderConstant
 {
     // Members
@@ -320,6 +389,8 @@ public unsafe struct SmartArray___MaterialShaderConstant
     // Methods
 }
 
+
+/// <summary>Stores a single ShaderResourceType element with size and deallocation flags for efficient GPU resource management.</summary>
 public unsafe struct SmartArray___ShaderResourceType
 {
     // Members
@@ -330,6 +401,8 @@ public unsafe struct SmartArray___ShaderResourceType
     // Methods
 }
 
+
+/// <summary>Manages a collection of LayerStage pointers, storing the underlying data array, size and deallocation flag, and element count.</summary>
 public unsafe struct SmartArray___LayerStage_ptr
 {
     // Members
@@ -340,6 +413,8 @@ public unsafe struct SmartArray___LayerStage_ptr
     // Methods
 }
 
+
+/// <summary>Fixed-size array storing LayerModifier pointers, tracking element count and deallocation behavior.</summary>
 public unsafe struct SmartArray___LayerModifier_ptr
 {
     // Members
@@ -350,6 +425,8 @@ public unsafe struct SmartArray___LayerModifier_ptr
     // Methods
 }
 
+
+/// <summary>Maintains a fixed-size array of RenderMeshBatch pointers, tracking count and deallocation status for efficient rendering batch management.</summary>
 public unsafe struct SmartArray___RenderMeshBatch_ptr
 {
     // Members
@@ -360,6 +437,8 @@ public unsafe struct SmartArray___RenderMeshBatch_ptr
     // Methods
 }
 
+
+/// <summary>Stores a dynamic array of RenderMeshFragmentTopology::TopBatchType objects used by mesh topology processing. Tracks the underlying data pointer, total allocated size encoded in m_sizeAndDeallocate together with a deallocation flag, and the current number of elements.</summary>
 public unsafe struct SmartArray___RenderMeshFragmentTopology_TopBatchType
 {
     // Members
@@ -370,6 +449,8 @@ public unsafe struct SmartArray___RenderMeshFragmentTopology_TopBatchType
     // Methods
 }
 
+
+/// <summary>Holds a dynamic array of 16‑bit unsigned integers, storing element data, size information, and an allocation flag for memory management.</summary>
 public unsafe struct SmartArray__ushort
 {
     // Members
@@ -380,6 +461,10 @@ public unsafe struct SmartArray__ushort
     // Methods
 }
 
+
+/// <summary>
+/// Holds a contiguous array of Vector3 objects, managing size and deallocation flags.
+/// </summary>
 public unsafe struct SmartArray___Vector3
 {
     // Members
@@ -390,6 +475,8 @@ public unsafe struct SmartArray___Vector3
     // Methods
 }
 
+
+/// <summary>Manages a contiguous collection of Box2D elements, tracking allocation state and element count for efficient resource handling.</summary>
 public unsafe struct SmartArray___Box2D
 {
     // Members
@@ -400,6 +487,8 @@ public unsafe struct SmartArray___Box2D
     // Methods
 }
 
+
+/// <summary>Encapsulates a single element of type IDClass&lt;_tagDataID,32,0&gt;, providing automatic memory management and size tracking for efficient array operations.</summary>
 public unsafe struct SmartArray___IDClass____tagDataID
 {
     // Members
@@ -410,6 +499,8 @@ public unsafe struct SmartArray___IDClass____tagDataID
     // Methods
 }
 
+
+/// <summary>Stores a dynamically sized collection of UIElement pointers, tracking the element count and whether the underlying array should be automatically freed upon destruction.</summary>
 public unsafe struct SmartArray___UIElement_ptr
 {
     // Members
@@ -420,6 +511,8 @@ public unsafe struct SmartArray___UIElement_ptr
     // Methods
 }
 
+
+/// <summary>Manages a dynamically allocated array of MediaDesc pointers, tracking element count and deallocation status.</summary>
 public unsafe struct SmartArray___MediaDesc_ptr
 {
     // Members
@@ -430,6 +523,8 @@ public unsafe struct SmartArray___MediaDesc_ptr
     // Methods
 }
 
+
+/// <summary>Stores a dynamic array of BaseInfo objects, managing the data pointer, element count, and deallocation flag in a compact layout.</summary>
 public unsafe struct SmartArray___BaseInfo
 {
     // Members
@@ -440,6 +535,8 @@ public unsafe struct SmartArray___BaseInfo
     // Methods
 }
 
+
+/// <summary>Stores a dynamic collection of SurfaceUsageSummary entries, managing memory allocation and tracking the number of elements.</summary>
 public unsafe struct SmartArray___SurfaceUsageSummary
 {
     // Members
@@ -450,6 +547,8 @@ public unsafe struct SmartArray___SurfaceUsageSummary
     // Methods
 }
 
+
+/// <summary>Manages a dynamically allocated array of GlyphLine objects, tracking element count and ownership for efficient glyph rendering.</summary>
 public unsafe struct SmartArray___GlyphLine
 {
     // Members
@@ -460,6 +559,8 @@ public unsafe struct SmartArray___GlyphLine
     // Methods
 }
 
+
+/// <summary>Holds an aligned single-element array of UIChildFramework pointers, tracking allocation state and current element count.</summary>
 public unsafe struct SmartArray___UIChildFramework_ptr
 {
     // Members
@@ -470,6 +571,8 @@ public unsafe struct SmartArray___UIChildFramework_ptr
     // Methods
 }
 
+
+/// <summary>Holds a dynamically sized collection of StringDownload pointers, tracking element count and deallocation behavior.</summary>
 public unsafe struct SmartArray___StringDownload_ptr
 {
     // Members
@@ -480,6 +583,8 @@ public unsafe struct SmartArray___StringDownload_ptr
     // Methods
 }
 
+
+/// <summary>Array container for Skill_CG objects, automatically managing memory allocation and deallocation while tracking element count.</summary>
 public unsafe struct SmartArray___Skill_CG
 {
     // Members
@@ -490,6 +595,8 @@ public unsafe struct SmartArray___Skill_CG
     // Methods
 }
 
+
+/// <summary>Dynamic container for Template_CG instances, holding a data pointer, element count, and allocation metadata.</summary>
 public unsafe struct SmartArray___Template_CG
 {
     // Members
@@ -500,6 +607,8 @@ public unsafe struct SmartArray___Template_CG
     // Methods
 }
 
+
+/// <summary>Holds a dynamic collection of HairStyle_CG objects, tracking memory ownership and current element count. The array data is referenced by a pointer, while the size and deallocate status are encoded within a single unsigned integer field.</summary>
 public unsafe struct SmartArray___HairStyle_CG
 {
     // Members
@@ -510,6 +619,8 @@ public unsafe struct SmartArray___HairStyle_CG
     // Methods
 }
 
+
+/// <summary>Manages a dynamic collection of EyesStrip_CG instances, storing the array pointer, element count, and deallocation status.</summary>
 public unsafe struct SmartArray___EyesStrip_CG
 {
     // Members
@@ -520,6 +631,11 @@ public unsafe struct SmartArray___EyesStrip_CG
     // Methods
 }
 
+
+/// <summary>
+/// Holds a dynamic collection of FaceStrip_CG objects, providing size and deallocation metadata to manage memory safely.
+/// Tracks element count via m_num while exposing the raw array pointer m_data for direct access in rendering processes.
+/// </summary>
 public unsafe struct SmartArray___FaceStrip_CG
 {
     // Members
@@ -530,6 +646,8 @@ public unsafe struct SmartArray___FaceStrip_CG
     // Methods
 }
 
+
+/// <summary>Stores a dynamically sized array of Style_CG objects and manages its memory allocation and deallocation automatically using the size and flag stored in m_sizeAndDeallocate.</summary>
 public unsafe struct SmartArray___Style_CG
 {
     // Members
@@ -540,6 +658,8 @@ public unsafe struct SmartArray___Style_CG
     // Methods
 }
 
+
+/// <summary>Represents a lightweight container holding up to one pair consisting of an unsigned long key and a nested pair of QualifiedControl and size, used for quick access and storage within the application. Manages raw data pointer, allocation flags, and element count.</summary>
 public unsafe struct SmartArray____STL_pair__uint____STL_pair___QualifiedControl__uint
 {
     // Members
@@ -550,6 +670,8 @@ public unsafe struct SmartArray____STL_pair__uint____STL_pair___QualifiedControl
     // Methods
 }
 
+
+/// <summary>Stores and manages a dynamic array of PTaggedIterationList elements, tracking allocation size and element count.</summary>
 public unsafe struct SmartArray___CAllIterationList_PTaggedIterationList
 {
     // Members
@@ -560,6 +682,8 @@ public unsafe struct SmartArray___CAllIterationList_PTaggedIterationList
     // Methods
 }
 
+
+/// <summary>Stores a dynamically allocated array of MissingIteration objects, tracks the number of elements, and indicates whether the memory should be freed upon destruction.</summary>
 public unsafe struct SmartArray___MissingIteration
 {
     // Members
@@ -570,6 +694,9 @@ public unsafe struct SmartArray___MissingIteration
     // Methods
 }
 
+
+/// <summary>Holds an array of QualifiedDataID objects, tracking element count and allocation status for efficient memory management.</summary>
+/// <remarks>m_data points to the allocated array; m_num records the number of stored elements; m_sizeAndDeallocate encodes size or deallocation information used by the application’s internal memory handling routines.</remarks>
 public unsafe struct SmartArray___QualifiedDataID
 {
     // Members
@@ -580,6 +707,8 @@ public unsafe struct SmartArray___QualifiedDataID
     // Methods
 }
 
+
+/// <summary>Encapsulates dynamic array handling for BSP node pointers, storing the element count and a flag indicating whether to free memory upon destruction.</summary>
 public unsafe struct SmartArray___BSPNODE_ptr
 {
     // Members
@@ -590,6 +719,8 @@ public unsafe struct SmartArray___BSPNODE_ptr
     // Methods
 }
 
+
+/// <summary>Manages a dynamic array of MeshBatchType objects, tracking allocation state and element count.</summary>
 public unsafe struct SmartArray___MeshBatchType
 {
     // Members
@@ -600,6 +731,8 @@ public unsafe struct SmartArray___MeshBatchType
     // Methods
 }
 
+
+/// <summary>Represents a lightweight container for an array of D3DXATTRIBUTERANGE elements, managing storage and element count.</summary>
 public unsafe struct SmartArray____D3DXATTRIBUTERANGE
 {
     // Members
@@ -610,6 +743,13 @@ public unsafe struct SmartArray____D3DXATTRIBUTERANGE
     // Methods
 }
 
+
+/// <summary>Container for an array of Position objects, storing the current element count and related metadata.</summary>
+/// <remarks>
+/// m_data points to a dynamically allocated array of Position instances.<br/>
+/// m_num records how many elements are currently stored.<br/>
+/// m_sizeAndDeallocate holds additional information about the array, such as size or allocation state; its exact meaning is implementation-defined.
+/// </remarks>
 public unsafe struct SmartArray___Position
 {
     // Members
@@ -620,6 +760,8 @@ public unsafe struct SmartArray___Position
     // Methods
 }
 
+
+/// <summary>Represents a dynamically allocated array of ACCharGenStartArea elements, tracking the element count and deallocation status.</summary>
 public unsafe struct SmartArray___ACCharGenStartArea
 {
     // Members
@@ -630,6 +772,8 @@ public unsafe struct SmartArray___ACCharGenStartArea
     // Methods
 }
 
+
+/// <summary>Dynamic container that stores and manages a collection of LOAD_WEIGHTS instances, automatically handling memory allocation and deallocation.</summary>
 public unsafe struct SmartArray___LOAD_WEIGHTS
 {
     // Members
@@ -640,6 +784,8 @@ public unsafe struct SmartArray___LOAD_WEIGHTS
     // Methods
 }
 
+
+/// <summary>Manages a dynamic collection of LOAD_UVPAIR objects, storing the data pointer, allocated size with deallocation flag, and current element count.</summary>
 public unsafe struct SmartArray___LOAD_UVPAIR
 {
     // Members
@@ -650,6 +796,8 @@ public unsafe struct SmartArray___LOAD_UVPAIR
     // Methods
 }
 
+
+/// <summary>Manages a collection of graphic resources, automatically handling allocation and deallocation while tracking the number of elements in the array.</summary>
 public unsafe struct SmartArray___GraphicsResource_ptr
 {
     // Members
@@ -660,6 +808,9 @@ public unsafe struct SmartArray___GraphicsResource_ptr
     // Methods
 }
 
+
+/// <summary>Holds at most one FontReference, managing its lifetime and providing simple size tracking.</summary>
+/// <remarks>Designed for 32‑bit Windows builds with 4‑byte alignment, this lightweight container stores a pointer to the font reference, a flag/value in m_sizeAndDeallocate, and a count of elements in m_num. It offers deterministic ownership semantics while remaining compact for single‑element use cases.</remarks>
 public unsafe struct SmartArray___FontReference
 {
     // Members
@@ -670,6 +821,8 @@ public unsafe struct SmartArray___FontReference
     // Methods
 }
 
+
+/// <summary>Stores an array of CPluginPrototype pointers, tracks how many are used, and indicates whether the stored objects should be automatically freed when the container is destroyed. Designed for efficient management of plugin prototypes in the application.</summary>
 public unsafe struct SmartArray___CPluginPrototype_ptr
 {
     // Members
@@ -680,6 +833,8 @@ public unsafe struct SmartArray___CPluginPrototype_ptr
     // Methods
 }
 
+
+/// <summary>Holds an array of InfoRegion pointers, providing automatic memory management and size tracking for the collection.</summary>
 public unsafe struct SmartArray___InfoRegion_ptr
 {
     // Members
@@ -690,16 +845,20 @@ public unsafe struct SmartArray___InfoRegion_ptr
     // Methods
 }
 
+
+/// <summary>Stores up to one function pointer returning bool and tracks its allocation state through an encoded size field.</summary>
 public unsafe struct SmartArray__void_ptr
 {
     // Members
-    public delegate* unmanaged[Cdecl]<byte> m_data; // function pointer
+    public static delegate* unmanaged[Cdecl]<byte> m_data; // function pointer
     public uint m_sizeAndDeallocate;
     public uint m_num;
 
     // Methods
 }
 
+
+/// <summary>Handles dynamic storage of TextureBasedFontVertexType elements, tracking element count and deallocation state within a contiguous array.</summary>
 public unsafe struct SmartArray___TextureBasedFontVertexType
 {
     // Members
@@ -710,6 +869,8 @@ public unsafe struct SmartArray___TextureBasedFontVertexType
     // Methods
 }
 
+
+/// <summary>Maintains a dynamic array of RenderLight objects, storing the data pointer, allocated capacity plus deallocation flag, and current element count.</summary>
 public unsafe struct SmartArray___RenderLight
 {
     // Members

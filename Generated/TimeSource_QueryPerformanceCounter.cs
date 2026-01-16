@@ -1,8 +1,12 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides thread‑safe access to the system’s high‑resolution performance counter, storing frequency data, millisecond conversion factors, and tolerance thresholds for accurate timing calculations.</summary>
 public unsafe struct TimeSource_QueryPerformanceCounter
 {
     // Child Types
+
+    /// <summary>Maintains state for a high‑resolution clock based on QueryPerformanceCounter, storing the previous tick value, status flags, and reference parameters used to convert counter ticks into real time.</summary>
     public unsafe struct StateData
     {
         // Members

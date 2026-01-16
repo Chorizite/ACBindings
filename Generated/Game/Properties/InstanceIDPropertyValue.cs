@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Stores a unique instance identifier, providing mechanisms for copying, comparison, parsing from file nodes, assignment, serialization, and string formatting as hexadecimal.</summary>
 public unsafe struct InstanceIDPropertyValue
 {
     // Base Classes

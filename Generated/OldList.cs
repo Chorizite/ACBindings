@@ -1,12 +1,15 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a dynamic collection of generic pointers, maintaining an internal buffer for efficient memory management and supporting bulk insertion operations.</summary>
+/// <remarks>Legacy implementation predating modern container classes, used by older components within the system.</remarks>
 public unsafe struct OldList
 {
     // Child Types
     public unsafe struct OldList_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OldList*, void> OldList_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.OldList*, void> OldList_dtor_0; // function pointer
 
         // Methods
     }

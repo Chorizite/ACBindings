@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents an RGBA color value used for pixel data, providing a compact way to store red, green, blue, and alpha components.</summary>
 public unsafe struct RGBAUnion
 {
     // Members

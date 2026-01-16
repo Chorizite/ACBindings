@@ -1,14 +1,16 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Handles landblock creation, migration, and pruning in the game's cell system, managing asynchronous requests, timers, and block state lists.</summary>
 public unsafe struct SCellDB
 {
     // Child Types
     public unsafe struct SCellDB_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SCellDB*, void> SCellDB_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SCellDB*, double, void> ServerSettingTime; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.SCellDB*, sbyte*, sbyte*, uint, int> StartupCheckpointing; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.SCellDB*, void> SCellDB_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.SCellDB*, double, void> ServerSettingTime; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.SCellDB*, sbyte*, sbyte*, uint, int> StartupCheckpointing; // function pointer
 
         // Methods
     }

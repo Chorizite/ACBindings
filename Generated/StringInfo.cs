@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Contains metadata for a localized string token: identifier, table reference, variable mappings, literal value, override flag, English text, and comment. Facilitates dynamic string resolution and localization within the application.</summary>
+/// <remarks>Serves as a data structure in the resource management subsystem to support internationalization, runtime formatting, and developer annotations.</remarks>
 public unsafe struct StringInfo : System.IDisposable
 {
     // Child Types

@@ -209,10 +209,13 @@ public unsafe struct ListNode___DialogInfo
 
     // Methods
 
-    /// <summary>
+    /// <summary>Initializes a ListNode&lt;DialogInfo&gt; instance by copying data from another object and setting its next and previous links to null.
     /// <code>Offset: 0x00477B10
     /// void*** __thiscall ListNode&lt;DialogInfo&gt;::ListNode&lt;DialogInfo&gt;(void***,_DWORD*)</code>
     /// </summary>
+    /// <param name="this">Pointer to the node being constructed.</param>
+    /// <param name="a2">Source object whose properties are copied into the new node.</param>
+    /// <returns>A pointer to the initialized ListNode&lt;DialogInfo&gt;.</returns>
     // void*** __thiscall ListNode<DialogInfo>::ListNode<DialogInfo>(void***,_DWORD*) (template type method)
 }
 

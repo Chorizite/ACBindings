@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Defines the parameters governing a physical object’s behaviour, linking to setup, motion, sound, and physics‑effect tables while specifying placement flags, scaling, friction, elasticity, translucency, and the default script with its intensity.</summary>
 public unsafe struct PhysObjProfile
 {
     // Members

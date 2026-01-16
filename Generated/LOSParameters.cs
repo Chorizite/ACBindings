@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates parameters for a line‑of‑sight (LOS) calculation in the physics engine, tracking traversal state, intersection results, and related spatial data.</summary>
 public unsafe struct LOSParameters
 {
     // Members

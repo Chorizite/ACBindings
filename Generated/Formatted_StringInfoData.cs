@@ -1,12 +1,14 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Stores formatting metadata for strings, including a grouping flag and a base index used during serialization of formatted string data.</summary>
 public unsafe struct Formatted_StringInfoData
 {
     // Child Types
     public unsafe struct Formatted_StringInfoData_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Formatted_StringInfoData*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Formatted_StringInfoData*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
 
         // Methods
     }

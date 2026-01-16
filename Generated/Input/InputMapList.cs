@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Maintains a collection of unsigned long identifiers representing input mappings, facilitating lookup and management within the system.</summary>
 public unsafe struct InputMapList
 {
     // Base Classes
@@ -9,7 +11,7 @@ public unsafe struct InputMapList
     public unsafe struct InputMapList_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.InputMapList*, void> InputMapList_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.InputMapList*, void> InputMapList_dtor_0; // function pointer
 
         // Methods
     }

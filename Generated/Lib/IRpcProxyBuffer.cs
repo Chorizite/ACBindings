@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Acting as a proxy buffer for RPC operations, this structure facilitates the marshaling of COM interface pointers across process boundaries.</summary>
 public unsafe struct IRpcProxyBuffer
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct IRpcProxyBuffer
     public unsafe struct IRpcProxyBuffer_vtbl
     {
         // Members
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcProxyBuffer*, ACBindings.Internal.IRpcChannelBuffer*, int> Connect; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcProxyBuffer*, void> Disconnect; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcProxyBuffer*, ACBindings.Internal.IRpcChannelBuffer*, int> Connect; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IRpcProxyBuffer*, void> Disconnect; // function pointer
 
         // Methods
     }

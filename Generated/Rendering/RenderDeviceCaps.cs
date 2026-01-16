@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Describes the capabilities of a rendering device, including maximum texture dimensions, supported features such as hardware vertex processing and compression, and limits on resources like simultaneous textures and render targets.</summary>
 public unsafe struct RenderDeviceCaps
 {
     // Members

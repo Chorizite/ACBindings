@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Captures all data associated with a user input action, including identifiers, key mapping, timing, repeat behavior, and the callback to invoke.</summary>
 public unsafe struct InputEvent
 {
     // Members

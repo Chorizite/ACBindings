@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides read‑only iteration over a character string, exposing immutable access to its elements via a common iterator interface.</summary>
 public unsafe struct PStringBaseIter_Const__sbyte
 {
     // Base Classes
@@ -49,6 +51,8 @@ public unsafe struct PStringBaseIter_Const__sbyte
     // int __thiscall PStringBaseIter_Const<char>::IndexToConstPointer(_DWORD**,unsigned int) (template type method)
 }
 
+
+/// <summary>Provides read‑only iteration over sequences of unsigned short characters, leveraging a base iterator and an internal string pointer.</summary>
 public unsafe struct PStringBaseIter_Const__ushort
 {
     // Base Classes

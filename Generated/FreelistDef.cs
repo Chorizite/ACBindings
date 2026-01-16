@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Defines configuration for a freelist allocator, controlling recycling behavior, shrinking policy, and size limits.</summary>
 public unsafe struct FreelistDef
 {
     // Members

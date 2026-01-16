@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds iteration‑related information for distributed simulation messages, tracking total payload size, iteration metadata, and associated data messages.</summary>
 public unsafe struct DDD_IterationDataMessage
 {
     // Base Classes
@@ -9,7 +11,7 @@ public unsafe struct DDD_IterationDataMessage
     public unsafe struct DDD_IterationDataMessage_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DDD_IterationDataMessage*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DDD_IterationDataMessage*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
 
         // Methods
     }

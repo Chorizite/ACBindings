@@ -1,9 +1,11 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Central manager for the application's string resources, coordinating reference counting and insertion into a global table.</summary>
 public unsafe struct MasterStringTableGen
 {
     // Statics
-    public static ACBindings.Internal.StringTableGen* s_pStringTableGen = (ACBindings.Internal.StringTableGen*)0x00837F58;
+    public static ACBindings.Internal.StringTableGen** s_pStringTableGen = (ACBindings.Internal.StringTableGen**)0x00837F58;
 
     // Methods
 

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Describes a terrain by aggregating land surface details and a dynamic array of terrain types, facilitating scene management, audio lookup, and data packing for the game engine.</summary>
 public unsafe struct CTerrainDesc : System.IDisposable
 {
     // Members
@@ -13,43 +15,57 @@ public unsafe struct CTerrainDesc : System.IDisposable
 
     // Methods
 
-    /// <summary>
+    /// <summary>Retrieves sub‑data IDs for this terrain description by delegating to its palette shift component if present; otherwise uses the texture merge component.
     /// <code>Offset: 0x00502F30
     /// void __thiscall CTerrainDesc::GetSubDataIDs(CTerrainDesc*,QualifiedDataIDArray*)</code>
     /// </summary>
+    /// <param name="id_array">Array that receives the collected QualifiedDataID entries.</param>
     public void GetSubDataIDs(ACBindings.Internal.QualifiedDataIDArray* id_array) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CTerrainDesc, ACBindings.Internal.QualifiedDataIDArray*, void>)0x00502F30)(ref this, id_array);
 
-    /// <summary>
+    /// <summary>Retrieves the ambient sound table description for a specified terrain and scene type, if available.
     /// <code>Offset: 0x00502F50
     /// AmbientSTBDesc* __thiscall CTerrainDesc::GetSTBDesc(CTerrainDesc*,unsigned int,unsigned int)</code>
     /// </summary>
+    /// <param name="terrain_id">Index of the terrain within the terrain types array.</param>
+    /// <param name="scene_type_id">Index of the scene type within that terrain's scene types array.</param>
+    /// <returns>Pointer to an AmbientSTBDesc instance containing sound information, or null when no matching entry exists.</returns>
     public ACBindings.Internal.AmbientSTBDesc* GetSTBDesc(uint terrain_id, uint scene_type_id) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CTerrainDesc, uint, uint, ACBindings.Internal.AmbientSTBDesc*>)0x00502F50)(ref this, terrain_id, scene_type_id);
 
     /// <summary>
+    /// Retrieves the data identifier for a specific scene element defined by terrain type and two additional indices. If the requested scene index exceeds the available count, assigns an invalid identifier.
+    /// 
     /// <code>Offset: 0x00502FD0
     /// IDClass&lt;_tagDataID,32,0&gt;* __thiscall CTerrainDesc::GetScene(_DWORD*,IDClass&lt;_tagDataID,32,0&gt;*,int,int,unsigned int)</code>
     /// </summary>
+    /// <param name="a2">The IDClass instance that will receive the resulting scene identifier.</param>
+    /// <param name="a3">Index of the terrain type within the terrain types array.</param>
+    /// <param name="a4">Secondary index used to select a sub‑array or surface within the chosen terrain type.</param>
+    /// <param name="a5">Zero‑based index of the desired scene in the selected sub‑array.</param>
+    /// <returns>The same IDClass instance passed as <c>a2</c>, now populated with the scene identifier or an invalid value if out of range.</returns>
     public ACBindings.Internal.IDClass____tagDataID* GetScene(ACBindings.Internal.IDClass____tagDataID* a2, int a3, int a4, uint a5) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CTerrainDesc, ACBindings.Internal.IDClass____tagDataID*, int, int, uint, ACBindings.Internal.IDClass____tagDataID*>)0x00502FD0)(ref this, a2, a3, a4, a5);
 
-    /// <summary>
+    /// <summary>Destroys the CTerrainDesc instance by freeing all associated terrain types and land surfaces, ensuring proper memory deallocation.
     /// <code>Offset: 0x00503050
     /// void __thiscall CTerrainDesc::Destroy(CTerrainDesc*)</code>
     /// </summary>
     public void Destroy() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CTerrainDesc, void>)0x00503050)(ref this);
 
-    /// <summary>
+    /// <summary>Adds a terrain type to the descriptor's list of terrain types, expanding storage as needed.
     /// <code>Offset: 0x00503100
     /// int __thiscall CTerrainDesc::Add(CTerrainDesc*,CTerrainType*)</code>
     /// </summary>
+    /// <param name="terrain">The terrain type to add.</param>
+    /// <returns>Returns 1 if the terrain was added successfully; otherwise returns an error code from the internal array growth operation.</returns>
     public int Add(ACBindings.Internal.CTerrainType* terrain) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CTerrainDesc, ACBindings.Internal.CTerrainType*, int>)0x00503100)(ref this, terrain);
 
-    /// <summary>
+    /// <summary>Computes the total number of bytes needed to serialize this terrain description, including terrain type names and associated scene data.
     /// <code>Offset: 0x00503150
     /// unsigned int __thiscall CTerrainDesc::pack_size(CTerrainDesc*)</code>
     /// </summary>
+    /// <returns>The packed byte size required for serialization.</returns>
     public uint pack_size() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CTerrainDesc, uint>)0x00503150)(ref this);
 
-    /// <summary>
+    /// <summary>Destroys a CTerrainDesc instance, releasing its associated land surfaces and terrain type array.
     /// <code>Offset: 0x005031C0
     /// void __thiscall CTerrainDesc::~CTerrainDesc(CTerrainDesc*)</code>
     /// </summary>

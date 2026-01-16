@@ -1,15 +1,20 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Describes metadata for a property within the system, including identity, type, constraints, default values, availability, inheritance behavior, and runtime flags that govern how the property interacts with persistence, replication, and tooling.</summary>
 public unsafe struct BasePropertyDesc : System.IDisposable
 {
     // Base Classes
     public ACBindings.Internal.ReferenceCountTemplate BaseClass_ReferenceCountTemplate; // ACBindings.Internal.ReferenceCountTemplate
 
+    // Statics
+    public static ACBindings.Internal.AvailablePropertySet* s_allAvailableProperties = (ACBindings.Internal.AvailablePropertySet*)0x008189D8;
+
     // Child Types
     public unsafe struct BasePropertyDesc_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.BasePropertyDesc*, void> BasePropertyDesc_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.BasePropertyDesc*, void> BasePropertyDesc_dtor_0; // function pointer
 
         // Methods
     }

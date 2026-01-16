@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents statistical information collected over a specific time interval, including identifier, byte count, packet count, and flow level metrics.</summary>
 public unsafe struct IntervalData
 {
     // Members

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides the COM interface used by applications to initiate drag‑and‑drop actions, exposing methods for querying drop support and controlling transfer behavior.</summary>
 public unsafe struct IDropSource
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct IDropSource
     public unsafe struct IDropSource_vtbl
     {
         // Members
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDropSource*, int, uint, int> QueryContinueDrag; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.IDropSource*, uint, int> GiveFeedback; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, ACBindings.Internal._GUID*, void**, int> QueryInterface; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> AddRef; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IUnknown*, uint> Release; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IDropSource*, int, uint, int> QueryContinueDrag; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.IDropSource*, uint, int> GiveFeedback; // function pointer
 
         // Methods
     }

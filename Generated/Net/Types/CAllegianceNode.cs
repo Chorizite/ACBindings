@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates an AllegianceNode instance, providing aligned storage and integration into the application’s allegiance data model.</summary>
 public unsafe struct CAllegianceNode
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct CAllegianceNode
     public unsafe struct CAllegianceNode_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceNode*, void> CAllegianceNode_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceNode*, void> CAllegianceNode_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceNode*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceNode*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceNode*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceNode*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceNode*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceNode*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }

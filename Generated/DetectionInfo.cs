@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides identification and current status of a detected object within the system.</summary>
 public unsafe struct DetectionInfo
 {
     // Members

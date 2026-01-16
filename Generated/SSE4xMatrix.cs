@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a 4×4 matrix of floating-point values aligned for SIMD, enabling efficient affine transformations and projections in graphics or physics calculations.</summary>
+/// <remarks>Fields are laid out to match SSE register boundaries, facilitating direct use with intrinsic instructions on x86 CPUs.</remarks>
 public unsafe struct SSE4xMatrix
 {
     // Members

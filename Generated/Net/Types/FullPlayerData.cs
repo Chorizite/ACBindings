@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates all data necessary to describe an active player session, such as unique identifiers, display names, network address, and spatial coordinates. Serves as the primary structure exchanged during login, matchmaking, and state updates.</summary>
 public unsafe struct FullPlayerData
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct FullPlayerData
     public unsafe struct FullPlayerData_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FullPlayerData*, void> FullPlayerData_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FullPlayerData*, void> FullPlayerData_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FullPlayerData*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FullPlayerData*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.FullPlayerData*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FullPlayerData*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FullPlayerData*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.FullPlayerData*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }

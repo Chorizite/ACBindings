@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Stores a 3‑dimensional vector as a property value, providing mechanisms for copying, comparison, serialization, and conversion via the BasePropertyValue interface.</summary>
 public unsafe struct VectorPropertyValue
 {
     // Base Classes

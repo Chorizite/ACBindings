@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates the result of searching for an HRESULT debug data entry, holding whether it was found, the HRESULT code, and a pointer to its associated debug information.</summary>
 public unsafe struct GetHResultDebugData_functor
 {
     // Members

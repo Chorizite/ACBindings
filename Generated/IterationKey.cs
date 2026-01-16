@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a 64‑bit value that serves as an identifier for iteration processes throughout the application.</summary>
 public unsafe struct IterationKey
 {
     // Child Types

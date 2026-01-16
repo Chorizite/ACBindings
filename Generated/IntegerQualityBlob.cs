@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Tracks the quality state of an integer property, storing its original and current values along with a reference to a UI text element for display.</summary>
 public unsafe struct IntegerQualityBlob
 {
     // Members

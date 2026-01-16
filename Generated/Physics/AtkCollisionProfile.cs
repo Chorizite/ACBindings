@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Defines a collision profile for an attack, identifying the target part, unique id, and spatial location within the game world.</summary>
 public unsafe struct AtkCollisionProfile
 {
     // Members
@@ -14,7 +16,7 @@ public unsafe struct AtkCollisionProfile
 
     // Methods
 
-    /// <summary>
+    /// <summary>Initializes a new AtkCollisionProfile with default values: part set to –1, id and location set to 0.
     /// <code>Offset: 0x0051C430
     /// void __thiscall AtkCollisionProfile::AtkCollisionProfile(AtkCollisionProfile*)</code>
     /// </summary>

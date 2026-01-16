@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents contextual information required when emitting debugging reports, encapsulating handles to the target process, thread, and loaded module as well as the associated thread ID.</summary>
 public unsafe struct DbgReportContext : System.IDisposable
 {
     // Members

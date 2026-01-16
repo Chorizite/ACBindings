@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates Turbine::Debug functionality within a protected context, facilitating safe exception handling and debug flag management for the application.</summary>
 public unsafe struct ProtectedDebug
 {
     // Base Classes
@@ -9,7 +11,7 @@ public unsafe struct ProtectedDebug
     public unsafe struct ProtectedDebug_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ProtectedDebug*, byte> InitDebug; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ProtectedDebug*, byte> InitDebug; // function pointer
 
         // Methods
     }

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates metadata for a database type, specifying its base and top data identifiers, update behavior, storage path, and numerous role flags such as client, server, engine, portal, cell, and local contexts.</summary>
 public unsafe struct DBTypeDef
 {
     // Members

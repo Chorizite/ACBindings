@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a header block for a disk image, containing a version string, transaction record identifier and file metadata.</summary>
 public unsafe struct DiskHeaderBlock_t
 {
     // Members

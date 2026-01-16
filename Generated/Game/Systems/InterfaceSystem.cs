@@ -1,7 +1,13 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides singleton access to a registry of interfaces keyed by GUID, enabling dynamic lookup, creation, registration, and deregistration of interface instances.</summary>
 public unsafe struct InterfaceSystem : System.IDisposable
 {
+    // Statics
+    public static ACBindings.Internal.InterfaceSystem** s_pInterfaceSystem = (ACBindings.Internal.InterfaceSystem**)0x00837740;
+    public static byte* s_bInterfaceSystemDestroyed = (byte*)0x00837744;
+
     // Members
     public ACBindings.Internal.AutoGrowHashTable___Turbine_GUID___Interface_ptr m_classTable;
 

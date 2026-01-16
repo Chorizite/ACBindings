@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Tracks the state of an individual quest, maintaining timing information and completion statistics for game logic synchronization.</summary>
 public unsafe struct QuestProfile
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct QuestProfile
     public unsafe struct QuestProfile_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestProfile*, void> QuestProfile_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestProfile*, void> QuestProfile_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestProfile*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestProfile*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestProfile*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestProfile*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestProfile*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.QuestProfile*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }

@@ -1,11 +1,11 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides pseudo‑random number generation functions, including floats, integers, seeding, and a combined linear‑congruential algorithm.</summary>
 public unsafe struct Random
 {
     // Statics
-    public static int* _seed = (int*)0x008189E8;
-    public static int* _idum2 = (int*)0x008189EC;
-    public static int* _iv = (int*)0x00837EA0;
+    public static int** _iv = (int**)0x00837EA0;
     public static int* _iy = (int*)0x00837F20;
 
     // Methods

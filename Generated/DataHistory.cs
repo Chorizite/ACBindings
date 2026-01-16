@@ -1,8 +1,12 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Tracks historical iterations of data entries, maintaining metadata such as GUID stamps, file identifiers, and the current iteration state. Stores and manages a collection of iteration records in an auto‑growing hash table while supporting write operations through a dedicated interface.</summary>
 public unsafe struct DataHistory
 {
     // Child Types
+
+    /// <summary>Tracks an individual data identifier within a history log, recording its qualified ID, size after compression, and the type of update performed.</summary>
     public unsafe struct DataIDHistoryData
     {
         // Members
@@ -12,6 +16,8 @@ public unsafe struct DataHistory
 
         // Methods
     }
+
+    /// <summary>Holds information for a single iteration in the data history, including identifiers, compression statistics, and build context.</summary>
     public unsafe struct IterationData
     {
         // Members
@@ -42,6 +48,8 @@ public unsafe struct DataHistory
         utIgnore = 0x2,
         utInvalid = 0x3
     }
+
+    /// <summary>Handles write‑only information for a history entry, storing the file name, the current iteration context, and a hash table for reverse data lookup.</summary>
     public unsafe struct WriteOnlyData
     {
         // Members

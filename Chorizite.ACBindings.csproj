@@ -11,6 +11,7 @@
         <GenerateDocumentationFile>True</GenerateDocumentationFile>
         <IsPackable>True</IsPackable>
         <DebugType>pdbonly</DebugType>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <NoWarn>1591;CS1587;CS1572</NoWarn>
     </PropertyGroup>
 

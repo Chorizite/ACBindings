@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides an intrusive list node linking async state machine data into a hash-based collection and a doubly linked list, facilitating efficient lookup and traversal within the asynchronous context.</summary>
 public unsafe struct IntrusiveHashListData___AsyncContext___CAsyncStateMachine_CAsyncStateData_ptr
 {
     // Base Classes
@@ -9,6 +11,8 @@ public unsafe struct IntrusiveHashListData___AsyncContext___CAsyncStateMachine_C
     // Methods
 }
 
+
+/// <summary>Represents a node in an intrusive hash table that maps integer keys to CAsyncStateHandler objects, linking entries via a doubly‑linked list for quick lookup and traversal.</summary>
 public unsafe struct IntrusiveHashListData__int___CAsyncStateHandler_ptr
 {
     // Base Classes
@@ -18,6 +22,8 @@ public unsafe struct IntrusiveHashListData__int___CAsyncStateHandler_ptr
     // Methods
 }
 
+
+/// <summary>Provides the storage node for a hash-based linked list of archive version rows, associating 32‑bit version handles with corresponding row holders.</summary>
 public unsafe struct IntrusiveHashListData___IDClass____tagVersionHandle___InArchiveVersionStack_VersionRowHolder_ptr
 {
     // Base Classes

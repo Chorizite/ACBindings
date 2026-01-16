@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds a property value that encapsulates string data through StringInfo and aggregates the base property functionality via BasePropertyValue composition.</summary>
+/// <remarks>Supports copying, comparison with other properties, loading from and saving to file nodes, validity checks on table identifiers and token markers, and serialization into archives. The struct does not inherit from BasePropertyValue; instead it contains a BasePropertyValue instance that provides the common property interface.</remarks>
 public unsafe struct StringInfoPropertyValue
 {
     // Base Classes

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds metadata for a building instance, including its unique identifier, spatial frame, leaf count, portal count, and references to portal data.</summary>
 public unsafe struct BuildInfo : System.IDisposable
 {
     // Members
@@ -16,7 +18,7 @@ public unsafe struct BuildInfo : System.IDisposable
 
     // Methods
 
-    /// <summary>
+    /// <summary>Destroys a BuildInfo instance by deleting all portal objects, freeing the portals array, nullifying pointers, resetting counts, and assigning an invalid identifier to building_id.
     /// <code>Offset: 0x0052F480
     /// void __thiscall BuildInfo::~BuildInfo(BuildInfo*)</code>
     /// </summary>

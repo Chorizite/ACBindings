@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a 4×4 matrix of floating‑point values, storing elements _11 through _44.</summary>
 public unsafe struct _40942CBCB8F0A1CDBC81269929B28324
 {
     // Members

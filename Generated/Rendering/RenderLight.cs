@@ -1,5 +1,12 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Represents an individual light source within the rendering engine, storing its Direct3D 9 configuration, spatial cell association, and distance data for culling.
+/// </summary>
+/// <remarks>
+/// The constructor sets the light’s offset frame to an identity transform and caches it for efficient use during rendering passes.
+/// </remarks>
 public unsafe struct RenderLight
 {
     // Members
@@ -16,7 +23,7 @@ public unsafe struct RenderLight
 
     // Methods
 
-    /// <summary>
+    /// <summary>Initializes the light's offset frame with an identity quaternion and zero translation, then caches the resulting transform for rendering.
     /// <code>Offset: 0x0054D6D0
     /// void __thiscall RenderLight::RenderLight(RenderLight*)</code>
     /// </summary>

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds lighting parameters for a scene, including ambient and sun colors and collections of static and dynamic render lights. Initializes each light to an identity quaternion and zero position, then caches its frame for rendering.</summary>
 public unsafe struct LightParms
 {
     // Members
@@ -26,10 +28,11 @@ public unsafe struct LightParms
 
     // Methods
 
-    /// <summary>
+    /// <summary>Initializes a LightParms instance by setting all lights to an identity quaternion and zero position, then caching each light’s frame for rendering use.
     /// <code>Offset: 0x0054E3B0
     /// void __thiscall LightParms::LightParms(LightParms*)</code>
     /// </summary>
+    /// <returns>No value is returned; the constructor configures the object in place.</returns>
     public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.LightParms, void>)0x0054E3B0)(ref this);
 }
 

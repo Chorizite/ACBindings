@@ -1,15 +1,24 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Coordinates queued advisory packets, ensuring thread‑safe access and efficient event notification.
+/// </summary>
+/// <remarks>
+/// Maintains a cache of advise packets, tracks next cookie values, and uses a critical section to serialize operations. An event handle signals when new packets are available.
+/// </remarks>
 public unsafe struct CAMSchedule
 {
     // Child Types
     public unsafe struct CAMSchedule_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAMSchedule*, void> CAMSchedule_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAMSchedule*, void> CAMSchedule_dtor_0; // function pointer
 
         // Methods
     }
+
+    /// <summary>Represents a scheduled event packet that links to the next packet in a list, identifies the callback with an advise cookie, stores event time and period for periodic notifications, holds a notification handle, and flags whether it is periodic.</summary>
     public unsafe struct CAdvisePacket
     {
         // Members

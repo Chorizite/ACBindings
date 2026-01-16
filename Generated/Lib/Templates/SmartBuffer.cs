@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Buffer abstraction that holds a reference to a master GrowBuffer, tracking its own start offset and size within the larger buffer for efficient sub-buffer management.</summary>
+/// <remarks>Used to represent a contiguous segment of data inside a GrowBuffer; facilitates operations without copying or reallocating memory.</remarks>
 public unsafe struct SmartBuffer
 {
     // Members

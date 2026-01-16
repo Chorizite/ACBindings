@@ -13,24 +13,24 @@ public unsafe struct CPlayerSystem : System.IDisposable
     public ACBindings.Internal.ObjectRangeHandler BaseClass_ObjectRangeHandler; // ACBindings.Internal.ObjectRangeHandler
 
     // Statics
-    public static ACBindings.Internal.CPlayerSystem* s_pPlayerSystem = (ACBindings.Internal.CPlayerSystem*)0x0087119C;
+    public static ACBindings.Internal.CPlayerSystem** s_pPlayerSystem = (ACBindings.Internal.CPlayerSystem**)0x0087119C;
 
     // Child Types
     public unsafe struct CPlayerSystem_vtbl
     {
         // Members
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ClientSystem*, void> OnStartup; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ClientSystem*, void> UseTime; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ClientSystem*, void> OnBeginCharacterSession; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ClientSystem*, void> OnEndCharacterSession; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ClientSystem*, void> OnShutdown; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CPlayerSystem*, ACBindings.Internal.CPlayerSystem.Enum15> You_Must_Not_Have_Multiple_Implementations_Of_AddRef_In_A_Hierarchy; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ClientSystem*, void> OnStartup; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ClientSystem*, void> UseTime; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ClientSystem*, void> OnBeginCharacterSession; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ClientSystem*, void> OnEndCharacterSession; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ClientSystem*, void> OnShutdown; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CPlayerSystem*, ACBindings.Internal.CPlayerSystem.Enum15> You_Must_Not_Have_Multiple_Implementations_Of_AddRef_In_A_Hierarchy; // function pointer
 
         // Methods
     }
@@ -537,10 +537,13 @@ public unsafe struct CPlayerSystem : System.IDisposable
     /// <returns>True if the item was successfully wielded (or moved to backpack); otherwise false.</returns>
     public byte AutoWield(uint item, ACBindings.Internal.UI_SLOT_SIDE slotSide, int quiet, int unblock, int autosortOnFail, int trySecondChoiceSide) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CPlayerSystem, uint, ACBindings.Internal.UI_SLOT_SIDE, int, int, int, int, byte>)0x005617D0)(ref this, item, slotSide, quiet, unblock, autosortOnFail, trySecondChoiceSide);
 
-    /// <summary>
+    /// <summary>Processes a player action input event, routing it to the appropriate handler such as targeting, inventory manipulation or UI toggles.
     /// <code>Offset: 0x00562600
     /// bool __thiscall CPlayerSystem::OnAction(CPlayerSystem*,const InputEvent*)</code>
     /// </summary>
+    /// <param name="this">The CPlayerSystem instance on which to process the action.</param>
+    /// <param name="i_evt">Input event containing the action identifier and additional data.</param>
+    /// <returns>True if the event was handled; otherwise false.</returns>
     public byte OnAction(ACBindings.Internal.InputEvent* i_evt) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CPlayerSystem, ACBindings.Internal.InputEvent*, byte>)0x00562600)(ref this, i_evt);
 
     /// <summary>Terminates the current character session, unregisters input callbacks, releases any pending SmartBox references, and resets the player system by invoking End and Begin.

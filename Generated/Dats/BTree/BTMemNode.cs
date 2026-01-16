@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a node in the behavior tree memory structure, storing timestamp, dirty status, pointers to adjacent nodes, offset data, and the core BTNode payload.</summary>
 public unsafe struct BTMemNode
 {
     // Members

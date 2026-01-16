@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Manages writing log messages to a text file, lazily opening the file on first use, supporting dynamic log‑file switching, and handling reference‑counted resources for process‑specific log instances.</summary>
 public unsafe struct TextFileOutputHandler : System.IDisposable
 {
     // Base Classes
@@ -9,9 +11,9 @@ public unsafe struct TextFileOutputHandler : System.IDisposable
     public unsafe struct TextFileOutputHandler_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TextFileOutputHandler*, void> TextFileOutputHandler_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TextFileOutputHandler*, ACBindings.Internal.Logger.LoggingSeverity, uint, sbyte*, ACBindings.Internal.Logger.LoggerWriteResult> Write; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TextFileOutputHandler*, void> Flush; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TextFileOutputHandler*, void> TextFileOutputHandler_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TextFileOutputHandler*, ACBindings.Internal.Logger.LoggingSeverity, uint, sbyte*, ACBindings.Internal.Logger.LoggerWriteResult> Write; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TextFileOutputHandler*, void> Flush; // function pointer
         public System.IntPtr ChangeLogFile;
         public System.IntPtr GetLogFileName;
 

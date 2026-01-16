@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Manages archive versions by storing version rows in an intrusive hash list, handling reference counting, and exposing query interfaces to retrieve or modify version data.
+/// </summary>
 public unsafe struct InArchiveVersionStack : System.IDisposable
 {
     // Base Classes
@@ -9,21 +13,21 @@ public unsafe struct InArchiveVersionStack : System.IDisposable
     public unsafe struct InArchiveVersionStack_vtbl
     {
         // Members
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
-        public delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IArchiveVersionStack*, uint, uint> GetVersionByToken; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IArchiveVersionStack*, uint, uint, byte> SetVersion; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, ACBindings.Internal._GUID*, void**, int> IUnknown_QueryInterface; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_AddRef; // function pointer
+        public static delegate* unmanaged[Stdcall]<ACBindings.Internal.Interface*, uint> IUnknown_Release; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, ACBindings.Internal.TResult*, ACBindings.Internal.Turbine_GUID*, void**, ACBindings.Internal.TResult*> QueryInterface; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> AddRef; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Interface*, uint> Release; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.IArchiveVersionStack*, uint, uint> GetVersionByToken; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.IArchiveVersionStack*, uint, uint, byte> SetVersion; // function pointer
         public fixed byte gap20[4];
         public System.IntPtr PushVersionRow;
         public System.IntPtr PopVersionRow;
         public System.IntPtr GetRowByHandle;
         public System.IntPtr GetCurrentVersionHandle;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.IArchiveVersionStack*, void> Reset; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.InArchiveVersionStack*, ACBindings.Internal.InArchiveVersionStack.Enum3> You_Must_Not_Have_Multiple_Implementations_Of_AddRef_In_A_Hierarchy; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.IArchiveVersionStack*, void> Reset; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.InArchiveVersionStack*, ACBindings.Internal.InArchiveVersionStack.Enum3> You_Must_Not_Have_Multiple_Implementations_Of_AddRef_In_A_Hierarchy; // function pointer
 
         // Methods
     }
@@ -31,6 +35,8 @@ public unsafe struct InArchiveVersionStack : System.IDisposable
     public enum Enum3 : uint
     {
     }
+
+    /// <summary>Maintains a single entry in the archive version stack, connecting via an intrusive hash list to enable efficient lookup while storing the associated ArchiveVersionRow data.</summary>
     public unsafe struct VersionRowHolder
     {
         // Base Classes

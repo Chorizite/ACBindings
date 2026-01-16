@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Represents an inventory container for a game object, maintaining separate lists of contained items and subcontainers while tracking placement information.
+/// </summary>
 public unsafe struct CObjectInventory : System.IDisposable
 {
     // Base Classes
@@ -9,7 +13,7 @@ public unsafe struct CObjectInventory : System.IDisposable
     public unsafe struct CObjectInventory_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CObjectInventory*, void> CObjectInventory_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CObjectInventory*, void> CObjectInventory_dtor_0; // function pointer
 
         // Methods
     }
@@ -31,13 +35,14 @@ public unsafe struct CObjectInventory : System.IDisposable
 
     // Methods
 
-    /// <summary>
+    /// <summary>Constructs a CObjectInventory, assigning it the supplied ID and initializing all internal data structures.
     /// <code>Offset: 0x006B5BC0
     /// void __thiscall CObjectInventory::CObjectInventory(CObjectInventory*,unsigned int)</code>
     /// </summary>
+    /// <param name="objectID">Unique identifier for the new inventory instance.</param>
     public void _ConstructorInternal(uint objectID) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CObjectInventory, uint, void>)0x006B5BC0)(ref this, objectID);
 
-    /// <summary>
+    /// <summary>Destroys an instance of CObjectInventory, clearing its item and container lists and resetting internal data structures.
     /// <code>Offset: 0x006B5C00
     /// void __thiscall CObjectInventory::~CObjectInventory(CObjectInventory*)</code>
     /// </summary>

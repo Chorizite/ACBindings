@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a collection mapping unique identifiers to their corresponding AvailableProperty objects, facilitating efficient lookup and management of available properties within the system.</summary>
 public unsafe struct AvailablePropertySet
 {
     // Members

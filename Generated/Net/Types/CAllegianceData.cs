@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Wraps an AllegianceData instance, providing a custom virtual table for polymorphic handling of alliance data within the system. Stores and manages alliance information such as name, title, membership status, and related metadata. Acts as a lightweight container that facilitates serialization and deserialization via PackObj functions.</summary>
 public unsafe struct CAllegianceData
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct CAllegianceData
     public unsafe struct CAllegianceData_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceData*, void> CAllegianceData_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceData*, void> CAllegianceData_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceData*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceData*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceData*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceData*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceData*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceData*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -25,7 +27,7 @@ public unsafe struct CAllegianceData
 
     // Methods
 
-    /// <summary>
+    /// <summary>Creates a new CAllegianceData instance and initializes its base AllegianceData subobject.
     /// <code>Offset: 0x0059A040
     /// void __thiscall CAllegianceData::CAllegianceData(CAllegianceData*)</code>
     /// </summary>

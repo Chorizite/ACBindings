@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates movement data for an entity, detailing its type, motion state, identifiers, spatial position, size attributes, and a reference to additional parameters.</summary>
 public unsafe struct MovementStruct
 {
     // Members

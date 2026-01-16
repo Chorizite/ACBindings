@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents an allegiance profile within the system, encapsulating alignment information and associated data for efficient memory usage.</summary>
 public unsafe struct CAllegianceProfile
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct CAllegianceProfile
     public unsafe struct CAllegianceProfile_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceProfile*, void> CAllegianceProfile_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceProfile*, void> CAllegianceProfile_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceProfile*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceProfile*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceProfile*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceProfile*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceProfile*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CAllegianceProfile*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -25,7 +27,7 @@ public unsafe struct CAllegianceProfile
 
     // Methods
 
-    /// <summary>
+    /// <summary>Creates a new CAllegianceProfile object by invoking its base AllegianceProfile constructor and setting the appropriate vtable.
     /// <code>Offset: 0x0059A080
     /// void __thiscall CAllegianceProfile::CAllegianceProfile(CAllegianceProfile*)</code>
     /// </summary>

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal.AC1Legacy;
 
+
+/// <summary>Holds an unsigned int value within a doubly linked list node, providing next and previous pointers for traversal.</summary>
 public unsafe struct ListNode__uint
 {
     // Members
@@ -10,6 +12,8 @@ public unsafe struct ListNode__uint
     // Methods
 }
 
+
+/// <summary>Links FriendData objects into a doubly linked list for efficient navigation, insertion, and deletion within AC1Legacy.</summary>
 public unsafe struct ListNode___FriendData
 {
     // Members
@@ -20,6 +24,8 @@ public unsafe struct ListNode___FriendData
     // Methods
 }
 
+
+/// <summary>Encapsulates a SpellSetTierList within a doubly linked list node, providing next and previous pointers for efficient bidirectional traversal.</summary>
 public unsafe struct ListNode___SpellSetTierList
 {
     // Members
@@ -30,6 +36,8 @@ public unsafe struct ListNode___SpellSetTierList
     // Methods
 }
 
+
+/// <summary>Represents a node in a doubly‑linked list that stores a string value. Provides forward and backward traversal links used by legacy AC1 components.</summary>
 public unsafe struct ListNode___AC1Legacy_PStringBase__sbyte
 {
     // Members

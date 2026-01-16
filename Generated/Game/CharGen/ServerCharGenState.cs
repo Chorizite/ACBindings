@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Maintains shared state for server‑side character generation, extending the core CharGenState with RNG seeds and pull counters to support deterministic generation across multiple requests.</summary>
 public unsafe struct ServerCharGenState
 {
     // Base Classes
@@ -9,9 +11,9 @@ public unsafe struct ServerCharGenState
     public unsafe struct ServerCharGenState_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ServerCharGenState*, void> UpdateTrueFacePal; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ServerCharGenState*, int, int> GetRandomInt; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ServerCharGenState*, double> GetRandomReal; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ServerCharGenState*, void> UpdateTrueFacePal; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ServerCharGenState*, int, int> GetRandomInt; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ServerCharGenState*, double> GetRandomReal; // function pointer
 
         // Methods
     }

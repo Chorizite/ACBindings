@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Handles always‑loaded block management, coordinating timer updates and touch‑mode transitions to maintain continuous operation of critical blocks within the system.</summary>
 public unsafe struct AlwaysLoaded
 {
     // Base Classes
@@ -9,9 +11,9 @@ public unsafe struct AlwaysLoaded
     public unsafe struct AlwaysLoaded_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AlwaysLoaded*, void> AlwaysLoaded_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AlwaysLoaded*, sbyte*, int> Reload; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.AlwaysLoaded*, uint, int> fEntryInBlockList; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AlwaysLoaded*, void> AlwaysLoaded_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AlwaysLoaded*, sbyte*, int> Reload; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.AlwaysLoaded*, uint, int> fEntryInBlockList; // function pointer
 
         // Methods
     }

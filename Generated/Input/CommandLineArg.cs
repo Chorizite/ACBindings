@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a command‑line argument definition used to parse program options, storing metadata such as short and long identifiers, description, target variable, default value, and custom user data.</summary>
 public unsafe struct CommandLineArg : System.IDisposable
 {
     // Members

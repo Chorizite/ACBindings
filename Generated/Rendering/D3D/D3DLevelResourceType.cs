@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Represents a collection of render surface resources linked to a Direct3D level, holding references to up to six individual surfaces utilized for rendering or texturing within that level.
+/// </summary>
 public unsafe struct D3DLevelResourceType
 {
     // Members
@@ -13,7 +17,7 @@ public unsafe struct D3DLevelResourceType
 
     // Methods
 
-    /// <summary>
+    /// <summary>Initializes a D3DLevelResourceType instance by clearing all internal resource pointers to null.
     /// <code>Offset: 0x00696040
     /// void __thiscall D3DLevelResourceType::D3DLevelResourceType(D3DLevelResourceType*)</code>
     /// </summary>

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates the quality state of a body part, maintaining its current and saved values while linking to UI controls that present damage, variance, and armor statistics.</summary>
 public unsafe struct BodyPartQualityBlob
 {
     // Members

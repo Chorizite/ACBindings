@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Manages individual inventory slots for a character, holding pointers to CInvSlotInfo objects that represent equipped items across all body locations.
+/// </summary>
 public unsafe struct CInvSlotModule : System.IDisposable
 {
     // Members
@@ -40,19 +44,19 @@ public unsafe struct CInvSlotModule : System.IDisposable
 
     // Methods
 
-    /// <summary>
+    /// <summary>Initializes an inventory slot module by allocating and configuring individual slot objects with default values for each equipment location.
     /// <code>Offset: 0x0055E680
     /// void __thiscall CInvSlotModule::CInvSlotModule(CInvSlotModule*)</code>
     /// </summary>
     public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CInvSlotModule, void>)0x0055E680)(ref this);
 
-    /// <summary>
+    /// <summary>Resets every equipment slot in the inventory module, clearing all assigned items by setting each slot’s item ID to zero.
     /// <code>Offset: 0x0055E9C0
     /// void __thiscall CInvSlotModule::Reset(CInvSlotModule*)</code>
     /// </summary>
     public void Reset() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.CInvSlotModule, void>)0x0055E9C0)(ref this);
 
-    /// <summary>
+    /// <summary>Releases all inventory slots owned by the module, deleting any allocated CInvSlotInfo objects and clearing member pointers.
     /// <code>Offset: 0x0055F240
     /// void __thiscall CInvSlotModule::~CInvSlotModule(CInvSlotModule*)</code>
     /// </summary>

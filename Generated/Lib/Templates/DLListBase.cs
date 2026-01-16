@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Maintains references to the first and last elements of a doubly linked list, enabling efficient insertion and removal operations from both ends.</summary>
 public unsafe struct DLListBase
 {
     // Members

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds a 64‑bit integer for use as a property value, providing operations for copying, comparison, string conversion, and binary serialization.</summary>
 public unsafe struct LongIntegerPropertyValue
 {
     // Base Classes

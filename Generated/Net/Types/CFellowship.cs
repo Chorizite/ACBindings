@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates a Fellowship instance, providing direct access to its data.</summary>
 public unsafe struct CFellowship
 {
     // Base Classes
@@ -9,11 +11,11 @@ public unsafe struct CFellowship
     public unsafe struct CFellowship_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CFellowship*, void> CFellowship_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CFellowship*, void> CFellowship_dtor_0; // function pointer
         public fixed byte gap4[4];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CFellowship*, uint> GetPackSize; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CFellowship*, void**, uint, uint> Pack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CFellowship*, void**, uint, int> UnPack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CFellowship*, uint> GetPackSize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CFellowship*, void**, uint, uint> Pack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CFellowship*, void**, uint, int> UnPack; // function pointer
 
         // Methods
     }
@@ -25,7 +27,7 @@ public unsafe struct CFellowship
 
     // Methods
 
-    /// <summary>
+    /// <summary>Initializes a CFellowship instance by constructing its Fellowship base subobject and assigning the appropriate virtual table.
     /// <code>Offset: 0x0059B570
     /// void __thiscall CFellowship::CFellowship(CFellowship*)</code>
     /// </summary>

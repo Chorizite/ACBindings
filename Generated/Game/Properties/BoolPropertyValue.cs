@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Represents a boolean property value within the system, providing storage and management of true/false state for configuration or runtime data.
+/// </summary>
 public unsafe struct BoolPropertyValue
 {
     // Base Classes

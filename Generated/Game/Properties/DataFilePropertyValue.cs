@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates a file identifier for use in the property framework, holding a BasePropertyValue base instance and an IDClass of 32‑bit data IDs.</summary>
+/// <remarks>Contains a BasePropertyValue member rather than inheriting from it. Provides equality comparison, value assignment, timestamp querying (unsupported), and string representation with optional relative path formatting based on context flags.</remarks>
 public unsafe struct DataFilePropertyValue
 {
     // Base Classes

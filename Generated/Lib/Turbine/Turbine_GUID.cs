@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a globally unique identifier in standard UUID format, holding the 128‑bit value split into four fields for use throughout Turbine components.</summary>
 public unsafe struct Turbine_GUID
 {
     // Members

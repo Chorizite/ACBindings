@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Stores key‑value pairs of unsigned long values in a hash table, tracking bucket layout and element count to support fast lookups and insertions.</summary>
 public unsafe struct OldHashTable__uint__uint
 {
     // Members

@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Specifies the range of triangles and vertices used by a single draw call, tracking the first triangle index, the number of triangles in the batch, the current processing triangle index, and the start and end vertex indices.</summary>
 public unsafe struct MeshBatchType
 {
     // Members

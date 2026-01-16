@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Initiates a pull operation by specifying the expected data size, the iterations to retrieve, and their corresponding keys.</summary>
 public unsafe struct DDD_BeginPullDDDMessage
 {
     // Base Classes
@@ -9,7 +11,7 @@ public unsafe struct DDD_BeginPullDDDMessage
     public unsafe struct DDD_BeginPullDDDMessage_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DDD_BeginPullDDDMessage*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DDD_BeginPullDDDMessage*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
 
         // Methods
     }

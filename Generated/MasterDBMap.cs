@@ -1,15 +1,19 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Central repository for database type definitions and lookup functions used throughout the game engine, providing mapping between identifiers and file extensions, directories, and resource categories.</summary>
 public unsafe struct MasterDBMap
 {
     // Statics
-    public static ACBindings.Internal.MasterDBMap* sm_mmap = (ACBindings.Internal.MasterDBMap*)0x00837C68;
+    public static ACBindings.Internal.MasterDBMap** sm_mmap = (ACBindings.Internal.MasterDBMap**)0x00837C68;
+    public static ACBindings.Internal.PStringBase__sbyte* sm_game_data_dir = (ACBindings.Internal.PStringBase__sbyte*)0x00837C70;
+    public static ACBindings.Internal.PStringBase__sbyte* sm_engine_data_dir = (ACBindings.Internal.PStringBase__sbyte*)0x00837C74;
 
     // Child Types
     public unsafe struct MasterDBMap_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.MasterDBMap*, byte> InitDBTypeDef_Internal; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.MasterDBMap*, byte> InitDBTypeDef_Internal; // function pointer
         public fixed byte gap4[4];
         public System.IntPtr DivineType_Internal;
         public System.IntPtr InqTypeByString_Internal;

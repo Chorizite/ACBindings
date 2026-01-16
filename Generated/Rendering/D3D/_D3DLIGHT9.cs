@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Defines a Direct3D 9 light source with type, color properties, spatial position and direction, attenuation parameters, and cutoff angles for spotlights.</summary>
 public unsafe struct _D3DLIGHT9
 {
     // Members

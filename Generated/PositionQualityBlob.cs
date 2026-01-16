@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates positional data along with its quality metric, maintaining both stored and live coordinates for synchronization with the user interface.</summary>
 public unsafe struct PositionQualityBlob
 {
     // Members

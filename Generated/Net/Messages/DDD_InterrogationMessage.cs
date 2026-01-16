@@ -1,5 +1,10 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Represents an interrogation message sent by the client to query server capabilities and supported languages.
+/// Includes region identifier, language rule, product ID, and a list of supported language identifiers, with serialization support for network transmission.
+/// </summary>
 public unsafe struct DDD_InterrogationMessage : System.IDisposable
 {
     // Base Classes
@@ -9,7 +14,7 @@ public unsafe struct DDD_InterrogationMessage : System.IDisposable
     public unsafe struct DDD_InterrogationMessage_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.DDD_InterrogationMessage*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.DDD_InterrogationMessage*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
 
         // Methods
     }
@@ -27,16 +32,18 @@ public unsafe struct DDD_InterrogationMessage : System.IDisposable
 
     // Methods
 
-    /// <summary>
+    /// <summary>Releases resources owned by a DDD_InterrogationMessage instance, deleting the dynamic array of supported languages if it was allocated.
     /// <code>Offset: 0x004F8C30
     /// void __thiscall DDD_InterrogationMessage::~DDD_InterrogationMessage(DDD_InterrogationMessage*)</code>
     /// </summary>
+    /// <param name="this">Pointer to the instance being destroyed.</param>
     public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DDD_InterrogationMessage, void>)0x004F8C30)(ref this);
 
-    /// <summary>
+    /// <summary>Serializes or deserializes a DDD_InterrogationMessage into the provided archive, writing or reading its fields according to the archive's mode flag. Handles alignment and includes the supported languages array.
     /// <code>Offset: 0x004F9190
     /// void __thiscall DDD_InterrogationMessage::Serialize(DDD_InterrogationMessage*,Archive*)</code>
     /// </summary>
+    /// <param name="io_archive">Archive used for serialization/deserialization.</param>
     public void Serialize(ACBindings.Internal.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.DDD_InterrogationMessage, ACBindings.Internal.Archive*, void>)0x004F9190)(ref this, io_archive);
 }
 

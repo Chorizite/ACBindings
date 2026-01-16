@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents configuration and state for portal rendering, holding a list of portals, view parameters, and counters for update frequency.</summary>
 public unsafe struct portal_view_type
 {
     // Members

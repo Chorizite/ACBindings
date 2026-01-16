@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates flags and material properties that dictate how a surface is rendered, including lighting, fog, dye colors, ambient illumination, and alpha testing.</summary>
 public unsafe struct MaterialGraphicsStatesType
 {
     // Members

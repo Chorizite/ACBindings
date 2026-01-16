@@ -1,12 +1,16 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates an output destination that can write data either to a file handle or an internal string buffer, using a virtual function table to support different stream implementations.</summary>
 public unsafe struct OutputStream
 {
     // Child Types
+
+    /// <summary>Defines the vtable layout for OutputStream, exposing its destructor and enabling polymorphic cleanup of derived streams.</summary>
     public unsafe struct OutputStream_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.OutputStream*, void> OutputStream_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.OutputStream*, void> OutputStream_dtor_0; // function pointer
 
         // Methods
     }

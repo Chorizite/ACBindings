@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Manages a hierarchical context menu system in the UI, controlling visibility, submenu relationships, and interaction events.</summary>
+/// <remarks>Holds references to parent displays, root element, listbox, mouse child, timing data, and flags for drawing and initialization status.</remarks>
 public unsafe struct ContextMenu
 {
     // Base Classes
@@ -9,11 +12,11 @@ public unsafe struct ContextMenu
     public unsafe struct ContextMenu_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ContextMenu*, void> ContextMenu_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ContextMenu*, ACBindings.Internal.InputEvent*, byte> OnAction; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ContextMenu*, uint, uint, uint, ACBindings.Internal.CallbackLoseFocusResult> OnLoseFocus; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ContextMenu*, uint, ACBindings.Internal.UIElement*, uint, int, ACBindings.Internal.UIElementMessageListenResult> ListenToElementMessage; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.ContextMenu*, uint, int, void> ListenToGlobalMessage; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ContextMenu*, void> ContextMenu_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ContextMenu*, ACBindings.Internal.InputEvent*, byte> OnAction; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ContextMenu*, uint, uint, uint, ACBindings.Internal.CallbackLoseFocusResult> OnLoseFocus; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ContextMenu*, uint, ACBindings.Internal.UIElement*, uint, int, ACBindings.Internal.UIElementMessageListenResult> ListenToElementMessage; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.ContextMenu*, uint, int, void> ListenToGlobalMessage; // function pointer
 
         // Methods
     }
@@ -41,16 +44,18 @@ public unsafe struct ContextMenu
 
     // Methods
 
-    /// <summary>
+    /// <summary>Closes this context menu, recursively closing any open submenus and destroying associated UI elements before marking it as closed.
     /// <code>Offset: 0x00474F30
     /// bool __thiscall ContextMenu::Close(ContextMenu*)</code>
     /// </summary>
+    /// <returns>True if the menu was already closed or had no open submenus; false if a submenu was closed during the operation or when the menu has no display element to destroy.</returns>
     public byte Close() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ContextMenu, byte>)0x00474F30)(ref this);
 
-    /// <summary>
+    /// <summary>Shows or hides the context menu, automatically closing it when hiding while currently open.
     /// <code>Offset: 0x00474FF0
     /// void __thiscall ContextMenu::SetVisible(ContextMenu*,bool)</code>
     /// </summary>
+    /// <param name="visible">True to display the menu; false to hide it.</param>
     public void SetVisible(byte visible) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.ContextMenu, byte, void>)0x00474FF0)(ref this, visible);
 }
 

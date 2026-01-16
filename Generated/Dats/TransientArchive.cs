@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates an Archive instance for transient storage during serialization tasks, enabling temporary data handling without persistent side effects.</summary>
 public unsafe struct TransientArchive
 {
     // Base Classes
@@ -9,13 +11,13 @@ public unsafe struct TransientArchive
     public unsafe struct TransientArchive_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransientArchive*, ACBindings.Internal.ArchiveInitializer*, ACBindings.Internal.SmartBuffer*, void> InitForPacking; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransientArchive*, ACBindings.Internal.ArchiveInitializer*, ACBindings.Internal.SmartBuffer*, void> InitForUnpacking; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransientArchive*, byte, void> SetCheckpointing; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransientArchive*, void> InitVersionStack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransientArchive*, void> CreateVersionStack; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransientArchive*, ACBindings.Internal.SmartBuffer*, void> InitForPacking_14; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.TransientArchive*, ACBindings.Internal.SmartBuffer*, void> InitForUnpacking_18; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TransientArchive*, ACBindings.Internal.ArchiveInitializer*, ACBindings.Internal.SmartBuffer*, void> InitForPacking; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TransientArchive*, ACBindings.Internal.ArchiveInitializer*, ACBindings.Internal.SmartBuffer*, void> InitForUnpacking; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TransientArchive*, byte, void> SetCheckpointing; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TransientArchive*, void> InitVersionStack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TransientArchive*, void> CreateVersionStack; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TransientArchive*, ACBindings.Internal.SmartBuffer*, void> InitForPacking_14; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.TransientArchive*, ACBindings.Internal.SmartBuffer*, void> InitForUnpacking_18; // function pointer
 
         // Methods
     }
@@ -51,10 +53,13 @@ public unsafe struct TransientArchive
     /// <param name="i_buffer">Source buffer containing packed data.</param>
     public void InitForUnpacking(ACBindings.Internal.SmartBuffer* i_buffer) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TransientArchive, ACBindings.Internal.SmartBuffer*, void>)0x00401690)(ref this, i_buffer);
 
-    /// <summary>
+    /// <summary>Initializes a TransientArchive from raw data, copying the specified buffer into an internal SmartBuffer and configuring the base Archive for unpacking.
     /// <code>Offset: 0x004F7A90
     /// void __thiscall TransientArchive::TransientArchive(TransientArchive*,Archive::tagUnpacking,void*,unsigned int)</code>
     /// </summary>
+    /// <param name="formal">Tag indicating that the archive is being constructed for unpacking; used internally to select the correct initialization path.</param>
+    /// <param name="addr">Pointer to the source memory block containing serialized data.</param>
+    /// <param name="size">Number of bytes in the source buffer.</param>
     public void _ConstructorInternal(ACBindings.Internal.Archive.tagUnpacking formal, System.IntPtr addr, uint size) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TransientArchive, ACBindings.Internal.Archive.tagUnpacking, System.IntPtr, uint, void>)0x004F7A90)(ref this, formal, addr, size);
 }
 

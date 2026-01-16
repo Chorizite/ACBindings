@@ -1,5 +1,10 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Stores metadata for a specific data type, including its name, root paths, and a hash table mapping data identifiers to file entries.
+/// Maintains reference‑counted string buffers and supports efficient lookup of associated TFileEntry objects.
+/// </summary>
 public unsafe struct TDBTypeEntry : System.IDisposable
 {
     // Members
@@ -23,13 +28,13 @@ public unsafe struct TDBTypeEntry : System.IDisposable
 
     // Methods
 
-    /// <summary>
+    /// <summary>Destroys a TDBTypeEntry instance, freeing its hash table of file entries and releasing any reference‑counted string buffers associated with the type name and root paths.
     /// <code>Offset: 0x0067A200
     /// void __thiscall TDBTypeEntry::~TDBTypeEntry(TDBTypeEntry*)</code>
     /// </summary>
     public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.TDBTypeEntry, void>)0x0067A200)(ref this);
 
-    /// <summary>
+    /// <summary>Initializes a TDBTypeEntry instance by setting its string members to an empty state, establishing reference counts for the shared null buffer, and preparing an AutoGrowHashTable with a 2048-entry capacity for data ID mapping.
     /// <code>Offset: 0x0067B2A0
     /// void __thiscall TDBTypeEntry::TDBTypeEntry(TDBTypeEntry*)</code>
     /// </summary>

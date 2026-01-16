@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Identifies a data element by its type and unique ID, enabling lookup and categorization across the system.</summary>
 public unsafe struct QualifiedDataID
 {
     // Members

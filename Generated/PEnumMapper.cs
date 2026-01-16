@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Maintains mappings between enumeration values and their textual representations, including alias handling and case‑insensitive lookups. Supports inheritance depth and numbering strategies for flexible enum serialization.</summary>
 public unsafe struct PEnumMapper
 {
     // Child Types

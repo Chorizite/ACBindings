@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a sub‑palette segment within a larger color palette, storing its starting index and number of entries.</summary>
 public unsafe struct PalShiftSubPal
 {
     // Members

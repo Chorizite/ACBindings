@@ -1,12 +1,16 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a character model configuration, encapsulating base appearance data, animation resources, and customizable hair, eye, facial, and clothing options for a specific gender.</summary>
 public unsafe struct Sex_CG : System.IDisposable
 {
     // Child Types
+
+    /// <summary>Defines the virtual function table for Sex_CG objects, exposing a Serialize method that writes or reads object state to or from an Archive.</summary>
     public unsafe struct Sex_CG_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.Sex_CG*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.Sex_CG*, ACBindings.Internal.Archive*, void> Serialize; // function pointer
 
         // Methods
     }
@@ -51,34 +55,38 @@ public unsafe struct Sex_CG : System.IDisposable
 
     // Methods
 
-    /// <summary>
+    /// <summary>Releases resources held by a Sex_CG object, including deleting dynamically allocated arrays, invoking subobject destructors, resetting the virtual function table, and freeing the name string buffer when its reference count reaches zero.
     /// <code>Offset: 0x0047DAA0
     /// void __thiscall Sex_CG::~Sex_CG(Sex_CG*)</code>
     /// </summary>
     public void _DestructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Sex_CG, void>)0x0047DAA0)(ref this);
 
-    /// <summary>
+    /// <summary>Collects all qualified data identifiers belonging to a Sex_CG instance into the supplied QualifiedDataIDArray, including base properties and every subcomponent such as hair styles, eye strips, facial features, clothing items, and color sets.
     /// <code>Offset: 0x005C0380
     /// void __thiscall Sex_CG::GetSubDataIDs(Sex_CG*,QualifiedDataIDArray*)</code>
     /// </summary>
+    /// <param name="id_array">The array that receives the collected IDs.</param>
     public void GetSubDataIDs(ACBindings.Internal.QualifiedDataIDArray* id_array) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Sex_CG, ACBindings.Internal.QualifiedDataIDArray*, void>)0x005C0380)(ref this, id_array);
 
-    /// <summary>
+    /// <summary>Initializes a new Sex_CG instance with default settings, including an empty name string, zero scaling, invalid identifiers for all data tables, and cleared collections of hair, eye, face, clothing items, and colors.
     /// <code>Offset: 0x005C12A0
     /// void __thiscall Sex_CG::Sex_CG(Sex_CG*)</code>
     /// </summary>
     public void _ConstructorInternal() => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Sex_CG, void>)0x005C12A0)(ref this);
 
-    /// <summary>
+    /// <summary>Copies all properties from another Sex_CG instance into this object, duplicating nested structures and adjusting shared string reference counts appropriately.
     /// <code>Offset: 0x005C2460
     /// void __thiscall Sex_CG::Sex_CG(Sex_CG*,const Sex_CG*)</code>
     /// </summary>
+    /// <param name="that">The source Sex_CG whose state is replicated by this constructor.</param>
     public void _ConstructorInternal(ACBindings.Internal.Sex_CG* that) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Sex_CG, ACBindings.Internal.Sex_CG*, void>)0x005C2460)(ref this, that);
 
-    /// <summary>
+    /// <summary>Serializes all member data of a Sex_CG object into or from an Archive, handling both reading and writing based on archive flags.
     /// <code>Offset: 0x005C25E0
     /// void __thiscall Sex_CG::Serialize(Sex_CG*,Archive*)</code>
     /// </summary>
+    /// <param name="this">The Sex_CG instance whose fields are being serialized.</param>
+    /// <param name="io_archive">Archive used for input or output; serialization behavior depends on its mode flag.</param>
     public void Serialize(ACBindings.Internal.Archive* io_archive) => ((delegate* unmanaged[Thiscall]<ref ACBindings.Internal.Sex_CG, ACBindings.Internal.Archive*, void>)0x005C25E0)(ref this, io_archive);
 }
 

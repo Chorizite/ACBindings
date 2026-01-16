@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Defines a vertex structure used in rendering, containing core data and placeholders for extensions.</summary>
 public unsafe struct CVertex
 {
     // Members

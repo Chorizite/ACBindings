@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Provides an efficient container for storing and accessing QualifiedDataID elements via an intrusive hash table, enabling rapid insertion, removal, and lookup operations.</summary>
 public unsafe struct HashSet___QualifiedDataID
 {
     // Members
@@ -25,6 +27,8 @@ public unsafe struct HashSet___QualifiedDataID
     // char __thiscall HashSet<QualifiedDataID>::erase(_DWORD*,_DWORD*) (template type method)
 }
 
+
+/// <summary>Maintains a collection of unique unsigned long values, enabling efficient insertion, lookup, and removal through an intrusive hash table implementation.</summary>
 public unsafe struct HashSet__uint
 {
     // Members
@@ -34,6 +38,8 @@ public unsafe struct HashSet__uint
     // Methods
 }
 
+
+/// <summary>Manages a set of UIElement pointers, offering efficient insertion, lookup, and removal through an intrusive hash table implementation.</summary>
 public unsafe struct HashSet___UIElement_ptr
 {
     // Members
@@ -43,6 +49,8 @@ public unsafe struct HashSet___UIElement_ptr
     // Methods
 }
 
+
+/// <summary>Holds unique UIListener* objects in a hash set for efficient lookup and management within the UI system.</summary>
 public unsafe struct HashSet___UIListener_ptr
 {
     // Members
@@ -52,6 +60,8 @@ public unsafe struct HashSet___UIListener_ptr
     // Methods
 }
 
+
+/// <summary>Provides a container for unique ImgTex pointers, backed by an intrusive hash table that enables fast insertion, lookup, and removal.</summary>
 public unsafe struct HashSet___ImgTex_ptr
 {
     // Members

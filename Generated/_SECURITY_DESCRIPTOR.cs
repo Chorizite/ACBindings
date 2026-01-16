@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Security descriptor structure used by Windows to represent ownership, group, and access control lists for securable objects.</summary>
 public unsafe struct _SECURITY_DESCRIPTOR
 {
     // Members

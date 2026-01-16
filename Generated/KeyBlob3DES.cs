@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents a binary container holding a 3DES symmetric key, including algorithm identifier, key bytes, padding, and type flags.</summary>
 public unsafe struct KeyBlob3DES
 {
     // Members

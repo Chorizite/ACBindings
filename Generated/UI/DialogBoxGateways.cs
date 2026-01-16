@@ -1,5 +1,10 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Manages dialog‑box gateway plugins, coordinating preparation and completion across dialog and report threads.
+/// Maintains thread‑safe counters and dispatches plugin callbacks to synchronize state during dialog interactions.
+/// </summary>
 public unsafe struct DialogBoxGateways
 {
     // Base Classes
@@ -7,7 +12,7 @@ public unsafe struct DialogBoxGateways
 
     // Statics
     public static int* s_nDialogThreadPrepares = (int*)0x008183BC;
-    public static ulong* s_qwDialogContext = (ulong*)0x00837808;
+    public static int* s_nReportThreadPrepares = (int*)0x008183C0;
     public static ulong* s_qwReportContext = (ulong*)0x00837810;
 
     // Methods

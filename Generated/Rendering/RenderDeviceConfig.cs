@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Represents configuration settings for a rendering device, controlling focus window handle and buffer usage options.</summary>
 public unsafe struct RenderDeviceConfig
 {
     // Members

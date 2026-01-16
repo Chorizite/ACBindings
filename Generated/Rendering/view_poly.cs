@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds polygon data required for rendering or collision detection, including vertex count, the current processing index, and axis‑aligned bounding box limits.</summary>
 public unsafe struct view_poly
 {
     // Members

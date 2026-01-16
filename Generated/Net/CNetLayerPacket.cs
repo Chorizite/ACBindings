@@ -1,5 +1,10 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Encapsulates a network‑layer packet comprising a NetPacket payload, protocol header, and raw data buffer for transmission or reception.
+/// Manages addressing, iteration over fragments, and recipient metadata, enabling efficient handling of fragmented messages across the network stack.
+/// </summary>
 public unsafe struct CNetLayerPacket
 {
     // Base Classes
@@ -9,7 +14,7 @@ public unsafe struct CNetLayerPacket
     public unsafe struct CNetLayerPacket_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CNetLayerPacket*, void> CNetLayerPacket_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CNetLayerPacket*, void> CNetLayerPacket_dtor_0; // function pointer
 
         // Methods
     }
@@ -26,13 +31,14 @@ public unsafe struct CNetLayerPacket
 
     // Methods
 
-    /// <summary>
+    /// <summary>Creates a new CNetLayerPacket instance and initializes all internal fields for network use.
     /// <code>Offset: 0x005AB6A0
     /// CNetLayerPacket* __cdecl CNetLayerPacket::Create()</code>
     /// </summary>
+    /// <returns>A pointer to the newly allocated packet, or null if memory allocation fails.</returns>
     public static ACBindings.Internal.CNetLayerPacket* Create() => ((delegate* unmanaged[Cdecl]<ACBindings.Internal.CNetLayerPacket*>)0x005AB6A0)();
 
-    /// <summary>
+    /// <summary>Resets the packet to its default, empty state by decrementing reference counts on special fragments and blob fragments, clearing pointers, and zeroing all associated fields.
     /// <code>Offset: 0x005AB6C0
     /// void __thiscall CNetLayerPacket::Clear(CNetLayerPacket*)</code>
     /// </summary>

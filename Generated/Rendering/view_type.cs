@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates rendering data for a 3D view, storing total vertex count, polygon list, and vertex details.</summary>
 public unsafe struct view_type
 {
     // Members

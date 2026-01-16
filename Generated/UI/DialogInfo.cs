@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds metadata and references required by a dialog component, including its property collection, runtime instance, owning framework, and contextual identifier.</summary>
 public unsafe struct DialogInfo
 {
     // Members

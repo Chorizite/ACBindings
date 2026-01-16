@@ -1,5 +1,9 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>
+/// Encapsulates a 64‑bit bitfield property value and supplies methods for comparison, serialization, manipulation, and string conversion within the property management framework.
+/// </summary>
 public unsafe struct Bitfield64PropertyValue
 {
     // Base Classes

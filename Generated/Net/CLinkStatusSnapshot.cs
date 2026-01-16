@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Captures a snapshot of link performance metrics over a defined period, recording round‑trip delay, packet statistics, and byte counts to assess connectivity quality.</summary>
 public unsafe struct CLinkStatusSnapshot
 {
     // Members

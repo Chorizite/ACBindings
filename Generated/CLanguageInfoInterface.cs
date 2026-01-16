@@ -1,9 +1,11 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Offers a global language information interface that exposes formatting rules, meta‑letters, and numeral data for the current locale. It serves as a singleton wrapper around CLanguageInfo instances, providing thread‑safe access to localization resources.</summary>
 public unsafe struct CLanguageInfoInterface
 {
     // Statics
-    public static ACBindings.Internal.CLanguageInfoInterface* m_instance = (ACBindings.Internal.CLanguageInfoInterface*)0x00837CC8;
+    public static ACBindings.Internal.CLanguageInfoInterface** m_instance = (ACBindings.Internal.CLanguageInfoInterface**)0x00837CC8;
 
     // Members
     public ACBindings.Internal.CLanguageInfo* m_pLanguageInfo;

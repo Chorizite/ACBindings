@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Holds configuration for a rendering device's presentation settings, including window handle, resolution, full‑screen options, refresh rate, color depth, buffering, vsync, and anti‑aliasing.</summary>
 public unsafe struct RenderDevicePresentation
 {
     // Members

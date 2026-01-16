@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates compiled shader resources, storing the shader version, entry‑point names, and binary blobs for both vertex and pixel stages.</summary>
 public unsafe struct ShaderResourceType : System.IDisposable
 {
     // Members
@@ -16,7 +18,7 @@ public unsafe struct ShaderResourceType : System.IDisposable
 
     // Methods
 
-    /// <summary>
+    /// <summary>Releases the binary shader data buffers and decrements reference counts for vertex and pixel shader names, freeing associated memory when counts reach zero.
     /// <code>Offset: 0x0044A3F0
     /// void __thiscall ShaderResourceType::~ShaderResourceType(ShaderResourceType*)</code>
     /// </summary>

@@ -9,43 +9,43 @@ public unsafe struct CWeenieObject
     public ACBindings.Internal.NoticeRegistrar BaseClass_NoticeRegistrar; // ACBindings.Internal.NoticeRegistrar
 
     // Statics
-    public static ACBindings.Internal.CObjectMaint* objMaint = (ACBindings.Internal.CObjectMaint*)0x00842B98;
+    public static ACBindings.Internal.CObjectMaint** objMaint = (ACBindings.Internal.CObjectMaint**)0x00842B98;
 
     // Child Types
     public unsafe struct CWeenieObject_vtbl
     {
         // Members
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, void> CWeenieObject_dtor_0; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, void> ObjectBeingDeleted; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, void> process_netblobs; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int, void> SetParentedState; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsPlayer; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsThePlayer; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, ACBindings.Internal.ITEM_TYPE> InqType; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsPlayerKiller; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsPK; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsPKLite; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsImpenetrable; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsCreature; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, float, float*, byte> InqJumpVelocity; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, float*, byte> InqRunRate; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, float*, byte> InqMaxRunRate; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, float, byte> CanJump; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, float, int*, byte> JumpStaminaCost; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, ACBindings.Internal.CWeenieObject*, int> CanMoveInto; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> CanBypassMoveRestrictions; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, void> CWeenieObject_dtor_0; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, void> ObjectBeingDeleted; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, void> process_netblobs; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int, void> SetParentedState; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsPlayer; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsThePlayer; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, ACBindings.Internal.ITEM_TYPE> InqType; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsPlayerKiller; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsPK; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsPKLite; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsImpenetrable; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsCreature; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, float, float*, byte> InqJumpVelocity; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, float*, byte> InqRunRate; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, float*, byte> InqMaxRunRate; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, float, byte> CanJump; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, float, int*, byte> JumpStaminaCost; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, ACBindings.Internal.CWeenieObject*, int> CanMoveInto; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> CanBypassMoveRestrictions; // function pointer
         public fixed byte gap4C[8];
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, ACBindings.Internal.AtkCollisionProfile*, int> DoCollision; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, uint, void> DoCollisionEnd; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, ACBindings.Internal.ObjCollisionProfile*, int> InqCollisionProfile; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, void> ResetCollisions; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, ACBindings.Internal.AtkCollisionProfile*, int> DoCollision; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, uint, void> DoCollisionEnd; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, ACBindings.Internal.ObjCollisionProfile*, int> InqCollisionProfile; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, void> ResetCollisions; // function pointer
         public System.IntPtr InqIconID;
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, ACBindings.Internal.PScriptType, float, int> PlayScript; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, uint> GetNumEmitters; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, ACBindings.Internal.AC1Legacy.Vector3*, int> GetGlobalVelocity; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsHook; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsStorage; // function pointer
-        public delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsCorpse; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, ACBindings.Internal.PScriptType, float, int> PlayScript; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, uint> GetNumEmitters; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, ACBindings.Internal.AC1Legacy.Vector3*, int> GetGlobalVelocity; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsHook; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsStorage; // function pointer
+        public static delegate* unmanaged[Thiscall]<ACBindings.Internal.CWeenieObject*, int> IsCorpse; // function pointer
 
         // Methods
     }

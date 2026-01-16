@@ -1,5 +1,8 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Manages plugin prototypes, ensuring each prototype belongs to at most one manager while tracking them in an internal array.</summary>
+/// <remarks>Internal storage uses SmartArray for dynamic resizing and deallocation handling.</remarks>
 public unsafe struct CPluginManager
 {
     // Members

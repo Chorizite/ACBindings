@@ -1,5 +1,7 @@
 namespace ACBindings.Internal;
 
+
+/// <summary>Encapsulates a hash table entry linking an AsyncContext key to its corresponding CAsyncStateMachine state data pointer, enabling efficient lookup within the async system.</summary>
 public unsafe struct IntrusiveHashData___AsyncContext___CAsyncStateMachine_CAsyncStateData_ptr
 {
     // Members
@@ -9,6 +11,8 @@ public unsafe struct IntrusiveHashData___AsyncContext___CAsyncStateMachine_CAsyn
     // Methods
 }
 
+
+/// <summary>Maps an integer hash key to a CAsyncStateHandler pointer within an intrusive linked list, enabling efficient lookup and chaining in a hash table.</summary>
 public unsafe struct IntrusiveHashData__int___CAsyncStateHandler_ptr
 {
     // Members
@@ -18,6 +22,8 @@ public unsafe struct IntrusiveHashData__int___CAsyncStateHandler_ptr
     // Methods
 }
 
+
+/// <summary>Represents a node in an intrusive hash chain, holding a version handle identifier and linking to the subsequent row holder in the archive stack.</summary>
 public unsafe struct IntrusiveHashData___IDClass____tagVersionHandle___InArchiveVersionStack_VersionRowHolder_ptr
 {
     // Members
@@ -27,6 +33,8 @@ public unsafe struct IntrusiveHashData___IDClass____tagVersionHandle___InArchive
     // Methods
 }
 
+
+/// <summary>Represents a node in the log controller’s intrusive hash table that holds an unsigned 32‑bit hash key and points to the next entry for chaining.</summary>
 public unsafe struct IntrusiveHashData__uint___LogController_CategoryHandler_ptr
 {
     // Members
@@ -36,6 +44,8 @@ public unsafe struct IntrusiveHashData__uint___LogController_CategoryHandler_ptr
     // Methods
 }
 
+
+/// <summary>Represents an entry in an intrusive hash table keyed by QualifiedDataID, linking to DBObjSaveInfo objects for efficient storage and retrieval within the database system.</summary>
 public unsafe struct IntrusiveHashData___QualifiedDataID___DBObjSaveInfo_ptr
 {
     // Members
@@ -45,6 +55,8 @@ public unsafe struct IntrusiveHashData___QualifiedDataID___DBObjSaveInfo_ptr
     // Methods
 }
 
+
+/// <summary>Stores a hash key and a link to the subsequent ActionState, building an intrusive chain within a hash table implementation.</summary>
 public unsafe struct IntrusiveHashData__uint___ActionState_ptr
 {
     // Members
@@ -54,6 +66,8 @@ public unsafe struct IntrusiveHashData__uint___ActionState_ptr
     // Methods
 }
 
+
+/// <summary>Keeps a hash key and a next-pointer used in the intrusive hash table implementation for QualityHandler objects.</summary>
 public unsafe struct IntrusiveHashData__uint___QualityHandler_ptr
 {
     // Members
@@ -63,6 +77,8 @@ public unsafe struct IntrusiveHashData__uint___QualityHandler_ptr
     // Methods
 }
 
+
+/// <summary>Contains a hash key and a pointer to the next cell in an intrusive hash chain, facilitating fast lookup of CLostCell instances by unsigned long keys.</summary>
 public unsafe struct IntrusiveHashData__uint___CLostCell_ptr
 {
     // Members
@@ -72,6 +88,8 @@ public unsafe struct IntrusiveHashData__uint___CLostCell_ptr
     // Methods
 }
 
+
+/// <summary>Stores hash key and link to the next element for an intrusive hash table of SoundTableData objects, keyed by unsigned long.</summary>
 public unsafe struct IntrusiveHashData__uint___SoundTableData_ptr
 {
     // Members
@@ -81,6 +99,8 @@ public unsafe struct IntrusiveHashData__uint___SoundTableData_ptr
     // Methods
 }
 
+
+/// <summary>Facilitates storage of sound buffer references within a hash‑based lookup system by holding the identifier key and linking to subsequent entries.</summary>
 public unsafe struct IntrusiveHashData___IDClass____tagDataID___SoundBufRef_ptr
 {
     // Members
@@ -90,6 +110,8 @@ public unsafe struct IntrusiveHashData___IDClass____tagDataID___SoundBufRef_ptr
     // Methods
 }
 
+
+/// <summary>Stores a case‑insensitive string key and links to the next command data entry in an intrusive hash table.</summary>
 public unsafe struct IntrusiveHashData___CaseInsensitiveStringBase___PStringBase__sbyte___ClientCommunicationSystem_CmdHashData_ptr
 {
     // Members
@@ -99,6 +121,8 @@ public unsafe struct IntrusiveHashData___CaseInsensitiveStringBase___PStringBase
     // Methods
 }
 
+
+/// <summary>Encapsulates a hash key and link to the next element in an intrusive hash chain for AC1Legacy::HashTableData, enabling efficient lookup by unsigned long.</summary>
 public unsafe struct IntrusiveHashData__uint___AC1Legacy_HashTableData__uint__double_ptr
 {
     // Members
@@ -606,7 +630,7 @@ public unsafe struct IntrusiveHashData___PStringBase__sbyte___HashTableData___PS
 public unsafe struct IntrusiveHashData__void_ptr___HashSetData__void_ptr_ptr
 {
     // Members
-    public delegate* unmanaged[Cdecl]<ACBindings.Internal.HResultDebugData*, byte> m_hashKey; // function pointer
+    public static delegate* unmanaged[Cdecl]<ACBindings.Internal.HResultDebugData*, byte> m_hashKey; // function pointer
     public System.IntPtr m_hashNext;
 
     // Methods
